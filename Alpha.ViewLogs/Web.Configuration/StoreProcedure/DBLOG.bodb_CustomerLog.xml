@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="Write/View Logs">
+    <Setting Key="WriteLog_UserLog_RunSP" SpName="WriteLog_UserLog_RunSP" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="Acc_UserLog_RunSPSel" SpName="Acc_UserLog_RunSPSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="Acc_UserLog_CreditSel" SpName="Acc_UserLog_CreditSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="Acc_UserLog_LoginSel" SpName="Acc_UserLog_LoginSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="Acc_UserLog_RunSPSelTotalRecords" SpName="Acc_UserLog_RunSPSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="Acc_UserLog_CreditSelTotalRecords" SpName="Acc_UserLog_CreditSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="Acc_UserLog_LoginSelTotalRecords" SpName="Acc_UserLog_LoginSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="Age_UpdPageVisit" SpName="Age_UpdPageVisit" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0" />
+    <Setting Key="IS_UpdFunctionUsage" SpName="IS_UpdFunctionUsage" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0" />
+    <Setting Key="WriteLog_UserLog_CasinoAPI" SpName="WriteLog_UserLog_CasinoAPI" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0" />
+    <Setting Key="Acc_UserLog_LogActionSel" SpName="Acc_UserLog_LogActionSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0" />
+    <Setting Key="Acc_LogActionUpd" SpName="Acc_LogActionUpd" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0" />
+    <Setting Key="Acc_UserLog_LogActionTypeSel" SpName="Acc_UserLog_LogActionTypeSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0" />
+  </Function>
+</Functions>
