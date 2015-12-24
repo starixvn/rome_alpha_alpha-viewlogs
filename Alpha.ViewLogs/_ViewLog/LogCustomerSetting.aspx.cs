@@ -20,12 +20,14 @@
 		protected override void PageLoadEvent(object sender, EventArgs e)
 		{
 			#region Check ViewLogDebug key to clear cache xslt transform object
+
 			if (ConfigurationManager.AppSettings["ViewLogDebug"] != null
 				&& ConfigurationManager.AppSettings["ViewLogDebug"].ToString() == "1")
 			{
 				ICache cache = CacheService.CreateInstance(CacheType.MemoryCache);
 				cache.Remove(Constants.CacheKeyTransformObject);
 			}
+
 			#endregion
 
 			DataControl = rptDataLog;
@@ -36,20 +38,19 @@
 		protected override IList GetLogData(out int totalPage)
 		{
 			totalPage = 0;
-
-			IRequestViewLogContext requestViewLogContext = this.RequestViewLogContext;
 			List<LogRunSp> entityList = null;
 
+			IRequestViewLogContext requestViewLogContext = this.RequestViewLogContext;
 			if (requestViewLogContext != null)
 			{
 				var permissions = Permissions.GetPermissionsDescription();
 				var stakes = new Dictionary<string, string>();
 
-				stakes.Add("stakelevel1", Resources.Lang.playForFun);
-				stakes.Add("stakelevel2", Resources.Lang.low);
-				stakes.Add("stakelevel3", Resources.Lang.medium);
-				stakes.Add("stakelevel4", Resources.Lang.high);
-				stakes.Add("stakelevel5", Resources.Lang.vip);
+				stakes.Add("stakelevel1", LocalResources.Lang.playForFun);
+				stakes.Add("stakelevel2", LocalResources.Lang.low);
+				stakes.Add("stakelevel3", LocalResources.Lang.medium);
+				stakes.Add("stakelevel4", LocalResources.Lang.high);
+				stakes.Add("stakelevel5", LocalResources.Lang.vip);
 
 				requestViewLogContext.ActionTypeId = LogActionTypeId;
 				entityList = (new LogService<LogRunSp>()).GetPaged(requestViewLogContext, this.PageIndex, this.PageSize, out totalPage, permissions, stakes);

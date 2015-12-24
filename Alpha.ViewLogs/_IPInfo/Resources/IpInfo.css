@@ -1,0 +1,70 @@
+﻿@font-face {
+    font-family: Roboto;
+    src: url(../../App_Themes/Fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Light";
+    src: url(../../App_Themes/Fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    src: url(../../App_Themes/Fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    src: url(../../App_Themes/Fonts/Roboto/Roboto-Medium.ttf);
+}
+
+body
+{
+	margin: 0;	
+}
+
+table
+{
+	margin: 0;
+	padding:2px 1px 2px 2px;
+}
+
+table td {
+    border-bottom:1px solid #E0E0E0;
+    border-right:1px solid #E0E0E0;
+    font-family: "Roboto",Tahoma,Arial ,helvetica ,sans-serif;
+    font-size:11px;
+}
+
+.tdvalue
+{
+	font-weight:bold;
+}
+
+.note
+{
+	padding:2px 1px 1px 2px;
+	font-size:11px;
+	color:#333;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)  
+{
+    body 
+    {
+        font-family: Roboto;
+    }
+    
+    table td 
+    {
+        font-size: 12px;
+        padding: 4px;        
+    }
+    
+    .note 
+    {
+        font-size: 12px;
+        margin: 8px;
+    }
+    
+}

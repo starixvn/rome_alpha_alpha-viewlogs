@@ -9,13 +9,13 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{10DB708D-7FED-461D-B337-F46BAAA66140}</ProjectGuid>
+    <ProjectGuid>{0FE703C4-4AA7-4391-AE57-02F5DA830716}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Alpha.ViewLogs</RootNamespace>
     <AssemblyName>Alpha.ViewLogs</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -24,7 +24,6 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,12 +59,12 @@
       <HintPath>..\packages\CasinoUtility.1.2.9.0\lib\net40\CasinoUtility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Couchbase, Version=1.2.6.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
-      <HintPath>..\packages\CouchbaseNetClient.1.2.6\lib\net40\Couchbase.dll</HintPath>
+    <Reference Include="Couchbase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=81137140da4e57ef, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Caching.1.0.404.97\lib\net40\Couchbase.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Enyim.Caching, Version=2.12.0.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
-      <HintPath>..\packages\CouchbaseNetClient.1.2.6\lib\net40\Enyim.Caching.dll</HintPath>
+    <Reference Include="Enyim.Caching, Version=2.12.0.0, Culture=neutral, PublicKeyToken=81137140da4e57ef, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Caching.1.0.404.97\lib\net40\Enyim.Caching.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Age.UI, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
@@ -77,7 +76,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Caching, Version=1.0.404.95, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Caching.1.0.404.96\lib\net40\Fanex.Caching.dll</HintPath>
+      <HintPath>..\packages\Fanex.Caching.1.0.404.97\lib\net40\Fanex.Caching.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
@@ -148,36 +147,8 @@
       <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data, Version=3.1.0.0, Culture=neutral">
       <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -217,12 +188,8 @@
       <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\NetUtility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Nini, Version=1.1.0.0, Culture=neutral, PublicKeyToken=691faec150a7fa7b, processorArchitecture=MSIL">
-      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\Nini.dll</HintPath>
+      <HintPath>..\packages\Trove.Nini.1.1.0.0\lib\net20\Nini.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RemotingRef, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
@@ -237,12 +204,20 @@
       <HintPath>..\packages\SPSRemoting.1.0.0\lib\net40\SPSRemoting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Sunplus.Agent.Configurations, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Configurations.3.0.0.1-beta\lib\net40\Sunplus.Agent.Configurations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sunplus.Agent.Model, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.3.0.0.1-beta\lib\net40\Sunplus.Agent.Model.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Sunplus.Agent.Model.Auth, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.0.1-beta\lib\net40\Sunplus.Agent.Model.Auth.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.0.1-beta2\lib\net40\Sunplus.Agent.Model.Base.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.0.2\lib\net40\Sunplus.Agent.Model.Base.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Casino, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
@@ -253,8 +228,8 @@
       <HintPath>..\packages\Sunplus.Agent.Model.DataAccessLibrary.3.0.0.1-beta\lib\net40\Sunplus.Agent.Model.DataAccessLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Definitions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.0.1-beta\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.0.2\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.IpFormatter, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
@@ -293,6 +268,7 @@
       <HintPath>..\packages\Sunplus.Shared.ViewLogLib.3.0.0.1-beta\lib\net40\Sunplus.Shared.ViewLogLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -313,6 +289,54 @@
       <HintPath>..\packages\TplCore.1.0.4854.17254\lib\net40\TplCore.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-Black.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-BlackItalic.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-Bold.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-BoldItalic.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-Italic.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-Light.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-LightItalic.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-Medium.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-MediumItalic.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-Regular.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-Thin.ttf" />
+    <Content Include="App_Themes\Fonts\Roboto\Roboto-ThinItalic.ttf" />
+    <Content Include="Web.Configuration\SecurityCode.config" />
+    <Content Include="Web.Configuration\SpamFilter.config" />
+    <Content Include="ConnectionString.config" />
+    <Content Include="SecurityCodeUrl.ini" />
+    <EmbeddedResource Include="LocalResources\Lang.ja-JP.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Lang.ko-KR.resx" />
+    <EmbeddedResource Include="LocalResources\Lang.th-TH.resx" />
+    <EmbeddedResource Include="LocalResources\Lang.vi-VN.resx" />
+    <EmbeddedResource Include="LocalResources\Lang.zh-CN.resx" />
+    <EmbeddedResource Include="LocalResources\Lang.zh-TW.resx" />
+    <EmbeddedResource Include="LocalResources\Viewlog.ja-JP.resx" />
+    <EmbeddedResource Include="LocalResources\Viewlog.ko-KR.resx" />
+    <EmbeddedResource Include="LocalResources\Viewlog.th-TH.resx" />
+    <EmbeddedResource Include="LocalResources\Viewlog.vi-VN.resx" />
+    <EmbeddedResource Include="LocalResources\Viewlog.zh-CN.resx" />
+    <EmbeddedResource Include="LocalResources\Viewlog.zh-TW.resx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="_IPInfo\IPInfo.aspx" />
+    <Content Include="_IPInfo\IpInfo.htm" />
+    <Content Include="_IPInfo\Resources\IpInfo.css" />
+    <Content Include="_IPInfo\Resources\IpInfo.js" />
+    <Content Include="_ViewLog\ViewLog.Master" />
+    <Content Include="_IPInfo\Whois.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Fonts\Roboto\LICENSE.txt" />
@@ -559,10 +583,7 @@
     <Content Include="Flags\zr.gif" />
     <Content Include="Flags\zw.gif" />
     <Content Include="Global.asax" />
-    <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Configuration\StoreProcedure\DBACC.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure\DBAGE.BODB02_DBTXN.CUSTDB.xml" />
@@ -583,6 +604,8 @@
     <Content Include="_Components\AGEWnd\AGEWnd.js" />
     <Content Include="_Components\AGEWnd\blank.html" />
     <Content Include="_Components\AGEWnd\blank.js" />
+    <Content Include="_Components\DateRangeSelect\DateRangeSelect.css" />
+    <Content Include="_Components\DateRangeSelect\DateRangeSelect.js" />
     <Content Include="_Components\DateRangeSelect\Images\bg_header.jpg" />
     <Content Include="_Components\DateRangeSelect\Images\bullet3.png" />
     <Content Include="_Components\DateRangeSelect\Images\bullet4.png" />
@@ -628,6 +651,7 @@
     <Content Include="_GlobalResources\Css\Paging.css" />
     <Content Include="_GlobalResources\Css\Tab.css" />
     <Content Include="_GlobalResources\Css\Table.css" />
+    <Content Include="_GlobalResources\Handlers\QueryUserName.ashx" />
     <Content Include="_GlobalResources\Images\ajax-loader.gif" />
     <Content Include="_GlobalResources\Images\bg_boxTop.jpg" />
     <Content Include="_GlobalResources\Images\bg_buttonsite.jpg" />
@@ -934,56 +958,42 @@
     <Content Include="_ViewLog\Resources\XsltTemplate\action_921.xslt" />
     <Content Include="_ViewLog\Resources\XsltTemplate\action_922.xslt" />
     <Content Include="_ViewLog\Resources\XsltTemplate\action_924.xslt" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-Black.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-BlackItalic.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-Bold.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-BoldItalic.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-Italic.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-Light.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-LightItalic.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-Medium.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-MediumItalic.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-Regular.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-Thin.ttf" />
-    <Content Include="App_Themes\Fonts\Roboto\Roboto-ThinItalic.ttf" />
-    <Content Include="Web.Configuration\SecurityCode.config" />
-    <Content Include="Web.Configuration\SpamFilter.config" />
-    <Content Include="ConnectionString.config" />
-    <Content Include="SecurityCodeUrl.ini" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <Content Include="_GlobalResources\Handlers\QueryUserName.ashx" />
-    <Content Include="_ViewLog\ViewLog.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="App_GlobalResources\Lang.Designer.cs">
-      <DependentUpon>Lang.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="App_GlobalResources\Viewlog.Designer.cs">
-      <DependentUpon>Viewlog.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LocalResources\Lang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Viewlog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Viewlog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IPRangeEntity.cs" />
+    <Compile Include="Models\SportDisplayInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IIPRepository.cs" />
+    <Compile Include="Repositories\IPRepository.cs" />
+    <Compile Include="Services\IIPService.cs" />
+    <Compile Include="Services\IPHelper.cs" />
+    <Compile Include="Services\IPService.cs" />
     <Compile Include="Services\Permissions.cs" />
-    <Compile Include="Services\SportDisplayInfo.cs" />
     <Compile Include="Services\ViewLogPageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Services\XsltLogFormat.cs" />
+    <Compile Include="_IPInfo\IPInfo.aspx.cs">
+      <DependentUpon>IPInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_IPInfo\IPInfo.aspx.designer.cs">
+      <DependentUpon>IPInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_IPInfo\IpInfo.htm.cs" />
     <Compile Include="_ViewLog\LogCredit.aspx.cs">
       <DependentUpon>LogCredit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1019,25 +1029,17 @@
     <Compile Include="_ViewLog\ViewLog.Master.designer.cs">
       <DependentUpon>ViewLog.Master</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="App_GlobalResources\Lang.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
+    <EmbeddedResource Include="LocalResources\Lang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Lang.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_GlobalResources\Viewlog.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Viewlog.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Viewlog.Designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Modules\Common\_Common.csproj">
-      <Project>{9503b9b7-dae3-41cc-905c-f1b27b64e0dd}</Project>
-      <Name>_Common</Name>
-    </ProjectReference>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -1052,7 +1054,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61093</DevelopmentServerPort>
+          <DevelopmentServerPort>62015</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:59385/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

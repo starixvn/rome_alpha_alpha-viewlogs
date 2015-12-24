@@ -5,19 +5,19 @@
         <table width="100%" cellpadding="0" cellspacing="0" id="DataLog">
             <tr>
                 <th>
-                    <%= Resources.Viewlog.logid%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.logid%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.logdate%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.logdate%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.usernameEdited%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.usernameEdited%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.actionname%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.actionname%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.actionDesc%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.actionDesc%>
                 </th>
             </tr>
             <asp:Repeater ID="rptDataLog" runat="server" EnableViewState="false">

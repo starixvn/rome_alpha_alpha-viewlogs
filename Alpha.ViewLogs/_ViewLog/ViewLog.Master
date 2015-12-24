@@ -25,17 +25,17 @@
                            {%>
                         <li id="CustomerSetting">
                         <a href="javascript:MenuGoTo('CustomerSetting')"><span>
-                            <%= Resources.Viewlog.defaultlog%>
+                            <%= Alpha.ViewLogs.LocalResources.Viewlog.defaultlog%>
                         </span>
                         </a>
                         </li>
                         <li id="Status">
                         <a href="javascript:MenuGoTo('Status')"><span>
-                        <%= Resources.Viewlog.statuslog%>
+                        <%= Alpha.ViewLogs.LocalResources.Viewlog.statuslog%>
                             </span> </a></li>
                         <li id="Credit">
                         <a href="javascript:MenuGoTo('Credit')"><span>
-                        <%= Resources.Viewlog.creditlog%>
+                        <%= Alpha.ViewLogs.LocalResources.Viewlog.creditlog%>
                             
                         </span>
                         </a>
@@ -43,7 +43,7 @@
                         <%}%>
                         <li id="Login">
                         <a href="javascript:MenuGoTo('Login')"><span>
-                        <%= Resources.Viewlog.loginlog%>
+                        <%= Alpha.ViewLogs.LocalResources.Viewlog.loginlog%>
                         </span>
                         </a>
                         </li>
@@ -54,26 +54,26 @@
             <div id="box_header" style="border-top: 0px; padding: 5px 5px 5px 5px;">
                 <div class="divUserName">
                     <div class="divSearch" id="divUserName" runat="server">
-                        <%= Resources.Viewlog.username%>
-                        <input maxlength="50" id="txtUserName" name="txtUserName" class="username" type="text" style="width: 150px" title='<%= Resources.Lang.enterusername %>' onkeydown='onclickUser("<%= Resources.Lang.enterusername %>")' onfocus='onclickUser("<%= Resources.Lang.enterusername  %>")' onblur='onblurUser("<%= Resources.Lang.enterusername %>")' onkeypress='KeyPress(event)' autocomplete="off" />
+                        <%= Alpha.ViewLogs.LocalResources.Viewlog.username%>
+                        <input maxlength="50" id="txtUserName" name="txtUserName" class="username" type="text" style="width: 150px" title='<%= Alpha.ViewLogs.LocalResources.Lang.enterusername %>' onkeydown='onclickUser("<%= Alpha.ViewLogs.LocalResources.Lang.enterusername %>")' onfocus='onclickUser("<%= Alpha.ViewLogs.LocalResources.Lang.enterusername  %>")' onblur='onblurUser("<%= Alpha.ViewLogs.LocalResources.Lang.enterusername %>")' onkeypress='KeyPress(event)' autocomplete="off" />
                         <span id="RequiredUserName" class="required">*</span>
                     </div>
                     <div class="divLogType" id="ddlLogActionType">
-                        <%= Resources.Viewlog.viewby%>
+                        <%= Alpha.ViewLogs.LocalResources.Viewlog.viewby%>
                         <asp:DropDownList CssClass="ActionType" onChange="DoSearch();" ID="ddlActionType" runat="server" EnableViewState="false">
                         </asp:DropDownList>
                     </div>
                     <asp:Literal ID="ltrDate" runat="server"></asp:Literal>
                     <div id="divShowOldValue">
                         <input type="checkbox" value="true" id="chk_showOldValue" onchange="setShowOldValueCookie(this)" />
-                        <label for="chk_showOldValue"><%= Resources.Viewlog.showOldValue %></label>
+                        <label for="chk_showOldValue"><%= Alpha.ViewLogs.LocalResources.Viewlog.showOldValue %></label>
                     </div>
                 </div>
             </div>
             <div class="warning" id="divMessageWarning" style="display: none">
                 <ul>
                     <li>
-                        <asp:Literal ID="Literal10" Text="<%# Resources.Viewlog.login_message_log %>" runat="server"></asp:Literal>
+                        <asp:Literal ID="Literal10" Text="<%# Alpha.ViewLogs.LocalResources.Viewlog.login_message_log %>" runat="server"></asp:Literal>
                     </li>
                 </ul>
             </div>
@@ -92,7 +92,7 @@
         var ctrInput = "<%=DateTime.Now.ToString()%>";
         var ddlActionType = '<%=ddlActionType.ClientID%>';
         var role = '<%= Sunplus.Agent.Model.Entities.UserSession.Current.RoleId %>';
-        var enterusername = '<%=Resources.Lang.enterusername%>';
+        var enterusername = '<%=Alpha.ViewLogs.LocalResources.Lang.enterusername%>';
         RegisterStartUp('Initialize()');
     </script>
 

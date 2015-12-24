@@ -4,12 +4,10 @@ using System;
 using System.Web;
 using System.Data;
 using Fanex.Age.UI;
-
 using Sunplus.Agent.Model.BL.AccountInfo;
 
 namespace Sunplus.Agent.UI._AccountInfo
 {
-
     public class QueryUserName_Handler : Fanex.Age.UI.TplHandler, System.Web.SessionState.IReadOnlySessionState
     {
         public QueryUserName_Handler()
@@ -17,7 +15,7 @@ namespace Sunplus.Agent.UI._AccountInfo
             IsValidateRequest = false;
         }
 
-        public override void RenderResult(ref JSONData data)
+        public override void RenderResult(ref JsonData data)
         {
             DataTable result = View as DataTable; // username, firstname, lastname
 

@@ -1,6 +1,6 @@
 namespace Sunplus.Agent.UI._SubAcc
 {
-	using Resources;
+	using Alpha.ViewLogs.LocalResources;
 	using Sunplus.Agent.Model.Entities;
 	using System.Collections.Generic;
 

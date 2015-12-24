@@ -1,6 +1,8 @@
 namespace Sunplus.Agent.UI._ViewLog
 {
-	using Fanex.Razorbill.Module.Common.Helpers;
+	using Alpha.ViewLogs.LocalResources;
+	using Alpha.ViewLogs.Models;
+	using Alpha.ViewLogs.Services;
 	using Sunplus.Agent.Model.BL.Cache;
 	using Sunplus.Agent.Model.Entities;
 	using Sunplus.Agent.Model.Entities.Permission;
@@ -71,19 +73,19 @@ namespace Sunplus.Agent.UI._ViewLog
             {
                 if (c[7].ToString() == "0") // daily
                 {
-                    return Resources.Lang.daily;
+                    return Lang.daily;
                 }
                 else
                 {
-                    if (c[0] == '1') condition += Resources.Lang.sun + hyphen;
-                    if (c[1] == '1') condition += Resources.Lang.mon + hyphen;
-                    if (c[2] == '1') condition += Resources.Lang.tue + hyphen;
-                    if (c[3] == '1') condition += Resources.Lang.wed + hyphen;
-                    if (c[4] == '1') condition += Resources.Lang.thurs + hyphen;
-                    if (c[5] == '1') condition += Resources.Lang.fri + hyphen;
-                    if (c[6] == '1') condition += Resources.Lang.sat + hyphen;
+                    if (c[0] == '1') condition += Lang.sun + hyphen;
+                    if (c[1] == '1') condition += Lang.mon + hyphen;
+                    if (c[2] == '1') condition += Lang.tue + hyphen;
+                    if (c[3] == '1') condition += Lang.wed + hyphen;
+                    if (c[4] == '1') condition += Lang.thurs + hyphen;
+                    if (c[5] == '1') condition += Lang.fri + hyphen;
+                    if (c[6] == '1') condition += Lang.sat + hyphen;
 
-                    return Resources.Lang.weekly + " (" + condition.Remove(condition.Length - 3, 3) + ")";
+                    return Lang.weekly + " (" + condition.Remove(condition.Length - 3, 3) + ")";
                 }
             }
             return condition;
@@ -116,8 +118,9 @@ namespace Sunplus.Agent.UI._ViewLog
                 return string.Empty;
             }
 
-            return IPHelper.FormatIp(ip);
-        }
+            //return IPHelper.FormatIp(ip);
+			return string.Format("<a class=\"iplink\" href=\"javascript:OpenIPInfo('{0}');\">{0}</a>", ip);
+		}
 
         public static string FormatCountryCode(string ip, string country)
         {
@@ -146,11 +149,11 @@ namespace Sunplus.Agent.UI._ViewLog
             {
                 if (code == "2")
                 {
-                    condition = Resources.Viewlog.agentSite;
+                    condition = Alpha.ViewLogs.LocalResources.Viewlog.agentSite;
                 }
                 else if (code == "1")
                 {
-                    condition = Resources.Viewlog.accountingSite;
+                    condition = Alpha.ViewLogs.LocalResources.Viewlog.accountingSite;
                 }
             }
             return condition;
@@ -175,12 +178,12 @@ namespace Sunplus.Agent.UI._ViewLog
 
         public static string FormatMemberWinLimit(string value)
         {
-            return value.Replace("x", "X").Replace("unlimited", Resources.Lang.Unlimited);
+            return value.Replace("x", "X").Replace("unlimited", Alpha.ViewLogs.LocalResources.Lang.Unlimited);
         }
 
         public static string FormatUnlimited(int unlimited)
         {
-            return unlimited == -1 ? Resources.Lang.Unlimited : unlimited.ToString();
+            return unlimited == -1 ? Alpha.ViewLogs.LocalResources.Lang.Unlimited : unlimited.ToString();
         }
 
         public string GetSportWithConditionHtml(
@@ -194,7 +197,7 @@ namespace Sunplus.Agent.UI._ViewLog
             visibleSports.Add(sportId, new SportDisplayInfo
             {
                 IsVisible = _visibilities[sportId],
-                DisplayName = Resources.Viewlog.disabledVS,
+                DisplayName = Alpha.ViewLogs.LocalResources.Viewlog.disabledVS,
                 DisplayValue = disableVitualSports
             });
 
@@ -202,7 +205,7 @@ namespace Sunplus.Agent.UI._ViewLog
             visibleSports.Add(sportId, new SportDisplayInfo
             {
                 IsVisible = _visibilities[sportId],
-                DisplayName = Resources.Viewlog.disableGoldDeluxe,
+                DisplayName = Alpha.ViewLogs.LocalResources.Viewlog.disableGoldDeluxe,
                 DisplayValue = disableGoldDeluxe
             });
 
@@ -210,7 +213,7 @@ namespace Sunplus.Agent.UI._ViewLog
             visibleSports.Add(sportId, new SportDisplayInfo
             {
                 IsVisible = _visibilities[sportId],
-                DisplayName = Resources.Viewlog.disableColossusBets,
+                DisplayName = Alpha.ViewLogs.LocalResources.Viewlog.disableColossusBets,
                 DisplayValue = disableColossusBets
             });
 
@@ -261,7 +264,7 @@ namespace Sunplus.Agent.UI._ViewLog
         public static string GetDisabledKenoBettypeName(string disableBettype)
         { 
             return string.Format("{0} {1}",
-                Resources.Viewlog.disabled,
+				Alpha.ViewLogs.LocalResources.Viewlog.disabled,
                 CacheRef.GetBetTypeName(disableBettype));
         }
 
@@ -274,8 +277,8 @@ namespace Sunplus.Agent.UI._ViewLog
 
         private static string getResource(string key)
         {
-            Resources.Viewlog.ResourceManager.IgnoreCase = true;
-            return Resources.Viewlog.ResourceManager.GetString(key) ?? string.Empty;
+			Alpha.ViewLogs.LocalResources.Viewlog.ResourceManager.IgnoreCase = true;
+            return Alpha.ViewLogs.LocalResources.Viewlog.ResourceManager.GetString(key) ?? string.Empty;
         }
 
         private static bool ValidateIpAddress(string ipAddress)

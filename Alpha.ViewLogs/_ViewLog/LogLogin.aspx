@@ -6,31 +6,31 @@
         <table width="100%" cellpadding="0" cellspacing="0" id="DataLog">
             <tr class="title">
                 <th>
-                    <%= Resources.Viewlog.logid%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.logid%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.logdate%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.logdate%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.username%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.username%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.actionname%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.actionname%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.actionDesc%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.actionDesc%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.Domain%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.Domain%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.Browser%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.Browser%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.country%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.country%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.IP%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.IP%>
                 </th>
             </tr>
             <asp:Repeater ID="rptDataLog" runat="server" EnableViewState="false">

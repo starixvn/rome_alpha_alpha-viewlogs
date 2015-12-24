@@ -6,28 +6,28 @@
         <table width="100%" cellpadding="0" cellspacing="0" id="DataLog">
             <tr class="title">
                 <th>
-                    <%= Resources.Viewlog.logid%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.logid%>
                 </th>
                 <th>
-                     <%= Resources.Viewlog.logdate%>
+                     <%= Alpha.ViewLogs.LocalResources.Viewlog.logdate%>
                 </th>
                 <th>
-                     <%= Resources.Viewlog.usernameEdited%>
+                     <%= Alpha.ViewLogs.LocalResources.Viewlog.usernameEdited%>
                 </th>
                 <th>
-                     <%= Resources.Viewlog.actionname%>
+                     <%= Alpha.ViewLogs.LocalResources.Viewlog.actionname%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.OldValue%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.OldValue%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.NewValue%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.NewValue%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.actionDesc%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.actionDesc%>
                 </th>
                 <th>
-                    <%= Resources.Viewlog.IP%>
+                    <%= Alpha.ViewLogs.LocalResources.Viewlog.IP%>
                 </th>
             </tr>
             <asp:Repeater ID="rptDataLog" runat="server" EnableViewState="false">
@@ -90,7 +90,7 @@
             </asp:Repeater>
             <tr class="noInfo" id="ltrNoInfo" runat="server">
                 <td colspan="8">
-                    <%= Resources.Lang.noInfo %>
+                    <%= Alpha.ViewLogs.LocalResources.Lang.noInfo %>
                 </td>
             </tr>
         </table>

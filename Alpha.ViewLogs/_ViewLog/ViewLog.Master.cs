@@ -83,7 +83,7 @@
 				ddlActionType.DataBind();
 
 				//add first dropdownlist item (all)
-				var listItem = new ListItem { Text = Resources.Viewlog.All, Value = "-1" };
+				var listItem = new ListItem { Text = Alpha.ViewLogs.LocalResources.Viewlog.All, Value = "-1" };
 				ddlActionType.Items.Insert(0, listItem);
 			}
 		}
