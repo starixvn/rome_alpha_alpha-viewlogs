@@ -55,6 +55,10 @@
       <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Fanex.CustomerSetting.Module.KenoStatus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.CustomerSetting.Module.KenoStatus.1.0.0.2\lib\net40\Fanex.CustomerSetting.Module.KenoStatus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Fanex.Data, Version=0.5.404.63, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Data.0.5.404.63\lib\net40\Fanex.Data.dll</HintPath>
       <Private>True</Private>
@@ -195,13 +199,17 @@
     <Compile Include="App_Start\DependencyConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CustomerSettingController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\CustomerSettingHandler.cs" />
     <Compile Include="Handlers\DefaultHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\CustomerSettingQuery.cs" />
     <Compile Include="Requests\IndexQuery.cs" />
+    <Compile Include="ViewModels\CustomerSetting\CustomerSettingViewModel.cs" />
     <Compile Include="ViewModels\Default\IndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +218,7 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="bundleconfig.json" />
     <Content Include="compilerconfig.json" />
+    <Content Include="Views\CustomerSetting\Index.cshtml" />
     <None Include="Web.AppSettings.config" />
     <None Include="Web.AppSettings.local.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
@@ -235,6 +244,8 @@
     <None Include="Web.AppSettings.uati7.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </None>
+    <Content Include="Web.Configuration\SecurityCode.config" />
+    <Content Include="Web.Configuration\AuthorizationSection.config" />
     <None Include="Web.ConnectionStrings.config" />
     <None Include="Web.ConnectionStrings.local.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>

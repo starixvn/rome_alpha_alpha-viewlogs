@@ -7,5 +7,16 @@
     <Setting Key="Acc_UserLog_RunSPSelTotalRecords" SpName="Acc_UserLog_RunSPSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
     <Setting Key="Acc_UserLog_CreditSelTotalRecords" SpName="Acc_UserLog_CreditSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
     <Setting Key="Acc_UserLog_LoginSelTotalRecords" SpName="Acc_UserLog_LoginSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+
+    <Setting Key="Acc_UserLog_LogActionTypeSel" SpName="Acc_UserLog_LogActionTypeSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0">
+      <Mapping DataField="ActionTypeID" ObjectProperty="ID" />
+      <Mapping DataField="ActionTypeNameEN" ObjectProperty="EnglishName" />
+      <Mapping DataField="ActionTypeNameCH" ObjectProperty="ChineseTraditionalName" />
+      <Mapping DataField="ActionTypeNameCS" ObjectProperty="ChineseSimplifiedName" />
+      <Mapping DataField="ActionTypeNameJP" ObjectProperty="JapaneseName" />
+      <Mapping DataField="ActionTypeNameVI" ObjectProperty="VietnameseName" />
+      <Mapping DataField="ActionTypeNameTH" ObjectProperty="ThaiName" />
+      <Mapping DataField="ActionTypeNameKO" ObjectProperty="KoreanName" />
+    </Setting>
   </Function>
 </Functions>

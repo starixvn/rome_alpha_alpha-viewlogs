@@ -3,7 +3,8 @@
     using Controllers;
     using Fanex.Data.Repository;
     using MediatR;
-    using SecurityCode.Sessions;
+    using Services;
+    using Services.Impl;
     using SimpleInjector;
     using SimpleInjector.Integration.Web;
     using SimpleInjector.Integration.Web.Mvc;
@@ -67,6 +68,10 @@
 
         private static void RegisterServices(Container container)
         {
+            //// Singleton
+            container.Register<CachingManager, CachingManagerImpl>(Lifestyle.Singleton);
+
+            //// Transient
             container.Register(
                 () =>
                 {
@@ -81,19 +86,7 @@
                 },
                 Lifestyle.Transient);
 
-            container.Register(
-                () =>
-                {
-                    if (HttpContext.Current != null
-                       && (HttpContext.Current.Handler is IRequiresSessionState
-                       || HttpContext.Current.Handler is IReadOnlySessionState))
-                    {
-                        return CookieLessSessionFactory.SecurityCodeSession;
-                    }
-
-                    return new SecurityCodeSession(string.Empty);
-                },
-                Lifestyle.Transient);
+            container.Register<CustomerSettingService, CustomerSettingServiceImpl>(Lifestyle.Transient);
         }
 
         private static void RegisterDataAccesses(Container container)

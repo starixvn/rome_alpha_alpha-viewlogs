@@ -11,16 +11,11 @@
     public class DefaultController : BaseController
     {
         private readonly IUserSession userSession;
-        private readonly ISecurityCodeSession securityCodeSession;
         private readonly IMediator mediator;
 
-        public DefaultController(
-            IUserSession userSession,
-            ISecurityCodeSession securityCodeSession,
-            IMediator mediator)
+        public DefaultController(IUserSession userSession, IMediator mediator)
         {
             this.userSession = userSession;
-            this.securityCodeSession = securityCodeSession;
             this.mediator = mediator;
         }
 
