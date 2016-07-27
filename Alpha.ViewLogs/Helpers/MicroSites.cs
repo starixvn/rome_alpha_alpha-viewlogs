@@ -1,0 +1,13 @@
+﻿namespace Alpha.ViewLogs.Helpers
+{
+    using Configurations;
+
+    public class MicroSites
+    {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1055:UriReturnValuesShouldNotBeStrings", Justification = "Reviewed!")]
+        public static string OldMainUrl(string virtualPath)
+        {
+            return AppPathHelper.GetAppPath(AppSettings.OldMainAppPath, virtualPath);
+        }
+    }
+}
