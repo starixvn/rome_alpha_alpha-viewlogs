@@ -43,11 +43,13 @@
     <Compile Include="Models\Enumerations\Enumeration.cs" />
     <Compile Include="Models\Enumerations\UserLevel.cs" />
     <Compile Include="Models\CustomerSetting\LogActionType.cs" />
+    <Compile Include="Params\CustomerSetting\GetLogsParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CachingManager.cs" />
     <Compile Include="Services\CustomerSettingService.cs" />
     <Compile Include="Services\Impl\CachingManagerImpl.cs" />
     <Compile Include="Services\Impl\CustomerSettingServiceImpl.cs" />
+    <Compile Include="Services\Impl\ViewLogBaseService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccesses\" />

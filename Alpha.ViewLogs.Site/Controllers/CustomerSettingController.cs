@@ -28,6 +28,9 @@
             }
 
             customerSettingQuery.IsDebug = AppSettings.IsDebug;
+            customerSettingQuery.HasViewLogPermission = userSession.SubPageAccess != null && userSession.SubPageAccess.ViewLog;
+            customerSettingQuery.Language = userSession.Language;
+
             var viewModel = mediator.Send(customerSettingQuery);
 
             return View(viewModel);

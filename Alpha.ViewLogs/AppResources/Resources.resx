@@ -129,4 +129,7 @@
   <data name="ViewLogStatus" xml:space="preserve">
     <value>View Log Status</value>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
 </root>

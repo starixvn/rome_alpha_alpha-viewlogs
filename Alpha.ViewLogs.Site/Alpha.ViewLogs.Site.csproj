@@ -193,6 +193,13 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="AppSettingsConfiguration.ttinclude" />
+    <None Include="Web.AppSettings.config" />
+    <None Include="Web.AppSettings.Config.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Web.AppSettings.Config.txt</LastGenOutput>
+    </None>
+    <None Include="Web.AppSettings.Config.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +217,7 @@
     <Compile Include="Requests\CustomerSettingQuery.cs" />
     <Compile Include="Requests\IndexQuery.cs" />
     <Compile Include="ViewModels\CustomerSetting\CustomerSettingViewModel.cs" />
+    <Compile Include="ViewModels\CustomerSetting\LogActionTypeViewModel.cs" />
     <Compile Include="ViewModels\Default\IndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -219,7 +227,6 @@
     <Content Include="bundleconfig.json" />
     <Content Include="compilerconfig.json" />
     <Content Include="Views\CustomerSetting\Index.cshtml" />
-    <None Include="Web.AppSettings.config" />
     <None Include="Web.AppSettings.local.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </None>
@@ -235,6 +242,8 @@
     <None Include="Web.AppSettings.proi7.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </None>
+    <Content Include="Web.Configuration\SecurityCode.config" />
+    <Content Include="Web.Configuration\AuthorizationSection.config" />
     <None Include="Web.AppSettings.sit.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </None>
@@ -244,8 +253,6 @@
     <None Include="Web.AppSettings.uati7.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </None>
-    <Content Include="Web.Configuration\SecurityCode.config" />
-    <Content Include="Web.Configuration\AuthorizationSection.config" />
     <None Include="Web.ConnectionStrings.config" />
     <None Include="Web.ConnectionStrings.local.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
@@ -310,6 +317,9 @@
       <Project>{415fe6c8-c743-47c1-b520-bdbe3b1da2bf}</Project>
       <Name>Alpha.ViewLogs</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

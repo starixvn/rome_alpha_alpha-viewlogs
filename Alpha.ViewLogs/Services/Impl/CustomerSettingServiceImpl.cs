@@ -4,12 +4,14 @@
     using Fanex.Common.Helper;
     using Fanex.Data.Repository;
     using Models.CustomerSetting;
+    using Params.CustomerSetting;
     using System.Collections.Generic;
     using System.Linq;
 
     public class CustomerSettingServiceImpl : CustomerSettingService
     {
-        private const string CacheKeyLogActionTypes = "Alpha.ViewLogs.LogActionTypes";
+        private const string CacheKeyLogActionTypes = "Alpha.ViewLogs.CustomerSetting.LogActionTypes";
+        private const string CacheKeyTransformObject = "Alpha.ViewLogs.CustomerSetting.TransformObject";
 
         private readonly CachingManager cacheManager;
         private readonly IDynamicRepository dynamicRepository;
@@ -33,8 +35,17 @@
             }
 
             logActionTypes = dynamicRepository.Fetch<LogActionType>(new GetAllLogActionTypeCriteria()).ToList();
+            cacheManager.Add(CacheKeyLogActionTypes, logActionTypes);
 
             return logActionTypes;
+        }
+
+        public void GetLogs(GetLogsParam getLogsParam)
+        {
+            if (getLogsParam.IsDebug)
+            {
+                cacheManager.Remove(CacheKeyTransformObject);
+            }
         }
     }
 }
