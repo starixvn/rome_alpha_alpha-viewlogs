@@ -100,4 +100,85 @@
   <data name="All" xml:space="preserve">
     <value>全部</value>
   </data>
+  <data name="TotalBets" xml:space="preserve">
+    <value>总投注</value>
+  </data>
+  <data name="Forecast" xml:space="preserve">
+    <value>预测</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="MemberInfo" xml:space="preserve">
+    <value>会员资讯</value>
+  </data>
+  <data name="FullControl" xml:space="preserve">
+    <value>完全控制</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>更改</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>游览</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>转账</value>
+  </data>
+  <data name="ViewLog" xml:space="preserve">
+    <value>察看日志</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>每天</value>
+  </data>
+  <data name="Sun" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="Mon" xml:space="preserve">
+    <value>一</value>
+  </data>
+  <data name="Tue" xml:space="preserve">
+    <value>二</value>
+  </data>
+  <data name="Wed" xml:space="preserve">
+    <value>三</value>
+  </data>
+  <data name="Thurs" xml:space="preserve">
+    <value>四</value>
+  </data>
+  <data name="Sat" xml:space="preserve">
+    <value>六</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>每周</value>
+  </data>
+  <data name="Fri" xml:space="preserve">
+    <value>五</value>
+  </data>
+  <data name="AgentSite" xml:space="preserve">
+    <value>代理系统</value>
+  </data>
+  <data name="AccountingSite" xml:space="preserve">
+    <value>Accounting Site</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>无限</value>
+  </data>
+  <data name="DisabledVirtualSports" xml:space="preserve">
+    <value>禁用虚拟运动</value>
+  </data>
+  <data name="DisableGoldDeluxe" xml:space="preserve">
+    <value>Disable Gold Deluxe</value>
+  </data>
+  <data name="DisableColossusBets" xml:space="preserve">
+    <value>Disable Colossus Bets</value>
+  </data>
+  <data name="DisableCockfighting" xml:space="preserve">
+    <value>Disabled Cockfighting</value>
+  </data>
+  <data name="DisableAllBet" xml:space="preserve">
+    <value>Disabled Allbet</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>禁用</value>
+  </data>
 </root>

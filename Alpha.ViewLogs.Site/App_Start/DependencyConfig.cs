@@ -1,6 +1,8 @@
 ﻿namespace Alpha.ViewLogs.Site.App_Start
 {
     using Controllers;
+    using DataAccesses;
+    using DataAccesses.Impl;
     using Fanex.Data.Repository;
     using MediatR;
     using Services;
@@ -86,12 +88,19 @@
                 },
                 Lifestyle.Transient);
 
-            container.Register<CustomerSettingService, CustomerSettingServiceImpl>(Lifestyle.Transient);
+            container.Register<CustomerService, CustomerServiceImpl>(Lifestyle.Transient);
+            container.Register<CustomerSettingLogsService, CustomerSettingLogsServiceImpl>(Lifestyle.Transient);
+            container.Register<BaseLogService, BaseLogServiceImpl>(Lifestyle.Transient);
+            container.Register<TransformTrackingValueToHtmlService, TransformTrackingValueToHtmlServiceImpl>(Lifestyle.Transient);
+            container.Register<XsltLogFormatService, XsltLogFormatServiceImpl>(Lifestyle.Transient);
+            container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);
         }
 
         private static void RegisterDataAccesses(Container container)
         {
             container.Register<IDynamicRepository, DynamicRepository>(Lifestyle.Transient);
+            container.Register<CustomerDataAccess, CustomerDataAccessImpl>(Lifestyle.Transient);
+            container.Register<BaseDataAccess, BaseDataAccessImpl>(Lifestyle.Transient);
         }
     }
 }

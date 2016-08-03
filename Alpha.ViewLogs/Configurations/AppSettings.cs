@@ -86,6 +86,15 @@
             }
         }
 
+        public static List<int> NewFormatActionLogIds
+        {
+            get
+            {
+                var settingValue = GetSettingValue("NewFormatActionLogIds");
+                return GetIdListFromStringSetting(settingValue);
+            }
+        }
+
         public static string GetSettingValue(string name)
         {
             return ConfigurationManager.AppSettings[name];

@@ -1,0 +1,12 @@
+﻿namespace Alpha.ViewLogs.Services
+{
+    using Alpha.ViewLogs.Models;
+    using Params;
+
+    public interface TransformTrackingValueToHtmlService
+    {
+        void InitCompiledTransformCache(TransformTrackingValueToHtmlParam transformParam);
+
+        string TransformTrackingValueToHtml(string trackingValueWithDiff, BaseLog baseLog, TransformTrackingValueToHtmlParam transformParam);
+    }
+}

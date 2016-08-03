@@ -1,19 +1,28 @@
 ﻿namespace Alpha.ViewLogs.Site.Requests
 {
     using Configurations;
+    using Constants;
+    using Fanex.Common;
     using MediatR;
-    using Params.CustomerSetting;
+    using Params.CustomerSettingLogs;
     using Sunplus.Agent.Model.Entities.Permission;
+    using System;
     using System.Collections.Generic;
-    using ViewModels.CustomerSetting;
+    using ViewLogs.Helpers;
+    using ViewModels.CustomerSettingLogs;
 
-    public class CustomerSettingQuery : IRequest<CustomerSettingViewModel>
+    public class CustomerSettingLogsQuery : IRequest<CustomerSettingLogsViewModel>
     {
-        public CustomerSettingQuery()
+        public CustomerSettingLogsQuery()
         {
             ActionIdVisibilities = new Dictionary<int, bool>();
             SetActionIdVisibilities();
+            SetSportBetTypeVisibilities();
         }
+
+        public int UplineId { get; set; }
+
+        public string Username { get; set; }
 
         public bool IsDebug { get; set; }
 
@@ -31,18 +40,45 @@
 
         public string Language { get; set; }
 
+        public bool IsShowOldValue { get; set; }
+
+        public string PageIndex { get; set; }
+
+        public string PageSize { get; set; }
+
+        public bool IsInternal { get; set; }
+
+        public string TrackingValueTransformTemplatePath { get; set; }
+
         public Dictionary<int, bool> ActionIdVisibilities { get; set; }
+
+        public Dictionary<string, bool> SportBetTypeVisibilities { get; set; }
+
+        public List<int> NewFormatActionLogIds { get; set; }
+
+        public bool IsShowMyanmarOdds { get; set; }
 
         public GetLogsParam ConvertToGetLogsParam()
         {
+            var fromDate = string.IsNullOrEmpty(FromDate) ? DateTime.Now.AddDays(-1) : Convert.ToDateTime(FromDate);
+            var toDate = string.IsNullOrEmpty(ToDate) ? DateTime.Now : Convert.ToDateTime(ToDate);
+
             return new GetLogsParam
             {
+                UplineId = UplineId,
                 IsDebug = IsDebug,
                 SubAccId = SubAccId,
-                ActionTypeId = ActionTypeId,
+                ActionTypeId = string.IsNullOrEmpty(ActionTypeId) ? -1 : Converter.ToInt(ActionTypeId),
                 RoleId = RoleId,
-                FromDate = FromDate,
-                ToDate = ToDate,
+                FromDate = DateTimeHelper.GetBeginningOfDate(fromDate),
+                ToDate = DateTimeHelper.GetEndingOfDate(toDate),
+                Username = Username,
+                IsInternal = IsInternal,
+
+                PageSize = string.IsNullOrEmpty(PageSize) ? Pager.DefaultPageSize : Converter.ToInt(PageSize),
+                PageIndex = string.IsNullOrEmpty(PageIndex) ? 0 : Converter.ToInt(PageIndex),
+
+                Language = Language,
                 HasViewLogPermission = HasViewLogPermission,
                 ActionIdVisibilities = ActionIdVisibilities
             };
@@ -56,6 +92,25 @@
             AppendActionIdVisibilities(AppSettings.ActionIds_Racing_152_41, UserPermission.IsShowRacing_152_41);
             AppendActionIdVisibilities(AppSettings.ActionIds_Racing_152_51, UserPermission.IsShowRacing_152_51);
             AppendActionIdVisibilities(AppSettings.ActionIds_Racing_153_51, UserPermission.IsShowRacing_153_51);
+        }
+
+        private void SetSportBetTypeVisibilities()
+        {
+            SportBetTypeVisibilities = new Dictionary<string, bool>();
+            SportBetTypeVisibilities.Add("151_31", UserPermission.IsShowRacing_151_31);
+            SportBetTypeVisibilities.Add("151_41", UserPermission.IsShowRacing_151_41);
+            SportBetTypeVisibilities.Add("151_51", UserPermission.IsShowRacing_151_51);
+            SportBetTypeVisibilities.Add("152_41", UserPermission.IsShowRacing_152_41);
+            SportBetTypeVisibilities.Add("152_51", UserPermission.IsShowRacing_152_51);
+            SportBetTypeVisibilities.Add("153_51", UserPermission.IsShowRacing_153_51);
+            SportBetTypeVisibilities.Add("161_90", UserPermission.IsShowNumberGroup);
+            SportBetTypeVisibilities.Add(Sport.VirtualSports.ToString(), UserPermission.IsShowVirtualSports);
+            SportBetTypeVisibilities.Add(Sport.GoldDeluxe.ToString(), UserPermission.IsShowGoldDeluxeSettingForCredit);
+            SportBetTypeVisibilities.Add(Sport.ColossusBets.ToString(), UserPermission.IsShowColossusBets);
+            SportBetTypeVisibilities.Add(Sport.Sportsbook2.ToString(), UserPermission.IsShowSportsbook2);
+            SportBetTypeVisibilities.Add(Sport.CockFighting.ToString(), UserPermission.IsEnableProduct(Sport.CockFighting));
+            SportBetTypeVisibilities.Add(Sport.AllBet.ToString(), UserPermission.IsEnableProduct(Sport.AllBet));
+            SportBetTypeVisibilities.Add(Sport.Voidbridge.ToString(), UserPermission.IsEnableProduct(Sport.Voidbridge));
         }
 
         private void AppendActionIdVisibilities(List<int> actionIds, bool visibility)

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="IP">
+    <Setting Key="GetIPVN" SpName="GetIPVN" DbName="DBCust.IPDB.BODBDownlineNet" Plain="0">
+      <Mapping DataField="ipfrom" ObjectProperty="FromAddress" />
+      <Mapping DataField="ipto" ObjectProperty="ToAddress" />
+      <Mapping DataField="ismanual" ObjectProperty="IsManual" />
+    </Setting>
+  </Function>
+</Functions>

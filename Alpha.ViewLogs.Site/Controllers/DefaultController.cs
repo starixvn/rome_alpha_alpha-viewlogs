@@ -2,7 +2,6 @@
 {
     using MediatR;
     using Requests;
-    using SecurityCode.Sessions;
     using Sunplus.Agent.Model.Entities;
     using System.Web.Mvc;
     using System.Web.SessionState;

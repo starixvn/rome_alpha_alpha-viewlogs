@@ -132,4 +132,88 @@
   <data name="All" xml:space="preserve">
     <value>All</value>
   </data>
+  <data name="TotalBets" xml:space="preserve">
+    <value>Total Bets</value>
+  </data>
+  <data name="Forecast" xml:space="preserve">
+    <value>Forecast</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="MemberInfo" xml:space="preserve">
+    <value>Member information</value>
+  </data>
+  <data name="FullControl" xml:space="preserve">
+    <value>Full Control</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="ViewLog" xml:space="preserve">
+    <value>View Log</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="Sun" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="Mon" xml:space="preserve">
+    <value>Mon</value>
+  </data>
+  <data name="Tue" xml:space="preserve">
+    <value>Tue</value>
+  </data>
+  <data name="Wed" xml:space="preserve">
+    <value>Wed</value>
+  </data>
+  <data name="Thurs" xml:space="preserve">
+    <value>Thurs</value>
+  </data>
+  <data name="Sat" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>Weekly</value>
+  </data>
+  <data name="Fri" xml:space="preserve">
+    <value>Fri</value>
+  </data>
+  <data name="AgentSite" xml:space="preserve">
+    <value>Agent Site</value>
+  </data>
+  <data name="AccountingSite" xml:space="preserve">
+    <value>Accounting Site</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Unlimited</value>
+  </data>
+  <data name="DisabledVirtualSports" xml:space="preserve">
+    <value>Disabled Virtual Sports</value>
+  </data>
+  <data name="DisableGoldDeluxe" xml:space="preserve">
+    <value>Disable Gold Deluxe</value>
+  </data>
+  <data name="DisableColossusBets" xml:space="preserve">
+    <value>Disable Colossus Bets</value>
+  </data>
+  <data name="DisableCockfighting" xml:space="preserve">
+    <value>Disabled Cockfighting</value>
+  </data>
+  <data name="DisableAllBet" xml:space="preserve">
+    <value>Disabled Allbet</value>
+  </data>
+  <data name="DisableMacauGames" xml:space="preserve">
+    <value>Disabled Macau Games</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
 </root>

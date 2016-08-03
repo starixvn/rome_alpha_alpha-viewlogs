@@ -100,4 +100,85 @@
   <data name="All" xml:space="preserve">
     <value>ทั้งหมด</value>
   </data>
+  <data name="TotalBets" xml:space="preserve">
+    <value>จำนวนการวางเดิมพันทั้งหมด</value>
+  </data>
+  <data name="Forecast" xml:space="preserve">
+    <value>การทำนายผลล่วงหน้า</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>รายงาน</value>
+  </data>
+  <data name="MemberInfo" xml:space="preserve">
+    <value>ข้อมูลสมาชิก</value>
+  </data>
+  <data name="FullControl" xml:space="preserve">
+    <value>ควบคุมทั้งหมด</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>ล่าสุด</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>ดู</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>ตั้งค่าใหม่</value>
+  </data>
+  <data name="ViewLog" xml:space="preserve">
+    <value>ดูบันทึก</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>รายวัน</value>
+  </data>
+  <data name="Sun" xml:space="preserve">
+    <value>วันอาทิตย์</value>
+  </data>
+  <data name="Mon" xml:space="preserve">
+    <value>วันจันทร์</value>
+  </data>
+  <data name="Tue" xml:space="preserve">
+    <value>วันอังคาร</value>
+  </data>
+  <data name="Wed" xml:space="preserve">
+    <value>วันพุธ</value>
+  </data>
+  <data name="Thurs" xml:space="preserve">
+    <value>วันพฤหัส</value>
+  </data>
+  <data name="Sat" xml:space="preserve">
+    <value>วันเสาร์</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>รายอาทิตย์</value>
+  </data>
+  <data name="Fri" xml:space="preserve">
+    <value>วันศุกร์</value>
+  </data>
+  <data name="AgentSite" xml:space="preserve">
+    <value>เอเจนต์ ไซค์</value>
+  </data>
+  <data name="AccountingSite" xml:space="preserve">
+    <value>Accounting Site</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>ไม่จำกัด</value>
+  </data>
+  <data name="DisabledVirtualSports" xml:space="preserve">
+    <value>ปิดกีฬาอนิเมชั่น</value>
+  </data>
+  <data name="DisableGoldDeluxe" xml:space="preserve">
+    <value>Disable Gold Deluxe</value>
+  </data>
+  <data name="DisableColossusBets" xml:space="preserve">
+    <value>Disable Colossus Bets</value>
+  </data>
+  <data name="DisableCockfighting" xml:space="preserve">
+    <value>Disabled Cockfighting</value>
+  </data>
+  <data name="DisableAllBet" xml:space="preserve">
+    <value>Disabled Allbet</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>ปิดการใช้งาน</value>
+  </data>
 </root>

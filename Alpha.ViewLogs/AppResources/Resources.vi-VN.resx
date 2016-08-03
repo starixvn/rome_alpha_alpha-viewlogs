@@ -100,4 +100,85 @@
   <data name="All" xml:space="preserve">
     <value>Tất cả</value>
   </data>
+  <data name="TotalBets" xml:space="preserve">
+    <value>Tổng Cược</value>
+  </data>
+  <data name="Forecast" xml:space="preserve">
+    <value>Dự đoán </value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Báo cáo</value>
+  </data>
+  <data name="MemberInfo" xml:space="preserve">
+    <value>Thông tin thành viên</value>
+  </data>
+  <data name="FullControl" xml:space="preserve">
+    <value>Toàn quyền </value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Cập nhật</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Chuyển khoản</value>
+  </data>
+  <data name="ViewLog" xml:space="preserve">
+    <value>Nhật ký</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>Hằng ngày</value>
+  </data>
+  <data name="Sun" xml:space="preserve">
+    <value>Chủ nhật</value>
+  </data>
+  <data name="Mon" xml:space="preserve">
+    <value>Thứ 2</value>
+  </data>
+  <data name="Tue" xml:space="preserve">
+    <value>Thứ 3</value>
+  </data>
+  <data name="Wed" xml:space="preserve">
+    <value>Thứ 4</value>
+  </data>
+  <data name="Thurs" xml:space="preserve">
+    <value>Thứ 5</value>
+  </data>
+  <data name="Sat" xml:space="preserve">
+    <value>Thứ 7</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>Hằng tuần</value>
+  </data>
+  <data name="Fri" xml:space="preserve">
+    <value>Thứ 6</value>
+  </data>
+  <data name="AgentSite" xml:space="preserve">
+    <value>Agent Site</value>
+  </data>
+  <data name="AccountingSite" xml:space="preserve">
+    <value>Accounting Site</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Không giới hạn</value>
+  </data>
+  <data name="DisabledVirtualSports" xml:space="preserve">
+    <value>Không cho phép chơi Virtual Sports</value>
+  </data>
+  <data name="DisableGoldDeluxe" xml:space="preserve">
+    <value>Disable Gold Deluxe</value>
+  </data>
+  <data name="DisableColossusBets" xml:space="preserve">
+    <value>Disable Colossus Bets</value>
+  </data>
+  <data name="DisableCockfighting" xml:space="preserve">
+    <value>Disabled Cockfighting</value>
+  </data>
+  <data name="DisableAllBet" xml:space="preserve">
+    <value>Disabled Allbet</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Vô hiệu hóa</value>
+  </data>
 </root>

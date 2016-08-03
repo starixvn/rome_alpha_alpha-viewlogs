@@ -1,7 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
     using Constants;
-    using Helpers;
     using Sunplus.Agent.Model.Entities;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
@@ -12,6 +11,7 @@
     using System.Web.Routing;
     using System.Web.Security;
     using System.Web.SessionState;
+    using ViewLogs.Helpers;
 
     [SessionState(SessionStateBehavior.ReadOnly)]
     public class BaseController : Controller
