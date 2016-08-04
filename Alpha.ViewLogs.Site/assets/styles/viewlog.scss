@@ -1,0 +1,47 @@
+﻿.filter {
+    .form-group {
+        #txtUsername {
+            width: 200px;
+        }
+        #monthPickerID {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+    }
+}
+
+.width-100per {
+    width: 100%;
+}
+
+.tblRpt {
+    tr > td.logid, tr > td.datetime {
+        text-align: center;
+    }
+}
+
+.tblDesc {
+    width: 100%;
+    td.colW1 {
+        background-color: #f3f3f3;
+        text-align: left;
+        text-transform: capitalize;
+        width: 18.1818%;
+    }
+    td.colW2 {
+        text-transform: capitalize;
+        width: 16.6667%;
+        .valuechanged {
+            color: #f00;
+        }
+        .valueold {
+            color: #799;
+        }
+        .line {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            line-height: 5px;
+            margin: 2px -8px;
+        }
+    }
+}

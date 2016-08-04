@@ -193,6 +193,12 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="assets\bundles\default.css" />
+    <Content Include="assets\bundles\default.min.css">
+      <DependentUpon>default.css</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\viewlog.css" />
+    <None Include="compilerconfig.json.defaults">
     <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_1000.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_1001.xslt" />
@@ -493,8 +499,13 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\action_921.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_922.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_924.xslt" />
-    <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="assets\styles\viewlog.css">
+      <DependentUpon>viewlog.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\styles\viewlog.min.css">
+      <DependentUpon>viewlog.css</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
     <None Include="Web.AppSettings.config" />
@@ -527,6 +538,7 @@
     <Content Include="bundleconfig.json" />
     <Content Include="compilerconfig.json" />
     <Content Include="Views\CustomerSettingLogs\Index.cshtml" />
+    <Content Include="assets\styles\viewlog.scss" />
     <None Include="Web.AppSettings.local.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </None>
@@ -607,9 +619,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="assets\bundles\" />
     <Folder Include="assets\scripts\" />
-    <Folder Include="assets\styles\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Alpha.ViewLogs\Alpha.ViewLogs.csproj">
