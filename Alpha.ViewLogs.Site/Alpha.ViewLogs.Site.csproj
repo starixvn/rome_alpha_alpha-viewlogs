@@ -199,6 +199,8 @@
     </Content>
     <Content Include="assets\bundles\viewlog.css" />
     <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>      
     <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_1000.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_1001.xslt" />
@@ -498,9 +500,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\action_920.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_921.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_922.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_924.xslt" />
-      <DependentUpon>compilerconfig.json</DependentUpon>
-    </None>
+    <Content Include="App_Data\TrackingValueTransformTemplates\action_924.xslt" /> 
     <Content Include="assets\styles\viewlog.css">
       <DependentUpon>viewlog.scss</DependentUpon>
     </Content>
