@@ -181,4 +181,61 @@
   <data name="Disabled" xml:space="preserve">
     <value>ปิดการใช้งาน</value>
   </data>
+  <data name="CustomerSetting" xml:space="preserve">
+    <value>ตั้งค่าสมาชิก</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>เครดิต</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>เข้าระบบ</value>
+  </data>
+  <data name="UsernameOrFirstLastName" xml:space="preserve">
+    <value>ยูเซอร์เนม หรือ ชื่อ/นามสุกล</value>
+  </data>
+  <data name="ViewBy" xml:space="preserve">
+    <value>ตรวจสอบ โดย</value>
+  </data>
+  <data name="ShowOldValues" xml:space="preserve">
+    <value>แสดงค่าเก่า</value>
+  </data>
+  <data name="LoginLogs_Warning" xml:space="preserve">
+    <value>The member Login Log is not available.</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>ชื่อผู้ใช้</value>
+  </data>
+  <data name="ViewDataInMonth" xml:space="preserve">
+    <value>ดูข้อมูลเป็นเดือน</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>จาก</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>ถึง</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>ตกลง</value>
+  </data>
+  <data name="LogId" xml:space="preserve">
+    <value>บันทึกรหัส</value>
+  </data>
+  <data name="LogDate" xml:space="preserve">
+    <value>บันทึกวันที่</value>
+  </data>
+  <data name="EditedBy" xml:space="preserve">
+    <value>แก้ไขโดย</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>ปฏิบัติ</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>รายละเอียด</value>
+  </data>
+  <data name="NoInfo" xml:space="preserve">
+    <value>ไม่มีข้อมูล</value>
+  </data>
 </root>

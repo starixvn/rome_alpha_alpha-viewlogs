@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
     using AppResources;
+    using Constants;
     using Helpers;
     using MediatR;
     using Models;
@@ -12,7 +13,7 @@
     using ViewModels;
     using ViewModels.CustomerSettingLogs;
 
-    public class CustomerSettingLogsHandler : IRequestHandler<CustomerSettingLogsQuery, CustomerSettingLogsViewModel>
+    public class CustomerSettingLogsHandler : BaseViewLogsHandler, IRequestHandler<CustomerSettingLogsQuery, CustomerSettingLogsViewModel>
     {
         private readonly CustomerSettingLogsService customerSettingLogsService;
         private readonly TransformTrackingValueToHtmlService transformTrackingValueToHtmlService;
@@ -29,9 +30,12 @@
         {
             var logsParam = customerSettingLogsQuery.ConvertToGetLogsParam();
             var pagingLogs = customerSettingLogsService.GetLogs(logsParam);
-            var viewModel = new CustomerSettingLogsViewModel(customerSettingLogsQuery, pagingLogs);
+
+            var viewModel = new CustomerSettingLogsViewModel(logsParam, pagingLogs);
             viewModel.LogActionTypes = GetLogActionTypes(customerSettingLogsQuery);
             viewModel.Logs = TransformLogsToHtml(pagingLogs, customerSettingLogsQuery);
+            viewModel.Tabs = GetTabs(viewModel.IsSubAccount, viewModel.HasViewLogPermission);
+            viewModel.SelectedTab = ViewLogType.CustomerSetting;
 
             return viewModel;
         }
@@ -42,7 +46,7 @@
 
             var logActionTypeViewModels = logActionTypes.Select(logActionType => new LogActionTypeViewModel(logActionType, customerSettingQuery.Language))
                 .ToList();
-            logActionTypeViewModels.Insert(0, new LogActionTypeViewModel(0, Resources.All));
+            logActionTypeViewModels.Insert(0, new LogActionTypeViewModel(-1, Resources.All));
 
             return logActionTypeViewModels;
         }

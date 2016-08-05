@@ -70,6 +70,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Action.
+        /// </summary>
+        public static string Action {
+            get {
+                return ResourceManager.GetString("Action", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Agent Site.
         /// </summary>
         public static string AgentSite {
@@ -88,11 +97,38 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Credit.
+        /// </summary>
+        public static string Credit {
+            get {
+                return ResourceManager.GetString("Credit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer Setting.
+        /// </summary>
+        public static string CustomerSetting {
+            get {
+                return ResourceManager.GetString("CustomerSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Daily.
         /// </summary>
         public static string Daily {
             get {
                 return ResourceManager.GetString("Daily", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string Details {
+            get {
+                return ResourceManager.GetString("Details", resourceCulture);
             }
         }
         
@@ -160,6 +196,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edited by.
+        /// </summary>
+        public static string EditedBy {
+            get {
+                return ResourceManager.GetString("EditedBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Forecast.
         /// </summary>
         public static string Forecast {
@@ -178,11 +223,56 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to From.
+        /// </summary>
+        public static string From {
+            get {
+                return ResourceManager.GetString("From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Full Control.
         /// </summary>
         public static string FullControl {
             get {
                 return ResourceManager.GetString("FullControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log Date.
+        /// </summary>
+        public static string LogDate {
+            get {
+                return ResourceManager.GetString("LogDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log ID.
+        /// </summary>
+        public static string LogId {
+            get {
+                return ResourceManager.GetString("LogId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The member Login Log is not available..
+        /// </summary>
+        public static string LoginLogs_Warning {
+            get {
+                return ResourceManager.GetString("LoginLogs_Warning", resourceCulture);
             }
         }
         
@@ -205,6 +295,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No information is available.
+        /// </summary>
+        public static string NoInfo {
+            get {
+                return ResourceManager.GetString("NoInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reports.
         /// </summary>
         public static string Reports {
@@ -223,6 +322,33 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show old values.
+        /// </summary>
+        public static string ShowOldValues {
+            get {
+                return ResourceManager.GetString("ShowOldValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submit.
+        /// </summary>
+        public static string Submit {
+            get {
+                return ResourceManager.GetString("Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sun.
         /// </summary>
         public static string Sun {
@@ -237,6 +363,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string Thurs {
             get {
                 return ResourceManager.GetString("Thurs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To.
+        /// </summary>
+        public static string To {
+            get {
+                return ResourceManager.GetString("To", resourceCulture);
             }
         }
         
@@ -286,11 +421,47 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        public static string Username {
+            get {
+                return ResourceManager.GetString("Username", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username or First/Last Name.
+        /// </summary>
+        public static string UsernameOrFirstLastName {
+            get {
+                return ResourceManager.GetString("UsernameOrFirstLastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View.
         /// </summary>
         public static string View {
             get {
                 return ResourceManager.GetString("View", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View by.
+        /// </summary>
+        public static string ViewBy {
+            get {
+                return ResourceManager.GetString("ViewBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View data in month.
+        /// </summary>
+        public static string ViewDataInMonth {
+            get {
+                return ResourceManager.GetString("ViewDataInMonth", resourceCulture);
             }
         }
         

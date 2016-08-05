@@ -20,6 +20,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>FanexRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>
+    </NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -59,6 +62,7 @@
     <Compile Include="DataAccesses\CustomerDataAccess.cs" />
     <Compile Include="DataAccesses\Impl\BaseDataAccessImpl.cs" />
     <Compile Include="DataAccesses\Impl\CustomerDataAccessImpl.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\AppPathHelper.cs" />
     <Compile Include="Helpers\DateTimeHelper.cs" />
     <Compile Include="Helpers\MicroSites.cs" />
@@ -91,7 +95,9 @@
     <Compile Include="Services\TransformTrackingValueToHtmlService.cs" />
     <Compile Include="Services\XsltLogFormatService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="Fanex.Common, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Common.1.1.0.1\lib\net40\Fanex.Common.dll</HintPath>

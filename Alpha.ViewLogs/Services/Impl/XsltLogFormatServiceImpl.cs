@@ -15,19 +15,22 @@
     public class XsltLogFormatServiceImpl : XsltLogFormatService
     {
         private IPService ipService;
-        private IUserSession userSession;
 
         private Dictionary<string, bool> sportBetTypeVisibilities;
         private bool isShowMyanmarOdds;
 
-        public XsltLogFormatServiceImpl(IPService ipService, IUserSession userSession)
+        public XsltLogFormatServiceImpl(IPService ipService)
         {
             this.ipService = ipService;
-            this.userSession = userSession;
         }
 
         public void AssignParams(TransformTrackingValueToHtmlParam transformParam)
         {
+            if (transformParam == null)
+            {
+                return;
+            }
+
             sportBetTypeVisibilities = transformParam.SportBetTypeVisibilities;
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
         }

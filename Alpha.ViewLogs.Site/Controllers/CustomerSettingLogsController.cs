@@ -10,9 +10,9 @@
     using ViewLogs.Helpers;
 
     [SessionState(SessionStateBehavior.Default)]
-    public class CustomerSettingLogsController : BaseController
+    public class CustomerSettingLogsController : BaseViewLogController
     {
-        private const string CookieShowOldValue = "showOldValue";
+        private const string CookieShowOldValue = "Alpha.ViewLogs.ShowOldValuesCookie";
 
         private readonly IUserSession userSession;
         private readonly IMediator mediator;
@@ -30,6 +30,11 @@
                 Response.Redirect(MicroSites.OldMainUrl(AppSettings.AccessDeniedPage));
             }
 
+            if (!CanViewSettingLogs(userSession))
+            {
+                Response.Redirect(LoginLogsURL);
+            }
+
             customerSettingLogsQuery.IsDebug = AppSettings.IsDebug;
             customerSettingLogsQuery.HasViewLogPermission = userSession.SubPageAccess != null && userSession.SubPageAccess.ViewLog;
             customerSettingLogsQuery.Language = userSession.Language;
@@ -41,6 +46,7 @@
             customerSettingLogsQuery.IsShowMyanmarOdds = UserPermission.IsShowMyanmarOdds;
 
             var viewModel = mediator.Send(customerSettingLogsQuery);
+            viewModel.ShowOldValuesCookieName = CookieShowOldValue;
 
             return View(viewModel);
         }

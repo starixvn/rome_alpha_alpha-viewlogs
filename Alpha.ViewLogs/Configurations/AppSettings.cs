@@ -95,6 +95,14 @@
             }
         }
 
+        public static string AssetAppPath
+        {
+            get
+            {
+                return GetSettingValue("AssetAppPath");
+            }
+        }
+
         public static string GetSettingValue(string name)
         {
             return ConfigurationManager.AppSettings[name];

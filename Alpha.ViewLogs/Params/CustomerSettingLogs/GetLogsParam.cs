@@ -38,6 +38,10 @@
 
         public Dictionary<int, bool> ActionIdVisibilities { get; set; }
 
+        public DateTime MaxReportDate { get; set; }
+
+        public DateTime MinReportDate { get; set; }
+
         public GetCustomerSettingLogsCriteria CreateCustomerSettingLogsCriteria(int custId)
         {
             return new GetCustomerSettingLogsCriteria

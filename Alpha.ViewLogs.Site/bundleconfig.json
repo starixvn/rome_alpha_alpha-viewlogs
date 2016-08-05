@@ -1,8 +1,15 @@
 [
-    {
+  {
     "outputFileName": "assets/bundles/default.css",
-      "inputFiles": [
-        "assets/styles/viewlog.css"
-      ]
+    "inputFiles": [
+      "assets/styles/viewlog.css"
+    ]
+  },
+  {
+    "outputFileName": "assets/scripts/customersettinglogs.js",
+    "inputFiles": [
+      "assets/scripts/customersettinglogs/index-viewmanager.js",
+      "assets/scripts/customersettinglogs/index-manager.js"
+    ]
   }
 ]

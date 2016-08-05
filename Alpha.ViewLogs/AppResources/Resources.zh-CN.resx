@@ -181,4 +181,61 @@
   <data name="Disabled" xml:space="preserve">
     <value>禁用</value>
   </data>
+  <data name="CustomerSetting" xml:space="preserve">
+    <value>会员设定</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>信用额度</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>登入</value>
+  </data>
+  <data name="UsernameOrFirstLastName" xml:space="preserve">
+    <value>用户名或名/姓</value>
+  </data>
+  <data name="ViewBy" xml:space="preserve">
+    <value>查看在月数据</value>
+  </data>
+  <data name="ShowOldValues" xml:space="preserve">
+    <value>显示旧数值</value>
+  </data>
+  <data name="LoginLogs_Warning" xml:space="preserve">
+    <value>会员登录日志无法提供。</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="ViewDataInMonth" xml:space="preserve">
+    <value>查阅每月报告</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>到</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="LogId" xml:space="preserve">
+    <value>日志编号</value>
+  </data>
+  <data name="LogDate" xml:space="preserve">
+    <value>日志日期</value>
+  </data>
+  <data name="EditedBy" xml:space="preserve">
+    <value>由修改</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>动作</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="NoInfo" xml:space="preserve">
+    <value>没资料显示</value>
+  </data>
 </root>

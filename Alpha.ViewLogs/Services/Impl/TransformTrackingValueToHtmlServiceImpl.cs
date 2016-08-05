@@ -6,6 +6,7 @@
     using System.Collections.Generic;
     using System.IO;
     using System.Text;
+    using System.Web;
     using System.Xml.XPath;
     using System.Xml.Xsl;
 
@@ -65,7 +66,8 @@
             var xsltArguments = new XsltArgumentList();
             xsltArguments.AddExtensionObject("urn:LogFormat", xsltLogFormatService);
 
-            using (MemoryStream stream = new MemoryStream(ASCIIEncoding.UTF8.GetBytes(trackingValue)))
+            // Transform xml must be lower case
+            using (MemoryStream stream = new MemoryStream(ASCIIEncoding.UTF8.GetBytes(trackingValue.ToLower())))
             {
                 var document = new XPathDocument(stream);
                 using (var writer = new StringWriter())
@@ -75,7 +77,7 @@
                 }
             }
 
-            return htmlTrackingValue;
+            return HttpUtility.HtmlDecode(htmlTrackingValue);
         }
 
         private XslCompiledTransform GetCompiledTransformByActionIdFromTemplates(int actionId, string trackingValueTransformTemplatePath)

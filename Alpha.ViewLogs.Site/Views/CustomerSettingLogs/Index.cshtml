@@ -1,16 +1,100 @@
 ﻿@using Alpha.ViewLogs.Site.ViewModels.CustomerSettingLogs;
 @using Alpha.ViewLogs.AppResources;
-@model CustomerSettingLogsViewModel
-<!DOCTYPE html>
+@using Alpha.ViewLogs.Site.Helpers;
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@Resources.ViewLogCustomerSetting</title>
-</head>
-<body>
-    <div>
-        sdsad asdas
+@model CustomerSettingLogsViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Resources.ViewLogCustomerSetting;
+    ViewBag.Tabs = Model.Tabs;
+    ViewBag.SelectedTab = Model.SelectedTab;
+}
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="@Model.SelectedTab.ToLower()">
+        <div class="filter">
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label for="txt-username">@Resources.Username</label>
+                    <input type="text" id="txt-username" placeholder="@Resources.UsernameOrFirstLastName" />
+                </div>
+                <div class="form-group">
+                    <label for="ddl-viewby">@Resources.ViewBy</label>
+                    <select id="ddl-logactiontype">
+                        @foreach (var logActionType in Model.LogActionTypes)
+                        {
+                        <option value="@logActionType.Id">@logActionType.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>@Resources.ViewDataInMonth</label>
+                    <div id="monthPickerID"><div id="ddlMonth"></div></div>
+                </div>
+                <div class="form-group">
+                    <input type="button" class="btn-submit" id="btn-submit" value="@Resources.Submit">
+                </div>
+                <div class="form-group">
+                    <div id="icon-loading" class="pull-left hide"></div>
+                </div>
+                <div class="form-group">
+                    <label><input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" checked />@Resources.ShowOldValues</label>
+                </div>
+            </form>
+        </div>
+
+        <div id="content">
+            <table id="DataLog" class="width-100per tblRpt">
+                <tbody>
+                    <tr class="RptHeader">
+                        <th>@Resources.LogId</th>
+                        <th>@Resources.LogDate</th>
+                        <th>@Resources.EditedBy</th>
+                        <th>@Resources.Action</th>
+                        <th>@Resources.Details</th>
+                    </tr>
+                    @if (Model.Logs == null || !Model.Logs.Any())
+                    {
+                        <tr>
+                            <td colspan="5">@Resources.NoInfo</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var log in Model.Logs)
+                        {
+                            <tr>
+                                <td>@log.LogId</td>
+                                <td>@log.LogDate</td>
+                                <td>@log.Username</td>
+                                <td>@log.ActionName</td>
+                                <td>@Html.Raw(log.TrackingValue)</td>
+                            </tr>
+                        }
+                    }
+            </table>
+        </div>
     </div>
-</body>
-</html>
+</div>
+@section Scripts
+{
+    @StaticResources.AssetScripts.Render("/bundles/site-viewlogs/default")
+    @StaticResources.AssetScripts.Render("/js/libs/jquery/jquery.cookie")
+    <script type="text/javascript">
+        var viewModel = {
+            labelFrom: '@Resources.From',
+            labelTo: '@Resources.To',
+
+            maxReportDate: '@Model.MaxReportDate',
+            minReportDate: '@Model.MinReportDate',
+            fromDate: '@Model.FromDate',
+            toDate: '@Model.ToDate',
+            dayInMonth: '@Model.DayInMonth',
+
+            showOldValuesCookieName: '@Model.ShowOldValuesCookieName'
+        };
+
+    </script>
+    @*<script type="text/javascript" src="~/assets/scripts/customersettinglogs/index-manager.js"></script>
+        <script type="text/javascript" src="~/assets/scripts/customersettinglogs/index-viewmanager.js"></script>*@
+    <script type="text/javascript" src="@StaticResources.MainSiteScriptUrl("~/assets/scripts/customersettinglogs")"></script>
+}

@@ -211,4 +211,63 @@
   <data name="Disabled" xml:space="preserve">
     <value>Disabled</value>
   </data>
+  <data name="CustomerSetting" xml:space="preserve">
+    <value>Customer Setting</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>Credit</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>入力</value>
+  </data>
+  <data name="UsernameOrFirstLastName" xml:space="preserve">
+    <value>Username or First/Last Name</value>
+  </data>
+  <data name="ViewBy" xml:space="preserve">
+    <value>View by</value>
+  </data>
+  <data name="ShowOldValues" xml:space="preserve">
+    <value>Show old values</value>
+  </data>
+  <data name="LoginLogs_Warning" xml:space="preserve">
+    <value>The member Login Log is not available.</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>ユーザー名
+</value>
+  </data>
+  <data name="ViewDataInMonth" xml:space="preserve">
+    <value>View data in month</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>送金元</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>から
+</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>送信</value>
+  </data>
+  <data name="LogId" xml:space="preserve">
+    <value>Log ID</value>
+  </data>
+  <data name="LogDate" xml:space="preserve">
+    <value>Log Date</value>
+  </data>
+  <data name="EditedBy" xml:space="preserve">
+    <value>Edited by</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="NoInfo" xml:space="preserve">
+    <value>No information is available</value>
+  </data>
 </root>

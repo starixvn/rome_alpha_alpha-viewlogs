@@ -7,7 +7,8 @@
     {
         public static string[] DaysInWeek()
         {
-            return new string[] {
+            return new string[]
+            {
                 Resources.Sun,
                 Resources.Mon,
                 Resources.Tue,

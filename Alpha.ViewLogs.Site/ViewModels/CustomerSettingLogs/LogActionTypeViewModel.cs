@@ -1,12 +1,15 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels.CustomerSettingLogs
 {
     using Alpha.ViewLogs.Models.CustomerSettingLogs;
-    using Constants;
+    using Fanex.Common.Helper;
+    using ViewLogs.Constants;
 
     public class LogActionTypeViewModel
     {
         public LogActionTypeViewModel(LogActionType logActionType, string language)
         {
+            Check.Argument.IsNotNull(logActionType, nameof(logActionType));
+
             this.Id = logActionType.Id;
             this.Name = GetName(logActionType, language);
         }

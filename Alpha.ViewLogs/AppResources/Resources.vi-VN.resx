@@ -181,4 +181,64 @@
   <data name="Disabled" xml:space="preserve">
     <value>Vô hiệu hóa</value>
   </data>
+  <data name="CustomerSetting" xml:space="preserve">
+    <value>Thiết lập </value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>Tín dụng</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="UsernameOrFirstLastName" xml:space="preserve">
+    <value>Tên đăng nhập hoặc Tên/Họ</value>
+  </data>
+  <data name="ViewBy" xml:space="preserve">
+    <value>View by</value>
+    <comment>Not found</comment>
+  </data>
+  <data name="ShowOldValues" xml:space="preserve">
+    <value>Hiển thị giá trị cũ</value>
+  </data>
+  <data name="LoginLogs_Warning" xml:space="preserve">
+    <value>Nhật ký đăng nhập của  thành viên hiện chưa có.</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="ViewDataInMonth" xml:space="preserve">
+    <value>Xem dữ liệu trong tháng</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Từ</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>đến</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="LogId" xml:space="preserve">
+    <value>ID </value>
+    <comment>Not found</comment>
+  </data>
+  <data name="LogDate" xml:space="preserve">
+    <value>Thời điểm đăng nhập</value>
+    <comment>Not found</comment>
+  </data>
+  <data name="EditedBy" xml:space="preserve">
+    <value>Thay đổi bởi</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Hành động</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="NoInfo" xml:space="preserve">
+    <value>Thông tin chưa được cập nhật</value>
+  </data>
 </root>

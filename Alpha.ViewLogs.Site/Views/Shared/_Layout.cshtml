@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/assets/bundles/site-viewlogs/default.css" />
+    <link rel="stylesheet" href="~/assets/bundles/default.css" />
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <div class="container-fluid">
+        <ul class="nav nav-tabs" role="tablist">
+            @foreach (var tab in ViewBag.Tabs)
+            {
+                var isActive = string.Equals(tab.Id, ViewBag.SelectedTab, StringComparison.OrdinalIgnoreCase);
+                var tabId = tab.Id.ToLower();
+                <li role="presentation" class="@(isActive ? "active" : "")">
+                    <a href="#@tabId" role="tab" aria-controls="@tabId" data-toggle="tab">@tab.Name</a>
+                </li>
+            }
+        </ul>
+        @RenderBody()
+    </div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

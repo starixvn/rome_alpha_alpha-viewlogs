@@ -1,20 +1,20 @@
 ﻿namespace Alpha.ViewLogs.Site.Helpers
 {
     using Alpha.ViewLogs.Models;
-    using Constants;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web;
     using System.Xml;
+    using ViewLogs.Constants;
 
     public class BaseLogViewModelHelper
     {
         public static string GetTrackingValueWithDiff(BaseLog baseLog, bool isShowOldValue)
         {
-            if (baseLog.TrackingValue == null)
+            if (string.IsNullOrEmpty(baseLog.TrackingValue))
             {
-                throw new Exception("TrackingValue is null.");
+                return string.Empty;
             }
 
             baseLog.TrackingValue = StandardizeTrackingValue(baseLog.TrackingValue);

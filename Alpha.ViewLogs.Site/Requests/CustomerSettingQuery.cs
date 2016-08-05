@@ -1,23 +1,31 @@
 ﻿namespace Alpha.ViewLogs.Site.Requests
 {
     using Configurations;
-    using Constants;
     using Fanex.Common;
     using MediatR;
     using Params.CustomerSettingLogs;
     using Sunplus.Agent.Model.Entities.Permission;
     using System;
     using System.Collections.Generic;
+    using ViewLogs.Constants;
     using ViewLogs.Helpers;
     using ViewModels.CustomerSettingLogs;
 
     public class CustomerSettingLogsQuery : IRequest<CustomerSettingLogsViewModel>
     {
+        private readonly DateTime maxReportDate;
+
+        private readonly DateTime minReportDate;
+
         public CustomerSettingLogsQuery()
         {
             ActionIdVisibilities = new Dictionary<int, bool>();
             SetActionIdVisibilities();
             SetSportBetTypeVisibilities();
+
+            // Limit time range for view log in 2 years (start from beginning of last year)
+            this.maxReportDate = DateTime.Today;
+            this.minReportDate = new DateTime(DateTime.Today.AddYears(-1).Year, 1, 1);
         }
 
         public int UplineId { get; set; }
@@ -80,7 +88,10 @@
 
                 Language = Language,
                 HasViewLogPermission = HasViewLogPermission,
-                ActionIdVisibilities = ActionIdVisibilities
+                ActionIdVisibilities = ActionIdVisibilities,
+
+                MaxReportDate = maxReportDate,
+                MinReportDate = minReportDate
             };
         }
 
