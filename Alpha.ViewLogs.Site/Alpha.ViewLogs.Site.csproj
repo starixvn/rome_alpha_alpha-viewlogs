@@ -217,9 +217,7 @@
     <Content Include="assets\bundles\default.min.css">
       <DependentUpon>default.css</DependentUpon>
     </Content>
-    <Content Include="assets\bundles\viewlog.css" />
-      <DependentUpon>viewlog.scss</DependentUpon>
-    </Content>
+    <Content Include="assets\bundles\viewlog.css" />     
     <Content Include="assets\styles\viewlog.min.css">
       <DependentUpon>viewlog.css</DependentUpon>
     </Content>
