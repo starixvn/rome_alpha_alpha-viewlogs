@@ -533,6 +533,7 @@
     <Content Include="assets\scripts\customersettinglogs.min.js">
       <DependentUpon>customersettinglogs.js</DependentUpon>
     </Content>
+    <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />
     <Content Include="Global.asax" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\CreditLogs\Index.html" />

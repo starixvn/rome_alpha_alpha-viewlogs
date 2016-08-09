@@ -26,14 +26,14 @@
             this.transformTrackingValueToHtmlService = transformTrackingValueToHtmlService;
         }
 
-        public CustomerSettingLogsViewModel Handle(CustomerSettingLogsQuery customerSettingLogsQuery)
+        public CustomerSettingLogsViewModel Handle(CustomerSettingLogsQuery message)
         {
-            var logsParam = customerSettingLogsQuery.ConvertToGetLogsParam();
+            var logsParam = message.ConvertToGetLogsParam();
             var pagingLogs = customerSettingLogsService.GetLogs(logsParam);
 
             var viewModel = new CustomerSettingLogsViewModel(logsParam, pagingLogs);
-            viewModel.LogActionTypes = GetLogActionTypes(customerSettingLogsQuery);
-            viewModel.Logs = TransformLogsToHtml(pagingLogs, customerSettingLogsQuery);
+            viewModel.LogActionTypes = GetLogActionTypes(message);
+            viewModel.Logs = TransformLogsToHtml(pagingLogs, message);
             viewModel.Tabs = GetTabs(viewModel.IsSubAccount, viewModel.HasViewLogPermission);
             viewModel.SelectedTab = ViewLogType.CustomerSetting;
 

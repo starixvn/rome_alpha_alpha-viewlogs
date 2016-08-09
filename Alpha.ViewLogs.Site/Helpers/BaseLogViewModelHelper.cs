@@ -8,7 +8,7 @@
     using System.Xml;
     using ViewLogs.Constants;
 
-    public class BaseLogViewModelHelper
+    public static class BaseLogViewModelHelper
     {
         public static string GetTrackingValueWithDiff(BaseLog baseLog, bool isShowOldValue)
         {

@@ -97,6 +97,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alpha - View Logs - Application Start.
+        /// </summary>
+        public static string AppStart_Message {
+            get {
+                return ResourceManager.GetString("AppStart_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Credit.
         /// </summary>
         public static string Credit {

@@ -156,7 +156,7 @@
 
         public string FormatMemberWinLimit(string value)
         {
-            return value.Replace("x", "X").Replace("unlimited", Resources.Unlimited);
+            return string.IsNullOrEmpty(value) ? string.Empty : value.Replace("x", "X").Replace("unlimited", Resources.Unlimited);
         }
 
         public string FormatUnlimited(int unlimited)

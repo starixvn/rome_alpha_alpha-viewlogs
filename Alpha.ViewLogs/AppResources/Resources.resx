@@ -273,4 +273,7 @@
   <data name="NoInfo" xml:space="preserve">
     <value>No information is available</value>
   </data>
+  <data name="AppStart_Message" xml:space="preserve">
+    <value>Alpha - View Logs - Application Start</value>
+  </data>
 </root>

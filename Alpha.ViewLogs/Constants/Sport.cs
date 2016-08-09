@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Constants
 {
-    public class Sport
+    public static class Sport
     {
         public const int VirtualSports = 180;
         public const int GoldDeluxe = 255;

@@ -16,16 +16,14 @@
         private const int ValidCustId = 1;
 
         private CustomerDataAccess customerDataAccess;
-        private IDynamicRepository dynamicRepository;
         private CustomerServiceImpl customerService;
 
         [SetUp]
         public void SetUp()
         {
             customerDataAccess = Substitute.For<CustomerDataAccess>();
-            dynamicRepository = Substitute.For<IDynamicRepository>();
 
-            customerService = new CustomerServiceImpl(customerDataAccess, dynamicRepository);
+            customerService = new CustomerServiceImpl(customerDataAccess);
         }
 
         [Test]

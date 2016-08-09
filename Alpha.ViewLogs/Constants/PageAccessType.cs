@@ -3,7 +3,7 @@
     using AppResources;
     using System.Collections.Generic;
 
-    public class PageAccessType
+    public static class PageAccessType
     {
         public const string CreateAccount = "[A]";
         public const string Transfer = "[C]";

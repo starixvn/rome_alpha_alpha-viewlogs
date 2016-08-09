@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site
 {
     using App_Start;
+    using AppResources;
     using Auth.Web;
     using ONEbook.UM.Filters;
     using Sunplus.Agent.Utilities;
@@ -30,7 +31,7 @@
 
             GlobalFilters.Filters.Add(new CheckUMFilter());
 
-            Logs.WriteInfo("Alpha - View Logs - Application Start");
+            Logs.WriteInfo(Resources.AppStart_Message);
         }
 
         protected void Application_Error(object sender, EventArgs e)

@@ -3,7 +3,7 @@
     using AppResources;
     using System;
 
-    public class DateTimeHelper
+    public static class DateTimeHelper
     {
         public static string[] DaysInWeek()
         {

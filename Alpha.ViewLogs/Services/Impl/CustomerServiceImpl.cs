@@ -2,20 +2,15 @@
 {
     using Criteria;
     using DataAccesses;
-    using Fanex.Data.Repository;
     using Models;
 
     public class CustomerServiceImpl : CustomerService
     {
         private readonly CustomerDataAccess customerDataAccess;
-        private readonly IDynamicRepository dynamicRepository;
 
-        public CustomerServiceImpl(
-            CustomerDataAccess customerDataAccess,
-            IDynamicRepository dynamicRepository)
+        public CustomerServiceImpl(CustomerDataAccess customerDataAccess)
         {
             this.customerDataAccess = customerDataAccess;
-            this.dynamicRepository = dynamicRepository;
         }
 
         public CustomerInfo CheckIsBelongingByUsername(CheckIsBelongingByUsernameCriteria criteria)

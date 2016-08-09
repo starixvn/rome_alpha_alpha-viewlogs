@@ -55,12 +55,8 @@
         {
             bool showOldValue = true;
             var cookie = Request.Cookies.Get(CookieShowOldValue);
-            if (cookie != null)
-            {
-                bool.TryParse(cookie.Value, out showOldValue);
-            }
 
-            return showOldValue;
+            return cookie != null && bool.TryParse(cookie.Value, out showOldValue) ? showOldValue : true;
         }
     }
 }

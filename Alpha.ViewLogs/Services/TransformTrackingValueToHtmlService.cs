@@ -7,6 +7,6 @@
     {
         void InitCompiledTransformCache(TransformTrackingValueToHtmlParam transformParam);
 
-        string TransformTrackingValueToHtml(string trackingValueWithDiff, BaseLog baseLog, TransformTrackingValueToHtmlParam transformParam);
+        string TransformTrackingValueToHtml(string trackingValue, BaseLog baseLog, TransformTrackingValueToHtmlParam transformParam);
     }
 }
