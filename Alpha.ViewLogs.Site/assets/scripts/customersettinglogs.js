@@ -1,3 +1,24 @@
+'use strict';
+var alphaViewLogs = {
+    format: {
+        monthFormat: 'MMMM yyyy',
+        shortDateWithSlash: 'MM/dd/yyyy'
+    },
+    urls: {
+        viewCustomerSettingLogs: './customersettinglogs/getlogs'
+    },
+    callRequest: function (options) {
+        $.ajax({
+            type: "POST",
+            url: options.url,
+            data: options.data,
+            responseType: "json",
+            success: options.success
+        });
+    }
+};
+//# sourceMappingURL=core.js.map
+/// <reference path="../core.ts" />
 /// <reference path="index-manager.ts" />
 'use strict';
 var indexViewManager = {
@@ -6,7 +27,8 @@ var indexViewManager = {
         btnSubmit: null,
         ddlMonth: null,
         iconLoading: null,
-        chkOldValues: null
+        chkOldValues: null,
+        txtUsername: null,
     },
     showOldValuesCookieName: '',
     cacheElements: function () {
@@ -15,6 +37,7 @@ var indexViewManager = {
         indexViewManager.elelments.ddlMonth = $('#ddlMonth');
         indexViewManager.elelments.iconLoading = $('#icon-loading');
         indexViewManager.elelments.chkOldValues = $('#chk-oldvalues');
+        indexViewManager.elelments.txtUsername = $('txt-username');
     },
     initElements: function (viewModel) {
         indexViewManager.cacheElements();
@@ -39,7 +62,7 @@ var indexViewManager = {
             fromDay: viewModel.fromDate,
             toDay: viewModel.toDate,
             showDateRange: true,
-            monthFormat: 'MMMM yyyy',
+            monthFormat: alphaViewLogs.format.monthFormat,
             fromDayId: 'ddl-fromday',
             toDayId: 'ddl-today',
             fromDayLabel: viewModel.labelFrom,
@@ -57,9 +80,18 @@ var indexViewManager = {
     showCompleteLoadingState: function () {
         indexViewManager.elelments.iconLoading.hide();
         indexViewManager.elelments.btnSubmit.attr('disabled', null);
+    },
+    getParams: function () {
+        return {
+            Username: indexViewManager.elelments.txtUsername.val(),
+            FromDate: indexViewManager.elelments.ddlMonth.monPickr("getFromDate", alphaViewLogs.format.shortDateWithSlash),
+            ToDate: indexViewManager.elelments.ddlMonth.monPickr("getToDate", alphaViewLogs.format.shortDateWithSlash),
+            ActionTypeId: indexViewManager.elelments.ddlLogActionType.val()
+        };
     }
 };
 //# sourceMappingURL=index-viewmanager.js.map
+/// <reference path="../core.ts" />
 /// <reference path="index-viewmanager.ts" />
 'use strict';
 var indexManager = {
@@ -68,7 +100,13 @@ var indexManager = {
     },
     viewLogs: function () {
         indexViewManager.showLoadingState();
-        indexViewManager.showCompleteLoadingState();
+        alphaViewLogs.callRequest({
+            url: alphaViewLogs.urls.viewCustomerSettingLogs,
+            data: indexViewManager.getParams(),
+            success: function () {
+                indexViewManager.showCompleteLoadingState();
+            }
+        });
     }
 };
 $(function () {

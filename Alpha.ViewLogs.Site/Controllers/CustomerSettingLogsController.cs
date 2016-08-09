@@ -2,15 +2,15 @@
 {
     using Configurations;
     using MediatR;
-    using Requests;
+    using Requests.CustomerSettingLogs;
     using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Model.Entities.Permission;
     using System.Web.Mvc;
     using System.Web.SessionState;
-    using ViewLogs.Helpers;
+    using ViewModels.CustomerSettingLogs;
 
     [SessionState(SessionStateBehavior.Default)]
-    public class CustomerSettingLogsController : BaseViewLogController
+    public class CustomerSettingLogsController : BaseController
     {
         private const string CookieShowOldValue = "Alpha.ViewLogs.ShowOldValuesCookie";
 
@@ -23,32 +23,47 @@
             this.mediator = mediator;
         }
 
-        public ActionResult Index(CustomerSettingLogsQuery customerSettingLogsQuery)
+        public ActionResult Index(IndexQuery indexQuery)
         {
-            if (!userSession.SubPageAccess.ViewLog)
-            {
-                Response.Redirect(MicroSites.OldMainUrl(AppSettings.AccessDeniedPage));
-            }
-
             if (!CanViewSettingLogs(userSession))
             {
                 Response.Redirect(LoginLogsURL);
             }
 
-            customerSettingLogsQuery.IsDebug = AppSettings.IsDebug;
-            customerSettingLogsQuery.HasViewLogPermission = userSession.SubPageAccess != null && userSession.SubPageAccess.ViewLog;
-            customerSettingLogsQuery.Language = userSession.Language;
-            customerSettingLogsQuery.IsInternal = false;
-            customerSettingLogsQuery.IsShowOldValue = GetShowOldValue();
-            customerSettingLogsQuery.UplineId = userSession.CustId;
-            customerSettingLogsQuery.NewFormatActionLogIds = AppSettings.NewFormatActionLogIds;
-            customerSettingLogsQuery.TrackingValueTransformTemplatePath = HttpContext.Server.MapPath("~/App_Data/TrackingValueTransformTemplates");
-            customerSettingLogsQuery.IsShowMyanmarOdds = UserPermission.IsShowMyanmarOdds;
+            AssignServerSideParamForCustomerSettingLogsQuery(indexQuery);
 
-            var viewModel = mediator.Send(customerSettingLogsQuery);
+            var viewModel = mediator.Send<IndexViewModel>(indexQuery);
             viewModel.ShowOldValuesCookieName = CookieShowOldValue;
 
             return View(viewModel);
+        }
+
+        public JsonResult GetLogs(GetLogsQuery getLogsQuery)
+        {
+            if (!CanViewSettingLogs(userSession))
+            {
+                Response.Redirect(LoginLogsURL);
+            }
+
+            AssignServerSideParamForCustomerSettingLogsQuery(getLogsQuery);
+
+            var viewModel = mediator.Send<GetLogsViewModel>(getLogsQuery);
+
+            return Json(viewModel);
+        }
+
+        private void AssignServerSideParamForCustomerSettingLogsQuery(GetLogsQuery getLogsQuery)
+        {
+            getLogsQuery.RoleId = userSession.RoleId;
+            getLogsQuery.IsDebug = AppSettings.IsDebug;
+            getLogsQuery.HasViewLogPermission = userSession.SubPageAccess != null && userSession.SubPageAccess.ViewLog;
+            getLogsQuery.Language = userSession.Language;
+            getLogsQuery.IsInternal = false;
+            getLogsQuery.IsShowOldValue = GetShowOldValue();
+            getLogsQuery.UplineId = userSession.CustId;
+            getLogsQuery.NewFormatActionLogIds = AppSettings.NewFormatActionLogIds;
+            getLogsQuery.TrackingValueTransformTemplatePath = HttpContext.Server.MapPath("~/App_Data/TrackingValueTransformTemplates");
+            getLogsQuery.IsShowMyanmarOdds = UserPermission.IsShowMyanmarOdds;
         }
 
         private bool GetShowOldValue()

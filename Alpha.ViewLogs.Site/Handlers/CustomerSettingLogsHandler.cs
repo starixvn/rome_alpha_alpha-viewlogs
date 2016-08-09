@@ -6,14 +6,16 @@
     using MediatR;
     using Models;
     using Params;
-    using Requests;
+    using Requests.CustomerSettingLogs;
     using Services;
     using System.Collections.Generic;
     using System.Linq;
     using ViewModels;
     using ViewModels.CustomerSettingLogs;
 
-    public class CustomerSettingLogsHandler : BaseViewLogsHandler, IRequestHandler<CustomerSettingLogsQuery, CustomerSettingLogsViewModel>
+    public class CustomerSettingLogsHandler : BaseViewLogsHandler,
+        IRequestHandler<IndexQuery, IndexViewModel>,
+        IRequestHandler<GetLogsQuery, GetLogsViewModel>
     {
         private readonly CustomerSettingLogsService customerSettingLogsService;
         private readonly TransformTrackingValueToHtmlService transformTrackingValueToHtmlService;
@@ -26,40 +28,54 @@
             this.transformTrackingValueToHtmlService = transformTrackingValueToHtmlService;
         }
 
-        public CustomerSettingLogsViewModel Handle(CustomerSettingLogsQuery message)
+        public IndexViewModel Handle(IndexQuery message)
         {
             var logsParam = message.ConvertToGetLogsParam();
             var pagingLogs = customerSettingLogsService.GetLogs(logsParam);
 
-            var viewModel = new CustomerSettingLogsViewModel(logsParam, pagingLogs);
+            var viewModel = new IndexViewModel(logsParam);
             viewModel.LogActionTypes = GetLogActionTypes(message);
-            viewModel.Logs = TransformLogsToHtml(pagingLogs, message);
+
+            viewModel.GetLogsViewModel = new GetLogsViewModel(logsParam, pagingLogs);
+            viewModel.GetLogsViewModel.Logs = TransformLogsToHtml(pagingLogs, message);
+
             viewModel.Tabs = GetTabs(viewModel.IsSubAccount, viewModel.HasViewLogPermission);
             viewModel.SelectedTab = ViewLogType.CustomerSetting;
 
             return viewModel;
         }
 
-        private List<LogActionTypeViewModel> GetLogActionTypes(CustomerSettingLogsQuery customerSettingQuery)
+        public GetLogsViewModel Handle(GetLogsQuery message)
+        {
+            var logsParam = message.ConvertToGetLogsParam();
+            var pagingLogs = customerSettingLogsService.GetLogs(logsParam);
+
+            var viewModel = new GetLogsViewModel(logsParam, pagingLogs);
+            viewModel.Logs = TransformLogsToHtml(pagingLogs, message);
+
+            return viewModel;
+        }
+
+        private List<LogActionTypeViewModel> GetLogActionTypes(IndexQuery message)
         {
             var logActionTypes = customerSettingLogsService.GetLogActionTypes();
 
-            var logActionTypeViewModels = logActionTypes.Select(logActionType => new LogActionTypeViewModel(logActionType, customerSettingQuery.Language))
+            var logActionTypeViewModels = logActionTypes.Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))
                 .ToList();
             logActionTypeViewModels.Insert(0, new LogActionTypeViewModel(-1, Resources.All));
 
             return logActionTypeViewModels;
         }
 
-        private List<BaseLogViewModel> TransformLogsToHtml(PagingLogs pagingLogs, CustomerSettingLogsQuery customerSettingLogsQuery)
+        private List<BaseLogViewModel> TransformLogsToHtml(PagingLogs pagingLogs, GetLogsQuery message)
         {
             var transformParam = new TransformTrackingValueToHtmlParam
             {
-                IsDebug = customerSettingLogsQuery.IsDebug,
-                IsShowOldValue = customerSettingLogsQuery.IsShowOldValue,
-                TrackingValueTransformTemplatePath = customerSettingLogsQuery.TrackingValueTransformTemplatePath,
-                SportBetTypeVisibilities = customerSettingLogsQuery.SportBetTypeVisibilities,
-                IsShowMyanmarOdds = customerSettingLogsQuery.IsShowMyanmarOdds
+                IsDebug = message.IsDebug,
+                IsShowOldValue = message.IsShowOldValue,
+                TrackingValueTransformTemplatePath = message.TrackingValueTransformTemplatePath,
+                SportBetTypeVisibilities = message.SportBetTypeVisibilities,
+                IsShowMyanmarOdds = message.IsShowMyanmarOdds
             };
 
             transformTrackingValueToHtmlService.InitCompiledTransformCache(transformParam);
@@ -68,7 +84,7 @@
 
             foreach (var log in pagingLogs.Logs)
             {
-                var trackingValueWithDiff = BaseLogViewModelHelper.GetTrackingValueWithDiff(log, customerSettingLogsQuery.IsShowOldValue);
+                var trackingValueWithDiff = BaseLogViewModelHelper.GetTrackingValueWithDiff(log, message.IsShowOldValue);
                 var htmlTrackingValue = transformTrackingValueToHtmlService.TransformTrackingValueToHtml(trackingValueWithDiff, log, transformParam);
 
                 htmlLogs.Add(new BaseLogViewModel

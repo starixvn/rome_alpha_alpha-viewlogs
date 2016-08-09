@@ -1,3 +1,4 @@
+/// <reference path="../core.ts" />
 /// <reference path="index-viewmanager.ts" />
 'use strict';
 var indexManager = {
@@ -6,7 +7,13 @@ var indexManager = {
     },
     viewLogs: function () {
         indexViewManager.showLoadingState();
-        indexViewManager.showCompleteLoadingState();
+        alphaViewLogs.callRequest({
+            url: alphaViewLogs.urls.viewCustomerSettingLogs,
+            data: indexViewManager.getParams(),
+            success: function () {
+                indexViewManager.showCompleteLoadingState();
+            }
+        });
     }
 };
 $(function () {

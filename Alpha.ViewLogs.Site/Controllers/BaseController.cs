@@ -1,5 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
+    using Configurations;
     using Sunplus.Agent.Model.Entities;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
@@ -16,6 +17,7 @@
     [SessionState(SessionStateBehavior.ReadOnly)]
     public class BaseController : Controller
     {
+        protected const string LoginLogsURL = "~/LoginLogs";
         private CultureInfo defaultCulture = CultureInfo.CreateSpecificCulture(Language.Default);
 
         [SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Justification = "Reviewed!")]
@@ -29,6 +31,11 @@
                 var logInUrl = MicroSites.OldMainUrl(FormsAuthentication.LoginUrl);
                 Response.Redirect(logInUrl, true);
                 return;
+            }
+
+            if (!UserSession.Current.SubPageAccess.ViewLog)
+            {
+                Response.Redirect(MicroSites.OldMainUrl(AppSettings.AccessDeniedPage));
             }
         }
 
@@ -66,6 +73,12 @@
             Thread.CurrentThread.CurrentCulture.NumberFormat = defaultCulture.NumberFormat;
 
             base.Initialize(requestContext);
+        }
+
+        protected bool CanViewSettingLogs(IUserSession userSession)
+        {
+            return userSession.SubAccId <= 0 ||
+                (userSession.SubPageAccess != null && userSession.SubPageAccess.ViewLog);
         }
     }
 }

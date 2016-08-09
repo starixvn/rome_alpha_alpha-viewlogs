@@ -217,7 +217,7 @@
     <Content Include="assets\bundles\default.min.css">
       <DependentUpon>default.css</DependentUpon>
     </Content>
-    <Content Include="assets\bundles\viewlog.css" />     
+    <Content Include="assets\bundles\viewlog.css" />
     <Content Include="assets\styles\viewlog.min.css">
       <DependentUpon>viewlog.css</DependentUpon>
     </Content>
@@ -546,7 +546,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Constants\ViewLogType.cs" />
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\BaseViewLogController.cs" />
     <Compile Include="Controllers\CustomerSettingLogsController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
@@ -559,10 +558,12 @@
     <Compile Include="Helpers\BaseLogViewModelHelper.cs" />
     <Compile Include="Helpers\StaticResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requests\CustomerSettingQuery.cs" />
+    <Compile Include="Requests\CustomerSettingLogs\GetLogsQuery.cs" />
+    <Compile Include="Requests\CustomerSettingLogs\IndexQuery.cs" />
     <Compile Include="Requests\IndexQuery.cs" />
     <Compile Include="ViewModels\BaseLogViewModel.cs" />
-    <Compile Include="ViewModels\CustomerSettingLogs\CustomerSettingLogsViewModel.cs" />
+    <Compile Include="ViewModels\CustomerSettingLogs\GetLogsViewModel.cs" />
+    <Compile Include="ViewModels\CustomerSettingLogs\IndexViewModel.cs" />
     <Compile Include="ViewModels\CustomerSettingLogs\LogActionTypeViewModel.cs" />
     <Compile Include="ViewModels\Default\IndexViewModel.cs" />
     <Compile Include="ViewModels\ElementViewModal.cs" />

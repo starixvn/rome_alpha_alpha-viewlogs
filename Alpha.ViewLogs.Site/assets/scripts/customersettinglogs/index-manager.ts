@@ -1,7 +1,8 @@
-﻿/// <reference path="index-viewmanager.ts" />
+﻿/// <reference path="../core.ts" />
+/// <reference path="index-viewmanager.ts" />
 
 'use strict';
-/*global indexViewManager*/
+/*global indexViewManager, alphaViewLogs*/
 declare var $: any;
 declare var viewModel: any;
 
@@ -11,7 +12,14 @@ var indexManager = {
     },
     viewLogs: function () {
         indexViewManager.showLoadingState();
-        indexViewManager.showCompleteLoadingState();
+
+        alphaViewLogs.callRequest({
+            url: alphaViewLogs.urls.viewCustomerSettingLogs,
+            data: indexViewManager.getParams(),
+            success: function () {
+                indexViewManager.showCompleteLoadingState();
+            }
+        });
     }
 };
 

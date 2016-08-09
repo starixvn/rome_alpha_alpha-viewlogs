@@ -8,6 +8,7 @@
   {
     "outputFileName": "assets/scripts/customersettinglogs.js",
     "inputFiles": [
+      "assets/scripts/core.js",
       "assets/scripts/customersettinglogs/index-viewmanager.js",
       "assets/scripts/customersettinglogs/index-manager.js"
     ]

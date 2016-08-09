@@ -1,7 +1,8 @@
-﻿/// <reference path="index-manager.ts" />
+﻿/// <reference path="../core.ts" />
+/// <reference path="index-manager.ts" />
 
 'use strict';
-/*global indexManager*/
+/*global indexManager, alphaViewLogs*/
 declare var $: any;
 
 var indexViewManager = {
@@ -10,7 +11,9 @@ var indexViewManager = {
         btnSubmit: null,
         ddlMonth: null,
         iconLoading: null,
-        chkOldValues: null
+        chkOldValues: null,
+        txtUsername: null,
+
     },
     showOldValuesCookieName: '',
     cacheElements: function () {
@@ -19,6 +22,8 @@ var indexViewManager = {
         indexViewManager.elelments.ddlMonth = $('#ddlMonth');
         indexViewManager.elelments.iconLoading = $('#icon-loading');
         indexViewManager.elelments.chkOldValues = $('#chk-oldvalues');
+        indexViewManager.elelments.txtUsername = $('txt-username');
+
     },
     initElements: function (viewModel) {
         indexViewManager.cacheElements();
@@ -49,7 +54,7 @@ var indexViewManager = {
             toDay: viewModel.toDate,
 
             showDateRange: true,
-            monthFormat: 'MMMM yyyy',
+            monthFormat: alphaViewLogs.format.monthFormat,
             fromDayId: 'ddl-fromday',
             toDayId: 'ddl-today',
             fromDayLabel: viewModel.labelFrom,
@@ -67,5 +72,13 @@ var indexViewManager = {
     showCompleteLoadingState: function () {
         indexViewManager.elelments.iconLoading.hide();
         indexViewManager.elelments.btnSubmit.attr('disabled', null);
+    },
+    getParams: function () {
+        return {
+            Username: indexViewManager.elelments.txtUsername.val(),
+            FromDate: indexViewManager.elelments.ddlMonth.monPickr("getFromDate", alphaViewLogs.format.shortDateWithSlash),
+            ToDate: indexViewManager.elelments.ddlMonth.monPickr("getToDate", alphaViewLogs.format.shortDateWithSlash),
+            ActionTypeId: indexViewManager.elelments.ddlLogActionType.val()
+        };
     }
 };

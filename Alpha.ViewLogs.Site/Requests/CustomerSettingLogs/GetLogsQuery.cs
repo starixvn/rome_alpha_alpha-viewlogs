@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Site.Requests
+﻿namespace Alpha.ViewLogs.Site.Requests.CustomerSettingLogs
 {
     using Configurations;
     using Fanex.Common;
@@ -11,13 +11,13 @@
     using ViewLogs.Helpers;
     using ViewModels.CustomerSettingLogs;
 
-    public class CustomerSettingLogsQuery : IRequest<CustomerSettingLogsViewModel>
+    public class GetLogsQuery : IRequest<GetLogsViewModel>
     {
         private readonly DateTime maxReportDate;
 
         private readonly DateTime minReportDate;
 
-        public CustomerSettingLogsQuery()
+        public GetLogsQuery()
         {
             ActionIdVisibilities = new Dictionary<int, bool>();
             SetActionIdVisibilities();
@@ -28,17 +28,17 @@
             this.minReportDate = new DateTime(DateTime.Today.AddYears(-1).Year, 1, 1);
         }
 
+        public int SubAccId { get; set; }
+
+        public byte RoleId { get; set; }
+
         public int UplineId { get; set; }
 
         public string Username { get; set; }
 
         public bool IsDebug { get; set; }
 
-        public int SubAccId { get; set; }
-
         public string ActionTypeId { get; set; }
-
-        public byte RoleId { get; set; }
 
         public string FromDate { get; set; }
 

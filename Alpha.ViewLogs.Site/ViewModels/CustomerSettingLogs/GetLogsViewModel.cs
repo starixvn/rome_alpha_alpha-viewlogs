@@ -1,17 +1,12 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels.CustomerSettingLogs
 {
-    using Fanex.Common.Helper;
     using Models;
-    using Models.Enumerations;
     using Params.CustomerSettingLogs;
     using System;
     using System.Collections.Generic;
 
-    public class CustomerSettingLogsViewModel
+    public class GetLogsViewModel
     {
-        private readonly byte roleId;
-        private readonly bool hasViewLogPermission;
-        private readonly bool isSubAccount;
         private readonly int totalRecords;
 
         private readonly string maxReportDate;
@@ -20,22 +15,8 @@
         private readonly string toDate;
         private readonly string dayInMonth;
 
-        public CustomerSettingLogsViewModel(
-            GetLogsParam logsParam,
-            PagingLogs pagingLogs)
+        public GetLogsViewModel(GetLogsParam logsParam, PagingLogs pagingLogs)
         {
-            if (logsParam == null || pagingLogs == null)
-            {
-                return;
-            }
-
-            Check.Argument.IsNotNull(logsParam, "GetLogsParam");
-            Check.Argument.IsNotNull(pagingLogs, "PagingLogs");
-
-            this.roleId = logsParam.RoleId;
-            this.hasViewLogPermission = logsParam.HasViewLogPermission;
-            this.isSubAccount = logsParam.SubAccId > 0;
-
             this.totalRecords = pagingLogs.TotalRecords;
 
             var compareDate = new DateTime(logsParam.MinReportDate.Year, logsParam.MinReportDate.Month, logsParam.FromDate.Day);
@@ -55,38 +36,6 @@
             this.minReportDate = logsParam.MinReportDate.ToShortDateString();
         }
 
-        public byte RoleId
-        {
-            get
-            {
-                return this.roleId;
-            }
-        }
-
-        public string UserLevel
-        {
-            get
-            {
-                return Enumeration.FromValue<UserLevel>(this.roleId).DisplayName.ToLower();
-            }
-        }
-
-        public bool HasViewLogPermission
-        {
-            get
-            {
-                return hasViewLogPermission;
-            }
-        }
-
-        public bool IsSubAccount
-        {
-            get
-            {
-                return isSubAccount;
-            }
-        }
-
         public int TotalRecords
         {
             get
@@ -95,13 +44,7 @@
             }
         }
 
-        public List<LogActionTypeViewModel> LogActionTypes { get; set; }
-
         public List<BaseLogViewModel> Logs { get; set; }
-
-        public string SelectedTab { get; set; }
-
-        public List<ElementViewModal> Tabs { get; set; }
 
         public string DayInMonth
         {
@@ -142,7 +85,5 @@
                 return this.maxReportDate;
             }
         }
-
-        public string ShowOldValuesCookieName { get; set; }
     }
 }
