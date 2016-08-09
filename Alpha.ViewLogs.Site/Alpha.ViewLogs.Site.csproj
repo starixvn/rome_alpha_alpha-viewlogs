@@ -217,6 +217,13 @@
     <Content Include="assets\bundles\default.min.css">
       <DependentUpon>default.css</DependentUpon>
     </Content>
+    <Content Include="assets\bundles\viewlog.css" />
+      <DependentUpon>viewlog.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\styles\viewlog.min.css">
+      <DependentUpon>viewlog.css</DependentUpon>
+    </Content>
+    <Content Include="assets\styles\viewlog.scss" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
@@ -526,15 +533,12 @@
     <Content Include="assets\scripts\customersettinglogs.min.js">
       <DependentUpon>customersettinglogs.js</DependentUpon>
     </Content>
-    <Content Include="assets\styles\viewlog.css">
-      <DependentUpon>viewlog.scss</DependentUpon>
-    </Content>
-    <Content Include="assets\styles\viewlog.min.css">
-      <DependentUpon>viewlog.css</DependentUpon>
-    </Content>
     <Content Include="Global.asax" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\CreditLogs\Index.html" />
     <None Include="Web.AppSettings.config" />
+    <Content Include="Views\LoginLogs\Index.html" />
+    <Content Include="Views\StatusLogs\Index.html" />
     <Content Include="Web.config" />
     <TypeScriptCompile Include="assets\scripts\core.ts" />
   </ItemGroup>
@@ -571,7 +575,6 @@
     <Content Include="bundleconfig.json" />
     <Content Include="compilerconfig.json" />
     <Content Include="Views\CustomerSettingLogs\Index.cshtml" />
-    <Content Include="assets\styles\viewlog.scss" />
     <None Include="Web.AppSettings.local.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </None>

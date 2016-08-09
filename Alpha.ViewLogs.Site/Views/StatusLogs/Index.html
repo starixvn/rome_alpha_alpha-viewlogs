@@ -1,0 +1,132 @@
+﻿@{
+    Layout = null;
+}
+@{
+    string today = String.Format("{0:MM/dd/yyyy}", DateTime.Now);
+    string yesterday = String.Format("{0:MM/dd/yyyy}", DateTime.Now.AddDays(-1));
+
+    var yesterday_Day = DateTime.Now.AddDays(-1).Day;
+    var today_Day = DateTime.Now.Day;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="/assets/bundles/site-viewlogs/default.css" />
+    <link rel="stylesheet" href="~/assets/bundles/default.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#customerSetting" role="tab" aria-controls="customerSetting" data-toggle="tab">Customer Setting</a>
+            </li>
+            <li role="presentation" class="">
+                <a href="#status" role="tab" aria-controls="status" data-toggle="tab">Status</a>
+            </li>
+            <li role="presentation" class="">
+                <a href="#credit" role="tab" aria-controls="credit" data-toggle="tab">Credit</a>
+            </li>
+            <li role="presentation" class="">
+                <a href="#login" role="tab" aria-controls="login" data-toggle="tab">Login</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="customerSetting">
+                <div class="filter">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <input type="text" id="txtUsername" placeholder="Username or First/Last Name" />
+                        </div>
+                        <div class="form-group">
+                            <label>View data in month</label>
+                            <div id="monthPickerID"><div id="ddlMonth"></div></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" class="btn-submit" id="btnSubmit" value="Submit">
+                        </div>
+                        <div class="form-group">
+                            <label><input name="chkoldvalues" type="checkbox" value="0" checked />Show old values</label>
+                        </div>
+                    </form>
+                </div>
+                <div id="content">
+                    <table class="width-100per tbl-content" id="DataLog">
+                        <thead>
+                            <tr>
+                                <th>Log ID</th>
+                                <th>Log Date</th>
+                                <th>Edited by</th>
+                                <th>Action</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="logid">1479472</td>
+                                <td class="datetime">7/11/2016 <br> 4:53:23 AM</td>
+                                <td class="edited-by">agent01</td>
+                                <td class="action-name">Update enabled/disabled Other Products status</td>
+                                <td class="tracking-value">
+                                    <table class="tbl-details" xmlns:xsllogformat="urn:LogFormat">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-key">Sub Acc name</td>
+                                                <td class="col-value"></td>
+                                                <td class="col-key">IP</td>
+                                                <td class="col-value"><a class="iplink" href="javascript:OpenIPInfo('10.19.10.56');">10.19.10.56</a></td>
+                                                <td class="col-key">Product</td>
+                                                <td class="col-value">allbet</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="sporttype-detail" xmlns:xsllogformat="urn:LogFormat">Allbet</div>
+                                    <table class="tbl-details" xmlns:xsllogformat="urn:LogFormat">
+                                        <tbody><tr><td class="col-key">Is Disabled</td><td class="col-value"><div class="valuechanged">1</div><div class="line"></div><div class="valueold">0</div></td><td class="col-key">Is Disabled Downline</td><td class="col-value">0</td><td class="col-key"></td><td class="col-value"></td></tr></tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr><td class="logid">1476213</td><td class="datetime">7/5/2016 <br> 02:40:58 AM</td><td class="edited-by">SuperTest1</td><td class="action-name">Update Status by super</td><td class="tracking-value"><table class="tbl-details" xmlns:xsllogformat="urn:LogFormat"><tbody><tr><td class="col-key">Closed</td><td class="col-value">0</td><td class="col-key">Closed Multiple</td><td class="col-value">1</td><td class="col-key">Suspended</td><td class="col-value">0</td></tr><tr><td class="col-key">Suspended Multiple</td><td class="col-value">1</td><td class="col-key">Disabled Finance</td><td class="col-value">0</td><td class="col-key">IP</td><td class="col-value"><a class="iplink" href="javascript:OpenIPInfo('10.21.10.8');">10.21.10.8</a></td></tr><tr><td class="col-key">Language</td><td class="col-value">e</td><td class="col-key">Sub Acc name</td><td class="col-value"></td><td class="colTitle"></td><td class="colValue"></td></tr></tbody></table></td></tr>
+                            <tr><td class="logid">1476211</td><td class="datetime">7/5/2016 <br> 2:39:02 AM</td><td class="edited-by">SuperTest1</td><td class="action-name">Update Status by super</td><td class="tracking-value"><table class="tbl-details" xmlns:xsllogformat="urn:LogFormat"><tbody><tr><td class="col-key">Closed</td><td class="col-value">0</td><td class="col-key">Closed Multiple</td><td class="col-value">1</td><td class="col-key">Suspended</td><td class="col-value">0</td></tr><tr><td class="col-key">Suspended Multiple</td><td class="col-value">1</td><td class="col-key">Disabled Finance</td><td class="col-value">0</td><td class="col-key">IP</td><td class="col-value"><a class="iplink" href="javascript:OpenIPInfo('10.21.10.8');">10.21.10.8</a></td></tr><tr><td class="col-key">Language</td><td class="col-value">e</td><td class="col-key">Sub Acc name</td><td class="col-value"></td><td class="colTitle"></td><td class="colValue"></td></tr></tbody></table></td></tr>
+                            <tr><td class="logid">1472509</td><td class="datetime">7/1/2016 <br> 02:11:07 AM</td><td class="edited-by">SuperTest1</td><td class="action-name">Update Status by super</td><td class="tracking-value"><table class="tbl-details" xmlns:xsllogformat="urn:LogFormat"><tbody><tr><td class="col-key">Closed</td><td class="col-value">0</td><td class="col-key">Closed Multiple</td><td class="col-value">1</td><td class="col-key">Suspended</td><td class="col-value">0</td></tr><tr><td class="col-key">Suspended Multiple</td><td class="col-value">1</td><td class="col-key">Disabled Finance</td><td class="col-value">0</td><td class="col-key">IP</td><td class="col-value"><a class="iplink" href="javascript:OpenIPInfo('10.21.10.8');">10.21.10.8</a></td></tr><tr><td class="col-key">Language</td><td class="col-value">e</td><td class="col-key">Sub Acc name</td><td class="col-value"></td><td class="colTitle"></td><td class="colValue"></td></tr></tbody></table></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane " id="status">Status</div>
+            <div role="tabpanel" class="tab-pane " id="credit">Credit</div>
+            <div role="tabpanel" class="tab-pane " id="login">Login</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/bundles/site-viewlogs/default.js"></script>
+    <script type="text/javascript">
+        var labelFrom = "From";
+        var labelTo = "To";
+        var today = '@today';
+        var minHistoryReportDate = new Date(2013, 4, 19);
+        var renderMonthPicker = function (fromDay, toDay) {
+            jQuery('#ddlMonth').monPickr({
+                toDay: toDay,
+                fromDay: fromDay,
+                maxDate: today,
+                minDate: minHistoryReportDate,
+                showDateRange: true,
+                monthFormat: 'MMMM yyyy',
+                fromDayId: 'ddlFromDay',
+                toDayId: 'ddlToDay',
+                fromDayLabel: labelFrom,
+                toDayLabel: labelTo,
+                sortDesc: true,
+                log: function (msg) {
+                    console.warn(msg);
+                }
+            });
+        };
+
+        renderMonthPicker(1, @today_Day);
+    </script>
+</body>
+</html>
+
