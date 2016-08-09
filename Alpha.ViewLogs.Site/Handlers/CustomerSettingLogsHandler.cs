@@ -10,6 +10,7 @@
     using Services;
     using System.Collections.Generic;
     using System.Linq;
+    using ViewLogs.Helpers;
     using ViewModels;
     using ViewModels.CustomerSettingLogs;
 
@@ -94,7 +95,7 @@
                     ActionTypeId = log.ActionTypeId,
                     CustId = log.CustId,
                     CustName = log.CustName,
-                    LogDate = log.LogDate,
+                    LogDate = DateTimeHelper.ToLongDateWithSlash(log.LogDate),
                     LogId = log.LogId,
                     SPName = log.SPName,
                     UserId = log.UserId,

@@ -5,6 +5,8 @@
 
     public static class DateTimeHelper
     {
+        private const string LongDateWithSlash = "MM/dd/yyyy hh:mm:ss tt";
+
         public static string[] DaysInWeek()
         {
             return new string[]
@@ -31,6 +33,11 @@
             var endingDateTime = dateTime.ToShortDateString() + " 23:59:59 PM";
 
             return Convert.ToDateTime(endingDateTime);
+        }
+
+        public static string ToLongDateWithSlash(DateTime dateTime)
+        {
+            return dateTime.ToString(LongDateWithSlash);
         }
     }
 }

@@ -7,6 +7,8 @@ var alphaViewLogs = {
     urls: {
         viewCustomerSettingLogs: './customersettinglogs/getlogs'
     },
+    pageList: [1, 2, 5, 10],
+    //pageList: [10, 50, 100, 500],
     callRequest: function (options) {
         $.ajax({
             type: "POST",

@@ -16,7 +16,7 @@
 
         public byte IsInternal { get; set; }
 
-        public DateTime LogDate { get; set; }
+        public string LogDate { get; set; }
 
         public long LogId { get; set; }
 

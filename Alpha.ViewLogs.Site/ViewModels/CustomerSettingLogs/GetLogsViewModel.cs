@@ -8,6 +8,8 @@
     public class GetLogsViewModel
     {
         private readonly int totalRecords;
+        private readonly int pageSize;
+        private readonly int pageIndex;
 
         private readonly string maxReportDate;
         private readonly string minReportDate;
@@ -18,6 +20,8 @@
         public GetLogsViewModel(GetLogsParam logsParam, PagingLogs pagingLogs)
         {
             this.totalRecords = pagingLogs.TotalRecords;
+            this.pageSize = logsParam.PageSize;
+            this.pageIndex = logsParam.PageIndex;
 
             var compareDate = new DateTime(logsParam.MinReportDate.Year, logsParam.MinReportDate.Month, logsParam.FromDate.Day);
             var dateInRange = compareDate < logsParam.MinReportDate ? logsParam.MinReportDate : logsParam.FromDate;
@@ -41,6 +45,22 @@
             get
             {
                 return totalRecords;
+            }
+        }
+
+        public int PageSize
+        {
+            get
+            {
+                return pageSize;
+            }
+        }
+
+        public int PageIndex
+        {
+            get
+            {
+                return pageIndex;
             }
         }
 

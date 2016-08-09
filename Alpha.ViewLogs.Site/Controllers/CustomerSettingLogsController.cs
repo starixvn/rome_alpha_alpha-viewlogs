@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
     using Configurations;
+    using Fanex.Common;
     using MediatR;
     using Requests.CustomerSettingLogs;
     using Sunplus.Agent.Model.Entities;
@@ -68,10 +69,11 @@
 
         private bool GetShowOldValue()
         {
-            bool showOldValue = true;
             var cookie = Request.Cookies.Get(CookieShowOldValue);
 
-            return cookie != null && bool.TryParse(cookie.Value, out showOldValue) ? showOldValue : true;
+            bool showOldValue = cookie == null || Converter.ToInt(cookie.Value) == 1;
+
+            return showOldValue;
         }
     }
 }

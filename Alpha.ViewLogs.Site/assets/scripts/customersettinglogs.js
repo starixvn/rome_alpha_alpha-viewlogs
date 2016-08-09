@@ -7,6 +7,8 @@ var alphaViewLogs = {
     urls: {
         viewCustomerSettingLogs: './customersettinglogs/getlogs'
     },
+    pageList: [1, 2, 5, 10],
+    //pageList: [10, 50, 100, 500],
     callRequest: function (options) {
         $.ajax({
             type: "POST",
@@ -17,7 +19,7 @@ var alphaViewLogs = {
         });
     }
 };
-//# sourceMappingURL=core.js.map
+
 /// <reference path="../core.ts" />
 /// <reference path="index-manager.ts" />
 'use strict';
@@ -29,6 +31,7 @@ var indexViewManager = {
         iconLoading: null,
         chkOldValues: null,
         txtUsername: null,
+        logTableContent: null
     },
     showOldValuesCookieName: '',
     cacheElements: function () {
@@ -37,7 +40,8 @@ var indexViewManager = {
         indexViewManager.elelments.ddlMonth = $('#ddlMonth');
         indexViewManager.elelments.iconLoading = $('#icon-loading');
         indexViewManager.elelments.chkOldValues = $('#chk-oldvalues');
-        indexViewManager.elelments.txtUsername = $('txt-username');
+        indexViewManager.elelments.txtUsername = $('#txt-username');
+        indexViewManager.elelments.logTableContent = $('#DataLog tbody');
     },
     initElements: function (viewModel) {
         indexViewManager.cacheElements();
@@ -88,9 +92,40 @@ var indexViewManager = {
             ToDate: indexViewManager.elelments.ddlMonth.monPickr("getToDate", alphaViewLogs.format.shortDateWithSlash),
             ActionTypeId: indexViewManager.elelments.ddlLogActionType.val()
         };
+    },
+    renderLogs: function (result) {
+        var logs = result.Logs;
+        var logsCount = logs ? logs.length : 0;
+        var logContent = '';
+        if (logsCount) {
+            for (var i = 0; i < logsCount; i++) {
+                var log = logs[i];
+                logContent += '<tr>\
+                                <td align="center">' + log.LogId + '</td>\
+                                <td align="center">' + log.LogDate + '</td>\
+                                <td>' + log.Username + '</td>\
+                                <td>' + log.ActionName + '</td>\
+                                <td>' + log.TrackingValue + '</td>\
+                              </tr>';
+            }
+        }
+        else {
+            logContent = '<tr><td colspan="5">' + viewModel.noInfo + '</td></tr>';
+        }
+        indexViewManager.elelments.logTableContent.empty();
+        indexViewManager.elelments.logTableContent.append(logContent);
+        indexViewManager.renderPager(result);
+    },
+    renderPager: function (result) {
+        $('#pp').pagination({
+            pageList: alphaViewLogs.pageList,
+            total: result.TotalRecords,
+            pageSize: 2,
+            pageNumber: 2
+        });
     }
 };
-//# sourceMappingURL=index-viewmanager.js.map
+
 /// <reference path="../core.ts" />
 /// <reference path="index-viewmanager.ts" />
 'use strict';
@@ -103,7 +138,8 @@ var indexManager = {
         alphaViewLogs.callRequest({
             url: alphaViewLogs.urls.viewCustomerSettingLogs,
             data: indexViewManager.getParams(),
-            success: function () {
+            success: function (result) {
+                indexViewManager.renderLogs(result);
                 indexViewManager.showCompleteLoadingState();
             }
         });
@@ -112,4 +148,3 @@ var indexManager = {
 $(function () {
     indexManager.init();
 });
-//# sourceMappingURL=index-manager.js.map

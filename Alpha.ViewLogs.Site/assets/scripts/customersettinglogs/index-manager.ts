@@ -16,7 +16,8 @@ var indexManager = {
         alphaViewLogs.callRequest({
             url: alphaViewLogs.urls.viewCustomerSettingLogs,
             data: indexViewManager.getParams(),
-            success: function () {
+            success: function (result) {
+                indexViewManager.renderLogs(result);
                 indexViewManager.showCompleteLoadingState();
             }
         });
