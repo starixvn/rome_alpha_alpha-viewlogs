@@ -31,7 +31,7 @@
                 Response.Redirect(LoginLogsURL);
             }
 
-            AssignServerSideParamForCustomerSettingLogsQuery(indexQuery);
+            AssignServerSideParamForGetLogsQuery(indexQuery);
 
             var viewModel = mediator.Send<IndexViewModel>(indexQuery);
             viewModel.ShowOldValuesCookieName = CookieShowOldValue;
@@ -46,14 +46,14 @@
                 Response.Redirect(LoginLogsURL);
             }
 
-            AssignServerSideParamForCustomerSettingLogsQuery(getLogsQuery);
+            AssignServerSideParamForGetLogsQuery(getLogsQuery);
 
             var viewModel = mediator.Send<GetLogsViewModel>(getLogsQuery);
 
             return Json(viewModel);
         }
 
-        private void AssignServerSideParamForCustomerSettingLogsQuery(GetLogsQuery getLogsQuery)
+        private void AssignServerSideParamForGetLogsQuery(GetLogsQuery getLogsQuery)
         {
             getLogsQuery.RoleId = userSession.RoleId;
             getLogsQuery.IsDebug = AppSettings.IsDebug;

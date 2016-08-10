@@ -89,11 +89,13 @@
                 Lifestyle.Transient);
 
             container.Register<CustomerService, CustomerServiceImpl>(Lifestyle.Transient);
-            container.Register<CustomerSettingLogsService, CustomerSettingLogsServiceImpl>(Lifestyle.Transient);
             container.Register<BaseLogService, BaseLogServiceImpl>(Lifestyle.Transient);
             container.Register<TransformTrackingValueToHtmlService, TransformTrackingValueToHtmlServiceImpl>(Lifestyle.Transient);
             container.Register<XsltLogFormatService, XsltLogFormatServiceImpl>(Lifestyle.Transient);
             container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);
+
+            container.Register<CustomerSettingLogsService, CustomerSettingLogsServiceImpl>(Lifestyle.Transient);
+            container.Register<StatusLogsService, StatusLogsServiceImpl>(Lifestyle.Transient);
         }
 
         private static void RegisterDataAccesses(Container container)

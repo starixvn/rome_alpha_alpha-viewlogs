@@ -15,10 +15,6 @@
 
         public DateTime ToDate { get; set; }
 
-        public int? LowerActionId { get; set; }
-
-        public int? UpperActionId { get; set; }
-
         public bool IsInternal { get; set; }
 
         public int PageIndex { get; set; }

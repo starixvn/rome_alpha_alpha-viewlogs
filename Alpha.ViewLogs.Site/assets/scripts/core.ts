@@ -5,8 +5,7 @@ var alphaViewLogs = {
         shortDateWithSlash: 'MM/dd/yyyy'
     },
     urls: {
-        viewCustomerSettingLogs: (<HTMLInputElement>document.getElementById('viewCustomerSettingLogsPath')).value,
-        queryUsername: (<HTMLInputElement>document.getElementById('usernameAutoSuggestionPath')).value,
+        queryUsername: (<HTMLInputElement>document.getElementById('usernameAutoSuggestionPath')).value
     },
     keyCode: {
         enter: 13

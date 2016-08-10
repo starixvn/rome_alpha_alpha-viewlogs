@@ -8,6 +8,8 @@
     ViewBag.Title = Resources.ViewLogCustomerSetting;
     ViewBag.Tabs = Model.Tabs;
     ViewBag.SelectedTab = Model.SelectedTab;
+
+    var hasLogs = Model.GetLogsViewModel.Logs != null && Model.GetLogsViewModel.Logs.Any();
 }
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="@Model.SelectedTab.ToLower()">
@@ -37,13 +39,15 @@
                     <div id="icon-loading" class="pull-left hide icon-loading-small"></div>
                 </div>
                 <div class="form-group">
-                    <label><input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" checked />@Resources.ShowOldValues</label>
+                    <label>
+                        <input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" @(Model.GetLogsViewModel.ShowOldValue ? "checked" : "") />@Resources.ShowOldValues
+                    </label>
                 </div>
             </form>
         </div>
 
         <div id="content">
-            <div id="pp" style="background:#efefef;border:1px solid #ccc;"></div>
+            <div id="pp" class="@(hasLogs ? "" : "hide")"></div>
             <table id="DataLog" class="width-100per tblRpt">
                 <thead>
                     <tr class="RptHeader">
@@ -56,13 +60,7 @@
 
                 </thead>
                 <tbody>
-                    @if (Model.GetLogsViewModel.Logs == null || !Model.GetLogsViewModel.Logs.Any())
-                    {
-                        <tr>
-                            <td colspan="5">@Resources.NoInfo</td>
-                        </tr>
-                    }
-                    else
+                    @if (hasLogs)
                     {
                         foreach (var log in Model.GetLogsViewModel.Logs)
                         {
@@ -75,14 +73,20 @@
                             </tr>
                         }
                     }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5">@Resources.NoInfo</td>
+                        </tr>
+                    }
             </table>
         </div>
     </div>
 </div>
 
-<div class="shadow" id="shadow" />
-<div class="output" id="output" />
-@Html.Hidden("viewCustomerSettingLogsPath", Model.ViewCustomerSettingLogsPath)
+<div class="shadow" id="shadow"></div>
+<div class="output" id="output"></div>
+@Html.Hidden("viewLogsPath", Model.ViewLogsPath)
 @Html.Hidden("usernameAutoSuggestionPath", Model.UsernameAutoSuggestionPath)
 @section Scripts
 {
@@ -99,6 +103,10 @@
             fromDate: '@Model.GetLogsViewModel.FromDate',
             toDate: '@Model.GetLogsViewModel.ToDate',
             dayInMonth: '@Model.GetLogsViewModel.DayInMonth',
+
+            totalRecords: @Model.GetLogsViewModel.TotalRecords,
+            pageSize: @Model.GetLogsViewModel.PageSize,
+            pageIndex: @Model.GetLogsViewModel.PageIndex,
 
             showOldValuesCookieName: '@Model.ShowOldValuesCookieName'
         };

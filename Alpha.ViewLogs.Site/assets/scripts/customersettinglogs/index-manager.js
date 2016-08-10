@@ -1,18 +1,21 @@
 /// <reference path="../core.ts" />
-/// <reference path="index-viewmanager.ts" />
+/// <reference path="index-viewmanager-settinglogs.ts" />
 'use strict';
 var indexManager = {
+    urls: {
+        viewLogs: document.getElementById('viewLogsPath').value
+    },
     init: function () {
-        indexViewManager.initElements(viewModel);
+        indexViewManager_SettingLogs.initElements(viewModel);
     },
     viewLogs: function () {
-        indexViewManager.showLoadingState();
+        indexViewManager_SettingLogs.showLoadingState();
         alphaViewLogs.callRequest({
-            url: alphaViewLogs.urls.viewCustomerSettingLogs,
-            data: indexViewManager.getParams(),
+            url: indexManager.urls.viewLogs,
+            data: indexViewManager_SettingLogs.getParams(),
             success: function (result) {
-                indexViewManager.renderLogs(result);
-                indexViewManager.showCompleteLoadingState();
+                indexViewManager_SettingLogs.renderLogs(result);
+                indexViewManager_SettingLogs.showCompleteLoadingState();
             }
         });
     }
@@ -20,3 +23,4 @@ var indexManager = {
 $(function () {
     indexManager.init();
 });
+//# sourceMappingURL=index-manager.js.map

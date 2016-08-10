@@ -1,0 +1,107 @@
+﻿@using Alpha.ViewLogs.Site.ViewModels.StatusLogs;
+@using Alpha.ViewLogs.AppResources;
+@using Alpha.ViewLogs.Site.Helpers;
+
+@model IndexViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Resources.ViewLogStatus;
+    ViewBag.Tabs = Model.Tabs;
+    ViewBag.SelectedTab = Model.SelectedTab;
+
+    var hasLogs = Model.GetLogsViewModel.Logs != null && Model.GetLogsViewModel.Logs.Any();
+}
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="@Model.SelectedTab.ToLower()">
+        <div class="filter">
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <input type="text" id="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
+                           autocomplete="off" />
+                </div>
+                <div class="form-group">
+                    <label>@Resources.ViewDataInMonth</label>
+                    <div id="monthPickerID"><div id="ddlMonth"></div></div>
+                </div>
+                <div class="form-group">
+                    <input type="button" class="btn-submit" id="btn-submit" value="@Resources.Submit">
+                </div>
+                <div class="form-group">
+                    <div id="icon-loading" class="pull-left hide icon-loading-small"></div>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" @(Model.GetLogsViewModel.ShowOldValue ? "checked" : "") />@Resources.ShowOldValues
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <div id="content">
+            <div id="pp" class="@(hasLogs ? "" : "hide")"></div>
+            <table id="DataLog" class="width-100per tblRpt">
+                <thead>
+                    <tr class="RptHeader">
+                        <th>@Resources.LogId</th>
+                        <th>@Resources.LogDate</th>
+                        <th>@Resources.EditedBy</th>
+                        <th>@Resources.Action</th>
+                        <th>@Resources.Details</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @if (hasLogs)
+                    {
+                        foreach (var log in Model.GetLogsViewModel.Logs)
+                        {
+                            <tr>
+                                <td align="center">@log.LogId</td>
+                                <td align="center">@log.LogDate</td>
+                                <td>@log.Username</td>
+                                <td>@log.ActionName</td>
+                                <td>@Html.Raw(log.TrackingValue)</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5">@Resources.NoInfo</td>
+                        </tr>
+                    }
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="shadow" id="shadow"></div>
+<div class="output" id="output"></div>
+@Html.Hidden("viewLogsPath", Model.ViewLogsPath)
+@Html.Hidden("usernameAutoSuggestionPath", Model.UsernameAutoSuggestionPath)
+@section Scripts
+{
+    @StaticResources.AssetScripts.Render("/bundles/site-viewlogs/default")
+    @StaticResources.AssetScripts.Render("/js/libs/jquery/jquery.cookie")
+    <script type="text/javascript">
+        var viewModel = {
+            labelFrom: '@Resources.From',
+            labelTo: '@Resources.To',
+            noInfo: '@Resources.NoInfo',
+
+            maxReportDate: '@Model.GetLogsViewModel.MaxReportDate',
+            minReportDate: '@Model.GetLogsViewModel.MinReportDate',
+            fromDate: '@Model.GetLogsViewModel.FromDate',
+            toDate: '@Model.GetLogsViewModel.ToDate',
+            dayInMonth: '@Model.GetLogsViewModel.DayInMonth',
+
+            totalRecords: @Model.GetLogsViewModel.TotalRecords,
+            pageSize: @Model.GetLogsViewModel.PageSize,
+            pageIndex: @Model.GetLogsViewModel.PageIndex,
+
+            showOldValuesCookieName: '@Model.ShowOldValuesCookieName'
+        };
+
+    </script>
+    <script type="text/javascript" src="@StaticResources.MainSiteScriptUrl(" ~/assets/scripts/statuslogs")"></script>
+}

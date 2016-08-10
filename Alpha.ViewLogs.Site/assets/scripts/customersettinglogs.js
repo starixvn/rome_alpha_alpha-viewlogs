@@ -5,8 +5,7 @@ var alphaViewLogs = {
         shortDateWithSlash: 'MM/dd/yyyy'
     },
     urls: {
-        viewCustomerSettingLogs: document.getElementById('viewCustomerSettingLogsPath').value,
-        queryUsername: document.getElementById('usernameAutoSuggestionPath').value,
+        queryUsername: document.getElementById('usernameAutoSuggestionPath').value
     },
     keyCode: {
         enter: 13
@@ -37,11 +36,11 @@ var alphaViewLogs = {
             !/opera/i.test(navigator.userAgent);
     }
 };
-
+//# sourceMappingURL=core.js.map
 /// <reference path="../core.ts" />
 /// <reference path="index-manager.ts" />
 'use strict';
-var indexViewManager = {
+var indexViewManager_SettingLogs = {
     elelments: {
         ddlLogActionType: null,
         btnSubmit: null,
@@ -49,33 +48,37 @@ var indexViewManager = {
         iconLoading: null,
         chkOldValues: null,
         txtUsername: null,
-        logTableContent: null
+        logTableContent: null,
+        linkChangTabs: null,
+        pagination: null
     },
     showOldValuesCookieName: '',
     cacheElements: function () {
-        indexViewManager.elelments.ddlLogActionType = $('#ddl-logactiontype');
-        indexViewManager.elelments.btnSubmit = $("#btn-submit");
-        indexViewManager.elelments.ddlMonth = $('#ddlMonth');
-        indexViewManager.elelments.iconLoading = $('#icon-loading');
-        indexViewManager.elelments.chkOldValues = $('#chk-oldvalues');
-        indexViewManager.elelments.txtUsername = $('#txt-username');
-        indexViewManager.elelments.logTableContent = $('#DataLog tbody');
+        indexViewManager_SettingLogs.elelments.ddlLogActionType = $('#ddl-logactiontype');
+        indexViewManager_SettingLogs.elelments.btnSubmit = $("#btn-submit");
+        indexViewManager_SettingLogs.elelments.ddlMonth = $('#ddlMonth');
+        indexViewManager_SettingLogs.elelments.iconLoading = $('#icon-loading');
+        indexViewManager_SettingLogs.elelments.chkOldValues = $('#chk-oldvalues');
+        indexViewManager_SettingLogs.elelments.txtUsername = $('#txt-username');
+        indexViewManager_SettingLogs.elelments.logTableContent = $('#DataLog tbody');
+        indexViewManager_SettingLogs.elelments.linkChangTabs = $('.lnk-changetab');
+        indexViewManager_SettingLogs.elelments.pagination = $('#pp');
     },
     initElements: function (viewModel) {
-        indexViewManager.cacheElements();
-        indexViewManager.elelments.ddlLogActionType.change(function () {
+        indexViewManager_SettingLogs.cacheElements();
+        indexViewManager_SettingLogs.elelments.ddlLogActionType.change(function () {
             indexManager.viewLogs();
         });
-        indexViewManager.initMonthPicker(viewModel);
-        indexViewManager.elelments.btnSubmit.click(function () {
+        indexViewManager_SettingLogs.initMonthPicker(viewModel);
+        indexViewManager_SettingLogs.elelments.btnSubmit.click(function () {
             indexManager.viewLogs();
         });
-        indexViewManager.elelments.chkOldValues.click(function () {
-            var isShowOldValues = indexViewManager.elelments.chkOldValues.prop("checked") ? 1 : 0;
+        indexViewManager_SettingLogs.elelments.chkOldValues.click(function () {
+            var isShowOldValues = indexViewManager_SettingLogs.elelments.chkOldValues.prop("checked") ? 1 : 0;
             $.cookie(viewModel.showOldValuesCookieName, isShowOldValues);
             indexManager.viewLogs();
         });
-        indexViewManager.elelments.txtUsername.keypress(function (e) {
+        indexViewManager_SettingLogs.elelments.txtUsername.keypress(function (e) {
             if (!e) {
                 e = window.event;
             }
@@ -91,9 +94,17 @@ var indexViewManager = {
                 ismember: 0
             });
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
+        indexViewManager_SettingLogs.elelments.linkChangTabs.click(function () {
+            window.location = $(this).data("tablink");
+        });
+        indexViewManager_SettingLogs.renderPager({
+            total: viewModel.totalRecords,
+            pageSize: viewModel.pageSize,
+            pageNumber: viewModel.pageIndex
+        });
     },
     initMonthPicker: function (viewModel) {
-        indexViewManager.elelments.ddlMonth.monPickr({
+        indexViewManager_SettingLogs.elelments.ddlMonth.monPickr({
             maxDate: viewModel.maxReportDate,
             minDate: viewModel.minReportDate,
             month: new Date(viewModel.dayInMonth),
@@ -112,19 +123,19 @@ var indexViewManager = {
         });
     },
     showLoadingState: function () {
-        indexViewManager.elelments.btnSubmit.attr('disabled', 'disabled');
-        indexViewManager.elelments.iconLoading.removeClass('hide');
+        indexViewManager_SettingLogs.elelments.btnSubmit.attr('disabled', 'disabled');
+        indexViewManager_SettingLogs.elelments.iconLoading.removeClass('hide');
     },
     showCompleteLoadingState: function () {
-        indexViewManager.elelments.iconLoading.addClass('hide');
-        indexViewManager.elelments.btnSubmit.attr('disabled', null);
+        indexViewManager_SettingLogs.elelments.iconLoading.addClass('hide');
+        indexViewManager_SettingLogs.elelments.btnSubmit.attr('disabled', null);
     },
     getParams: function () {
         return {
-            Username: indexViewManager.elelments.txtUsername.val(),
-            FromDate: indexViewManager.elelments.ddlMonth.monPickr("getFromDate", alphaViewLogs.format.shortDateWithSlash),
-            ToDate: indexViewManager.elelments.ddlMonth.monPickr("getToDate", alphaViewLogs.format.shortDateWithSlash),
-            ActionTypeId: indexViewManager.elelments.ddlLogActionType.val()
+            Username: indexViewManager_SettingLogs.elelments.txtUsername.val(),
+            FromDate: indexViewManager_SettingLogs.elelments.ddlMonth.monPickr("getFromDate", alphaViewLogs.format.shortDateWithSlash),
+            ToDate: indexViewManager_SettingLogs.elelments.ddlMonth.monPickr("getToDate", alphaViewLogs.format.shortDateWithSlash),
+            ActionTypeId: indexViewManager_SettingLogs.elelments.ddlLogActionType.val()
         };
     },
     renderLogs: function (result) {
@@ -146,35 +157,48 @@ var indexViewManager = {
         else {
             logContent = '<tr><td colspan="5">' + viewModel.noInfo + '</td></tr>';
         }
-        indexViewManager.elelments.logTableContent.empty();
-        indexViewManager.elelments.logTableContent.append(logContent);
-        indexViewManager.renderPager(result);
-    },
-    renderPager: function (result) {
-        $('#pp').pagination({
-            pageList: alphaViewLogs.pageList,
-            total: result.TotalRecords,
+        indexViewManager_SettingLogs.elelments.logTableContent.empty();
+        indexViewManager_SettingLogs.elelments.logTableContent.append(logContent);
+        indexViewManager_SettingLogs.renderPager({
+            totalRecords: result.TotalRecords,
             pageSize: result.PageSize,
             pageNumber: result.PageIndex
         });
+    },
+    renderPager: function (options) {
+        if (options.totalRecords) {
+            indexViewManager_SettingLogs.elelments.pagination.pagination({
+                pageList: alphaViewLogs.pageList,
+                total: options.totalRecords,
+                pageSize: options.pageSize,
+                pageNumber: options.pageIndex
+            });
+            indexViewManager_SettingLogs.elelments.pagination.removeClass("hide");
+        }
+        else {
+            indexViewManager_SettingLogs.elelments.pagination.addClass("hide");
+        }
     }
 };
-
+//# sourceMappingURL=index-viewmanager-settinglogs.js.map
 /// <reference path="../core.ts" />
-/// <reference path="index-viewmanager.ts" />
+/// <reference path="index-viewmanager-settinglogs.ts" />
 'use strict';
 var indexManager = {
+    urls: {
+        viewLogs: document.getElementById('viewLogsPath').value
+    },
     init: function () {
-        indexViewManager.initElements(viewModel);
+        indexViewManager_SettingLogs.initElements(viewModel);
     },
     viewLogs: function () {
-        indexViewManager.showLoadingState();
+        indexViewManager_SettingLogs.showLoadingState();
         alphaViewLogs.callRequest({
-            url: alphaViewLogs.urls.viewCustomerSettingLogs,
-            data: indexViewManager.getParams(),
+            url: indexManager.urls.viewLogs,
+            data: indexViewManager_SettingLogs.getParams(),
             success: function (result) {
-                indexViewManager.renderLogs(result);
-                indexViewManager.showCompleteLoadingState();
+                indexViewManager_SettingLogs.renderLogs(result);
+                indexViewManager_SettingLogs.showCompleteLoadingState();
             }
         });
     }
@@ -182,3 +206,4 @@ var indexManager = {
 $(function () {
     indexManager.init();
 });
+//# sourceMappingURL=index-manager.js.map

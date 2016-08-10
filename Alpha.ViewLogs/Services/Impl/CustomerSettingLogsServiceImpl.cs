@@ -67,10 +67,10 @@
                 return pagingLogs;
             }
 
-            var getCustomerSettingLogsCriteria = getLogsParam.CreateCustomerSettingLogsCriteria(customerInfo.CustId);
+            var getTotalRecordsOfLogsCriteria = getLogsParam.CreateCustomerSettingLogsCriteria(customerInfo.CustId);
 
             pagingLogs.Logs = dynamicRepository
-                .Fetch<BaseLog>(getCustomerSettingLogsCriteria)
+                .Fetch<BaseLog>(getTotalRecordsOfLogsCriteria)
                 .ToList();
 
             var getTotalRecordsOfCustomerSettingLogsCriteria = getLogsParam.CreateTotalRecordsOfCustomerSettingLogsCriteria(customerInfo.CustId);

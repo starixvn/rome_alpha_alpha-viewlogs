@@ -5,8 +5,7 @@ var alphaViewLogs = {
         shortDateWithSlash: 'MM/dd/yyyy'
     },
     urls: {
-        viewCustomerSettingLogs: document.getElementById('viewCustomerSettingLogsPath').value,
-        queryUsername: document.getElementById('usernameAutoSuggestionPath').value,
+        queryUsername: document.getElementById('usernameAutoSuggestionPath').value
     },
     keyCode: {
         enter: 13
@@ -37,3 +36,4 @@ var alphaViewLogs = {
             !/opera/i.test(navigator.userAgent);
     }
 };
+//# sourceMappingURL=core.js.map

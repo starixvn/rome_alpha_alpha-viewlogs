@@ -76,7 +76,7 @@
                 UplineId = UplineId,
                 IsDebug = IsDebug,
                 SubAccId = SubAccId,
-                ActionTypeId = string.IsNullOrEmpty(ActionTypeId) ? -1 : Converter.ToInt(ActionTypeId),
+                ActionTypeId = string.IsNullOrEmpty(ActionTypeId) ? ActionType.All : Converter.ToInt(ActionTypeId),
                 RoleId = RoleId,
                 FromDate = DateTimeHelper.GetBeginningOfDate(fromDate),
                 ToDate = DateTimeHelper.GetEndingOfDate(toDate),
@@ -91,7 +91,8 @@
                 ActionIdVisibilities = ActionIdVisibilities,
 
                 MaxReportDate = maxReportDate,
-                MinReportDate = minReportDate
+                MinReportDate = minReportDate,
+                IsShowOldValue = IsShowOldValue
             };
         }
 

@@ -7,7 +7,7 @@
 
     public class GetLogsViewModel
     {
-        private readonly int totalRecords;
+        private readonly bool showOldValue;
         private readonly int pageSize;
         private readonly int pageIndex;
 
@@ -19,7 +19,8 @@
 
         public GetLogsViewModel(GetLogsParam logsParam, PagingLogs pagingLogs)
         {
-            this.totalRecords = pagingLogs.TotalRecords;
+            this.showOldValue = logsParam.IsShowOldValue;
+            this.TotalRecords = pagingLogs.TotalRecords;
             this.pageSize = logsParam.PageSize;
             this.pageIndex = logsParam.PageIndex;
 
@@ -40,13 +41,15 @@
             this.minReportDate = logsParam.MinReportDate.ToShortDateString();
         }
 
-        public int TotalRecords
+        public bool ShowOldValue
         {
             get
             {
-                return totalRecords;
+                return showOldValue;
             }
         }
+
+        public int TotalRecords { get; set; }
 
         public int PageSize
         {

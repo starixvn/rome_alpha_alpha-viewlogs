@@ -1,5 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels.CustomerSettingLogs
 {
+    using Constants;
     using Models.Enumerations;
     using Params.CustomerSettingLogs;
     using System.Collections.Generic;
@@ -52,15 +53,21 @@
 
         public List<LogActionTypeViewModel> LogActionTypes { get; set; }
 
-        public string SelectedTab { get; set; }
+        public string SelectedTab
+        {
+            get
+            {
+                return ViewLogType.CustomerSetting;
+            }
+        }
 
-        public List<ElementViewModal> Tabs { get; set; }
+        public List<TabViewModal> Tabs { get; set; }
 
         public GetLogsViewModel GetLogsViewModel { get; set; }
 
         public string ShowOldValuesCookieName { get; set; }
 
-        public string ViewCustomerSettingLogsPath
+        public string ViewLogsPath
         {
             get
             {
@@ -72,7 +79,7 @@
         {
             get
             {
-                return MicroSites.OldMainUrl("_GlobalResources/Handlers/QueryUserName.ashx");
+                return MicroSites.OldMainUrl("~/_GlobalResources/Handlers/QueryUserName.ashx");
             }
         }
     }

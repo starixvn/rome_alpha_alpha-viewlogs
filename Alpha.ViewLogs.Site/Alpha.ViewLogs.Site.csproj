@@ -218,6 +218,10 @@
       <DependentUpon>default.css</DependentUpon>
     </Content>
     <Content Include="assets\bundles\viewlog.css" />
+    <Content Include="assets\scripts\statuslogs.js" />
+    <Content Include="assets\scripts\statuslogs.min.js">
+      <DependentUpon>statuslogs.js</DependentUpon>
+    </Content>
     <Content Include="assets\styles\viewlog.min.css">
       <DependentUpon>viewlog.css</DependentUpon>
     </Content>
@@ -525,7 +529,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\action_921.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_922.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_924.xslt" />
-    <TypeScriptCompile Include="assets\scripts\customersettinglogs\index-viewmanager.ts" />
+    <TypeScriptCompile Include="assets\scripts\customersettinglogs\index-viewmanager-settinglogs.ts" />
     <TypeScriptCompile Include="assets\scripts\customersettinglogs\index-manager.ts" />
     <Content Include="assets\scripts\customersettinglogs.js" />
     <Content Include="assets\scripts\customersettinglogs.min.js">
@@ -537,9 +541,11 @@
     <Content Include="Views\CreditLogs\Index.html" />
     <None Include="Web.AppSettings.config" />
     <Content Include="Views\LoginLogs\Index.html" />
-    <Content Include="Views\StatusLogs\Index.html" />
+    <None Include="Views\StatusLogs\Index.cshtml" />
     <Content Include="Web.config" />
     <TypeScriptCompile Include="assets\scripts\core.ts" />
+    <TypeScriptCompile Include="assets\scripts\statuslogs\index-manager.ts" />
+    <TypeScriptCompile Include="assets\scripts\statuslogs\index-viewmanager-statuslogs.ts" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\DependencyConfig.cs" />
@@ -548,6 +554,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CustomerSettingLogsController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\StatusLogsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -555,18 +562,23 @@
     <Compile Include="Handlers\BaseViewLogsHandler.cs" />
     <Compile Include="Handlers\CustomerSettingLogsHandler.cs" />
     <Compile Include="Handlers\DefaultHandler.cs" />
+    <Compile Include="Handlers\StatusLogsHandler.cs" />
     <Compile Include="Helpers\BaseLogViewModelHelper.cs" />
     <Compile Include="Helpers\StaticResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\CustomerSettingLogs\GetLogsQuery.cs" />
     <Compile Include="Requests\CustomerSettingLogs\IndexQuery.cs" />
     <Compile Include="Requests\IndexQuery.cs" />
+    <Compile Include="Requests\StatusLogs\GetLogsQuery.cs" />
+    <Compile Include="Requests\StatusLogs\IndexQuery.cs" />
     <Compile Include="ViewModels\BaseLogViewModel.cs" />
     <Compile Include="ViewModels\CustomerSettingLogs\GetLogsViewModel.cs" />
     <Compile Include="ViewModels\CustomerSettingLogs\IndexViewModel.cs" />
     <Compile Include="ViewModels\CustomerSettingLogs\LogActionTypeViewModel.cs" />
     <Compile Include="ViewModels\Default\IndexViewModel.cs" />
-    <Compile Include="ViewModels\ElementViewModal.cs" />
+    <Compile Include="ViewModels\TabViewModal.cs" />
+    <Compile Include="ViewModels\StatusLogs\GetLogsViewModel.cs" />
+    <Compile Include="ViewModels\StatusLogs\IndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

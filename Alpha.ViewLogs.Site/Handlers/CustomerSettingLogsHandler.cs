@@ -1,7 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
     using AppResources;
-    using Constants;
     using Helpers;
     using MediatR;
     using Models;
@@ -10,6 +9,7 @@
     using Services;
     using System.Collections.Generic;
     using System.Linq;
+    using ViewLogs.Constants;
     using ViewLogs.Helpers;
     using ViewModels;
     using ViewModels.CustomerSettingLogs;
@@ -22,10 +22,10 @@
         private readonly TransformTrackingValueToHtmlService transformTrackingValueToHtmlService;
 
         public CustomerSettingLogsHandler(
-            CustomerSettingLogsService customerSettingService,
+            CustomerSettingLogsService customerSettingLogsService,
             TransformTrackingValueToHtmlService transformTrackingValueToHtmlService)
         {
-            this.customerSettingLogsService = customerSettingService;
+            this.customerSettingLogsService = customerSettingLogsService;
             this.transformTrackingValueToHtmlService = transformTrackingValueToHtmlService;
         }
 
@@ -38,10 +38,9 @@
             viewModel.LogActionTypes = GetLogActionTypes(message);
 
             viewModel.GetLogsViewModel = new GetLogsViewModel(logsParam, pagingLogs);
-            viewModel.GetLogsViewModel.Logs = TransformLogsToHtml(pagingLogs, message);
+            TransformLogsToHtml(pagingLogs, message, viewModel.GetLogsViewModel);
 
             viewModel.Tabs = GetTabs(viewModel.IsSubAccount, viewModel.HasViewLogPermission);
-            viewModel.SelectedTab = ViewLogType.CustomerSetting;
 
             return viewModel;
         }
@@ -52,7 +51,7 @@
             var pagingLogs = customerSettingLogsService.GetLogs(logsParam);
 
             var viewModel = new GetLogsViewModel(logsParam, pagingLogs);
-            viewModel.Logs = TransformLogsToHtml(pagingLogs, message);
+            TransformLogsToHtml(pagingLogs, message, viewModel);
 
             return viewModel;
         }
@@ -63,12 +62,15 @@
 
             var logActionTypeViewModels = logActionTypes.Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))
                 .ToList();
-            logActionTypeViewModels.Insert(0, new LogActionTypeViewModel(-1, Resources.All));
+            logActionTypeViewModels.Insert(0, new LogActionTypeViewModel(ActionType.All, Resources.All));
 
             return logActionTypeViewModels;
         }
 
-        private List<BaseLogViewModel> TransformLogsToHtml(PagingLogs pagingLogs, GetLogsQuery message)
+        private void TransformLogsToHtml(
+            PagingLogs pagingLogs,
+            GetLogsQuery message,
+            GetLogsViewModel viewModel)
         {
             var transformParam = new TransformTrackingValueToHtmlParam
             {
@@ -85,6 +87,12 @@
 
             foreach (var log in pagingLogs.Logs)
             {
+                if (!message.ActionIdVisibilities[log.ActionId])
+                {
+                    viewModel.TotalRecords -= 1;
+                    continue;
+                }
+
                 var trackingValueWithDiff = BaseLogViewModelHelper.GetTrackingValueWithDiff(log, message.IsShowOldValue);
                 var htmlTrackingValue = transformTrackingValueToHtmlService.TransformTrackingValueToHtml(trackingValueWithDiff, log, transformParam);
 
@@ -105,7 +113,7 @@
                 });
             }
 
-            return htmlLogs;
+            viewModel.Logs = htmlLogs;
         }
     }
 }
