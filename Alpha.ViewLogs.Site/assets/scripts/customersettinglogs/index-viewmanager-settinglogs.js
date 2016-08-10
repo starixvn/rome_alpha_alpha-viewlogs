@@ -45,6 +45,7 @@ var indexViewManager_SettingLogs = {
             }
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
+                setVisible('hidden');
                 indexManager.viewLogs();
                 return alphaViewLogs.cancelBubbleEvent(e);
             }
@@ -117,7 +118,7 @@ var indexViewManager_SettingLogs = {
             }
         }
         else {
-            logContent = '<tr><td colspan="5">' + viewModel.noInfo + '</td></tr>';
+            logContent = '<tr><td colspan="5" align="center">' + viewModel.noInfo + '</td></tr>';
         }
         indexViewManager_SettingLogs.elelments.logTableContent.empty();
         indexViewManager_SettingLogs.elelments.logTableContent.append(logContent);

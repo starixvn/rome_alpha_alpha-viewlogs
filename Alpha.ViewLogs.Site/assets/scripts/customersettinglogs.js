@@ -4,15 +4,14 @@ function slideToggle(id) {
         var rowIndex = id.rowIndex;
         var p = id.parentNode ? id.parentNode : id.parentElement;
         var table = p.parentNode ? p.parentNode : p.parentElement;
-        var cell = table.rows[rowIndex + 1].cells[0];
-        obj = cell.firstElementChild ? cell.firstElementChild : cell.firstChild;
+        obj = table.rows[rowIndex + 1];
     }
     else {
         obj = document.getElementById(id);
     }
     if (obj != null) {
         if (obj.style.display == 'none') {
-            obj.style.display = 'block';
+            obj.style.display = '';
         }
         else {
             obj.style.display = 'none';
@@ -58,7 +57,7 @@ var alphaViewLogs = {
             !/opera/i.test(navigator.userAgent);
     }
 };
-//# sourceMappingURL=core.js.map
+
 /// <reference path="../core.ts" />
 /// <reference path="index-manager.ts" />
 'use strict';
@@ -106,6 +105,7 @@ var indexViewManager_SettingLogs = {
             }
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
+                setVisible('hidden');
                 indexManager.viewLogs();
                 return alphaViewLogs.cancelBubbleEvent(e);
             }
@@ -178,7 +178,7 @@ var indexViewManager_SettingLogs = {
             }
         }
         else {
-            logContent = '<tr><td colspan="5">' + viewModel.noInfo + '</td></tr>';
+            logContent = '<tr><td colspan="5" align="center">' + viewModel.noInfo + '</td></tr>';
         }
         indexViewManager_SettingLogs.elelments.logTableContent.empty();
         indexViewManager_SettingLogs.elelments.logTableContent.append(logContent);
@@ -203,7 +203,7 @@ var indexViewManager_SettingLogs = {
         }
     }
 };
-//# sourceMappingURL=index-viewmanager.js.map
+
 /// <reference path="../core.ts" />
 /// <reference path="index-viewmanager-settinglogs.ts" />
 'use strict';
@@ -232,4 +232,3 @@ var indexManager = {
 $(function () {
     indexManager.init();
 });
-//# sourceMappingURL=index-manager.js.map

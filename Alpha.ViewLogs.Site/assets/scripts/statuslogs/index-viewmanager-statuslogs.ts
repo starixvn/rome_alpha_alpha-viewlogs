@@ -5,6 +5,7 @@
 /*global indexManager, alphaViewLogs*/
 declare var $: any;
 declare var initAutoComplete: any;
+declare var setVisible: any;
 
 var indexViewManager_StatusLogs = {
     elelments: {
@@ -52,7 +53,9 @@ var indexViewManager_StatusLogs = {
 
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
+                setVisible('hidden');
                 indexManager.viewLogs();
+
                 return alphaViewLogs.cancelBubbleEvent(e);
             }
         });
@@ -130,7 +133,7 @@ var indexViewManager_StatusLogs = {
                               </tr>';
             }
         } else {
-            logContent = '<tr><td colspan="5">' + viewModel.noInfo + '</td></tr>';
+            logContent = '<tr><td colspan="5" align="center">' + viewModel.noInfo + '</td></tr>';
         }
 
         indexViewManager_StatusLogs.elelments.logTableContent.empty();

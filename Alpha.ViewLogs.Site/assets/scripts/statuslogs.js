@@ -4,15 +4,14 @@ function slideToggle(id) {
         var rowIndex = id.rowIndex;
         var p = id.parentNode ? id.parentNode : id.parentElement;
         var table = p.parentNode ? p.parentNode : p.parentElement;
-        var cell = table.rows[rowIndex + 1].cells[0];
-        obj = cell.firstElementChild ? cell.firstElementChild : cell.firstChild;
+        obj = table.rows[rowIndex + 1];
     }
     else {
         obj = document.getElementById(id);
     }
     if (obj != null) {
         if (obj.style.display == 'none') {
-            obj.style.display = 'block';
+            obj.style.display = '';
         }
         else {
             obj.style.display = 'none';
@@ -103,6 +102,7 @@ var indexViewManager_StatusLogs = {
             }
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
+                setVisible('hidden');
                 indexManager.viewLogs();
                 return alphaViewLogs.cancelBubbleEvent(e);
             }
@@ -176,7 +176,7 @@ var indexViewManager_StatusLogs = {
             }
         }
         else {
-            logContent = '<tr><td colspan="5">' + viewModel.noInfo + '</td></tr>';
+            logContent = '<tr><td colspan="5" align="center">' + viewModel.noInfo + '</td></tr>';
         }
         indexViewManager_StatusLogs.elelments.logTableContent.empty();
         indexViewManager_StatusLogs.elelments.logTableContent.append(logContent);

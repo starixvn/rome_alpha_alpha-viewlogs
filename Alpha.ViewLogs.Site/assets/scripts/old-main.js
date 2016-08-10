@@ -4,15 +4,14 @@ function slideToggle(id) {
         var rowIndex = id.rowIndex;
         var p = id.parentNode ? id.parentNode : id.parentElement;
         var table = p.parentNode ? p.parentNode : p.parentElement;
-        var cell = table.rows[rowIndex + 1].cells[0];
-        obj = cell.firstElementChild ? cell.firstElementChild : cell.firstChild;
+        obj = table.rows[rowIndex + 1];
     }
     else {
         obj = document.getElementById(id);
     }
     if (obj != null) {
         if (obj.style.display == 'none') {
-            obj.style.display = 'block';
+            obj.style.display = '';
         }
         else {
             obj.style.display = 'none';
