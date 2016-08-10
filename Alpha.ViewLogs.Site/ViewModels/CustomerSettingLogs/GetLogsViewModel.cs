@@ -17,6 +17,8 @@
         private readonly string toDate;
         private readonly string dayInMonth;
 
+        private readonly string username;
+
         public GetLogsViewModel(GetLogsParam logsParam, PagingLogs pagingLogs)
         {
             this.showOldValue = logsParam.IsShowOldValue;
@@ -39,6 +41,8 @@
             // Limit time range for view log in 2 years (start from beginning of last year)
             this.maxReportDate = logsParam.MaxReportDate.ToShortDateString();
             this.minReportDate = logsParam.MinReportDate.ToShortDateString();
+
+            this.username = logsParam.Username;
         }
 
         public bool ShowOldValue
@@ -106,6 +110,14 @@
             get
             {
                 return this.maxReportDate;
+            }
+        }
+
+        public string Username
+        {
+            get
+            {
+                return username;
             }
         }
     }

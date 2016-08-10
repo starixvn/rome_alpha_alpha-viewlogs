@@ -36,7 +36,7 @@ var alphaViewLogs = {
             !/opera/i.test(navigator.userAgent);
     }
 };
-//# sourceMappingURL=core.js.map
+
 /// <reference path="../core.ts" />
 /// <reference path="index-manager.ts" />
 'use strict';
@@ -95,10 +95,11 @@ var indexViewManager_SettingLogs = {
             });
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
         indexViewManager_SettingLogs.elelments.linkChangTabs.click(function () {
-            window.location = $(this).data("tablink");
+            var url = $(this).data("tablink") + "?" + $.param(indexManager.viewLogsParams);
+            window.location.href = url;
         });
         indexViewManager_SettingLogs.renderPager({
-            total: viewModel.totalRecords,
+            totalRecords: viewModel.totalRecords,
             pageSize: viewModel.pageSize,
             pageNumber: viewModel.pageIndex
         });
@@ -180,7 +181,7 @@ var indexViewManager_SettingLogs = {
         }
     }
 };
-//# sourceMappingURL=index-viewmanager-settinglogs.js.map
+
 /// <reference path="../core.ts" />
 /// <reference path="index-viewmanager-settinglogs.ts" />
 'use strict';
@@ -190,12 +191,15 @@ var indexManager = {
     },
     init: function () {
         indexViewManager_SettingLogs.initElements(viewModel);
+        indexManager.viewLogsParams = indexViewManager_SettingLogs.getParams();
     },
+    viewLogsParams: null,
     viewLogs: function () {
         indexViewManager_SettingLogs.showLoadingState();
+        indexManager.viewLogsParams = indexViewManager_SettingLogs.getParams();
         alphaViewLogs.callRequest({
             url: indexManager.urls.viewLogs,
-            data: indexViewManager_SettingLogs.getParams(),
+            data: indexManager.viewLogsParams,
             success: function (result) {
                 indexViewManager_SettingLogs.renderLogs(result);
                 indexViewManager_SettingLogs.showCompleteLoadingState();
@@ -206,4 +210,3 @@ var indexManager = {
 $(function () {
     indexManager.init();
 });
-//# sourceMappingURL=index-manager.js.map

@@ -56,10 +56,11 @@ var indexViewManager_SettingLogs = {
             });
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
         indexViewManager_SettingLogs.elelments.linkChangTabs.click(function () {
-            window.location = $(this).data("tablink");
+            var url = $(this).data("tablink") + "?" + $.param(indexManager.viewLogsParams);
+            window.location.href = url;
         });
         indexViewManager_SettingLogs.renderPager({
-            total: viewModel.totalRecords,
+            totalRecords: viewModel.totalRecords,
             pageSize: viewModel.pageSize,
             pageNumber: viewModel.pageIndex
         });
@@ -141,4 +142,3 @@ var indexViewManager_SettingLogs = {
         }
     }
 };
-//# sourceMappingURL=index-viewmanager-settinglogs.js.map

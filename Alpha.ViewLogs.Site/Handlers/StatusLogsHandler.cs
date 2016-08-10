@@ -72,7 +72,7 @@
 
             foreach (var log in pagingLogs.Logs)
             {
-                if (!message.ActionIdVisibilities[log.ActionId])
+                if (message.ActionIdVisibilities.ContainsKey(log.ActionId) && !message.ActionIdVisibilities[log.ActionId])
                 {
                     viewModel.TotalRecords -= 1;
                     continue;

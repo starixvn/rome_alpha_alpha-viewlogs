@@ -64,11 +64,12 @@ var indexViewManager_StatusLogs = {
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
 
         indexViewManager_StatusLogs.elelments.linkChangTabs.click(function () {
-            window.location = $(this).data("tablink");
+            var url = $(this).data("tablink") + "?" + $.param(indexManager.viewLogsParams);
+            window.location.href = url;
         });
 
         indexViewManager_StatusLogs.renderPager({
-            total: viewModel.totalRecords,
+            totalRecords: viewModel.totalRecords,
             pageSize: viewModel.pageSize,
             pageNumber: viewModel.pageIndex
         });

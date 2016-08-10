@@ -36,7 +36,7 @@ var alphaViewLogs = {
             !/opera/i.test(navigator.userAgent);
     }
 };
-//# sourceMappingURL=core.js.map
+
 /// <reference path="../core.ts" />
 /// <reference path="index-manager.ts" />
 'use strict';
@@ -90,10 +90,11 @@ var indexViewManager_StatusLogs = {
             });
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
         indexViewManager_StatusLogs.elelments.linkChangTabs.click(function () {
-            window.location = $(this).data("tablink");
+            var url = $(this).data("tablink") + "?" + $.param(indexManager.viewLogsParams);
+            window.location.href = url;
         });
         indexViewManager_StatusLogs.renderPager({
-            total: viewModel.totalRecords,
+            totalRecords: viewModel.totalRecords,
             pageSize: viewModel.pageSize,
             pageNumber: viewModel.pageIndex
         });
@@ -174,7 +175,7 @@ var indexViewManager_StatusLogs = {
         }
     }
 };
-//# sourceMappingURL=index-viewmanager-statuslogs.js.map
+
 /// <reference path="../core.ts" />
 /// <reference path="index-viewmanager-statuslogs.ts" />
 'use strict';
@@ -184,12 +185,15 @@ var indexManager = {
     },
     init: function () {
         indexViewManager_StatusLogs.initElements(viewModel);
+        indexManager.viewLogsParams = indexViewManager_StatusLogs.getParams();
     },
+    viewLogsParams: null,
     viewLogs: function () {
         indexViewManager_StatusLogs.showLoadingState();
+        indexManager.viewLogsParams = indexViewManager_StatusLogs.getParams();
         alphaViewLogs.callRequest({
             url: indexManager.urls.viewLogs,
-            data: indexViewManager_StatusLogs.getParams(),
+            data: indexManager.viewLogsParams,
             success: function (result) {
                 indexViewManager_StatusLogs.renderLogs(result);
                 indexViewManager_StatusLogs.showCompleteLoadingState();
@@ -200,4 +204,3 @@ var indexManager = {
 $(function () {
     indexManager.init();
 });
-//# sourceMappingURL=index-manager.js.map

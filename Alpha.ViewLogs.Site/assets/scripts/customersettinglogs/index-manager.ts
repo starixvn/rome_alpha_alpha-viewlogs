@@ -12,13 +12,18 @@ var indexManager = {
     },
     init: function () {
         indexViewManager_SettingLogs.initElements(viewModel);
+
+        indexManager.viewLogsParams = indexViewManager_SettingLogs.getParams();
     },
+    viewLogsParams: null,
     viewLogs: function () {
         indexViewManager_SettingLogs.showLoadingState();
 
+        indexManager.viewLogsParams = indexViewManager_SettingLogs.getParams();
+
         alphaViewLogs.callRequest({
             url: indexManager.urls.viewLogs,
-            data: indexViewManager_SettingLogs.getParams(),
+            data: indexManager.viewLogsParams,
             success: function (result) {
                 indexViewManager_SettingLogs.renderLogs(result);
                 indexViewManager_SettingLogs.showCompleteLoadingState();
