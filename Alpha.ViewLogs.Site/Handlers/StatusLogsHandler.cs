@@ -32,6 +32,7 @@
             var pagingLogs = statusLogsService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam);
+            viewModel.ActionTypeId = message.ActionTypeId;
 
             viewModel.GetLogsViewModel = new GetLogsViewModel(logsParam, pagingLogs);
             TransformLogsToHtml(pagingLogs, message, viewModel.GetLogsViewModel);

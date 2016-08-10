@@ -80,5 +80,7 @@
                 return MicroSites.OldMainUrl("~/_GlobalResources/Handlers/QueryUserName.ashx");
             }
         }
+
+        public int ActionTypeId { get; set; }
     }
 }

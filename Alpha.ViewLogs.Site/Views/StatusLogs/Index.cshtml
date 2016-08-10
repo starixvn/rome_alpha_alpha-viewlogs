@@ -80,6 +80,7 @@
 <div class="output" id="output"></div>
 @Html.Hidden("viewLogsPath", Model.ViewLogsPath)
 @Html.Hidden("usernameAutoSuggestionPath", Model.UsernameAutoSuggestionPath)
+@Html.Hidden("actionTypeId", Model.ActionTypeId)
 @section Scripts
 {
     @StaticResources.AssetScripts.Render("/bundles/site-viewlogs/default")

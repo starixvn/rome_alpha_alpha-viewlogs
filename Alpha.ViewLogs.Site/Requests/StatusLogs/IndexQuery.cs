@@ -5,5 +5,6 @@
 
     public class IndexQuery : GetLogsQuery, IRequest<IndexViewModel>
     {
+        public int ActionTypeId { get; set; }
     }
 }

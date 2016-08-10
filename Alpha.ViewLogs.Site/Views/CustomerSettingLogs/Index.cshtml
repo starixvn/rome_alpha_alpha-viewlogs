@@ -25,7 +25,7 @@
                     <select id="ddl-logactiontype">
                         @foreach (var logActionType in Model.LogActionTypes)
                         {
-                            <option value="@logActionType.Id">@logActionType.Name</option>
+                            <option value="@logActionType.Id" @(logActionType.Id == Model.GetLogsViewModel.ActionTypeId ? "selected" : string.Empty)>@logActionType.Name</option>
                         }
                     </select>
                 </div>

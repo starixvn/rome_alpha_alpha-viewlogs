@@ -18,6 +18,7 @@
         private readonly string dayInMonth;
 
         private readonly string username;
+        private readonly int actionTypeId;
 
         public GetLogsViewModel(GetLogsParam logsParam, PagingLogs pagingLogs)
         {
@@ -43,6 +44,7 @@
             this.minReportDate = logsParam.MinReportDate.ToShortDateString();
 
             this.username = logsParam.Username;
+            this.actionTypeId = logsParam.ActionTypeId;
         }
 
         public bool ShowOldValue
@@ -118,6 +120,14 @@
             get
             {
                 return username;
+            }
+        }
+
+        public int ActionTypeId
+        {
+            get
+            {
+                return actionTypeId;
             }
         }
     }

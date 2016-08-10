@@ -15,7 +15,8 @@ var indexViewManager_StatusLogs = {
         txtUsername: null,
         logTableContent: null,
         linkChangTabs: null,
-        pagination: null
+        pagination: null,
+        actionTypeId: null
     },
     showOldValuesCookieName: '',
     cacheElements: function () {
@@ -27,6 +28,7 @@ var indexViewManager_StatusLogs = {
         indexViewManager_StatusLogs.elelments.logTableContent = $('#DataLog tbody');
         indexViewManager_StatusLogs.elelments.linkChangTabs = $('.lnk-changetab');
         indexViewManager_StatusLogs.elelments.pagination = $('#pp');
+        indexViewManager_StatusLogs.elelments.actionTypeId = $('#actionTypeId');
     },
     initElements: function (viewModel) {
         indexViewManager_StatusLogs.cacheElements();
@@ -64,7 +66,9 @@ var indexViewManager_StatusLogs = {
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
 
         indexViewManager_StatusLogs.elelments.linkChangTabs.click(function () {
-            var url = $(this).data("tablink") + "?" + $.param(indexManager.viewLogsParams);
+            var url = $(this).data("tablink") + "?" +
+                $.param(indexManager.viewLogsParams) +
+                "&actiontypeid=" + indexViewManager_StatusLogs.elelments.actionTypeId.val();
             window.location.href = url;
         });
 
