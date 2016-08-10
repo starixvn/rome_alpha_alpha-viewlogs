@@ -5,10 +5,13 @@ var alphaViewLogs = {
         shortDateWithSlash: 'MM/dd/yyyy'
     },
     urls: {
-        viewCustomerSettingLogs: './customersettinglogs/getlogs'
+        viewCustomerSettingLogs: document.getElementById('viewCustomerSettingLogsPath').value,
+        queryUsername: document.getElementById('usernameAutoSuggestionPath').value,
     },
-    pageList: [1, 2, 5, 10],
-    //pageList: [10, 50, 100, 500],
+    keyCode: {
+        enter: 13
+    },
+    pageList: [10, 50, 100, 500],
     callRequest: function (options) {
         $.ajax({
             type: "POST",
@@ -17,6 +20,21 @@ var alphaViewLogs = {
             responseType: "json",
             success: options.success
         });
+    },
+    cancelBubbleEvent: function (event) {
+        if (alphaViewLogs.isIE()) {
+            window.event.cancelBubble = true;
+            window.event.returnValue = false;
+        }
+        else {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        return false;
+    },
+    isIE: function () {
+        return /msie/i.test(navigator.userAgent) &&
+            !/opera/i.test(navigator.userAgent);
     }
 };
 
@@ -57,6 +75,22 @@ var indexViewManager = {
             $.cookie(viewModel.showOldValuesCookieName, isShowOldValues);
             indexManager.viewLogs();
         });
+        indexViewManager.elelments.txtUsername.keypress(function (e) {
+            if (!e) {
+                e = window.event;
+            }
+            var key = (e.keyCode) ? e.keyCode : e.which;
+            if (key == alphaViewLogs.keyCode.enter) {
+                indexManager.viewLogs();
+                return alphaViewLogs.cancelBubbleEvent(e);
+            }
+        });
+        var queryUsernameURL = alphaViewLogs.urls.queryUsername + "?" +
+            $.param({
+                issub: 0,
+                ismember: 0
+            });
+        initAutoComplete($('#txt-username')[0], queryUsernameURL);
     },
     initMonthPicker: function (viewModel) {
         indexViewManager.elelments.ddlMonth.monPickr({
@@ -79,10 +113,10 @@ var indexViewManager = {
     },
     showLoadingState: function () {
         indexViewManager.elelments.btnSubmit.attr('disabled', 'disabled');
-        indexViewManager.elelments.iconLoading.show();
+        indexViewManager.elelments.iconLoading.removeClass('hide');
     },
     showCompleteLoadingState: function () {
-        indexViewManager.elelments.iconLoading.hide();
+        indexViewManager.elelments.iconLoading.addClass('hide');
         indexViewManager.elelments.btnSubmit.attr('disabled', null);
     },
     getParams: function () {
@@ -120,8 +154,8 @@ var indexViewManager = {
         $('#pp').pagination({
             pageList: alphaViewLogs.pageList,
             total: result.TotalRecords,
-            pageSize: 2,
-            pageNumber: 2
+            pageSize: result.PageSize,
+            pageNumber: result.PageIndex
         });
     }
 };

@@ -5,10 +5,13 @@ var alphaViewLogs = {
         shortDateWithSlash: 'MM/dd/yyyy'
     },
     urls: {
-        viewCustomerSettingLogs: './customersettinglogs/getlogs'
+        viewCustomerSettingLogs: (<HTMLInputElement>document.getElementById('viewCustomerSettingLogsPath')).value,
+        queryUsername: (<HTMLInputElement>document.getElementById('usernameAutoSuggestionPath')).value,
     },
-    pageList: [1, 2, 5, 10],
-    //pageList: [10, 50, 100, 500],
+    keyCode: {
+        enter: 13
+    },
+    pageList: [10, 50, 100, 500],
     callRequest: function (options) {
         $.ajax({
             type: "POST",
@@ -17,5 +20,20 @@ var alphaViewLogs = {
             responseType: "json",
             success: options.success
         });
+    },
+    cancelBubbleEvent: function (event) {
+        if (alphaViewLogs.isIE()) {
+            window.event.cancelBubble = true;
+            window.event.returnValue = false;
+        } else {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        return false;
+    },
+    isIE: function () {
+        return /msie/i.test(navigator.userAgent) &&
+            !/opera/i.test(navigator.userAgent);
     }
 };

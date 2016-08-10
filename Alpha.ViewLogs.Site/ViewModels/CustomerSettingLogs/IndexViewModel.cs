@@ -3,6 +3,7 @@
     using Models.Enumerations;
     using Params.CustomerSettingLogs;
     using System.Collections.Generic;
+    using ViewLogs.Helpers;
 
     public class IndexViewModel
     {
@@ -58,5 +59,21 @@
         public GetLogsViewModel GetLogsViewModel { get; set; }
 
         public string ShowOldValuesCookieName { get; set; }
+
+        public string ViewCustomerSettingLogsPath
+        {
+            get
+            {
+                return MicroSites.MainUrl("~/customersettinglogs/getlogs");
+            }
+        }
+
+        public string UsernameAutoSuggestionPath
+        {
+            get
+            {
+                return MicroSites.OldMainUrl("_GlobalResources/Handlers/QueryUserName.ashx");
+            }
+        }
     }
 }
