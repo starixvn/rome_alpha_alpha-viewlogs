@@ -26,3 +26,4 @@ var indexManager = {
 $(function () {
     indexManager.init();
 });
+//# sourceMappingURL=index-manager.js.map

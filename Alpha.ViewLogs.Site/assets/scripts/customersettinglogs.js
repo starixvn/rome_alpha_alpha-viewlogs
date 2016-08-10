@@ -58,7 +58,7 @@ var alphaViewLogs = {
             !/opera/i.test(navigator.userAgent);
     }
 };
-
+//# sourceMappingURL=core.js.map
 /// <reference path="../core.ts" />
 /// <reference path="index-manager.ts" />
 'use strict';
@@ -203,7 +203,7 @@ var indexViewManager_SettingLogs = {
         }
     }
 };
-
+//# sourceMappingURL=index-viewmanager.js.map
 /// <reference path="../core.ts" />
 /// <reference path="index-viewmanager-settinglogs.ts" />
 'use strict';
@@ -232,3 +232,4 @@ var indexManager = {
 $(function () {
     indexManager.init();
 });
+//# sourceMappingURL=index-manager.js.map

@@ -217,10 +217,12 @@
     <Content Include="assets\bundles\default.min.css">
       <DependentUpon>default.css</DependentUpon>
     </Content>
-    <Content Include="assets\bundles\viewlog.css" />
     <Content Include="assets\scripts\statuslogs.js" />
     <Content Include="assets\scripts\statuslogs.min.js">
       <DependentUpon>statuslogs.js</DependentUpon>
+    </Content>
+    <Content Include="assets\styles\viewlog.css">
+      <DependentUpon>viewlog.scss</DependentUpon>
     </Content>
     <Content Include="assets\styles\viewlog.min.css">
       <DependentUpon>viewlog.css</DependentUpon>

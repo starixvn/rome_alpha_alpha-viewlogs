@@ -36,3 +36,4 @@ var alphaViewLogs = {
             !/opera/i.test(navigator.userAgent);
     }
 };
+//# sourceMappingURL=core.js.map

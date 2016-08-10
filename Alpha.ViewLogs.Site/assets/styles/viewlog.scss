@@ -22,22 +22,22 @@ $height-td: 28px;
     width: 100%;
 }
 
-.tbl-content {
+.tblRpt {
     background: #fff;
     tr > td.logid, tr > td.datetime {
         text-align: center;
     }
-    td.tracking-value {
+    td:last-child {
         padding: 0;
     }
 }
 
-.tbl-details, .tbl-sub-details {
+.tblRpt .tblDesc, .tbl-sub-details {
     width: 100%;
     > tbody > tr > td{
         padding: 0 8px;
-        border-right: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
         &:last-child {
             border-right: none;
         }
@@ -45,13 +45,18 @@ $height-td: 28px;
     tbody tr:last-child td {
         border-bottom: none;
     }
-    td.col-key {
+    td.colW1 {
         background-color: #f3f3f3;
         text-align: left;
         text-transform: capitalize;
         width: 18.1818%;
     }
-    td.col-value {
+    .tblDesc {
+        td.colW1 {
+            padding: 0 16px;
+        }
+    }
+    td.colW2 {
         text-transform: capitalize;
         width: 16.6667%;
         .valuechanged, .valueold {
@@ -71,9 +76,12 @@ $height-td: 28px;
             margin: 2px -8px;
         }
     }
-    .header-detail {
-        background-color: #f3f5e0;
-        color: #900;
+    td[colspan="6"] {
+        padding: 0;
+    }
+    .headerDetail {
+        background-color: #bdc0c7;
+        font-size: 14px;
         text-transform: capitalize;
         font-weight: bold;
         cursor: pointer;
@@ -82,9 +90,17 @@ $height-td: 28px;
     .body-detail > td {
         padding: 0;
     }
+    tr.headerDetail {
+        td {
+            padding: 0 8px;
+        }
+    }
+    tr.headerSportTypeDetail td{
+        padding: 0 16px;
+    }
 }
  
-.sporttype-detail {
+.headerSportTypeDetail {
     background: $sporttype-detail-bg;
     text-transform: capitalize;
     height: 28px;
