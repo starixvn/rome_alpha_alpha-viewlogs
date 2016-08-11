@@ -1,4 +1,6 @@
-﻿body {
+﻿@import "_mixins.scss";
+
+body {
     background: #f4f4f4;
     font-size: 13px;
 }
@@ -107,4 +109,20 @@ $height-td: 28px;
     line-height: 28px;
     padding: 0 8px;
     font-weight: bold;
+}
+
+.output {
+    @include border-radius(1px);  
+    @include box-shadow-multiple('0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)');
+    background: #fff;
+    position: absolute;
+    top: 85px;
+    width: 230px;
+    .opOut, .opOver {
+        padding: 0 5px;
+    }
+    .opOver {
+        cursor: pointer;
+        background: #dedede;
+    }
 }

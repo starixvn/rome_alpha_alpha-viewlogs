@@ -226,6 +226,7 @@
       <DependentUpon>viewlog.css</DependentUpon>
     </Content>
     <Content Include="assets\styles\viewlog.scss" />
+    <Content Include="assets\styles\_mixins.scss" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
