@@ -21,6 +21,9 @@ $height-td: 28px;
             display: inline-block;
             vertical-align: bottom;
         }
+        &.submit-box {
+            width: 120px;
+        }
     }
 }
 
