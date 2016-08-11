@@ -24,19 +24,19 @@
       <Mapping DataField="OldValue" ObjectProperty="TrackingValueOld" />
       <Mapping DataField="NewValue" ObjectProperty="TrackingValue" />
       <Mapping DataField="IP" ObjectProperty="IP" />
-      <Mapping DataField="Doing" ObjectProperty="ActionName" />
+      <Mapping DataField="Doing" ObjectProperty="Details" />
       <Mapping DataField="ActionID" ObjectProperty="ActionId" />
       <Mapping DataField="IsInternal" ObjectProperty="IsInternal" />
       <Mapping DataField="ActionTypeID" ObjectProperty="ActionTypeId" />
       <Mapping DataField="SPName" ObjectProperty="SPName" />
       <Mapping DataField="Username" ObjectProperty="Username" />
-      <Mapping DataField="ActionName" ObjectProperty="CustName" />
+      <Mapping DataField="ActionName" ObjectProperty="ActionName" />
     </Setting>
     <Setting Key="Acc_UserLog_LoginSel" SpName="Acc_UserLog_LoginSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" >
       <Mapping DataField="LogID" ObjectProperty="LogId" />
       <Mapping DataField="UserID" ObjectProperty="UserId" />
       <Mapping DataField="Username" ObjectProperty="Username" />
-      <Mapping DataField="Doing" ObjectProperty="ActionName" />
+      <Mapping DataField="Doing" ObjectProperty="Details" />
       <Mapping DataField="LogDate" ObjectProperty="LogDate" />
       <Mapping DataField="ActionID" ObjectProperty="ActionId" />
       <Mapping DataField="IsInternal" ObjectProperty="IsInternal" />

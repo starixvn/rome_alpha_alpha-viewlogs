@@ -11,8 +11,7 @@
             int totalRecords;
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
-                objectDb.ExecuteNonQuery(criteria.GetSpParams());
-                totalRecords = Converter.ToInt(objectDb.ExecuteScalar());
+                totalRecords = Converter.ToInt(objectDb.ExecuteScalar(criteria.GetSpParams()));
             }
 
             return totalRecords;

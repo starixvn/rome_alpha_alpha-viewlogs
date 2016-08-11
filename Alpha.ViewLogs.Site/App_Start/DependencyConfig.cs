@@ -61,7 +61,7 @@
 
         private static IEnumerable<Assembly> GetAssemblies()
         {
-            yield return typeof(DefaultController).Assembly;
+            yield return typeof(BaseController).Assembly;
         }
 
         private static void RegisterCrossCuttingConcerns(Container container)
@@ -96,6 +96,8 @@
 
             container.Register<CustomerSettingLogsService, CustomerSettingLogsServiceImpl>(Lifestyle.Transient);
             container.Register<StatusLogsService, StatusLogsServiceImpl>(Lifestyle.Transient);
+            container.Register<CreditLogsService, CreditLogsServiceImpl>(Lifestyle.Transient);
+            container.Register<LoginLogsService, LoginLogsServiceImpl>(Lifestyle.Transient);
         }
 
         private static void RegisterDataAccesses(Container container)
@@ -103,6 +105,7 @@
             container.Register<IDynamicRepository, DynamicRepository>(Lifestyle.Transient);
             container.Register<CustomerDataAccess, CustomerDataAccessImpl>(Lifestyle.Transient);
             container.Register<BaseDataAccess, BaseDataAccessImpl>(Lifestyle.Transient);
+            container.Register<LoginLogsDataAccess, LoginLogsDataAccessImpl>(Lifestyle.Transient);
         }
     }
 }

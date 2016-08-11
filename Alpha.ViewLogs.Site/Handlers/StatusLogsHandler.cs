@@ -11,7 +11,8 @@
     using ViewModels;
     using ViewModels.StatusLogs;
 
-    public class StatusLogsHandler : BaseViewLogsHandler,
+    public class StatusLogsHandler :
+        BaseViewLogsHandler,
         IRequestHandler<IndexQuery, IndexViewModel>,
         IRequestHandler<GetLogsQuery, GetLogsViewModel>
     {

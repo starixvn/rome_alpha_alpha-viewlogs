@@ -244,4 +244,58 @@
   <data name="Close" xml:space="preserve">
     <value>닫기</value>
   </data>
+  <data name="January" xml:space="preserve">
+    <value>1월</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>2월</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>3월</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>4월</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>5월</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>6월</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>7월</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>8월</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>9월</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>10월</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>11월</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>12월</value>
+  </data>
+  <data name="OldValue" xml:space="preserve">
+    <value>Old value</value>
+  </data>
+  <data name="NewValue" xml:space="preserve">
+    <value>New value</value>
+  </data>
+  <data name="IP" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="Domain" xml:space="preserve">
+    <value>도메인</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>브라우저</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
 </root>

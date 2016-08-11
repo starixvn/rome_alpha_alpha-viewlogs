@@ -1,6 +1,4 @@
 ﻿@using Alpha.ViewLogs.Site.ViewModels.CustomerSettingLogs;
-@using Alpha.ViewLogs.AppResources;
-@using Alpha.ViewLogs.Site.Helpers;
 
 @model IndexViewModel
 @{
@@ -91,7 +89,6 @@
 @section Scripts
 {
     @StaticResources.AssetScripts.Render("/bundles/site-viewlogs/default")
-    @StaticResources.AssetScripts.Render("/js/libs/jquery/jquery.cookie")
     <script type="text/javascript">
         var viewModel = {
             labelFrom: '@Resources.From',

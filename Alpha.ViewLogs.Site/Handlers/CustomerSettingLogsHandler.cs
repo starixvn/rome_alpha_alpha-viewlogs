@@ -14,7 +14,8 @@
     using ViewModels;
     using ViewModels.CustomerSettingLogs;
 
-    public class CustomerSettingLogsHandler : BaseViewLogsHandler,
+    public class CustomerSettingLogsHandler :
+        BaseViewLogsHandler,
         IRequestHandler<IndexQuery, IndexViewModel>,
         IRequestHandler<GetLogsQuery, GetLogsViewModel>
     {

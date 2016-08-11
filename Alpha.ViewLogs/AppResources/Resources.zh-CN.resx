@@ -232,9 +232,6 @@
   <data name="Action" xml:space="preserve">
     <value>动作</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>详情</value>
-  </data>
   <data name="NoInfo" xml:space="preserve">
     <value>没资料显示</value>
   </data>
@@ -246,5 +243,62 @@
   </data>
   <data name="Close" xml:space="preserve">
     <value>关闭</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>一月</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>二月</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>三月</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>四月</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>五月</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>六月</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>七月</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>八月</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>九月</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>十月</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>十一月</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>十二月</value>
+  </data>
+  <data name="OldValue" xml:space="preserve">
+    <value>旧价值</value>
+  </data>
+  <data name="NewValue" xml:space="preserve">
+    <value>新价值</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="IP" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="Domain" xml:space="preserve">
+    <value>网址</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>浏览器</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>国家</value>
   </data>
 </root>

@@ -106,11 +106,47 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to April.
+        /// </summary>
+        public static string April {
+            get {
+                return ResourceManager.GetString("April", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to August.
+        /// </summary>
+        public static string August {
+            get {
+                return ResourceManager.GetString("August", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browser.
+        /// </summary>
+        public static string Browser {
+            get {
+                return ResourceManager.GetString("Browser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
         public static string Close {
             get {
                 return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        public static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
             }
         }
         
@@ -138,6 +174,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string Daily {
             get {
                 return ResourceManager.GetString("Daily", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to December.
+        /// </summary>
+        public static string December {
+            get {
+                return ResourceManager.GetString("December", resourceCulture);
             }
         }
         
@@ -214,11 +259,29 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Domain.
+        /// </summary>
+        public static string Domain {
+            get {
+                return ResourceManager.GetString("Domain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edited by.
         /// </summary>
         public static string EditedBy {
             get {
                 return ResourceManager.GetString("EditedBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to February.
+        /// </summary>
+        public static string February {
+            get {
+                return ResourceManager.GetString("February", resourceCulture);
             }
         }
         
@@ -259,6 +322,42 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IP.
+        /// </summary>
+        public static string IP {
+            get {
+                return ResourceManager.GetString("IP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to January.
+        /// </summary>
+        public static string January {
+            get {
+                return ResourceManager.GetString("January", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to July.
+        /// </summary>
+        public static string July {
+            get {
+                return ResourceManager.GetString("July", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to June.
+        /// </summary>
+        public static string June {
+            get {
+                return ResourceManager.GetString("June", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log Date.
         /// </summary>
         public static string LogDate {
@@ -295,6 +394,24 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to March.
+        /// </summary>
+        public static string March {
+            get {
+                return ResourceManager.GetString("March", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to May.
+        /// </summary>
+        public static string May {
+            get {
+                return ResourceManager.GetString("May", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Member information.
         /// </summary>
         public static string MemberInfo {
@@ -313,6 +430,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New value.
+        /// </summary>
+        public static string NewValue {
+            get {
+                return ResourceManager.GetString("NewValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No information is available.
         /// </summary>
         public static string NoInfo {
@@ -322,11 +448,38 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to November.
+        /// </summary>
+        public static string November {
+            get {
+                return ResourceManager.GetString("November", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to October.
+        /// </summary>
+        public static string October {
+            get {
+                return ResourceManager.GetString("October", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to of.
         /// </summary>
         public static string of {
             get {
                 return ResourceManager.GetString("of", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Old value.
+        /// </summary>
+        public static string OldValue {
+            get {
+                return ResourceManager.GetString("OldValue", resourceCulture);
             }
         }
         
@@ -363,6 +516,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string Sat {
             get {
                 return ResourceManager.GetString("Sat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to September.
+        /// </summary>
+        public static string September {
+            get {
+                return ResourceManager.GetString("September", resourceCulture);
             }
         }
         

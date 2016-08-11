@@ -13,6 +13,7 @@
     public class IPServiceImpl : IPService
     {
         private const string CacheKeyVietnamIPList = "Alpha.ViewLogs.VietnamIPList";
+        private const string IPValidateRegex = @"(?<First>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Second>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Third>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Fourth>2[0-4]\d|25[0-5]|[01]?\d\d?)";
 
         private readonly CachingManager cacheManager;
         private readonly IUserSession userSession;
@@ -36,9 +37,7 @@
                 return ip;
             }
 
-            var regexCharacters =
-                @"(?<First>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Second>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Third>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Fourth>2[0-4]\d|25[0-5]|[01]?\d\d?)";
-            Regex regex = new Regex(regexCharacters);
+            Regex regex = new Regex(IPValidateRegex);
             if (!regex.IsMatch(ip, 0))
             {
                 return $"<a class=\"iplink\" href=\"javascript:;\">{ip}</a>";
@@ -55,7 +54,9 @@
 
         public string FormatCountryCode(string ip, string country)
         {
-            if (!IsValidIP(ip))
+            Regex regex = new Regex(IPValidateRegex);
+
+            if (!IsValidIP(ip) || !regex.IsMatch(ip, 0))
             {
                 return string.Empty;
             }

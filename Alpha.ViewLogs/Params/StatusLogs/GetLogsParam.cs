@@ -40,7 +40,7 @@
 
         public DateTime MinReportDate { get; set; }
 
-        public GetStatusLogsCriteria CreateStatusLogsCriteria(int custId)
+        public GetStatusLogsCriteria CreateGetLogsCriteria(int custId)
         {
             return new GetStatusLogsCriteria
             {
@@ -54,7 +54,7 @@
             };
         }
 
-        public GetTotalRecordsOfStatusLogsCriteria CreateTotalRecordsOfStatusLogsCriteria(int custId)
+        public GetTotalRecordsOfStatusLogsCriteria CreateTotalRecordsOfLogsCriteria(int custId)
         {
             return new GetTotalRecordsOfStatusLogsCriteria
             {

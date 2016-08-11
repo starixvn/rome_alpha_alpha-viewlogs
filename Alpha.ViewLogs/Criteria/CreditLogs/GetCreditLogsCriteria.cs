@@ -9,8 +9,6 @@
 
         public string CustName { get; set; }
 
-        public int ActionTypeId { get; set; }
-
         public DateTime FromDate { get; set; }
 
         public DateTime ToDate { get; set; }

@@ -31,5 +31,7 @@
         public string TrackingValueOld { get; set; }
 
         public string IP { get; set; }
+
+        public string Details { get; set; }
     }
 }

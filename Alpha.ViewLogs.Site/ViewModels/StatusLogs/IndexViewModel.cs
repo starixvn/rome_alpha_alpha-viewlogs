@@ -81,6 +81,6 @@
             }
         }
 
-        public int ActionTypeId { get; set; }
+        public string ActionTypeId { get; set; }
     }
 }

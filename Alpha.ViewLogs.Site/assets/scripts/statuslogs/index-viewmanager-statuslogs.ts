@@ -43,7 +43,7 @@ var indexViewManager_StatusLogs = {
 
         indexViewManager_StatusLogs.elelments.chkOldValues.click(function () {
             var isShowOldValues = indexViewManager_StatusLogs.elelments.chkOldValues.prop("checked") ? 1 : 0;
-            $.cookie(viewModel.showOldValuesCookieName, isShowOldValues);
+            $.cookie(viewModel.showOldValuesCookieName, isShowOldValues, { path: '/' });
             indexManager.viewLogs();
         });
 
@@ -69,16 +69,14 @@ var indexViewManager_StatusLogs = {
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
 
         indexViewManager_StatusLogs.elelments.linkChangTabs.click(function () {
-            var url = $(this).data("tablink") + "?" +
-                $.param(indexManager.viewLogsParams) +
-                "&actiontypeid=" + viewModel.actionTypeId;
+            var url = $(this).data("tablink") + "?" + $.param(indexManager.viewLogsParams);
             window.location.href = url;
         });
 
         indexViewManager_StatusLogs.renderPager({
             totalRecords: viewModel.totalRecords,
             pageSize: viewModel.pageSize,
-            pageNumber: viewModel.pageIndex
+            pageIndex: viewModel.pageIndex + 1
         });
 
         indexViewManager_StatusLogs.pageNumber = viewModel.pageIndex;
@@ -115,6 +113,7 @@ var indexViewManager_StatusLogs = {
     },
     getParams: function () {
         return {
+            ActionTypeId: viewModel.actionTypeId,
             PageIndex: indexViewManager_StatusLogs.pageNumber,
             PageSize: indexViewManager_StatusLogs.pageSize,
             Username: indexViewManager_StatusLogs.elelments.txtUsername.val(),

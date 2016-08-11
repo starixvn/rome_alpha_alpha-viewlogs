@@ -1,7 +1,7 @@
 ﻿'use strict';
 var alphaViewLogs = {
     format: {
-        monthFormat: 'MMMM yyyy',
+        monthFormat: 'MMMM - yyyy',
         shortDateWithSlash: 'MM/dd/yyyy'
     },
     urls: {

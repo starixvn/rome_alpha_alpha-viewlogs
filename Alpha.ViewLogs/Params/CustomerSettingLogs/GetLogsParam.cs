@@ -42,7 +42,7 @@
 
         public DateTime MinReportDate { get; set; }
 
-        public GetCustomerSettingLogsCriteria CreateCustomerSettingLogsCriteria(int custId)
+        public GetCustomerSettingLogsCriteria CreateGetLogsCriteria(int custId)
         {
             return new GetCustomerSettingLogsCriteria
             {
@@ -57,7 +57,7 @@
             };
         }
 
-        public GetTotalRecordsOfCustomerSettingLogsCriteria CreateTotalRecordsOfCustomerSettingLogsCriteria(int custId)
+        public GetTotalRecordsOfCustomerSettingLogsCriteria CreateTotalRecordsOfLogsCriteria(int custId)
         {
             return new GetTotalRecordsOfCustomerSettingLogsCriteria
             {

@@ -17,7 +17,8 @@ var indexViewManager_SettingLogs = {
         txtUsername: null,
         logTableContent: null,
         linkChangTabs: null,
-        pagination: null
+        pagination: null,
+        longMonthsInYear: null
     },
     showOldValuesCookieName: '',
     pageNumber: 0,
@@ -32,6 +33,7 @@ var indexViewManager_SettingLogs = {
         indexViewManager_SettingLogs.elelments.logTableContent = $('#DataLog tbody');
         indexViewManager_SettingLogs.elelments.linkChangTabs = $('.lnk-changetab');
         indexViewManager_SettingLogs.elelments.pagination = $('#pagination');
+        indexViewManager_SettingLogs.elelments.longMonthsInYear = $('#longMonthsInYear');
     },
     initElements: function (viewModel) {
         indexViewManager_SettingLogs.cacheElements();
@@ -48,7 +50,7 @@ var indexViewManager_SettingLogs = {
 
         indexViewManager_SettingLogs.elelments.chkOldValues.click(function () {
             var isShowOldValues = indexViewManager_SettingLogs.elelments.chkOldValues.prop("checked") ? 1 : 0;
-            $.cookie(viewModel.showOldValuesCookieName, isShowOldValues);
+            $.cookie(viewModel.showOldValuesCookieName, isShowOldValues, { path: '/' });
             indexManager.viewLogs();
         });
 
@@ -81,7 +83,7 @@ var indexViewManager_SettingLogs = {
         indexViewManager_SettingLogs.renderPager({
             totalRecords: viewModel.totalRecords,
             pageSize: viewModel.pageSize,
-            pageNumber: viewModel.pageIndex
+            pageIndex: viewModel.pageIndex + 1
         });
 
         indexViewManager_SettingLogs.pageNumber = viewModel.pageIndex;
@@ -89,6 +91,7 @@ var indexViewManager_SettingLogs = {
     },
     initMonthPicker: function (viewModel) {
         indexViewManager_SettingLogs.elelments.ddlMonth.monPickr({
+            longMonthsInYear: indexViewManager_SettingLogs.getLongMonthsInYear(),
             maxDate: viewModel.maxReportDate,
             minDate: viewModel.minReportDate,
             month: new Date(viewModel.dayInMonth),
@@ -152,7 +155,7 @@ var indexViewManager_SettingLogs = {
         indexViewManager_SettingLogs.renderPager({
             totalRecords: result.TotalRecords,
             pageSize: result.PageSize,
-            pageNumber: result.PageIndex
+            pageIndex: result.PageIndex
         });
     },
     renderPager: function (options) {
@@ -179,7 +182,9 @@ var indexViewManager_SettingLogs = {
         } else {
             indexViewManager_SettingLogs.elelments.pagination.addClass("hide");
         }
+    },
+    getLongMonthsInYear: function () {
+        var longMonthsInYear = eval(indexViewManager_SettingLogs.elelments.longMonthsInYear.val());
+        return longMonthsInYear;
     }
 };
-
-//# sourceMappingURL=index-manager.js.map

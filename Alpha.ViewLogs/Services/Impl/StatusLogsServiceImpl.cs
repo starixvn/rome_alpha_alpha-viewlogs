@@ -46,13 +46,11 @@
                 return pagingLogs;
             }
 
-            var getCustomerSettingLogsCriteria = getLogsParam.CreateStatusLogsCriteria(customerInfo.CustId);
+            var getLogsCriteria = getLogsParam.CreateGetLogsCriteria(customerInfo.CustId);
 
-            pagingLogs.Logs = dynamicRepository
-                .Fetch<BaseLog>(getCustomerSettingLogsCriteria)
-                .ToList();
+            pagingLogs.Logs = dynamicRepository.Fetch<BaseLog>(getLogsCriteria).ToList();
 
-            var getTotalRecordsOfLogsCriteria = getLogsParam.CreateTotalRecordsOfStatusLogsCriteria(customerInfo.CustId);
+            var getTotalRecordsOfLogsCriteria = getLogsParam.CreateTotalRecordsOfLogsCriteria(customerInfo.CustId);
             pagingLogs.TotalRecords = baseDataAccess.GetTotalRecordsOfLogs(getTotalRecordsOfLogsCriteria);
 
             foreach (var log in pagingLogs.Logs)

@@ -37,6 +37,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>FanexRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>618</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -213,6 +214,10 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="assets\bundles\creditlogs.js" />
+    <Content Include="assets\bundles\creditlogs.min.js">
+      <DependentUpon>creditlogs.js</DependentUpon>
+    </Content>
     <Content Include="assets\bundles\customersettinglogs.js" />
     <Content Include="assets\bundles\customersettinglogs.min.js">
       <DependentUpon>customersettinglogs.js</DependentUpon>
@@ -221,10 +226,18 @@
     <Content Include="assets\bundles\default.min.css">
       <DependentUpon>default.css</DependentUpon>
     </Content>
+    <Content Include="assets\bundles\loginlogs.js" />
+    <Content Include="assets\bundles\loginlogs.min.js">
+      <DependentUpon>loginlogs.js</DependentUpon>
+    </Content>
     <Content Include="assets\bundles\statuslogs.js" />
     <Content Include="assets\bundles\statuslogs.min.js">
       <DependentUpon>statuslogs.js</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="assets\scripts\creditlogs\creditlogs-manager.ts" />
+    <TypeScriptCompile Include="assets\scripts\creditlogs\creditlogs-viewmanager.ts" />
+    <TypeScriptCompile Include="assets\scripts\loginlogs\loginlogs-manager.ts" />
+    <TypeScriptCompile Include="assets\scripts\loginlogs\loginlogs-viewmanager.ts" />
     <Content Include="assets\scripts\old-main.js" />
     <Content Include="assets\styles\viewlog.css">
       <DependentUpon>viewlog.scss</DependentUpon>
@@ -542,10 +555,11 @@
     <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />
     <Content Include="Global.asax" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\CreditLogs\Index.html" />
+    <Content Include="Views\CreditLogs\Index.cshtml" />
+    <Content Include="Views\Shared\MonthNames.cshtml" />
     <None Include="Web.AppSettings.config" />
-    <Content Include="Views\LoginLogs\Index.html" />
-    <None Include="Views\StatusLogs\Index.cshtml" />
+    <Content Include="Views\LoginLogs\Index.cshtml" />
+    <Content Include="Views\StatusLogs\Index.cshtml" />
     <Content Include="Web.config" />
     <TypeScriptCompile Include="assets\scripts\core.ts" />
     <TypeScriptCompile Include="assets\scripts\statuslogs\index-manager.ts" />
@@ -556,30 +570,38 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Constants\ViewLogType.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CreditLogsController.cs" />
     <Compile Include="Controllers\CustomerSettingLogsController.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\LoginLogsController.cs" />
     <Compile Include="Controllers\StatusLogsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Handlers\BaseViewLogsHandler.cs" />
+    <Compile Include="Handlers\CreditLogsHandler.cs" />
     <Compile Include="Handlers\CustomerSettingLogsHandler.cs" />
-    <Compile Include="Handlers\DefaultHandler.cs" />
+    <Compile Include="Handlers\LoginLogsHandler.cs" />
     <Compile Include="Handlers\StatusLogsHandler.cs" />
     <Compile Include="Helpers\BaseLogViewModelHelper.cs" />
     <Compile Include="Helpers\StaticResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\BaseQuery.cs" />
+    <Compile Include="Requests\CreditLogs\IndexQuery.cs" />
     <Compile Include="Requests\CustomerSettingLogs\GetLogsQuery.cs" />
     <Compile Include="Requests\CustomerSettingLogs\IndexQuery.cs" />
-    <Compile Include="Requests\IndexQuery.cs" />
+    <Compile Include="Requests\LoginLogs\IndexQuery.cs" />
     <Compile Include="Requests\StatusLogs\GetLogsQuery.cs" />
     <Compile Include="Requests\StatusLogs\IndexQuery.cs" />
     <Compile Include="ViewModels\BaseLogViewModel.cs" />
+    <Compile Include="ViewModels\CreditLogs\GetLogsViewModel.cs" />
+    <Compile Include="ViewModels\CreditLogs\IndexViewModel.cs" />
     <Compile Include="ViewModels\CustomerSettingLogs\GetLogsViewModel.cs" />
     <Compile Include="ViewModels\CustomerSettingLogs\IndexViewModel.cs" />
     <Compile Include="ViewModels\CustomerSettingLogs\LogActionTypeViewModel.cs" />
-    <Compile Include="ViewModels\Default\IndexViewModel.cs" />
+    <Compile Include="ViewModels\LoginLogs\GetLogsViewModel.cs" />
+    <Compile Include="ViewModels\LoginLogs\IndexViewModel.cs" />
+    <Compile Include="ViewModels\LoginLogs\LoginLogViewModel.cs" />
     <Compile Include="ViewModels\TabViewModal.cs" />
     <Compile Include="ViewModels\StatusLogs\GetLogsViewModel.cs" />
     <Compile Include="ViewModels\StatusLogs\IndexViewModel.cs" />
@@ -587,60 +609,59 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="Views\Default\Index.cshtml" />
     <Content Include="bundleconfig.json" />
     <Content Include="compilerconfig.json" />
     <Content Include="Views\CustomerSettingLogs\Index.cshtml" />
-    <None Include="Web.AppSettings.local.config">
+    <Content Include="Web.AppSettings.local.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </None>
-    <None Include="Web.AppSettings.napexternal.config">
+    </Content>
+    <Content Include="Web.AppSettings.napexternal.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </None>
-    <None Include="Web.AppSettings.napinternal.config">
+    </Content>
+    <Content Include="Web.AppSettings.napinternal.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </None>
-    <None Include="Web.AppSettings.proi1.config">
+    </Content>
+    <Content Include="Web.AppSettings.proi1.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </None>
-    <None Include="Web.AppSettings.proi7.config">
+    </Content>
+    <Content Include="Web.AppSettings.proi7.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </None>
+    </Content>
     <Content Include="Web.Configuration\AuthorizationSection.config" />
-    <None Include="Web.AppSettings.sit.config">
+    <Content Include="Web.AppSettings.sit.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </None>
-    <None Include="Web.AppSettings.uati1.config">
+    </Content>
+    <Content Include="Web.AppSettings.uati1.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </None>
-    <None Include="Web.AppSettings.uati7.config">
+    </Content>
+    <Content Include="Web.AppSettings.uati7.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </None>
+    </Content>
     <None Include="Web.ConnectionStrings.config" />
-    <None Include="Web.ConnectionStrings.local.config">
+    <Content Include="Web.ConnectionStrings.local.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
-    </None>
-    <None Include="Web.ConnectionStrings.napexternal.config">
+    </Content>
+    <Content Include="Web.ConnectionStrings.napexternal.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
-    </None>
-    <None Include="Web.ConnectionStrings.napinternal.config">
+    </Content>
+    <Content Include="Web.ConnectionStrings.napinternal.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
-    </None>
-    <None Include="Web.ConnectionStrings.proi1.config">
+    </Content>
+    <Content Include="Web.ConnectionStrings.proi1.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
-    </None>
-    <None Include="Web.ConnectionStrings.proi7.config">
+    </Content>
+    <Content Include="Web.ConnectionStrings.proi7.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
-    </None>
-    <None Include="Web.ConnectionStrings.sit.config">
+    </Content>
+    <Content Include="Web.ConnectionStrings.sit.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
-    </None>
-    <None Include="Web.ConnectionStrings.uati1.config">
+    </Content>
+    <Content Include="Web.ConnectionStrings.uati1.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
-    </None>
-    <None Include="Web.ConnectionStrings.uati7.config">
+    </Content>
+    <Content Include="Web.ConnectionStrings.uati7.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
-    </None>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -717,7 +738,8 @@
   <PropertyGroup>
     <PostBuildEvent>if not exist "$(WebProjectOutputDir)\bin\Roslyn" md "$(WebProjectOutputDir)\bin\Roslyn"  
       start /MIN xcopy /s /y /R "$(OutDir)roslyn\*.*" "$(WebProjectOutputDir)\bin\Roslyn"
-cd $(SolutionDir)
+cd $(ProjectDir)
+cd ..
 BuildTask.Release</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

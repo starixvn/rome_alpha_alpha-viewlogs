@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="/assets/bundles/site-viewlogs/viewlogs-@(Model.UserLevel.ToLower()).css" />
-    <link rel="stylesheet" href="~/assets/bundles/default.css" />
+    @StaticResources.AssetStyles.Render($"/bundles/site-viewlogs/viewlogs-{Model.UserLevel}")
+    <link rel="stylesheet" href="@(StaticResources.MainSiteStyleUrl("~/assets/bundles/default"))" />
     @RenderSection("Styles", required: false)
 </head>
 <body>
@@ -36,6 +36,7 @@
             }
         </ul>
         @RenderBody()
+        @Html.Partial("MonthNames")
     </div>
 
     @RenderSection("Scripts", required: false)

@@ -232,9 +232,6 @@
   <data name="Action" xml:space="preserve">
     <value>ปฏิบัติ</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>รายละเอียด</value>
-  </data>
   <data name="NoInfo" xml:space="preserve">
     <value>ไม่มีข้อมูล</value>
   </data>
@@ -246,5 +243,62 @@
   </data>
   <data name="Close" xml:space="preserve">
     <value>ปิด</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>ม.ค.</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>ก.พ.</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>มี.ค.</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>เม.ย.</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>พ.ค.</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>มิ.ย.</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>ก.ค.</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>ส.ค.</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>ก.ย.</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>ต.ค.</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>พ.ย.</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>ธ.ค.</value>
+  </data>
+  <data name="OldValue" xml:space="preserve">
+    <value>มูลค่าเก่า</value>
+  </data>
+  <data name="NewValue" xml:space="preserve">
+    <value>มูลค่าใหม่</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>รายละเอียด</value>
+  </data>
+  <data name="IP" xml:space="preserve">
+    <value>รหัสของเครื่องคอมพิวเตอร์ที่ใช้</value>
+  </data>
+  <data name="Domain" xml:space="preserve">
+    <value>โดเมน</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>บราวเซอร์</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>ประเทศ</value>
   </data>
 </root>
