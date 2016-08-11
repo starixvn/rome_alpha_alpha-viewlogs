@@ -225,10 +225,7 @@
     <Content Include="assets\bundles\statuslogs.min.js">
       <DependentUpon>statuslogs.js</DependentUpon>
     </Content>
-    <Content Include="assets\scripts\statuslogs.js" />
-    <Content Include="assets\scripts\statuslogs.min.js">
-      <DependentUpon>statuslogs.js</DependentUpon>
-    </Content>
+    <Content Include="assets\scripts\old-main.js" />
     <Content Include="assets\styles\viewlog.css">
       <DependentUpon>viewlog.scss</DependentUpon>
     </Content>
@@ -542,10 +539,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\action_924.xslt" />
     <TypeScriptCompile Include="assets\scripts\customersettinglogs\index-viewmanager-settinglogs.ts" />
     <TypeScriptCompile Include="assets\scripts\customersettinglogs\index-manager.ts" />
-    <Content Include="assets\scripts\customersettinglogs.js" />
-    <Content Include="assets\scripts\customersettinglogs.min.js">
-      <DependentUpon>customersettinglogs.js</DependentUpon>
-    </Content>
     <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />
     <Content Include="Global.asax" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -555,7 +548,6 @@
     <None Include="Views\StatusLogs\Index.cshtml" />
     <Content Include="Web.config" />
     <TypeScriptCompile Include="assets\scripts\core.ts" />
-    <TypeScriptCompile Include="assets\scripts\old-main.ts" />
     <TypeScriptCompile Include="assets\scripts\statuslogs\index-manager.ts" />
     <TypeScriptCompile Include="assets\scripts\statuslogs\index-viewmanager-statuslogs.ts" />
   </ItemGroup>
