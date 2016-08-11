@@ -8,6 +8,10 @@ body {
 $sporttype-detail-bg: #d3d6db;
 $height-td: 28px;
 
+.tab-content {
+    margin-bottom: 15px;
+}
+
 .filter {
     .form-group {
         #txt-username {
@@ -61,6 +65,7 @@ $height-td: 28px;
     td.colW2 {
         text-transform: capitalize;
         width: 16.6667%;
+        text-align: center;
         .valuechanged, .valueold {
             height: 27px;
             line-height: 27px;

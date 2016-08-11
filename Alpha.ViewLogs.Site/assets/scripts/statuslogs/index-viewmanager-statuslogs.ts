@@ -1,4 +1,5 @@
-﻿/// <reference path="../core.ts" />
+﻿//# sourceMappingURL=core.js.map
+/// <reference path="../core.ts" />
 /// <reference path="index-manager.ts" />
 
 'use strict';

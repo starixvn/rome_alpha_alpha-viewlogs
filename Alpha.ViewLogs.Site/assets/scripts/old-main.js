@@ -19,7 +19,7 @@
         }
     }
 }
-
+//# sourceMappingURL=old-main.js.map
 function OpenIPInfo(ip) {
     var url = $('#viewIPInfoPath').val() + '?ip=' + ip;
     if (top.ageWnd) {
