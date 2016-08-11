@@ -109,9 +109,12 @@
             pageSize: @Model.GetLogsViewModel.PageSize,
             pageIndex: @Model.GetLogsViewModel.PageIndex,
 
-            showOldValuesCookieName: '@Model.ShowOldValuesCookieName'
+            showOldValuesCookieName: '@Model.ShowOldValuesCookieName',
+            Page: '@Resources.Page',
+            of: '@Resources.of',
+            Pager_DisplayItems: '@Resources.Pager_DisplayItems'
         };
 
     </script>
-    <script type="text/javascript" src="@StaticResources.MainSiteScriptUrl("~/assets/scripts/customersettinglogs")"></script>
+    <script type="text/javascript" src="@StaticResources.MainSiteScriptUrl("~/assets/bundles/customersettinglogs")"></script>
 }

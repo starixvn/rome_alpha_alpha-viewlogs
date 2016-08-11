@@ -270,4 +270,11 @@
   <data name="NoInfo" xml:space="preserve">
     <value>No information is available</value>
   </data>
+  <data name="of" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>ページ
+</value>
+  </data>
 </root>

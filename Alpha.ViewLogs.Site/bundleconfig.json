@@ -6,7 +6,7 @@
     ]
   },
   {
-    "outputFileName": "assets/scripts/customersettinglogs.js",
+    "outputFileName": "assets/bundles/customersettinglogs.js",
     "inputFiles": [
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",
@@ -15,7 +15,7 @@
     ]
   },
   {
-    "outputFileName": "assets/scripts/statuslogs.js",
+    "outputFileName": "assets/bundles/statuslogs.js",
     "inputFiles": [
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",

@@ -134,7 +134,14 @@ var indexViewManager_SettingLogs = {
                 pageList: alphaViewLogs.pageList,
                 total: options.totalRecords,
                 pageSize: options.pageSize,
-                pageNumber: options.pageIndex
+                pageNumber: options.pageIndex,
+                showRefresh: false,
+                onSelectPage: function (pageNumber, pageSize) {
+                    alert(pageNumber + " " + pageSize);
+                },
+                beforePageText: viewModel.Page,
+                afterPageText: viewModel.of + ' {pages}',
+                displayMsg: viewModel.Pager_DisplayItems
             });
             indexViewManager_SettingLogs.elelments.pagination.removeClass("hide");
         }

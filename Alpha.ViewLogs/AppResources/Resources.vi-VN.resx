@@ -241,4 +241,10 @@
   <data name="NoInfo" xml:space="preserve">
     <value>Thông tin chưa được cập nhật</value>
   </data>
+  <data name="of" xml:space="preserve">
+    <value>trên</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Trang</value>
+  </data>
 </root>

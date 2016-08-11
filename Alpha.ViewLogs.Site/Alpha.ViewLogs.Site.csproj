@@ -213,13 +213,16 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="assets\bundles\customersettinglogs.js" />
+    <Content Include="assets\bundles\customersettinglogs.min.js">
+      <DependentUpon>customersettinglogs.js</DependentUpon>
+    </Content>
     <Content Include="assets\bundles\default.css" />
     <Content Include="assets\bundles\default.min.css">
       <DependentUpon>default.css</DependentUpon>
     </Content>
-    <Content Include="assets\bundles\viewlog.css" />
-    <Content Include="assets\scripts\statuslogs.js" />
-    <Content Include="assets\scripts\statuslogs.min.js">
+    <Content Include="assets\bundles\statuslogs.js" />
+    <Content Include="assets\bundles\statuslogs.min.js">
       <DependentUpon>statuslogs.js</DependentUpon>
     </Content>
     <Content Include="assets\styles\viewlog.min.css">
@@ -532,10 +535,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\action_924.xslt" />
     <TypeScriptCompile Include="assets\scripts\customersettinglogs\index-viewmanager-settinglogs.ts" />
     <TypeScriptCompile Include="assets\scripts\customersettinglogs\index-manager.ts" />
-    <Content Include="assets\scripts\customersettinglogs.js" />
-    <Content Include="assets\scripts\customersettinglogs.min.js">
-      <DependentUpon>customersettinglogs.js</DependentUpon>
-    </Content>
     <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />
     <Content Include="Global.asax" />
     <Content Include="Views\Shared\_Layout.cshtml" />
