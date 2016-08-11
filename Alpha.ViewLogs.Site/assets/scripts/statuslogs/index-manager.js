@@ -3,7 +3,7 @@
 'use strict';
 var indexManager = {
     urls: {
-        viewLogs: document.getElementById('viewLogsPath').value
+        index: document.getElementById('indexPath').value
     },
     init: function () {
         indexViewManager_StatusLogs.initElements(viewModel);
@@ -11,16 +11,11 @@ var indexManager = {
     },
     viewLogsParams: null,
     viewLogs: function () {
+        setVisible('hidden');
         indexViewManager_StatusLogs.showLoadingState();
         indexManager.viewLogsParams = indexViewManager_StatusLogs.getParams();
-        alphaViewLogs.callRequest({
-            url: indexManager.urls.viewLogs,
-            data: indexManager.viewLogsParams,
-            success: function (result) {
-                indexViewManager_StatusLogs.renderLogs(result);
-                indexViewManager_StatusLogs.showCompleteLoadingState();
-            }
-        });
+        var url = indexManager.urls.index + "?" + $.param(indexManager.viewLogsParams);
+        window.location.href = url;
     }
 };
 $(function () {

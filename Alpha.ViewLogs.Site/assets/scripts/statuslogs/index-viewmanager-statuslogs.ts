@@ -16,10 +16,11 @@ var indexViewManager_StatusLogs = {
         txtUsername: null,
         logTableContent: null,
         linkChangTabs: null,
-        pagination: null,
-        actionTypeId: null
+        pagination: null
     },
     showOldValuesCookieName: '',
+    pageNumber: 0,
+    pageSize: null,
     cacheElements: function () {
         indexViewManager_StatusLogs.elelments.btnSubmit = $("#btn-submit");
         indexViewManager_StatusLogs.elelments.ddlMonth = $('#ddlMonth');
@@ -28,8 +29,7 @@ var indexViewManager_StatusLogs = {
         indexViewManager_StatusLogs.elelments.txtUsername = $('#txt-username');
         indexViewManager_StatusLogs.elelments.logTableContent = $('#DataLog tbody');
         indexViewManager_StatusLogs.elelments.linkChangTabs = $('.lnk-changetab');
-        indexViewManager_StatusLogs.elelments.pagination = $('#pp');
-        indexViewManager_StatusLogs.elelments.actionTypeId = $('#actionTypeId');
+        indexViewManager_StatusLogs.elelments.pagination = $('#pagination');
     },
     initElements: function (viewModel) {
         indexViewManager_StatusLogs.cacheElements();
@@ -53,7 +53,6 @@ var indexViewManager_StatusLogs = {
 
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
-                setVisible('hidden');
                 indexManager.viewLogs();
 
                 return alphaViewLogs.cancelBubbleEvent(e);
@@ -71,7 +70,7 @@ var indexViewManager_StatusLogs = {
         indexViewManager_StatusLogs.elelments.linkChangTabs.click(function () {
             var url = $(this).data("tablink") + "?" +
                 $.param(indexManager.viewLogsParams) +
-                "&actiontypeid=" + indexViewManager_StatusLogs.elelments.actionTypeId.val();
+                "&actiontypeid=" + viewModel.actionTypeId;
             window.location.href = url;
         });
 
@@ -80,6 +79,9 @@ var indexViewManager_StatusLogs = {
             pageSize: viewModel.pageSize,
             pageNumber: viewModel.pageIndex
         });
+
+        indexViewManager_StatusLogs.pageNumber = viewModel.pageIndex;
+        indexViewManager_StatusLogs.pageSize = viewModel.pageSize;
     },
     initMonthPicker: function (viewModel) {
         indexViewManager_StatusLogs.elelments.ddlMonth.monPickr({
@@ -112,6 +114,8 @@ var indexViewManager_StatusLogs = {
     },
     getParams: function () {
         return {
+            PageIndex: indexViewManager_StatusLogs.pageNumber,
+            PageSize: indexViewManager_StatusLogs.pageSize,
             Username: indexViewManager_StatusLogs.elelments.txtUsername.val(),
             FromDate: indexViewManager_StatusLogs.elelments.ddlMonth.monPickr("getFromDate", alphaViewLogs.format.shortDateWithSlash),
             ToDate: indexViewManager_StatusLogs.elelments.ddlMonth.monPickr("getToDate", alphaViewLogs.format.shortDateWithSlash)
@@ -146,12 +150,23 @@ var indexViewManager_StatusLogs = {
         });
     },
     renderPager: function (options) {
-        if (options.totalRecords) {
+        if (options.pageSize <= options.totalRecords) {
             indexViewManager_StatusLogs.elelments.pagination.pagination({
                 pageList: alphaViewLogs.pageList,
                 total: options.totalRecords,
                 pageSize: options.pageSize,
-                pageNumber: options.pageIndex
+                pageNumber: options.pageIndex,
+
+                showRefresh: false,
+                onSelectPage: function (pageNumber, pageSize) {
+                    indexViewManager_StatusLogs.pageNumber = pageNumber - 1;
+                    indexViewManager_StatusLogs.pageSize = pageSize;
+
+                    indexManager.viewLogs();
+                },
+                beforePageText: viewModel.Page,
+                afterPageText: viewModel.of + ' {pages}',
+                displayMsg: viewModel.Pager_DisplayItems
             });
 
             indexViewManager_StatusLogs.elelments.pagination.removeClass("hide");

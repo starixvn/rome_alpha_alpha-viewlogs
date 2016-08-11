@@ -244,4 +244,7 @@
   <data name="Page" xml:space="preserve">
     <value>页</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
 </root>

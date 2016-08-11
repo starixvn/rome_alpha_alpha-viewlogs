@@ -65,11 +65,11 @@
 
         public string ShowOldValuesCookieName { get; set; }
 
-        public string ViewLogsPath
+        public string IndexPath
         {
             get
             {
-                return MicroSites.MainUrl("~/statuslogs/getlogs");
+                return MicroSites.MainUrl("~/statuslogs/index");
             }
         }
 

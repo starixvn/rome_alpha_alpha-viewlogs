@@ -67,11 +67,11 @@
 
         public string ShowOldValuesCookieName { get; set; }
 
-        public string ViewLogsPath
+        public string IndexPath
         {
             get
             {
-                return MicroSites.MainUrl("~/customersettinglogs/getlogs");
+                return MicroSites.MainUrl("~/customersettinglogs/index");
             }
         }
 
@@ -80,6 +80,14 @@
             get
             {
                 return MicroSites.OldMainUrl("~/_GlobalResources/Handlers/QueryUserName.ashx");
+            }
+        }
+
+        public string ViewIPInfoPath
+        {
+            get
+            {
+                return MicroSites.OldMainUrl("~/_IPInfo/IpInfo.aspx");
             }
         }
     }

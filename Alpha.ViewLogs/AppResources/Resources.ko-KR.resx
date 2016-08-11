@@ -241,4 +241,7 @@
   <data name="Page" xml:space="preserve">
     <value>페이지</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>닫기</value>
+  </data>
 </root>

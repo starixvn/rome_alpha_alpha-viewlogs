@@ -1,4 +1,4 @@
-function slideToggle(id) {
+﻿function slideToggle(id) {
     var obj = null;
     if (typeof (id) == 'object') {
         var rowIndex = id.rowIndex;
@@ -9,6 +9,7 @@ function slideToggle(id) {
     else {
         obj = document.getElementById(id);
     }
+
     if (obj != null) {
         if (obj.style.display == 'none') {
             obj.style.display = '';
@@ -18,4 +19,10 @@ function slideToggle(id) {
         }
     }
 }
-//# sourceMappingURL=old-main.js.map
+
+function OpenIPInfo(ip) {
+    var url = $('#viewIPInfoPath').val() + '?ip=' + ip;
+    if (top.ageWnd) {
+        top.ageWnd.open(url, '', 500, 250, 400, 300);
+    }
+}

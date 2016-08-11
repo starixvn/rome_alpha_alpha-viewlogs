@@ -1,7 +1,5 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels
 {
-    using System;
-
     public class BaseLogViewModel
     {
         public int ActionId { get; set; }

@@ -39,20 +39,6 @@
             return View(viewModel);
         }
 
-        public JsonResult GetLogs(GetLogsQuery getLogsQuery)
-        {
-            if (!CanViewSettingLogs(userSession))
-            {
-                Response.Redirect(LoginLogsURL);
-            }
-
-            AssignServerSideParamForGetLogsQuery(getLogsQuery);
-
-            var viewModel = mediator.Send<GetLogsViewModel>(getLogsQuery);
-
-            return Json(viewModel);
-        }
-
         private void AssignServerSideParamForGetLogsQuery(GetLogsQuery getLogsQuery)
         {
             getLogsQuery.RoleId = userSession.RoleId;

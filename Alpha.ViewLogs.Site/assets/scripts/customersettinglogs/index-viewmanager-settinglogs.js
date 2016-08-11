@@ -14,6 +14,8 @@ var indexViewManager_SettingLogs = {
         pagination: null
     },
     showOldValuesCookieName: '',
+    pageNumber: 0,
+    pageSize: null,
     cacheElements: function () {
         indexViewManager_SettingLogs.elelments.ddlLogActionType = $('#ddl-logactiontype');
         indexViewManager_SettingLogs.elelments.btnSubmit = $("#btn-submit");
@@ -23,7 +25,7 @@ var indexViewManager_SettingLogs = {
         indexViewManager_SettingLogs.elelments.txtUsername = $('#txt-username');
         indexViewManager_SettingLogs.elelments.logTableContent = $('#DataLog tbody');
         indexViewManager_SettingLogs.elelments.linkChangTabs = $('.lnk-changetab');
-        indexViewManager_SettingLogs.elelments.pagination = $('#pp');
+        indexViewManager_SettingLogs.elelments.pagination = $('#pagination');
     },
     initElements: function (viewModel) {
         indexViewManager_SettingLogs.cacheElements();
@@ -45,7 +47,6 @@ var indexViewManager_SettingLogs = {
             }
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
-                setVisible('hidden');
                 indexManager.viewLogs();
                 return alphaViewLogs.cancelBubbleEvent(e);
             }
@@ -65,6 +66,8 @@ var indexViewManager_SettingLogs = {
             pageSize: viewModel.pageSize,
             pageNumber: viewModel.pageIndex
         });
+        indexViewManager_SettingLogs.pageNumber = viewModel.pageIndex;
+        indexViewManager_SettingLogs.pageSize = viewModel.pageSize;
     },
     initMonthPicker: function (viewModel) {
         indexViewManager_SettingLogs.elelments.ddlMonth.monPickr({
@@ -95,6 +98,8 @@ var indexViewManager_SettingLogs = {
     },
     getParams: function () {
         return {
+            PageIndex: indexViewManager_SettingLogs.pageNumber,
+            PageSize: indexViewManager_SettingLogs.pageSize,
             Username: indexViewManager_SettingLogs.elelments.txtUsername.val(),
             FromDate: indexViewManager_SettingLogs.elelments.ddlMonth.monPickr("getFromDate", alphaViewLogs.format.shortDateWithSlash),
             ToDate: indexViewManager_SettingLogs.elelments.ddlMonth.monPickr("getToDate", alphaViewLogs.format.shortDateWithSlash),
@@ -129,7 +134,7 @@ var indexViewManager_SettingLogs = {
         });
     },
     renderPager: function (options) {
-        if (options.totalRecords) {
+        if (options.pageSize <= options.totalRecords) {
             indexViewManager_SettingLogs.elelments.pagination.pagination({
                 pageList: alphaViewLogs.pageList,
                 total: options.totalRecords,
@@ -137,7 +142,9 @@ var indexViewManager_SettingLogs = {
                 pageNumber: options.pageIndex,
                 showRefresh: false,
                 onSelectPage: function (pageNumber, pageSize) {
-                    alert(pageNumber + " " + pageSize);
+                    indexViewManager_SettingLogs.pageNumber = pageNumber - 1;
+                    indexViewManager_SettingLogs.pageSize = pageSize;
+                    indexManager.viewLogs();
                 },
                 beforePageText: viewModel.Page,
                 afterPageText: viewModel.of + ' {pages}',

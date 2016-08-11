@@ -6,6 +6,7 @@
     public static class DateTimeHelper
     {
         private const string LongDateWithSlash = "MM/dd/yyyy hh:mm:ss tt";
+        private const string HtmlLongDateWithSlash = "MM/dd/yyyy <br/>hh:mm:ss tt";
 
         public static string[] DaysInWeek()
         {
@@ -38,6 +39,11 @@
         public static string ToLongDateWithSlash(DateTime dateTime)
         {
             return dateTime.ToString(LongDateWithSlash);
+        }
+
+        public static string ToHtmlLongDateWithSlash(DateTime dateTime)
+        {
+            return dateTime.ToString(HtmlLongDateWithSlash);
         }
     }
 }

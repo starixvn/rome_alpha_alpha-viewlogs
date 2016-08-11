@@ -8,6 +8,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
+    using System.Text.RegularExpressions;
 
     public class IPServiceImpl : IPService
     {
@@ -32,7 +33,15 @@
         {
             if (!IsValidIP(ip))
             {
-                return string.Empty;
+                return ip;
+            }
+
+            var regexCharacters =
+                @"(?<First>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Second>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Third>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Fourth>2[0-4]\d|25[0-5]|[01]?\d\d?)";
+            Regex regex = new Regex(regexCharacters);
+            if (!regex.IsMatch(ip, 0))
+            {
+                return $"<a class=\"iplink\" href=\"javascript:;\">{ip}</a>";
             }
 
             if (IsVNIP(ip) && !userSession.IsAdminCanViewVNIP)

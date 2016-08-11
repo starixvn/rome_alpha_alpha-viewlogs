@@ -247,4 +247,7 @@
   <data name="Page" xml:space="preserve">
     <value>Trang</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Khóa</value>
+  </data>
 </root>

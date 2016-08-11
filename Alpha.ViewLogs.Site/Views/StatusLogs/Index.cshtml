@@ -39,7 +39,6 @@
         </div>
 
         <div id="content">
-            <div id="pp" class="@(hasLogs ? "" : "hide")"></div>
             <table id="DataLog" class="width-100per tblRpt">
                 <thead>
                     <tr class="RptHeader">
@@ -58,7 +57,7 @@
                         {
                             <tr>
                                 <td align="center">@log.LogId</td>
-                                <td align="center">@log.LogDate</td>
+                                <td align="center">@Html.Raw(log.LogDate)</td>
                                 <td>@log.Username</td>
                                 <td>@log.ActionName</td>
                                 <td>@Html.Raw(log.TrackingValue)</td>
@@ -72,15 +71,15 @@
                         </tr>
                     }
             </table>
+            <div id="pagination" class="@(hasLogs ? "" : "hide")"></div>
         </div>
     </div>
 </div>
 
 <div class="shadow" id="shadow"></div>
 <div class="output" id="output"></div>
-@Html.Hidden("viewLogsPath", Model.ViewLogsPath)
+@Html.Hidden("indexPath", Model.IndexPath)
 @Html.Hidden("usernameAutoSuggestionPath", Model.UsernameAutoSuggestionPath)
-@Html.Hidden("actionTypeId", Model.ActionTypeId)
 @section Scripts
 {
     @StaticResources.AssetScripts.Render("/bundles/site-viewlogs/default")
@@ -100,8 +99,12 @@
             totalRecords: @Model.GetLogsViewModel.TotalRecords,
             pageSize: @Model.GetLogsViewModel.PageSize,
             pageIndex: @Model.GetLogsViewModel.PageIndex,
+            actionTypeId: @Model.ActionTypeId,
 
-            showOldValuesCookieName: '@Model.ShowOldValuesCookieName'
+            showOldValuesCookieName: '@Model.ShowOldValuesCookieName',
+            Page: '@Resources.Page',
+            of: '@Resources.of',
+            Pager_DisplayItems: '@Resources.Pager_DisplayItems'
         };
 
     </script>

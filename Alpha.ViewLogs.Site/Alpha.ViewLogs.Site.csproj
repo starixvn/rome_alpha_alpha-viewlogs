@@ -37,6 +37,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>FanexRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>618</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -544,7 +545,7 @@
     <None Include="Views\StatusLogs\Index.cshtml" />
     <Content Include="Web.config" />
     <TypeScriptCompile Include="assets\scripts\core.ts" />
-    <TypeScriptCompile Include="assets\scripts\old-main.ts" />
+    <Content Include="assets\scripts\old-main.js" />
     <TypeScriptCompile Include="assets\scripts\statuslogs\index-manager.ts" />
     <TypeScriptCompile Include="assets\scripts\statuslogs\index-viewmanager-statuslogs.ts" />
   </ItemGroup>
@@ -553,6 +554,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Constants\ViewLogType.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CreditLogsController.cs" />
     <Compile Include="Controllers\CustomerSettingLogsController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\StatusLogsController.cs" />
