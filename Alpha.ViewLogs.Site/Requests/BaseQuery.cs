@@ -24,6 +24,8 @@
             this.minReportDate = new DateTime(DateTime.Today.AddYears(-1).Year, 1, 1);
         }
 
+        public string PreviousUsername { get; set; }
+
         public string Username { get; set; }
 
         public string FromDate { get; set; }

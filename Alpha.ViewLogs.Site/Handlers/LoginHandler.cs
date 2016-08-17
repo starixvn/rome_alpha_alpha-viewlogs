@@ -32,6 +32,8 @@
 
             var viewModel = new IndexViewModel(logsParam);
             viewModel.GetLogsViewModel = new GetLogsViewModel(logsParam, pagingLogs);
+            viewModel.PreviousUsername = message.PreviousUsername;
+
             TransformLogsToHtml(pagingLogs, message, viewModel.GetLogsViewModel);
 
             viewModel.ActionTypeId = message.ActionTypeId;

@@ -55,6 +55,8 @@
 
         public string ShowOldValuesCookieName { get; set; }
 
+        public string PreviousUsername { get; set; }
+
         public string IndexPath
         {
             get
