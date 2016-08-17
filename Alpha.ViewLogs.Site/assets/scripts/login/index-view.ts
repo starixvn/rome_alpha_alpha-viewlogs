@@ -1,9 +1,8 @@
 ﻿/// <reference path="../core.ts" />
-/// <reference path="../tab/index.ts" />
 /// <reference path="index-controller.ts" />
 
 'use strict';
-/*global loginController, alphaViewLogs, viewModel, tabController*/
+/*global loginController, alphaViewLogs, viewModel*/
 declare var $: any;
 declare var initAutoComplete: any;
 

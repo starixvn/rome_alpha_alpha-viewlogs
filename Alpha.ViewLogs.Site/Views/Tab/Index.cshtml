@@ -1,18 +1,19 @@
 ﻿@using Alpha.ViewLogs.Site.ViewModels;
 @using Alpha.ViewLogs.Site.Constants;
+@using Alpha.ViewLogs.Configurations;
 
 @model TabViewModel
 <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="@(string.Equals(Model.SelectedTabName, TabType.CustomerSetting,StringComparison.OrdinalIgnoreCase) ? "active" : string.Empty)">
-        <a data-tablink="~/customersetting/index" role="tab" aria-controls="@TabType.CustomerSetting" data-toggle="tab" class="lnk-changetab">@Resources.CustomerSetting</a>
+        <a data-tablink="/@AppSettings.VirtualDirectory/customersetting/index" role="tab" aria-controls="@TabType.CustomerSetting" data-toggle="tab" class="lnk-changetab">@Resources.CustomerSetting</a>
     </li>
     <li role="presentation" class="@(string.Equals(Model.SelectedTabName, TabType.Status,StringComparison.OrdinalIgnoreCase) ? "active" : string.Empty)">
-        <a data-tablink="~/status/index" role="tab" aria-controls="@TabType.Status" data-toggle="tab" class="lnk-changetab">@Resources.Status</a>
+        <a data-tablink="/@AppSettings.VirtualDirectory/status/index" role="tab" aria-controls="@TabType.Status" data-toggle="tab" class="lnk-changetab">@Resources.Status</a>
     </li>
     <li role="presentation" class="@(string.Equals(Model.SelectedTabName, TabType.Credit,StringComparison.OrdinalIgnoreCase) ? "active" : string.Empty)">
-        <a data-tablink="~/credit/index" role="tab" aria-controls="@TabType.Credit" data-toggle="tab" class="lnk-changetab">@Resources.Credit</a>
+        <a data-tablink="/@AppSettings.VirtualDirectory/credit/index" role="tab" aria-controls="@TabType.Credit" data-toggle="tab" class="lnk-changetab">@Resources.Credit</a>
     </li>
     <li role="presentation" class="@(string.Equals(Model.SelectedTabName, TabType.Login,StringComparison.OrdinalIgnoreCase) ? "active" : string.Empty)">
-        <a data-tablink="~/login/index" role="tab" aria-controls="@TabType.Login" data-toggle="tab" class="lnk-changetab">@Resources.Login</a>
+        <a data-tablink="/@AppSettings.VirtualDirectory/login/index" role="tab" aria-controls="@TabType.Login" data-toggle="tab" class="lnk-changetab">@Resources.Login</a>
     </li>
 </ul>

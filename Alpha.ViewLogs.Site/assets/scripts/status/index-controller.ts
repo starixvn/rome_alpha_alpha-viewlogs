@@ -1,8 +1,9 @@
 ﻿/// <reference path="../core.ts" />
+/// <reference path="../tab/index.ts" />
 /// <reference path="index-view.ts" />
 
 'use strict';
-/*global statusView, alphaViewLogs*/
+/*global statusView, alphaViewLogs, tabController*/
 declare var $: any;
 declare var viewModel: any;
 
@@ -14,6 +15,7 @@ var statusController = {
         statusView.initElements(viewModel);
 
         statusController.viewLogsParams = statusView.getParams();
+        tabController.viewLogsParams = statusController.viewLogsParams;
     },
     viewLogsParams: null,
     viewLogs: function () {
@@ -21,6 +23,7 @@ var statusController = {
         statusView.showLoadingState();
 
         statusController.viewLogsParams = statusView.getParams();
+        tabController.viewLogsParams = statusController.viewLogsParams;
 
         var url = statusController.urls.index + "?" + $.param(statusController.viewLogsParams);
         window.location.href = url;

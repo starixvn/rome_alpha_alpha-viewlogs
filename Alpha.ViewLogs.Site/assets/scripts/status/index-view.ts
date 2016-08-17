@@ -1,10 +1,9 @@
 ﻿//# sourceMappingURL=core.js.map
 /// <reference path="../core.ts" />
-/// <reference path="../tab/index.ts" />
 /// <reference path="index-controller.ts" />
 
 'use strict';
-/*global statusController, alphaViewLogs, tabController*/
+/*global statusController, alphaViewLogs*/
 declare var $: any;
 declare var initAutoComplete: any;
 declare var setVisible: any;

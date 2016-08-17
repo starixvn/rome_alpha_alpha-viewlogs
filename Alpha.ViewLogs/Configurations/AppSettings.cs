@@ -7,6 +7,14 @@
 
     public static class AppSettings
     {
+        public static string VirtualDirectory
+        {
+            get
+            {
+                return GetSettingValue("VirtualDirectory");
+            }
+        }
+
         public static string OldMainAppPath
         {
             get

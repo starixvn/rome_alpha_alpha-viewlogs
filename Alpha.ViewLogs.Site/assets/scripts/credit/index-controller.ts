@@ -1,8 +1,9 @@
 ﻿/// <reference path="../core.ts" />
+/// <reference path="../tab/index.ts" />
 /// <reference path="index-view.ts" />
 
 'use strict';
-/*global creditView, alphaViewLogs*/
+/*global creditView, alphaViewLogs, tabController*/
 declare var $: any;
 declare var viewModel: any;
 
@@ -14,6 +15,7 @@ var creditController = {
         creditView.initElements(viewModel);
 
         creditController.viewLogsParams = creditView.getParams();
+        tabController.viewLogsParams = creditController.viewLogsParams;
     },
     viewLogsParams: null,
     viewLogs: function () {
@@ -21,6 +23,7 @@ var creditController = {
         creditView.showLoadingState();
 
         creditController.viewLogsParams = creditView.getParams();
+        tabController.viewLogsParams = creditController.viewLogsParams;
 
         var url = creditController.urls.index + "?" + $.param(creditController.viewLogsParams);
         window.location.href = url;
