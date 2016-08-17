@@ -1,11 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Site.Requests.CustomerSetting
 {
+    using System;
     using Fanex.Common;
     using MediatR;
-    using Params.CustomerSetting;
-    using System;
+    using Params;
     using ViewLogs.Constants;
-    using ViewLogs.Helpers;
     using ViewModels.CustomerSetting;
 
     public class GetLogsQuery : BaseQuery, IRequest<GetLogsViewModel>
@@ -14,20 +13,20 @@
 
         public string TrackingValueTransformTemplatePath { get; set; }
 
-        public GetLogsParam ConvertToGetLogsParam()
+        public CustomerSettingParam ConvertToGetLogsParam()
         {
             var fromDate = string.IsNullOrEmpty(FromDate) ? DateTime.Now.AddDays(-1) : Convert.ToDateTime(FromDate);
             var toDate = string.IsNullOrEmpty(ToDate) ? DateTime.Now : Convert.ToDateTime(ToDate);
 
-            return new GetLogsParam
+            return new CustomerSettingParam
             {
                 UplineId = UplineId,
                 IsDebug = IsDebug,
                 SubAccId = SubAccId,
                 ActionTypeId = string.IsNullOrEmpty(ActionTypeId) ? ActionType.All : Converter.ToInt(ActionTypeId),
                 RoleId = RoleId,
-                FromDate = DateTimeHelper.GetBeginningOfDate(fromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(toDate),
+                FromDate = fromDate,
+                ToDate = toDate,
                 Username = Username,
                 IsInternal = IsInternal,
 

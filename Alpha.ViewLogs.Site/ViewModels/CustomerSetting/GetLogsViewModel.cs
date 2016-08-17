@@ -1,9 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels.CustomerSetting
 {
-    using Models;
-    using Params.CustomerSetting;
     using System;
     using System.Collections.Generic;
+    using Models;
+    using Params;
 
     public class GetLogsViewModel
     {
@@ -20,7 +20,7 @@
         private readonly string username;
         private readonly int actionTypeId;
 
-        public GetLogsViewModel(GetLogsParam logsParam, PagingLogs<BaseLog> pagingLogs)
+        public GetLogsViewModel(CustomerSettingParam logsParam, PagingLogs<BaseLog> pagingLogs)
         {
             this.showOldValue = logsParam.IsShowOldValue;
             this.TotalRecords = pagingLogs.TotalRecords;

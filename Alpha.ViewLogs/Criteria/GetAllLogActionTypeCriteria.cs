@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Criteria.CustomerSetting
+﻿namespace Alpha.ViewLogs.Criteria
 {
     using Fanex.Data.Repository;
 

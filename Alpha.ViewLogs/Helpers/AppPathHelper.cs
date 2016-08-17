@@ -1,9 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Helpers
 {
-    using Fanex.Common.Helper;
     using System;
     using System.Text.RegularExpressions;
     using System.Web;
+    using Fanex.Common.Helper;
 
     public static class AppPathHelper
     {

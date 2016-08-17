@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Helpers
 {
-    using Configurations;
     using System.Web;
+    using Configurations;
 
     public static class MicroSites
     {

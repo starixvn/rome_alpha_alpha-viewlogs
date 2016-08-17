@@ -1,11 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Services
 {
-    using Alpha.ViewLogs.Models.Login;
-    using Models;
-    using Params.Login;
+    using Alpha.ViewLogs.Models;
+    using Params;
 
     public interface LoginService
     {
-        PagingLogs<LoginLog> GetLogs(GetLogsParam getLogsParam);
+        PagingLogs<BaseLog> GetLogs(BaseGetLogsParam baseParam);
     }
 }

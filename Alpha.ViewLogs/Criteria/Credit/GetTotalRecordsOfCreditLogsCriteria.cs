@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Criteria.Credit
 {
-    using Fanex.Data.Repository;
     using System;
+    using Fanex.Data.Repository;
 
     public class GetTotalRecordsOfCreditLogsCriteria : CriteriaBase
     {

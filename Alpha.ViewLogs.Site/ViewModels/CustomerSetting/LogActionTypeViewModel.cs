@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels.CustomerSetting
 {
-    using Alpha.ViewLogs.Models.CustomerSetting;
+    using Models;
     using ViewLogs.Constants;
 
     public class LogActionTypeViewModel

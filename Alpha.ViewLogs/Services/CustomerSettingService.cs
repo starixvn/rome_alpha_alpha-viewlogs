@@ -1,14 +1,13 @@
 ﻿namespace Alpha.ViewLogs.Services
 {
-    using Models;
-    using Models.CustomerSetting;
-    using Params.CustomerSetting;
     using System.Collections.Generic;
+    using Alpha.ViewLogs.Models;
+    using Params;
 
     public interface CustomerSettingService
     {
         List<LogActionType> GetLogActionTypes();
 
-        PagingLogs<BaseLog> GetLogs(GetLogsParam getLogsParam);
+        PagingLogs<BaseLog> GetLogs(BaseGetLogsParam baseParam);
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Models.CustomerSetting
+﻿namespace Alpha.ViewLogs.Models
 {
     public class LogActionType
     {

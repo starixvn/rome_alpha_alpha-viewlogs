@@ -1,9 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels.Status
 {
-    using Constants;
     using Models.Enumerations;
-    using Params.Status;
-    using System.Collections.Generic;
+    using Params;
     using ViewLogs.Helpers;
 
     public class IndexViewModel
@@ -12,7 +10,7 @@
         private readonly bool isSubAccount;
         private readonly byte roleId;
 
-        public IndexViewModel(GetLogsParam logsParam)
+        public IndexViewModel(StatusParam logsParam)
         {
             this.hasViewLogPermission = logsParam.HasViewLogPermission;
             this.isSubAccount = logsParam.SubAccId > 0;
@@ -68,6 +66,14 @@
             get
             {
                 return MicroSites.OldMainPath("~/_GlobalResources/Handlers/QueryUserName.ashx");
+            }
+        }
+
+        public string ViewIPInfoPath
+        {
+            get
+            {
+                return MicroSites.OldMainPath("~/_IPInfo/IpInfo.aspx");
             }
         }
 

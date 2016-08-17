@@ -1,10 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Services
 {
     using Alpha.ViewLogs.Models;
-    using Params.Status;
+    using Params;
 
     public interface StatusService
     {
-        PagingLogs<BaseLog> GetLogs(GetLogsParam getLogsParam);
+        PagingLogs<BaseLog> GetLogs(BaseGetLogsParam baseParam);
     }
 }

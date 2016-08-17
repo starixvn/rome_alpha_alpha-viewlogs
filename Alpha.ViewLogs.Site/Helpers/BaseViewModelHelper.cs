@@ -1,12 +1,12 @@
 ﻿namespace Alpha.ViewLogs.Site.Helpers
 {
-    using Alpha.ViewLogs.Models;
     using System;
-    using System.Collections.Generic;
     using System.Linq;
     using System.Web;
     using System.Xml;
+    using Alpha.ViewLogs.Models;
     using ViewLogs.Constants;
+    using ViewLogs.Helpers;
 
     public static class BaseViewModelHelper
     {
@@ -52,17 +52,17 @@
                 var oldAttribute = oldAttributes[newAttribute.Name];
                 var oldValue = oldAttribute.Value;
 
-                var isPermissionAttribute = IsPermissionValue(oldValue) || IsPermissionValue(newValue);
-                var isFormatAttribute = isPermissionAttribute ||
-                    (!string.Equals(newValue, oldValue, StringComparison.OrdinalIgnoreCase) && !ignoreFormatAttributes.Contains(newAttribute.Name.ToLower()) &&
-                    (!string.IsNullOrEmpty(newValue) || !string.IsNullOrEmpty(oldValue)));
-                if (!isFormatAttribute)
-                {
-                    continue;
-                }
-
                 newValue = StandardizeAttributeValue(newValue);
                 oldValue = StandardizeAttributeValue(oldValue);
+
+                var isFormatAttribute = (!string.IsNullOrEmpty(newValue) || !string.IsNullOrEmpty(oldValue)) &&
+                    !ignoreFormatAttributes.Contains(newAttribute.Name.ToLower()) &&
+                    !string.Equals(newValue, oldValue, StringComparison.OrdinalIgnoreCase);
+                if (!isFormatAttribute)
+                {
+                    newAttributes[newAttribute.Name].Value = newValue;
+                    continue;
+                }
 
                 var attributeWithDiff = string.Empty;
 
@@ -104,34 +104,43 @@
 
         private static string StandardizeAttributeValue(string attrValue)
         {
-            var standardizedAttributeValue = attrValue;
-            var isPermissionAttribute = IsPermissionValue(attrValue);
-
-            var pemissionAbbriations = new Dictionary<string, string>();
-            pemissionAbbriations.Add("[A][B][H]", "[A]");
-            pemissionAbbriations.Add("[A][B]", "[A]");
-            pemissionAbbriations.Add("[B][H]", "[B]");
-
-            if (isPermissionAttribute)
+            if (string.IsNullOrEmpty(attrValue))
             {
-                standardizedAttributeValue = standardizedAttributeValue.ToUpper();
-
-                foreach (var pemissionAbbriation in pemissionAbbriations)
-                {
-                    standardizedAttributeValue = standardizedAttributeValue.Replace(pemissionAbbriation.Key, pemissionAbbriation.Value);
-                }
-
-                var pageAccessTypeNames = PageAccessType.PageAccessTypeName();
-                foreach (var pageAccessTypeName in pageAccessTypeNames)
-                {
-                    if (standardizedAttributeValue.Contains(pageAccessTypeName.Key))
-                    {
-                        standardizedAttributeValue = standardizedAttributeValue.Replace(pageAccessTypeName.Key, "[" + pageAccessTypeName.Value + "]");
-                    }
-                }
+                return attrValue;
             }
 
+            var standardizedAttributeValue = attrValue;
+            var isPermissionAttribute = IsPermissionValue(attrValue);
+            if (isPermissionAttribute)
+            {
+                standardizedAttributeValue = FormatPermissionValue(standardizedAttributeValue);
+            }
+
+            standardizedAttributeValue = StringHelper.RemoveTrailingZeros(standardizedAttributeValue);
             standardizedAttributeValue = HttpUtility.HtmlEncode(standardizedAttributeValue);
+
+            return standardizedAttributeValue;
+        }
+
+        private static string FormatPermissionValue(string attrValue)
+        {
+            var standardizedAttributeValue = attrValue.ToUpper();
+
+            var pemissionAbbriations = PageAccessType.PemissionAbbriations;
+
+            foreach (var pemissionAbbriation in pemissionAbbriations)
+            {
+                standardizedAttributeValue = standardizedAttributeValue.Replace(pemissionAbbriation.Key, pemissionAbbriation.Value);
+            }
+
+            var pageAccessTypeNames = PageAccessType.PageAccessTypeName;
+            foreach (var pageAccessTypeName in pageAccessTypeNames)
+            {
+                if (standardizedAttributeValue.Contains(pageAccessTypeName.Key))
+                {
+                    standardizedAttributeValue = standardizedAttributeValue.Replace(pageAccessTypeName.Key, "[" + pageAccessTypeName.Value + "]");
+                }
+            }
 
             return standardizedAttributeValue;
         }

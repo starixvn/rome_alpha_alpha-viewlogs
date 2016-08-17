@@ -1,10 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Services
 {
     using Alpha.ViewLogs.Models;
-    using Params.Credit;
+    using Params;
 
     public interface CreditService
     {
-        PagingLogs<BaseLog> GetLogs(GetLogsParam getLogsParam);
+        PagingLogs<BaseLog> GetLogs(BaseGetLogsParam baseParam);
     }
 }

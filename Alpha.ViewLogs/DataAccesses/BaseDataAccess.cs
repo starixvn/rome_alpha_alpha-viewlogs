@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.DataAccesses
 {
-    using Fanex.Data.Repository;
     using System.Collections.Generic;
+    using Fanex.Data.Repository;
 
     public interface BaseDataAccess
     {

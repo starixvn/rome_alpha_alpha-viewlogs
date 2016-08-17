@@ -1,27 +1,26 @@
 ﻿namespace Alpha.ViewLogs.Site.Requests.Credit
 {
+    using System;
     using Fanex.Common;
     using MediatR;
-    using Params.Credit;
-    using System;
+    using Params;
     using ViewLogs.Constants;
-    using ViewLogs.Helpers;
     using ViewModels.Credit;
 
     public class IndexQuery : BaseQuery, IRequest<IndexViewModel>
     {
-        public GetLogsParam ConvertToGetLogsParam()
+        public BaseGetLogsParam ConvertToGetLogsParam()
         {
             var fromDate = string.IsNullOrEmpty(FromDate) ? DateTime.Now.AddDays(-1) : Convert.ToDateTime(FromDate);
             var toDate = string.IsNullOrEmpty(ToDate) ? DateTime.Now : Convert.ToDateTime(ToDate);
 
-            return new GetLogsParam
+            return new BaseGetLogsParam
             {
                 UplineId = UplineId,
                 SubAccId = SubAccId,
                 RoleId = RoleId,
-                FromDate = DateTimeHelper.GetBeginningOfDate(fromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(toDate),
+                FromDate = fromDate,
+                ToDate = toDate,
                 Username = Username,
                 IsInternal = IsInternal,
 

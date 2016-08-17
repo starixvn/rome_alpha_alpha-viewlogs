@@ -1,64 +1,45 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl
 {
-    using Alpha.ViewLogs.Models;
-    using Criteria;
+    using Criteria.Credit;
     using DataAccesses;
     using Fanex.Data.Repository;
-    using Params.Credit;
-    using System.Collections.Generic;
-    using System.Linq;
+    using Helpers;
+    using Params;
 
-    public class CreditServiceImpl : CreditService
+    public class CreditServiceImpl : BaseServiceImpl, CreditService
     {
-        private readonly CustomerService customerService;
-        private readonly BaseDataAccess baseDataAccess;
-        private readonly IDynamicRepository dynamicRepository;
-        private readonly BaseService baseLogService;
-
         public CreditServiceImpl(
-            CustomerService customerService,
-            BaseDataAccess baseDataAccess,
-            IDynamicRepository dynamicRepository,
-            BaseService baseLogService)
+             CachingManager cacheManager,
+             IDynamicRepository dynamicRepository,
+             CustomerService customerService,
+             BaseDataAccess baseDataAccess) :
+            base(cacheManager, dynamicRepository, customerService, baseDataAccess)
         {
-            this.customerService = customerService;
-            this.baseDataAccess = baseDataAccess;
-            this.dynamicRepository = dynamicRepository;
-            this.baseLogService = baseLogService;
         }
 
-        public PagingLogs<BaseLog> GetLogs(GetLogsParam getLogsParam)
+        public override ICriteria CreateGetLogsCriteria(BaseGetLogsParam getLogsParam, int custId)
         {
-            var pagingLogs = new PagingLogs<BaseLog>
+            return new GetCreditLogsCriteria
             {
-                Logs = new List<BaseLog>()
+                CustId = custId,
+                CustName = getLogsParam.Username,
+                FromDate = DateTimeHelper.GetBeginningOfDate(getLogsParam.FromDate),
+                ToDate = DateTimeHelper.GetEndingOfDate(getLogsParam.ToDate),
+                IsInternal = getLogsParam.IsInternal,
+                PageSize = getLogsParam.PageSize,
+                PageIndex = getLogsParam.PageIndex
             };
+        }
 
-            var customerInfo = customerService.CheckIsBelongingByUsername(new CheckIsBelongingByUsernameCriteria
+        public override ICriteria CreateTotalRecordsOfLogsCriteria(BaseGetLogsParam getLogsParam, int custId)
+        {
+            return new GetTotalRecordsOfCreditLogsCriteria
             {
-                Username = getLogsParam.Username,
-                UplineId = getLogsParam.UplineId
-            });
-
-            var isValidDownline = customerInfo != null && customerInfo.CustId > 0;
-            if (!isValidDownline)
-            {
-                return pagingLogs;
-            }
-
-            var getLogsCriteria = getLogsParam.CreateGetLogsCriteria(customerInfo.CustId);
-
-            pagingLogs.Logs = dynamicRepository.Fetch<BaseLog>(getLogsCriteria).ToList();
-
-            var getTotalRecordsOfLogsCriteria = getLogsParam.CreateTotalRecordsOfLogsCriteria(customerInfo.CustId);
-            pagingLogs.TotalRecords = baseDataAccess.GetTotalRecordsOfLogs(getTotalRecordsOfLogsCriteria);
-
-            foreach (var log in pagingLogs.Logs)
-            {
-                log.ActionName = baseLogService.GetLogActionName(log.ActionId, getLogsParam.Language);
-            }
-
-            return pagingLogs;
+                CustId = custId,
+                FromDate = DateTimeHelper.GetBeginningOfDate(getLogsParam.FromDate),
+                ToDate = DateTimeHelper.GetEndingOfDate(getLogsParam.ToDate),
+                IsInternal = getLogsParam.IsInternal
+            };
         }
     }
 }

@@ -1,9 +1,8 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels.CustomerSetting
 {
-    using Constants;
-    using Models.Enumerations;
-    using Params.CustomerSetting;
     using System.Collections.Generic;
+    using Models.Enumerations;
+    using Params;
     using ViewLogs.Helpers;
 
     public class IndexViewModel
@@ -12,7 +11,7 @@
         private readonly bool isSubAccount;
         private readonly byte roleId;
 
-        public IndexViewModel(GetLogsParam logsParam)
+        public IndexViewModel(CustomerSettingParam logsParam)
         {
             this.hasViewLogPermission = logsParam.HasViewLogPermission;
             this.isSubAccount = logsParam.SubAccId > 0;

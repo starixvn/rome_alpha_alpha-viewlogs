@@ -1,10 +1,10 @@
 ﻿namespace Alpha.ViewLogs.DataAccesses.Impl
 {
+    using System.Collections.Generic;
     using Fanex.Common;
     using Fanex.Data;
     using Fanex.Data.Repository;
-    using Models.Login;
-    using System.Collections.Generic;
+    using Models;
 
     public class LoginDataAccessImpl : LoginDataAccess
     {
@@ -15,9 +15,9 @@
         /// </summary>
         /// <param name="criteria"></param>
         /// <returns></returns>
-        public List<LoginLog> GetLogs(ICriteria criteria)
+        public List<BaseLog> GetLogs(ICriteria criteria)
         {
-            var logs = new List<LoginLog>();
+            var logs = new List<BaseLog>();
 
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {

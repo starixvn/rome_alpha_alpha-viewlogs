@@ -1,9 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Configurations
 {
-    using Fanex.Common;
     using System.Collections.Generic;
     using System.Configuration;
     using System.Linq;
+    using Fanex.Common;
 
     public static class AppSettings
     {

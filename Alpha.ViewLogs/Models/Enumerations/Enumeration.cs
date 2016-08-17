@@ -35,29 +35,24 @@
             get { return _value; }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design",
-            "CA1062:Validate arguments of public methods",
-            MessageId = "1",
-            Justification = "Reviewed"),
-        System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design",
-            "CA1062:Validate arguments of public methods",
-            MessageId = "0",
-            Justification = "Reviewed")]
         public static byte AbsoluteDifference(Enumeration firstValue, Enumeration secondValue)
         {
             var absoluteDifference = (byte)Math.Abs(firstValue.Value - secondValue.Value);
+
             return absoluteDifference;
         }
 
         public static T FromDisplayName<T>(string displayName) where T : Enumeration, new()
         {
             var matchingItem = Parse<T, string>(displayName, "display name", item => item.DisplayName == displayName);
+
             return matchingItem;
         }
 
         public static T FromValue<T>(byte value) where T : Enumeration, new()
         {
             var matchingItem = Parse<T, byte>(value, "value", item => item.Value == value);
+
             return matchingItem;
         }
 
@@ -93,26 +88,10 @@
         {
             if (ReferenceEquals(left, null))
             {
-                if (ReferenceEquals(right, null))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return ReferenceEquals(right, null);
             }
-            else
-            {
-                if (ReferenceEquals(right, null))
-                {
-                    return false;
-                }
-                else
-                {
-                    return left.Value == right.Value;
-                }
-            }
+
+            return !ReferenceEquals(right, null) && left.Value == right.Value;
         }
 
         public static bool operator !=(Enumeration left, Enumeration right)
@@ -123,24 +102,28 @@
         public static bool operator >(Enumeration left, Enumeration right)
         {
             ValidateInputArguments(left, right);
+
             return left.Value > right.Value;
         }
 
         public static bool operator >=(Enumeration left, Enumeration right)
         {
             ValidateInputArguments(left, right);
+
             return left.Value >= right.Value;
         }
 
         public static bool operator <(Enumeration left, Enumeration right)
         {
             ValidateInputArguments(left, right);
+
             return left.Value < right.Value;
         }
 
         public static bool operator <=(Enumeration left, Enumeration right)
         {
             ValidateInputArguments(left, right);
+
             return left.Value <= right.Value;
         }
 

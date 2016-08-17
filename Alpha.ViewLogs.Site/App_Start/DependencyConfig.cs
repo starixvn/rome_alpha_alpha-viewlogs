@@ -87,7 +87,6 @@
                 Lifestyle.Transient);
 
             container.Register<CustomerService, CustomerServiceImpl>(Lifestyle.Transient);
-            container.Register<BaseService, BaseServiceImpl>(Lifestyle.Transient);
             container.Register<TransformTrackingValueToHtmlService, TransformTrackingValueToHtmlServiceImpl>(Lifestyle.Transient);
             container.Register<XsltLogFormatService, XsltLogFormatServiceImpl>(Lifestyle.Transient);
             container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);

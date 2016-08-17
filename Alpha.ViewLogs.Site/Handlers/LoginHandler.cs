@@ -1,13 +1,12 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
+    using System.Collections.Generic;
     using Alpha.ViewLogs.Extensions;
     using Fanex.Common;
     using MediatR;
     using Models;
-    using Models.Login;
     using Requests.Login;
     using Services;
-    using System.Collections.Generic;
     using ViewLogs.Helpers;
     using ViewModels.Login;
 
@@ -42,13 +41,13 @@
         }
 
         private void TransformLogsToHtml(
-            PagingLogs<LoginLog> pagingLogs,
+            PagingLogs<BaseLog> pagingLogs,
             IndexQuery message,
             GetLogsViewModel viewModel)
         {
             var htmlLogs = new List<LoginLogViewModel>();
 
-            foreach (var log in pagingLogs.Logs)
+            foreach (LoginLog log in pagingLogs.Logs)
             {
                 if (message.ActionIdVisibilities.ContainsKey(log.ActionId) && !message.ActionIdVisibilities[log.ActionId])
                 {

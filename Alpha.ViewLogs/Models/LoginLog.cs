@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Models.Login
+﻿namespace Alpha.ViewLogs.Models
 {
     public class LoginLog : BaseLog
     {

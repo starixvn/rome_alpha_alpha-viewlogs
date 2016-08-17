@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Helpers
 {
-    using AppResources;
     using System;
+    using AppResources;
 
     public static class DateTimeHelper
     {

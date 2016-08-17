@@ -1,63 +1,58 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl
 {
-    using Criteria;
-    using DataAccesses;
-    using Models;
-    using Models.Login;
-    using Params.Login;
     using System.Collections.Generic;
+    using Criteria.Login;
+    using DataAccesses;
+    using Fanex.Data.Repository;
+    using Helpers;
+    using Models;
+    using Params;
 
-    public class LoginServiceImpl : LoginService
+    public class LoginServiceImpl : BaseServiceImpl, LoginService
     {
-        private readonly LoginDataAccess loginLogsDataAccess;
-        private readonly BaseService baseLogService;
-        private readonly CustomerService customerService;
-        private readonly BaseDataAccess baseDataAccess;
+        private LoginDataAccess loginDataAccess;
 
         public LoginServiceImpl(
+            CachingManager cacheManager,
+            IDynamicRepository dynamicRepository,
             CustomerService customerService,
-            LoginDataAccess loginLogsDataAccess,
-            BaseService baseLogService,
-            BaseDataAccess baseDataAccess)
+            BaseDataAccess baseDataAccess,
+            LoginDataAccess loginDataAccess) :
+            base(cacheManager, dynamicRepository, customerService, baseDataAccess)
         {
-            this.loginLogsDataAccess = loginLogsDataAccess;
-            this.baseLogService = baseLogService;
-            this.baseDataAccess = baseDataAccess;
-            this.customerService = customerService;
+            this.loginDataAccess = loginDataAccess;
         }
 
-        public PagingLogs<LoginLog> GetLogs(GetLogsParam getLogsParam)
+        public override List<BaseLog> GetLogsFromDataAccess(BaseGetLogsParam getLogsParam, CustomerInfo customerInfo)
         {
-            var pagingLogs = new PagingLogs<LoginLog>
+            var getLogsCriteria = CreateGetLogsCriteria(getLogsParam, customerInfo.CustId);
+
+            return loginDataAccess.GetLogs(getLogsCriteria);
+        }
+
+        public override ICriteria CreateGetLogsCriteria(BaseGetLogsParam getLogsParam, int custId)
+        {
+            return new GetLoginLogsCriteria
             {
-                Logs = new List<LoginLog>()
+                CustId = custId,
+                CustName = getLogsParam.Username,
+                FromDate = DateTimeHelper.GetBeginningOfDate(getLogsParam.FromDate),
+                ToDate = DateTimeHelper.GetEndingOfDate(getLogsParam.ToDate),
+                IsInternal = getLogsParam.IsInternal,
+                PageSize = getLogsParam.PageSize,
+                PageIndex = getLogsParam.PageIndex
             };
+        }
 
-            var customerInfo = customerService.CheckIsBelongingByUsername(new CheckIsBelongingByUsernameCriteria
+        public override ICriteria CreateTotalRecordsOfLogsCriteria(BaseGetLogsParam getLogsParam, int custId)
+        {
+            return new GetTotalRecordsOfLoginLogsCriteria
             {
-                Username = getLogsParam.Username,
-                UplineId = getLogsParam.UplineId
-            });
-
-            var isValidDownline = customerInfo != null && customerInfo.CustId > 0;
-            if (!isValidDownline)
-            {
-                return pagingLogs;
-            }
-
-            var getLogsCriteria = getLogsParam.CreateGetLogsCriteria(customerInfo.CustId);
-
-            pagingLogs.Logs = loginLogsDataAccess.GetLogs(getLogsCriteria);
-
-            var getTotalRecordsOfLogsCriteria = getLogsParam.CreateTotalRecordsOfLogsCriteria(customerInfo.CustId);
-            pagingLogs.TotalRecords = baseDataAccess.GetTotalRecordsOfLogs(getTotalRecordsOfLogsCriteria);
-
-            foreach (var log in pagingLogs.Logs)
-            {
-                log.ActionName = baseLogService.GetLogActionName(log.ActionId, getLogsParam.Language);
-            }
-
-            return pagingLogs;
+                CustId = custId,
+                FromDate = DateTimeHelper.GetBeginningOfDate(getLogsParam.FromDate),
+                ToDate = DateTimeHelper.GetEndingOfDate(getLogsParam.ToDate),
+                IsInternal = getLogsParam.IsInternal
+            };
         }
     }
 }

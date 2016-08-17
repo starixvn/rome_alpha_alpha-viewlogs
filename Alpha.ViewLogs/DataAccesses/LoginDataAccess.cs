@@ -1,11 +1,11 @@
 ﻿namespace Alpha.ViewLogs.DataAccesses
 {
-    using Fanex.Data.Repository;
-    using Models.Login;
     using System.Collections.Generic;
+    using Fanex.Data.Repository;
+    using Models;
 
     public interface LoginDataAccess
     {
-        List<LoginLog> GetLogs(ICriteria criteria);
+        List<BaseLog> GetLogs(ICriteria criteria);
     }
 }

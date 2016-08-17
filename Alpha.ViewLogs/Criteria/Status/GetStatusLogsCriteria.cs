@@ -1,8 +1,8 @@
 ﻿namespace Alpha.ViewLogs.Criteria.Status
 {
+    using System;
     using Constants;
     using Fanex.Data.Repository;
-    using System;
 
     public class GetStatusLogsCriteria : CriteriaBase
     {

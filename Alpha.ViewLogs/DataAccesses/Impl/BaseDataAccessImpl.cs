@@ -1,10 +1,10 @@
 ﻿namespace Alpha.ViewLogs.DataAccesses.Impl
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using Fanex.Common;
     using Fanex.Data;
     using Fanex.Data.Repository;
-    using System.Collections.Generic;
-    using System.Linq;
 
     public class BaseDataAccessImpl : BaseDataAccess
     {

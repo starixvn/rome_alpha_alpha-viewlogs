@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Criteria.Login
 {
-    using Fanex.Data.Repository;
     using System;
+    using Fanex.Data.Repository;
 
     public class GetTotalRecordsOfLoginLogsCriteria : CriteriaBase
     {

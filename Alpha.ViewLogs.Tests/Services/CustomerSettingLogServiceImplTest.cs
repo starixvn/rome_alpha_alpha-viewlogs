@@ -1,13 +1,13 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
-    using Criteria.CustomerSetting;
+    using System.Collections.Generic;
+    using Criteria;
     using DataAccesses;
     using Fanex.Data.Repository;
-    using Models.CustomerSetting;
+    using Models;
     using NSubstitute;
     using NUnit.Framework;
-    using Params.CustomerSetting;
-    using System.Collections.Generic;
+    using Params;
     using ViewLogs.Services;
     using ViewLogs.Services.Impl;
 
@@ -22,7 +22,6 @@
         private CachingManager cacheManager;
         private IDynamicRepository dynamicRepository;
         private CustomerSettingServiceImpl customerSettingLog;
-        private BaseService baseLogService;
 
         [SetUp]
         public void SetUp()
@@ -31,9 +30,8 @@
             baseDataAccess = Substitute.For<BaseDataAccess>();
             cacheManager = Substitute.For<CachingManager>();
             dynamicRepository = Substitute.For<IDynamicRepository>();
-            baseLogService = Substitute.For<BaseService>();
 
-            customerSettingLog = new CustomerSettingServiceImpl(customerService, baseDataAccess, cacheManager, dynamicRepository, baseLogService);
+            customerSettingLog = new CustomerSettingServiceImpl(cacheManager, dynamicRepository, customerService, baseDataAccess);
         }
 
         [Test]
@@ -88,7 +86,7 @@
         public void GetLogs_IsDebug_ClearTransformObjectCache()
         {
             // Arrange
-            var getLogsParam = new GetLogsParam
+            var getLogsParam = new CustomerSettingParam
             {
                 IsDebug = true
             };

@@ -1,5 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Models
 {
+    /// <summary>
+    /// Sport Display: contains info for displaying sport value in template 
+    /// (name, value, visible or not)
+    /// </summary>
     public class SportDisplay
     {
         public SportDisplay(string sportId, bool isVisible, string displayName, string displayValue)

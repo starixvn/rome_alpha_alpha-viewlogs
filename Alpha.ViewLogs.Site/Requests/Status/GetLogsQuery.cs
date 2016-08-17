@@ -1,11 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Site.Requests.Status
 {
+    using System;
     using Fanex.Common;
     using MediatR;
-    using Params.Status;
-    using System;
+    using Params;
     using ViewLogs.Constants;
-    using ViewLogs.Helpers;
     using ViewModels.Status;
 
     public class GetLogsQuery : BaseQuery, IRequest<GetLogsViewModel>
@@ -14,19 +13,19 @@
 
         public string TrackingValueTransformTemplatePath { get; set; }
 
-        public GetLogsParam ConvertToGetLogsParam()
+        public StatusParam ConvertToGetLogsParam()
         {
             var fromDate = string.IsNullOrEmpty(FromDate) ? DateTime.Now.AddDays(-1) : Convert.ToDateTime(FromDate);
             var toDate = string.IsNullOrEmpty(ToDate) ? DateTime.Now : Convert.ToDateTime(ToDate);
 
-            return new GetLogsParam
+            return new StatusParam
             {
                 UplineId = UplineId,
                 IsDebug = IsDebug,
                 SubAccId = SubAccId,
                 RoleId = RoleId,
-                FromDate = DateTimeHelper.GetBeginningOfDate(fromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(toDate),
+                FromDate = fromDate,
+                ToDate = toDate,
                 Username = Username,
                 IsInternal = IsInternal,
 
