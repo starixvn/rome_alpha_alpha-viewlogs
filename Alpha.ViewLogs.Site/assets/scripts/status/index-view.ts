@@ -1,9 +1,10 @@
 ﻿//# sourceMappingURL=core.js.map
 /// <reference path="../core.ts" />
+/// <reference path="../tab/index.ts" />
 /// <reference path="index-controller.ts" />
 
 'use strict';
-/*global statusController, alphaViewLogs*/
+/*global statusController, alphaViewLogs, tabController*/
 declare var $: any;
 declare var initAutoComplete: any;
 declare var setVisible: any;
@@ -29,7 +30,6 @@ var statusView = {
         statusView.elelments.chkOldValues = $('#chk-oldvalues');
         statusView.elelments.txtUsername = $('#txt-username');
         statusView.elelments.logTableContent = $('#DataLog tbody');
-        statusView.elelments.linkChangTabs = $('.lnk-changetab');
         statusView.elelments.pagination = $('#pagination');
     },
     initElements: function (viewModel) {
@@ -67,11 +67,6 @@ var statusView = {
             });
 
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
-
-        statusView.elelments.linkChangTabs.click(function () {
-            var url = $(this).data("tablink") + "?" + $.param(statusController.viewLogsParams);
-            window.location.href = url;
-        });
 
         statusView.renderPager({
             totalRecords: viewModel.totalRecords,

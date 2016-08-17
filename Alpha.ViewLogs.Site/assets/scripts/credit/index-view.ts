@@ -1,8 +1,9 @@
 ﻿/// <reference path="../core.ts" />
+/// <reference path="../tab/index.ts" />
 /// <reference path="index-controller.ts" />
 
 'use strict';
-/*global creditController, alphaViewLogs, viewModel*/
+/*global creditController, alphaViewLogs, viewModel, tabController*/
 declare var $: any;
 declare var initAutoComplete: any;
 
@@ -13,7 +14,6 @@ var creditView = {
         iconLoading: null,
         txtUsername: null,
         logTableContent: null,
-        linkChangTabs: null,
         pagination: null,
         longMonthsInYear: null
     },
@@ -25,7 +25,6 @@ var creditView = {
         creditView.elelments.ddlMonth = $('#ddlMonth');
         creditView.elelments.iconLoading = $('#icon-loading');
         creditView.elelments.txtUsername = $('#txt-username');
-        creditView.elelments.linkChangTabs = $('.lnk-changetab');
         creditView.elelments.pagination = $('#pagination');
         creditView.elelments.longMonthsInYear = $('#longMonthsInYear');
     },
@@ -58,11 +57,6 @@ var creditView = {
             });
 
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
-
-        creditView.elelments.linkChangTabs.click(function () {
-            var url = $(this).data("tablink") + "?" + $.param(creditController.viewLogsParams);
-            window.location.href = url;
-        });
 
         creditView.renderPager({
             totalRecords: viewModel.totalRecords,

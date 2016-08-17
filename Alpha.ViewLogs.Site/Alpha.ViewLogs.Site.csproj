@@ -240,6 +240,7 @@
     <TypeScriptCompile Include="assets\scripts\credit\index-view.ts" />
     <TypeScriptCompile Include="assets\scripts\login\index-controller.ts" />
     <TypeScriptCompile Include="assets\scripts\login\index-view.ts" />
+    <Content Include="assets\bundles\tab.js" />
     <Content Include="assets\scripts\old-main.js" />
     <Content Include="assets\styles\viewlog.css">
       <DependentUpon>viewlog.scss</DependentUpon>
@@ -567,6 +568,7 @@
     <TypeScriptCompile Include="assets\scripts\core.ts" />
     <TypeScriptCompile Include="assets\scripts\status\index-controller.ts" />
     <TypeScriptCompile Include="assets\scripts\status\index-view.ts" />
+    <TypeScriptCompile Include="assets\scripts\tab\index.ts" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\DependencyConfig.cs" />

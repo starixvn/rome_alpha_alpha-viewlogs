@@ -10,6 +10,7 @@
     "inputFiles": [
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",
+      "assets/scripts/tab/index.js",
       "assets/scripts/customersetting/index-view.js",
       "assets/scripts/customersetting/index-controller.js"
     ]
@@ -19,6 +20,7 @@
     "inputFiles": [
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",
+      "assets/scripts/tab/index.js",
       "assets/scripts/status/index-view.js",
       "assets/scripts/status/index-controller.js"
     ]
@@ -28,6 +30,7 @@
     "inputFiles": [
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",
+      "assets/scripts/tab/index.js",
       "assets/scripts/credit/index-view.js",
       "assets/scripts/credit/index-controller.js"
     ]
@@ -38,6 +41,7 @@
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",
       "assets/scripts/login/index-view.js",
+      "assets/scripts/tab/index.js",
       "assets/scripts/login/index-controller.js"
     ]
   }

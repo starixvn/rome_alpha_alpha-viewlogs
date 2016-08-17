@@ -1,9 +1,10 @@
 ﻿//# sourceMappingURL=core.js.map
 /// <reference path="../core.ts" />
+/// <reference path="../tab/index.ts" />
 /// <reference path="index-controller.ts" />
 
 'use strict';
-/*global customerSettingController, alphaViewLogs, viewModel*/
+/*global customerSettingController, alphaViewLogs, viewModel, tabController*/
 declare var $: any;
 declare var initAutoComplete: any;
 
@@ -16,7 +17,6 @@ var customerSettingView = {
         chkOldValues: null,
         txtUsername: null,
         logTableContent: null,
-        linkChangTabs: null,
         pagination: null,
         longMonthsInYear: null
     },
@@ -31,7 +31,6 @@ var customerSettingView = {
         customerSettingView.elelments.chkOldValues = $('#chk-oldvalues');
         customerSettingView.elelments.txtUsername = $('#txt-username');
         customerSettingView.elelments.logTableContent = $('#DataLog tbody');
-        customerSettingView.elelments.linkChangTabs = $('.lnk-changetab');
         customerSettingView.elelments.pagination = $('#pagination');
         customerSettingView.elelments.longMonthsInYear = $('#longMonthsInYear');
     },
@@ -74,11 +73,6 @@ var customerSettingView = {
             });
 
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
-
-        customerSettingView.elelments.linkChangTabs.click(function () {
-            var url = $(this).data("tablink") + "?" + $.param(customerSettingController.viewLogsParams);
-            window.location.href = url;
-        });
 
         customerSettingView.renderPager({
             totalRecords: viewModel.totalRecords,

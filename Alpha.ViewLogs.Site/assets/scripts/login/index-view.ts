@@ -1,8 +1,9 @@
 ﻿/// <reference path="../core.ts" />
+/// <reference path="../tab/index.ts" />
 /// <reference path="index-controller.ts" />
 
 'use strict';
-/*global loginController, alphaViewLogs, viewModel*/
+/*global loginController, alphaViewLogs, viewModel, tabController*/
 declare var $: any;
 declare var initAutoComplete: any;
 
@@ -13,7 +14,6 @@ var loginView = {
         iconLoading: null,
         txtUsername: null,
         logTableContent: null,
-        linkChangTabs: null,
         pagination: null,
         longMonthsInYear: null
     },
@@ -25,7 +25,6 @@ var loginView = {
         loginView.elelments.ddlMonth = $('#ddlMonth');
         loginView.elelments.iconLoading = $('#icon-loading');
         loginView.elelments.txtUsername = $('#txt-username');
-        loginView.elelments.linkChangTabs = $('.lnk-changetab');
         loginView.elelments.pagination = $('#pagination');
         loginView.elelments.longMonthsInYear = $('#longMonthsInYear');
     },
@@ -58,13 +57,6 @@ var loginView = {
             });
 
         initAutoComplete($('#txt-username')[0], queryUsernameURL);
-
-        loginView.elelments.linkChangTabs.click(function () {
-            var url = $(this).data("tablink") + "?" +
-                $.param(loginController.viewLogsParams) +
-                "&actiontypeid=" + viewModel.actionTypeId;
-            window.location.href = url;
-        });
 
         loginView.renderPager({
             totalRecords: viewModel.totalRecords,
