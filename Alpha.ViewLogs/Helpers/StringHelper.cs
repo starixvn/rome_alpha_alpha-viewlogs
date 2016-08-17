@@ -2,15 +2,15 @@
 {
     public static class StringHelper
     {
-        public static string RemoveTrailingZeros(string stringValue)
+        public static string RemoveTrailingZeros(string value)
         {
             double numberValue;
-            if (double.TryParse(stringValue, out numberValue))
+            if (double.TryParse(value, out numberValue))
             {
                 return numberValue.ToString();
             }
 
-            return stringValue;
+            return value;
         }
     }
 }
