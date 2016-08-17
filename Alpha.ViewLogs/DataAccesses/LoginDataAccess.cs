@@ -6,6 +6,6 @@
 
     public interface LoginDataAccess
     {
-        List<BaseLog> GetLogs(ICriteria criteria);
+        List<Log> GetLogs(ICriteria criteria);
     }
 }

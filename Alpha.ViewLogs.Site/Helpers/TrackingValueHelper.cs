@@ -8,9 +8,9 @@
     using ViewLogs.Constants;
     using ViewLogs.Helpers;
 
-    public static class BaseViewModelHelper
+    public static class TrackingValueHelper
     {
-        public static string GetTrackingValueWithDiff(BaseLog baseLog, bool isShowOldValue)
+        public static string GetTrackingValueWithDiff(Log baseLog, bool isShowOldValue)
         {
             if (string.IsNullOrEmpty(baseLog.TrackingValue))
             {

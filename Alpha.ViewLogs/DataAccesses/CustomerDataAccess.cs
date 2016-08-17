@@ -5,6 +5,6 @@
 
     public interface CustomerDataAccess
     {
-        CustomerInfo CheckIsBelongingByUsername(CheckIsBelongingByUsernameCriteria criteria);
+        CustomerInfo GetCustInfoByUsername(GetCustInfoByUsernameCriteria criteria);
     }
 }

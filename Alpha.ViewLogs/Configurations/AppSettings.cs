@@ -31,15 +31,6 @@
             }
         }
 
-        public static bool IsDebug
-        {
-            get
-            {
-                var isDebugSetting = Converter.ToBool(GetSettingValue("IsDebug"));
-                return isDebugSetting;
-            }
-        }
-
         public static List<int> ActionIds_Racing_151_31
         {
             get

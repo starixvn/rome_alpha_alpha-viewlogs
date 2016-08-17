@@ -49,7 +49,7 @@
     <Compile Include="Constants\PageAccessType.cs" />
     <Compile Include="Constants\Pager.cs" />
     <Compile Include="Constants\Sport.cs" />
-    <Compile Include="Criteria\CheckIsBelongingByUsernameCriteria.cs" />
+    <Compile Include="Criteria\GetCustInfoByUsernameCriteria.cs" />
     <Compile Include="Criteria\Credit\GetCreditLogsCriteria.cs" />
     <Compile Include="Criteria\Credit\GetTotalRecordsOfCreditLogsCriteria.cs" />
     <Compile Include="Criteria\GetAllLogActionTypeCriteria.cs" />
@@ -73,18 +73,18 @@
     <Compile Include="Helpers\MicroSites.cs" />
     <Compile Include="Extensions\NumberExtensions.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
-    <Compile Include="Models\BaseLog.cs" />
+    <Compile Include="Models\Log.cs" />
     <Compile Include="Models\CustomerInfo.cs" />
     <Compile Include="Models\Enumerations\Enumeration.cs" />
     <Compile Include="Models\Enumerations\UserLevel.cs" />
     <Compile Include="Models\LogActionType.cs" />
-    <Compile Include="Models\IPRangeEntity.cs" />
+    <Compile Include="Models\IPRange.cs" />
     <Compile Include="Models\LogAction.cs" />
     <Compile Include="Models\LoginLog.cs" />
     <Compile Include="Models\PagingLogs.cs" />
     <Compile Include="Models\SportDisplay.cs" />
     <Compile Include="Params\CustomerSettingParam.cs" />
-    <Compile Include="Params\BaseGetLogsParam.cs" />
+    <Compile Include="Params\GetLogsParam.cs" />
     <Compile Include="Params\StatusParam.cs" />
     <Compile Include="Params\TransformTrackingValueToHtmlParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,7 +94,7 @@
     <Compile Include="Services\LoginService.cs" />
     <Compile Include="Services\CustomerSettingService.cs" />
     <Compile Include="Services\CustomerService.cs" />
-    <Compile Include="Services\Impl\BaseServiceImpl.cs" />
+    <Compile Include="Services\Impl\BaseService.cs" />
     <Compile Include="Services\Impl\CachingManagerImpl.cs" />
     <Compile Include="Services\Impl\CustomerServiceImpl.cs" />
     <Compile Include="Services\Impl\CreditServiceImpl.cs" />
@@ -103,10 +103,10 @@
     <Compile Include="Services\Impl\LoginServiceImpl.cs" />
     <Compile Include="Services\Impl\StatusServiceImpl.cs" />
     <Compile Include="Services\Impl\TransformTrackingValueToHtmlServiceImpl.cs" />
-    <Compile Include="Services\Impl\XsltLogFormatServiceImpl.cs" />
+    <Compile Include="Services\Impl\XsltLogFormatterImpl.cs" />
     <Compile Include="Services\IPService.cs" />
     <Compile Include="Services\TransformTrackingValueToHtmlService.cs" />
-    <Compile Include="Services\XsltLogFormatService.cs" />
+    <Compile Include="Services\XsltLogFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />

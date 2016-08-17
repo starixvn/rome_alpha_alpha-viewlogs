@@ -4,6 +4,11 @@
     {
         public static string RemoveTrailingZeros(string value)
         {
+            if (string.IsNullOrEmpty(value))
+            {
+                return value;
+            }
+
             double numberValue;
             if (double.TryParse(value, out numberValue))
             {

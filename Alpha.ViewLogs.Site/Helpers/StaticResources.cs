@@ -1,12 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Site.Helpers
 {
-    using Configurations;
     using System.Configuration;
-    using System.Diagnostics;
     using System.Linq;
-    using System.Reflection;
     using System.Web;
     using System.Web.Configuration;
+    using Configurations;
 
     public static class StaticResources
     {

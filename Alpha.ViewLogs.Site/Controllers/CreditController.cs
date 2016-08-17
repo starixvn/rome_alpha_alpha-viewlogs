@@ -1,12 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
+    using System.Web.Mvc;
     using MediatR;
     using Requests.Credit;
     using Sunplus.Agent.Model.Entities;
-    using System.Web.Mvc;
-    using System.Web.SessionState;
 
-    [SessionState(SessionStateBehavior.Default)]
     public class CreditController : BaseController
     {
         private readonly IMediator mediator;

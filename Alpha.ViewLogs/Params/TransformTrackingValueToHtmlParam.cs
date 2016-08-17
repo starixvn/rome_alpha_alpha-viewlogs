@@ -4,8 +4,6 @@
 
     public class TransformTrackingValueToHtmlParam
     {
-        public bool IsDebug { get; set; }
-
         public bool IsShowOldValue { get; set; }
 
         public string TrackingValueTransformTemplatePath { get; set; }

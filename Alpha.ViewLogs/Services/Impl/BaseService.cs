@@ -10,7 +10,7 @@
     using Models;
     using Params;
 
-    public class BaseServiceImpl
+    public abstract class BaseService
     {
         public const string CacheKeyLogAction = "Alpha.ViewLogs.CustomerSetting.LogAction";
         private const string CacheKeyLogActionTypes = "Alpha.ViewLogs.CustomerSetting.LogActionTypes";
@@ -21,7 +21,7 @@
         private readonly CustomerService customerService;
         private readonly BaseDataAccess baseDataAccess;
 
-        public BaseServiceImpl(
+        protected BaseService(
             CachingManager cacheManager,
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
@@ -86,14 +86,14 @@
             return logActionDictionary[actionId];
         }
 
-        public PagingLogs<BaseLog> GetLogs(BaseGetLogsParam getLogsParam)
+        public PagingLogs<Log> GetLogs(GetLogsParam getLogsParam)
         {
-            var pagingLogs = new PagingLogs<BaseLog>
+            var pagingLogs = new PagingLogs<Log>
             {
-                Logs = new List<BaseLog>()
+                Logs = new List<Log>()
             };
 
-            var customerInfo = customerService.CheckIsBelongingByUsername(new CheckIsBelongingByUsernameCriteria
+            var customerInfo = customerService.CheckIsBelongingByUsername(new GetCustInfoByUsernameCriteria
             {
                 Username = getLogsParam.Username,
                 UplineId = getLogsParam.UplineId
@@ -116,24 +116,18 @@
             return pagingLogs;
         }
 
-        public virtual List<BaseLog> GetLogsFromDataAccess(BaseGetLogsParam getLogsParam, CustomerInfo customerInfo)
+        public virtual List<Log> GetLogsFromDataAccess(GetLogsParam getLogsParam, CustomerInfo customerInfo)
         {
             var getLogsCriteria = CreateGetLogsCriteria(getLogsParam, customerInfo.CustId);
 
-            return dynamicRepository.Fetch<BaseLog>(getLogsCriteria).ToList();
+            return dynamicRepository.Fetch<Log>(getLogsCriteria).ToList();
         }
 
-        public virtual ICriteria CreateGetLogsCriteria(BaseGetLogsParam getLogsParam, int custId)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract ICriteria CreateGetLogsCriteria(GetLogsParam getLogsParam, int custId);
 
-        public virtual ICriteria CreateTotalRecordsOfLogsCriteria(BaseGetLogsParam getLogsParam, int custId)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract ICriteria CreateTotalRecordsOfLogsCriteria(GetLogsParam getLogsParam, int custId);
 
-        private int GetTotalRecordsOfLogs(BaseGetLogsParam getLogsParam, int custId)
+        private int GetTotalRecordsOfLogs(GetLogsParam getLogsParam, int custId)
         {
             var getTotalRecordsOfLogsCriteria = CreateTotalRecordsOfLogsCriteria(getLogsParam, custId);
 

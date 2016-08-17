@@ -5,6 +5,6 @@
 
     public interface CustomerService
     {
-        CustomerInfo CheckIsBelongingByUsername(CheckIsBelongingByUsernameCriteria criteria);
+        CustomerInfo CheckIsBelongingByUsername(GetCustInfoByUsernameCriteria criteria);
     }
 }

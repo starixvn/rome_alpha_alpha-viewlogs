@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Models
 {
-    public class LoginLog : BaseLog
+    public class LoginLog : Log
     {
         public string ServerId { get; set; }
 

@@ -82,22 +82,6 @@
             cacheManager.Received().Add(CacheKeyLogActionTypes, Arg.Any<List<LogActionType>>());
         }
 
-        [Test]
-        public void GetLogs_IsDebug_ClearTransformObjectCache()
-        {
-            // Arrange
-            var getLogsParam = new CustomerSettingParam
-            {
-                IsDebug = true
-            };
-
-            // Action
-            customerSettingLog.GetLogs(getLogsParam);
-
-            // Assert
-            cacheManager.Received().Remove(CacheKeyTransformObject);
-        }
-
         private List<LogActionType> GetValidActionTypeList()
         {
             var actionTypes = new List<LogActionType>();

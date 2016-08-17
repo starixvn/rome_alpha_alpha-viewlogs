@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels
 {
-    public class BaseViewModel
+    public class LogViewModel
     {
         public int ActionId { get; set; }
 

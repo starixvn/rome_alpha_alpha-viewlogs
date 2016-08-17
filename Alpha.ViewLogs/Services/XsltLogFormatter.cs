@@ -2,7 +2,7 @@
 {
     using Alpha.ViewLogs.Params;
 
-    public interface XsltLogFormatService
+    public interface XsltLogFormatter
     {
         void AssignParams(TransformTrackingValueToHtmlParam transformParam);
 

@@ -583,31 +583,29 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Handlers\BaseHandler.cs" />
     <Compile Include="Handlers\CreditHandler.cs" />
     <Compile Include="Handlers\CustomerSettingHandler.cs" />
     <Compile Include="Handlers\LoginHandler.cs" />
     <Compile Include="Handlers\StatusHandler.cs" />
-    <Compile Include="Helpers\BaseViewModelHelper.cs" />
+    <Compile Include="Helpers\TrackingValueHelper.cs" />
     <Compile Include="Helpers\StaticResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\BaseQuery.cs" />
     <Compile Include="Requests\Credit\IndexQuery.cs" />
-    <Compile Include="Requests\CustomerSetting\GetLogsQuery.cs" />
     <Compile Include="Requests\CustomerSetting\IndexQuery.cs" />
     <Compile Include="Requests\Login\IndexQuery.cs" />
-    <Compile Include="Requests\Status\GetLogsQuery.cs" />
     <Compile Include="Requests\Status\IndexQuery.cs" />
-    <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\Credit\GetLogsViewModel.cs" />
     <Compile Include="ViewModels\Credit\IndexViewModel.cs" />
-    <Compile Include="ViewModels\CustomerSetting\GetLogsViewModel.cs" />
+    <Compile Include="ViewModels\LogViewModel.cs" />
+    <Compile Include="ViewModels\GetLogsViewModel.cs" />
+    <Compile Include="ViewModels\BaseIndexViewModel.cs" />
+    <Compile Include="ViewModels\CustomerSetting\GetCustomerSettingLogsViewModel.cs" />
     <Compile Include="ViewModels\CustomerSetting\IndexViewModel.cs" />
     <Compile Include="ViewModels\CustomerSetting\LogActionTypeViewModel.cs" />
-    <Compile Include="ViewModels\Login\GetLogsViewModel.cs" />
     <Compile Include="ViewModels\Login\IndexViewModel.cs" />
     <Compile Include="ViewModels\Login\LoginLogViewModel.cs" />
     <Compile Include="ViewModels\TabViewModel.cs" />
-    <Compile Include="ViewModels\Status\GetLogsViewModel.cs" />
     <Compile Include="ViewModels\Status\IndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -631,7 +629,6 @@
     <Content Include="Web.AppSettings.proi7.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-    <Content Include="Web.Configuration\AuthorizationSection.config" />
     <Content Include="Web.AppSettings.sit.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>

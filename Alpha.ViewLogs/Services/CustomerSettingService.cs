@@ -8,6 +8,6 @@
     {
         List<LogActionType> GetLogActionTypes();
 
-        PagingLogs<BaseLog> GetLogs(BaseGetLogsParam baseParam);
+        PagingLogs<Log> GetLogs(GetLogsParam baseParam);
     }
 }

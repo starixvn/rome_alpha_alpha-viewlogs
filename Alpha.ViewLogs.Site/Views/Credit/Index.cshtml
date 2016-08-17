@@ -4,8 +4,6 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = Resources.ViewLogCredit;
-
-    var hasLogs = Model.GetLogsViewModel.Logs != null && Model.GetLogsViewModel.Logs.Any();
 }
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="@ViewContext.RouteData.Values["controller"].ToString().ToLower()">
@@ -43,7 +41,7 @@
 
                 </thead>
                 <tbody>
-                    @if (hasLogs)
+                    @if (Model.HasLogs)
                     {
                         foreach (var log in Model.GetLogsViewModel.Logs)
                         {
@@ -66,7 +64,7 @@
                         </tr>
                     }
             </table>
-            <div id="pagination" class="@(hasLogs ? " ":"hide" )"></div>
+            <div id="pagination" class="@(Model.HasLogs ? " ":"hide" )"></div>
         </div>
     </div>
 </div>

@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
-    using Constants;
     using System.Web.Mvc;
+    using Constants;
     using ViewModels;
 
     public class TabController : Controller

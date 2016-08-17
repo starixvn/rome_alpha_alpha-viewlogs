@@ -12,14 +12,14 @@
     using System.Linq;
     using System.Xml.Linq;
 
-    public class XsltLogFormatServiceImpl : XsltLogFormatService
+    public class XsltLogFormatterImpl : XsltLogFormatter
     {
         private IPService ipService;
 
         private Dictionary<string, bool> sportBetTypeVisibilities;
         private bool isShowMyanmarOdds;
 
-        public XsltLogFormatServiceImpl(IPService ipService)
+        public XsltLogFormatterImpl(IPService ipService)
         {
             this.ipService = ipService;
         }

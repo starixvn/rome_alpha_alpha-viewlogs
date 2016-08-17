@@ -4,8 +4,6 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = Resources.ViewLogCustomerSetting;
-
-    var hasLogs = Model.GetLogsViewModel.Logs != null && Model.GetLogsViewModel.Logs.Any();
 }
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="@ViewContext.RouteData.Values["controller"].ToString().ToLower()">
@@ -21,7 +19,7 @@
                     <select id="ddl-logactiontype">
                         @foreach (var logActionType in Model.LogActionTypes)
                         {
-                            <option value="@logActionType.Id" @(logActionType.Id == Model.GetLogsViewModel.ActionTypeId ? "selected" : string.Empty)>@logActionType.Name</option>
+                            <option value="@logActionType.Id" @(logActionType.Id == ((GetCustomerSettingLogsViewModel)Model.GetLogsViewModel).ActionTypeId ? "selected" : string.Empty)>@logActionType.Name</option>
                         }
                     </select>
                 </div>
@@ -54,7 +52,7 @@
 
                 </thead>
                 <tbody>
-                    @if (hasLogs)
+                    @if (Model.HasLogs)
                     {
                         foreach (var log in Model.GetLogsViewModel.Logs)
                         {
@@ -74,7 +72,7 @@
                         </tr>
                     }
             </table>
-            <div id="pagination" class="@(hasLogs ? "" : "hide")"></div>
+            <div id="pagination" class="@(Model.HasLogs ? "" : "hide")"></div>
         </div>
     </div>
 </div>

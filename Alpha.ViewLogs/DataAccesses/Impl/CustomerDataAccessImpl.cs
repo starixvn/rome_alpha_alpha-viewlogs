@@ -7,7 +7,7 @@
 
     public class CustomerDataAccessImpl : CustomerDataAccess
     {
-        public CustomerInfo CheckIsBelongingByUsername(CheckIsBelongingByUsernameCriteria criteria)
+        public CustomerInfo GetCustInfoByUsername(GetCustInfoByUsernameCriteria criteria)
         {
             var customerInfo = new CustomerInfo();
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))

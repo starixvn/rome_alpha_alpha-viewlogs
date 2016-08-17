@@ -6,7 +6,7 @@
     using Helpers;
     using Params;
 
-    public class StatusServiceImpl : BaseServiceImpl, StatusService
+    public class StatusServiceImpl : BaseService, StatusService
     {
         public StatusServiceImpl(
             CachingManager cacheManager,
@@ -17,7 +17,7 @@
         {
         }
 
-        public override ICriteria CreateGetLogsCriteria(BaseGetLogsParam getLogsParam, int custId)
+        public override ICriteria CreateGetLogsCriteria(GetLogsParam getLogsParam, int custId)
         {
             return new GetStatusLogsCriteria
             {
@@ -31,7 +31,7 @@
             };
         }
 
-        public override ICriteria CreateTotalRecordsOfLogsCriteria(BaseGetLogsParam getLogsParam, int custId)
+        public override ICriteria CreateTotalRecordsOfLogsCriteria(GetLogsParam getLogsParam, int custId)
         {
             return new GetTotalRecordsOfStatusLogsCriteria
             {

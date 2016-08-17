@@ -1,8 +1,5 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
-    using Configurations;
-    using Fanex.Common;
-    using Sunplus.Agent.Model.Entities;
     using System.Globalization;
     using System.Text;
     using System.Threading;
@@ -11,6 +8,9 @@
     using System.Web.Routing;
     using System.Web.Security;
     using System.Web.SessionState;
+    using Configurations;
+    using Fanex.Common;
+    using Sunplus.Agent.Model.Entities;
     using ViewLogs.Constants;
     using ViewLogs.Helpers;
 

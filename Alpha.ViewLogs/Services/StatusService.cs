@@ -5,6 +5,6 @@
 
     public interface StatusService
     {
-        PagingLogs<BaseLog> GetLogs(BaseGetLogsParam baseParam);
+        PagingLogs<Log> GetLogs(GetLogsParam baseParam);
     }
 }

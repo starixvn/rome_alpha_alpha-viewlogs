@@ -1,13 +1,11 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
+    using System.Web.Mvc;
     using MediatR;
     using Models.Enumerations;
     using Requests.Login;
     using Sunplus.Agent.Model.Entities;
-    using System.Web.Mvc;
-    using System.Web.SessionState;
 
-    [SessionState(SessionStateBehavior.Default)]
     public class LoginController : BaseController
     {
         private readonly IMediator mediator;

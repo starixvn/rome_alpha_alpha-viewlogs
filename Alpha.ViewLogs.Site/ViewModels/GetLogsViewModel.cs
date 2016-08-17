@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Site.ViewModels.Status
+﻿namespace Alpha.ViewLogs.Site.ViewModels
 {
     using System;
     using System.Collections.Generic;
@@ -19,7 +19,7 @@
 
         private readonly string username;
 
-        public GetLogsViewModel(StatusParam logsParam, PagingLogs<BaseLog> pagingLogs)
+        public GetLogsViewModel(GetLogsParam logsParam, PagingLogs<Log> pagingLogs)
         {
             this.showOldValue = logsParam.IsShowOldValue;
             this.TotalRecords = pagingLogs.TotalRecords;
@@ -38,7 +38,6 @@
                 logsParam.FromDate.ToShortDateString() :
                 logsParam.MinReportDate.ToShortDateString();
 
-            // Limit time range for view log in 2 years (start from beginning of last year)
             this.maxReportDate = logsParam.MaxReportDate.ToShortDateString();
             this.minReportDate = logsParam.MinReportDate.ToShortDateString();
 
@@ -71,7 +70,7 @@
             }
         }
 
-        public List<BaseViewModel> Logs { get; set; }
+        public List<LogViewModel> Logs { get; set; }
 
         public string DayInMonth
         {

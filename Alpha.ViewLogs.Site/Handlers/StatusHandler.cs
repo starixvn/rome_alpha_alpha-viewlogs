@@ -1,24 +1,26 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
+    using System.Collections.Generic;
     using Helpers;
     using MediatR;
     using Models;
     using Params;
     using Requests.Status;
     using Services;
-    using System.Collections.Generic;
     using ViewLogs.Helpers;
     using ViewModels;
     using ViewModels.Status;
 
-    public class StatusHandler : IRequestHandler<IndexQuery, IndexViewModel>
+    public class StatusHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
         private readonly StatusService statusService;
         private readonly TransformTrackingValueToHtmlService transformTrackingValueToHtmlService;
 
         public StatusHandler(
             StatusService statusService,
-            TransformTrackingValueToHtmlService transformTrackingValueToHtmlService)
+            TransformTrackingValueToHtmlService transformTrackingValueToHtmlService,
+            XsltLogFormatter xsltLogFormatter) :
+            base(xsltLogFormatter)
         {
             this.statusService = statusService;
             this.transformTrackingValueToHtmlService = transformTrackingValueToHtmlService;
@@ -26,7 +28,7 @@
 
         public IndexViewModel Handle(IndexQuery message)
         {
-            var logsParam = message.ConvertToGetLogsParam();
+            var logsParam = GetLogsParam(message);
             var pagingLogs = statusService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam);
@@ -39,13 +41,12 @@
         }
 
         private void TransformLogsToHtml(
-            PagingLogs<BaseLog> pagingLogs,
-            GetLogsQuery message,
+            PagingLogs<Log> pagingLogs,
+            IndexQuery message,
             GetLogsViewModel viewModel)
         {
             var transformParam = new TransformTrackingValueToHtmlParam
             {
-                IsDebug = message.IsDebug,
                 IsShowOldValue = message.IsShowOldValue,
                 TrackingValueTransformTemplatePath = message.TrackingValueTransformTemplatePath,
                 SportBetTypeVisibilities = message.SportBetTypeVisibilities,
@@ -54,7 +55,7 @@
 
             transformTrackingValueToHtmlService.InitCompiledTransformCache(transformParam);
 
-            var htmlLogs = new List<BaseViewModel>();
+            var htmlLogs = new List<LogViewModel>();
 
             foreach (var log in pagingLogs.Logs)
             {
@@ -64,10 +65,10 @@
                     continue;
                 }
 
-                var trackingValueWithDiff = BaseViewModelHelper.GetTrackingValueWithDiff(log, message.IsShowOldValue);
+                var trackingValueWithDiff = TrackingValueHelper.GetTrackingValueWithDiff(log, message.IsShowOldValue);
                 var htmlTrackingValue = transformTrackingValueToHtmlService.TransformTrackingValueToHtml(trackingValueWithDiff, log, transformParam);
 
-                htmlLogs.Add(new BaseViewModel
+                htmlLogs.Add(new LogViewModel
                 {
                     ActionId = log.ActionId,
                     ActionName = log.ActionName,
@@ -80,7 +81,7 @@
                     UserId = log.UserId,
                     Username = log.Username,
                     TrackingValue = htmlTrackingValue,
-                    IP = log.IP
+                    IP = XsltLogFormatter.FormatIP(log.IP)
                 });
             }
 

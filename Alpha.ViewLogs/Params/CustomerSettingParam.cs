@@ -1,9 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Params
 {
-    public class CustomerSettingParam : BaseGetLogsParam
+    public class CustomerSettingParam : GetLogsParam
     {
-        public bool IsDebug { get; set; }
-
         public int ActionTypeId { get; set; }
 
         public string TrackingValueTransformTemplatePath { get; set; }

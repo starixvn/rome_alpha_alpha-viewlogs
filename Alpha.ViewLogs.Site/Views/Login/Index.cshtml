@@ -6,7 +6,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = Resources.ViewLogLogin;
 
-    var hasLogs = Model.GetLogsViewModel.Logs != null && Model.GetLogsViewModel.Logs.Any();
     var isAgent = Model.RoleId == UserLevel.Agent.Value;
     var username = isAgent ? Model.PreviousUsername : Model.GetLogsViewModel.Username;
 }
@@ -55,9 +54,9 @@
 
                 </thead>
                 <tbody>
-                    @if (hasLogs)
+                    @if (Model.HasLogs)
                     {
-                        foreach (var log in Model.GetLogsViewModel.Logs)
+                        foreach (LoginLogViewModel log in Model.GetLogsViewModel.Logs)
                         {
                             <tr>
                                 <td align="center">@log.LogId</td>
@@ -79,7 +78,7 @@
                         </tr>
                     }
             </table>
-            <div id="pagination" class="@(hasLogs ? " ":"hide" )"></div>
+            <div id="pagination" class="@(Model.HasLogs ? " ":"hide" )"></div>
         </div>
     </div>
 </div>

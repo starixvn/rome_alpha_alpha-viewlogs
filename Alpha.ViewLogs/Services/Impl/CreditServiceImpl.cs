@@ -6,7 +6,7 @@
     using Helpers;
     using Params;
 
-    public class CreditServiceImpl : BaseServiceImpl, CreditService
+    public class CreditServiceImpl : BaseService, CreditService
     {
         public CreditServiceImpl(
              CachingManager cacheManager,
@@ -17,7 +17,7 @@
         {
         }
 
-        public override ICriteria CreateGetLogsCriteria(BaseGetLogsParam getLogsParam, int custId)
+        public override ICriteria CreateGetLogsCriteria(GetLogsParam getLogsParam, int custId)
         {
             return new GetCreditLogsCriteria
             {
@@ -31,7 +31,7 @@
             };
         }
 
-        public override ICriteria CreateTotalRecordsOfLogsCriteria(BaseGetLogsParam getLogsParam, int custId)
+        public override ICriteria CreateTotalRecordsOfLogsCriteria(GetLogsParam getLogsParam, int custId)
         {
             return new GetTotalRecordsOfCreditLogsCriteria
             {

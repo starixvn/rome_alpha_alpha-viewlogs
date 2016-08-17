@@ -111,22 +111,22 @@
                 return false;
             }
 
-            var isVNIP = listIPVN.Where(ipVN => ipVN.FromAddress <= ipNumber && ipNumber <= ipVN.ToAddress)
+            var isVNIP = listIPVN.Where(ipVN => ipVN.From <= ipNumber && ipNumber <= ipVN.To)
                 .Any();
 
             return isVNIP;
         }
 
-        private List<IPRangeEntity> GetIPVNList()
+        private List<IPRange> GetIPVNList()
         {
-            var listIPVN = cacheManager.Get<List<IPRangeEntity>>(CacheKeyVietnamIPList);
+            var listIPVN = cacheManager.Get<List<IPRange>>(CacheKeyVietnamIPList);
 
             if (listIPVN != null && listIPVN.Any())
             {
                 return listIPVN;
             }
 
-            listIPVN = dynamicRepository.Fetch<IPRangeEntity>(new GetIPVNCriteria()).ToList();
+            listIPVN = dynamicRepository.Fetch<IPRange>(new GetIPVNCriteria()).ToList();
             cacheManager.Add(CacheKeyVietnamIPList, listIPVN, TimeSpan.FromHours(HourToCacheVietnamIPList));
 
             return listIPVN;

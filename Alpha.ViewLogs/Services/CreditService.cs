@@ -5,6 +5,6 @@
 
     public interface CreditService
     {
-        PagingLogs<BaseLog> GetLogs(BaseGetLogsParam baseParam);
+        PagingLogs<Log> GetLogs(GetLogsParam baseParam);
     }
 }

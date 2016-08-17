@@ -13,14 +13,15 @@
             this.customerDataAccess = customerDataAccess;
         }
 
-        public CustomerInfo CheckIsBelongingByUsername(CheckIsBelongingByUsernameCriteria criteria)
+        public CustomerInfo CheckIsBelongingByUsername(GetCustInfoByUsernameCriteria criteria)
         {
             if (string.IsNullOrEmpty(criteria.Username))
             {
                 return null;
             }
 
-            var customerInfo = customerDataAccess.CheckIsBelongingByUsername(criteria);
+            var customerInfo = customerDataAccess.GetCustInfoByUsername(criteria);
+
             return customerInfo;
         }
     }

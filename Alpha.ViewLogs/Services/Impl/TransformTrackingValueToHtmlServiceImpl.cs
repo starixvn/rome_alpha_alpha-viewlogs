@@ -16,11 +16,11 @@
         private const int HourToCacheCompiledTransforms = 1;
 
         private readonly CachingManager cacheManager;
-        private readonly XsltLogFormatService xsltLogFormatService;
+        private readonly XsltLogFormatter xsltLogFormatService;
 
         public TransformTrackingValueToHtmlServiceImpl(
             CachingManager cacheManager,
-            XsltLogFormatService xsltLogFormatService)
+            XsltLogFormatter xsltLogFormatService)
         {
             this.cacheManager = cacheManager;
             this.xsltLogFormatService = xsltLogFormatService;
@@ -28,11 +28,6 @@
 
         public void InitCompiledTransformCache(TransformTrackingValueToHtmlParam transformParam)
         {
-            if (transformParam.IsDebug)
-            {
-                cacheManager.Remove(CacheKeyTransformObject);
-            }
-
             var compiledTransforms = cacheManager.Get<Dictionary<int, XslCompiledTransform>>(CacheKeyTransformObject);
 
             if (compiledTransforms == null)
@@ -44,7 +39,7 @@
 
         public string TransformTrackingValueToHtml(
             string trackingValue,
-            BaseLog baseLog,
+            Log baseLog,
             TransformTrackingValueToHtmlParam transformParam)
         {
             var htmlTrackingValue = string.Empty;

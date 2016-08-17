@@ -1,31 +1,30 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
+    using System.Collections.Generic;
     using Alpha.ViewLogs.Extensions;
     using Fanex.Common;
     using MediatR;
     using Models;
+    using Requests;
     using Requests.Credit;
     using Services;
-    using System.Collections.Generic;
     using ViewLogs.Helpers;
     using ViewModels;
     using ViewModels.Credit;
 
-    public class CreditHandler : IRequestHandler<IndexQuery, IndexViewModel>
+    public class CreditHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
         private readonly CreditService creditService;
 
-        private readonly XsltLogFormatService xsltLogFormatService;
-
-        public CreditHandler(CreditService creditService, XsltLogFormatService xsltLogFormatService)
+        public CreditHandler(CreditService creditService, XsltLogFormatter xsltLogFormatter) :
+            base(xsltLogFormatter)
         {
             this.creditService = creditService;
-            this.xsltLogFormatService = xsltLogFormatService;
         }
 
         public IndexViewModel Handle(IndexQuery message)
         {
-            var logsParam = message.ConvertToGetLogsParam();
+            var logsParam = GetLogsParam(message);
             var pagingLogs = creditService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam);
@@ -37,12 +36,12 @@
             return viewModel;
         }
 
-        private void TransformLogsToHtml(
-            PagingLogs<BaseLog> pagingLogs,
-            IndexQuery message,
+        public void TransformLogsToHtml(
+            PagingLogs<Log> pagingLogs,
+            BaseQuery message,
             GetLogsViewModel viewModel)
         {
-            var htmlLogs = new List<BaseViewModel>();
+            var htmlLogs = new List<LogViewModel>();
 
             foreach (var log in pagingLogs.Logs)
             {
@@ -52,7 +51,7 @@
                     continue;
                 }
 
-                htmlLogs.Add(new BaseViewModel
+                htmlLogs.Add(new LogViewModel
                 {
                     ActionId = log.ActionId,
                     ActionName = log.ActionName,
@@ -68,7 +67,7 @@
                     TrackingValue = Converter.ToDecimal(log.TrackingValue).Format(2),
                     TrackingValueOld = Converter.ToDecimal(log.TrackingValueOld).Format(2),
                     Details = log.Details,
-                    IP = xsltLogFormatService.FormatIP(log.IP)
+                    IP = XsltLogFormatter.FormatIP(log.IP)
                 });
             }
 

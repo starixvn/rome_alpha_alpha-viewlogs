@@ -15,9 +15,9 @@
         /// </summary>
         /// <param name="criteria"></param>
         /// <returns></returns>
-        public List<BaseLog> GetLogs(ICriteria criteria)
+        public List<Log> GetLogs(ICriteria criteria)
         {
-            var logs = new List<BaseLog>();
+            var logs = new List<Log>();
 
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {

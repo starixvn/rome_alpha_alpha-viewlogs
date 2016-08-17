@@ -8,25 +8,22 @@
     using Requests.Login;
     using Services;
     using ViewLogs.Helpers;
+    using ViewModels;
     using ViewModels.Login;
 
-    public class LoginHandler : IRequestHandler<IndexQuery, IndexViewModel>
+    public class LoginHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
         private readonly LoginService loginService;
 
-        private readonly XsltLogFormatService xsltLogFormatService;
-
-        public LoginHandler(
-           LoginService loginService,
-           XsltLogFormatService xsltLogFormatService)
+        public LoginHandler(LoginService loginService, XsltLogFormatter xsltLogFormatter) :
+            base(xsltLogFormatter)
         {
             this.loginService = loginService;
-            this.xsltLogFormatService = xsltLogFormatService;
         }
 
         public IndexViewModel Handle(IndexQuery message)
         {
-            var logsParam = message.ConvertToGetLogsParam();
+            var logsParam = GetLogsParam(message);
             var pagingLogs = loginService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam);
@@ -41,11 +38,11 @@
         }
 
         private void TransformLogsToHtml(
-            PagingLogs<BaseLog> pagingLogs,
+            PagingLogs<Log> pagingLogs,
             IndexQuery message,
             GetLogsViewModel viewModel)
         {
-            var htmlLogs = new List<LoginLogViewModel>();
+            var htmlLogs = new List<LogViewModel>();
 
             foreach (LoginLog log in pagingLogs.Logs)
             {
@@ -71,11 +68,11 @@
                     TrackingValue = Converter.ToDecimal(log.TrackingValue).Format(2),
                     TrackingValueOld = Converter.ToDecimal(log.TrackingValueOld).Format(2),
                     Details = log.Details,
-                    IP = xsltLogFormatService.FormatIP(log.IP),
+                    IP = XsltLogFormatter.FormatIP(log.IP),
 
                     Domain = log.Domain,
                     Browser = log.Browser,
-                    Country = xsltLogFormatService.FormatCountryCode(log.IP, log.CountryCode)
+                    Country = XsltLogFormatter.FormatCountryCode(log.IP, log.CountryCode)
                 });
             }
 

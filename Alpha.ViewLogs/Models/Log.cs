@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class BaseLog
+    public class Log
     {
         public int ActionId { get; set; }
 

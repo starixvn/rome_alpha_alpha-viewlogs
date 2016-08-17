@@ -30,7 +30,7 @@
         public void CheckIsBelongingByUsername_NullCriteria_ThrowNullReferenceException()
         {
             // Arrange
-            CheckIsBelongingByUsernameCriteria nullCriteria = null;
+            GetCustInfoByUsernameCriteria nullCriteria = null;
 
             // Action & Assert
             Assert.Throws<NullReferenceException>(new TestDelegate(() => customerService.CheckIsBelongingByUsername(nullCriteria)));
@@ -41,7 +41,7 @@
         public void CheckIsBelongingByUsername_NullOrEmptyUsername_ReturnsNull(string username)
         {
             // Arrange
-            var criteria = new CheckIsBelongingByUsernameCriteria
+            var criteria = new GetCustInfoByUsernameCriteria
             {
                 Username = username
             };
@@ -57,7 +57,7 @@
         public void CheckIsBelongingByUsername_ValidUsername_ReturnCustomerInfoFromDataAccess()
         {
             // Arrange
-            var criteria = new CheckIsBelongingByUsernameCriteria
+            var criteria = new GetCustInfoByUsernameCriteria
             {
                 Username = ValidUsername
             };
@@ -68,7 +68,7 @@
                 CustId = ValidCustId
             };
 
-            customerDataAccess.CheckIsBelongingByUsername(criteria).Returns<CustomerInfo>(expectedCustomerInfo);
+            customerDataAccess.GetCustInfoByUsername(criteria).Returns<CustomerInfo>(expectedCustomerInfo);
 
             // Action 
             var actualCustomerInfo = customerService.CheckIsBelongingByUsername(criteria);

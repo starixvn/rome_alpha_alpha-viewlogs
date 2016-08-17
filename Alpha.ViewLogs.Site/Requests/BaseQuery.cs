@@ -1,10 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Site.Requests
 {
+    using System;
+    using System.Collections.Generic;
     using Configurations;
     using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Model.Entities.Permission;
-    using System;
-    using System.Collections.Generic;
     using ViewLogs.Constants;
 
     public class BaseQuery

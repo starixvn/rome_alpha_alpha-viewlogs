@@ -1,5 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Site.App_Start
 {
+    using System.Collections.Generic;
+    using System.Reflection;
+    using System.Web;
+    using System.Web.Mvc;
+    using System.Web.SessionState;
     using Controllers;
     using DataAccesses;
     using DataAccesses.Impl;
@@ -11,11 +16,6 @@
     using SimpleInjector.Integration.Web;
     using SimpleInjector.Integration.Web.Mvc;
     using Sunplus.Agent.Model.Entities;
-    using System.Collections.Generic;
-    using System.Reflection;
-    using System.Web;
-    using System.Web.Mvc;
-    using System.Web.SessionState;
 
     public static class DependencyConfig
     {
@@ -88,7 +88,7 @@
 
             container.Register<CustomerService, CustomerServiceImpl>(Lifestyle.Transient);
             container.Register<TransformTrackingValueToHtmlService, TransformTrackingValueToHtmlServiceImpl>(Lifestyle.Transient);
-            container.Register<XsltLogFormatService, XsltLogFormatServiceImpl>(Lifestyle.Transient);
+            container.Register<XsltLogFormatter, XsltLogFormatterImpl>(Lifestyle.Transient);
             container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);
 
             container.Register<CustomerSettingService, CustomerSettingServiceImpl>(Lifestyle.Transient);

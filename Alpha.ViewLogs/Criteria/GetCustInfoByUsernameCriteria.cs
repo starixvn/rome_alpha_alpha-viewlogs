@@ -2,7 +2,7 @@
 {
     using Fanex.Data.Repository;
 
-    public class CheckIsBelongingByUsernameCriteria : CriteriaBase
+    public class GetCustInfoByUsernameCriteria : CriteriaBase
     {
         public string Username { get; set; }
 
