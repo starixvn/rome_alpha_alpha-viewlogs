@@ -207,37 +207,39 @@
     <Content Include="App_Data\SPNames\Internal\DBLOG.bodb_CustomerLog.xml" />
     <Content Include="App_Data\SPNames\Local\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Local\DBCust.IPDB.xml" />
-    <Content Include="App_Data\SPNames\Local\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\Local\DBLOG.bodb_CustomerLog.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\SPNames\Pro\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Pro\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\Pro\DBLOG.bodb_CustomerLog.xml" />
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
-    <Content Include="assets\bundles\creditlogs.js" />
-    <Content Include="assets\bundles\creditlogs.min.js">
-      <DependentUpon>creditlogs.js</DependentUpon>
+    <Content Include="assets\bundles\credit.js" />
+    <Content Include="assets\bundles\credit.min.js">
+      <DependentUpon>credit.js</DependentUpon>
     </Content>
-    <Content Include="assets\bundles\customersettinglogs.js" />
-    <Content Include="assets\bundles\customersettinglogs.min.js">
-      <DependentUpon>customersettinglogs.js</DependentUpon>
+    <Content Include="assets\bundles\customersetting.js" />
+    <Content Include="assets\bundles\customersetting.min.js">
+      <DependentUpon>customersetting.js</DependentUpon>
     </Content>
     <Content Include="assets\bundles\default.css" />
     <Content Include="assets\bundles\default.min.css">
       <DependentUpon>default.css</DependentUpon>
     </Content>
-    <Content Include="assets\bundles\loginlogs.js" />
-    <Content Include="assets\bundles\loginlogs.min.js">
-      <DependentUpon>loginlogs.js</DependentUpon>
+    <Content Include="assets\bundles\login.js" />
+    <Content Include="assets\bundles\login.min.js">
+      <DependentUpon>login.js</DependentUpon>
     </Content>
-    <Content Include="assets\bundles\statuslogs.js" />
-    <Content Include="assets\bundles\statuslogs.min.js">
-      <DependentUpon>statuslogs.js</DependentUpon>
+    <Content Include="assets\bundles\status.js" />
+    <Content Include="assets\bundles\status.min.js">
+      <DependentUpon>status.js</DependentUpon>
     </Content>
-    <TypeScriptCompile Include="assets\scripts\creditlogs\creditlogs-manager.ts" />
-    <TypeScriptCompile Include="assets\scripts\creditlogs\creditlogs-viewmanager.ts" />
-    <TypeScriptCompile Include="assets\scripts\loginlogs\loginlogs-manager.ts" />
-    <TypeScriptCompile Include="assets\scripts\loginlogs\loginlogs-viewmanager.ts" />
+    <TypeScriptCompile Include="assets\scripts\credit\index-controller.ts" />
+    <TypeScriptCompile Include="assets\scripts\credit\index-view.ts" />
+    <TypeScriptCompile Include="assets\scripts\login\index-controller.ts" />
+    <TypeScriptCompile Include="assets\scripts\login\index-view.ts" />
     <Content Include="assets\scripts\old-main.js" />
     <Content Include="assets\styles\viewlog.css">
       <DependentUpon>viewlog.scss</DependentUpon>
@@ -550,68 +552,69 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\action_921.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_922.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_924.xslt" />
-    <TypeScriptCompile Include="assets\scripts\customersettinglogs\index-viewmanager-settinglogs.ts" />
-    <TypeScriptCompile Include="assets\scripts\customersettinglogs\index-manager.ts" />
+    <TypeScriptCompile Include="assets\scripts\customersetting\index-view.ts" />
+    <TypeScriptCompile Include="assets\scripts\customersetting\index-controller.ts" />
     <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />
     <Content Include="Global.asax" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\CreditLogs\Index.cshtml" />
+    <Content Include="Views\Credit\Index.cshtml" />
     <Content Include="Views\Shared\MonthNames.cshtml" />
+    <Content Include="Views\Tab\Index.cshtml" />
     <None Include="Web.AppSettings.config" />
-    <Content Include="Views\LoginLogs\Index.cshtml" />
-    <Content Include="Views\StatusLogs\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Status\Index.cshtml" />
     <Content Include="Web.config" />
     <TypeScriptCompile Include="assets\scripts\core.ts" />
-    <TypeScriptCompile Include="assets\scripts\statuslogs\index-manager.ts" />
-    <TypeScriptCompile Include="assets\scripts\statuslogs\index-viewmanager-statuslogs.ts" />
+    <TypeScriptCompile Include="assets\scripts\status\index-controller.ts" />
+    <TypeScriptCompile Include="assets\scripts\status\index-view.ts" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\DependencyConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Constants\ViewLogType.cs" />
+    <Compile Include="Constants\TabType.cs" />
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\CreditLogsController.cs" />
-    <Compile Include="Controllers\CustomerSettingLogsController.cs" />
-    <Compile Include="Controllers\LoginLogsController.cs" />
-    <Compile Include="Controllers\StatusLogsController.cs" />
+    <Compile Include="Controllers\CreditController.cs" />
+    <Compile Include="Controllers\CustomerSettingController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\TabController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Handlers\BaseViewLogsHandler.cs" />
-    <Compile Include="Handlers\CreditLogsHandler.cs" />
-    <Compile Include="Handlers\CustomerSettingLogsHandler.cs" />
-    <Compile Include="Handlers\LoginLogsHandler.cs" />
-    <Compile Include="Handlers\StatusLogsHandler.cs" />
-    <Compile Include="Helpers\BaseLogViewModelHelper.cs" />
+    <Compile Include="Handlers\CreditHandler.cs" />
+    <Compile Include="Handlers\CustomerSettingHandler.cs" />
+    <Compile Include="Handlers\LoginHandler.cs" />
+    <Compile Include="Handlers\StatusHandler.cs" />
+    <Compile Include="Helpers\BaseViewModelHelper.cs" />
     <Compile Include="Helpers\StaticResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\BaseQuery.cs" />
-    <Compile Include="Requests\CreditLogs\IndexQuery.cs" />
-    <Compile Include="Requests\CustomerSettingLogs\GetLogsQuery.cs" />
-    <Compile Include="Requests\CustomerSettingLogs\IndexQuery.cs" />
-    <Compile Include="Requests\LoginLogs\IndexQuery.cs" />
-    <Compile Include="Requests\StatusLogs\GetLogsQuery.cs" />
-    <Compile Include="Requests\StatusLogs\IndexQuery.cs" />
-    <Compile Include="ViewModels\BaseLogViewModel.cs" />
-    <Compile Include="ViewModels\CreditLogs\GetLogsViewModel.cs" />
-    <Compile Include="ViewModels\CreditLogs\IndexViewModel.cs" />
-    <Compile Include="ViewModels\CustomerSettingLogs\GetLogsViewModel.cs" />
-    <Compile Include="ViewModels\CustomerSettingLogs\IndexViewModel.cs" />
-    <Compile Include="ViewModels\CustomerSettingLogs\LogActionTypeViewModel.cs" />
-    <Compile Include="ViewModels\LoginLogs\GetLogsViewModel.cs" />
-    <Compile Include="ViewModels\LoginLogs\IndexViewModel.cs" />
-    <Compile Include="ViewModels\LoginLogs\LoginLogViewModel.cs" />
-    <Compile Include="ViewModels\TabViewModal.cs" />
-    <Compile Include="ViewModels\StatusLogs\GetLogsViewModel.cs" />
-    <Compile Include="ViewModels\StatusLogs\IndexViewModel.cs" />
+    <Compile Include="Requests\Credit\IndexQuery.cs" />
+    <Compile Include="Requests\CustomerSetting\GetLogsQuery.cs" />
+    <Compile Include="Requests\CustomerSetting\IndexQuery.cs" />
+    <Compile Include="Requests\Login\IndexQuery.cs" />
+    <Compile Include="Requests\Status\GetLogsQuery.cs" />
+    <Compile Include="Requests\Status\IndexQuery.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Credit\GetLogsViewModel.cs" />
+    <Compile Include="ViewModels\Credit\IndexViewModel.cs" />
+    <Compile Include="ViewModels\CustomerSetting\GetLogsViewModel.cs" />
+    <Compile Include="ViewModels\CustomerSetting\IndexViewModel.cs" />
+    <Compile Include="ViewModels\CustomerSetting\LogActionTypeViewModel.cs" />
+    <Compile Include="ViewModels\Login\GetLogsViewModel.cs" />
+    <Compile Include="ViewModels\Login\IndexViewModel.cs" />
+    <Compile Include="ViewModels\Login\LoginLogViewModel.cs" />
+    <Compile Include="ViewModels\TabViewModel.cs" />
+    <Compile Include="ViewModels\Status\GetLogsViewModel.cs" />
+    <Compile Include="ViewModels\Status\IndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="bundleconfig.json" />
     <Content Include="compilerconfig.json" />
-    <Content Include="Views\CustomerSettingLogs\Index.cshtml" />
+    <Content Include="Views\CustomerSetting\Index.cshtml" />
     <Content Include="Web.AppSettings.local.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>

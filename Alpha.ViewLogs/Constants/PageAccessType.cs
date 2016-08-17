@@ -17,13 +17,13 @@
         {
             var permissions = new Dictionary<string, string>();
 
-            permissions.Add(ViewTotalBets, Resources.TotalBets + "/" + Resources.Forecast);
-            permissions.Add(ViewReports, Resources.Reports);
             permissions.Add(CreateAccount, Resources.MemberInfo + ": " + Resources.FullControl);
-            permissions.Add(UpdateAccount, Resources.MemberInfo + ": " + Resources.Update);
-            permissions.Add(ViewMemberInfo, Resources.MemberInfo + ": " + Resources.View);
             permissions.Add(Transfer, Resources.Transfer);
+            permissions.Add(UpdateAccount, Resources.MemberInfo + ": " + Resources.Update);
             permissions.Add(ViewLog, Resources.ViewLog);
+            permissions.Add(ViewMemberInfo, Resources.MemberInfo + ": " + Resources.View);
+            permissions.Add(ViewReports, Resources.Reports);
+            permissions.Add(ViewTotalBets, Resources.TotalBets + "/" + Resources.Forecast);
 
             return permissions;
         }

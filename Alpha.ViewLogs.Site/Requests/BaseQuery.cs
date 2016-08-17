@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.Requests
 {
     using Configurations;
+    using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Model.Entities.Permission;
     using System;
     using System.Collections.Generic;
@@ -55,8 +56,6 @@
 
         public bool IsShowMyanmarOdds { get; set; }
 
-        public List<int> NewFormatActionLogIds { get; set; }
-
         public DateTime MaxReportDate
         {
             get
@@ -71,6 +70,17 @@
             {
                 return minReportDate;
             }
+        }
+
+        public void AssignServerSideParam(IUserSession currentUserSession, bool isShowOldValue)
+        {
+            RoleId = currentUserSession.RoleId;
+            HasViewLogPermission = currentUserSession.SubPageAccess != null && currentUserSession.SubPageAccess.ViewLog;
+            Language = currentUserSession.Language;
+            IsInternal = false;
+            IsShowOldValue = isShowOldValue;
+            UplineId = currentUserSession.CustId;
+            IsShowMyanmarOdds = UserPermission.IsShowMyanmarOdds;
         }
 
         private void SetActionIdVisibilities()

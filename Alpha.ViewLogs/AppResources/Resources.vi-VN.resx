@@ -157,26 +157,11 @@
   <data name="AgentSite" xml:space="preserve">
     <value>Agent Site</value>
   </data>
-  <data name="AccountingSite" xml:space="preserve">
-    <value>Accounting Site</value>
-  </data>
   <data name="Unlimited" xml:space="preserve">
     <value>Không giới hạn</value>
   </data>
   <data name="DisabledVirtualSports" xml:space="preserve">
     <value>Không cho phép chơi Virtual Sports</value>
-  </data>
-  <data name="DisableGoldDeluxe" xml:space="preserve">
-    <value>Disable Gold Deluxe</value>
-  </data>
-  <data name="DisableColossusBets" xml:space="preserve">
-    <value>Disable Colossus Bets</value>
-  </data>
-  <data name="DisableCockfighting" xml:space="preserve">
-    <value>Disabled Cockfighting</value>
-  </data>
-  <data name="DisableAllBet" xml:space="preserve">
-    <value>Disabled Allbet</value>
   </data>
   <data name="Disabled" xml:space="preserve">
     <value>Vô hiệu hóa</value>
@@ -291,9 +276,6 @@
   </data>
   <data name="Details" xml:space="preserve">
     <value>Chi tiết</value>
-  </data>
-  <data name="IP" xml:space="preserve">
-    <value>IP</value>
   </data>
   <data name="Domain" xml:space="preserve">
     <value>Domain</value>

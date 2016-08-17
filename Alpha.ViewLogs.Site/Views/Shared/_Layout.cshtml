@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @StaticResources.AssetStyles.Render($"/bundles/site-viewlogs/viewlogs-{Model.UserLevel}")
-    <link rel="stylesheet" href="@(StaticResources.MainSiteStyleUrl("~/assets/bundles/default"))" />
+    <link rel="stylesheet" href="@(StaticResources.ViewLogsSiteStyleUrl("~/assets/bundles/default"))" />
     @RenderSection("Styles", required: false)
 </head>
 <body>
@@ -25,16 +25,7 @@
         </div>
     </div>
     <div class="container-fluid">
-        <ul class="nav nav-tabs" role="tablist">
-            @foreach (var tab in ViewBag.Tabs)
-            {
-                var isActive = string.Equals(tab.Id, ViewBag.SelectedTab, StringComparison.OrdinalIgnoreCase);
-                var tabId = tab.Id.ToLower();
-                <li role="presentation" class="@(isActive ? "active" : "")">
-                    <a data-tablink="@tab.HRef" role="tab" aria-controls="@tabId" data-toggle="tab" class="lnk-changetab">@tab.Name</a>
-                </li>
-            }
-        </ul>
+        @Html.Action("Index", "Tab", new { tabName = ViewContext.RouteData.Values["controller"], area = "" })
         @RenderBody()
         @Html.Partial("MonthNames")
     </div>

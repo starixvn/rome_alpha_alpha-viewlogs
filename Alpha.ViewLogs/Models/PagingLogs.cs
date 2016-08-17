@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public class PagingLogs
+    public class PagingLogs<BaseLog>
     {
         public List<BaseLog> Logs { get; set; }
 

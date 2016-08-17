@@ -157,26 +157,11 @@
   <data name="AgentSite" xml:space="preserve">
     <value>เอเจนต์ ไซค์</value>
   </data>
-  <data name="AccountingSite" xml:space="preserve">
-    <value>Accounting Site</value>
-  </data>
   <data name="Unlimited" xml:space="preserve">
     <value>ไม่จำกัด</value>
   </data>
   <data name="DisabledVirtualSports" xml:space="preserve">
     <value>ปิดกีฬาอนิเมชั่น</value>
-  </data>
-  <data name="DisableGoldDeluxe" xml:space="preserve">
-    <value>Disable Gold Deluxe</value>
-  </data>
-  <data name="DisableColossusBets" xml:space="preserve">
-    <value>Disable Colossus Bets</value>
-  </data>
-  <data name="DisableCockfighting" xml:space="preserve">
-    <value>Disabled Cockfighting</value>
-  </data>
-  <data name="DisableAllBet" xml:space="preserve">
-    <value>Disabled Allbet</value>
   </data>
   <data name="Disabled" xml:space="preserve">
     <value>ปิดการใช้งาน</value>
@@ -201,9 +186,6 @@
   </data>
   <data name="ShowOldValues" xml:space="preserve">
     <value>แสดงค่าเก่า</value>
-  </data>
-  <data name="LoginLogs_Warning" xml:space="preserve">
-    <value>The member Login Log is not available.</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>ชื่อผู้ใช้</value>

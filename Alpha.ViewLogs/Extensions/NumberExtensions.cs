@@ -1,7 +1,5 @@
 ﻿namespace Alpha.ViewLogs.Extensions
 {
-    using System;
-
     public static class NumberExtensions
     {
         public static string Format(this int value)

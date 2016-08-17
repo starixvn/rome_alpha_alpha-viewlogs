@@ -47,10 +47,6 @@
             }
         }
 
-        [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "shutDownStack", Justification = "Reviewed!")]
-        [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "shutDownMessage", Justification = "Reviewed!")]
-        [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "Sunplus.Agent.Utilities.Logs.WriteInfo(System.String)", Justification = "Reviewed!")]
         protected void Application_End()
         {
             HttpRuntime runtime = (HttpRuntime)typeof(HttpRuntime).InvokeMember(

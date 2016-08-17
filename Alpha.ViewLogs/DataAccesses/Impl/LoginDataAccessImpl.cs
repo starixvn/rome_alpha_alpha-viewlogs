@@ -1,0 +1,55 @@
+﻿namespace Alpha.ViewLogs.DataAccesses.Impl
+{
+    using Fanex.Common;
+    using Fanex.Data;
+    using Fanex.Data.Repository;
+    using Models.Login;
+    using System.Collections.Generic;
+
+    public class LoginDataAccessImpl : LoginDataAccess
+    {
+        /// <summary>
+        /// Get Log in Logs
+        /// Must manual mapping because when there is no data, sp doesn't return data table
+        /// and make auto-mapping function error
+        /// </summary>
+        /// <param name="criteria"></param>
+        /// <returns></returns>
+        public List<LoginLog> GetLogs(ICriteria criteria)
+        {
+            var logs = new List<LoginLog>();
+
+            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            {
+                objectDb.ExecuteNonQuery(criteria.GetSpParams());
+
+                using (var reader = objectDb.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        logs.Add(new LoginLog
+                        {
+                            LogId = Converter.ToInt(reader["LogID"]),
+                            UserId = Converter.ToInt(reader["UserID"]),
+                            Username = Converter.ToString2(reader["Username"]),
+                            Details = Converter.ToString2(reader["Doing"]),
+                            LogDate = Converter.ToDateTime(reader["LogDate"]),
+                            ActionId = Converter.ToInt(reader["ActionID"]),
+                            IsInternal = (byte)Converter.ToInt(reader["IsInternal"]),
+                            ActionName = Converter.ToString2(reader["ActionName"]),
+                            SPName = Converter.ToString2(reader["SPName"]),
+                            IP = Converter.ToString2(reader["IP"]),
+                            ServerId = Converter.ToString2(reader["ServerId"]),
+                            Browser = Converter.ToString2(reader["Browser"]),
+                            Domain = Converter.ToString2(reader["Domain"]),
+                            Platform = Converter.ToString2(reader["Platform"]),
+                            CountryCode = Converter.ToString2(reader["CountryCode"])
+                        });
+                    }
+                }
+            }
+
+            return logs;
+        }
+    }
+}

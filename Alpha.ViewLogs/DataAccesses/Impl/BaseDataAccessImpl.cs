@@ -3,9 +3,18 @@
     using Fanex.Common;
     using Fanex.Data;
     using Fanex.Data.Repository;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class BaseDataAccessImpl : BaseDataAccess
     {
+        private IDynamicRepository dynamicRepository;
+
+        public BaseDataAccessImpl(IDynamicRepository dynamicRepository)
+        {
+            this.dynamicRepository = dynamicRepository;
+        }
+
         public int GetTotalRecordsOfLogs(ICriteria criteria)
         {
             int totalRecords;
@@ -15,6 +24,11 @@
             }
 
             return totalRecords;
+        }
+
+        public virtual List<BaseLogType> GetLogs<BaseLogType>(ICriteria criteria)
+        {
+            return dynamicRepository.Fetch<BaseLogType>(criteria).ToList();
         }
     }
 }

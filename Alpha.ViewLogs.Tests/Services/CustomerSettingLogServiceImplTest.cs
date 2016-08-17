@@ -1,12 +1,12 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
-    using Criteria.CustomerSettingLogs;
+    using Criteria.CustomerSetting;
     using DataAccesses;
     using Fanex.Data.Repository;
-    using Models.CustomerSettingLogs;
+    using Models.CustomerSetting;
     using NSubstitute;
     using NUnit.Framework;
-    using Params.CustomerSettingLogs;
+    using Params.CustomerSetting;
     using System.Collections.Generic;
     using ViewLogs.Services;
     using ViewLogs.Services.Impl;
@@ -21,8 +21,8 @@
         private BaseDataAccess baseDataAccess;
         private CachingManager cacheManager;
         private IDynamicRepository dynamicRepository;
-        private CustomerSettingLogsServiceImpl customerSettingLog;
-        private BaseLogService baseLogService;
+        private CustomerSettingServiceImpl customerSettingLog;
+        private BaseService baseLogService;
 
         [SetUp]
         public void SetUp()
@@ -31,9 +31,9 @@
             baseDataAccess = Substitute.For<BaseDataAccess>();
             cacheManager = Substitute.For<CachingManager>();
             dynamicRepository = Substitute.For<IDynamicRepository>();
-            baseLogService = Substitute.For<BaseLogService>();
+            baseLogService = Substitute.For<BaseService>();
 
-            customerSettingLog = new CustomerSettingLogsServiceImpl(customerService, baseDataAccess, cacheManager, dynamicRepository, baseLogService);
+            customerSettingLog = new CustomerSettingServiceImpl(customerService, baseDataAccess, cacheManager, dynamicRepository, baseLogService);
         }
 
         [Test]

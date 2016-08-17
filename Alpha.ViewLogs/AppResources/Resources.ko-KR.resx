@@ -154,23 +154,11 @@
   <data name="AgentSite" xml:space="preserve">
     <value>에이전트 사이트</value>
   </data>
-  <data name="AccountingSite" xml:space="preserve">
-    <value>Accounting Site</value>
-  </data>
   <data name="Unlimited" xml:space="preserve">
     <value>무제한</value>
   </data>
   <data name="DisabledVirtualSports" xml:space="preserve">
     <value>가상스포츠 비활성화하기</value>
-  </data>
-  <data name="DisableGoldDeluxe" xml:space="preserve">
-    <value>Disable Gold Deluxe</value>
-  </data>
-  <data name="DisableColossusBets" xml:space="preserve">
-    <value>Disable Colossus Bets</value>
-  </data>
-  <data name="DisableCockfighting" xml:space="preserve">
-    <value>Disabled Cockfighting</value>
   </data>
   <data name="DisableAllBet" xml:space="preserve">
     <value>Disabled Allbet</value>
@@ -184,9 +172,6 @@
   <data name="Status" xml:space="preserve">
     <value>상태</value>
   </data>
-  <data name="Credit" xml:space="preserve">
-    <value>Credit</value>
-  </data>
   <data name="Login" xml:space="preserve">
     <value>로그인</value>
   </data>
@@ -198,9 +183,6 @@
   </data>
   <data name="ShowOldValues" xml:space="preserve">
     <value>Show old values</value>
-  </data>
-  <data name="LoginLogs_Warning" xml:space="preserve">
-    <value>The member Login Log is not available.</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>사용자 이름</value>
@@ -228,12 +210,6 @@
   </data>
   <data name="Action" xml:space="preserve">
     <value>Action</value>
-  </data>
-  <data name="Details" xml:space="preserve">
-    <value>Details</value>
-  </data>
-  <data name="NoInfo" xml:space="preserve">
-    <value>No information is available</value>
   </data>
   <data name="of" xml:space="preserve">
     <value>부터</value>
@@ -285,9 +261,6 @@
   </data>
   <data name="NewValue" xml:space="preserve">
     <value>New value</value>
-  </data>
-  <data name="IP" xml:space="preserve">
-    <value>IP</value>
   </data>
   <data name="Domain" xml:space="preserve">
     <value>도메인</value>

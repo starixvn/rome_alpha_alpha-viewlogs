@@ -12,7 +12,6 @@
     using SimpleInjector.Integration.Web.Mvc;
     using Sunplus.Agent.Model.Entities;
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using System.Reflection;
     using System.Web;
     using System.Web.Mvc;
@@ -20,7 +19,6 @@
 
     public static class DependencyConfig
     {
-        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Reviewed")]
         public static void Init()
         {
             var container = new Container();
@@ -89,15 +87,15 @@
                 Lifestyle.Transient);
 
             container.Register<CustomerService, CustomerServiceImpl>(Lifestyle.Transient);
-            container.Register<BaseLogService, BaseLogServiceImpl>(Lifestyle.Transient);
+            container.Register<BaseService, BaseServiceImpl>(Lifestyle.Transient);
             container.Register<TransformTrackingValueToHtmlService, TransformTrackingValueToHtmlServiceImpl>(Lifestyle.Transient);
             container.Register<XsltLogFormatService, XsltLogFormatServiceImpl>(Lifestyle.Transient);
             container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);
 
-            container.Register<CustomerSettingLogsService, CustomerSettingLogsServiceImpl>(Lifestyle.Transient);
-            container.Register<StatusLogsService, StatusLogsServiceImpl>(Lifestyle.Transient);
-            container.Register<CreditLogsService, CreditLogsServiceImpl>(Lifestyle.Transient);
-            container.Register<LoginLogsService, LoginLogsServiceImpl>(Lifestyle.Transient);
+            container.Register<CustomerSettingService, CustomerSettingServiceImpl>(Lifestyle.Transient);
+            container.Register<StatusService, StatusServiceImpl>(Lifestyle.Transient);
+            container.Register<CreditService, CreditServiceImpl>(Lifestyle.Transient);
+            container.Register<LoginService, LoginServiceImpl>(Lifestyle.Transient);
         }
 
         private static void RegisterDataAccesses(Container container)
@@ -105,7 +103,7 @@
             container.Register<IDynamicRepository, DynamicRepository>(Lifestyle.Transient);
             container.Register<CustomerDataAccess, CustomerDataAccessImpl>(Lifestyle.Transient);
             container.Register<BaseDataAccess, BaseDataAccessImpl>(Lifestyle.Transient);
-            container.Register<LoginLogsDataAccess, LoginLogsDataAccessImpl>(Lifestyle.Transient);
+            container.Register<LoginDataAccess, LoginDataAccessImpl>(Lifestyle.Transient);
         }
     }
 }

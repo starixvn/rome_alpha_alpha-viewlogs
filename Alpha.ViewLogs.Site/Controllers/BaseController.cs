@@ -2,10 +2,7 @@
 {
     using Configurations;
     using Fanex.Common;
-    using Requests;
     using Sunplus.Agent.Model.Entities;
-    using Sunplus.Agent.Model.Entities.Permission;
-    using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Text;
     using System.Threading;
@@ -38,22 +35,26 @@
             }
         }
 
-        [SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Justification = "Reviewed!")]
         protected override void OnAuthentication(AuthenticationContext filterContext)
         {
             base.OnAuthentication(filterContext);
 
             if (!filterContext.HttpContext.User.Identity.IsAuthenticated ||
-                UserSession.Current.UserId <= 0)
+                CurrentUserSession.UserId <= 0)
             {
-                var logInUrl = MicroSites.OldMainUrl(FormsAuthentication.LoginUrl);
+                var logInUrl = MicroSites.OldMainPath(FormsAuthentication.LoginUrl);
                 Response.Redirect(logInUrl, true);
                 return;
             }
 
-            if (!UserSession.Current.SubPageAccess.ViewLog)
+            if (!CurrentUserSession.SubPageAccess.ViewLog)
             {
-                Response.Redirect(MicroSites.OldMainUrl(AppSettings.AccessDeniedPage));
+                Response.Redirect(MicroSites.OldMainPath(AppSettings.AccessDeniedPage));
+            }
+
+            if (!CanViewSettingLogs(CurrentUserSession))
+            {
+                Response.Redirect(LoginLogsURL);
             }
         }
 
@@ -75,7 +76,7 @@
 
         protected override void Initialize(RequestContext requestContext)
         {
-            var cultureName = UserSession.Current.Language;
+            var cultureName = CurrentUserSession.Language;
 
             if (string.IsNullOrEmpty(cultureName))
             {
@@ -106,18 +107,6 @@
             bool showOldValue = cookie == null || Converter.ToInt(cookie.Value) == 1;
 
             return showOldValue;
-        }
-
-        protected virtual void AssignServerSideParamForGetLogsQuery(BaseQuery getLogsQuery)
-        {
-            getLogsQuery.RoleId = CurrentUserSession.RoleId;
-            getLogsQuery.HasViewLogPermission = CurrentUserSession.SubPageAccess != null && CurrentUserSession.SubPageAccess.ViewLog;
-            getLogsQuery.Language = CurrentUserSession.Language;
-            getLogsQuery.IsInternal = false;
-            getLogsQuery.IsShowOldValue = GetShowOldValue();
-            getLogsQuery.UplineId = CurrentUserSession.CustId;
-            getLogsQuery.NewFormatActionLogIds = AppSettings.NewFormatActionLogIds;
-            getLogsQuery.IsShowMyanmarOdds = UserPermission.IsShowMyanmarOdds;
         }
     }
 }

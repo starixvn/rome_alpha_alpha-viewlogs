@@ -53,7 +53,6 @@
             cache.Set(key, item, policy);
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily", Justification = "Reviewed!")]
         public T Get<T>(string key)
         {
             ValidateKey(key);
@@ -88,7 +87,6 @@
             return GetOrAdd(key, addItemFactory, new CacheItemPolicy { SlidingExpiration = slidingExpiration });
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily", Justification = "Reviewed!")]
         public T GetOrAdd<T>(string key, Func<T> addItemFactory, CacheItemPolicy policy)
         {
             ValidateKey(key);

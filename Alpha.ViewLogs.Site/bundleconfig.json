@@ -6,39 +6,39 @@
     ]
   },
   {
-    "outputFileName": "assets/bundles/customersettinglogs.js",
+    "outputFileName": "assets/bundles/customersetting.js",
     "inputFiles": [
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",
-      "assets/scripts/customersettinglogs/index-viewmanager-settinglogs.js",
-      "assets/scripts/customersettinglogs/index-manager.js"
+      "assets/scripts/customersetting/index-view.js",
+      "assets/scripts/customersetting/index-controller.js"
     ]
   },
   {
-    "outputFileName": "assets/bundles/statuslogs.js",
+    "outputFileName": "assets/bundles/status.js",
     "inputFiles": [
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",
-      "assets/scripts/statuslogs/index-viewmanager-statuslogs.js",
-      "assets/scripts/statuslogs/index-manager.js"
+      "assets/scripts/status/index-view.js",
+      "assets/scripts/status/index-controller.js"
     ]
   },
   {
-    "outputFileName": "assets/bundles/creditlogs.js",
+    "outputFileName": "assets/bundles/credit.js",
     "inputFiles": [
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",
-      "assets/scripts/creditlogs/creditlogs-viewmanager.js",
-      "assets/scripts/creditlogs/creditlogs-manager.js"
+      "assets/scripts/credit/index-view.js",
+      "assets/scripts/credit/index-controller.js"
     ]
   },
   {
-    "outputFileName": "assets/bundles/loginlogs.js",
+    "outputFileName": "assets/bundles/login.js",
     "inputFiles": [
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",
-      "assets/scripts/loginlogs/loginlogs-viewmanager.js",
-      "assets/scripts/loginlogs/loginlogs-manager.js"
+      "assets/scripts/login/index-view.js",
+      "assets/scripts/login/index-controller.js"
     ]
   }
 ]
