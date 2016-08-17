@@ -216,6 +216,10 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <TypeScriptCompile Include="assets\scripts\credit\index-controller.ts" />
+    <TypeScriptCompile Include="assets\scripts\credit\index-view.ts" />
+    <TypeScriptCompile Include="assets\scripts\login\index-controller.ts" />
+    <TypeScriptCompile Include="assets\scripts\login\index-view.ts" />
     <Content Include="assets\bundles\credit.js" />
     <Content Include="assets\bundles\credit.min.js">
       <DependentUpon>credit.js</DependentUpon>
@@ -236,10 +240,6 @@
     <Content Include="assets\bundles\status.min.js">
       <DependentUpon>status.js</DependentUpon>
     </Content>
-    <TypeScriptCompile Include="assets\scripts\credit\index-controller.ts" />
-    <TypeScriptCompile Include="assets\scripts\credit\index-view.ts" />
-    <TypeScriptCompile Include="assets\scripts\login\index-controller.ts" />
-    <TypeScriptCompile Include="assets\scripts\login\index-view.ts" />
     <Content Include="assets\scripts\old-main.js" />
     <Content Include="assets\styles\viewlog.css">
       <DependentUpon>viewlog.scss</DependentUpon>

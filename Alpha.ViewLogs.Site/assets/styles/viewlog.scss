@@ -10,6 +10,14 @@ $height-td: 28px;
 
 .tab-content {
     margin-bottom: 15px;
+    margin-top: 40px;
+}
+.nav.nav-tabs {
+    background: #f4f4f4;
+    position: fixed;
+    left: 15px;
+    right: 15px;
+    z-index: 99999;
 }
 
 .filter {
@@ -23,6 +31,14 @@ $height-td: 28px;
         }
         &.submit-box {
             width: 120px;
+        }
+    }
+
+    .warning {
+        margin-bottom: 10px;
+        .txt-red { color: #f00;}
+        label {
+            font-weight: normal;
         }
     }
 }
@@ -55,7 +71,6 @@ $height-td: 28px;
         border-bottom: none;
     }
     td.colW1 {
-        background-color: #f3f3f3;
         text-align: left;
         text-transform: capitalize;
         width: 18.1818%;
@@ -108,6 +123,10 @@ $height-td: 28px;
     tr.headerSportTypeDetail td{
         padding: 0 16px;
     }
+}
+
+#DataLog > tbody > tr:nth-child(even) td {
+    background: #f8f8f8;
 }
  
 .headerSportTypeDetail {

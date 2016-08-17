@@ -28,13 +28,14 @@
                     <input type="button" class="btn-submit" id="btn-submit" value="@Resources.Submit">
                     <span id="icon-loading" class="hide block-icon-small"></span>
                 </div>
-                @if (isAgent)
-                {
-                    <div class="form-group">
-                        <label>@Resources.LoginLogs_Warning</label>
-                    </div>
-                }
             </form>
+            @if (isAgent)
+            {
+                <div class="warning">
+                    <span class="txt-red">*</span>
+                    <label>@Resources.LoginLogs_Warning</label>
+                </div>
+            }
         </div>
 
         <div id="content">
