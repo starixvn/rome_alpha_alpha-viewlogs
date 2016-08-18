@@ -5,6 +5,7 @@
     using Fanex.Common;
     using MediatR;
     using Models;
+    using Models.Enumerations;
     using Requests.Login;
     using Services;
     using ViewLogs.Helpers;
@@ -28,11 +29,13 @@
 
             var viewModel = new IndexViewModel();
             AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
+            viewModel.IsAgent = viewModel.RoleId == UserLevel.Agent.Value;
             viewModel.PreviousUsername = message.PreviousUsername;
 
             TransformLogsToHtml(pagingLogs, message, viewModel);
 
             viewModel.ActionTypeId = message.ActionTypeId;
+            viewModel.Username = viewModel.RoleId == UserLevel.Agent.Value ? viewModel.PreviousUsername : viewModel.Username;
 
             return viewModel;
         }

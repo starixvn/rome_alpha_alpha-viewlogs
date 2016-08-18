@@ -1,21 +1,17 @@
 ﻿@using Alpha.ViewLogs.Site.ViewModels.Login;
-@using Alpha.ViewLogs.Models.Enumerations;
 
 @model IndexViewModel
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = Resources.ViewLogLogin;
-
-    var isAgent = Model.RoleId == UserLevel.Agent.Value;
-    var username = isAgent ? Model.PreviousUsername : Model.Username;
 }
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="@ViewContext.RouteData.Values["controller"].ToString().ToLower()">
         <div class="filter">
             <form class="form-inline" role="form">
-                <div class="form-group @(isAgent? "hide":string.Empty)">
+                <div class="form-group @(Model.IsAgent? "hide":string.Empty)">
                     <input type="text" id="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
-                           value="@(string.IsNullOrEmpty(username) ? string.Empty : username)"
+                           value="@(string.IsNullOrEmpty(Model.Username) ? string.Empty : Model.Username)"
                            autocomplete="off" />
                 </div>
                 <div class="form-group">
@@ -27,7 +23,7 @@
                     <span id="icon-loading" class="hide block-icon-small"></span>
                 </div>
             </form>
-            @if (isAgent)
+            @if (Model.IsAgent)
             {
                 <div class="warning">
                     <span class="txt-red">*</span>
