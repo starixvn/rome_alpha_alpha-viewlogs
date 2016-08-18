@@ -84,15 +84,13 @@
             IndexQuery message,
             BaseIndexViewModel viewModel)
         {
-            var transformParam = new TransformTrackingValueToHtmlParam
+            var transformParam = new TransformParam
             {
                 IsShowOldValue = message.IsShowOldValue,
                 TrackingValueTransformTemplatePath = message.TrackingValueTransformTemplatePath,
                 SportBetTypeVisibilities = message.SportBetTypeVisibilities,
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds
             };
-
-            transformService.InitCompiledTransformCache(transformParam);
 
             var htmlLogs = new List<LogViewModel>();
 
@@ -105,7 +103,7 @@
                 }
 
                 var trackingValueWithDiff = TrackingValueHelper.GetTrackingValueWithDiff(log, message.IsShowOldValue);
-                var htmlTrackingValue = transformService.TransformTrackingValueToHtml(trackingValueWithDiff, log, transformParam);
+                var htmlTrackingValue = transformService.TransformTrackingValueToHtml(trackingValueWithDiff, log.ActionId, transformParam);
 
                 htmlLogs.Add(new LogViewModel
                 {

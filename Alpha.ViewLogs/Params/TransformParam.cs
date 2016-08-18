@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public class TransformTrackingValueToHtmlParam
+    public class TransformParam
     {
         public bool IsShowOldValue { get; set; }
 

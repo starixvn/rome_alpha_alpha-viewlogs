@@ -4,7 +4,7 @@
 
     public interface XsltLogFormatter
     {
-        void AssignParams(TransformTrackingValueToHtmlParam transformParam);
+        void AssignParams(TransformParam transformParam);
 
         string FormatIP(string ip);
 

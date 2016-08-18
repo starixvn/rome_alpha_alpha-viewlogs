@@ -23,7 +23,7 @@
             this.ipService = ipService;
         }
 
-        public void AssignParams(TransformTrackingValueToHtmlParam transformParam)
+        public void AssignParams(TransformParam transformParam)
         {
             if (transformParam == null)
             {

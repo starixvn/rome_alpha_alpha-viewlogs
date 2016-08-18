@@ -20,7 +20,7 @@
                 cacheManager, 
                 dynamicRepository, 
                 customerService, 
-                logDataAccess is LoginDataAccessImpl ? logDataAccess : new LoginDataAccessImpl(dynamicRepository))
+                logDataAccess)
         {
         }
 

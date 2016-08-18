@@ -5,8 +5,6 @@
 
     public interface TransformService
     {
-        void InitCompiledTransformCache(TransformTrackingValueToHtmlParam transformParam);
-
-        string TransformTrackingValueToHtml(string trackingValue, Log log, TransformTrackingValueToHtmlParam transformParam);
+        string TransformTrackingValueToHtml(string trackingValue, int logActionId, TransformParam transformParam);
     }
 }
