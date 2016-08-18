@@ -5,6 +5,8 @@
 
     public class LogParam
     {
+        public int CustId { get; set; }
+
         public int UplineId { get; set; }
 
         public int SubAccId { get; set; }

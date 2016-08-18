@@ -17,28 +17,28 @@
         {
         }
 
-        public override ICriteria CreateGetLogsCriteria(LogParam getLogsParam, int custId)
+        protected override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
             return new GetStatusLogsCriteria
             {
-                CustId = custId,
-                CustName = getLogsParam.Username,
-                FromDate = DateTimeHelper.GetBeginningOfDate(getLogsParam.FromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(getLogsParam.ToDate),
-                IsInternal = getLogsParam.IsInternal,
-                PageSize = getLogsParam.PageSize,
-                PageIndex = getLogsParam.PageIndex
+                CustId = logParam.CustId,
+                CustName = logParam.Username,
+                FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
+                ToDate = DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                IsInternal = logParam.IsInternal,
+                PageSize = logParam.PageSize,
+                PageIndex = logParam.PageIndex
             };
         }
 
-        public override ICriteria CreateTotalRecordsOfLogsCriteria(LogParam getLogsParam, int custId)
+        protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
-            return new GetTotalRecordsOfStatusLogsCriteria
+            return new GetTotalStatusLogsCriteria
             {
-                CustId = custId,
-                FromDate = DateTimeHelper.GetBeginningOfDate(getLogsParam.FromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(getLogsParam.ToDate),
-                IsInternal = getLogsParam.IsInternal
+                CustId = logParam.CustId,
+                FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
+                ToDate = DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                IsInternal = logParam.IsInternal
             };
         }
     }

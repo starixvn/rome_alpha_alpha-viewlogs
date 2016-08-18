@@ -1,11 +1,13 @@
-﻿namespace Alpha.ViewLogs.Criteria.Credit
+﻿namespace Alpha.ViewLogs.Criteria.CustomerSetting
 {
     using System;
     using Fanex.Data.Repository;
 
-    public class GetTotalRecordsOfCreditLogsCriteria : CriteriaBase
+    public class GetTotalCustomerSettingLogsCriteria : CriteriaBase
     {
         public int CustId { get; set; }
+
+        public int ActionTypeId { get; set; }
 
         public DateTime FromDate { get; set; }
 
@@ -15,7 +17,7 @@
 
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_CreditSelTotalRecords";
+            return "Acc_UserLog_RunSPSelTotalRecords";
         }
     }
 }

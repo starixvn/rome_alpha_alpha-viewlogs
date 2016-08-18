@@ -33,7 +33,7 @@
             GetCustInfoByUsernameCriteria nullCriteria = null;
 
             // Action & Assert
-            Assert.Throws<NullReferenceException>(new TestDelegate(() => customerService.CheckIsBelongingByUsername(nullCriteria)));
+            Assert.Throws<NullReferenceException>(new TestDelegate(() => customerService.GetDownlineInfoByUsername(nullCriteria)));
         }
 
         [TestCase("")]
@@ -47,7 +47,7 @@
             };
 
             // Action 
-            var customerInfo = customerService.CheckIsBelongingByUsername(criteria);
+            var customerInfo = customerService.GetDownlineInfoByUsername(criteria);
 
             // Assert
             Assert.IsNull(customerInfo);
@@ -71,7 +71,7 @@
             customerDataAccess.GetCustInfoByUsername(criteria).Returns<CustomerInfo>(expectedCustomerInfo);
 
             // Action 
-            var actualCustomerInfo = customerService.CheckIsBelongingByUsername(criteria);
+            var actualCustomerInfo = customerService.GetDownlineInfoByUsername(criteria);
 
             // Assert
             Assert.AreEqual(actualCustomerInfo, expectedCustomerInfo);

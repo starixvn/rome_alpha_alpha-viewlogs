@@ -12,9 +12,9 @@
 
     public abstract class BaseService
     {
-        public const string CacheKeyLogAction = "Alpha.ViewLogs.CustomerSetting.LogAction";
-        private const string CacheKeyLogActionTypes = "Alpha.ViewLogs.CustomerSetting.LogActionTypes";
-        private const int HourToCacheLogActions = 1;
+        public const string LogActionCacheKey = "Alpha.ViewLogs.CustomerSetting.LogAction";
+        private const string LogActionTypesCacheKey = "Alpha.ViewLogs.CustomerSetting.LogActionTypes";
+        private const int OneHour = 1;
 
         private readonly CachingManager cacheManager;
         private readonly IDynamicRepository dynamicRepository;
@@ -34,9 +34,9 @@
             this.logDataAccess = logDataAccess;
         }
 
-        public abstract ICriteria CreateGetLogsCriteria(LogParam getLogsParam, int custId);
+        protected abstract ICriteria CreateGetLogsCriteria(LogParam logParam);
 
-        public abstract ICriteria CreateTotalRecordsOfLogsCriteria(LogParam getLogsParam, int custId);
+        protected abstract ICriteria CreateGetTotalLogsCriteria(LogParam logParam);
 
 
         public string GetLogActionName(int actionId, string language)
@@ -63,78 +63,80 @@
             }
         }
 
-        public List<LogActionType> GetLogActionTypes()
+        public IEnumerable<LogActionType> GetLogActionTypes()
         {
-            var logActionTypes = cacheManager.Get<List<LogActionType>>(CacheKeyLogActionTypes);
+            var logActionTypes = cacheManager.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
 
-            if (logActionTypes != null && logActionTypes.Any())
+            if (logActionTypes != null 
+                && logActionTypes.Any())
             {
                 return logActionTypes;
             }
 
-            logActionTypes = dynamicRepository.Fetch<LogActionType>(new GetAllLogActionTypeCriteria()).ToList();
-            cacheManager.Add(CacheKeyLogActionTypes, logActionTypes);
+            logActionTypes = dynamicRepository.Fetch<LogActionType>(new GetAllLogActionTypeCriteria());
+
+            cacheManager.Add(LogActionTypesCacheKey, logActionTypes);
 
             return logActionTypes;
         }
 
         public LogAction GetLogActionByActionId(int actionId)
         {
-            var logActionDictionary = cacheManager.Get<Dictionary<int, LogAction>>(CacheKeyLogAction);
+            var logActionDictionary = cacheManager.Get<Dictionary<int, LogAction>>(LogActionCacheKey);
 
             if (logActionDictionary == null || !logActionDictionary.Any())
             {
                 logActionDictionary = new Dictionary<int, LogAction>();
                 var logActions = dynamicRepository.Fetch<LogAction>(new GetLogActionsCriteria()).ToList();
                 logActions.ForEach(logAction => logActionDictionary.Add(logAction.Id, logAction));
-                cacheManager.Add(CacheKeyLogAction, logActionDictionary, TimeSpan.FromHours(HourToCacheLogActions));
+                cacheManager.Add(LogActionCacheKey, logActionDictionary, TimeSpan.FromHours(OneHour));
             }
 
             return logActionDictionary[actionId];
         }
 
-        public PagingLogs<Log> GetLogs(LogParam getLogsParam)
+        public PagingLogs<Log> GetLogs(LogParam logParam)
         {
-            var pagingLogs = new PagingLogs<Log>
-            {
-                Logs = new List<Log>()
-            };
+            var pagingLogs = new PagingLogs<Log>();
 
-            var customerInfo = customerService.CheckIsBelongingByUsername(new GetCustInfoByUsernameCriteria
-            {
-                Username = getLogsParam.Username,
-                UplineId = getLogsParam.UplineId
-            });
+            var downlineInfo = customerService.GetDownlineInfoByUsername(
+                new GetCustInfoByUsernameCriteria
+                {
+                    Username = logParam.Username,
+                    UplineId = logParam.UplineId
+                });
 
-            var isValidDownline = customerInfo != null && customerInfo.CustId > 0;
-            if (!isValidDownline)
+            // If search username is not belong to searcher
+            if (downlineInfo.CustId == 0)
             {
                 return pagingLogs;
             }
 
-            pagingLogs.Logs = GetLogsFromDataAccess(getLogsParam, customerInfo);
-            pagingLogs.TotalRecords = GetTotalRecordsOfLogs(getLogsParam, customerInfo.CustId);
+            logParam.CustId = downlineInfo.CustId;
+
+            pagingLogs.Logs = GetLogsFromDataAccess(logParam);
+            pagingLogs.TotalRecords = GetTotalLogs(logParam);
 
             foreach (var log in pagingLogs.Logs)
             {
-                log.ActionName = GetLogActionName(log.ActionId, getLogsParam.Language);
+                log.ActionName = GetLogActionName(log.ActionId, logParam.Language);
             }
 
             return pagingLogs;
         }
 
-        public virtual List<Log> GetLogsFromDataAccess(LogParam getLogsParam, CustomerInfo customerInfo)
+        public virtual IEnumerable<Log> GetLogsFromDataAccess(LogParam logParam)
         {
-            var getLogsCriteria = CreateGetLogsCriteria(getLogsParam, customerInfo.CustId);
+            var criteria = CreateGetLogsCriteria(logParam);
 
-            return dynamicRepository.Fetch<Log>(getLogsCriteria).ToList();
+            return dynamicRepository.Fetch<Log>(criteria);
         }
 
-        private int GetTotalRecordsOfLogs(LogParam getLogsParam, int custId)
+        private int GetTotalLogs(LogParam logParam)
         {
-            var getTotalRecordsOfLogsCriteria = CreateTotalRecordsOfLogsCriteria(getLogsParam, custId);
+            var criteria = CreateGetTotalLogsCriteria(logParam);
 
-            return logDataAccess.GetTotalRecordsOfLogs(getTotalRecordsOfLogsCriteria);
+            return logDataAccess.GetTotalRecordsOfLogs(criteria);
         }
     }
 }

@@ -6,7 +6,7 @@
 
     public interface LogService
     {
-        List<LogActionType> GetLogActionTypes();
+        IEnumerable<LogActionType> GetLogActionTypes();
 
         PagingLogs<Log> GetLogs(LogParam baseParam);
     }

@@ -1,23 +1,23 @@
-﻿namespace Alpha.ViewLogs.Criteria.CustomerSetting
+﻿namespace Alpha.ViewLogs.Criteria.Login
 {
     using System;
     using Fanex.Data.Repository;
 
-    public class GetTotalRecordsOfCustomerSettingLogsCriteria : CriteriaBase
+    public class GetTotalLoginLogsCriteria : CriteriaBase
     {
+        [SpParam(SqlParamName = "UserId")]
         public int CustId { get; set; }
-
-        public int ActionTypeId { get; set; }
 
         public DateTime FromDate { get; set; }
 
         public DateTime ToDate { get; set; }
 
+        [SpParam(SqlParamName = "IsAdminAccess")]
         public bool IsInternal { get; set; }
 
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_RunSPSelTotalRecords";
+            return "Acc_UserLog_LoginSelTotalRecords";
         }
     }
 }

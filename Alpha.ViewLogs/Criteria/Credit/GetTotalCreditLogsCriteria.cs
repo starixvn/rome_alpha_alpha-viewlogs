@@ -1,9 +1,9 @@
-﻿namespace Alpha.ViewLogs.Criteria.Status
+﻿namespace Alpha.ViewLogs.Criteria.Credit
 {
     using System;
     using Fanex.Data.Repository;
 
-    public class GetTotalRecordsOfStatusLogsCriteria : CriteriaBase
+    public class GetTotalCreditLogsCriteria : CriteriaBase
     {
         public int CustId { get; set; }
 
@@ -15,7 +15,7 @@
 
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_RunSPSelTotalRecords";
+            return "Acc_UserLog_CreditSelTotalRecords";
         }
     }
 }
