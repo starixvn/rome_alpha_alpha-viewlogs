@@ -35,7 +35,7 @@
 
         public void TransformLogsToHtml(
             PagingLogs<Log> pagingLogs,
-            BaseQuery message,
+            LogQuery message,
             BaseIndexViewModel viewModel)
         {
             var htmlLogs = new List<LogViewModel>();

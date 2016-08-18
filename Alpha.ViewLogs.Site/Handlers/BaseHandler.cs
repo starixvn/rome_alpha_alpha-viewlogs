@@ -20,7 +20,7 @@
             this.logService = logService;
         }
 
-        protected LogParam GetLogsParam(BaseQuery indexQuery)
+        protected LogParam GetLogsParam(LogQuery indexQuery)
         {
             var fromDate = string.IsNullOrEmpty(indexQuery.FromDate) ? DateTime.Now.AddDays(-1) : Converter.ToDateTime(indexQuery.FromDate);
             var toDate = string.IsNullOrEmpty(indexQuery.ToDate) ? DateTime.Now : Converter.ToDateTime(indexQuery.ToDate);
@@ -80,7 +80,7 @@
 
             indexViewModel.Username = logsParam.Username;
 
-            indexViewModel.ShowOldValuesCookieName = BaseQuery.CookieShowOldValue;
+            indexViewModel.ShowOldValuesCookieName = LogQuery.CookieShowOldValue;
         }
     }
 }

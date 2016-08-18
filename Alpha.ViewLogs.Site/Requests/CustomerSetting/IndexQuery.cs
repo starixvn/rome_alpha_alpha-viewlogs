@@ -5,7 +5,7 @@
     using Sunplus.Agent.Model.Entities;
     using ViewModels.CustomerSetting;
 
-    public class IndexQuery : BaseQuery, IRequest<IndexViewModel>
+    public class IndexQuery : LogQuery, IRequest<IndexViewModel>
     {
         public IndexQuery() : this(null, null, null, null)
         {

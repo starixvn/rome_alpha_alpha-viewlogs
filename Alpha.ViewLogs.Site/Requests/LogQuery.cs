@@ -9,7 +9,7 @@
     using Sunplus.Agent.Model.Entities.Permission;
     using ViewLogs.Constants;
 
-    public class BaseQuery
+    public class LogQuery
     {
         public const string CookieShowOldValue = "Alpha.ViewLogs.ShowOldValuesCookie";
 
@@ -21,11 +21,11 @@
 
         private readonly Dictionary<string, bool> sportBetTypeVisibilities;
 
-        public BaseQuery() : this(null, null, null, null)
+        public LogQuery() : this(null, null, null, null)
         {
         }
 
-        public BaseQuery(
+        public LogQuery(
             IUserSession currentUserSession,
             bool? isShowOldValue,
             Dictionary<int, bool> actionIdVisibilities = null,
