@@ -571,6 +571,7 @@
   <ItemGroup>
     <Compile Include="App_Start\DependencyConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Constants\Pager.cs" />
     <Compile Include="Constants\TabType.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CreditController.cs" />

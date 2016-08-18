@@ -14,22 +14,6 @@
 
         public DateTime ToDate { get; set; }
 
-        public int LowerActionId
-        {
-            get
-            {
-                return ActionId.StartStatusActionId;
-            }
-        }
-
-        public int UpperActionId
-        {
-            get
-            {
-                return ActionId.EndStatusActionId;
-            }
-        }
-
         public bool IsInternal { get; set; }
 
         public int PageIndex { get; set; }

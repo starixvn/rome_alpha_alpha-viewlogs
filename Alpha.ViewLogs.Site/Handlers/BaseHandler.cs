@@ -2,11 +2,11 @@
 {
     using System;
     using Alpha.ViewLogs.Params;
+    using Constants;
     using Fanex.Common;
     using Models;
     using Requests;
     using Services;
-    using ViewLogs.Constants;
     using ViewModels;
 
     public class BaseHandler

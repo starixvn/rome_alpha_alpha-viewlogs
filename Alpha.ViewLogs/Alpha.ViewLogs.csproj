@@ -43,11 +43,9 @@
       <DependentUpon>TrackingValueResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Configurations\AppSettings.cs" />
-    <Compile Include="Constants\ActionId.cs" />
     <Compile Include="Constants\ActionType.cs" />
     <Compile Include="Constants\Language.cs" />
     <Compile Include="Constants\PageAccessType.cs" />
-    <Compile Include="Constants\Pager.cs" />
     <Compile Include="Constants\Sport.cs" />
     <Compile Include="Criteria\GetCustInfoByUsernameCriteria.cs" />
     <Compile Include="Criteria\Credit\GetCreditLogsCriteria.cs" />
@@ -70,7 +68,6 @@
     <Compile Include="Helpers\AppPathHelper.cs" />
     <Compile Include="Helpers\DateTimeHelper.cs" />
     <Compile Include="Helpers\MicroSites.cs" />
-    <Compile Include="Extensions\NumberExtensions.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Models\Log.cs" />
     <Compile Include="Models\CustomerInfo.cs" />

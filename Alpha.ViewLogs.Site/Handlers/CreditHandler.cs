@@ -1,20 +1,19 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
     using System.Collections.Generic;
-    using Alpha.ViewLogs.Extensions;
     using Fanex.Common;
     using MediatR;
     using Models;
     using Requests;
     using Requests.Credit;
     using Services;
+    using Sunplus.Agent.Utilities;
     using ViewLogs.Helpers;
     using ViewModels;
     using ViewModels.Credit;
 
     public class CreditHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
-
         public CreditHandler(LogService logService, XsltLogFormatter xsltLogFormatter) :
             base(logService, xsltLogFormatter)
         {
@@ -62,8 +61,8 @@
                     UserId = log.UserId,
                     Username = log.Username,
 
-                    TrackingValue = Converter.ToDecimal(log.TrackingValue).Format(2),
-                    TrackingValueOld = Converter.ToDecimal(log.TrackingValueOld).Format(2),
+                    TrackingValue = Formater.DecFormat(Converter.ToDecimal(log.TrackingValue), 2),
+                    TrackingValueOld = Formater.DecFormat(Converter.ToDecimal(log.TrackingValueOld), 2),
                     Details = log.Details,
                     IP = this.xsltLogFormatter.FormatIP(log.IP)
                 });

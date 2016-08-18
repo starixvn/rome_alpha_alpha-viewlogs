@@ -38,26 +38,29 @@
 
         protected abstract ICriteria CreateGetTotalLogsCriteria(LogParam logParam);
 
-
-        public string GetLogActionName(int actionId, string language)
+        private string GetLogActionName(int actionId, string language)
         {
-            var logAction = GetLogActionByActionId(actionId);
+            var logAction = GetLogAction(actionId);
             switch (language)
             {
-                case Language.English:
-                    return logAction.EnglishName;
                 case Language.ChineseTraditional:
                     return logAction.ChineseTraditionalName;
+
                 case Language.ChineseSimplified:
                     return logAction.ChineseSimplifiedName;
+
                 case Language.Japanese:
                     return logAction.JapaneseName;
+
                 case Language.Thai:
                     return logAction.ThaiName;
+
                 case Language.Korean:
                     return logAction.KoreanName;
+
                 case Language.Vietnamese:
                     return logAction.VietnameseName;
+
                 default:
                     return logAction.EnglishName;
             }
@@ -67,7 +70,7 @@
         {
             var logActionTypes = cacheManager.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
 
-            if (logActionTypes != null 
+            if (logActionTypes != null
                 && logActionTypes.Any())
             {
                 return logActionTypes;
@@ -80,15 +83,17 @@
             return logActionTypes;
         }
 
-        public LogAction GetLogActionByActionId(int actionId)
+        private LogAction GetLogAction(int actionId)
         {
             var logActionDictionary = cacheManager.Get<Dictionary<int, LogAction>>(LogActionCacheKey);
 
-            if (logActionDictionary == null || !logActionDictionary.Any())
+            if (logActionDictionary == null 
+                || !logActionDictionary.Any())
             {
-                logActionDictionary = new Dictionary<int, LogAction>();
-                var logActions = dynamicRepository.Fetch<LogAction>(new GetLogActionsCriteria()).ToList();
-                logActions.ForEach(logAction => logActionDictionary.Add(logAction.Id, logAction));
+                logActionDictionary = dynamicRepository
+                    .Fetch<LogAction>(new GetLogActionsCriteria())
+                    .ToDictionary(logAction => logAction.Id);
+                
                 cacheManager.Add(LogActionCacheKey, logActionDictionary, TimeSpan.FromHours(OneHour));
             }
 
@@ -106,7 +111,7 @@
                     UplineId = logParam.UplineId
                 });
 
-            // If search username is not belong to searcher
+            // If search username is not belong to searcher, then return
             if (downlineInfo.CustId == 0)
             {
                 return pagingLogs;
@@ -125,7 +130,7 @@
             return pagingLogs;
         }
 
-        public virtual IEnumerable<Log> GetLogsFromDataAccess(LogParam logParam)
+        protected virtual IEnumerable<Log> GetLogsFromDataAccess(LogParam logParam)
         {
             var criteria = CreateGetLogsCriteria(logParam);
 

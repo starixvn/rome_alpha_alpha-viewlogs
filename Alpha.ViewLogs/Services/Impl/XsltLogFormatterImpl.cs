@@ -23,6 +23,10 @@
             this.ipService = ipService;
         }
 
+        /// <summary>
+        /// Need be reviewed code here, AssignParams should not in formatter class
+        /// </summary>
+        /// <param name="transformParam"></param>
         public void AssignParams(TransformParam transformParam)
         {
             if (transformParam == null)

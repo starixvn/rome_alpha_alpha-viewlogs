@@ -18,13 +18,10 @@
 
         public int GetTotalRecordsOfLogs(ICriteria criteria)
         {
-            int totalRecords;
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
-                totalRecords = Converter.ToInt(objectDb.ExecuteScalar(criteria.GetSpParams()));
+                return Converter.ToInt(objectDb.ExecuteScalar(criteria.GetSpParams()));
             }
-
-            return totalRecords;
         }
 
         public virtual List<Log> GetLogs(ICriteria criteria)
