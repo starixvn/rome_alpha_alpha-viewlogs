@@ -3,16 +3,13 @@
     using System.Web.Mvc;
     using MediatR;
     using Requests.Status;
-    using Sunplus.Agent.Model.Entities;
-    using ViewModels.Status;
 
     public class StatusController : BaseController
     {
         private readonly IMediator mediator;
 
-        public StatusController(IUserSession userSession, IMediator mediator)
+        public StatusController(IMediator mediator)
         {
-            CurrentUserSession = userSession;
             this.mediator = mediator;
         }
 

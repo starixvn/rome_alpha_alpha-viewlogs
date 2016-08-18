@@ -3,15 +3,13 @@
     using System.Web.Mvc;
     using MediatR;
     using Requests.CustomerSetting;
-    using Sunplus.Agent.Model.Entities;
 
     public class CustomerSettingController : BaseController
     {
         private readonly IMediator mediator;
 
-        public CustomerSettingController(IUserSession userSession, IMediator mediator)
+        public CustomerSettingController(IMediator mediator)
         {
-            CurrentUserSession = userSession;
             this.mediator = mediator;
         }
 

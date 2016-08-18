@@ -39,14 +39,6 @@
             }
         }
 
-        public string IndexPath
-        {
-            get
-            {
-                return MicroSites.ViewLogsPath("./");
-            }
-        }
-
         public string ActionTypeId { get; set; }
 
         public bool HasLogs

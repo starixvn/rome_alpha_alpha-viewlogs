@@ -16,36 +16,23 @@
     [SessionState(SessionStateBehavior.ReadOnly)]
     public class BaseController : Controller
     {
-        private IUserSession currentUserSession;
         protected const string LoginLogsURL = "~/LoginLogs";
         private CultureInfo defaultCulture = CultureInfo.CreateSpecificCulture(Language.Default);
-
-        public IUserSession CurrentUserSession
-        {
-            get
-            {
-                return currentUserSession;
-            }
-
-            set
-            {
-                currentUserSession = value;
-            }
-        }
 
         protected override void OnAuthentication(AuthenticationContext filterContext)
         {
             base.OnAuthentication(filterContext);
 
+            var currentUserSession = UserSession.Current;
             if (!filterContext.HttpContext.User.Identity.IsAuthenticated ||
-                CurrentUserSession.UserId <= 0)
+                currentUserSession.UserId <= 0)
             {
                 var logInUrl = MicroSites.OldMainPath(FormsAuthentication.LoginUrl);
                 Response.Redirect(logInUrl, true);
                 return;
             }
 
-            if (CurrentUserSession.IsSubAcc && !CurrentUserSession.SubPageAccess.ViewLog)
+            if (currentUserSession.IsSubAcc && !currentUserSession.SubPageAccess.ViewLog)
             {
                 Response.Redirect(MicroSites.OldMainPath(AppSettings.AccessDeniedPage));
             }
@@ -69,7 +56,7 @@
 
         protected override void Initialize(RequestContext requestContext)
         {
-            var cultureName = CurrentUserSession.Language;
+            var cultureName = UserSession.Current.Language;
 
             if (string.IsNullOrEmpty(cultureName))
             {

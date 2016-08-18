@@ -3,15 +3,13 @@
     using System.Web.Mvc;
     using MediatR;
     using Requests.Credit;
-    using Sunplus.Agent.Model.Entities;
 
     public class CreditController : BaseController
     {
         private readonly IMediator mediator;
 
-        public CreditController(IUserSession userSession, IMediator mediator)
+        public CreditController(IMediator mediator)
         {
-            CurrentUserSession = userSession;
             this.mediator = mediator;
         }
 

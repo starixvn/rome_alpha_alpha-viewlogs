@@ -20,7 +20,7 @@
             this.logService = logService;
         }
 
-        public LogParam GetLogsParam(BaseQuery indexQuery)
+        protected LogParam GetLogsParam(BaseQuery indexQuery)
         {
             var fromDate = string.IsNullOrEmpty(indexQuery.FromDate) ? DateTime.Now.AddDays(-1) : Converter.ToDateTime(indexQuery.FromDate);
             var toDate = string.IsNullOrEmpty(indexQuery.ToDate) ? DateTime.Now : Converter.ToDateTime(indexQuery.ToDate);
@@ -48,7 +48,7 @@
             };
         }
 
-        public void AssignIndexViewModelValue(
+        protected void AssignIndexViewModelValue(
             LogParam logsParam,
             PagingLogs<Log> pagingLogs,
             BaseIndexViewModel indexViewModel)
