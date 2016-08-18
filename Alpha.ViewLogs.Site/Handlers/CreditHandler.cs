@@ -14,18 +14,16 @@
 
     public class CreditHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
-        private readonly CreditService creditService;
 
-        public CreditHandler(CreditService creditService, XsltLogFormatter xsltLogFormatter) :
-            base(xsltLogFormatter)
+        public CreditHandler(LogService logService, XsltLogFormatter xsltLogFormatter) :
+            base(logService, xsltLogFormatter)
         {
-            this.creditService = creditService;
         }
 
         public IndexViewModel Handle(IndexQuery message)
         {
             var logsParam = GetLogsParam(message);
-            var pagingLogs = creditService.GetLogs(logsParam);
+            var pagingLogs = this.logService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel();
             AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
@@ -67,7 +65,7 @@
                     TrackingValue = Converter.ToDecimal(log.TrackingValue).Format(2),
                     TrackingValueOld = Converter.ToDecimal(log.TrackingValueOld).Format(2),
                     Details = log.Details,
-                    IP = XsltLogFormatter.FormatIP(log.IP)
+                    IP = this.xsltLogFormatter.FormatIP(log.IP)
                 });
             }
 

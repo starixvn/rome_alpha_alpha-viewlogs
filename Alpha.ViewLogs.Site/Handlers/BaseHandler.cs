@@ -11,19 +11,14 @@
 
     public class BaseHandler
     {
-        private readonly XsltLogFormatter xsltLogFormatter;
+        protected readonly XsltLogFormatter xsltLogFormatter;
+        protected readonly LogService logService;
 
-        public BaseHandler(XsltLogFormatter xsltLogFormatter)
+
+        public BaseHandler(LogService logService, XsltLogFormatter xsltLogFormatter)
         {
             this.xsltLogFormatter = xsltLogFormatter;
-        }
-
-        public XsltLogFormatter XsltLogFormatter
-        {
-            get
-            {
-                return xsltLogFormatter;
-            }
+            this.logService = logService;
         }
 
         public LogParam GetLogsParam(BaseQuery indexQuery)

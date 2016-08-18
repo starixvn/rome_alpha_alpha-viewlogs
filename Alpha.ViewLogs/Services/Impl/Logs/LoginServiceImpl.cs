@@ -1,25 +1,39 @@
-﻿namespace Alpha.ViewLogs.Services.Impl
+﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
-    using Criteria.CustomerSetting;
+    using System.Collections.Generic;
+    using Criteria.Login;
     using DataAccesses;
+    using DataAccesses.Impl;
     using Fanex.Data.Repository;
     using Helpers;
+    using Models;
     using Params;
 
-    public class CustomerSettingServiceImpl : BaseService, CustomerSettingService
+    public class LoginServiceImpl : BaseService, LogService
     {
-        public CustomerSettingServiceImpl(
-             CachingManager cacheManager,
-             IDynamicRepository dynamicRepository,
-             CustomerService customerService,
-             LogDataAccess baseDataAccess) :
-            base(cacheManager, dynamicRepository, customerService, baseDataAccess)
+        public LoginServiceImpl(
+            CachingManager cacheManager,
+            IDynamicRepository dynamicRepository,
+            CustomerService customerService,
+            LogDataAccess logDataAccess) :
+            base(
+                cacheManager, 
+                dynamicRepository, 
+                customerService, 
+                logDataAccess is LoginDataAccessImpl ? logDataAccess : new LoginDataAccessImpl(dynamicRepository))
         {
+        }
+
+        public override List<Log> GetLogsFromDataAccess(LogParam getLogsParam, CustomerInfo customerInfo)
+        {
+            var getLogsCriteria = CreateGetLogsCriteria(getLogsParam, customerInfo.CustId);
+
+            return this.logDataAccess.GetLogs(getLogsCriteria);
         }
 
         public override ICriteria CreateGetLogsCriteria(LogParam getLogsParam, int custId)
         {
-            return new GetCustomerSettingLogsCriteria
+            return new GetLoginLogsCriteria
             {
                 CustId = custId,
                 CustName = getLogsParam.Username,
@@ -33,7 +47,7 @@
 
         public override ICriteria CreateTotalRecordsOfLogsCriteria(LogParam getLogsParam, int custId)
         {
-            return new GetTotalRecordsOfCustomerSettingLogsCriteria
+            return new GetTotalRecordsOfLoginLogsCriteria
             {
                 CustId = custId,
                 FromDate = DateTimeHelper.GetBeginningOfDate(getLogsParam.FromDate),

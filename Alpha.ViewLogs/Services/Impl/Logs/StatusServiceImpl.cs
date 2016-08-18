@@ -1,25 +1,25 @@
-﻿namespace Alpha.ViewLogs.Services.Impl
+﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
-    using Criteria.Credit;
+    using Criteria.Status;
     using DataAccesses;
     using Fanex.Data.Repository;
     using Helpers;
     using Params;
 
-    public class CreditServiceImpl : BaseService, CreditService
+    public class StatusServiceImpl : BaseService, LogService
     {
-        public CreditServiceImpl(
-             CachingManager cacheManager,
-             IDynamicRepository dynamicRepository,
-             CustomerService customerService,
-             LogDataAccess baseDataAccess) :
+        public StatusServiceImpl(
+            CachingManager cacheManager,
+            IDynamicRepository dynamicRepository,
+            CustomerService customerService,
+            LogDataAccess baseDataAccess) :
             base(cacheManager, dynamicRepository, customerService, baseDataAccess)
         {
         }
 
         public override ICriteria CreateGetLogsCriteria(LogParam getLogsParam, int custId)
         {
-            return new GetCreditLogsCriteria
+            return new GetStatusLogsCriteria
             {
                 CustId = custId,
                 CustName = getLogsParam.Username,
@@ -33,7 +33,7 @@
 
         public override ICriteria CreateTotalRecordsOfLogsCriteria(LogParam getLogsParam, int custId)
         {
-            return new GetTotalRecordsOfCreditLogsCriteria
+            return new GetTotalRecordsOfStatusLogsCriteria
             {
                 CustId = custId,
                 FromDate = DateTimeHelper.GetBeginningOfDate(getLogsParam.FromDate),

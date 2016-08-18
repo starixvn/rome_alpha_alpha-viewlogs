@@ -18,16 +18,14 @@
 
     public class CustomerSettingHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
-        private readonly CustomerSettingService customerSettingService;
         private readonly TransformService transformService;
 
         public CustomerSettingHandler(
-            CustomerSettingService customerSettingService,
+            LogService logService,
             TransformService transformService,
             XsltLogFormatter xsltLogFormatter) :
-            base(xsltLogFormatter)
+            base(logService, xsltLogFormatter)
         {
-            this.customerSettingService = customerSettingService;
             this.transformService = transformService;
         }
 
@@ -58,7 +56,7 @@
                 ActionTypeId = string.IsNullOrEmpty(message.ActionTypeId) ? ActionType.All : Converter.ToInt(message.ActionTypeId)
             };
 
-            var pagingLogs = customerSettingService.GetLogs(logsParam);
+            var pagingLogs = this.logService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel();
             AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
@@ -72,7 +70,7 @@
 
         private List<LogActionTypeViewModel> GetLogActionTypes(IndexQuery message)
         {
-            var logActionTypes = customerSettingService.GetLogActionTypes();
+            var logActionTypes = this.logService.GetLogActionTypes();
 
             var logActionTypeViewModels = logActionTypes.Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))
                 .ToList();
@@ -122,7 +120,7 @@
                     UserId = log.UserId,
                     Username = log.Username,
                     TrackingValue = htmlTrackingValue,
-                    IP = XsltLogFormatter.FormatIP(log.IP)
+                    IP = this.xsltLogFormatter.FormatIP(log.IP)
                 });
             }
 

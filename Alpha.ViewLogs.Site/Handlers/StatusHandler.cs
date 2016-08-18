@@ -13,23 +13,21 @@
 
     public class StatusHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
-        private readonly StatusService statusService;
         private readonly TransformService transformService;
 
         public StatusHandler(
-            StatusService statusService,
+            LogService logService,
             TransformService transformService,
             XsltLogFormatter xsltLogFormatter) :
-            base(xsltLogFormatter)
+            base(logService, xsltLogFormatter)
         {
-            this.statusService = statusService;
             this.transformService = transformService;
         }
 
         public IndexViewModel Handle(IndexQuery message)
         {
             var logsParam = GetLogsParam(message);
-            var pagingLogs = statusService.GetLogs(logsParam);
+            var pagingLogs = this.logService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel();
             AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
@@ -81,7 +79,7 @@
                     UserId = log.UserId,
                     Username = log.Username,
                     TrackingValue = htmlTrackingValue,
-                    IP = XsltLogFormatter.FormatIP(log.IP)
+                    IP = this.xsltLogFormatter.FormatIP(log.IP)
                 });
             }
 

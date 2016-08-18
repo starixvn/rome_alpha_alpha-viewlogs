@@ -7,9 +7,8 @@
     using Models;
     using NSubstitute;
     using NUnit.Framework;
-    using Params;
     using ViewLogs.Services;
-    using ViewLogs.Services.Impl;
+    using ViewLogs.Services.Impl.Logs;
 
     [TestFixture]
     public class CustomerSettingLogServiceImplTest
