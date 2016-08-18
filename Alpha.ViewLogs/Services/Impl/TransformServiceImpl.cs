@@ -2,7 +2,6 @@
 {
     using System.IO;
     using System.Text;
-    using System.Web;
     using System.Xml.XPath;
     using System.Xml.Xsl;
     using Params;
@@ -54,7 +53,7 @@
                 using (var writer = new StringWriter())
                 {
                     compiledTransform.Transform(document, xsltArguments, writer);
-                    return HttpUtility.HtmlDecode(writer.ToString());
+                    return writer.ToString();
                 }
             }
         }

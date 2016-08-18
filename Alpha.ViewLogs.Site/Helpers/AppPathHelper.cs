@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Helpers
+﻿namespace Alpha.ViewLogs.Site.Helpers
 {
     using System;
     using System.Text.RegularExpressions;

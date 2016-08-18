@@ -588,6 +588,8 @@
     <Compile Include="Handlers\CustomerSettingHandler.cs" />
     <Compile Include="Handlers\LoginHandler.cs" />
     <Compile Include="Handlers\StatusHandler.cs" />
+    <Compile Include="Helpers\AppPathHelper.cs" />
+    <Compile Include="Helpers\MicroSites.cs" />
     <Compile Include="Helpers\TrackingValueHelper.cs" />
     <Compile Include="Helpers\StaticResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

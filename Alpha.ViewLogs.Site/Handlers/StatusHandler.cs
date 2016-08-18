@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
     using System.Collections.Generic;
+    using System.Web;
     using Helpers;
     using MediatR;
     using Models;
@@ -76,7 +77,7 @@
                     SPName = log.SPName,
                     UserId = log.UserId,
                     Username = log.Username,
-                    TrackingValue = htmlTrackingValue,
+                    TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
                     IP = this.xsltLogFormatter.FormatIP(log.IP)
                 });
             }

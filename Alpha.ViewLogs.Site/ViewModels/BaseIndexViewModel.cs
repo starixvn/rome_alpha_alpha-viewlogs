@@ -2,8 +2,8 @@
 {
     using System.Collections.Generic;
     using System.Linq;
+    using Helpers;
     using Models.Enumerations;
-    using ViewLogs.Helpers;
 
     public class BaseIndexViewModel
     {

@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Web;
     using AppResources;
     using Constants;
     using Fanex.Common;
@@ -118,7 +119,7 @@
                     SPName = log.SPName,
                     UserId = log.UserId,
                     Username = log.Username,
-                    TrackingValue = htmlTrackingValue,
+                    TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
                     IP = this.xsltLogFormatter.FormatIP(log.IP)
                 });
             }

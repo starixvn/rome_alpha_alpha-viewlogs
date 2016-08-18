@@ -9,9 +9,9 @@
     using System.Web.Security;
     using System.Web.SessionState;
     using Configurations;
+    using Helpers;
     using Sunplus.Agent.Model.Entities;
     using ViewLogs.Constants;
-    using ViewLogs.Helpers;
 
     [SessionState(SessionStateBehavior.ReadOnly)]
     public class BaseController : Controller
