@@ -1,24 +1,24 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl
 {
-    using Criteria;
-    using Fanex.Data.Repository;
-    using Models;
-    using Sunplus.Agent.Model.Entities;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
     using System.Text.RegularExpressions;
+    using Criteria;
+    using Fanex.Data.Repository;
+    using Models;
+    using Sunplus.Agent.Model.Entities;
 
     public class IPServiceImpl : IPService
     {
-        private const string CacheKeyVietnamIPList = "Alpha.ViewLogs.VietnamIPList";
+        private const string VietnamIPListCacheKey = "Alpha.ViewLogs.VietnamIPList";
         private const string IPValidateRegex = @"(?<First>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Second>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Third>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Fourth>2[0-4]\d|25[0-5]|[01]?\d\d?)";
+        private const int OneHour = 1;
 
         private readonly CachingManager cacheManager;
         private readonly IUserSession userSession;
         private readonly IDynamicRepository dynamicRepository;
-        private const int HourToCacheVietnamIPList = 1;
 
         public IPServiceImpl(
             CachingManager cacheManager,
@@ -43,25 +43,27 @@
                 return $"<a class=\"iplink\" href=\"javascript:;\">{ip}</a>";
             }
 
-            if (IsVNIP(ip) && !userSession.IsAdminCanViewVNIP)
+            if (IsVNIP(ip)
+                && !userSession.IsAdminCanViewVNIP)
             {
                 return string.Empty;
             }
 
-            var result = $"<a class=\"iplink\" href=\"javascript:OpenIPInfo('{ip}');\">{ip}</a>";
-            return result;
+            return $"<a class=\"iplink\" href=\"javascript:OpenIPInfo('{ip}');\">{ip}</a>";
         }
 
         public string FormatCountryCode(string ip, string country)
         {
-            Regex regex = new Regex(IPValidateRegex);
+            var regex = new Regex(IPValidateRegex);
 
-            if (!IsValidIP(ip) || !regex.IsMatch(ip, 0))
+            if (!IsValidIP(ip)
+                || !regex.IsMatch(ip, 0))
             {
                 return string.Empty;
             }
 
-            if (IsVNIP(ip) && !userSession.IsAdminCanViewVNIP)
+            if (IsVNIP(ip)
+                && !userSession.IsAdminCanViewVNIP)
             {
                 return string.Empty;
             }
@@ -93,7 +95,8 @@
         private bool IsValidIP(string ipAddress)
         {
             IPAddress ip;
-            return !string.IsNullOrEmpty(ipAddress) && IPAddress.TryParse(ipAddress, out ip);
+            return !string.IsNullOrEmpty(ipAddress)
+                && IPAddress.TryParse(ipAddress, out ip);
         }
 
         private bool IsVNIP(string ip)
@@ -119,15 +122,16 @@
 
         private List<IPRange> GetIPVNList()
         {
-            var listIPVN = cacheManager.Get<List<IPRange>>(CacheKeyVietnamIPList);
+            var listIPVN = cacheManager.Get<List<IPRange>>(VietnamIPListCacheKey);
 
-            if (listIPVN != null && listIPVN.Any())
+            if (listIPVN != null
+                && listIPVN.Any())
             {
                 return listIPVN;
             }
 
             listIPVN = dynamicRepository.Fetch<IPRange>(new GetIPVNCriteria()).ToList();
-            cacheManager.Add(CacheKeyVietnamIPList, listIPVN, TimeSpan.FromHours(HourToCacheVietnamIPList));
+            cacheManager.Add(VietnamIPListCacheKey, listIPVN, TimeSpan.FromHours(OneHour));
 
             return listIPVN;
         }
