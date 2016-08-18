@@ -37,6 +37,9 @@ var statusView = {
         statusView.initMonthPicker(viewModel);
 
         statusView.elelments.btnSubmit.click(function () {
+            statusView.pageNumber = 0;
+            statusView.pageSize = '';
+
             statusController.viewLogs();
         });
 

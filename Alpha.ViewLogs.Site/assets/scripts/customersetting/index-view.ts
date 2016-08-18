@@ -37,12 +37,18 @@ var customerSettingView = {
         customerSettingView.cacheElements();
 
         customerSettingView.elelments.ddlLogActionType.change(function () {
+            customerSettingView.pageNumber = 0;
+            customerSettingView.pageSize = '';
+
             customerSettingController.viewLogs();
         });
 
         customerSettingView.initMonthPicker(viewModel);
 
         customerSettingView.elelments.btnSubmit.click(function () {
+            customerSettingView.pageNumber = 0;
+            customerSettingView.pageSize = '';
+
             customerSettingController.viewLogs();
         });
 

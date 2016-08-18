@@ -33,6 +33,9 @@ var loginView = {
         loginView.initMonthPicker(viewModel);
 
         loginView.elelments.btnSubmit.click(function () {
+            loginView.pageNumber = 0;
+            loginView.pageSize = '';
+
             loginController.viewLogs();
         });
 

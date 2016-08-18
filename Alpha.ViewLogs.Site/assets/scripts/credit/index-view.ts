@@ -33,6 +33,9 @@ var creditView = {
         creditView.initMonthPicker(viewModel);
 
         creditView.elelments.btnSubmit.click(function () {
+            creditView.pageNumber = 0;
+            creditView.pageSize = '';
+
             creditController.viewLogs();
         });
 
