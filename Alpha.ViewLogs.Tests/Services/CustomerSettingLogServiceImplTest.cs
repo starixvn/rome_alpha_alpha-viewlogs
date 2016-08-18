@@ -18,7 +18,7 @@
         private const string CacheKeyTransformObject = "Alpha.ViewLogs.CustomerSetting.TransformObject";
 
         private CustomerService customerService;
-        private BaseDataAccess baseDataAccess;
+        private LogDataAccess baseDataAccess;
         private CachingManager cacheManager;
         private IDynamicRepository dynamicRepository;
         private CustomerSettingServiceImpl customerSettingLog;
@@ -27,7 +27,7 @@
         public void SetUp()
         {
             customerService = Substitute.For<CustomerService>();
-            baseDataAccess = Substitute.For<BaseDataAccess>();
+            baseDataAccess = Substitute.For<LogDataAccess>();
             cacheManager = Substitute.For<CachingManager>();
             dynamicRepository = Substitute.For<IDynamicRepository>();
 

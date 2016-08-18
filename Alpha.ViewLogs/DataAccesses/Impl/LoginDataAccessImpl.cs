@@ -6,8 +6,12 @@
     using Fanex.Data.Repository;
     using Models;
 
-    public class LoginDataAccessImpl : LoginDataAccess
+    public class LoginDataAccessImpl : LogDataAccessImpl, LogDataAccess
     {
+        public LoginDataAccessImpl(IDynamicRepository dynamicRepository) : base(dynamicRepository)
+        {
+        }
+
         /// <summary>
         /// Get Log in Logs
         /// Must manual mapping because when there is no data, sp doesn't return data table
@@ -15,7 +19,7 @@
         /// </summary>
         /// <param name="criteria"></param>
         /// <returns></returns>
-        public List<Log> GetLogs(ICriteria criteria)
+        public override List<Log> GetLogs(ICriteria criteria)
         {
             var logs = new List<Log>();
 

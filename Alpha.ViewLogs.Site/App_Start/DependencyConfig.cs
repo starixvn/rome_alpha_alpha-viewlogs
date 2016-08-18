@@ -101,8 +101,7 @@
         {
             container.Register<IDynamicRepository, DynamicRepository>(Lifestyle.Transient);
             container.Register<CustomerDataAccess, CustomerDataAccessImpl>(Lifestyle.Transient);
-            container.Register<BaseDataAccess, BaseDataAccessImpl>(Lifestyle.Transient);
-            container.Register<LoginDataAccess, LoginDataAccessImpl>(Lifestyle.Transient);
+            container.Register<LogDataAccess, LogDataAccessImpl>(Lifestyle.Transient);
         }
     }
 }

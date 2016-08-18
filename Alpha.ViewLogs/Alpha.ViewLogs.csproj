@@ -61,12 +61,11 @@
     <Compile Include="Criteria\Login\GetTotalRecordsOfLoginLogsCriteria.cs" />
     <Compile Include="Criteria\Status\GetStatusLogsCriteria.cs" />
     <Compile Include="Criteria\Status\GetTotalRecordsOfStatusLogsCriteria.cs" />
-    <Compile Include="DataAccesses\BaseDataAccess.cs" />
+    <Compile Include="DataAccesses\LogDataAccess.cs" />
     <Compile Include="DataAccesses\CustomerDataAccess.cs" />
-    <Compile Include="DataAccesses\Impl\BaseDataAccessImpl.cs" />
+    <Compile Include="DataAccesses\Impl\LogDataAccessImpl.cs" />
     <Compile Include="DataAccesses\Impl\CustomerDataAccessImpl.cs" />
     <Compile Include="DataAccesses\Impl\LoginDataAccessImpl.cs" />
-    <Compile Include="DataAccesses\LoginDataAccess.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\AppPathHelper.cs" />
     <Compile Include="Helpers\DateTimeHelper.cs" />

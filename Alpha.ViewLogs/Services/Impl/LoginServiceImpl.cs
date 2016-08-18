@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using Criteria.Login;
     using DataAccesses;
+    using DataAccesses.Impl;
     using Fanex.Data.Repository;
     using Helpers;
     using Models;
@@ -10,24 +11,24 @@
 
     public class LoginServiceImpl : BaseService, LoginService
     {
-        private LoginDataAccess loginDataAccess;
-
         public LoginServiceImpl(
             CachingManager cacheManager,
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
-            BaseDataAccess baseDataAccess,
-            LoginDataAccess loginDataAccess) :
-            base(cacheManager, dynamicRepository, customerService, baseDataAccess)
+            LogDataAccess logDataAccess) :
+            base(
+                cacheManager, 
+                dynamicRepository, 
+                customerService, 
+                logDataAccess is LoginDataAccessImpl ? logDataAccess : new LoginDataAccessImpl(dynamicRepository))
         {
-            this.loginDataAccess = loginDataAccess;
         }
 
         public override List<Log> GetLogsFromDataAccess(LogParam getLogsParam, CustomerInfo customerInfo)
         {
             var getLogsCriteria = CreateGetLogsCriteria(getLogsParam, customerInfo.CustId);
 
-            return loginDataAccess.GetLogs(getLogsCriteria);
+            return this.logDataAccess.GetLogs(getLogsCriteria);
         }
 
         public override ICriteria CreateGetLogsCriteria(LogParam getLogsParam, int custId)

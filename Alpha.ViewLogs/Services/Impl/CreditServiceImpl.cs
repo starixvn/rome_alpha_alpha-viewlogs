@@ -12,7 +12,7 @@
              CachingManager cacheManager,
              IDynamicRepository dynamicRepository,
              CustomerService customerService,
-             BaseDataAccess baseDataAccess) :
+             LogDataAccess baseDataAccess) :
             base(cacheManager, dynamicRepository, customerService, baseDataAccess)
         {
         }

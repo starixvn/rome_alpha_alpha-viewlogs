@@ -2,11 +2,12 @@
 {
     using System.Collections.Generic;
     using Fanex.Data.Repository;
+    using Models;
 
-    public interface BaseDataAccess
+    public interface LogDataAccess
     {
         int GetTotalRecordsOfLogs(ICriteria criteria);
 
-        List<Log> GetLogs<Log>(ICriteria criteria);
+        List<Log> GetLogs(ICriteria criteria);
     }
 }

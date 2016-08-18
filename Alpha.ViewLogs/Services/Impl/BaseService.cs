@@ -19,19 +19,25 @@
         private readonly CachingManager cacheManager;
         private readonly IDynamicRepository dynamicRepository;
         private readonly CustomerService customerService;
-        private readonly BaseDataAccess baseDataAccess;
+
+        protected readonly LogDataAccess logDataAccess;
 
         protected BaseService(
             CachingManager cacheManager,
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
-            BaseDataAccess baseDataAccess)
+            LogDataAccess logDataAccess)
         {
             this.cacheManager = cacheManager;
             this.dynamicRepository = dynamicRepository;
             this.customerService = customerService;
-            this.baseDataAccess = baseDataAccess;
+            this.logDataAccess = logDataAccess;
         }
+
+        public abstract ICriteria CreateGetLogsCriteria(LogParam getLogsParam, int custId);
+
+        public abstract ICriteria CreateTotalRecordsOfLogsCriteria(LogParam getLogsParam, int custId);
+
 
         public string GetLogActionName(int actionId, string language)
         {
@@ -123,15 +129,11 @@
             return dynamicRepository.Fetch<Log>(getLogsCriteria).ToList();
         }
 
-        public abstract ICriteria CreateGetLogsCriteria(LogParam getLogsParam, int custId);
-
-        public abstract ICriteria CreateTotalRecordsOfLogsCriteria(LogParam getLogsParam, int custId);
-
         private int GetTotalRecordsOfLogs(LogParam getLogsParam, int custId)
         {
             var getTotalRecordsOfLogsCriteria = CreateTotalRecordsOfLogsCriteria(getLogsParam, custId);
 
-            return baseDataAccess.GetTotalRecordsOfLogs(getTotalRecordsOfLogsCriteria);
+            return logDataAccess.GetTotalRecordsOfLogs(getTotalRecordsOfLogsCriteria);
         }
     }
 }
