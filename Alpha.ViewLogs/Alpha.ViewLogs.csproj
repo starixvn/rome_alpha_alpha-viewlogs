@@ -84,7 +84,7 @@
     <Compile Include="Models\PagingLogs.cs" />
     <Compile Include="Models\SportDisplay.cs" />
     <Compile Include="Params\CustomerSettingParam.cs" />
-    <Compile Include="Params\GetLogsParam.cs" />
+    <Compile Include="Params\LogParam.cs" />
     <Compile Include="Params\StatusParam.cs" />
     <Compile Include="Params\TransformTrackingValueToHtmlParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,10 +102,10 @@
     <Compile Include="Services\Impl\IPServiceImpl.cs" />
     <Compile Include="Services\Impl\LoginServiceImpl.cs" />
     <Compile Include="Services\Impl\StatusServiceImpl.cs" />
-    <Compile Include="Services\Impl\TransformTrackingValueToHtmlServiceImpl.cs" />
+    <Compile Include="Services\Impl\TransformServiceImpl.cs" />
     <Compile Include="Services\Impl\XsltLogFormatterImpl.cs" />
     <Compile Include="Services\IPService.cs" />
-    <Compile Include="Services\TransformTrackingValueToHtmlService.cs" />
+    <Compile Include="Services\TransformService.cs" />
     <Compile Include="Services\XsltLogFormatter.cs" />
   </ItemGroup>
   <ItemGroup>

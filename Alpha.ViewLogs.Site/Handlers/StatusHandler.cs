@@ -14,16 +14,16 @@
     public class StatusHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
         private readonly StatusService statusService;
-        private readonly TransformTrackingValueToHtmlService transformTrackingValueToHtmlService;
+        private readonly TransformService transformService;
 
         public StatusHandler(
             StatusService statusService,
-            TransformTrackingValueToHtmlService transformTrackingValueToHtmlService,
+            TransformService transformService,
             XsltLogFormatter xsltLogFormatter) :
             base(xsltLogFormatter)
         {
             this.statusService = statusService;
-            this.transformTrackingValueToHtmlService = transformTrackingValueToHtmlService;
+            this.transformService = transformService;
         }
 
         public IndexViewModel Handle(IndexQuery message)
@@ -31,11 +31,11 @@
             var logsParam = GetLogsParam(message);
             var pagingLogs = statusService.GetLogs(logsParam);
 
-            var viewModel = new IndexViewModel(logsParam);
+            var viewModel = new IndexViewModel();
+            AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
             viewModel.ActionTypeId = message.ActionTypeId;
 
-            viewModel.GetLogsViewModel = new GetLogsViewModel(logsParam, pagingLogs);
-            TransformLogsToHtml(pagingLogs, message, viewModel.GetLogsViewModel);
+            TransformLogsToHtml(pagingLogs, message, viewModel);
 
             return viewModel;
         }
@@ -43,7 +43,7 @@
         private void TransformLogsToHtml(
             PagingLogs<Log> pagingLogs,
             IndexQuery message,
-            GetLogsViewModel viewModel)
+            BaseIndexViewModel viewModel)
         {
             var transformParam = new TransformTrackingValueToHtmlParam
             {
@@ -53,7 +53,7 @@
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds
             };
 
-            transformTrackingValueToHtmlService.InitCompiledTransformCache(transformParam);
+            transformService.InitCompiledTransformCache(transformParam);
 
             var htmlLogs = new List<LogViewModel>();
 
@@ -66,7 +66,7 @@
                 }
 
                 var trackingValueWithDiff = TrackingValueHelper.GetTrackingValueWithDiff(log, message.IsShowOldValue);
-                var htmlTrackingValue = transformTrackingValueToHtmlService.TransformTrackingValueToHtml(trackingValueWithDiff, log, transformParam);
+                var htmlTrackingValue = transformService.TransformTrackingValueToHtml(trackingValueWithDiff, log, transformParam);
 
                 htmlLogs.Add(new LogViewModel
                 {

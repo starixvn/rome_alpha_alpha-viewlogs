@@ -86,7 +86,7 @@
             return logActionDictionary[actionId];
         }
 
-        public PagingLogs<Log> GetLogs(GetLogsParam getLogsParam)
+        public PagingLogs<Log> GetLogs(LogParam getLogsParam)
         {
             var pagingLogs = new PagingLogs<Log>
             {
@@ -116,18 +116,18 @@
             return pagingLogs;
         }
 
-        public virtual List<Log> GetLogsFromDataAccess(GetLogsParam getLogsParam, CustomerInfo customerInfo)
+        public virtual List<Log> GetLogsFromDataAccess(LogParam getLogsParam, CustomerInfo customerInfo)
         {
             var getLogsCriteria = CreateGetLogsCriteria(getLogsParam, customerInfo.CustId);
 
             return dynamicRepository.Fetch<Log>(getLogsCriteria).ToList();
         }
 
-        public abstract ICriteria CreateGetLogsCriteria(GetLogsParam getLogsParam, int custId);
+        public abstract ICriteria CreateGetLogsCriteria(LogParam getLogsParam, int custId);
 
-        public abstract ICriteria CreateTotalRecordsOfLogsCriteria(GetLogsParam getLogsParam, int custId);
+        public abstract ICriteria CreateTotalRecordsOfLogsCriteria(LogParam getLogsParam, int custId);
 
-        private int GetTotalRecordsOfLogs(GetLogsParam getLogsParam, int custId)
+        private int GetTotalRecordsOfLogs(LogParam getLogsParam, int custId)
         {
             var getTotalRecordsOfLogsCriteria = CreateTotalRecordsOfLogsCriteria(getLogsParam, custId);
 

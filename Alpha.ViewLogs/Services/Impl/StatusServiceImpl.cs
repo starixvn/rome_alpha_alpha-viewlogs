@@ -17,7 +17,7 @@
         {
         }
 
-        public override ICriteria CreateGetLogsCriteria(GetLogsParam getLogsParam, int custId)
+        public override ICriteria CreateGetLogsCriteria(LogParam getLogsParam, int custId)
         {
             return new GetStatusLogsCriteria
             {
@@ -31,7 +31,7 @@
             };
         }
 
-        public override ICriteria CreateTotalRecordsOfLogsCriteria(GetLogsParam getLogsParam, int custId)
+        public override ICriteria CreateTotalRecordsOfLogsCriteria(LogParam getLogsParam, int custId)
         {
             return new GetTotalRecordsOfStatusLogsCriteria
             {

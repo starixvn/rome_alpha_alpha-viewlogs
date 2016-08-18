@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Params
 {
-    public class StatusParam : GetLogsParam
+    public class StatusParam : LogParam
     {
         public string TrackingValueTransformTemplatePath { get; set; }
     }

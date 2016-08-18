@@ -23,14 +23,14 @@
             this.loginDataAccess = loginDataAccess;
         }
 
-        public override List<Log> GetLogsFromDataAccess(GetLogsParam getLogsParam, CustomerInfo customerInfo)
+        public override List<Log> GetLogsFromDataAccess(LogParam getLogsParam, CustomerInfo customerInfo)
         {
             var getLogsCriteria = CreateGetLogsCriteria(getLogsParam, customerInfo.CustId);
 
             return loginDataAccess.GetLogs(getLogsCriteria);
         }
 
-        public override ICriteria CreateGetLogsCriteria(GetLogsParam getLogsParam, int custId)
+        public override ICriteria CreateGetLogsCriteria(LogParam getLogsParam, int custId)
         {
             return new GetLoginLogsCriteria
             {
@@ -44,7 +44,7 @@
             };
         }
 
-        public override ICriteria CreateTotalRecordsOfLogsCriteria(GetLogsParam getLogsParam, int custId)
+        public override ICriteria CreateTotalRecordsOfLogsCriteria(LogParam getLogsParam, int custId)
         {
             return new GetTotalRecordsOfLoginLogsCriteria
             {

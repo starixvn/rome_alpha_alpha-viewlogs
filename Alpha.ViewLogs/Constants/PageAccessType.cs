@@ -40,13 +40,13 @@
                 // Multiple language => must create every time when user gets text
                 var permissions = new Dictionary<string, string>();
 
-                permissions.Add(CreateAccount, Resources.MemberInfo + ": " + Resources.FullControl);
+                permissions.Add(CreateAccount, $"{Resources.MemberInfo}: {Resources.FullControl}");
                 permissions.Add(Transfer, Resources.Transfer);
-                permissions.Add(UpdateAccount, Resources.MemberInfo + ": " + Resources.Update);
+                permissions.Add(UpdateAccount, $"{Resources.MemberInfo}: {Resources.Update}");
                 permissions.Add(ViewLog, Resources.ViewLog);
-                permissions.Add(ViewMemberInfo, Resources.MemberInfo + ": " + Resources.View);
+                permissions.Add(ViewMemberInfo, $"{Resources.MemberInfo}: {Resources.View}");
                 permissions.Add(ViewReports, Resources.Reports);
-                permissions.Add(ViewTotalBets, Resources.TotalBets + "/" + Resources.Forecast);
+                permissions.Add(ViewTotalBets, $"{Resources.TotalBets}/{Resources.Forecast}");
 
                 return permissions;
             }

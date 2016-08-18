@@ -597,9 +597,7 @@
     <Compile Include="Requests\Status\IndexQuery.cs" />
     <Compile Include="ViewModels\Credit\IndexViewModel.cs" />
     <Compile Include="ViewModels\LogViewModel.cs" />
-    <Compile Include="ViewModels\GetLogsViewModel.cs" />
     <Compile Include="ViewModels\BaseIndexViewModel.cs" />
-    <Compile Include="ViewModels\CustomerSetting\GetCustomerSettingLogsViewModel.cs" />
     <Compile Include="ViewModels\CustomerSetting\IndexViewModel.cs" />
     <Compile Include="ViewModels\CustomerSetting\LogActionTypeViewModel.cs" />
     <Compile Include="ViewModels\Login\IndexViewModel.cs" />

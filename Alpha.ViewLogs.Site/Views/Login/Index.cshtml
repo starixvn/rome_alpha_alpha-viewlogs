@@ -7,7 +7,7 @@
     ViewBag.Title = Resources.ViewLogLogin;
 
     var isAgent = Model.RoleId == UserLevel.Agent.Value;
-    var username = isAgent ? Model.PreviousUsername : Model.GetLogsViewModel.Username;
+    var username = isAgent ? Model.PreviousUsername : Model.Username;
 }
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="@ViewContext.RouteData.Values["controller"].ToString().ToLower()">
@@ -55,7 +55,7 @@
                 <tbody>
                     @if (Model.HasLogs)
                     {
-                        foreach (LoginLogViewModel log in Model.GetLogsViewModel.Logs)
+                        foreach (LoginLogViewModel log in Model.Logs)
                         {
                             <tr>
                                 <td align="center">@log.LogId</td>
@@ -96,15 +96,15 @@
             labelTo: '@Resources.To',
             noInfo: '@Resources.NoInfo',
 
-            maxReportDate: '@Model.GetLogsViewModel.MaxReportDate',
-            minReportDate: '@Model.GetLogsViewModel.MinReportDate',
-            fromDate: '@Model.GetLogsViewModel.FromDate',
-            toDate: '@Model.GetLogsViewModel.ToDate',
-            dayInMonth: '@Model.GetLogsViewModel.DayInMonth',
+            maxReportDate: '@Model.MaxReportDate',
+            minReportDate: '@Model.MinReportDate',
+            fromDate: '@Model.FromDate',
+            toDate: '@Model.ToDate',
+            dayInMonth: '@Model.DayInMonth',
 
-            totalRecords: @Model.GetLogsViewModel.TotalRecords,
-            pageSize: @Model.GetLogsViewModel.PageSize,
-            pageIndex: @Model.GetLogsViewModel.PageIndex,
+            totalRecords: @Model.TotalRecords,
+            pageSize: @Model.PageSize,
+            pageIndex: @Model.PageIndex,
             actionTypeId: '@Model.ActionTypeId',
 
             showOldValuesCookieName: '@Model.ShowOldValuesCookieName',

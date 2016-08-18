@@ -2,9 +2,9 @@
 {
     using System.Collections.Generic;
 
-    public class PagingLogs<BaseLog>
+    public class PagingLogs<Log>
     {
-        public List<BaseLog> Logs { get; set; }
+        public List<Log> Logs { get; set; }
 
         public int TotalRecords { get; set; }
     }

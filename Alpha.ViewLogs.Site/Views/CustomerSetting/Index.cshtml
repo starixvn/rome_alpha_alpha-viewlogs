@@ -11,7 +11,7 @@
             <form class="form-inline" role="form">
                 <div class="form-group">
                     <input type="text" id="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
-                           value="@(string.IsNullOrEmpty(Model.GetLogsViewModel.Username) ? string.Empty : Model.GetLogsViewModel.Username)"
+                           value="@(string.IsNullOrEmpty(Model.Username) ? string.Empty : Model.Username)"
                            autocomplete="off" />
                 </div>
                 <div class="form-group">
@@ -19,7 +19,7 @@
                     <select id="ddl-logactiontype">
                         @foreach (var logActionType in Model.LogActionTypes)
                         {
-                            <option value="@logActionType.Id" @(logActionType.Id == ((GetCustomerSettingLogsViewModel)Model.GetLogsViewModel).ActionTypeId ? "selected" : string.Empty)>@logActionType.Name</option>
+                            <option value="@logActionType.Id" @(logActionType.Id.ToString() == Model.ActionTypeId ? "selected" : string.Empty)>@logActionType.Name</option>
                         }
                     </select>
                 </div>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group">
                     <label>
-                        <input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" @(Model.GetLogsViewModel.ShowOldValue ? "checked" : "") />@Resources.ShowOldValues
+                        <input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" @(Model.ShowOldValue ? "checked" : "") />@Resources.ShowOldValues
                     </label>
                 </div>
             </form>
@@ -54,7 +54,7 @@
                 <tbody>
                     @if (Model.HasLogs)
                     {
-                        foreach (var log in Model.GetLogsViewModel.Logs)
+                        foreach (var log in Model.Logs)
                         {
                             <tr>
                                 <td align="center">@log.LogId</td>
@@ -91,15 +91,15 @@
             labelTo: '@Resources.To',
             noInfo: '@Resources.NoInfo',
 
-            maxReportDate: '@Model.GetLogsViewModel.MaxReportDate',
-            minReportDate: '@Model.GetLogsViewModel.MinReportDate',
-            fromDate: '@Model.GetLogsViewModel.FromDate',
-            toDate: '@Model.GetLogsViewModel.ToDate',
-            dayInMonth: '@Model.GetLogsViewModel.DayInMonth',
+            maxReportDate: '@Model.MaxReportDate',
+            minReportDate: '@Model.MinReportDate',
+            fromDate: '@Model.FromDate',
+            toDate: '@Model.ToDate',
+            dayInMonth: '@Model.DayInMonth',
 
-            totalRecords: @Model.GetLogsViewModel.TotalRecords,
-            pageSize: @Model.GetLogsViewModel.PageSize,
-            pageIndex: @Model.GetLogsViewModel.PageIndex,
+            totalRecords: @Model.TotalRecords,
+            pageSize: @Model.PageSize,
+            pageIndex: @Model.PageIndex,
 
             showOldValuesCookieName: '@Model.ShowOldValuesCookieName',
             Page: '@Resources.Page',

@@ -3,10 +3,10 @@
     using Alpha.ViewLogs.Models;
     using Params;
 
-    public interface TransformTrackingValueToHtmlService
+    public interface TransformService
     {
         void InitCompiledTransformCache(TransformTrackingValueToHtmlParam transformParam);
 
-        string TransformTrackingValueToHtml(string trackingValue, Log baseLog, TransformTrackingValueToHtmlParam transformParam);
+        string TransformTrackingValueToHtml(string trackingValue, Log log, TransformTrackingValueToHtmlParam transformParam);
     }
 }

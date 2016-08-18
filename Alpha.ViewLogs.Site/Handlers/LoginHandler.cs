@@ -26,11 +26,11 @@
             var logsParam = GetLogsParam(message);
             var pagingLogs = loginService.GetLogs(logsParam);
 
-            var viewModel = new IndexViewModel(logsParam);
-            viewModel.GetLogsViewModel = new GetLogsViewModel(logsParam, pagingLogs);
+            var viewModel = new IndexViewModel();
+            AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
             viewModel.PreviousUsername = message.PreviousUsername;
 
-            TransformLogsToHtml(pagingLogs, message, viewModel.GetLogsViewModel);
+            TransformLogsToHtml(pagingLogs, message, viewModel);
 
             viewModel.ActionTypeId = message.ActionTypeId;
 
@@ -40,7 +40,7 @@
         private void TransformLogsToHtml(
             PagingLogs<Log> pagingLogs,
             IndexQuery message,
-            GetLogsViewModel viewModel)
+            BaseIndexViewModel viewModel)
         {
             var htmlLogs = new List<LogViewModel>();
 

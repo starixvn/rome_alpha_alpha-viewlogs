@@ -26,9 +26,9 @@
             return totalRecords;
         }
 
-        public virtual List<BaseLogType> GetLogs<BaseLogType>(ICriteria criteria)
+        public virtual List<LogType> GetLogs<LogType>(ICriteria criteria)
         {
-            return dynamicRepository.Fetch<BaseLogType>(criteria).ToList();
+            return dynamicRepository.Fetch<LogType>(criteria).ToList();
         }
     }
 }

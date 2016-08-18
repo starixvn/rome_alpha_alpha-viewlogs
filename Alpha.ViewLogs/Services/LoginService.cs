@@ -5,6 +5,6 @@
 
     public interface LoginService
     {
-        PagingLogs<Log> GetLogs(GetLogsParam baseParam);
+        PagingLogs<Log> GetLogs(LogParam baseParam);
     }
 }

@@ -1,66 +1,27 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels
 {
+    using System.Collections.Generic;
     using System.Linq;
     using Models.Enumerations;
-    using Params;
     using ViewLogs.Helpers;
 
     public class BaseIndexViewModel
     {
-        private readonly bool hasViewLogPermission;
-        private readonly bool isSubAccount;
-        private readonly byte roleId;
+        public bool HasViewLogPermission { get; set; }
 
-        public BaseIndexViewModel(GetLogsParam logsParam)
-        {
-            this.hasViewLogPermission = logsParam.HasViewLogPermission;
-            this.isSubAccount = logsParam.SubAccId > 0;
-            this.roleId = logsParam.RoleId;
-        }
+        public bool IsSubAccount { get; set; }
 
-        public bool HasViewLogPermission
-        {
-            get
-            {
-                return hasViewLogPermission;
-            }
-        }
-
-        public bool IsSubAccount
-        {
-            get
-            {
-                return isSubAccount;
-            }
-        }
-
-        public byte RoleId
-        {
-            get
-            {
-                return this.roleId;
-            }
-        }
+        public byte RoleId { get; set; }
 
         public string UserLevel
         {
             get
             {
-                return Enumeration.FromValue<UserLevel>(this.roleId).DisplayName.ToLower();
+                return Enumeration.FromValue<UserLevel>(RoleId).DisplayName.ToLower();
             }
         }
-
-        public GetLogsViewModel GetLogsViewModel { get; set; }
 
         public string ShowOldValuesCookieName { get; set; }
-
-        public virtual string IndexPath
-        {
-            get
-            {
-                return string.Empty;
-            }
-        }
 
         public string UsernameAutoSuggestionPath
         {
@@ -78,14 +39,44 @@
             }
         }
 
+        public string IndexPath
+        {
+            get
+            {
+                return MicroSites.ViewLogsPath("./");
+            }
+        }
+
         public string ActionTypeId { get; set; }
 
         public bool HasLogs
         {
             get
             {
-                return GetLogsViewModel.Logs != null && GetLogsViewModel.Logs.Any();
+                return Logs != null && Logs.Any();
             }
         }
+
+        public bool ShowOldValue { get; set; }
+
+        public int TotalRecords { get; set; }
+
+        public int PageSize { get; set; }
+
+        public int PageIndex { get; set; }
+
+        public List<LogViewModel> Logs { get; set; }
+
+        public string DayInMonth { get; set; }
+
+        public string FromDate { get; set; }
+
+        public string ToDate { get; set; }
+
+        public string MinReportDate { get; set; }
+
+        public string MaxReportDate { get; set; }
+
+        public string Username { get; set; }
     }
 }

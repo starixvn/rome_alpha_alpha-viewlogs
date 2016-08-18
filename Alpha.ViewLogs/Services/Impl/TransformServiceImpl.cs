@@ -10,7 +10,7 @@
     using System.Xml.XPath;
     using System.Xml.Xsl;
 
-    public class TransformTrackingValueToHtmlServiceImpl : TransformTrackingValueToHtmlService
+    public class TransformServiceImpl : TransformService
     {
         private const string CacheKeyTransformObject = "Alpha.ViewLogs.TransformObject";
         private const int HourToCacheCompiledTransforms = 1;
@@ -18,7 +18,7 @@
         private readonly CachingManager cacheManager;
         private readonly XsltLogFormatter xsltLogFormatService;
 
-        public TransformTrackingValueToHtmlServiceImpl(
+        public TransformServiceImpl(
             CachingManager cacheManager,
             XsltLogFormatter xsltLogFormatService)
         {
@@ -39,23 +39,23 @@
 
         public string TransformTrackingValueToHtml(
             string trackingValue,
-            Log baseLog,
+            Log log,
             TransformTrackingValueToHtmlParam transformParam)
         {
             var htmlTrackingValue = string.Empty;
-            if (string.IsNullOrEmpty(trackingValue) || baseLog.ActionId < 0)
+            if (string.IsNullOrEmpty(trackingValue) || log.ActionId < 0)
             {
                 return htmlTrackingValue;
             }
 
-            var compiledTransform = GetCompiledTransformByActionIdFromCache(baseLog.ActionId) ??
-                GetCompiledTransformByActionIdFromTemplates(baseLog.ActionId, transformParam.TrackingValueTransformTemplatePath);
+            var compiledTransform = GetCompiledTransformByActionIdFromCache(log.ActionId) ??
+                GetCompiledTransformByActionIdFromTemplates(log.ActionId, transformParam.TrackingValueTransformTemplatePath);
             if (compiledTransform.OutputSettings == null || compiledTransform.TemporaryFiles == null)
             {
                 return htmlTrackingValue;
             }
 
-            CacheCompiledTransform(baseLog.ActionId, compiledTransform);
+            CacheCompiledTransform(log.ActionId, compiledTransform);
 
             xsltLogFormatService.AssignParams(transformParam);
             var xsltArguments = new XsltArgumentList();

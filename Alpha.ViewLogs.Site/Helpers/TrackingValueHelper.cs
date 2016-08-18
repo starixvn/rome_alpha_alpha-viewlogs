@@ -10,22 +10,22 @@
 
     public static class TrackingValueHelper
     {
-        public static string GetTrackingValueWithDiff(Log baseLog, bool isShowOldValue)
+        public static string GetTrackingValueWithDiff(Log log, bool isShowOldValue)
         {
-            if (string.IsNullOrEmpty(baseLog.TrackingValue))
+            if (string.IsNullOrEmpty(log.TrackingValue))
             {
                 return string.Empty;
             }
 
-            baseLog.TrackingValue = StandardizeTrackingValue(baseLog.TrackingValue);
-            baseLog.TrackingValueOld = StandardizeTrackingValue(baseLog.TrackingValueOld);
+            log.TrackingValue = StandardizeTrackingValue(log.TrackingValue);
+            log.TrackingValueOld = StandardizeTrackingValue(log.TrackingValueOld);
 
             var trackingValueDoc = new XmlDocument();
-            trackingValueDoc.InnerXml = baseLog.TrackingValue;
+            trackingValueDoc.InnerXml = log.TrackingValue;
 
-            var hasOldXml = !string.IsNullOrEmpty(baseLog.TrackingValueOld);
+            var hasOldXml = !string.IsNullOrEmpty(log.TrackingValueOld);
             var trackingValueOldDoc = hasOldXml ? new XmlDocument() : trackingValueDoc;
-            trackingValueOldDoc.InnerXml = hasOldXml ? baseLog.TrackingValueOld : trackingValueDoc.InnerXml;
+            trackingValueOldDoc.InnerXml = hasOldXml ? log.TrackingValueOld : trackingValueDoc.InnerXml;
 
             FormatAttributesWithDiff(trackingValueDoc.DocumentElement.Attributes, trackingValueOldDoc.DocumentElement.Attributes, isShowOldValue);
 

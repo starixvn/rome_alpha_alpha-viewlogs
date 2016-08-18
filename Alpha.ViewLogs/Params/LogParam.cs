@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public class GetLogsParam
+    public class LogParam
     {
         public int UplineId { get; set; }
 

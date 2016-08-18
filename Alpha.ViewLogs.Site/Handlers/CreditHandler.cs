@@ -27,9 +27,9 @@
             var logsParam = GetLogsParam(message);
             var pagingLogs = creditService.GetLogs(logsParam);
 
-            var viewModel = new IndexViewModel(logsParam);
-            viewModel.GetLogsViewModel = new GetLogsViewModel(logsParam, pagingLogs);
-            TransformLogsToHtml(pagingLogs, message, viewModel.GetLogsViewModel);
+            var viewModel = new IndexViewModel();
+            AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
+            TransformLogsToHtml(pagingLogs, message, viewModel);
 
             viewModel.ActionTypeId = message.ActionTypeId;
 
@@ -39,7 +39,7 @@
         public void TransformLogsToHtml(
             PagingLogs<Log> pagingLogs,
             BaseQuery message,
-            GetLogsViewModel viewModel)
+            BaseIndexViewModel viewModel)
         {
             var htmlLogs = new List<LogViewModel>();
 

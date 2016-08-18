@@ -11,7 +11,7 @@
             <form class="form-inline" role="form">
                 <div class="form-group">
                     <input type="text" id="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
-                           value="@(string.IsNullOrEmpty(Model.GetLogsViewModel.Username) ? string.Empty : Model.GetLogsViewModel.Username)"
+                           value="@(string.IsNullOrEmpty(Model.Username) ? string.Empty : Model.Username)"
                            autocomplete="off" />
                 </div>
                 <div class="form-group">
@@ -43,7 +43,7 @@
                 <tbody>
                     @if (Model.HasLogs)
                     {
-                        foreach (var log in Model.GetLogsViewModel.Logs)
+                        foreach (var log in Model.Logs)
                         {
                             <tr>
                                 <td align="center">@log.LogId</td>
@@ -83,15 +83,15 @@
             labelTo: '@Resources.To',
             noInfo: '@Resources.NoInfo',
 
-            maxReportDate: '@Model.GetLogsViewModel.MaxReportDate',
-            minReportDate: '@Model.GetLogsViewModel.MinReportDate',
-            fromDate: '@Model.GetLogsViewModel.FromDate',
-            toDate: '@Model.GetLogsViewModel.ToDate',
-            dayInMonth: '@Model.GetLogsViewModel.DayInMonth',
+            maxReportDate: '@Model.MaxReportDate',
+            minReportDate: '@Model.MinReportDate',
+            fromDate: '@Model.FromDate',
+            toDate: '@Model.ToDate',
+            dayInMonth: '@Model.DayInMonth',
 
-            totalRecords: @Model.GetLogsViewModel.TotalRecords,
-            pageSize: @Model.GetLogsViewModel.PageSize,
-            pageIndex: @Model.GetLogsViewModel.PageIndex,
+            totalRecords: @Model.TotalRecords,
+            pageSize: @Model.PageSize,
+            pageIndex: @Model.PageIndex,
             actionTypeId: '@Model.ActionTypeId',
 
             showOldValuesCookieName: '@Model.ShowOldValuesCookieName',

@@ -7,6 +7,6 @@
     {
         int GetTotalRecordsOfLogs(ICriteria criteria);
 
-        List<BaseLog> GetLogs<BaseLog>(ICriteria criteria);
+        List<Log> GetLogs<Log>(ICriteria criteria);
     }
 }
