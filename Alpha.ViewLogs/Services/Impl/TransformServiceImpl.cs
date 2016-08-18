@@ -1,7 +1,5 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl
 {
-    using Alpha.ViewLogs.Models;
-    using Params;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -9,6 +7,8 @@
     using System.Web;
     using System.Xml.XPath;
     using System.Xml.Xsl;
+    using Alpha.ViewLogs.Models;
+    using Params;
 
     public class TransformServiceImpl : TransformService
     {
@@ -78,7 +78,7 @@
         private XslCompiledTransform GetCompiledTransformByActionIdFromTemplates(int actionId, string trackingValueTransformTemplatePath)
         {
             var xslCompiledTransform = new XslCompiledTransform();
-            var path = Path.Combine(trackingValueTransformTemplatePath, string.Format("action_{0}.xslt", actionId));
+            var path = FindTemplatePathInDirectoryByActionId(actionId, trackingValueTransformTemplatePath);
 
             if (File.Exists(path))
             {
@@ -105,6 +105,29 @@
             }
 
             cacheManager.Add(CacheKeyTransformObject, compiledTransforms);
+        }
+
+        private string FindTemplatePathInDirectoryByActionId(int actionId, string directory)
+        {
+            var path = Path.Combine(directory, string.Format("action_{0}.xslt", actionId));
+
+            if (File.Exists(path))
+            {
+                return path;
+            }
+
+            var subFolders = Directory.GetDirectories(directory);
+            foreach (var subFolder in subFolders)
+            {
+                path = FindTemplatePathInDirectoryByActionId(actionId, Path.Combine(directory, subFolder));
+
+                if (!string.IsNullOrEmpty(path))
+                {
+                    return path;
+                }
+            }
+
+            return string.Empty;
         }
     }
 }

@@ -429,7 +429,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\action_382.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_384.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_389.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_390.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\Setting\action_390.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_391.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_400.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_401.xslt" />

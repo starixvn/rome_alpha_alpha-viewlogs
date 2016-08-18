@@ -1,16 +1,15 @@
 ﻿namespace Alpha.ViewLogs.Site
 {
+    using System;
+    using System.Reflection;
+    using System.Web;
+    using System.Web.Mvc;
+    using System.Web.Routing;
     using App_Start;
     using AppResources;
     using Auth.Web;
     using ONEbook.UM.Filters;
     using Sunplus.Agent.Utilities;
-    using System;
-    using System.Diagnostics.CodeAnalysis;
-    using System.Reflection;
-    using System.Web;
-    using System.Web.Mvc;
-    using System.Web.Routing;
 
     public class MvcApplication : HttpApplication
     {
