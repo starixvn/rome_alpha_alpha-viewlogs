@@ -63,6 +63,7 @@
             var viewModel = new IndexViewModel();
             AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
             viewModel.LogActionTypes = GetLogActionTypes(message);
+            viewModel.ActionTypeId = message.ActionTypeId;
 
             TransformLogsToHtml(pagingLogs, message, viewModel);
 

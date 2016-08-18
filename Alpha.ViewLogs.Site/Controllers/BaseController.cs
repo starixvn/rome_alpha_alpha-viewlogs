@@ -47,14 +47,9 @@
                 return;
             }
 
-            if (!CurrentUserSession.SubPageAccess.ViewLog)
+            if (CurrentUserSession.IsSubAcc && !CurrentUserSession.SubPageAccess.ViewLog)
             {
                 Response.Redirect(MicroSites.OldMainPath(AppSettings.AccessDeniedPage));
-            }
-
-            if (!CanViewSettingLogs(CurrentUserSession))
-            {
-                Response.Redirect(LoginLogsURL);
             }
         }
 
@@ -92,12 +87,6 @@
             Thread.CurrentThread.CurrentCulture.NumberFormat = defaultCulture.NumberFormat;
 
             base.Initialize(requestContext);
-        }
-
-        protected bool CanViewSettingLogs(IUserSession userSession)
-        {
-            return userSession.SubAccId <= 0 ||
-                (userSession.SubPageAccess != null && userSession.SubPageAccess.ViewLog);
         }
 
         protected bool GetShowOldValue()

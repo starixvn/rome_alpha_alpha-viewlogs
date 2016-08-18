@@ -66,6 +66,7 @@
         public List<LogActionType> GetLogActionTypes()
         {
             var logActionTypes = cacheManager.Get<List<LogActionType>>(CacheKeyLogActionTypes);
+
             if (logActionTypes != null && logActionTypes.Any())
             {
                 return logActionTypes;

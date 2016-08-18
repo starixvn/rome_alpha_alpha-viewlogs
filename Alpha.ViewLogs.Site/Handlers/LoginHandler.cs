@@ -29,11 +29,10 @@
 
             var viewModel = new IndexViewModel();
             AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
-            viewModel.IsAgent = viewModel.RoleId == UserLevel.Agent.Value;
-            viewModel.PreviousUsername = message.PreviousUsername;
-
             TransformLogsToHtml(pagingLogs, message, viewModel);
 
+            viewModel.IsAgent = viewModel.RoleId == UserLevel.Agent.Value;
+            viewModel.PreviousUsername = message.PreviousUsername;
             viewModel.ActionTypeId = message.ActionTypeId;
             viewModel.Username = viewModel.RoleId == UserLevel.Agent.Value ? viewModel.PreviousUsername : viewModel.Username;
 

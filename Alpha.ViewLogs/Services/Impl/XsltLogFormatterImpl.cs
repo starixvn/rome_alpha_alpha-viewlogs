@@ -1,16 +1,15 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Xml.Linq;
     using AppResources;
     using Constants;
     using Helpers;
     using Models;
     using Params;
     using Sunplus.Agent.Model.BL.Cache;
-    using Sunplus.Agent.Model.Entities;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Xml.Linq;
 
     public class XsltLogFormatterImpl : XsltLogFormatter
     {
@@ -80,6 +79,7 @@
             var oldValue = string.Empty;
 
             var nodeCountIncaseOfHavingNewOldDivs = 3;
+
             if (nodeCount == nodeCountIncaseOfHavingNewOldDivs)
             {
                 newValue = codes.First().Value;
@@ -91,6 +91,7 @@
             }
 
             var nodeCountIncaseOfUnchangeValuesOrNotShowOldValues = 1;
+
             if (nodeCount == nodeCountIncaseOfUnchangeValuesOrNotShowOldValues)
             {
                 newValue = codes.First().Value;
@@ -259,6 +260,7 @@
             }
 
             var indicatorOfWeekly = 7;
+
             if (codes[indicatorOfWeekly].ToString() == "0")
             {
                 return Resources.Daily;
@@ -267,6 +269,7 @@
             var selectedDays = new List<string>();
             var daysInWeek = DateTimeHelper.DaysInWeek();
             var numberOfDaysInWeek = daysInWeek.Count();
+
             for (var i = 0; i < numberOfDaysInWeek; i++)
             {
                 if (codes[i] == '1')

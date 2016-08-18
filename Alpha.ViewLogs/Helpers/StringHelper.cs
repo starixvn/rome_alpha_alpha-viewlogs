@@ -10,6 +10,7 @@
             }
 
             double numberValue;
+
             if (double.TryParse(value, out numberValue))
             {
                 return numberValue.ToString();

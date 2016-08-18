@@ -43,6 +43,7 @@
             TransformTrackingValueToHtmlParam transformParam)
         {
             var htmlTrackingValue = string.Empty;
+
             if (string.IsNullOrEmpty(trackingValue) || log.ActionId < 0)
             {
                 return htmlTrackingValue;
@@ -50,6 +51,7 @@
 
             var compiledTransform = GetCompiledTransformByActionIdFromCache(log.ActionId) ??
                 GetCompiledTransformByActionIdFromTemplates(log.ActionId, transformParam.TrackingValueTransformTemplatePath);
+
             if (compiledTransform.OutputSettings == null || compiledTransform.TemporaryFiles == null)
             {
                 return htmlTrackingValue;
@@ -99,6 +101,7 @@
         private void CacheCompiledTransform(int actionId, XslCompiledTransform compiledTransform)
         {
             var compiledTransforms = cacheManager.Get<Dictionary<int, XslCompiledTransform>>(CacheKeyTransformObject);
+
             if (!compiledTransforms.ContainsKey(actionId))
             {
                 compiledTransforms.Add(actionId, compiledTransform);

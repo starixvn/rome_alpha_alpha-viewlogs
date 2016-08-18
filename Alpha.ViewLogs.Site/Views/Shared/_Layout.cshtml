@@ -1,4 +1,7 @@
 ﻿@using Alpha.ViewLogs.AppResources;
+@using Alpha.ViewLogs.Site.ViewModels;
+
+@model BaseIndexViewModel
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,6 +32,12 @@
         @RenderBody()
         @Html.Partial("MonthNames")
     </div>
+
+    <div class="shadow" id="shadow"></div>
+    <div class="output" id="output"></div>
+    @Html.Hidden("indexPath", Model.IndexPath)
+    @Html.Hidden("usernameAutoSuggestionPath", Model.UsernameAutoSuggestionPath)
+    @Html.Hidden("viewIPInfoPath", Model.ViewIPInfoPath)
 
     @RenderSection("Scripts", required: false)
 </body>
