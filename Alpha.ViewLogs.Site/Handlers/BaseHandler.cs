@@ -14,7 +14,6 @@
         protected readonly XsltLogFormatter xsltLogFormatter;
         protected readonly LogService logService;
 
-
         public BaseHandler(LogService logService, XsltLogFormatter xsltLogFormatter)
         {
             this.xsltLogFormatter = xsltLogFormatter;
@@ -49,7 +48,10 @@
             };
         }
 
-        public void AssignIndexViewModelValue(LogParam logsParam, PagingLogs<Log> pagingLogs, BaseIndexViewModel indexViewModel)
+        public void AssignIndexViewModelValue(
+            LogParam logsParam,
+            PagingLogs<Log> pagingLogs,
+            BaseIndexViewModel indexViewModel)
         {
             var dateInRange = logsParam.FromDate < logsParam.MinReportDate ? logsParam.MinReportDate : logsParam.FromDate;
             var fromDate = dateInRange.Day.ToString();
@@ -77,6 +79,8 @@
             indexViewModel.MinReportDate = logsParam.MinReportDate.ToShortDateString();
 
             indexViewModel.Username = logsParam.Username;
+
+            indexViewModel.ShowOldValuesCookieName = BaseQuery.CookieShowOldValue;
         }
     }
 }

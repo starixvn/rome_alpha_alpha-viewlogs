@@ -17,10 +17,7 @@
 
         public ActionResult Index(IndexQuery indexQuery)
         {
-            indexQuery.AssignServerSideParam(CurrentUserSession, GetShowOldValue());
-
             var viewModel = mediator.Send(indexQuery);
-            viewModel.ShowOldValuesCookieName = CookieShowOldValue;
 
             return View(viewModel);
         }

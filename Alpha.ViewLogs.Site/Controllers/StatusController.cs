@@ -18,12 +18,9 @@
 
         public ActionResult Index(IndexQuery indexQuery)
         {
-            indexQuery.AssignServerSideParam(CurrentUserSession, GetShowOldValue());
-
             indexQuery.TrackingValueTransformTemplatePath = HttpContext.Server.MapPath("~/App_Data/TrackingValueTransformTemplates");
 
-            var viewModel = mediator.Send<IndexViewModel>(indexQuery);
-            viewModel.ShowOldValuesCookieName = CookieShowOldValue;
+            var viewModel = mediator.Send(indexQuery);
 
             return View(viewModel);
         }

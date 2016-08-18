@@ -9,7 +9,6 @@
     using System.Web.Security;
     using System.Web.SessionState;
     using Configurations;
-    using Fanex.Common;
     using Sunplus.Agent.Model.Entities;
     using ViewLogs.Constants;
     using ViewLogs.Helpers;
@@ -18,7 +17,6 @@
     public class BaseController : Controller
     {
         private IUserSession currentUserSession;
-        protected const string CookieShowOldValue = "Alpha.ViewLogs.ShowOldValuesCookie";
         protected const string LoginLogsURL = "~/LoginLogs";
         private CultureInfo defaultCulture = CultureInfo.CreateSpecificCulture(Language.Default);
 
@@ -87,15 +85,6 @@
             Thread.CurrentThread.CurrentCulture.NumberFormat = defaultCulture.NumberFormat;
 
             base.Initialize(requestContext);
-        }
-
-        protected bool GetShowOldValue()
-        {
-            var cookie = Request.Cookies.Get(CookieShowOldValue);
-
-            bool showOldValue = cookie == null || Converter.ToInt(cookie.Value) == 1;
-
-            return showOldValue;
         }
     }
 }
