@@ -67,7 +67,7 @@
             var pagingLogs = this.logService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
-            viewModel.LogActionTypes = GetLogActionTypes(message);
+            viewModel.LogActionTypes = BuildLogActionTypeViewModels(message);
             viewModel.ActionTypeId = message.ActionTypeId;
 
             TransformLogs(pagingLogs, message, viewModel);
@@ -75,12 +75,14 @@
             return viewModel;
         }
 
-        private List<LogActionTypeViewModel> GetLogActionTypes(IndexQuery message)
+        private IEnumerable<LogActionTypeViewModel> BuildLogActionTypeViewModels(IndexQuery message)
         {
             var logActionTypes = this.logService.GetLogActionTypes();
 
-            var logActionTypeViewModels = logActionTypes.Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))
+            var logActionTypeViewModels = logActionTypes
+                .Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))
                 .ToList();
+
             logActionTypeViewModels.Insert(0, new LogActionTypeViewModel(ActionType.All, Resources.All));
 
             return logActionTypeViewModels;

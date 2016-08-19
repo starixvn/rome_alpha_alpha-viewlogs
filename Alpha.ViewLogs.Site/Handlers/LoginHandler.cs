@@ -31,6 +31,7 @@
             var pagingLogs = this.logService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
+
             TransformLogs(pagingLogs, message, viewModel);
 
             viewModel.IsAgent = viewModel.RoleId == UserLevel.Agent.Value;

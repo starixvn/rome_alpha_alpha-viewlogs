@@ -9,6 +9,6 @@
         {
         }
 
-        public List<LogActionTypeViewModel> LogActionTypes { get; set; }
+        public IEnumerable<LogActionTypeViewModel> LogActionTypes { get; set; }
     }
 }
