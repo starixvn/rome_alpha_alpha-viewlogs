@@ -20,6 +20,7 @@
         public ActionResult Index(IndexQuery indexQuery)
         {
             indexQuery.IsAgentViewing = currentUserSession.RoleId == UserLevel.Agent.Value;
+            indexQuery.PreviousUsername = indexQuery.Username;
             indexQuery.Username = indexQuery.IsAgentViewing ? currentUserSession.UserName : indexQuery.Username;
             indexQuery.IsInternal = currentUserSession.IsInternal;
 
