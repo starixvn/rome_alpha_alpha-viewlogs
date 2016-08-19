@@ -111,7 +111,7 @@ var creditView = {
         };
     },
     renderPager: function (options) {
-        if (options.pageSize <= options.totalRecords) {
+        if (alphaViewLogs.pageList[0] <= options.totalRecords) {
             creditView.elelments.pagination.pagination({
                 pageList: alphaViewLogs.pageList,
                 total: options.totalRecords,
