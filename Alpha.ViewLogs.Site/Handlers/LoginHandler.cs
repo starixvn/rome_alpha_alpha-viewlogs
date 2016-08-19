@@ -28,7 +28,7 @@
         public IndexViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = this.logService.GetLogs(logsParam);
+            var pagingLogs = this.logService.GetPagingLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
 

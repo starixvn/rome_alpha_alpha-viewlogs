@@ -100,7 +100,7 @@
             return logActionDictionary[actionId];
         }
 
-        public PagingLogs<Log> GetLogs(LogParam logParam)
+        public PagingLogs<Log> GetPagingLogs(LogParam logParam)
         {
             var pagingLogs = new PagingLogs<Log>();
 
@@ -119,7 +119,7 @@
 
             logParam.CustId = downlineInfo.CustId;
 
-            pagingLogs.Logs = GetLogData(logParam);
+            pagingLogs.Logs = GetLogs(logParam);
             pagingLogs.TotalRecords = GetTotalLogs(logParam);
 
             foreach (var log in pagingLogs.Logs)
@@ -130,7 +130,7 @@
             return pagingLogs;
         }
 
-        protected virtual IEnumerable<Log> GetLogData(LogParam logParam)
+        protected virtual IEnumerable<Log> GetLogs(LogParam logParam)
         {
             var criteria = CreateGetLogsCriteria(logParam);
 

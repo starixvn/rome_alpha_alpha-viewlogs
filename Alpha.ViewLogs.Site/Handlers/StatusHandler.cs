@@ -33,7 +33,7 @@
         public LogViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = this.logService.GetLogs(logsParam);
+            var pagingLogs = this.logService.GetPagingLogs(logsParam);
 
             var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords);
             viewModel.ActionTypeId = message.ActionTypeId;

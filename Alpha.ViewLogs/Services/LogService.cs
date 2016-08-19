@@ -8,6 +8,6 @@
     {
         IEnumerable<LogActionType> GetLogActionTypes();
 
-        PagingLogs<Log> GetLogs(LogParam baseParam);
+        PagingLogs<Log> GetPagingLogs(LogParam logParam);
     }
 }

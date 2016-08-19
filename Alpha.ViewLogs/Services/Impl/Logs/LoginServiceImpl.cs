@@ -24,7 +24,7 @@
         {
         }
 
-        protected override IEnumerable<Log> GetLogData(LogParam logParam)
+        protected override IEnumerable<Log> GetLogs(LogParam logParam)
         {
             var criteria = CreateGetLogsCriteria(logParam);
 
