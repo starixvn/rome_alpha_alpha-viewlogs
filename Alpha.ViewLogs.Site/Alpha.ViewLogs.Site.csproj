@@ -429,7 +429,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\BetSetting\action_382.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\BetSetting\action_384.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\BetSetting\action_389.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\Setting\action_390.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\BetSetting\action_390.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\BetSetting\action_391.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTaking\action_400.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTaking\action_401.xslt" />
