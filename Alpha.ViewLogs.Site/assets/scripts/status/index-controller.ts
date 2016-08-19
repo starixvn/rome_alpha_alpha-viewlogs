@@ -14,18 +14,16 @@ var statusController = {
     init: function () {
         statusView.initElements(viewModel);
 
-        statusController.viewLogsParams = statusView.getParams();
-        tabController.viewLogsParams = statusController.viewLogsParams;
+        tabController.viewLogsParams = statusView.getParams();
     },
-    viewLogsParams: null,
     viewLogs: function () {
         setVisible('hidden');
         statusView.showLoadingState();
 
-        statusController.viewLogsParams = statusView.getParams();
-        tabController.viewLogsParams = statusController.viewLogsParams;
+        var viewLogsParams = statusView.getParams();
+        tabController.viewLogsParams = viewLogsParams;
 
-        var url = statusController.urls.index + "?" + $.param(statusController.viewLogsParams);
+        var url = statusController.urls.index + "?" + $.param(viewLogsParams);
         window.location.href = url;
     }
 };

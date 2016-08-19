@@ -12,7 +12,6 @@ var loginView = {
         ddlMonth: null,
         iconLoading: null,
         txtUsername: null,
-        logTableContent: null,
         pagination: null,
         longMonthsInYear: null
     },
@@ -46,6 +45,8 @@ var loginView = {
 
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
+                loginView.pageNumber = 0;
+                loginView.pageSize = '';
                 loginController.viewLogs();
 
                 return alphaViewLogs.cancelBubbleEvent(e);

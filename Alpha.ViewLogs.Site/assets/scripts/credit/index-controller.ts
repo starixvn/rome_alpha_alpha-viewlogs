@@ -14,18 +14,16 @@ var creditController = {
     init: function () {
         creditView.initElements(viewModel);
 
-        creditController.viewLogsParams = creditView.getParams();
-        tabController.viewLogsParams = creditController.viewLogsParams;
+        tabController.viewLogsParams = creditView.getParams();
     },
-    viewLogsParams: null,
     viewLogs: function () {
         setVisible('hidden');
         creditView.showLoadingState();
 
-        creditController.viewLogsParams = creditView.getParams();
-        tabController.viewLogsParams = creditController.viewLogsParams;
+        var viewLogsParams = creditView.getParams();
+        tabController.viewLogsParams = viewLogsParams;
 
-        var url = creditController.urls.index + "?" + $.param(creditController.viewLogsParams);
+        var url = creditController.urls.index + "?" + $.param(viewLogsParams);
         window.location.href = url;
     }
 };

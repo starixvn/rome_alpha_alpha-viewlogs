@@ -24,6 +24,7 @@
             base.OnAuthentication(filterContext);
 
             var currentUserSession = UserSession.Current;
+
             if (!filterContext.HttpContext.User.Identity.IsAuthenticated ||
                 currentUserSession.UserId <= 0)
             {

@@ -14,18 +14,16 @@ var loginController = {
     init: function () {
         loginView.initElements(viewModel);
 
-        loginController.viewLogsParams = loginView.getParams();
-        tabController.viewLogsParams = loginController.viewLogsParams;
+        tabController.viewLogsParams = loginView.getParams();
     },
-    viewLogsParams: null,
     viewLogs: function () {
         setVisible('hidden');
         loginView.showLoadingState();
 
-        loginController.viewLogsParams = loginView.getParams();
-        tabController.viewLogsParams = loginController.viewLogsParams;
+        var viewLogsParams = loginView.getParams();
+        tabController.viewLogsParams = viewLogsParams;
 
-        var url = loginController.urls.index + "?" + $.param(loginController.viewLogsParams);
+        var url = loginController.urls.index + "?" + $.param(viewLogsParams);
         window.location.href = url;
     }
 };

@@ -30,6 +30,7 @@
             FormatDiffAttributes(trackingValueDoc.DocumentElement.Attributes, trackingValueOldDoc.DocumentElement.Attributes, isShowOldValue);
 
             var childNodeCount = trackingValueDoc.DocumentElement.ChildNodes.Count;
+
             for (int i = 0; i < childNodeCount; i++)
             {
                 var newNodes = trackingValueDoc.DocumentElement.ChildNodes[i];
@@ -46,6 +47,7 @@
             bool isShowOldValue)
         {
             var ignoreFormatAttributes = new string[] { "ip", "loginip", "stakelevel1" };
+
             foreach (XmlAttribute newAttribute in newAttributes)
             {
                 var newValue = newAttribute.Value;
@@ -59,6 +61,7 @@
                 var isAttributeNeedBeFormatted = (!string.IsNullOrEmpty(newValue) || !string.IsNullOrEmpty(oldValue)) &&
                     !ignoreFormatAttributes.Contains(newAttribute.Name.ToLower()) &&
                     !string.Equals(newValue, oldValue, StringComparison.OrdinalIgnoreCase);
+
                 if (!isAttributeNeedBeFormatted)
                 {
                     newAttributes[newAttribute.Name].Value = newValue;
@@ -95,6 +98,7 @@
         private static string StandardizeTrackingValue(string trackingValue)
         {
             var result = trackingValue;
+
             if (!string.IsNullOrEmpty(result))
             {
                 result = result.Replace("\a", string.Empty);
@@ -117,6 +121,7 @@
 
             var standardizedAttributeValue = attrValue;
             var isPermissionAttribute = IsPermissionValue(attrValue);
+
             if (isPermissionAttribute)
             {
                 standardizedAttributeValue = FormatPermissionValue(standardizedAttributeValue);
@@ -140,6 +145,7 @@
             }
 
             var pageAccessTypeNames = PageAccessType.PageAccessTypeName;
+
             foreach (var pageAccessTypeName in pageAccessTypeNames)
             {
                 if (standardizedAttributeValue.Contains(pageAccessTypeName.Key))

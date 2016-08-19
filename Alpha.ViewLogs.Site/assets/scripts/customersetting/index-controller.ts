@@ -14,18 +14,16 @@ var customerSettingController = {
     init: function () {
         customerSettingView.initElements(viewModel);
 
-        customerSettingController.viewLogsParams = customerSettingView.getParams();
-        tabController.viewLogsParams = customerSettingController.viewLogsParams;
+        tabController.viewLogsParams = customerSettingView.getParams();
     },
-    viewLogsParams: null,
     viewLogs: function () {
         setVisible('hidden');
         customerSettingView.showLoadingState();
 
-        customerSettingController.viewLogsParams = customerSettingView.getParams();
-        tabController.viewLogsParams = customerSettingController.viewLogsParams;
+        var viewLogsParams = customerSettingView.getParams();
+        tabController.viewLogsParams = viewLogsParams;
 
-        var url = customerSettingController.urls.index + "?" + $.param(customerSettingController.viewLogsParams);
+        var url = customerSettingController.urls.index + "?" + $.param(viewLogsParams);
         window.location.href = url;
     }
 };

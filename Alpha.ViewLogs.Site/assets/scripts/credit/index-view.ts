@@ -12,7 +12,6 @@ var creditView = {
         ddlMonth: null,
         iconLoading: null,
         txtUsername: null,
-        logTableContent: null,
         pagination: null,
         longMonthsInYear: null
     },
@@ -46,6 +45,8 @@ var creditView = {
 
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
+                customerSettingView.pageNumber = 0;
+                customerSettingView.pageSize = '';
                 creditController.viewLogs();
 
                 return alphaViewLogs.cancelBubbleEvent(e);

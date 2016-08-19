@@ -15,7 +15,6 @@ var statusView = {
         iconLoading: null,
         chkOldValues: null,
         txtUsername: null,
-        logTableContent: null,
         linkChangTabs: null,
         pagination: null
     },
@@ -28,7 +27,6 @@ var statusView = {
         statusView.elelments.iconLoading = $('#icon-loading');
         statusView.elelments.chkOldValues = $('#chk-oldvalues');
         statusView.elelments.txtUsername = $('#txt-username');
-        statusView.elelments.logTableContent = $('#DataLog tbody');
         statusView.elelments.pagination = $('#pagination');
     },
     initElements: function (viewModel) {
@@ -56,6 +54,8 @@ var statusView = {
 
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
+                statusView.pageNumber = 0;
+                statusView.pageSize = '';
                 statusController.viewLogs();
 
                 return alphaViewLogs.cancelBubbleEvent(e);
@@ -117,34 +117,6 @@ var statusView = {
             FromDate: statusView.elelments.ddlMonth.monPickr("getFromDate", alphaViewLogs.format.shortDateWithSlash),
             ToDate: statusView.elelments.ddlMonth.monPickr("getToDate", alphaViewLogs.format.shortDateWithSlash)
         };
-    },
-    renderLogs: function (result) {
-        var logs = result.Logs;
-        var logsCount = logs ? logs.length : 0;
-        var logContent = '';
-        if (logsCount) {
-            for (var i = 0; i < logsCount; i++) {
-                var log = logs[i];
-                logContent += '<tr>\
-                                <td align="center">'+ log.LogId + '</td>\
-                                <td align="center">'+ log.LogDate + '</td>\
-                                <td>'+ log.Username + '</td>\
-                                <td>'+ log.ActionName + '</td>\
-                                <td>'+ log.TrackingValue + '</td>\
-                              </tr>';
-            }
-        } else {
-            logContent = '<tr><td colspan="5" align="center">' + viewModel.noInfo + '</td></tr>';
-        }
-
-        statusView.elelments.logTableContent.empty();
-        statusView.elelments.logTableContent.append(logContent);
-
-        statusView.renderPager({
-            totalRecords: result.TotalRecords,
-            pageSize: result.PageSize,
-            pageNumber: result.PageIndex
-        });
     },
     renderPager: function (options) {
         if (alphaViewLogs.pageList[0] <= options.totalRecords) {

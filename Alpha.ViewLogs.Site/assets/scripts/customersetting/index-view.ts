@@ -15,7 +15,6 @@ var customerSettingView = {
         iconLoading: null,
         chkOldValues: null,
         txtUsername: null,
-        logTableContent: null,
         pagination: null,
         longMonthsInYear: null
     },
@@ -29,7 +28,6 @@ var customerSettingView = {
         customerSettingView.elelments.iconLoading = $('#icon-loading');
         customerSettingView.elelments.chkOldValues = $('#chk-oldvalues');
         customerSettingView.elelments.txtUsername = $('#txt-username');
-        customerSettingView.elelments.logTableContent = $('#DataLog tbody');
         customerSettingView.elelments.pagination = $('#pagination');
         customerSettingView.elelments.longMonthsInYear = $('#longMonthsInYear');
     },
@@ -65,6 +63,8 @@ var customerSettingView = {
 
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
+                customerSettingView.pageNumber = 0;
+                customerSettingView.pageSize = '';
                 customerSettingController.viewLogs();
 
                 return alphaViewLogs.cancelBubbleEvent(e);
