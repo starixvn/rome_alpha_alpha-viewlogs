@@ -95,13 +95,13 @@
         private bool IsValidIP(string ipAddress)
         {
             IPAddress ip;
-            return !string.IsNullOrEmpty(ipAddress)
+            return !string.IsNullOrWhiteSpace(ipAddress)
                 && IPAddress.TryParse(ipAddress, out ip);
         }
 
         private bool IsVNIP(string ip)
         {
-            if (string.IsNullOrEmpty(ip))
+            if (string.IsNullOrWhiteSpace(ip))
             {
                 return false;
             }

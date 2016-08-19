@@ -12,7 +12,7 @@
     {
         public string GetFormattedDiffTrackingValue(Log log, bool isShowOldValue)
         {
-            if (string.IsNullOrEmpty(log.TrackingValue))
+            if (string.IsNullOrWhiteSpace(log.TrackingValue))
             {
                 return string.Empty;
             }
@@ -23,7 +23,7 @@
             var trackingValueDoc = new XmlDocument();
             trackingValueDoc.InnerXml = log.TrackingValue;
 
-            var hasOldXml = !string.IsNullOrEmpty(log.TrackingValueOld);
+            var hasOldXml = !string.IsNullOrWhiteSpace(log.TrackingValueOld);
             var trackingValueOldDoc = hasOldXml ? new XmlDocument() : trackingValueDoc;
             trackingValueOldDoc.InnerXml = hasOldXml ? log.TrackingValueOld : trackingValueDoc.InnerXml;
 
@@ -58,7 +58,7 @@
                 newValue = StandardizeAttributeValue(newValue);
                 oldValue = StandardizeAttributeValue(oldValue);
 
-                var isAttributeNeedBeFormatted = (!string.IsNullOrEmpty(newValue) || !string.IsNullOrEmpty(oldValue)) &&
+                var isAttributeNeedBeFormatted = (!string.IsNullOrWhiteSpace(newValue) || !string.IsNullOrWhiteSpace(oldValue)) &&
                     !ignoreFormatAttributes.Contains(newAttribute.Name.ToLower()) &&
                     !string.Equals(newValue, oldValue, StringComparison.OrdinalIgnoreCase);
 
@@ -99,7 +99,7 @@
         {
             var result = trackingValue;
 
-            if (!string.IsNullOrEmpty(result))
+            if (!string.IsNullOrWhiteSpace(result))
             {
                 result = result.Replace("\a", string.Empty);
             }
@@ -114,7 +114,7 @@
 
         private static string StandardizeAttributeValue(string attrValue)
         {
-            if (string.IsNullOrEmpty(attrValue))
+            if (string.IsNullOrWhiteSpace(attrValue))
             {
                 return attrValue;
             }

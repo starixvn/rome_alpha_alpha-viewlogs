@@ -15,11 +15,11 @@
 
         public CustomerInfo GetDownlineInfoByUsername(string downlineUsername, int uplineId)
         {
-            if (string.IsNullOrEmpty(downlineUsername))
+            if (string.IsNullOrWhiteSpace(downlineUsername))
             {
                 return new CustomerInfo();
             }
-            
+
             var customerInfo = customerDataAccess.GetCustInfoByUsername(new GetCustInfoByUsernameCriteria
             {
                 Username = downlineUsername,

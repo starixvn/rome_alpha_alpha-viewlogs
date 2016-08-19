@@ -10,11 +10,11 @@
     {
         protected LogParam CreateLogParam(LogQuery logQuery)
         {
-            var fromDate = string.IsNullOrEmpty(logQuery.FromDate)
+            var fromDate = string.IsNullOrWhiteSpace(logQuery.FromDate)
                 ? DateTime.Now.AddDays(-1)
                 : Converter.ToDateTime(logQuery.FromDate);
 
-            var toDate = string.IsNullOrEmpty(logQuery.ToDate)
+            var toDate = string.IsNullOrWhiteSpace(logQuery.ToDate)
                 ? DateTime.Now
                 : Converter.ToDateTime(logQuery.ToDate);
 
@@ -28,11 +28,11 @@
                 Username = logQuery.Username,
                 IsInternal = logQuery.IsInternal,
 
-                PageSize = string.IsNullOrEmpty(logQuery.PageSize)
+                PageSize = string.IsNullOrWhiteSpace(logQuery.PageSize)
                 ? Pager.DefaultPageSize
                 : Converter.ToInt(logQuery.PageSize),
 
-                PageIndex = string.IsNullOrEmpty(logQuery.PageIndex)
+                PageIndex = string.IsNullOrWhiteSpace(logQuery.PageIndex)
                 ? 0
                 : Converter.ToInt(logQuery.PageIndex),
 

@@ -59,7 +59,7 @@
         {
             var cultureName = UserSession.Current.Language;
 
-            if (string.IsNullOrEmpty(cultureName))
+            if (string.IsNullOrWhiteSpace(cultureName))
             {
                 cultureName = LanguageCode.Default;
                 UserSession.Current.Language = cultureName;

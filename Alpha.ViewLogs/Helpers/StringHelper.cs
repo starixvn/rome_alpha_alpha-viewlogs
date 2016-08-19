@@ -9,7 +9,7 @@
         /// <returns></returns>
         public static string RemoveTrailingZeros(string value)
         {
-            if (string.IsNullOrEmpty(value))
+            if (string.IsNullOrWhiteSpace(value))
             {
                 return value;
             }

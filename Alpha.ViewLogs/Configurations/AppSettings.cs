@@ -101,7 +101,7 @@
         private static List<int> GetActionIds(string actionIdsString)
         {
             var actionIds = new List<int>();
-            if (string.IsNullOrEmpty(actionIdsString))
+            if (string.IsNullOrWhiteSpace(actionIdsString))
             {
                 return actionIds;
             }

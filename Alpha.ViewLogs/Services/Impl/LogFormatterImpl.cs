@@ -121,7 +121,7 @@
         {
             var condition = string.Empty;
 
-            if (string.IsNullOrEmpty(code))
+            if (string.IsNullOrWhiteSpace(code))
             {
                 return condition;
             }
@@ -140,7 +140,7 @@
 
         public string FormatErrCode(string code)
         {
-            if (string.IsNullOrEmpty(code))
+            if (string.IsNullOrWhiteSpace(code))
             {
                 return "0";
             }
@@ -160,7 +160,7 @@
 
         public string FormatMemberWinLimit(string value)
         {
-            return string.IsNullOrEmpty(value) ? string.Empty : value.Replace("x", "X").Replace("unlimited", Resources.Unlimited);
+            return string.IsNullOrWhiteSpace(value) ? string.Empty : value.Replace("x", "X").Replace("unlimited", Resources.Unlimited);
         }
 
         public string FormatUnlimited(int unlimited)
@@ -257,7 +257,7 @@
             char[] codes = dayCodes.Trim().ToCharArray();
             string condition = string.Empty;
 
-            if (codes.Length == 0)
+            if (!codes.Any())
             {
                 return condition;
             }

@@ -27,7 +27,7 @@
             int logActionId,
             TransformParam transformParam)
         {
-            if (string.IsNullOrEmpty(trackingValue)
+            if (string.IsNullOrWhiteSpace(trackingValue)
                 || logActionId < 0)
             {
                 return string.Empty;
@@ -101,7 +101,7 @@
             {
                 path = FindTemplatePathInDirectoryByActionId(actionId, Path.Combine(directory, subFolder));
 
-                if (!string.IsNullOrEmpty(path))
+                if (!string.IsNullOrWhiteSpace(path))
                 {
                     return path;
                 }

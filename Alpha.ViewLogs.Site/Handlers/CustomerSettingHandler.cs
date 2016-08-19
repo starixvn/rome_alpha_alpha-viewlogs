@@ -39,8 +39,8 @@
 
         public IndexViewModel Handle(IndexQuery message)
         {
-            var fromDate = string.IsNullOrEmpty(message.FromDate) ? DateTime.Now.AddDays(-1) : Converter.ToDateTime(message.FromDate);
-            var toDate = string.IsNullOrEmpty(message.ToDate) ? DateTime.Now : Converter.ToDateTime(message.ToDate);
+            var fromDate = string.IsNullOrWhiteSpace(message.FromDate) ? DateTime.Now.AddDays(-1) : Converter.ToDateTime(message.FromDate);
+            var toDate = string.IsNullOrWhiteSpace(message.ToDate) ? DateTime.Now : Converter.ToDateTime(message.ToDate);
             var logsParam = new CustomerSettingParam
             {
                 UplineId = message.UplineId,
@@ -51,8 +51,8 @@
                 Username = message.Username,
                 IsInternal = message.IsInternal,
 
-                PageSize = string.IsNullOrEmpty(message.PageSize) ? Pager.DefaultPageSize : Converter.ToInt(message.PageSize),
-                PageIndex = string.IsNullOrEmpty(message.PageIndex) ? 0 : Converter.ToInt(message.PageIndex),
+                PageSize = string.IsNullOrWhiteSpace(message.PageSize) ? Pager.DefaultPageSize : Converter.ToInt(message.PageSize),
+                PageIndex = string.IsNullOrWhiteSpace(message.PageIndex) ? 0 : Converter.ToInt(message.PageIndex),
 
                 Language = message.Language,
                 HasViewLogPermission = message.HasViewLogPermission,
@@ -61,7 +61,7 @@
                 MaxReportDate = message.MaxReportDate,
                 MinReportDate = message.MinReportDate,
                 IsShowOldValue = message.IsShowOldValue,
-                ActionTypeId = string.IsNullOrEmpty(message.ActionTypeId) ? ActionType.All : Converter.ToInt(message.ActionTypeId)
+                ActionTypeId = string.IsNullOrWhiteSpace(message.ActionTypeId) ? ActionType.All : Converter.ToInt(message.ActionTypeId)
             };
 
             var pagingLogs = this.logService.GetPagingLogs(logsParam);
