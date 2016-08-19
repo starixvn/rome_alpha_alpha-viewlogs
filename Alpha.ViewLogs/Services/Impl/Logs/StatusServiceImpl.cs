@@ -8,6 +8,9 @@
 
     public class StatusServiceImpl : BaseService, LogService
     {
+        private const int ActionIdFrom = 1100;
+        private const int ActionIdTo = 1199;
+
         public StatusServiceImpl(
             CachingManager cacheManager,
             IDynamicRepository dynamicRepository,
@@ -21,6 +24,9 @@
         {
             return new GetStatusLogsCriteria
             {
+                //// Just get status from action id 1100 => 1199
+                LowerActionId = ActionIdFrom,
+                UpperActionId = ActionIdTo,
                 CustId = logParam.CustId,
                 CustName = logParam.Username,
                 FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
@@ -35,6 +41,8 @@
         {
             return new GetTotalStatusLogsCriteria
             {
+                LowerActionId = ActionIdFrom,
+                UpperActionId = ActionIdTo,
                 CustId = logParam.CustId,
                 FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
                 ToDate = DateTimeHelper.GetEndingOfDate(logParam.ToDate),
