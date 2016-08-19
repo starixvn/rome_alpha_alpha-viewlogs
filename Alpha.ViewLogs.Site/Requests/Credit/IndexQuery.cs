@@ -3,9 +3,9 @@
     using System.Collections.Generic;
     using MediatR;
     using Sunplus.Agent.Model.Entities;
-    using ViewModels.Credit;
+    using ViewModels;
 
-    public class IndexQuery : LogQuery, IRequest<IndexViewModel>
+    public class IndexQuery : LogQuery, IRequest<LogViewModel>
     {
         public IndexQuery() : this(null, null, null, null)
         {

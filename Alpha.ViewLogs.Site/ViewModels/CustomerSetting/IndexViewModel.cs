@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public class IndexViewModel : BaseIndexViewModel
+    public class IndexViewModel : LogViewModel
     {
         public List<LogActionTypeViewModel> LogActionTypes { get; set; }
     }

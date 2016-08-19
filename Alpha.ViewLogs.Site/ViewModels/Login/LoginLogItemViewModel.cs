@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels.Login
 {
-    public class LoginLogViewModel : LogViewModel
+    public class LoginLogItemViewModel : LogItemViewModel
     {
         public string Domain { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels.Login
 {
-    public class IndexViewModel : BaseIndexViewModel
+    public class IndexViewModel : LogViewModel
     {
         public bool IsAgent { get; set; }
 

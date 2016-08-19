@@ -598,15 +598,13 @@
     <Compile Include="Requests\CustomerSetting\IndexQuery.cs" />
     <Compile Include="Requests\Login\IndexQuery.cs" />
     <Compile Include="Requests\Status\IndexQuery.cs" />
-    <Compile Include="ViewModels\Credit\IndexViewModel.cs" />
+    <Compile Include="ViewModels\LogItemViewModel.cs" />
     <Compile Include="ViewModels\LogViewModel.cs" />
-    <Compile Include="ViewModels\BaseIndexViewModel.cs" />
     <Compile Include="ViewModels\CustomerSetting\IndexViewModel.cs" />
     <Compile Include="ViewModels\CustomerSetting\LogActionTypeViewModel.cs" />
     <Compile Include="ViewModels\Login\IndexViewModel.cs" />
-    <Compile Include="ViewModels\Login\LoginLogViewModel.cs" />
+    <Compile Include="ViewModels\Login\LoginLogItemViewModel.cs" />
     <Compile Include="ViewModels\TabViewModel.cs" />
-    <Compile Include="ViewModels\Status\IndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

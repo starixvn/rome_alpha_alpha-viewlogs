@@ -10,21 +10,20 @@
     using Sunplus.Agent.Utilities;
     using ViewLogs.Helpers;
     using ViewModels;
-    using ViewModels.Credit;
 
-    public class CreditHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
+    public class CreditHandler : BaseHandler, IRequestHandler<IndexQuery, LogViewModel>
     {
         public CreditHandler(LogService logService, XsltLogFormatter xsltLogFormatter) :
             base(logService, xsltLogFormatter)
         {
         }
 
-        public IndexViewModel Handle(IndexQuery message)
+        public LogViewModel Handle(IndexQuery message)
         {
             var logsParam = GetLogsParam(message);
             var pagingLogs = this.logService.GetLogs(logsParam);
 
-            var viewModel = new IndexViewModel();
+            var viewModel = new LogViewModel();
             AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
             TransformLogsToHtml(pagingLogs, message, viewModel);
 
@@ -36,9 +35,9 @@
         public void TransformLogsToHtml(
             PagingLogs<Log> pagingLogs,
             LogQuery message,
-            BaseIndexViewModel viewModel)
+            LogViewModel viewModel)
         {
-            var htmlLogs = new List<LogViewModel>();
+            var htmlLogs = new List<LogItemViewModel>();
 
             foreach (var log in pagingLogs.Logs)
             {
@@ -48,7 +47,7 @@
                     continue;
                 }
 
-                htmlLogs.Add(new LogViewModel
+                htmlLogs.Add(new LogItemViewModel
                 {
                     ActionId = log.ActionId,
                     ActionName = log.ActionName,
@@ -68,7 +67,7 @@
                 });
             }
 
-            viewModel.Logs = htmlLogs;
+            viewModel.LogItems = htmlLogs;
         }
     }
 }

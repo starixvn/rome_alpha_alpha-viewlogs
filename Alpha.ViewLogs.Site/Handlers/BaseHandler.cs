@@ -51,7 +51,7 @@
         protected void AssignIndexViewModelValue(
             LogParam logsParam,
             PagingLogs<Log> pagingLogs,
-            BaseIndexViewModel indexViewModel)
+            LogViewModel indexViewModel)
         {
             var dateInRange = logsParam.FromDate < logsParam.MinReportDate ? logsParam.MinReportDate : logsParam.FromDate;
             var fromDate = dateInRange.Day.ToString();

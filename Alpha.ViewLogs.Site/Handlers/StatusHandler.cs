@@ -10,9 +10,8 @@
     using Services;
     using ViewLogs.Helpers;
     using ViewModels;
-    using ViewModels.Status;
 
-    public class StatusHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
+    public class StatusHandler : BaseHandler, IRequestHandler<IndexQuery, LogViewModel>
     {
         private readonly TransformService transformService;
 
@@ -25,12 +24,12 @@
             this.transformService = transformService;
         }
 
-        public IndexViewModel Handle(IndexQuery message)
+        public LogViewModel Handle(IndexQuery message)
         {
             var logsParam = GetLogsParam(message);
             var pagingLogs = this.logService.GetLogs(logsParam);
 
-            var viewModel = new IndexViewModel();
+            var viewModel = new LogViewModel();
             AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
             viewModel.ActionTypeId = message.ActionTypeId;
 
@@ -42,7 +41,7 @@
         private void TransformLogsToHtml(
             PagingLogs<Log> pagingLogs,
             IndexQuery message,
-            BaseIndexViewModel viewModel)
+            LogViewModel viewModel)
         {
             var transformParam = new TransformParam
             {
@@ -52,7 +51,7 @@
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds
             };
 
-            var htmlLogs = new List<LogViewModel>();
+            var htmlLogs = new List<LogItemViewModel>();
 
             foreach (var log in pagingLogs.Logs)
             {
@@ -65,7 +64,7 @@
                 var trackingValueWithDiff = TrackingValueHelper.GetTrackingValueWithDiff(log, message.IsShowOldValue);
                 var htmlTrackingValue = transformService.TransformTrackingValueToHtml(trackingValueWithDiff, log.ActionId, transformParam);
 
-                htmlLogs.Add(new LogViewModel
+                htmlLogs.Add(new LogItemViewModel
                 {
                     ActionId = log.ActionId,
                     ActionName = log.ActionName,
@@ -82,7 +81,7 @@
                 });
             }
 
-            viewModel.Logs = htmlLogs;
+            viewModel.LogItems = htmlLogs;
         }
     }
 }

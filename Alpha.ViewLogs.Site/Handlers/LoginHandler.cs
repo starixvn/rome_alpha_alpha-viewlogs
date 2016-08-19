@@ -39,9 +39,9 @@
         private void TransformLogsToHtml(
             PagingLogs<Log> pagingLogs,
             IndexQuery message,
-            BaseIndexViewModel viewModel)
+            LogViewModel viewModel)
         {
-            var htmlLogs = new List<LogViewModel>();
+            var htmlLogs = new List<LogItemViewModel>();
 
             foreach (LoginLog log in pagingLogs.Logs)
             {
@@ -51,7 +51,7 @@
                     continue;
                 }
 
-                htmlLogs.Add(new LoginLogViewModel
+                htmlLogs.Add(new LoginLogItemViewModel
                 {
                     ActionId = log.ActionId,
                     ActionName = log.ActionName,
@@ -75,7 +75,7 @@
                 });
             }
 
-            viewModel.Logs = htmlLogs;
+            viewModel.LogItems = htmlLogs;
         }
     }
 }

@@ -1,8 +1,6 @@
-﻿@using Alpha.ViewLogs.Site.ViewModels.Status;
-@using Alpha.ViewLogs.AppResources;
-@using Alpha.ViewLogs.Site.Helpers;
+﻿@using Alpha.ViewLogs.Site.Helpers;
 
-@model IndexViewModel
+@model LogViewModel
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = Resources.ViewLogStatus;
@@ -47,14 +45,14 @@
                 <tbody>
                     @if (Model.HasLogs)
                     {
-                        foreach (var log in Model.Logs)
+                        foreach (var logItem in Model.LogItems)
                         {
                             <tr>
-                                <td align="center">@log.LogId</td>
-                                <td align="center">@Html.Raw(log.LogDate)</td>
-                                <td>@log.Username</td>
-                                <td>@log.ActionName</td>
-                                <td>@Html.Raw(log.TrackingValue)</td>
+                                <td align="center">@logItem.LogId</td>
+                                <td align="center">@Html.Raw(logItem.LogDate)</td>
+                                <td>@logItem.Username</td>
+                                <td>@logItem.ActionName</td>
+                                <td>@Html.Raw(logItem.TrackingValue)</td>
                             </tr>
                         }
                     }

@@ -84,7 +84,7 @@
         private void TransformLogsToHtml(
             PagingLogs<Log> pagingLogs,
             IndexQuery message,
-            BaseIndexViewModel viewModel)
+            LogViewModel viewModel)
         {
             var transformParam = new TransformParam
             {
@@ -94,7 +94,7 @@
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds
             };
 
-            var htmlLogs = new List<LogViewModel>();
+            var htmlLogs = new List<LogItemViewModel>();
 
             foreach (var log in pagingLogs.Logs)
             {
@@ -107,7 +107,7 @@
                 var trackingValueWithDiff = TrackingValueHelper.GetTrackingValueWithDiff(log, message.IsShowOldValue);
                 var htmlTrackingValue = transformService.TransformTrackingValueToHtml(trackingValueWithDiff, log.ActionId, transformParam);
 
-                htmlLogs.Add(new LogViewModel
+                htmlLogs.Add(new LogItemViewModel
                 {
                     ActionId = log.ActionId,
                     ActionName = log.ActionName,
@@ -124,7 +124,7 @@
                 });
             }
 
-            viewModel.Logs = htmlLogs;
+            viewModel.LogItems = htmlLogs;
         }
     }
 }
