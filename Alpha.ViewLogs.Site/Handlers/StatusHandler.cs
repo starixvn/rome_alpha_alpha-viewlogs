@@ -13,31 +13,37 @@
 
     public class StatusHandler : BaseHandler, IRequestHandler<IndexQuery, LogViewModel>
     {
+        private readonly LogFormatter logFormatter;
+        private readonly TrackingValueFormatter trackingValueFormatter;
+        private readonly LogService logService;
         private readonly TransformService transformService;
 
         public StatusHandler(
             LogService logService,
             TransformService transformService,
-            XsltLogFormatter xsltLogFormatter) :
-            base(logService, xsltLogFormatter)
+            LogFormatter logFormatter,
+            TrackingValueFormatter trackingValueFormatter)
         {
+            this.logService = logService;
+            this.logFormatter = logFormatter;
+            this.trackingValueFormatter = trackingValueFormatter;
             this.transformService = transformService;
         }
 
         public LogViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = this.LogService.GetLogs(logsParam);
+            var pagingLogs = this.logService.GetLogs(logsParam);
 
             var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords);
             viewModel.ActionTypeId = message.ActionTypeId;
 
-            TransformLogsToHtml(pagingLogs, message, viewModel);
+            TransformLogs(pagingLogs, message, viewModel);
 
             return viewModel;
         }
 
-        private void TransformLogsToHtml(
+        private void TransformLogs(
             PagingLogs<Log> pagingLogs,
             IndexQuery message,
             LogViewModel viewModel)
@@ -50,7 +56,7 @@
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds
             };
 
-            var htmlLogs = new List<LogItemViewModel>();
+            var logItems = new List<LogItemViewModel>();
 
             foreach (var log in pagingLogs.Logs)
             {
@@ -61,10 +67,10 @@
                     continue;
                 }
 
-                var trackingValueWithDiff = TrackingValueHelper.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
-                var htmlTrackingValue = transformService.TransformTrackingValueToHtml(trackingValueWithDiff, log.ActionId, transformParam);
+                var formattedTrackingValue = trackingValueFormatter.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
+                var htmlTrackingValue = transformService.TransformTrackingValue(formattedTrackingValue, log.ActionId, transformParam);
 
-                htmlLogs.Add(
+                logItems.Add(
                     new LogItemViewModel
                     {
                         ActionId = log.ActionId,
@@ -78,11 +84,11 @@
                         UserId = log.UserId,
                         Username = log.Username,
                         TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
-                        IP = this.XsltLogFormatter.FormatIP(log.IP)
+                        IP = this.logFormatter.FormatIP(log.IP)
                     });
             }
 
-            viewModel.LogItems = htmlLogs;
+            viewModel.LogItems = logItems;
         }
     }
 }

@@ -11,14 +11,14 @@
     using Params;
     using Sunplus.Agent.Model.BL.Cache;
 
-    public class XsltLogFormatterImpl : XsltLogFormatter
+    public class LogFormatterImpl : LogFormatter
     {
         private IPService ipService;
 
         private Dictionary<string, bool> sportBetTypeVisibilities;
         private bool isShowMyanmarOdds;
 
-        public XsltLogFormatterImpl(IPService ipService)
+        public LogFormatterImpl(IPService ipService)
         {
             this.ipService = ipService;
         }

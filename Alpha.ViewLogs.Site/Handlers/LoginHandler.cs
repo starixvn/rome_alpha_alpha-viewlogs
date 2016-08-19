@@ -14,18 +14,24 @@
 
     public class LoginHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
-        public LoginHandler(LogService logService, XsltLogFormatter xsltLogFormatter) :
-            base(logService, xsltLogFormatter)
+        private readonly LogFormatter logFormatter;
+        private readonly LogService logService;
+
+        public LoginHandler(
+            LogService logService,
+            LogFormatter logFormatter)
         {
+            this.logService = logService;
+            this.logFormatter = logFormatter;
         }
 
         public IndexViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = this.LogService.GetLogs(logsParam);
+            var pagingLogs = this.logService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
-            TransformLogsToHtml(pagingLogs, message, viewModel);
+            TransformLogs(pagingLogs, message, viewModel);
 
             viewModel.IsAgent = viewModel.RoleId == UserLevel.Agent.Value;
             viewModel.PreviousUsername = message.PreviousUsername;
@@ -35,12 +41,12 @@
             return viewModel;
         }
 
-        private void TransformLogsToHtml(
+        private void TransformLogs(
             PagingLogs<Log> pagingLogs,
             IndexQuery message,
             LogViewModel viewModel)
         {
-            var htmlLogs = new List<LogItemViewModel>();
+            var logItems = new List<LogItemViewModel>();
 
             foreach (LoginLog log in pagingLogs.Logs)
             {
@@ -50,7 +56,7 @@
                     continue;
                 }
 
-                htmlLogs.Add(new LoginLogItemViewModel
+                logItems.Add(new LoginLogItemViewModel
                 {
                     ActionId = log.ActionId,
                     ActionName = log.ActionName,
@@ -66,15 +72,15 @@
                     TrackingValue = Formater.DecFormat(Converter.ToDecimal(log.TrackingValue), 2),
                     TrackingValueOld = Formater.DecFormat(Converter.ToDecimal(log.TrackingValueOld), 2),
                     Details = log.Details,
-                    IP = this.XsltLogFormatter.FormatIP(log.IP),
+                    IP = this.logFormatter.FormatIP(log.IP),
 
                     Domain = log.Domain,
                     Browser = log.Browser,
-                    Country = this.XsltLogFormatter.FormatCountryCode(log.IP, log.CountryCode)
+                    Country = this.logFormatter.FormatCountryCode(log.IP, log.CountryCode)
                 });
             }
 
-            viewModel.LogItems = htmlLogs;
+            viewModel.LogItems = logItems;
         }
     }
 }

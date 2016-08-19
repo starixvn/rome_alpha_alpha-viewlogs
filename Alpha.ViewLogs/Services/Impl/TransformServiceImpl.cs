@@ -12,17 +12,17 @@
         private const int OneHour = 1;
 
         private readonly CachingManager cacheManager;
-        private readonly XsltLogFormatter xsltLogFormatService;
+        private readonly LogFormatter logFormatter;
 
         public TransformServiceImpl(
             CachingManager cacheManager,
-            XsltLogFormatter xsltLogFormatService)
+            LogFormatter logFormatter)
         {
             this.cacheManager = cacheManager;
-            this.xsltLogFormatService = xsltLogFormatService;
+            this.logFormatter = logFormatter;
         }
 
-        public string TransformTrackingValueToHtml(
+        public string TransformTrackingValue(
             string trackingValue,
             int logActionId,
             TransformParam transformParam)
@@ -41,10 +41,10 @@
             }
 
             //// Need be reviewed code here, AssignParams should not in formatter class
-            xsltLogFormatService.AssignParams(transformParam);
+            logFormatter.AssignParams(transformParam);
 
             var xsltArguments = new XsltArgumentList();
-            xsltArguments.AddExtensionObject("urn:LogFormat", xsltLogFormatService);
+            xsltArguments.AddExtensionObject("urn:LogFormat", logFormatter);
 
             //// Transform xml must be lower case
             using (MemoryStream stream = new MemoryStream(ASCIIEncoding.UTF8.GetBytes(trackingValue.ToLower())))

@@ -94,10 +94,10 @@
     <Compile Include="Services\Impl\Logs\LoginServiceImpl.cs" />
     <Compile Include="Services\Impl\Logs\StatusServiceImpl.cs" />
     <Compile Include="Services\Impl\TransformServiceImpl.cs" />
-    <Compile Include="Services\Impl\XsltLogFormatterImpl.cs" />
+    <Compile Include="Services\Impl\LogFormatterImpl.cs" />
     <Compile Include="Services\IPService.cs" />
     <Compile Include="Services\TransformService.cs" />
-    <Compile Include="Services\XsltLogFormatter.cs" />
+    <Compile Include="Services\LogFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />

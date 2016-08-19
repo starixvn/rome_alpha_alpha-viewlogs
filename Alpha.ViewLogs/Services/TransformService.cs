@@ -5,6 +5,6 @@
 
     public interface TransformService
     {
-        string TransformTrackingValueToHtml(string trackingValue, int logActionId, TransformParam transformParam);
+        string TransformTrackingValue(string trackingValue, int logActionId, TransformParam transformParam);
     }
 }

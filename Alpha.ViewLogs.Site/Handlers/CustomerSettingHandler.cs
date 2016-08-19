@@ -20,14 +20,20 @@
 
     public class CustomerSettingHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
+        private readonly LogFormatter logFormatter;
+        private readonly TrackingValueFormatter trackingValueFormatter;
+        private readonly LogService logService;
         private readonly TransformService transformService;
 
         public CustomerSettingHandler(
             LogService logService,
             TransformService transformService,
-            XsltLogFormatter xsltLogFormatter) :
-            base(logService, xsltLogFormatter)
+            LogFormatter logFormatter,
+            TrackingValueFormatter trackingValueFormatter)
         {
+            this.logService = logService;
+            this.logFormatter = logFormatter;
+            this.trackingValueFormatter = trackingValueFormatter;
             this.transformService = transformService;
         }
 
@@ -58,20 +64,20 @@
                 ActionTypeId = string.IsNullOrEmpty(message.ActionTypeId) ? ActionType.All : Converter.ToInt(message.ActionTypeId)
             };
 
-            var pagingLogs = this.LogService.GetLogs(logsParam);
+            var pagingLogs = this.logService.GetLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
             viewModel.LogActionTypes = GetLogActionTypes(message);
             viewModel.ActionTypeId = message.ActionTypeId;
 
-            TransformLogsToHtml(pagingLogs, message, viewModel);
+            TransformLogs(pagingLogs, message, viewModel);
 
             return viewModel;
         }
 
         private List<LogActionTypeViewModel> GetLogActionTypes(IndexQuery message)
         {
-            var logActionTypes = this.LogService.GetLogActionTypes();
+            var logActionTypes = this.logService.GetLogActionTypes();
 
             var logActionTypeViewModels = logActionTypes.Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))
                 .ToList();
@@ -80,7 +86,7 @@
             return logActionTypeViewModels;
         }
 
-        private void TransformLogsToHtml(
+        private void TransformLogs(
             PagingLogs<Log> pagingLogs,
             IndexQuery message,
             LogViewModel viewModel)
@@ -93,21 +99,21 @@
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds
             };
 
-            var htmlLogs = new List<LogItemViewModel>();
+            var logItems = new List<LogItemViewModel>();
 
             foreach (var log in pagingLogs.Logs)
             {
-                if (message.ActionIdVisibilities.ContainsKey(log.ActionId) 
+                if (message.ActionIdVisibilities.ContainsKey(log.ActionId)
                     && !message.ActionIdVisibilities[log.ActionId])
                 {
                     viewModel.TotalRecords -= 1;
                     continue;
                 }
 
-                var trackingValueWithDiff = TrackingValueHelper.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
-                var htmlTrackingValue = transformService.TransformTrackingValueToHtml(trackingValueWithDiff, log.ActionId, transformParam);
+                var formattedTrackingValue = trackingValueFormatter.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
+                var htmlTrackingValue = transformService.TransformTrackingValue(formattedTrackingValue, log.ActionId, transformParam);
 
-                htmlLogs.Add(new LogItemViewModel
+                logItems.Add(new LogItemViewModel
                 {
                     ActionId = log.ActionId,
                     ActionName = log.ActionName,
@@ -120,11 +126,11 @@
                     UserId = log.UserId,
                     Username = log.Username,
                     TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
-                    IP = this.XsltLogFormatter.FormatIP(log.IP)
+                    IP = this.logFormatter.FormatIP(log.IP)
                 });
             }
 
-            viewModel.LogItems = htmlLogs;
+            viewModel.LogItems = logItems;
         }
     }
 }

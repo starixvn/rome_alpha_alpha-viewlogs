@@ -590,7 +590,8 @@
     <Compile Include="Handlers\StatusHandler.cs" />
     <Compile Include="Helpers\AppPathHelper.cs" />
     <Compile Include="Helpers\MicroSites.cs" />
-    <Compile Include="Helpers\TrackingValueHelper.cs" />
+    <Compile Include="Helpers\TrackingValueFormatter.cs" />
+    <Compile Include="Helpers\TrackingValueFormatterImpl.cs" />
     <Compile Include="Helpers\StaticResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\LogQuery.cs" />

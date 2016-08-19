@@ -10,6 +10,7 @@
     using DataAccesses.Impl;
     using Fanex.Data.Repository;
     using Handlers;
+    using Helpers;
     using MediatR;
     using Services;
     using Services.Impl;
@@ -28,8 +29,6 @@
             container.Options.DefaultScopedLifestyle = new WebRequestLifestyle();
 
             RegisterMediator(container);
-
-            RegisterCrossCuttingConcerns(container);
 
             RegisterDataAccesses(container);
 
@@ -64,10 +63,6 @@
             yield return typeof(BaseController).Assembly;
         }
 
-        private static void RegisterCrossCuttingConcerns(Container container)
-        {
-        }
-
         private static void RegisterServices(Container container)
         {
             //// Singleton
@@ -90,7 +85,9 @@
 
             container.Register<CustomerService, CustomerServiceImpl>(Lifestyle.Transient);
             container.Register<TransformService, TransformServiceImpl>(Lifestyle.Transient);
-            container.Register<XsltLogFormatter, XsltLogFormatterImpl>(Lifestyle.Transient);
+            container.Register<LogFormatter, LogFormatterImpl>(Lifestyle.Transient);
+            container.Register<TrackingValueFormatter, TrackingValueFormatterImpl>(Lifestyle.Transient);
+
             container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);
 
             container.RegisterConditional<LogService, CustomerSettingServiceImpl>(

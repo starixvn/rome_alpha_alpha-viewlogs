@@ -8,9 +8,9 @@
     using ViewLogs.Constants;
     using ViewLogs.Helpers;
 
-    public static class TrackingValueHelper
+    public class TrackingValueFormatterImpl : TrackingValueFormatter
     {
-        public static string GetFormattedDiffTrackingValue(Log log, bool isShowOldValue)
+        public string GetFormattedDiffTrackingValue(Log log, bool isShowOldValue)
         {
             if (string.IsNullOrEmpty(log.TrackingValue))
             {
@@ -27,20 +27,20 @@
             var trackingValueOldDoc = hasOldXml ? new XmlDocument() : trackingValueDoc;
             trackingValueOldDoc.InnerXml = hasOldXml ? log.TrackingValueOld : trackingValueDoc.InnerXml;
 
-            FormatAttributesWithDiff(trackingValueDoc.DocumentElement.Attributes, trackingValueOldDoc.DocumentElement.Attributes, isShowOldValue);
+            FormatDiffAttributes(trackingValueDoc.DocumentElement.Attributes, trackingValueOldDoc.DocumentElement.Attributes, isShowOldValue);
 
             var childNodeCount = trackingValueDoc.DocumentElement.ChildNodes.Count;
             for (int i = 0; i < childNodeCount; i++)
             {
                 var newNodes = trackingValueDoc.DocumentElement.ChildNodes[i];
                 var oldNodes = trackingValueOldDoc.DocumentElement.ChildNodes[i];
-                FormatAttributesWithDiff(newNodes.Attributes, oldNodes.Attributes, isShowOldValue);
+                FormatDiffAttributes(newNodes.Attributes, oldNodes.Attributes, isShowOldValue);
             }
 
             return trackingValueDoc.InnerXml;
         }
 
-        private static void FormatAttributesWithDiff(
+        private static void FormatDiffAttributes(
             XmlAttributeCollection newAttributes,
             XmlAttributeCollection oldAttributes,
             bool isShowOldValue)
@@ -56,35 +56,40 @@
                 newValue = StandardizeAttributeValue(newValue);
                 oldValue = StandardizeAttributeValue(oldValue);
 
-                var isFormatAttribute = (!string.IsNullOrEmpty(newValue) || !string.IsNullOrEmpty(oldValue)) &&
+                var isAttributeNeedBeFormatted = (!string.IsNullOrEmpty(newValue) || !string.IsNullOrEmpty(oldValue)) &&
                     !ignoreFormatAttributes.Contains(newAttribute.Name.ToLower()) &&
                     !string.Equals(newValue, oldValue, StringComparison.OrdinalIgnoreCase);
-                if (!isFormatAttribute)
+                if (!isAttributeNeedBeFormatted)
                 {
                     newAttributes[newAttribute.Name].Value = newValue;
                     continue;
                 }
 
-                var attributeWithDiff = string.Empty;
-
-                if (!isShowOldValue)
-                {
-                    attributeWithDiff = $"<span class=\"valuechanged\" title=\"{oldValue} --> {newValue}\">{newValue}</span>";
-                }
-                else if (string.Equals(oldValue, newValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    attributeWithDiff = $"<span class=\"valuechanged\">${newValue}</span>";
-                }
-                else
-                {
-                    attributeWithDiff =
-                        $"<span class=\"valuechanged\">{newValue}</span>" +
-                        $"<div class=\"line\"></div>" +
-                        $"<span class=\"valueold\">{oldValue}</span>";
-                }
-
-                newAttributes[newAttribute.Name].Value = attributeWithDiff;
+                newAttributes[newAttribute.Name].Value = FormatValue(newValue, oldValue, isShowOldValue);
             }
+        }
+
+        private static string FormatValue(string newValue, string oldValue, bool isShowOldValue)
+        {
+            string formattedValue = string.Empty;
+
+            if (!isShowOldValue)
+            {
+                formattedValue = $"<span class=\"valuechanged\" title=\"{oldValue} --> {newValue}\">{newValue}</span>";
+            }
+            else if (string.Equals(oldValue, newValue, StringComparison.OrdinalIgnoreCase))
+            {
+                formattedValue = $"<span class=\"valuechanged\">${newValue}</span>";
+            }
+            else
+            {
+                formattedValue =
+                    $"<span class=\"valuechanged\">{newValue}</span>" +
+                    $"<div class=\"line\"></div>" +
+                    $"<span class=\"valueold\">{oldValue}</span>";
+            }
+
+            return formattedValue;
         }
 
         private static string StandardizeTrackingValue(string trackingValue)

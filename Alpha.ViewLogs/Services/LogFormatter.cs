@@ -2,7 +2,7 @@
 {
     using Alpha.ViewLogs.Params;
 
-    public interface XsltLogFormatter
+    public interface LogFormatter
     {
         void AssignParams(TransformParam transformParam);
 

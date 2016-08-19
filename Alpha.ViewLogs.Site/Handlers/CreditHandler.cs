@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using Fanex.Common;
+    using Helpers;
     using MediatR;
     using Models;
     using Requests;
@@ -13,29 +14,35 @@
 
     public class CreditHandler : BaseHandler, IRequestHandler<IndexQuery, LogViewModel>
     {
-        public CreditHandler(LogService logService, XsltLogFormatter xsltLogFormatter) :
-            base(logService, xsltLogFormatter)
+        private readonly LogFormatter logFormatter;
+        private readonly LogService logService;
+
+        public CreditHandler(
+            LogService logService,
+            LogFormatter logFormatter)
         {
+            this.logService = logService;
+            this.logFormatter = logFormatter;
         }
 
         public LogViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = this.LogService.GetLogs(logsParam);
+            var pagingLogs = this.logService.GetLogs(logsParam);
             var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords);
-            TransformLogsToHtml(pagingLogs, message, viewModel);
+            TransformLogs(pagingLogs, message, viewModel);
 
             viewModel.ActionTypeId = message.ActionTypeId;
 
             return viewModel;
         }
 
-        public void TransformLogsToHtml(
+        public void TransformLogs(
             PagingLogs<Log> pagingLogs,
             LogQuery message,
             LogViewModel viewModel)
         {
-            var htmlLogs = new List<LogItemViewModel>();
+            var logItems = new List<LogItemViewModel>();
 
             foreach (var log in pagingLogs.Logs)
             {
@@ -46,7 +53,7 @@
                     continue;
                 }
 
-                htmlLogs.Add(new LogItemViewModel
+                logItems.Add(new LogItemViewModel
                 {
                     ActionId = log.ActionId,
                     ActionName = log.ActionName,
@@ -62,11 +69,11 @@
                     TrackingValue = Formater.DecFormat(Converter.ToDecimal(log.TrackingValue), 2),
                     TrackingValueOld = Formater.DecFormat(Converter.ToDecimal(log.TrackingValueOld), 2),
                     Details = log.Details,
-                    IP = this.XsltLogFormatter.FormatIP(log.IP)
+                    IP = this.logFormatter.FormatIP(log.IP)
                 });
             }
 
-            viewModel.LogItems = htmlLogs;
+            viewModel.LogItems = logItems;
         }
     }
 }
