@@ -11,7 +11,7 @@
         {
             get
             {
-                return GetSettingValue("VirtualDirectory");
+                return GetConfigValue("VirtualDirectory");
             }
         }
 
@@ -19,7 +19,7 @@
         {
             get
             {
-                return GetSettingValue("OldMainAppPath");
+                return GetConfigValue("OldMainAppPath");
             }
         }
 
@@ -27,7 +27,7 @@
         {
             get
             {
-                return GetSettingValue("AccessDeniedPage");
+                return GetConfigValue("AccessDeniedPage");
             }
         }
 
@@ -35,8 +35,8 @@
         {
             get
             {
-                var settingValue = GetSettingValue("ActionIds_Racing_151_31");
-                return GetIdListFromStringSetting(settingValue);
+                var settingValue = GetConfigValue("ActionIds_Racing_151_31");
+                return GetActionIds(settingValue);
             }
         }
 
@@ -44,8 +44,8 @@
         {
             get
             {
-                var settingValue = GetSettingValue("ActionIds_Racing_151_41");
-                return GetIdListFromStringSetting(settingValue);
+                var settingValue = GetConfigValue("ActionIds_Racing_151_41");
+                return GetActionIds(settingValue);
             }
         }
 
@@ -53,8 +53,8 @@
         {
             get
             {
-                var settingValue = GetSettingValue("ActionIds_Racing_151_51");
-                return GetIdListFromStringSetting(settingValue);
+                var settingValue = GetConfigValue("ActionIds_Racing_151_51");
+                return GetActionIds(settingValue);
             }
         }
 
@@ -62,8 +62,8 @@
         {
             get
             {
-                var settingValue = GetSettingValue("ActionIds_Racing_152_41");
-                return GetIdListFromStringSetting(settingValue);
+                var settingValue = GetConfigValue("ActionIds_Racing_152_41");
+                return GetActionIds(settingValue);
             }
         }
 
@@ -71,8 +71,8 @@
         {
             get
             {
-                var settingValue = GetSettingValue("ActionIds_Racing_152_51");
-                return GetIdListFromStringSetting(settingValue);
+                var settingValue = GetConfigValue("ActionIds_Racing_152_51");
+                return GetActionIds(settingValue);
             }
         }
 
@@ -80,8 +80,8 @@
         {
             get
             {
-                var settingValue = GetSettingValue("ActionIds_Racing_153_51");
-                return GetIdListFromStringSetting(settingValue);
+                var settingValue = GetConfigValue("ActionIds_Racing_153_51");
+                return GetActionIds(settingValue);
             }
         }
 
@@ -89,28 +89,28 @@
         {
             get
             {
-                return GetSettingValue("AssetAppPath");
+                return GetConfigValue("AssetAppPath");
             }
         }
 
-        public static string GetSettingValue(string name)
+        public static string GetConfigValue(string configName)
         {
-            return ConfigurationManager.AppSettings[name];
+            return ConfigurationManager.AppSettings[configName];
         }
 
-        private static List<int> GetIdListFromStringSetting(string settingValue)
+        private static List<int> GetActionIds(string actionIdsString)
         {
-            var idList = new List<int>();
-            if (string.IsNullOrEmpty(settingValue))
+            var actionIds = new List<int>();
+            if (string.IsNullOrEmpty(actionIdsString))
             {
-                return idList;
+                return actionIds;
             }
 
-            idList = settingValue.Split(',')
+            actionIds = actionIdsString.Split(',')
                 .Select(t => int.Parse(t))
                 .ToList();
 
-            return idList;
+            return actionIds;
         }
     }
 }

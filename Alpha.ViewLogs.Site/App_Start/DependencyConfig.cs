@@ -93,7 +93,9 @@
             container.Register<XsltLogFormatter, XsltLogFormatterImpl>(Lifestyle.Transient);
             container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);
 
-            container.RegisterConditional<LogService, CustomerSettingServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(CustomerSettingHandler));
+            container.RegisterConditional<LogService, CustomerSettingServiceImpl>(
+                Lifestyle.Transient, 
+                c => c.Consumer.ImplementationType == typeof(CustomerSettingHandler));
             container.RegisterConditional<LogService, StatusServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(StatusHandler));
             container.RegisterConditional<LogService, CreditServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(CreditHandler));
             container.RegisterConditional<LogService, LoginServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(LoginHandler));
@@ -103,10 +105,12 @@
         {
             container.Register<IDynamicRepository, DynamicRepository>(Lifestyle.Transient);
             container.Register<CustomerDataAccess, CustomerDataAccessImpl>(Lifestyle.Transient);
-            container.RegisterConditional<LogDataAccess, LogDataAccessImpl>(Lifestyle.Transient, c =>
-            c.Consumer.ImplementationType == typeof(CustomerSettingServiceImpl)
-            || c.Consumer.ImplementationType == typeof(StatusServiceImpl)
-            || c.Consumer.ImplementationType == typeof(CreditServiceImpl));
+            container.RegisterConditional<LogDataAccess, LogDataAccessImpl>(
+                Lifestyle.Transient, 
+                c =>
+                    c.Consumer.ImplementationType == typeof(CustomerSettingServiceImpl)
+                    || c.Consumer.ImplementationType == typeof(StatusServiceImpl)
+                    || c.Consumer.ImplementationType == typeof(CreditServiceImpl));
             container.RegisterConditional<LogDataAccess, LoginDataAccessImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(LoginServiceImpl));
         }
     }

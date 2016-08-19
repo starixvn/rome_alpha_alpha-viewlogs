@@ -150,8 +150,7 @@
 
         public string FormatErrMsg(string code)
         {
-            var noDataMessage = "no information is available";
-            if (string.Equals(code, noDataMessage, StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(code, "no information is available", StringComparison.OrdinalIgnoreCase))
             {
                 code = string.Empty;
             }
@@ -243,9 +242,9 @@
 
         public bool IsRNGCasino(int sportType)
         {
-            return sportType == Sport.RNG_RNGGame ||
-                sportType == Sport.RNG_MiniGame ||
-                sportType == Sport.RNG_Mobile;
+            return sportType == Sport.RNGGame ||
+                sportType == Sport.RNGMiniGame ||
+                sportType == Sport.RNGMobile;
         }
 
         public bool IsGoldDeluxe(int sportType)

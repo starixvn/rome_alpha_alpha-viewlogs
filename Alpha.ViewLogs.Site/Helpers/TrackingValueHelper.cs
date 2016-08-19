@@ -10,7 +10,7 @@
 
     public static class TrackingValueHelper
     {
-        public static string GetTrackingValueWithDiff(Log log, bool isShowOldValue)
+        public static string GetFormattedDiffTrackingValue(Log log, bool isShowOldValue)
         {
             if (string.IsNullOrEmpty(log.TrackingValue))
             {
@@ -29,7 +29,8 @@
 
             FormatAttributesWithDiff(trackingValueDoc.DocumentElement.Attributes, trackingValueOldDoc.DocumentElement.Attributes, isShowOldValue);
 
-            for (int i = 0, childNodeCount = trackingValueDoc.DocumentElement.ChildNodes.Count; i < childNodeCount; i++)
+            var childNodeCount = trackingValueDoc.DocumentElement.ChildNodes.Count;
+            for (int i = 0; i < childNodeCount; i++)
             {
                 var newNodes = trackingValueDoc.DocumentElement.ChildNodes[i];
                 var oldNodes = trackingValueOldDoc.DocumentElement.ChildNodes[i];

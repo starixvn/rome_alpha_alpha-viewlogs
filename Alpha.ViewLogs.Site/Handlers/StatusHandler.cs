@@ -26,11 +26,10 @@
 
         public LogViewModel Handle(IndexQuery message)
         {
-            var logsParam = GetLogsParam(message);
-            var pagingLogs = this.logService.GetLogs(logsParam);
+            var logsParam = CreateLogParam(message);
+            var pagingLogs = this.LogService.GetLogs(logsParam);
 
-            var viewModel = new LogViewModel();
-            AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
+            var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords);
             viewModel.ActionTypeId = message.ActionTypeId;
 
             TransformLogsToHtml(pagingLogs, message, viewModel);
@@ -55,30 +54,32 @@
 
             foreach (var log in pagingLogs.Logs)
             {
-                if (message.ActionIdVisibilities.ContainsKey(log.ActionId) && !message.ActionIdVisibilities[log.ActionId])
+                if (message.ActionIdVisibilities.ContainsKey(log.ActionId) 
+                    && !message.ActionIdVisibilities[log.ActionId])
                 {
                     viewModel.TotalRecords -= 1;
                     continue;
                 }
 
-                var trackingValueWithDiff = TrackingValueHelper.GetTrackingValueWithDiff(log, message.IsShowOldValue);
+                var trackingValueWithDiff = TrackingValueHelper.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
                 var htmlTrackingValue = transformService.TransformTrackingValueToHtml(trackingValueWithDiff, log.ActionId, transformParam);
 
-                htmlLogs.Add(new LogItemViewModel
-                {
-                    ActionId = log.ActionId,
-                    ActionName = log.ActionName,
-                    ActionTypeId = log.ActionTypeId,
-                    CustId = log.CustId,
-                    CustName = log.CustName,
-                    LogDate = DateTimeHelper.ToHtmlLongDateWithSlash(log.LogDate),
-                    LogId = log.LogId,
-                    SPName = log.SPName,
-                    UserId = log.UserId,
-                    Username = log.Username,
-                    TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
-                    IP = this.xsltLogFormatter.FormatIP(log.IP)
-                });
+                htmlLogs.Add(
+                    new LogItemViewModel
+                    {
+                        ActionId = log.ActionId,
+                        ActionName = log.ActionName,
+                        ActionTypeId = log.ActionTypeId,
+                        CustId = log.CustId,
+                        CustName = log.CustName,
+                        LogDate = DateTimeHelper.ToHtmlLongDateWithSlash(log.LogDate),
+                        LogId = log.LogId,
+                        SPName = log.SPName,
+                        UserId = log.UserId,
+                        Username = log.Username,
+                        TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
+                        IP = this.XsltLogFormatter.FormatIP(log.IP)
+                    });
             }
 
             viewModel.LogItems = htmlLogs;

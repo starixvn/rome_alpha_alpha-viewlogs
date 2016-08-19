@@ -21,11 +21,10 @@
 
         public IndexViewModel Handle(IndexQuery message)
         {
-            var logsParam = GetLogsParam(message);
-            var pagingLogs = this.logService.GetLogs(logsParam);
+            var logsParam = CreateLogParam(message);
+            var pagingLogs = this.LogService.GetLogs(logsParam);
 
-            var viewModel = new IndexViewModel();
-            AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
+            var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
             TransformLogsToHtml(pagingLogs, message, viewModel);
 
             viewModel.IsAgent = viewModel.RoleId == UserLevel.Agent.Value;
@@ -67,11 +66,11 @@
                     TrackingValue = Formater.DecFormat(Converter.ToDecimal(log.TrackingValue), 2),
                     TrackingValueOld = Formater.DecFormat(Converter.ToDecimal(log.TrackingValueOld), 2),
                     Details = log.Details,
-                    IP = this.xsltLogFormatter.FormatIP(log.IP),
+                    IP = this.XsltLogFormatter.FormatIP(log.IP),
 
                     Domain = log.Domain,
                     Browser = log.Browser,
-                    Country = this.xsltLogFormatter.FormatCountryCode(log.IP, log.CountryCode)
+                    Country = this.XsltLogFormatter.FormatCountryCode(log.IP, log.CountryCode)
                 });
             }
 

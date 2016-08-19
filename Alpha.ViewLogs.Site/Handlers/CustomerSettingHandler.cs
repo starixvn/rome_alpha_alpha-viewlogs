@@ -58,10 +58,9 @@
                 ActionTypeId = string.IsNullOrEmpty(message.ActionTypeId) ? ActionType.All : Converter.ToInt(message.ActionTypeId)
             };
 
-            var pagingLogs = this.logService.GetLogs(logsParam);
+            var pagingLogs = this.LogService.GetLogs(logsParam);
 
-            var viewModel = new IndexViewModel();
-            AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
+            var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
             viewModel.LogActionTypes = GetLogActionTypes(message);
             viewModel.ActionTypeId = message.ActionTypeId;
 
@@ -72,7 +71,7 @@
 
         private List<LogActionTypeViewModel> GetLogActionTypes(IndexQuery message)
         {
-            var logActionTypes = this.logService.GetLogActionTypes();
+            var logActionTypes = this.LogService.GetLogActionTypes();
 
             var logActionTypeViewModels = logActionTypes.Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))
                 .ToList();
@@ -98,13 +97,14 @@
 
             foreach (var log in pagingLogs.Logs)
             {
-                if (message.ActionIdVisibilities.ContainsKey(log.ActionId) && !message.ActionIdVisibilities[log.ActionId])
+                if (message.ActionIdVisibilities.ContainsKey(log.ActionId) 
+                    && !message.ActionIdVisibilities[log.ActionId])
                 {
                     viewModel.TotalRecords -= 1;
                     continue;
                 }
 
-                var trackingValueWithDiff = TrackingValueHelper.GetTrackingValueWithDiff(log, message.IsShowOldValue);
+                var trackingValueWithDiff = TrackingValueHelper.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
                 var htmlTrackingValue = transformService.TransformTrackingValueToHtml(trackingValueWithDiff, log.ActionId, transformParam);
 
                 htmlLogs.Add(new LogItemViewModel
@@ -120,7 +120,7 @@
                     UserId = log.UserId,
                     Username = log.Username,
                     TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
-                    IP = this.xsltLogFormatter.FormatIP(log.IP)
+                    IP = this.XsltLogFormatter.FormatIP(log.IP)
                 });
             }
 

@@ -33,8 +33,8 @@
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
             this.IsShowOldValue = isShowOldValue ?? GetShowOldValueFromCookie();
-            this.actionIdVisibilities = actionIdVisibilities ?? GetActionIdVisibilitiesFromAppSettings();
-            this.sportBetTypeVisibilities = sportBetTypeVisibilities ?? GetSportBetTypeVisibilitiesFromUserPermission();
+            this.actionIdVisibilities = actionIdVisibilities ?? GetActionIdVisibilities();
+            this.sportBetTypeVisibilities = sportBetTypeVisibilities ?? GetSportBetTypeVisibilities();
 
             // Limit time range for view log in 2 years (start from beginning of last year)
             this.maxReportDate = DateTime.Today;
@@ -111,47 +111,48 @@
             }
         }
 
-        private Dictionary<int, bool> GetActionIdVisibilitiesFromAppSettings()
+        private Dictionary<int, bool> GetActionIdVisibilities()
         {
-            var actionIdVisibilities = new Dictionary<int, bool>();
-            AppendActionIdVisibilities(actionIdVisibilities, AppSettings.ActionIds_Racing_151_31, UserPermission.IsShowRacing_151_31);
-            AppendActionIdVisibilities(actionIdVisibilities, AppSettings.ActionIds_Racing_151_41, UserPermission.IsShowRacing_151_41);
-            AppendActionIdVisibilities(actionIdVisibilities, AppSettings.ActionIds_Racing_151_51, UserPermission.IsShowRacing_151_51);
-            AppendActionIdVisibilities(actionIdVisibilities, AppSettings.ActionIds_Racing_152_41, UserPermission.IsShowRacing_152_41);
-            AppendActionIdVisibilities(actionIdVisibilities, AppSettings.ActionIds_Racing_152_51, UserPermission.IsShowRacing_152_51);
-            AppendActionIdVisibilities(actionIdVisibilities, AppSettings.ActionIds_Racing_153_51, UserPermission.IsShowRacing_153_51);
+            var visibilities = new Dictionary<int, bool>();
 
-            return actionIdVisibilities;
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_31, UserPermission.IsShowRacing_151_31);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_41, UserPermission.IsShowRacing_151_41);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_51, UserPermission.IsShowRacing_151_51);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_152_41, UserPermission.IsShowRacing_152_41);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_152_51, UserPermission.IsShowRacing_152_51);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_153_51, UserPermission.IsShowRacing_153_51);
+
+            return visibilities;
         }
 
-        private Dictionary<string, bool> GetSportBetTypeVisibilitiesFromUserPermission()
+        private Dictionary<string, bool> GetSportBetTypeVisibilities()
         {
-            var sportBetTypeVisibilities = new Dictionary<string, bool>();
-            sportBetTypeVisibilities.Add("151_31", UserPermission.IsShowRacing_151_31);
-            sportBetTypeVisibilities.Add("151_41", UserPermission.IsShowRacing_151_41);
-            sportBetTypeVisibilities.Add("151_51", UserPermission.IsShowRacing_151_51);
-            sportBetTypeVisibilities.Add("152_41", UserPermission.IsShowRacing_152_41);
-            sportBetTypeVisibilities.Add("152_51", UserPermission.IsShowRacing_152_51);
-            sportBetTypeVisibilities.Add("153_51", UserPermission.IsShowRacing_153_51);
-            sportBetTypeVisibilities.Add("161_90", UserPermission.IsShowNumberGroup);
-            sportBetTypeVisibilities.Add(Sport.VirtualSports.ToString(), UserPermission.IsShowVirtualSports);
-            sportBetTypeVisibilities.Add(Sport.GoldDeluxe.ToString(), UserPermission.IsShowGoldDeluxeSettingForCredit);
-            sportBetTypeVisibilities.Add(Sport.ColossusBets.ToString(), UserPermission.IsShowColossusBets);
-            sportBetTypeVisibilities.Add(Sport.Sportsbook2.ToString(), UserPermission.IsShowSportsbook2);
-            sportBetTypeVisibilities.Add(Sport.CockFighting.ToString(), UserPermission.IsEnableProduct(Sport.CockFighting));
-            sportBetTypeVisibilities.Add(Sport.AllBet.ToString(), UserPermission.IsEnableProduct(Sport.AllBet));
-            sportBetTypeVisibilities.Add(Sport.Voidbridge.ToString(), UserPermission.IsEnableProduct(Sport.Voidbridge));
-
-            return sportBetTypeVisibilities;
+            return new Dictionary<string, bool>
+            {
+                { "151_31", UserPermission.IsShowRacing_151_31 },
+                { "151_41", UserPermission.IsShowRacing_151_41 },
+                { "151_51", UserPermission.IsShowRacing_151_51 },
+                { "152_41", UserPermission.IsShowRacing_152_41 },
+                { "152_51", UserPermission.IsShowRacing_152_51 },
+                { "153_51", UserPermission.IsShowRacing_153_51 },
+                { "161_90", UserPermission.IsShowNumberGroup },
+                { Sport.VirtualSports.ToString(), UserPermission.IsShowVirtualSports },
+                { Sport.GoldDeluxe.ToString(), UserPermission.IsShowGoldDeluxeSettingForCredit },
+                { Sport.ColossusBets.ToString(), UserPermission.IsShowColossusBets },
+                { Sport.Sportsbook2.ToString(), UserPermission.IsShowSportsbook2 },
+                { Sport.CockFighting.ToString(), UserPermission.IsEnableProduct(Sport.CockFighting) },
+                { Sport.AllBet.ToString(), UserPermission.IsEnableProduct(Sport.AllBet) },
+                { Sport.Voidbridge.ToString(), UserPermission.IsEnableProduct(Sport.Voidbridge) }
+            };
         }
 
-        private void AppendActionIdVisibilities(Dictionary<int, bool> actionIdVisibilities, List<int> actionIds, bool visibility)
+        private void AddActionVisibilities(Dictionary<int, bool> actionVisibilities, List<int> actionIds, bool visibility)
         {
             foreach (var actionId in actionIds)
             {
-                if (!actionIdVisibilities.ContainsKey(actionId))
+                if (!actionVisibilities.ContainsKey(actionId))
                 {
-                    actionIdVisibilities.Add(actionId, visibility);
+                    actionVisibilities.Add(actionId, visibility);
                 }
             }
         }

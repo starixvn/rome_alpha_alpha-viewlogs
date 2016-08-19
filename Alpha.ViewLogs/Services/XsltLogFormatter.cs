@@ -40,8 +40,6 @@
 
         bool IsShowMyanmarOdds();
 
-        //void Set
-
         bool IsVisibleKeno(string hideKeno);
 
         string GetDisabledKenoBetTypeName(string disableBetType);

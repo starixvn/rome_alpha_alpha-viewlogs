@@ -20,7 +20,7 @@
         private readonly IDynamicRepository dynamicRepository;
         private readonly CustomerService customerService;
 
-        protected readonly LogDataAccess logDataAccess;
+        protected readonly LogDataAccess LogDataAccess;
 
         protected BaseService(
             CachingManager cacheManager,
@@ -31,7 +31,7 @@
             this.cacheManager = cacheManager;
             this.dynamicRepository = dynamicRepository;
             this.customerService = customerService;
-            this.logDataAccess = logDataAccess;
+            this.LogDataAccess = logDataAccess;
         }
 
         protected abstract ICriteria CreateGetLogsCriteria(LogParam logParam);
@@ -141,7 +141,7 @@
         {
             var criteria = CreateGetTotalLogsCriteria(logParam);
 
-            return logDataAccess.GetTotalRecordsOfLogs(criteria);
+            return LogDataAccess.GetTotalRecordsOfLogs(criteria);
         }
     }
 }

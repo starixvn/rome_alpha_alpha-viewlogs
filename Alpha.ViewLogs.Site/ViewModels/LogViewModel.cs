@@ -4,9 +4,49 @@
     using System.Linq;
     using Helpers;
     using Models.Enumerations;
+    using Params;
+    using Requests;
 
     public class LogViewModel
     {
+        public LogViewModel(LogParam logParam, int totalRecords)
+        {
+            var dateInRange = logParam.FromDate < logParam.MinReportDate
+                ? logParam.MinReportDate
+                : logParam.FromDate;
+
+            var fromDate = dateInRange.Day.ToString();
+
+            dateInRange = logParam.ToDate < logParam.MaxReportDate
+                ? logParam.ToDate
+                : logParam.MaxReportDate;
+
+            var toDate = dateInRange.Day.ToString();
+
+            HasViewLogPermission = logParam.HasViewLogPermission;
+            IsSubAccount = logParam.SubAccId > 0;
+            RoleId = logParam.RoleId;
+
+            ShowOldValue = logParam.IsShowOldValue;
+            TotalRecords = totalRecords;
+            PageSize = logParam.PageSize;
+            PageIndex = logParam.PageIndex;
+
+            FromDate = fromDate;
+            ToDate = toDate;
+
+            DayInMonth = logParam.MinReportDate < logParam.FromDate ?
+                logParam.FromDate.ToShortDateString() :
+                logParam.MinReportDate.ToShortDateString();
+
+            MaxReportDate = logParam.MaxReportDate.ToShortDateString();
+            MinReportDate = logParam.MinReportDate.ToShortDateString();
+
+            Username = logParam.Username;
+
+            ShowOldValuesCookieName = LogQuery.CookieShowOldValue;
+        }
+
         public bool HasViewLogPermission { get; set; }
 
         public bool IsSubAccount { get; set; }

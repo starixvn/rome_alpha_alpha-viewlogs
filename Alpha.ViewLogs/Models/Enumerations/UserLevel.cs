@@ -1,15 +1,19 @@
 ﻿namespace Alpha.ViewLogs.Models.Enumerations
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
 
     [Serializable]
     public class UserLevel : Enumeration
     {
-        public static UserLevel Super = new UserLevel(4, "Super");
+        [SuppressMessage("Microsoft.Security", "CA2104:DoNotDeclareReadOnlyMutableReferenceTypes", Justification = "Reviewed!")]
+        public static readonly UserLevel Super = new UserLevel(4, "Super");
 
-        public static UserLevel Master = new UserLevel(3, "Master");
+        [SuppressMessage("Microsoft.Security", "CA2104:DoNotDeclareReadOnlyMutableReferenceTypes", Justification = "Reviewed!")]
+        public static readonly UserLevel Master = new UserLevel(3, "Master");
 
-        public static UserLevel Agent = new UserLevel(2, "Agent");
+        [SuppressMessage("Microsoft.Security", "CA2104:DoNotDeclareReadOnlyMutableReferenceTypes", Justification = "Reviewed!")]
+        public static readonly UserLevel Agent = new UserLevel(2, "Agent");
 
         public UserLevel()
         {

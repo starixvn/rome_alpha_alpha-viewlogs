@@ -24,7 +24,7 @@
         {
             return new GetStatusLogsCriteria
             {
-                //// Just get status from action id 1100 => 1199
+                //// Just get status from action id 1100 => 1199, because it uses same SP with customer setting log
                 LowerActionId = ActionIdFrom,
                 UpperActionId = ActionIdTo,
                 CustId = logParam.CustId,
@@ -41,6 +41,7 @@
         {
             return new GetTotalStatusLogsCriteria
             {
+                //// Just get status from action id 1100 => 1199, because it uses same SP with customer setting log
                 LowerActionId = ActionIdFrom,
                 UpperActionId = ActionIdTo,
                 CustId = logParam.CustId,

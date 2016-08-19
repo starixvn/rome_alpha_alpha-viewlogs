@@ -11,76 +11,51 @@
 
     public class BaseHandler
     {
-        protected readonly XsltLogFormatter xsltLogFormatter;
-        protected readonly LogService logService;
+        protected readonly XsltLogFormatter XsltLogFormatter;
+        protected readonly LogService LogService;
 
         public BaseHandler(LogService logService, XsltLogFormatter xsltLogFormatter)
         {
-            this.xsltLogFormatter = xsltLogFormatter;
-            this.logService = logService;
+            this.XsltLogFormatter = xsltLogFormatter;
+            this.LogService = logService;
         }
 
-        protected LogParam GetLogsParam(LogQuery indexQuery)
+        protected LogParam CreateLogParam(LogQuery logQuery)
         {
-            var fromDate = string.IsNullOrEmpty(indexQuery.FromDate) ? DateTime.Now.AddDays(-1) : Converter.ToDateTime(indexQuery.FromDate);
-            var toDate = string.IsNullOrEmpty(indexQuery.ToDate) ? DateTime.Now : Converter.ToDateTime(indexQuery.ToDate);
+            var fromDate = string.IsNullOrEmpty(logQuery.FromDate) 
+                ? DateTime.Now.AddDays(-1) 
+                : Converter.ToDateTime(logQuery.FromDate);
+
+            var toDate = string.IsNullOrEmpty(logQuery.ToDate) 
+                ? DateTime.Now 
+                : Converter.ToDateTime(logQuery.ToDate);
 
             return new LogParam
             {
-                UplineId = indexQuery.UplineId,
-                SubAccId = indexQuery.SubAccId,
-                RoleId = indexQuery.RoleId,
+                UplineId = logQuery.UplineId,
+                SubAccId = logQuery.SubAccId,
+                RoleId = logQuery.RoleId,
                 FromDate = fromDate,
                 ToDate = toDate,
-                Username = indexQuery.Username,
-                IsInternal = indexQuery.IsInternal,
+                Username = logQuery.Username,
+                IsInternal = logQuery.IsInternal,
 
-                PageSize = string.IsNullOrEmpty(indexQuery.PageSize) ? Pager.DefaultPageSize : Converter.ToInt(indexQuery.PageSize),
-                PageIndex = string.IsNullOrEmpty(indexQuery.PageIndex) ? 0 : Converter.ToInt(indexQuery.PageIndex),
+                PageSize = string.IsNullOrEmpty(logQuery.PageSize) 
+                ? Pager.DefaultPageSize 
+                : Converter.ToInt(logQuery.PageSize),
 
-                Language = indexQuery.Language,
-                HasViewLogPermission = indexQuery.HasViewLogPermission,
-                ActionIdVisibilities = indexQuery.ActionIdVisibilities,
+                PageIndex = string.IsNullOrEmpty(logQuery.PageIndex) 
+                ? 0 
+                : Converter.ToInt(logQuery.PageIndex),
 
-                MaxReportDate = indexQuery.MaxReportDate,
-                MinReportDate = indexQuery.MinReportDate,
-                IsShowOldValue = indexQuery.IsShowOldValue
+                Language = logQuery.Language,
+                HasViewLogPermission = logQuery.HasViewLogPermission,
+                ActionIdVisibilities = logQuery.ActionIdVisibilities,
+
+                MaxReportDate = logQuery.MaxReportDate,
+                MinReportDate = logQuery.MinReportDate,
+                IsShowOldValue = logQuery.IsShowOldValue
             };
-        }
-
-        protected void AssignIndexViewModelValue(
-            LogParam logsParam,
-            PagingLogs<Log> pagingLogs,
-            LogViewModel indexViewModel)
-        {
-            var dateInRange = logsParam.FromDate < logsParam.MinReportDate ? logsParam.MinReportDate : logsParam.FromDate;
-            var fromDate = dateInRange.Day.ToString();
-
-            dateInRange = logsParam.ToDate < logsParam.MaxReportDate ? logsParam.ToDate : logsParam.MaxReportDate;
-            var toDate = dateInRange.Day.ToString();
-
-            indexViewModel.HasViewLogPermission = logsParam.HasViewLogPermission;
-            indexViewModel.IsSubAccount = logsParam.SubAccId > 0;
-            indexViewModel.RoleId = logsParam.RoleId;
-
-            indexViewModel.ShowOldValue = logsParam.IsShowOldValue;
-            indexViewModel.TotalRecords = pagingLogs.TotalRecords;
-            indexViewModel.PageSize = logsParam.PageSize;
-            indexViewModel.PageIndex = logsParam.PageIndex;
-
-            indexViewModel.FromDate = fromDate;
-            indexViewModel.ToDate = toDate;
-
-            indexViewModel.DayInMonth = logsParam.MinReportDate < logsParam.FromDate ?
-                logsParam.FromDate.ToShortDateString() :
-                logsParam.MinReportDate.ToShortDateString();
-
-            indexViewModel.MaxReportDate = logsParam.MaxReportDate.ToShortDateString();
-            indexViewModel.MinReportDate = logsParam.MinReportDate.ToShortDateString();
-
-            indexViewModel.Username = logsParam.Username;
-
-            indexViewModel.ShowOldValuesCookieName = LogQuery.CookieShowOldValue;
         }
     }
 }

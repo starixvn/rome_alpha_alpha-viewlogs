@@ -10,8 +10,8 @@
         public const int AllBet = 211;
         public const int Voidbridge = 212;
 
-        public const int RNG_RNGGame = 208;
-        public const int RNG_MiniGame = 209;
-        public const int RNG_Mobile = 210;
+        public const int RNGGame = 208;
+        public const int RNGMiniGame = 209;
+        public const int RNGMobile = 210;
     }
 }

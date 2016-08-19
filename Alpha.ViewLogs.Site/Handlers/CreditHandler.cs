@@ -20,11 +20,9 @@
 
         public LogViewModel Handle(IndexQuery message)
         {
-            var logsParam = GetLogsParam(message);
-            var pagingLogs = this.logService.GetLogs(logsParam);
-
-            var viewModel = new LogViewModel();
-            AssignIndexViewModelValue(logsParam, pagingLogs, viewModel);
+            var logsParam = CreateLogParam(message);
+            var pagingLogs = this.LogService.GetLogs(logsParam);
+            var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords);
             TransformLogsToHtml(pagingLogs, message, viewModel);
 
             viewModel.ActionTypeId = message.ActionTypeId;
@@ -41,7 +39,8 @@
 
             foreach (var log in pagingLogs.Logs)
             {
-                if (message.ActionIdVisibilities.ContainsKey(log.ActionId) && !message.ActionIdVisibilities[log.ActionId])
+                if (message.ActionIdVisibilities.ContainsKey(log.ActionId) 
+                    && !message.ActionIdVisibilities[log.ActionId])
                 {
                     viewModel.TotalRecords -= 1;
                     continue;
@@ -63,7 +62,7 @@
                     TrackingValue = Formater.DecFormat(Converter.ToDecimal(log.TrackingValue), 2),
                     TrackingValueOld = Formater.DecFormat(Converter.ToDecimal(log.TrackingValueOld), 2),
                     Details = log.Details,
-                    IP = this.xsltLogFormatter.FormatIP(log.IP)
+                    IP = this.XsltLogFormatter.FormatIP(log.IP)
                 });
             }
 
