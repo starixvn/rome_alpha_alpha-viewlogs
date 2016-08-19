@@ -5,25 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+
     @StaticResources.AssetStyles.Render($"/bundles/site-viewlogs/viewlogs-{Model.UserLevel}")
+
     <link rel="stylesheet" href="@(StaticResources.ViewLogsSiteStyleUrl("~/assets/bundles/default"))" />
+
     @RenderSection("Styles", required: false)
 </head>
 <body>
-    <div id="page-popup" class="modal fade hidden" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog ex-modal" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="icon icon-close close" data-dismiss="modal" aria-label="@Resources.Close"><span aria-hidden="true"></span></button>
-                    <h4 class="modal-title" id="result-detail-title"><span class="popup-title"></span></h4>
-                </div>
-                <div class="modal-body">
-                    <iframe frameborder="0" allowtransparency="yes" marginheight="0" marginwidth="0" scrolling="auto"
-                            id="popup-iframe"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container-fluid">
         @Html.Action("Index", "Tab", new { tabName = ViewContext.RouteData.Values["controller"], area = "" })
         @RenderBody()
@@ -32,6 +21,7 @@
 
     <div class="shadow" id="shadow"></div>
     <div class="output" id="output"></div>
+
     @Html.Hidden("indexPath", HttpContext.Current.Request.Url.AbsolutePath)
     @Html.Hidden("usernameAutoSuggestionPath", Model.UsernameAutoSuggestionPath)
     @Html.Hidden("viewIPInfoPath", Model.ViewIPInfoPath)
