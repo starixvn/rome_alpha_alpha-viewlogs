@@ -119,7 +119,7 @@
 
             logParam.CustId = downlineInfo.CustId;
 
-            pagingLogs.Logs = GetLogsFromDataAccess(logParam);
+            pagingLogs.Logs = GetLogData(logParam);
             pagingLogs.TotalRecords = GetTotalLogs(logParam);
 
             foreach (var log in pagingLogs.Logs)
@@ -130,7 +130,7 @@
             return pagingLogs;
         }
 
-        protected virtual IEnumerable<Log> GetLogsFromDataAccess(LogParam logParam)
+        protected virtual IEnumerable<Log> GetLogData(LogParam logParam)
         {
             var criteria = CreateGetLogsCriteria(logParam);
 
