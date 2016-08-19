@@ -29,7 +29,8 @@
             IUserSession currentUserSession,
             bool? isShowOldValue,
             Dictionary<int, bool> actionIdVisibilities = null,
-            Dictionary<string, bool> sportBetTypeVisibilities = null)
+            Dictionary<string, bool> sportBetTypeVisibilities = null,
+            bool? isShowMyanmarOdds = null)
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
             this.IsShowOldValue = isShowOldValue ?? GetShowOldValueFromCookie();
@@ -45,7 +46,7 @@
             this.Language = currentUserSession.Language;
             this.IsInternal = false;
             this.UplineId = currentUserSession.CustId;
-            this.IsShowMyanmarOdds = UserPermission.IsShowMyanmarOdds;
+            this.IsShowMyanmarOdds = isShowMyanmarOdds ?? UserPermission.IsShowMyanmarOdds;
             this.PreviousUsername = this.Username;
         }
 
@@ -125,6 +126,20 @@
             return visibilities;
         }
 
+        private void AddActionVisibilities(
+            Dictionary<int, bool> actionVisibilities, 
+            List<int> actionIds, 
+            bool visibility)
+        {
+            foreach (var actionId in actionIds)
+            {
+                if (!actionVisibilities.ContainsKey(actionId))
+                {
+                    actionVisibilities.Add(actionId, visibility);
+                }
+            }
+        }
+
         private Dictionary<string, bool> GetSportBetTypeVisibilities()
         {
             return new Dictionary<string, bool>
@@ -144,17 +159,6 @@
                 { Sport.AllBet.ToString(), UserPermission.IsEnableProduct(Sport.AllBet) },
                 { Sport.Voidbridge.ToString(), UserPermission.IsEnableProduct(Sport.Voidbridge) }
             };
-        }
-
-        private void AddActionVisibilities(Dictionary<int, bool> actionVisibilities, List<int> actionIds, bool visibility)
-        {
-            foreach (var actionId in actionIds)
-            {
-                if (!actionVisibilities.ContainsKey(actionId))
-                {
-                    actionVisibilities.Add(actionId, visibility);
-                }
-            }
         }
 
         private bool GetShowOldValueFromCookie()
