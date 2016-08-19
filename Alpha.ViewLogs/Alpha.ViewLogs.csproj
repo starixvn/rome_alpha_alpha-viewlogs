@@ -44,9 +44,9 @@
     </Compile>
     <Compile Include="Configurations\AppSettings.cs" />
     <Compile Include="Constants\ActionType.cs" />
-    <Compile Include="Constants\Language.cs" />
+    <Compile Include="Constants\LanguageCode.cs" />
     <Compile Include="Constants\PageAccessType.cs" />
-    <Compile Include="Constants\Sport.cs" />
+    <Compile Include="Constants\SportId.cs" />
     <Compile Include="Criteria\GetCustInfoByUsernameCriteria.cs" />
     <Compile Include="Criteria\Credit\GetCreditLogsCriteria.cs" />
     <Compile Include="Criteria\Credit\GetTotalCreditLogsCriteria.cs" />

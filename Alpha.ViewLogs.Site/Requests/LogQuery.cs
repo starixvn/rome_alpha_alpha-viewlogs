@@ -151,13 +151,13 @@
                 { "152_51", UserPermission.IsShowRacing_152_51 },
                 { "153_51", UserPermission.IsShowRacing_153_51 },
                 { "161_90", UserPermission.IsShowNumberGroup },
-                { Sport.VirtualSports.ToString(), UserPermission.IsShowVirtualSports },
-                { Sport.GoldDeluxe.ToString(), UserPermission.IsShowGoldDeluxeSettingForCredit },
-                { Sport.ColossusBets.ToString(), UserPermission.IsShowColossusBets },
-                { Sport.Sportsbook2.ToString(), UserPermission.IsShowSportsbook2 },
-                { Sport.CockFighting.ToString(), UserPermission.IsEnableProduct(Sport.CockFighting) },
-                { Sport.AllBet.ToString(), UserPermission.IsEnableProduct(Sport.AllBet) },
-                { Sport.Voidbridge.ToString(), UserPermission.IsEnableProduct(Sport.Voidbridge) }
+                { SportId.VirtualSports.ToString(), UserPermission.IsShowVirtualSports },
+                { SportId.GoldDeluxe.ToString(), UserPermission.IsShowGoldDeluxeSettingForCredit },
+                { SportId.ColossusBets.ToString(), UserPermission.IsShowColossusBets },
+                { SportId.Sportsbook2.ToString(), UserPermission.IsShowSportsbook2 },
+                { SportId.CockFighting.ToString(), UserPermission.IsEnableProduct(SportId.CockFighting) },
+                { SportId.AllBet.ToString(), UserPermission.IsEnableProduct(SportId.AllBet) },
+                { SportId.Voidbridge.ToString(), UserPermission.IsEnableProduct(SportId.Voidbridge) }
             };
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Constants
 {
-    public static class Language
+    public static class LanguageCode
     {
         public const string English = "en-US";
         public const string ChineseTraditional = "zh-TW";

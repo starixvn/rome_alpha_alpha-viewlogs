@@ -17,7 +17,7 @@
     public class BaseController : Controller
     {
         protected const string LoginLogsURL = "~/LoginLogs";
-        private CultureInfo defaultCulture = CultureInfo.CreateSpecificCulture(Language.Default);
+        private CultureInfo defaultCulture = CultureInfo.CreateSpecificCulture(LanguageCode.Default);
 
         protected override void OnAuthentication(AuthenticationContext filterContext)
         {
@@ -60,7 +60,7 @@
 
             if (string.IsNullOrEmpty(cultureName))
             {
-                cultureName = Language.Default;
+                cultureName = LanguageCode.Default;
                 UserSession.Current.Language = cultureName;
             }
 

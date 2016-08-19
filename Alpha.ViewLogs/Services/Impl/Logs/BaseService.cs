@@ -43,22 +43,22 @@
             var logAction = GetLogAction(actionId);
             switch (language)
             {
-                case Language.ChineseTraditional:
+                case LanguageCode.ChineseTraditional:
                     return logAction.ChineseTraditionalName;
 
-                case Language.ChineseSimplified:
+                case LanguageCode.ChineseSimplified:
                     return logAction.ChineseSimplifiedName;
 
-                case Language.Japanese:
+                case LanguageCode.Japanese:
                     return logAction.JapaneseName;
 
-                case Language.Thai:
+                case LanguageCode.Thai:
                     return logAction.ThaiName;
 
-                case Language.Korean:
+                case LanguageCode.Korean:
                     return logAction.KoreanName;
 
-                case Language.Vietnamese:
+                case LanguageCode.Vietnamese:
                     return logAction.VietnameseName;
 
                 default:

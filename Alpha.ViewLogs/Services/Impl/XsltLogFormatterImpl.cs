@@ -242,14 +242,14 @@
 
         public bool IsRNGCasino(int sportType)
         {
-            return sportType == Sport.RNGGame ||
-                sportType == Sport.RNGMiniGame ||
-                sportType == Sport.RNGMobile;
+            return sportType == SportId.RNGGame ||
+                sportType == SportId.RNGMiniGame ||
+                sportType == SportId.RNGMobile;
         }
 
         public bool IsGoldDeluxe(int sportType)
         {
-            return sportType == Sport.GoldDeluxe;
+            return sportType == SportId.GoldDeluxe;
         }
 
         private string CovertCodeCondition(string dayCodes)
@@ -294,22 +294,22 @@
         {
             var sportDisplays = new List<SportDisplay>();
 
-            var sportId = Sport.VirtualSports.ToString();
+            var sportId = SportId.VirtualSports.ToString();
             sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisabledVirtualSports, disableVitualSports));
 
-            sportId = Sport.GoldDeluxe.ToString();
+            sportId = SportId.GoldDeluxe.ToString();
             sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisableGoldDeluxe, disableGoldDeluxe));
 
-            sportId = Sport.ColossusBets.ToString();
+            sportId = SportId.ColossusBets.ToString();
             sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisableColossusBets, disableColossusBets));
 
-            sportId = Sport.CockFighting.ToString();
+            sportId = SportId.CockFighting.ToString();
             sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisableCockfighting, disableCockfighting));
 
-            sportId = Sport.AllBet.ToString();
+            sportId = SportId.AllBet.ToString();
             sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisableAllBet, disableLiveCasinoAllbet));
 
-            sportId = Sport.Voidbridge.ToString();
+            sportId = SportId.Voidbridge.ToString();
             sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisableMacauGames, disableLiveCasinoVoidbridge));
 
             return sportDisplays;

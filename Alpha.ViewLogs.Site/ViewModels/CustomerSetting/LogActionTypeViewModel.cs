@@ -25,19 +25,19 @@
         {
             switch (language)
             {
-                case Language.English:
+                case LanguageCode.English:
                     return logActionType.EnglishName;
-                case Language.ChineseTraditional:
+                case LanguageCode.ChineseTraditional:
                     return logActionType.ChineseTraditionalName;
-                case Language.ChineseSimplified:
+                case LanguageCode.ChineseSimplified:
                     return logActionType.ChineseSimplifiedName;
-                case Language.Japanese:
+                case LanguageCode.Japanese:
                     return logActionType.JapaneseName;
-                case Language.Thai:
+                case LanguageCode.Thai:
                     return logActionType.ThaiName;
-                case Language.Korean:
+                case LanguageCode.Korean:
                     return logActionType.KoreanName;
-                case Language.Vietnamese:
+                case LanguageCode.Vietnamese:
                     return logActionType.VietnameseName;
                 default:
                     return logActionType.EnglishName;
