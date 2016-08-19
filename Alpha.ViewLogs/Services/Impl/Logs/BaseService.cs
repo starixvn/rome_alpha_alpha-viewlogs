@@ -104,14 +104,8 @@
         {
             var pagingLogs = new PagingLogs<Log>();
 
-            var downlineInfo = customerService.GetDownlineInfoByUsername(
-                new GetCustInfoByUsernameCriteria
-                {
-                    Username = logParam.Username,
-                    UplineId = logParam.UplineId
-                });
-
-            // If search username is not belong to searcher, then return
+            var downlineInfo = customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId);
+            //// If search username is not belong to searcher, then return
             if (downlineInfo.CustId == 0)
             {
                 return pagingLogs;

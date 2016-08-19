@@ -5,6 +5,6 @@
 
     public interface CustomerService
     {
-        CustomerInfo GetDownlineInfoByUsername(GetCustInfoByUsernameCriteria criteria);
+        CustomerInfo GetDownlineInfoByUsername(string downlineUsername, int uplineId);
     }
 }

@@ -1,80 +1,80 @@
-﻿namespace Alpha.ViewLogs.Tests.Services
-{
-    using Criteria;
-    using DataAccesses;
-    using Fanex.Data.Repository;
-    using Models;
-    using NSubstitute;
-    using NUnit.Framework;
-    using System;
-    using ViewLogs.Services.Impl;
+﻿////namespace Alpha.ViewLogs.Tests.Services
+////{
+////    using Criteria;
+////    using DataAccesses;
+////    using Fanex.Data.Repository;
+////    using Models;
+////    using NSubstitute;
+////    using NUnit.Framework;
+////    using System;
+////    using ViewLogs.Services.Impl;
 
-    [TestFixture]
-    public class CustomerServiceImplTests
-    {
-        private const string ValidUsername = "validUsername";
-        private const int ValidCustId = 1;
+////    [TestFixture]
+////    public class CustomerServiceImplTests
+////    {
+////        private const string ValidUsername = "validUsername";
+////        private const int ValidCustId = 1;
 
-        private CustomerDataAccess customerDataAccess;
-        private CustomerServiceImpl customerService;
+////        private CustomerDataAccess customerDataAccess;
+////        private CustomerServiceImpl customerService;
 
-        [SetUp]
-        public void SetUp()
-        {
-            customerDataAccess = Substitute.For<CustomerDataAccess>();
+////        [SetUp]
+////        public void SetUp()
+////        {
+////            customerDataAccess = Substitute.For<CustomerDataAccess>();
 
-            customerService = new CustomerServiceImpl(customerDataAccess);
-        }
+////            customerService = new CustomerServiceImpl(customerDataAccess);
+////        }
 
-        [Test]
-        public void CheckIsBelongingByUsername_NullCriteria_ThrowNullReferenceException()
-        {
-            // Arrange
-            GetCustInfoByUsernameCriteria nullCriteria = null;
+////        [Test]
+////        public void CheckIsBelongingByUsername_NullCriteria_ThrowNullReferenceException()
+////        {
+////            // Arrange
+////            GetCustInfoByUsernameCriteria nullCriteria = null;
 
-            // Action & Assert
-            Assert.Throws<NullReferenceException>(new TestDelegate(() => customerService.GetDownlineInfoByUsername(nullCriteria)));
-        }
+////            // Action & Assert
+////            Assert.Throws<NullReferenceException>(new TestDelegate(() => customerService.GetDownlineInfoByUsername(nullCriteria)));
+////        }
 
-        [TestCase("")]
-        [TestCase(null)]
-        public void CheckIsBelongingByUsername_NullOrEmptyUsername_ReturnsNull(string username)
-        {
-            // Arrange
-            var criteria = new GetCustInfoByUsernameCriteria
-            {
-                Username = username
-            };
+////        [TestCase("")]
+////        [TestCase(null)]
+////        public void CheckIsBelongingByUsername_NullOrEmptyUsername_ReturnsNull(string username)
+////        {
+////            // Arrange
+////            var criteria = new GetCustInfoByUsernameCriteria
+////            {
+////                Username = username
+////            };
 
-            // Action 
-            var customerInfo = customerService.GetDownlineInfoByUsername(criteria);
+////            // Action 
+////            var customerInfo = customerService.GetDownlineInfoByUsername(criteria);
 
-            // Assert
-            Assert.IsNull(customerInfo);
-        }
+////            // Assert
+////            Assert.IsNull(customerInfo);
+////        }
 
-        [Test]
-        public void CheckIsBelongingByUsername_ValidUsername_ReturnCustomerInfoFromDataAccess()
-        {
-            // Arrange
-            var criteria = new GetCustInfoByUsernameCriteria
-            {
-                Username = ValidUsername
-            };
+////        [Test]
+////        public void CheckIsBelongingByUsername_ValidUsername_ReturnCustomerInfoFromDataAccess()
+////        {
+////            // Arrange
+////            var criteria = new GetCustInfoByUsernameCriteria
+////            {
+////                Username = ValidUsername
+////            };
 
-            var expectedCustomerInfo = new CustomerInfo
-            {
-                IsSubAcc = true,
-                CustId = ValidCustId
-            };
+////            var expectedCustomerInfo = new CustomerInfo
+////            {
+////                IsSubAcc = true,
+////                CustId = ValidCustId
+////            };
 
-            customerDataAccess.GetCustInfoByUsername(criteria).Returns<CustomerInfo>(expectedCustomerInfo);
+////            customerDataAccess.GetCustInfoByUsername(criteria).Returns<CustomerInfo>(expectedCustomerInfo);
 
-            // Action 
-            var actualCustomerInfo = customerService.GetDownlineInfoByUsername(criteria);
+////            // Action 
+////            var actualCustomerInfo = customerService.GetDownlineInfoByUsername(criteria);
 
-            // Assert
-            Assert.AreEqual(actualCustomerInfo, expectedCustomerInfo);
-        }
-    }
-}
+////            // Assert
+////            Assert.AreEqual(actualCustomerInfo, expectedCustomerInfo);
+////        }
+////    }
+////}

@@ -13,14 +13,18 @@
             this.customerDataAccess = customerDataAccess;
         }
 
-        public CustomerInfo GetDownlineInfoByUsername(GetCustInfoByUsernameCriteria criteria)
+        public CustomerInfo GetDownlineInfoByUsername(string downlineUsername, int uplineId)
         {
-            if (string.IsNullOrEmpty(criteria.Username))
+            if (string.IsNullOrEmpty(downlineUsername))
             {
                 return new CustomerInfo();
             }
             
-            var customerInfo = customerDataAccess.GetCustInfoByUsername(criteria);
+            var customerInfo = customerDataAccess.GetCustInfoByUsername(new GetCustInfoByUsernameCriteria
+            {
+                Username = downlineUsername,
+                UplineId = uplineId
+            });
 
             return customerInfo;
         }
