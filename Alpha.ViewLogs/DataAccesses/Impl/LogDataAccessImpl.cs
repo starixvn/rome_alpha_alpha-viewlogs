@@ -24,9 +24,9 @@
             }
         }
 
-        public virtual List<Log> GetLogs(ICriteria criteria)
+        public virtual IEnumerable<Log> GetLogs(ICriteria criteria)
         {
-            return dynamicRepository.Fetch<Log>(criteria).ToList();
+            return dynamicRepository.Fetch<Log>(criteria);
         }
     }
 }

@@ -8,6 +8,6 @@
     {
         int GetTotalRecordsOfLogs(ICriteria criteria);
 
-        List<Log> GetLogs(ICriteria criteria);
+        IEnumerable<Log> GetLogs(ICriteria criteria);
     }
 }

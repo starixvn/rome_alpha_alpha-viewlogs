@@ -12,7 +12,7 @@
 
     public abstract class BaseService
     {
-        public const string LogActionCacheKey = "Alpha.ViewLogs.CustomerSetting.LogAction";
+        private const string LogActionCacheKey = "Alpha.ViewLogs.CustomerSetting.LogAction";
         private const string LogActionTypesCacheKey = "Alpha.ViewLogs.CustomerSetting.LogActionTypes";
         private const int OneHour = 1;
 

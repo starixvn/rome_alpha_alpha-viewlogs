@@ -19,7 +19,7 @@
         /// </summary>
         /// <param name="criteria"></param>
         /// <returns></returns>
-        public override List<Log> GetLogs(ICriteria criteria)
+        public override IEnumerable<Log> GetLogs(ICriteria criteria)
         {
             var logs = new List<Log>();
 
