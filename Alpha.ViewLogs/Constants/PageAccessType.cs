@@ -13,22 +13,20 @@
         public const string ViewReports = "[E]";
         public const string ViewTotalBets = "[D]";
 
-        private static IDictionary<string, string> pemissionAbbriations;
+        private static readonly IDictionary<string, string> pemissionAbbriations;
+
+        static PageAccessType()
+        {
+            pemissionAbbriations = new Dictionary<string, string>();
+            pemissionAbbriations.Add(CreateAccount + UpdateAccount + ViewMemberInfo, CreateAccount);
+            pemissionAbbriations.Add(CreateAccount + UpdateAccount, CreateAccount);
+            pemissionAbbriations.Add(UpdateAccount + ViewMemberInfo, UpdateAccount);
+        }
 
         public static IDictionary<string, string> PemissionAbbriations
         {
             get
             {
-                if (pemissionAbbriations != null)
-                {
-                    return pemissionAbbriations;
-                }
-
-                pemissionAbbriations = new Dictionary<string, string>();
-                pemissionAbbriations.Add("[A][B][H]", "[A]");
-                pemissionAbbriations.Add("[A][B]", "[A]");
-                pemissionAbbriations.Add("[B][H]", "[B]");
-
                 return pemissionAbbriations;
             }
         }

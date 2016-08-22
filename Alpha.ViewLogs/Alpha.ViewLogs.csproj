@@ -42,7 +42,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrackingValueResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Configurations\AppSettings.cs" />
     <Compile Include="Constants\ActionType.cs" />
     <Compile Include="Constants\LanguageCode.cs" />
     <Compile Include="Constants\PageAccessType.cs" />

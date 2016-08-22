@@ -141,7 +141,10 @@
 
             foreach (var pemissionAbbriation in pemissionAbbriations)
             {
-                standardizedAttributeValue = standardizedAttributeValue.Replace(pemissionAbbriation.Key, pemissionAbbriation.Value);
+                if (standardizedAttributeValue.Contains(pemissionAbbriation.Key))
+                {
+                    standardizedAttributeValue = standardizedAttributeValue.Replace(pemissionAbbriation.Key, pemissionAbbriation.Value);
+                }
             }
 
             var pageAccessTypeNames = PageAccessType.PageAccessTypeName;
