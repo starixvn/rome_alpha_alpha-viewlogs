@@ -6,7 +6,7 @@
     public static class DateTimeHelper
     {
         private const string LongDateWithSlash = "MM/dd/yyyy hh:mm:ss tt";
-        private const string HtmlLongDateWithSlash = "MM/dd/yyyy <br/>hh:mm:ss tt";
+        private const string HtmlLongDateWithSlash = "MM/dd/yyyy<br/>hh:mm:ss tt";
 
         public static string[] DaysInWeek()
         {

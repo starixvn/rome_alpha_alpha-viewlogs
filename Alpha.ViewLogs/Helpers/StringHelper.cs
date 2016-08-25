@@ -14,11 +14,27 @@
                 return value;
             }
 
+            var removedCommaValue = value.Replace(",", string.Empty);
             double numberValue;
 
-            if (double.TryParse(value, out numberValue))
+            if (!double.TryParse(removedCommaValue, out numberValue))
             {
-                return numberValue.ToString();
+                return value;
+            }
+
+            var result = numberValue.ToString();
+
+            var numberParts = removedCommaValue.Split('.');
+            var realPart = numberParts[0];
+
+            // Is number: 
+            //    has real part (=> not accept: .xx) and
+            //    (not start with 0/real part is "0")
+            var isNumber = !string.IsNullOrWhiteSpace(realPart) &&
+                (!value.StartsWith("0") || string.Equals("0", realPart));
+            if (isNumber)
+            {
+                return result;
             }
 
             return value;

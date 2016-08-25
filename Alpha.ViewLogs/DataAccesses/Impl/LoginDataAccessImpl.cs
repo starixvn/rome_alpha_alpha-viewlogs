@@ -25,9 +25,7 @@
 
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
-                objectDb.ExecuteNonQuery(criteria.GetSpParams());
-
-                using (var reader = objectDb.ExecuteReader())
+                using (var reader = objectDb.ExecuteReader(criteria.GetSpParams()))
                 {
                     while (reader.Read())
                     {

@@ -34,20 +34,6 @@
         }
 
         [Test]
-        public void GetLogActionTypes_HasDataInCache_ReturnDataInCache()
-        {
-            // Arrange
-            var validActionTypeList = GetValidActionTypeList();
-            cacheManager.Get<List<LogActionType>>(CacheKeyLogActionTypes).Returns(validActionTypeList);
-
-            // Action
-            var actualActionTypes = customerSettingLog.GetLogActionTypes();
-
-            // Assert
-            Assert.That(actualActionTypes, Is.EquivalentTo(validActionTypeList));
-        }
-
-        [Test]
         public void GetLogActionTypes_NoDataInCache_ReturnsActionTypesFromDataAccess()
         {
             // Arrange
