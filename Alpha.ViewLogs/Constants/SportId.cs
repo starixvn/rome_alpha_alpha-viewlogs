@@ -2,13 +2,7 @@
 {
     public static class SportId
     {
-        public const int VirtualSports = 180;
         public const int GoldDeluxe = 255;
-        public const int ColossusBets = 204;
-        public const int Sportsbook2 = 44;
-        public const int CockFighting = 206;
-        public const int AllBet = 211;
-        public const int Voidbridge = 212;
 
         public const int RNGGame = 208;
         public const int RNGMiniGame = 209;

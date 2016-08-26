@@ -8,7 +8,7 @@
 
         public string TrackingValueTransformTemplatePath { get; set; }
 
-        public Dictionary<string, bool> SportBetTypeVisibilities { get; set; }
+        public Dictionary<string, bool> CustStatuses { get; set; }
 
         public bool IsShowMyanmarOdds { get; set; }
     }

@@ -41,7 +41,7 @@
             }
 
             //// Need be reviewed code here, AssignParams should not in formatter class
-            logFormatter.AssignParams(transformParam);
+            logFormatter.Init(transformParam);
 
             var xsltArguments = new XsltArgumentList();
             xsltArguments.AddExtensionObject("urn:LogFormat", logFormatter);

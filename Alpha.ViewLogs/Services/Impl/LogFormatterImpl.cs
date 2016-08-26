@@ -13,9 +13,10 @@
 
     public class LogFormatterImpl : LogFormatter
     {
-        private IPService ipService;
+        private const string StatusHtmlFormat = "<tr><td colspan=\"3\" class=\"colW1\">{0}</td><td colspan=\"3\" class=\"colW2\">{1}</td></tr>";
 
-        private Dictionary<string, bool> sportBetTypeVisibilities;
+        private IPService ipService;
+        private Dictionary<string, bool> custStatuses;
         private bool isShowMyanmarOdds;
 
         public LogFormatterImpl(IPService ipService)
@@ -27,14 +28,14 @@
         /// Need be reviewed code here, AssignParams should not in formatter class
         /// </summary>
         /// <param name="transformParam"></param>
-        public void AssignParams(TransformParam transformParam)
+        public void Init(TransformParam transformParam)
         {
             if (transformParam == null)
             {
                 return;
             }
 
-            sportBetTypeVisibilities = transformParam.SportBetTypeVisibilities;
+            custStatuses = transformParam.CustStatuses;
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
         }
 
@@ -50,7 +51,7 @@
 
         public bool IsVisible(string key)
         {
-            return sportBetTypeVisibilities[key];
+            return custStatuses[key];
         }
 
         public string GetLogResource(string key)
@@ -168,63 +169,6 @@
             return unlimited == -1 ? Resources.Unlimited : unlimited.ToString();
         }
 
-        public string GetSportWithConditionHtml(
-            string disableVitualSports,
-            string disableGoldDeluxe,
-            string disableColossusBets,
-            string disableCockfighting,
-            string disableLiveCasinoAllbet,
-            string disableLiveCasinoVoidbridge)
-        {
-            var sportDisplays = GetSportDisplays(
-                disableVitualSports,
-                disableGoldDeluxe,
-                disableColossusBets,
-                disableCockfighting,
-                disableLiveCasinoAllbet,
-                disableLiveCasinoVoidbridge);
-
-            var html = string.Empty;
-            var columnIndex = 0;
-            var maxColumnIndex = 2;
-            var sportDisplayColumns = "<td class=\"colW1\">{0}</td><td class=\"colW2\">{1}</td>";
-
-            foreach (var sportDisplay in sportDisplays)
-            {
-                if (!sportDisplay.IsVisible)
-                {
-                    continue;
-                }
-
-                if (columnIndex == 0)
-                {
-                    html += "<tr>";
-                }
-
-                html += string.Format(sportDisplayColumns, sportDisplay.DisplayName, sportDisplay.DisplayValue);
-                columnIndex++;
-
-                if (columnIndex > maxColumnIndex)
-                {
-                    html += "</tr>";
-                    columnIndex = 0;
-                }
-            }
-
-            for (; columnIndex != 0 && columnIndex <= maxColumnIndex;)
-            {
-                html += string.Format(sportDisplayColumns, string.Empty, string.Empty);
-                columnIndex++;
-
-                if (columnIndex > maxColumnIndex)
-                {
-                    html += "</tr>";
-                }
-            }
-
-            return html;
-        }
-
         public bool IsVisibleKeno(string hideKeno)
         {
             return hideKeno == "0";
@@ -284,35 +228,15 @@
             return Resources.Weekly + " (" + string.Join(" - ", selectedDays) + ")";
         }
 
-        private List<SportDisplay> GetSportDisplays(
-            string disableVitualSports,
-            string disableGoldDeluxe,
-            string disableColossusBets,
-            string disableCockfighting,
-            string disableLiveCasinoAllbet,
-            string disableLiveCasinoVoidbridge)
+        public string RenderCustStatus(string name, string value)
         {
-            var sportDisplays = new List<SportDisplay>();
+            if (custStatuses.ContainsKey(name.ToLower())
+                && custStatuses[name.ToLower()])
+            {
+                return string.Format(StatusHtmlFormat, GetLogResource(name), value);
+            }
 
-            var sportId = SportId.VirtualSports.ToString();
-            sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisabledVirtualSports, disableVitualSports));
-
-            sportId = SportId.GoldDeluxe.ToString();
-            sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisableGoldDeluxe, disableGoldDeluxe));
-
-            sportId = SportId.ColossusBets.ToString();
-            sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisableColossusBets, disableColossusBets));
-
-            sportId = SportId.CockFighting.ToString();
-            sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisableCockfighting, disableCockfighting));
-
-            sportId = SportId.AllBet.ToString();
-            sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisableAllBet, disableLiveCasinoAllbet));
-
-            sportId = SportId.Voidbridge.ToString();
-            sportDisplays.Add(new SportDisplay(sportId, sportBetTypeVisibilities[sportId], Resources.DisableMacauGames, disableLiveCasinoVoidbridge));
-
-            return sportDisplays;
+            return string.Empty;
         }
     }
 }

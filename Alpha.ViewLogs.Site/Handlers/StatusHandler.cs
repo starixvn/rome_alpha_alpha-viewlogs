@@ -52,7 +52,7 @@
             {
                 IsShowOldValue = message.IsShowOldValue,
                 TrackingValueTransformTemplatePath = message.TrackingValueTransformTemplatePath,
-                SportBetTypeVisibilities = message.SportBetTypeVisibilities,
+                CustStatuses = message.SportBetTypeVisibilities,
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds
             };
 

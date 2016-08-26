@@ -6,6 +6,17 @@
 
     public static class AppSettings
     {
+        private static readonly object LockObject = new object();
+
+        private static Dictionary<string, int> statusMappings;
+
+        private static IEnumerable<int> actionIdsRacing15131;
+        private static IEnumerable<int> actionIdsRacing15141;
+        private static IEnumerable<int> actionIdsRacing15151;
+        private static IEnumerable<int> actionIdsRacing15241;
+        private static IEnumerable<int> actionIdsRacing15251;
+        private static IEnumerable<int> actionIdsRacing15351;
+
         public static string VirtualDirectory
         {
             get
@@ -30,57 +41,81 @@
             }
         }
 
-        public static List<int> ActionIds_Racing_151_31
+        public static IEnumerable<int> ActionIds_Racing_151_31
         {
             get
             {
-                var settingValue = GetConfigValue("ActionIds_Racing_151_31");
-                return GetActionIds(settingValue);
+                if (actionIdsRacing15131 == null)
+                {
+                    actionIdsRacing15131 = ParseActionIds(GetConfigValue("ActionIds_Racing_151_31"));
+                }
+
+                return actionIdsRacing15131;
             }
         }
 
-        public static List<int> ActionIds_Racing_151_41
+        public static IEnumerable<int> ActionIds_Racing_151_41
         {
             get
             {
-                var settingValue = GetConfigValue("ActionIds_Racing_151_41");
-                return GetActionIds(settingValue);
+                if (actionIdsRacing15141 == null)
+                {
+                    actionIdsRacing15141 = ParseActionIds(GetConfigValue("ActionIds_Racing_151_41"));
+                }
+
+                return actionIdsRacing15141;
             }
         }
 
-        public static List<int> ActionIds_Racing_151_51
+        public static IEnumerable<int> ActionIds_Racing_151_51
         {
             get
             {
-                var settingValue = GetConfigValue("ActionIds_Racing_151_51");
-                return GetActionIds(settingValue);
+                if (actionIdsRacing15151 == null)
+                {
+                    actionIdsRacing15151 = ParseActionIds(GetConfigValue("ActionIds_Racing_151_51"));
+                }
+
+                return actionIdsRacing15151;
             }
         }
 
-        public static List<int> ActionIds_Racing_152_41
+        public static IEnumerable<int> ActionIds_Racing_152_41
         {
             get
             {
-                var settingValue = GetConfigValue("ActionIds_Racing_152_41");
-                return GetActionIds(settingValue);
+                if (actionIdsRacing15241 == null)
+                {
+                    actionIdsRacing15241 = ParseActionIds(GetConfigValue("ActionIds_Racing_152_41"));
+                }
+
+                return actionIdsRacing15241;
             }
         }
 
-        public static List<int> ActionIds_Racing_152_51
+        public static IEnumerable<int> ActionIds_Racing_152_51
         {
             get
             {
-                var settingValue = GetConfigValue("ActionIds_Racing_152_51");
-                return GetActionIds(settingValue);
+                if (actionIdsRacing15251 == null)
+                {
+                    actionIdsRacing15251 = ParseActionIds(GetConfigValue("ActionIds_Racing_152_51"));
+                }
+
+                return actionIdsRacing15251;
             }
         }
 
-        public static List<int> ActionIds_Racing_153_51
+        public static IEnumerable<int> ActionIds_Racing_153_51
         {
             get
             {
-                var settingValue = GetConfigValue("ActionIds_Racing_153_51");
-                return GetActionIds(settingValue);
+                if (actionIdsRacing15351 == null)
+                {
+                    actionIdsRacing15351 = ParseActionIds(GetConfigValue("ActionIds_Racing_153_51"));
+                }
+
+                return actionIdsRacing15351;
             }
         }
 
@@ -92,24 +127,66 @@
             }
         }
 
+        /// <summary>
+        /// Key: statusName. Value: productId
+        /// </summary>
+        public static Dictionary<string, int> StatusMappings
+        {
+            get
+            {
+                if (statusMappings == null)
+                {
+                    InitStatusMappings();
+                }
+
+                return statusMappings;
+            }
+        }
+
         public static string GetConfigValue(string configName)
         {
             return ConfigurationManager.AppSettings[configName];
         }
 
-        private static List<int> GetActionIds(string actionIdsString)
+        private static IEnumerable<int> ParseActionIds(string actionIdsString)
         {
-            var actionIds = new List<int>();
             if (string.IsNullOrWhiteSpace(actionIdsString))
             {
-                return actionIds;
+                return Enumerable.Empty<int>();
             }
 
-            actionIds = actionIdsString.Split(',')
-                .Select(t => int.Parse(t))
-                .ToList();
+            return actionIdsString.Split(',')
+                .Select(t => int.Parse(t));
+        }
 
-            return actionIds;
+        private static void InitStatusMappings()
+        {
+            lock (LockObject)
+            {
+                if (statusMappings == null)
+                {
+                    statusMappings = new Dictionary<string, int>();
+                    var statusMappingString = GetConfigValue("ViewLogs:StatusMapping");
+
+                    if (string.IsNullOrWhiteSpace(statusMappingString))
+                    {
+                        return;
+                    }
+
+                    statusMappingString.Split(',')
+                        .ToList()
+                        .ForEach((combinedValue) =>
+                        {
+                            //// format: statusName:productId
+                            var keyValue = combinedValue.Split(':');
+
+                            if (keyValue.Length > 1)
+                            {
+                                statusMappings.Add(keyValue[0].ToLower(), int.Parse(keyValue[1]));
+                            }
+                        });
+                }
+            }
         }
     }
 }

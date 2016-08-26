@@ -19,7 +19,7 @@
 
         private readonly Dictionary<int, bool> actionIdVisibilities;
 
-        private readonly Dictionary<string, bool> sportBetTypeVisibilities;
+        private readonly Dictionary<string, bool> custStatuses;
 
         public LogQuery() : this(null, null, null, null)
         {
@@ -29,13 +29,13 @@
             IUserSession currentUserSession,
             bool? isShowOldValue,
             Dictionary<int, bool> actionIdVisibilities = null,
-            Dictionary<string, bool> sportBetTypeVisibilities = null,
+            Dictionary<string, bool> custStatuses = null,
             bool? isShowMyanmarOdds = null)
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
             this.IsShowOldValue = isShowOldValue ?? GetShowOldValueFromCookie();
             this.actionIdVisibilities = actionIdVisibilities ?? GetActionIdVisibilities();
-            this.sportBetTypeVisibilities = sportBetTypeVisibilities ?? GetSportBetTypeVisibilities();
+            this.custStatuses = custStatuses ?? GetCustStatuses();
 
             // Limit time range for view log in 2 years (start from beginning of last year)
             this.maxReportDate = DateTime.Today;
@@ -90,7 +90,7 @@
         {
             get
             {
-                return sportBetTypeVisibilities;
+                return custStatuses;
             }
         }
 
@@ -128,7 +128,7 @@
 
         private void AddActionVisibilities(
             Dictionary<int, bool> actionVisibilities, 
-            List<int> actionIds, 
+            IEnumerable<int> actionIds, 
             bool visibility)
         {
             foreach (var actionId in actionIds)
@@ -140,9 +140,9 @@
             }
         }
 
-        private Dictionary<string, bool> GetSportBetTypeVisibilities()
+        private Dictionary<string, bool> GetCustStatuses()
         {
-            return new Dictionary<string, bool>
+            var custStatusDict = new Dictionary<string, bool>
             {
                 { "151_31", UserPermission.IsShowRacing_151_31 },
                 { "151_41", UserPermission.IsShowRacing_151_41 },
@@ -151,14 +151,19 @@
                 { "152_51", UserPermission.IsShowRacing_152_51 },
                 { "153_51", UserPermission.IsShowRacing_153_51 },
                 { "161_90", UserPermission.IsShowNumberGroup },
-                { SportId.VirtualSports.ToString(), UserPermission.IsShowVirtualSports },
-                { SportId.GoldDeluxe.ToString(), UserPermission.IsShowGoldDeluxeSettingForCredit },
-                { SportId.ColossusBets.ToString(), UserPermission.IsShowColossusBets },
-                { SportId.Sportsbook2.ToString(), UserPermission.IsShowSportsbook2 },
-                { SportId.CockFighting.ToString(), UserPermission.IsEnableProduct(SportId.CockFighting) },
-                { SportId.AllBet.ToString(), UserPermission.IsEnableProduct(SportId.AllBet) },
-                { SportId.Voidbridge.ToString(), UserPermission.IsEnableProduct(SportId.Voidbridge) }
+                { "disablevirtualsports", UserPermission.IsShowVirtualSports },
+                { "disablegolddeluxe", UserPermission.IsShowGoldDeluxeSettingForCredit },
+                { "disablecolossusbet", UserPermission.IsShowColossusBets },
+                { "44", UserPermission.IsShowSportsbook2 },
             };
+
+            foreach (var statusMapping in AppSettings.StatusMappings)
+            {
+                //// Key: Status Name, Value: Product Id
+                custStatusDict.Add(statusMapping.Key, UserPermission.IsEnableProduct(statusMapping.Value));
+            }
+
+            return custStatusDict;
         }
 
         private bool GetShowOldValueFromCookie()

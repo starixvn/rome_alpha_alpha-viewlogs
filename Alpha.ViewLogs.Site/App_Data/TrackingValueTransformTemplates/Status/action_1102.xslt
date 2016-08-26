@@ -188,7 +188,9 @@
           </td>
         </tr>
       </xsl:if>
-      <xsl:value-of select="xslLogFormat:GetSportWithConditionHtml(@disablevirtualsports, @disablegolddeluxe, @disablecolossusbet, @disable206_1003, @disable211_2401, @disable212_4001)" />
+      <xsl:for-each select="@*">
+        <xsl:value-of select="xslLogFormat:RenderCustStatus(name(), .)"/>
+      </xsl:for-each>
     </table>
   </xsl:template>
 </xsl:stylesheet>

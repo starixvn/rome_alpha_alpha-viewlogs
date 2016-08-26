@@ -4,7 +4,7 @@
 
     public interface LogFormatter
     {
-        void AssignParams(TransformParam transformParam);
+        void Init(TransformParam transformParam);
 
         string FormatIP(string ip);
 
@@ -30,14 +30,6 @@
 
         string FormatUnlimited(int unlimited);
 
-        string GetSportWithConditionHtml(
-            string disableVitualSports,
-            string disableGoldDeluxe,
-            string disableColossusBets,
-            string disableCockfighting,
-            string disableLiveCasinoAllbet,
-            string disableLiveCasinoVoidbridge);
-
         bool IsShowMyanmarOdds();
 
         bool IsVisibleKeno(string hideKeno);
@@ -47,5 +39,7 @@
         bool IsRNGCasino(int sportType);
 
         bool IsGoldDeluxe(int sportType);
+
+        string RenderCustStatus(string name, string value);
     }
 }
