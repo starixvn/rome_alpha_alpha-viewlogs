@@ -2,7 +2,7 @@
 {
     using Fanex.Data.Repository;
 
-    public class GetCustInfoByUsernameCriteria : NonQueryCommand
+    public class GetCustInfoByUsernameCommand : NonQueryCommand
     {
         public string Username { get; set; }
 

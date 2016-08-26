@@ -22,14 +22,15 @@
         public override IEnumerable<Log> GetLogs(ICriteria criteria)
         {
             var logs = new List<Log>();
-            if (criteria == null || !criteria.IsValid())
+            if (criteria == null ||
+                !criteria.IsValid())
             {
                 return logs;
             }
 
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
-                using (var reader = objectDb.ExecuteReader(criteria.GetSpParams()))
+                using (var reader = objectDb.ExecuteReader(criteria))
                 {
                     while (reader.Read())
                     {

@@ -46,7 +46,7 @@
     <Compile Include="Constants\LanguageCode.cs" />
     <Compile Include="Constants\PageAccessType.cs" />
     <Compile Include="Constants\SportId.cs" />
-    <Compile Include="Criteria\GetCustInfoByUsernameCriteria.cs" />
+    <Compile Include="Criteria\GetCustInfoByUsernameCommand.cs" />
     <Compile Include="Criteria\Credit\GetCreditLogsCriteria.cs" />
     <Compile Include="Criteria\Credit\GetTotalCreditLogsCriteria.cs" />
     <Compile Include="Criteria\GetAllLogActionTypeCriteria.cs" />

@@ -15,7 +15,7 @@
 
         public CustomerInfo GetDownlineInfoByUsername(string downlineUsername, int uplineId)
         {
-            var customerInfo = customerDataAccess.GetCustInfoByUsername(new GetCustInfoByUsernameCriteria
+            var customerInfo = customerDataAccess.GetCustInfoByUsername(new GetCustInfoByUsernameCommand
             {
                 Username = downlineUsername,
                 UplineId = uplineId

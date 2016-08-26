@@ -5,6 +5,6 @@
 
     public interface CustomerDataAccess
     {
-        CustomerInfo GetCustInfoByUsername(GetCustInfoByUsernameCriteria criteria);
+        CustomerInfo GetCustInfoByUsername(GetCustInfoByUsernameCommand command);
     }
 }

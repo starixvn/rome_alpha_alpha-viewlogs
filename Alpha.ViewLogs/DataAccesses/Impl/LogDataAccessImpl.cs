@@ -1,8 +1,6 @@
 ﻿namespace Alpha.ViewLogs.DataAccesses.Impl
 {
     using System.Collections.Generic;
-    using Fanex.Common;
-    using Fanex.Data;
     using Fanex.Data.Repository;
     using Models;
 
@@ -17,20 +15,19 @@
 
         public int GetTotalRecordsOfLogs(ICriteria criteria)
         {
-            if (criteria == null || !criteria.IsValid())
+            if (criteria == null ||
+                !criteria.IsValid())
             {
                 return 0;
             }
 
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
-            {
-                return Converter.ToInt(objectDb.ExecuteScalar(criteria.GetSpParams()));
-            }
+            return dynamicRepository.Get<int>(criteria);
         }
 
         public virtual IEnumerable<Log> GetLogs(ICriteria criteria)
         {
-            if (criteria == null || !criteria.IsValid())
+            if (criteria == null ||
+                !criteria.IsValid())
             {
                 return new List<Log>();
             }

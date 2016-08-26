@@ -2,26 +2,30 @@
 {
     using Alpha.ViewLogs.Models;
     using Criteria;
-    using Fanex.Data;
+    using Fanex.Data.Repository;
 
     public class CustomerDataAccessImpl : CustomerDataAccess
     {
-        public CustomerInfo GetCustInfoByUsername(GetCustInfoByUsernameCriteria criteria)
+        private IDynamicRepository dynamicRepository;
+
+        public CustomerDataAccessImpl(IDynamicRepository dynamicRepository)
+        {
+            this.dynamicRepository = dynamicRepository;
+        }
+
+        public CustomerInfo GetCustInfoByUsername(GetCustInfoByUsernameCommand command)
         {
             var customerInfo = new CustomerInfo();
-            if (criteria == null ||
-                !criteria.IsValid())
+            if (command == null ||
+                !command.IsValid())
             {
                 return customerInfo;
             }
 
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
-            {
-                objectDb.ExecuteNonQuery(criteria);
+            dynamicRepository.Execute(command);
 
-                customerInfo.CustId = criteria.CustId;
-                customerInfo.IsSubAcc = criteria.IsSubAcc;
-            }
+            customerInfo.CustId = command.CustId;
+            customerInfo.IsSubAcc = command.IsSubAcc;
 
             return customerInfo;
         }
