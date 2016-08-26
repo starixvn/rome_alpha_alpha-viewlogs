@@ -80,10 +80,6 @@
             {
                 formattedValue = $"<span class=\"valuechanged\" title=\"{oldValue} --> {newValue}\">{newValue}</span>";
             }
-            else if (string.Equals(oldValue, newValue, StringComparison.OrdinalIgnoreCase))
-            {
-                formattedValue = $"<span class=\"valuechanged\">${newValue}</span>";
-            }
             else
             {
                 formattedValue =

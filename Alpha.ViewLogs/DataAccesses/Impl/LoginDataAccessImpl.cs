@@ -22,6 +22,10 @@
         public override IEnumerable<Log> GetLogs(ICriteria criteria)
         {
             var logs = new List<Log>();
+            if (!criteria.IsValid())
+            {
+                return logs;
+            }
 
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {

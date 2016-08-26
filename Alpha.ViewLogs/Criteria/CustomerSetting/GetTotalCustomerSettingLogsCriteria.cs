@@ -19,5 +19,10 @@
         {
             return "Acc_UserLog_RunSPSelTotalRecords";
         }
+
+        public override bool IsValid()
+        {
+            return FromDate <= ToDate && CustId >= 0;
+        }
     }
 }

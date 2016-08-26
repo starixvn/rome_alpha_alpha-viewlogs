@@ -8,5 +8,10 @@
         {
             return "GetIPVN";
         }
+
+        public override bool IsValid()
+        {
+            return true;
+        }
     }
 }

@@ -28,5 +28,10 @@
         {
             return "Acc_UserLog_RunSPSel";
         }
+
+        public override bool IsValid()
+        {
+            return FromDate <= ToDate && CustId >= 0;
+        }
     }
 }

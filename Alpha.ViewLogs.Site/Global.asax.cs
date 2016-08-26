@@ -8,6 +8,8 @@
     using App_Start;
     using AppResources;
     using Auth.Web;
+    using Configurations;
+    using Fanex.Data;
     using ONEbook.UM.Filters;
     using Sunplus.Agent.Utilities;
 
@@ -24,7 +26,14 @@
 
             DependencyConfig.Init();
 
-            Fanex.Data.Configuration.DbSettingProviderManager.Current.Start();
+            DbSettingProviderManager
+                .StartNewSession()
+                .UseDefaultConnectionStringProvider()
+                .UseDefaultDbSettingProvider(
+                    resourcePath: AppSettings.StoreProcedurePath,
+                    ignoreRedundantParameters: false,
+                    enableWatching: true)
+                .Run();
 
             ShareSession.Init();
 

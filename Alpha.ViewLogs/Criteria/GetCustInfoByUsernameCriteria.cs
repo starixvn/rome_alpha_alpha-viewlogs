@@ -2,7 +2,7 @@
 {
     using Fanex.Data.Repository;
 
-    public class GetCustInfoByUsernameCriteria : CriteriaBase
+    public class GetCustInfoByUsernameCriteria : NonQueryCommand
     {
         public string Username { get; set; }
 
@@ -10,11 +10,16 @@
 
         public int CustId { get; set; }
 
-        public int IsSubAcc { get; set; }
+        public bool IsSubAcc { get; set; }
 
         public override string GetSettingKey()
         {
             return "Age_CustomerSelCheckBelonging_ByUsername";
+        }
+
+        public override bool IsValid()
+        {
+            return !string.IsNullOrWhiteSpace(Username);
         }
     }
 }

@@ -17,5 +17,10 @@
         {
             return "Acc_UserLog_CreditSelTotalRecords";
         }
+
+        public override bool IsValid()
+        {
+            return FromDate <= ToDate && CustId >= 0;
+        }
     }
 }

@@ -23,5 +23,10 @@
         {
             return "Acc_UserLog_CreditSel";
         }
+
+        public override bool IsValid()
+        {
+            return FromDate <= ToDate && CustId >= 0;
+        }
     }
 }

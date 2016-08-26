@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Criteria.Login
 {
     using System;
+    using Fanex.Data;
     using Fanex.Data.Repository;
 
     public class GetLoginLogsCriteria : CriteriaBase
@@ -25,6 +26,11 @@
         public override string GetSettingKey()
         {
             return "Acc_UserLog_LoginSel";
+        }
+
+        public override bool IsValid()
+        {
+            return FromDate <= ToDate && CustId >= 0;
         }
     }
 }

@@ -143,6 +143,14 @@
             }
         }
 
+        public static string StoreProcedurePath
+        {
+            get
+            {
+                return GetConfigValue("StoreProcedurePath");
+            }
+        }
+        
         public static string GetConfigValue(string configName)
         {
             return ConfigurationManager.AppSettings[configName];

@@ -8,5 +8,10 @@
         {
             return "Acc_UserLog_LogActionSel";
         }
+
+        public override bool IsValid()
+        {
+            return true;
+        }
     }
 }

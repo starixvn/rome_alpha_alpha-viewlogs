@@ -91,7 +91,7 @@
             container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);
 
             container.RegisterConditional<LogService, CustomerSettingServiceImpl>(
-                Lifestyle.Transient, 
+                Lifestyle.Transient,
                 c => c.Consumer.ImplementationType == typeof(CustomerSettingHandler));
             container.RegisterConditional<LogService, StatusServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(StatusHandler));
             container.RegisterConditional<LogService, CreditServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(CreditHandler));
@@ -103,7 +103,7 @@
             container.Register<IDynamicRepository, DynamicRepository>(Lifestyle.Transient);
             container.Register<CustomerDataAccess, CustomerDataAccessImpl>(Lifestyle.Transient);
             container.RegisterConditional<LogDataAccess, LogDataAccessImpl>(
-                Lifestyle.Transient, 
+                Lifestyle.Transient,
                 c =>
                     c.Consumer.ImplementationType == typeof(CustomerSettingServiceImpl)
                     || c.Consumer.ImplementationType == typeof(StatusServiceImpl)
