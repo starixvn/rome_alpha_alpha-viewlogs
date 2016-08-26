@@ -14,26 +14,25 @@
     using ViewLogs.Constants;
 
     [SessionState(SessionStateBehavior.ReadOnly)]
-    public class BaseController : Controller
+    public abstract class BaseController : Controller
     {
-        protected const string LoginLogsURL = "~/LoginLogs";
         private CultureInfo defaultCulture = CultureInfo.CreateSpecificCulture(LanguageCode.Default);
+
+        public IUserSession UserSession { get; set; }
 
         protected override void OnAuthentication(AuthenticationContext filterContext)
         {
             base.OnAuthentication(filterContext);
 
-            var currentUserSession = UserSession.Current;
-
             if (!filterContext.HttpContext.User.Identity.IsAuthenticated ||
-                currentUserSession.UserId <= 0)
+                UserSession.UserId <= 0)
             {
                 var logInUrl = MicroSites.OldMainPath(FormsAuthentication.LoginUrl);
                 Response.Redirect(logInUrl, true);
                 return;
             }
 
-            if (currentUserSession.IsSubAcc && !currentUserSession.SubPageAccess.ViewLog)
+            if (UserSession.IsSubAcc && !UserSession.SubPageAccess.ViewLog)
             {
                 Response.Redirect(MicroSites.OldMainPath(AppSettings.AccessDeniedPage));
             }
@@ -57,12 +56,12 @@
 
         protected override void Initialize(RequestContext requestContext)
         {
-            var cultureName = UserSession.Current.Language;
+            var cultureName = UserSession.Language;
 
             if (string.IsNullOrWhiteSpace(cultureName))
             {
                 cultureName = LanguageCode.Default;
-                UserSession.Current.Language = cultureName;
+                UserSession.Language = cultureName;
             }
 
             // Modify current thread's cultures

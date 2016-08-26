@@ -69,19 +69,12 @@
             container.Register<CachingManager, CachingManagerImpl>(Lifestyle.Singleton);
 
             //// Transient
-            container.Register(
-                () =>
-                {
-                    if (HttpContext.Current != null
-                        && (HttpContext.Current.Handler is IRequiresSessionState
-                        || HttpContext.Current.Handler is IReadOnlySessionState))
-                    {
-                        return UserSession.Current;
-                    }
+            container.Register(GetUserSession ,Lifestyle.Transient);
 
-                    return new UserSessionBase(string.Empty);
-                },
-                Lifestyle.Transient);
+            container.RegisterInitializer<BaseController>(handler =>
+            {
+                handler.UserSession = GetUserSession();
+            });
 
             container.Register<CustomerService, CustomerServiceImpl>(Lifestyle.Transient);
             container.Register<TransformService, TransformServiceImpl>(Lifestyle.Transient);
@@ -96,6 +89,18 @@
             container.RegisterConditional<LogService, StatusServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(StatusHandler));
             container.RegisterConditional<LogService, CreditServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(CreditHandler));
             container.RegisterConditional<LogService, LoginServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(LoginHandler));
+        }
+
+        private static IUserSession GetUserSession()
+        {
+            if (HttpContext.Current != null
+                && (HttpContext.Current.Handler is IRequiresSessionState
+                || HttpContext.Current.Handler is IReadOnlySessionState))
+            {
+                return UserSession.Current;
+            }
+
+            return new UserSessionBase(string.Empty);
         }
 
         private static void RegisterDataAccesses(Container container)
