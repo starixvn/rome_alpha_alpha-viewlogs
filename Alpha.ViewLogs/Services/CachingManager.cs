@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Services
 {
     using System;
-    using System.Runtime.Caching;
+    using Fanex.Caching;
 
     public interface CachingManager
     {
@@ -11,7 +11,7 @@
 
         void Add<T>(string key, T item, TimeSpan slidingExpiration);
 
-        void Add<T>(string key, T item, CacheItemPolicy policy);
+        void Add<T>(string key, T item, CacheItemOptions cacheItemOptions);
 
         T Get<T>(string key);
 
@@ -21,7 +21,7 @@
 
         T GetOrAdd<T>(string key, Func<T> addItemFactory, TimeSpan slidingExpiration);
 
-        T GetOrAdd<T>(string key, Func<T> addItemFactory, CacheItemPolicy policy);
+        T GetOrAdd<T>(string key, Func<T> addItemFactory, CacheItemOptions cacheItemOptionsy);
 
         void Remove(string key);
     }

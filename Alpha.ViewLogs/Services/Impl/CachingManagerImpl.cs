@@ -1,18 +1,15 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl
 {
     using System;
-    using System.Runtime.Caching;
+    using Fanex.Caching;
 
     /// <summary>
     ///  <see cref="https://github.com/alastairtree/LazyCache"/>
     /// </summary>
     public class CachingManagerImpl : CachingManager
     {
-        private readonly ObjectCache cache;
-
         public CachingManagerImpl()
         {
-            cache = MemoryCache.Default;
             DefaultCacheDuration = 60 * 20;
         }
 
@@ -33,15 +30,15 @@
 
         public void Add<T>(string key, T item, DateTimeOffset absoluteExpiration)
         {
-            Add(key, item, new CacheItemPolicy { AbsoluteExpiration = absoluteExpiration });
+            Add(key, item, new CacheItemOptions { AbsoluteExpiration = absoluteExpiration });
         }
 
         public void Add<T>(string key, T item, TimeSpan slidingExpiration)
         {
-            Add(key, item, new CacheItemPolicy { SlidingExpiration = slidingExpiration });
+            Add(key, item, new CacheItemOptions { SlidingExpiration = slidingExpiration });
         }
 
-        public void Add<T>(string key, T item, CacheItemPolicy policy)
+        public void Add<T>(string key, T item, CacheItemOptions cacheItemOptions)
         {
             if (item == null)
             {
@@ -50,23 +47,18 @@
 
             ValidateKey(key);
 
-            cache.Set(key, item, policy);
+            CacheService.Set(key, item, cacheItemOptions);
         }
 
         public T Get<T>(string key)
         {
             ValidateKey(key);
 
-            var item = cache[key];
+            var item = CacheService.Get<T>(key);
 
             if (item is T)
             {
                 return (T)item;
-            }
-
-            if (item is Lazy<T>)
-            {
-                return ((Lazy<T>)item).Value;
             }
 
             return default(T);
@@ -79,32 +71,30 @@
 
         public T GetOrAdd<T>(string key, Func<T> addItemFactory, DateTimeOffset absoluteExpiration)
         {
-            return GetOrAdd(key, addItemFactory, new CacheItemPolicy { AbsoluteExpiration = absoluteExpiration });
+            return GetOrAdd(key, addItemFactory, new CacheItemOptions { AbsoluteExpiration = absoluteExpiration });
         }
 
         public T GetOrAdd<T>(string key, Func<T> addItemFactory, TimeSpan slidingExpiration)
         {
-            return GetOrAdd(key, addItemFactory, new CacheItemPolicy { SlidingExpiration = slidingExpiration });
+            return GetOrAdd(key, addItemFactory, new CacheItemOptions { SlidingExpiration = slidingExpiration });
         }
 
-        public T GetOrAdd<T>(string key, Func<T> addItemFactory, CacheItemPolicy policy)
+        public T GetOrAdd<T>(string key, Func<T> addItemFactory, CacheItemOptions cacheItemOptions)
         {
             ValidateKey(key);
 
-            var newLazyCacheItem = new Lazy<T>(addItemFactory);
-
-            var existingCacheItem = cache.AddOrGetExisting(key, newLazyCacheItem, policy);
+            var existingCacheItem = CacheService.GetOrSet<T>(key, addItemFactory, cacheItemOptions);
 
             if (existingCacheItem != null)
             {
                 if (existingCacheItem is T)
                 {
-                    return (T)existingCacheItem;
+                    return existingCacheItem;
                 }
 
-                if (existingCacheItem is Lazy<T>)
+                if (existingCacheItem is Func<T>)
                 {
-                    return ((Lazy<T>)existingCacheItem).Value;
+                    return addItemFactory();
                 }
 
                 return default(T);
@@ -112,12 +102,12 @@
 
             try
             {
-                return newLazyCacheItem.Value;
+                return addItemFactory();
             }
             catch
             {
                 // addItemFactory errored so do not cache the exception
-                cache.Remove(key);
+                CacheService.Remove(key);
                 throw;
             }
         }
@@ -125,7 +115,7 @@
         public void Remove(string key)
         {
             ValidateKey(key);
-            cache.Remove(key);
+            CacheService.Remove(key);
         }
 
         private void ValidateKey(string key)
