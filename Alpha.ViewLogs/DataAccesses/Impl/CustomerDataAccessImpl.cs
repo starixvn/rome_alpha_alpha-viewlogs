@@ -9,7 +9,8 @@
         public CustomerInfo GetCustInfoByUsername(GetCustInfoByUsernameCriteria criteria)
         {
             var customerInfo = new CustomerInfo();
-            if (!criteria.IsValid())
+            if (criteria == null ||
+                !criteria.IsValid())
             {
                 return customerInfo;
             }

@@ -108,13 +108,17 @@
         }
 
         [Test]
-        public void GetPagingLogs_NullLogParam_ThrowNullReferenceException()
+        public void GetPagingLogs_NullLogParam_ReturnsEmptyPagingLogs()
         {
             // Arrange
             LogParam nullLogParam = null;
+            var emptyPagingLogs = new PagingLogs<Log>();
 
-            // Action & Assert
-            Assert.Throws<NullReferenceException>(new TestDelegate(() => baseService.GetPagingLogs(nullLogParam)));
+            // Action
+            var pagingLogs = baseService.GetPagingLogs(nullLogParam);
+
+            // Assert
+            Assert.AreEqual(emptyPagingLogs, pagingLogs);
         }
 
         [Test]

@@ -19,8 +19,7 @@
         private readonly CachingManager cacheManager;
         private readonly IDynamicRepository dynamicRepository;
         private readonly CustomerService customerService;
-
-        protected readonly LogDataAccess LogDataAccess;
+        private readonly LogDataAccess logDataAccess;
 
         protected BaseService(
             CachingManager cacheManager,
@@ -31,7 +30,15 @@
             this.cacheManager = cacheManager;
             this.dynamicRepository = dynamicRepository;
             this.customerService = customerService;
-            this.LogDataAccess = logDataAccess;
+            this.logDataAccess = logDataAccess;
+        }
+
+        protected LogDataAccess LogDataAccess
+        {
+            get
+            {
+                return logDataAccess;
+            }
         }
 
         protected abstract ICriteria CreateGetLogsCriteria(LogParam logParam);
@@ -87,13 +94,13 @@
         {
             var logActionDictionary = cacheManager.Get<Dictionary<int, LogAction>>(LogActionCacheKey);
 
-            if (logActionDictionary == null 
+            if (logActionDictionary == null
                 || !logActionDictionary.Any())
             {
                 logActionDictionary = dynamicRepository
                     .Fetch<LogAction>(new GetLogActionsCriteria())
                     .ToDictionary(logAction => logAction.Id);
-                
+
                 cacheManager.Add(LogActionCacheKey, logActionDictionary, TimeSpan.FromHours(OneHour));
             }
 
@@ -103,6 +110,10 @@
         public PagingLogs<Log> GetPagingLogs(LogParam logParam)
         {
             var pagingLogs = new PagingLogs<Log>();
+            if (logParam == null)
+            {
+                return pagingLogs;
+            }
 
             var downlineInfo = customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId);
             //// If search username is not belong to searcher, then return

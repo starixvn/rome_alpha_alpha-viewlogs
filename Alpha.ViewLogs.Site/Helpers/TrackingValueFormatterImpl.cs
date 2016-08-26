@@ -12,7 +12,8 @@
     {
         public string GetFormattedDiffTrackingValue(Log log, bool isShowOldValue)
         {
-            if (string.IsNullOrWhiteSpace(log.TrackingValue))
+            if (log == null ||
+                string.IsNullOrWhiteSpace(log.TrackingValue))
             {
                 return string.Empty;
             }

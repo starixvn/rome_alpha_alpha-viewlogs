@@ -19,6 +19,11 @@
 
         protected override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
+            if (logParam == null)
+            {
+                return null;
+            }
+
             return new GetCustomerSettingLogsCriteria
             {
                 CustId = logParam.CustId,
@@ -33,6 +38,11 @@
 
         protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
+            if (logParam == null)
+            {
+                return null;
+            }
+
             return new GetTotalCustomerSettingLogsCriteria
             {
                 CustId = logParam.CustId,

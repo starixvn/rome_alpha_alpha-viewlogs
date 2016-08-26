@@ -1,5 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Helpers
 {
+    using System;
+
     public static class StringHelper
     {
         /// <summary>
@@ -31,7 +33,7 @@
             //    has real part (=> not accept: .xx) and
             //    (not start with 0/real part is "0")
             var isNumber = !string.IsNullOrWhiteSpace(realPart) &&
-                (!value.StartsWith("0") || string.Equals("0", realPart));
+                (!value.StartsWith("0", StringComparison.OrdinalIgnoreCase) || string.Equals("0", realPart));
             if (isNumber)
             {
                 return result;

@@ -7,6 +7,11 @@
     {
         public LogActionTypeViewModel(LogActionType logActionType, string language)
         {
+            if (logActionType == null)
+            {
+                return;
+            }
+
             this.Id = logActionType.Id;
             this.Name = GetName(logActionType, language);
         }

@@ -17,7 +17,7 @@
 
         public int GetTotalRecordsOfLogs(ICriteria criteria)
         {
-            if (!criteria.IsValid())
+            if (criteria == null || !criteria.IsValid())
             {
                 return 0;
             }
@@ -30,7 +30,7 @@
 
         public virtual IEnumerable<Log> GetLogs(ICriteria criteria)
         {
-            if (!criteria.IsValid())
+            if (criteria == null || !criteria.IsValid())
             {
                 return new List<Log>();
             }

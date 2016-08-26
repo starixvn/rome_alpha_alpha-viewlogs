@@ -17,9 +17,9 @@
             CustomerService customerService,
             LogDataAccess logDataAccess) :
             base(
-                cacheManager, 
-                dynamicRepository, 
-                customerService, 
+                cacheManager,
+                dynamicRepository,
+                customerService,
                 logDataAccess)
         {
         }
@@ -33,6 +33,11 @@
 
         protected override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
+            if (logParam == null)
+            {
+                return null;
+            }
+
             return new GetLoginLogsCriteria
             {
                 CustId = logParam.CustId,
@@ -47,6 +52,11 @@
 
         protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
+            if (logParam == null)
+            {
+                return null;
+            }
+
             return new GetTotalLoginLogsCriteria
             {
                 CustId = logParam.CustId,

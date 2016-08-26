@@ -27,7 +27,8 @@
             int logActionId,
             TransformParam transformParam)
         {
-            if (string.IsNullOrWhiteSpace(trackingValue)
+            if (transformParam == null ||
+                string.IsNullOrWhiteSpace(trackingValue)
                 || logActionId < 0)
             {
                 return string.Empty;

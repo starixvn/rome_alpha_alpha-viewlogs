@@ -22,6 +22,11 @@
 
         protected override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
+            if (logParam == null)
+            {
+                return null;
+            }
+
             return new GetStatusLogsCriteria
             {
                 //// Just get status from action id 1100 => 1199, because it uses same SP with customer setting log
@@ -39,6 +44,11 @@
 
         protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
+            if (logParam == null)
+            {
+                return null;
+            }
+
             return new GetTotalStatusLogsCriteria
             {
                 //// Just get status from action id 1100 => 1199, because it uses same SP with customer setting log

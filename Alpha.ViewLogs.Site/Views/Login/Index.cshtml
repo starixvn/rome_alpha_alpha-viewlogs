@@ -1,4 +1,5 @@
 ﻿@using Alpha.ViewLogs.Site.ViewModels.Login;
+@using Alpha.ViewLogs.Site.Helpers.StaticResources;
 
 @model IndexViewModel
 @{
@@ -79,7 +80,7 @@
 </div>
 @section Scripts
 {
-    @StaticResources.AssetScripts.Render("/bundles/site-viewlogs/default")
+    @AssetScripts.Render("/bundles/site-viewlogs/default")
     <script type="text/javascript">
         var viewModel = {
             labelFrom: '@Resources.From',
@@ -104,5 +105,5 @@
         };
 
     </script>
-    <script type="text/javascript" src="@StaticResources.ViewLogsSiteScriptUrl("~/assets/bundles/login")"></script>
+    <script type="text/javascript" src="@ViewLogsScripts.GetAbsolutePath("~/assets/bundles/login")"></script>
 }

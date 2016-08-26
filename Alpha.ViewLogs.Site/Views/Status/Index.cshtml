@@ -1,4 +1,4 @@
-﻿@using Alpha.ViewLogs.Site.Helpers;
+﻿@using Alpha.ViewLogs.Site.Helpers.StaticResources;
 
 @model LogViewModel
 @{
@@ -69,7 +69,7 @@
 </div>
 @section Scripts
 {
-    @StaticResources.AssetScripts.Render("/bundles/site-viewlogs/default")
+    @AssetScripts.Render("/bundles/site-viewlogs/default")
     <script type="text/javascript">
         var viewModel = {
             labelFrom: '@Resources.From',
@@ -94,5 +94,5 @@
         };
 
     </script>
-    <script type="text/javascript" src="@StaticResources.ViewLogsSiteScriptUrl(" ~/assets/bundles/status")"></script>
+    <script type="text/javascript" src="@ViewLogsScripts.GetAbsolutePath("~/assets/bundles/status")">></script>
 }

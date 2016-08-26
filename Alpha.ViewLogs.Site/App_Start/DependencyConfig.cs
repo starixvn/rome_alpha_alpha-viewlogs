@@ -69,7 +69,7 @@
             container.Register<CachingManager, CachingManagerImpl>(Lifestyle.Singleton);
 
             //// Transient
-            container.Register(GetUserSession ,Lifestyle.Transient);
+            container.Register(GetUserSession, Lifestyle.Transient);
 
             container.RegisterInitializer<BaseController>(handler =>
             {

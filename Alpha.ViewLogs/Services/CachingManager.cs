@@ -21,7 +21,7 @@
 
         T GetOrAdd<T>(string key, Func<T> addItemFactory, TimeSpan slidingExpiration);
 
-        T GetOrAdd<T>(string key, Func<T> addItemFactory, CacheItemOptions cacheItemOptionsy);
+        T GetOrAdd<T>(string key, Func<T> addItemFactory, CacheItemOptions cacheItemOptions);
 
         void Remove(string key);
     }

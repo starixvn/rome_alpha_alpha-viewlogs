@@ -230,7 +230,8 @@
 
         public string RenderCustStatus(string name, string value)
         {
-            if (custStatuses.ContainsKey(name.ToLower())
+            if (!string.IsNullOrWhiteSpace(name) &&
+                custStatuses.ContainsKey(name.ToLower())
                 && custStatuses[name.ToLower()])
             {
                 return string.Format(StatusHtmlFormat, GetLogResource(name), value);

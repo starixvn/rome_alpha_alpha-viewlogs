@@ -11,6 +11,11 @@
     {
         public LogViewModel(LogParam logParam, int totalRecords)
         {
+            if (logParam == null)
+            {
+                return;
+            }
+
             var dateInRange = logParam.FromDate < logParam.MinReportDate
                 ? logParam.MinReportDate
                 : logParam.FromDate;
