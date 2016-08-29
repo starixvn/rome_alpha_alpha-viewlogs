@@ -16,11 +16,6 @@
         public CustomerInfo GetCustInfoByUsername(GetCustInfoByUsernameCommand command)
         {
             var customerInfo = new CustomerInfo();
-            if (command == null ||
-                !command.IsValid())
-            {
-                return customerInfo;
-            }
 
             dynamicRepository.Execute(command);
 

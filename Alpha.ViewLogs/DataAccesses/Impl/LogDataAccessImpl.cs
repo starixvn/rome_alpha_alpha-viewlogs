@@ -15,23 +15,11 @@
 
         public int GetTotalRecordsOfLogs(ICriteria criteria)
         {
-            if (criteria == null ||
-                !criteria.IsValid())
-            {
-                return 0;
-            }
-
-            return dynamicRepository.Get<int>(criteria);
+            return dynamicRepository.Count(criteria);
         }
 
         public virtual IEnumerable<Log> GetLogs(ICriteria criteria)
         {
-            if (criteria == null ||
-                !criteria.IsValid())
-            {
-                return new List<Log>();
-            }
-
             return dynamicRepository.Fetch<Log>(criteria);
         }
     }
