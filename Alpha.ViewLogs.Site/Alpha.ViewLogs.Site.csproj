@@ -446,7 +446,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTaking\action_401.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTaking\action_402.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTaking\action_403.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTaking\action_404.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTaking\action_404.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTaking\action_405.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTaking\action_406.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTaking\action_407.xslt" />
@@ -573,7 +575,9 @@
     <None Include="Web.AppSettings.config" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Status\Index.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <TypeScriptCompile Include="assets\scripts\core.ts" />
     <TypeScriptCompile Include="assets\scripts\status\index-controller.ts" />
     <TypeScriptCompile Include="assets\scripts\status\index-view.ts" />
@@ -583,7 +587,6 @@
     <Compile Include="App_Start\DependencyConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Configurations\AppSettings.cs" />
-    <Compile Include="Constants\Pager.cs" />
     <Compile Include="Constants\TabType.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CreditController.cs" />

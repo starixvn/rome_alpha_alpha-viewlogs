@@ -12,11 +12,10 @@
         private const int ActionIdTo = 1199;
 
         public StatusServiceImpl(
-            CachingManager cacheManager,
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
             LogDataAccess baseDataAccess) :
-            base(cacheManager, dynamicRepository, customerService, baseDataAccess)
+            base(dynamicRepository, customerService, baseDataAccess)
         {
         }
 

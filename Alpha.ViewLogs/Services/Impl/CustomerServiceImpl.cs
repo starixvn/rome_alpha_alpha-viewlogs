@@ -1,25 +1,33 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl
 {
     using Criteria;
-    using DataAccesses;
+    using Fanex.Data.Repository;
     using Models;
 
     public class CustomerServiceImpl : CustomerService
     {
-        private readonly CustomerDataAccess customerDataAccess;
+        private IDynamicRepository dynamicRepository;
 
-        public CustomerServiceImpl(CustomerDataAccess customerDataAccess)
+        public CustomerServiceImpl(IDynamicRepository dynamicRepository)
         {
-            this.customerDataAccess = customerDataAccess;
+            this.dynamicRepository = dynamicRepository;
         }
 
         public CustomerInfo GetDownlineInfoByUsername(string downlineUsername, int uplineId)
         {
-            var customerInfo = customerDataAccess.GetCustInfoByUsername(new GetCustInfoByUsernameCommand
+            var criteria = new GetCustInfoByUsernameCommand
             {
                 Username = downlineUsername,
                 UplineId = uplineId
-            });
+            };
+
+            dynamicRepository.Execute(criteria);
+
+            var customerInfo = new CustomerInfo
+            {
+                CustId = criteria.CustId,
+                IsSubAcc = criteria.IsSubAcc
+            };
 
             return customerInfo;
         }

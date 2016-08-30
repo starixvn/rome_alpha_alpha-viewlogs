@@ -13,7 +13,7 @@
         public const string ViewReports = "[E]";
         public const string ViewTotalBets = "[D]";
 
-        private static readonly IDictionary<string, string> pemissionAbbriations = new Dictionary<string, string>()
+        private static readonly IDictionary<string, string> PemissionAbbs = new Dictionary<string, string>()
         {
             { CreateAccount + UpdateAccount + ViewMemberInfo, CreateAccount },
             { CreateAccount + UpdateAccount, CreateAccount },
@@ -24,7 +24,7 @@
         {
             get
             {
-                return pemissionAbbriations;
+                return PemissionAbbs;
             }
         }
 

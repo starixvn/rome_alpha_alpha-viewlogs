@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using Criteria;
     using DataAccesses;
+    using Fanex.Caching;
     using Fanex.Data.Repository;
     using Models;
     using NSubstitute;
@@ -18,19 +19,22 @@
 
         private CustomerService customerService;
         private LogDataAccess baseDataAccess;
-        private CachingManager cacheManager;
         private IDynamicRepository dynamicRepository;
         private CustomerSettingServiceImpl customerSettingLog;
+
+        private Cache cacheForTesting;
 
         [SetUp]
         public void SetUp()
         {
+            cacheForTesting = Substitute.For<Cache>();
+            CacheService.SwitchCacheStorage(cacheForTesting);
+
             customerService = Substitute.For<CustomerService>();
             baseDataAccess = Substitute.For<LogDataAccess>();
-            cacheManager = Substitute.For<CachingManager>();
             dynamicRepository = Substitute.For<IDynamicRepository>();
 
-            customerSettingLog = new CustomerSettingServiceImpl(cacheManager, dynamicRepository, customerService, baseDataAccess);
+            customerSettingLog = new CustomerSettingServiceImpl(dynamicRepository, customerService, baseDataAccess);
         }
 
         [Test]
@@ -38,7 +42,7 @@
         {
             // Arrange
             List<LogActionType> emptyActionTypeList = null;
-            cacheManager.Get<List<LogActionType>>(CacheKeyLogActionTypes).Returns(emptyActionTypeList);
+            cacheForTesting.TryGet(CacheKeyLogActionTypes, out emptyActionTypeList).Returns(true);
 
             var validActionTypeList = GetValidActionTypeList();
             dynamicRepository.Fetch<LogActionType>(Arg.Any<GetAllLogActionTypeCriteria>()).Returns(validActionTypeList);
@@ -55,7 +59,7 @@
         {
             // Arrange
             List<LogActionType> emptyActionTypeList = null;
-            cacheManager.Get<List<LogActionType>>(CacheKeyLogActionTypes).Returns(emptyActionTypeList);
+            cacheForTesting.TryGet(CacheKeyLogActionTypes, out emptyActionTypeList).Returns(true);
 
             var validActionTypeList = GetValidActionTypeList();
             dynamicRepository.Fetch<LogActionType>(Arg.Any<GetAllLogActionTypeCriteria>()).Returns(validActionTypeList);
@@ -64,7 +68,7 @@
             var actualActionTypes = customerSettingLog.GetLogActionTypes();
 
             // Assert
-            cacheManager.Received().Add(CacheKeyLogActionTypes, Arg.Any<List<LogActionType>>());
+            cacheForTesting.Received().Set(CacheKeyLogActionTypes, Arg.Any<List<LogActionType>>(), Arg.Any<CacheItemOptions>());
         }
 
         private List<LogActionType> GetValidActionTypeList()

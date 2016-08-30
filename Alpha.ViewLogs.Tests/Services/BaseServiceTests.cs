@@ -1,9 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
-    using System;
     using System.Collections.Generic;
+    using Constants;
     using Criteria;
     using DataAccesses;
+    using Fanex.Caching;
     using Fanex.Data.Repository;
     using Models;
     using NSubstitute;
@@ -19,30 +20,36 @@
 
         private BaseServiceForTesting baseService;
 
-        private CachingManager cacheManager;
         private IDynamicRepository dynamicRepository;
         private CustomerService customerService;
         private LogDataAccess logDataAccess;
 
+        private Cache cacheForTesting;
+
         [SetUp]
         public void SetUp()
         {
-            cacheManager = Substitute.For<CachingManager>();
+            cacheForTesting = Substitute.For<Cache>();
+
             dynamicRepository = Substitute.For<IDynamicRepository>();
             customerService = Substitute.For<CustomerService>();
             logDataAccess = Substitute.For<LogDataAccess>();
 
-            baseService = new BaseServiceForTesting(cacheManager, dynamicRepository, customerService, logDataAccess);
+            baseService = new BaseServiceForTesting(dynamicRepository, customerService, logDataAccess);
+            CacheService.SwitchCacheStorage(cacheForTesting);
         }
 
         [Test]
         public void GetLogActionTypes_NoCondition_CallCacheToGetData()
         {
+            // Arrange
+            IEnumerable<LogActionType> cacheData;
+
             // Action
             baseService.GetLogActionTypes();
 
             // Assert
-            cacheManager.Received().Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
+            cacheForTesting.Received().TryGet(LogActionTypesCacheKey, out cacheData);
         }
 
         [Test]
@@ -50,7 +57,7 @@
         {
             // Arrange
             var logActionTypesInCache = new List<LogActionType>();
-            cacheManager.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey).Returns(logActionTypesInCache);
+            cacheForTesting.TryGet(LogActionTypesCacheKey, out logActionTypesInCache).Returns(true);
 
             // Action
             var actualLogActionTypes = baseService.GetLogActionTypes();
@@ -64,7 +71,7 @@
         {
             // Arrange
             List<LogActionType> logActionTypesInCache = null;
-            cacheManager.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey).Returns(logActionTypesInCache);
+            cacheForTesting.TryGet(LogActionTypesCacheKey, out logActionTypesInCache).Returns(false);
 
             // Action
             baseService.GetLogActionTypes();
@@ -78,7 +85,7 @@
         {
             // Arrange
             List<LogActionType> logActionTypesInCache = null;
-            cacheManager.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey).Returns(logActionTypesInCache);
+            cacheForTesting.TryGet(LogActionTypesCacheKey, out logActionTypesInCache).Returns(false);
 
             var expectedLogActionTypes = new List<LogActionType>();
             dynamicRepository.Fetch<LogActionType>(Arg.Any<GetAllLogActionTypeCriteria>()).Returns(expectedLogActionTypes);
@@ -87,7 +94,7 @@
             var actualActionTypes = baseService.GetLogActionTypes();
 
             // Assert
-            cacheManager.Received().Add(LogActionTypesCacheKey, expectedLogActionTypes);
+            cacheForTesting.Received().Set(LogActionTypesCacheKey, expectedLogActionTypes, Arg.Any<CacheItemOptions>());
         }
 
         [Test]
@@ -95,7 +102,7 @@
         {
             // Arrange
             List<LogActionType> logActionTypesInCache = null;
-            cacheManager.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey).Returns(logActionTypesInCache);
+            cacheForTesting.TryGet(LogActionTypesCacheKey, out logActionTypesInCache).Returns(false);
 
             var expectedLogActionTypes = new List<LogActionType>();
             dynamicRepository.Fetch<LogActionType>(Arg.Any<GetAllLogActionTypeCriteria>()).Returns(expectedLogActionTypes);
@@ -115,10 +122,10 @@
             var emptyPagingLogs = new PagingLogs<Log>();
 
             // Action
-            var pagingLogs = baseService.GetPagingLogs(nullLogParam);
+            var actualPagingLogs = baseService.GetPagingLogs(nullLogParam);
 
             // Assert
-            Assert.AreEqual(emptyPagingLogs, pagingLogs);
+            Assert.AreEqual(emptyPagingLogs, actualPagingLogs);
         }
 
         [Test]
@@ -134,6 +141,79 @@
 
             // Assert
             customerService.Received().GetDownlineInfoByUsername(logParam.Username, logParam.UplineId);
+        }
+
+        [Test]
+        public void GetPagingLogs_InvalidDownline_ReturnsEmptyPagingLogs()
+        {
+            // Arrange
+            LogParam logParam = new LogParam();
+
+            var invalidDownlineInfo = new CustomerInfo
+            {
+                CustId = 0
+            };
+
+            customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(invalidDownlineInfo);
+
+            var emptyPagingLogs = new PagingLogs<Log>();
+
+            // Action
+            var actualPagingLogs = baseService.GetPagingLogs(logParam);
+
+            // Assert
+            Assert.AreEqual(emptyPagingLogs, actualPagingLogs);
+        }
+
+        [Test]
+        public void GetPagingLogs_ValidDownline_ReturnsDataFromDataAccess()
+        {
+            // Arrange
+            LogParam logParam = new LogParam
+            {
+                Language = LanguageCode.English
+            };
+
+            var validDownlineInfo = new CustomerInfo
+            {
+                CustId = 1
+            };
+
+            customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(validDownlineInfo);
+
+            var logs = new List<Log>
+            {
+                new Log { ActionId = 1 }
+            };
+
+            dynamicRepository.Fetch<Log>(Arg.Any<ICriteria>()).Returns(logs);
+
+            Dictionary<int, LogAction> logActions;
+
+            cacheForTesting.TryGet(LogActionCacheKey, out logActions).Returns(
+                x =>
+                {
+                    x[1] = new Dictionary<int, LogAction>()
+                    {
+                        { 1, new LogAction() { EnglishName = "Action 1" } }
+                    };
+
+                    return true;
+                });
+
+            var expectedPagingLogs = new PagingLogs<Log>
+            {
+                Logs = new List<Log>
+                {
+                    new Log { ActionId = 1, ActionName = "Action 1" }
+                }
+            };
+
+            // Action
+            var actualPagingLogs = baseService.GetPagingLogs(logParam);
+
+            // Assert
+            Assert.AreEqual(expectedPagingLogs, actualPagingLogs);
         }
     }
 }

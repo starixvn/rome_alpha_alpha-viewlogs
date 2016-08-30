@@ -2,9 +2,9 @@
 {
     using System;
     using Alpha.ViewLogs.Params;
-    using Constants;
     using Fanex.Common;
     using Requests;
+    using ViewLogs.Constants;
 
     public class BaseHandler
     {
@@ -29,7 +29,7 @@
                 IsInternal = logQuery.IsInternal,
 
                 PageSize = string.IsNullOrWhiteSpace(logQuery.PageSize)
-                ? Pager.DefaultPageSize
+                ? DefaultVariables.PageSize
                 : Converter.ToInt(logQuery.PageSize),
 
                 PageIndex = string.IsNullOrWhiteSpace(logQuery.PageIndex)

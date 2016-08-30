@@ -4,6 +4,8 @@
     using System.Text;
     using System.Xml.XPath;
     using System.Xml.Xsl;
+    using Constants;
+    using Fanex.Caching;
     using Params;
 
     public class TransformServiceImpl : TransformService
@@ -11,14 +13,10 @@
         private const string TransformObjectCacheKey = "Alpha.ViewLogs.TransformObject_{0}";
         private const int OneHour = 1;
 
-        private readonly CachingManager cacheManager;
         private readonly LogFormatter logFormatter;
 
-        public TransformServiceImpl(
-            CachingManager cacheManager,
-            LogFormatter logFormatter)
+        public TransformServiceImpl(LogFormatter logFormatter)
         {
-            this.cacheManager = cacheManager;
             this.logFormatter = logFormatter;
         }
 
@@ -62,7 +60,7 @@
         private XslCompiledTransform GetCompiledTransformTemplate(int actionId, string trackingValueTransformTemplatePath)
         {
             var cacheKey = string.Format(TransformObjectCacheKey, actionId);
-            var cachedCompiledTransform = cacheManager.Get<XslCompiledTransform>(cacheKey);
+            var cachedCompiledTransform = CacheService.Get<XslCompiledTransform>(cacheKey);
 
             if (cachedCompiledTransform != null)
             {
@@ -83,7 +81,7 @@
                 return null;
             }
 
-            cacheManager.Add(cacheKey, compiledTransform);
+            CacheService.Set(cacheKey, compiledTransform, DefaultVariables.CacheItemOptions);
 
             return compiledTransform;
         }

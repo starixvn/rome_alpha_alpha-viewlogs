@@ -51,7 +51,7 @@
                 Username = message.Username,
                 IsInternal = message.IsInternal,
 
-                PageSize = string.IsNullOrWhiteSpace(message.PageSize) ? Pager.DefaultPageSize : Converter.ToInt(message.PageSize),
+                PageSize = string.IsNullOrWhiteSpace(message.PageSize) ? DefaultVariables.PageSize : Converter.ToInt(message.PageSize),
                 PageIndex = string.IsNullOrWhiteSpace(message.PageIndex) ? 0 : Converter.ToInt(message.PageIndex),
 
                 Language = message.Language,

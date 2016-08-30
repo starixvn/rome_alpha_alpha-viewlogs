@@ -88,6 +88,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consts\LanguageCode.cs" />
     <Compile Include="Helpers\DateTimeHelperTests.cs" />
     <Compile Include="Helpers\StringHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -9,11 +9,10 @@
     public class CreditServiceImpl : BaseService, LogService
     {
         public CreditServiceImpl(
-             CachingManager cacheManager,
              IDynamicRepository dynamicRepository,
              CustomerService customerService,
              LogDataAccess baseDataAccess) :
-            base(cacheManager, dynamicRepository, customerService, baseDataAccess)
+            base(dynamicRepository, customerService, baseDataAccess)
         {
         }
 

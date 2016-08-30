@@ -5,7 +5,9 @@
     using System.Linq;
     using System.Net;
     using System.Text.RegularExpressions;
+    using Constants;
     using Criteria;
+    using Fanex.Caching;
     using Fanex.Data.Repository;
     using Models;
     using Sunplus.Agent.Model.Entities;
@@ -16,16 +18,11 @@
         private const string IPValidateRegex = @"(?<First>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Second>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Third>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Fourth>2[0-4]\d|25[0-5]|[01]?\d\d?)";
         private const int OneHour = 1;
 
-        private readonly CachingManager cacheManager;
         private readonly IUserSession userSession;
         private readonly IDynamicRepository dynamicRepository;
 
-        public IPServiceImpl(
-            CachingManager cacheManager,
-            IUserSession userSession,
-            IDynamicRepository dynamicRepository)
+        public IPServiceImpl(IUserSession userSession, IDynamicRepository dynamicRepository)
         {
-            this.cacheManager = cacheManager;
             this.userSession = userSession;
             this.dynamicRepository = dynamicRepository;
         }
@@ -122,7 +119,7 @@
 
         private List<IPRange> GetIPVNList()
         {
-            var listIPVN = cacheManager.Get<List<IPRange>>(VietnamIPListCacheKey);
+            var listIPVN = CacheService.Get<List<IPRange>>(VietnamIPListCacheKey);
 
             if (listIPVN != null
                 && listIPVN.Any())
@@ -131,7 +128,7 @@
             }
 
             listIPVN = dynamicRepository.Fetch<IPRange>(new GetIPVNCriteria()).ToList();
-            cacheManager.Add(VietnamIPListCacheKey, listIPVN, TimeSpan.FromHours(OneHour));
+            CacheService.Set(VietnamIPListCacheKey, listIPVN, DefaultVariables.CacheItemOptions);
 
             return listIPVN;
         }

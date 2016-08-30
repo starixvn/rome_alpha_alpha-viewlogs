@@ -12,15 +12,10 @@
     public class LoginServiceImpl : BaseService, LogService
     {
         public LoginServiceImpl(
-            CachingManager cacheManager,
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
             LogDataAccess logDataAccess) :
-            base(
-                cacheManager,
-                dynamicRepository,
-                customerService,
-                logDataAccess)
+            base(dynamicRepository, customerService, logDataAccess)
         {
         }
 

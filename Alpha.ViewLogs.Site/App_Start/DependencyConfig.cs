@@ -65,9 +65,6 @@
 
         private static void RegisterServices(Container container)
         {
-            //// Singleton
-            container.Register<CachingManager, CachingManagerImpl>(Lifestyle.Singleton);
-
             //// Transient
             container.Register(GetUserSession, Lifestyle.Transient);
 
@@ -106,7 +103,6 @@
         private static void RegisterDataAccesses(Container container)
         {
             container.Register<IDynamicRepository, DynamicRepository>(Lifestyle.Transient);
-            container.Register<CustomerDataAccess, CustomerDataAccessImpl>(Lifestyle.Transient);
             container.RegisterConditional<LogDataAccess, LogDataAccessImpl>(
                 Lifestyle.Transient,
                 c =>

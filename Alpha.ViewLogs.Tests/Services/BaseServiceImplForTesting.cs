@@ -10,22 +10,21 @@
     public class BaseServiceForTesting : BaseService
     {
         public BaseServiceForTesting(
-            CachingManager cacheManager,
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
             LogDataAccess logDataAccess) :
-            base(cacheManager, dynamicRepository, customerService, logDataAccess)
+            base(dynamicRepository, customerService, logDataAccess)
         {
         }
 
         protected override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }

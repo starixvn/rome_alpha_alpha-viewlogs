@@ -6,6 +6,7 @@
     using Constants;
     using Criteria;
     using DataAccesses;
+    using Fanex.Caching;
     using Fanex.Data.Repository;
     using Models;
     using Params;
@@ -16,18 +17,12 @@
         private const string LogActionTypesCacheKey = "Alpha.ViewLogs.CustomerSetting.LogActionTypes";
         private const int OneHour = 1;
 
-        private readonly CachingManager cacheManager;
         private readonly IDynamicRepository dynamicRepository;
         private readonly CustomerService customerService;
         private readonly LogDataAccess logDataAccess;
 
-        protected BaseService(
-            CachingManager cacheManager,
-            IDynamicRepository dynamicRepository,
-            CustomerService customerService,
-            LogDataAccess logDataAccess)
+        protected BaseService(IDynamicRepository dynamicRepository, CustomerService customerService, LogDataAccess logDataAccess)
         {
-            this.cacheManager = cacheManager;
             this.dynamicRepository = dynamicRepository;
             this.customerService = customerService;
             this.logDataAccess = logDataAccess;
@@ -75,7 +70,7 @@
 
         public IEnumerable<LogActionType> GetLogActionTypes()
         {
-            var logActionTypes = cacheManager.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
+            var logActionTypes = CacheService.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
 
             if (logActionTypes != null
                 && logActionTypes.Any())
@@ -85,14 +80,14 @@
 
             logActionTypes = dynamicRepository.Fetch<LogActionType>(new GetAllLogActionTypeCriteria());
 
-            cacheManager.Add(LogActionTypesCacheKey, logActionTypes);
+            CacheService.Set(LogActionTypesCacheKey, logActionTypes, new CacheItemOptions { SlidingExpiration = TimeSpan.FromHours(OneHour) });
 
             return logActionTypes;
         }
 
         private LogAction GetLogAction(int actionId)
         {
-            var logActionDictionary = cacheManager.Get<Dictionary<int, LogAction>>(LogActionCacheKey);
+            var logActionDictionary = CacheService.Get<Dictionary<int, LogAction>>(LogActionCacheKey);
 
             if (logActionDictionary == null
                 || !logActionDictionary.Any())
@@ -101,7 +96,7 @@
                     .Fetch<LogAction>(new GetLogActionsCriteria())
                     .ToDictionary(logAction => logAction.Id);
 
-                cacheManager.Add(LogActionCacheKey, logActionDictionary, TimeSpan.FromHours(OneHour));
+                CacheService.Set(LogActionCacheKey, logActionDictionary, DefaultVariables.CacheItemOptions);
             }
 
             return logActionDictionary[actionId];

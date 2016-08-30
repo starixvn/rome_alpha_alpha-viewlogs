@@ -4,14 +4,14 @@
     using System.Linq;
     using System.Text;
 
-    public class PagingLogs<Log>
+    public class PagingLogs<LogType> where LogType : Log
     {
         public PagingLogs()
         {
-            Logs = Enumerable.Empty<Log>();
+            Logs = Enumerable.Empty<LogType>();
         }
 
-        public IEnumerable<Log> Logs { get; set; }
+        public IEnumerable<LogType> Logs { get; set; }
 
         public int TotalRecords { get; set; }
 
@@ -20,7 +20,7 @@
         /// </summary>
         public override bool Equals(object obj)
         {
-            var compareViewModel = (PagingLogs<Log>)obj;
+            var compareViewModel = (PagingLogs<LogType>)obj;
             if ((Logs == null && compareViewModel.Logs != null) ||
                 (Logs != null && compareViewModel.Logs == null) ||
                 (Logs.Count() != compareViewModel.Logs.Count()))
@@ -28,8 +28,19 @@
                 return false;
             }
 
-            var isEqual = !Logs.Except(compareViewModel.Logs).Any() &&
-                TotalRecords == compareViewModel.TotalRecords;
+            var isEqual = true;
+            foreach (var log in Logs)
+            {
+                var compareLog = compareViewModel.Logs.Where(l => l.LogId == log.LogId).First();
+                if (compareLog == null || !compareLog.Equals(log))
+                {
+                    isEqual = false;
+                    break;
+                }
+            }
+
+            isEqual &= TotalRecords == compareViewModel.TotalRecords;
+
             return isEqual;
         }
 
