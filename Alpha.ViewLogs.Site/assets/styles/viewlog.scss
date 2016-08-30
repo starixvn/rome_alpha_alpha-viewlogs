@@ -193,3 +193,17 @@ $height-td: 28px;
     font-style: italic;
     color: #404040;
 }
+
+.valuechanged, .valueold {
+    display: block;
+    padding: 6px 0;
+}
+
+.valuechanged {
+    color: #14b332;
+    padding-bottom: 0;
+}
+
+.valueold {
+    padding-top: 0;
+}

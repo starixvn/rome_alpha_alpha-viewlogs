@@ -85,8 +85,7 @@
             {
                 formattedValue =
                     $"<span class=\"valuechanged\">{newValue}</span>" +
-                    $"<div class=\"line\"></div>" +
-                    $"<span class=\"valueold\">{oldValue}</span>";
+                    $"<span class=\"valueold\">({oldValue})</span>";
             }
 
             return formattedValue;
