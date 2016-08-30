@@ -12,6 +12,7 @@ $height-td: 28px;
     margin-bottom: 15px;
     margin-top: 40px;
 }
+
 .nav.nav-tabs {
     background: #f4f4f4;
     position: fixed;
@@ -25,10 +26,12 @@ $height-td: 28px;
         #txt-username {
             width: 200px;
         }
+
         #monthPickerID {
             display: inline-block;
             vertical-align: bottom;
         }
+
         &.submit-box {
             width: 120px;
         }
@@ -36,7 +39,11 @@ $height-td: 28px;
 
     .warning {
         margin-bottom: 10px;
-        .txt-red { color: #f00;}
+
+        .txt-red {
+            color: #f00;
+        }
+
         label {
             font-weight: normal;
         }
@@ -49,9 +56,11 @@ $height-td: 28px;
 
 .tblRpt {
     background: #fff;
+
     tr > td.logid, tr > td.datetime {
         text-align: center;
     }
+
     td:last-child {
         padding: 0;
     }
@@ -59,41 +68,51 @@ $height-td: 28px;
 
 .tblRpt .tblDesc, .tbl-sub-details {
     width: 100%;
-    > tbody > tr > td{
+
+    > tbody > tr > td {
         padding: 0 8px;
         border-bottom: 1px solid #ddd;
         border-right: 1px solid #ddd;
+
         &:last-child {
             border-right: none;
         }
     }
+
     tbody tr:last-child td {
         border-bottom: none;
     }
+
     td.colW1 {
         text-align: left;
         text-transform: capitalize;
         width: 18.1818%;
     }
+
     .tblDesc {
         td.colW1 {
             padding: 0 16px;
         }
     }
+
     td.colW2 {
         text-transform: capitalize;
         width: 16.6667%;
         text-align: center;
+
         .valuechanged, .valueold {
             height: 27px;
             line-height: 27px;
         }
+
         .valuechanged {
             color: #f00;
         }
+
         .valueold {
             color: #799;
         }
+
         .line {
             border-bottom: 1px solid #ddd;
             display: block;
@@ -101,9 +120,11 @@ $height-td: 28px;
             margin: 2px -8px;
         }
     }
+
     td[colspan="6"] {
         padding: 0;
     }
+
     .headerDetail {
         background-color: #bdc0c7;
         font-size: 14px;
@@ -112,15 +133,18 @@ $height-td: 28px;
         cursor: pointer;
         text-align: left;
     }
+
     .body-detail > td {
         padding: 0;
     }
+
     tr.headerDetail {
         td {
             padding: 0 8px;
         }
     }
-    tr.headerSportTypeDetail td{
+
+    tr.headerSportTypeDetail td {
         padding: 0 16px;
     }
 }
@@ -128,7 +152,7 @@ $height-td: 28px;
 #DataLog > tbody > tr:nth-child(even) td {
     background: #f8f8f8;
 }
- 
+
 .headerSportTypeDetail {
     background: $sporttype-detail-bg;
     text-transform: capitalize;
@@ -139,17 +163,33 @@ $height-td: 28px;
 }
 
 .output {
-    @include border-radius(1px);  
+    @include border-radius(1px);
     @include box-shadow-multiple('0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)');
     background: #fff;
     position: absolute;
     top: 85px;
     width: 230px;
+
     .opOut, .opOver {
         padding: 0 5px;
     }
+
     .opOver {
         cursor: pointer;
         background: #dedede;
     }
+}
+
+.action-name {
+    font-weight: bold;
+}
+
+.username, .log-date {
+    font-style: italic;
+    color: #666;
+}
+
+.logid {
+    font-style: italic;
+    color: #404040;
 }

@@ -37,9 +37,6 @@
             <table id="DataLog" class="width-100per tblRpt">
                 <thead>
                     <tr class="RptHeader">
-                        <th>@Resources.LogId</th>
-                        <th>@Resources.LogDate</th>
-                        <th>@Resources.Username</th>
                         <th>@Resources.Action</th>
                         <th>@Resources.Details</th>
                         <th>@Resources.Domain</th>
@@ -55,10 +52,14 @@
                         foreach (LoginLogItemViewModel logItem in Model.LogItems)
                         {
                             <tr>
-                                <td align="center">@logItem.LogId</td>
-                                <td align="center">@Html.Raw(logItem.LogDate)</td>
-                                <td>@logItem.Username</td>
-                                <td>@logItem.ActionName</td>
+                                <td class="col-action">
+                                    <span class="action-name">@Html.Raw(logItem.ActionName)</span>
+                                    <br />
+                                    <span class="username">@Html.Raw(Resources.By + " " + logItem.Username)</span>
+                                    <span class="log-date">@Html.Raw(logItem.LogDate)</span>
+                                    <br />
+                                    <span class="logid">#@logItem.LogId</span>
+                                </td>
                                 <td>@logItem.Details</td>
                                 <td align="center">@logItem.Domain</td>
                                 <td>@logItem.Browser</td>
@@ -70,7 +71,7 @@
                     else
                     {
                         <tr>
-                            <td colspan="9" align="center">@Resources.NoInfo</td>
+                            <td colspan="6" align="center">@Resources.NoInfo</td>
                         </tr>
                     }
             </table>

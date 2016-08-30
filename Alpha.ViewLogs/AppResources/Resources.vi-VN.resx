@@ -286,4 +286,7 @@
   <data name="Country" xml:space="preserve">
     <value>Quốc gia</value>
   </data>
+  <data name="By" xml:space="preserve">
+    <value>by</value>
+  </data>
 </root>

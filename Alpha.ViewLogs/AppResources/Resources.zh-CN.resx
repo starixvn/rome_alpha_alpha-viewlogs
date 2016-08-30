@@ -283,4 +283,7 @@
   <data name="Country" xml:space="preserve">
     <value>国家</value>
   </data>
+  <data name="By" xml:space="preserve">
+    <value>by</value>
+  </data>
 </root>

@@ -122,7 +122,7 @@
                     ActionTypeId = log.ActionTypeId,
                     CustId = log.CustId,
                     CustName = log.CustName,
-                    LogDate = DateTimeHelper.ToHtmlLongDateWithSlash(log.LogDate),
+                    LogDate = DateTimeHelper.ToLongDateWithSlash(log.LogDate),
                     LogId = log.LogId,
                     SPName = log.SPName,
                     UserId = log.UserId,

@@ -271,4 +271,7 @@
   <data name="Country" xml:space="preserve">
     <value>Country</value>
   </data>
+  <data name="By" xml:space="preserve">
+    <value>by</value>
+  </data>
 </root>
