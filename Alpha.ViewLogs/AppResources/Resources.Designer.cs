@@ -169,15 +169,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Customer Setting.
-        /// </summary>
-        public static string CustomerSetting {
-            get {
-                return ResourceManager.GetString("CustomerSetting", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Daily.
         /// </summary>
         public static string Daily {
@@ -309,15 +300,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string Fri {
             get {
                 return ResourceManager.GetString("Fri", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to From.
-        /// </summary>
-        public static string From {
-            get {
-                return ResourceManager.GetString("From", resourceCulture);
             }
         }
         
@@ -538,6 +520,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Setting.
+        /// </summary>
+        public static string Setting {
+            get {
+                return ResourceManager.GetString("Setting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show old values.
         /// </summary>
         public static string ShowOldValues {
@@ -664,24 +655,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to View by.
-        /// </summary>
-        public static string ViewBy {
-            get {
-                return ResourceManager.GetString("ViewBy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to View data in month.
-        /// </summary>
-        public static string ViewDataInMonth {
-            get {
-                return ResourceManager.GetString("ViewDataInMonth", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to View Log.
         /// </summary>
         public static string ViewLog {
@@ -700,20 +673,20 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to View Log Customer Setting.
-        /// </summary>
-        public static string ViewLogCustomerSetting {
-            get {
-                return ResourceManager.GetString("ViewLogCustomerSetting", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to View Log Login.
         /// </summary>
         public static string ViewLogLogin {
             get {
                 return ResourceManager.GetString("ViewLogLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Log Setting.
+        /// </summary>
+        public static string ViewLogSetting {
+            get {
+                return ResourceManager.GetString("ViewLogSetting", resourceCulture);
             }
         }
         

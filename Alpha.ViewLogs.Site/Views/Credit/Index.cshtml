@@ -14,7 +14,6 @@
                            autocomplete="off" />
                 </div>
                 <div class="form-group">
-                    <label>@Resources.ViewDataInMonth</label>
                     <div id="monthPickerID"><div id="ddlMonth"></div></div>
                 </div>
                 <div class="form-group submit-box">
@@ -29,8 +28,6 @@
                 <thead>
                     <tr class="RptHeader">
                         <th>@Resources.Action</th>
-                        <th>@Resources.OldValue</th>
-                        <th>@Resources.NewValue</th>
                         <th>@Resources.Details</th>
                         <th>@Resources.IP</th>
                     </tr>
@@ -50,17 +47,18 @@
                                     <br />
                                     <span class="logid">#@logItem.LogId</span>
                                 </td>
-                                <td align="right">@Html.Raw(logItem.TrackingValueOld)</td>
-                                <td align="right">@Html.Raw(logItem.TrackingValue)</td>
-                                <td>@logItem.Details</td>
-                                <td>@Html.Raw(logItem.IP)</td>
+                                <td align="center">
+                                    <span class="valuechanged">@Html.Raw(logItem.TrackingValue)</span>
+                                    <span class="valueold\">(@Html.Raw(logItem.TrackingValueOld))</span>
+                                </td>
+                                <td align="center">@Html.Raw(logItem.IP)</td>
                             </tr>
                         }
                     }
                     else
                     {
                         <tr>
-                            <td colspan="5" align="center">@Resources.NoInfo</td>
+                            <td colspan="3" align="center">@Resources.NoInfo</td>
                         </tr>
                     }
             </table>
@@ -73,7 +71,6 @@
     @AssetScripts.Render("/bundles/site-viewlogs/default")
     <script type="text/javascript">
         var viewModel = {
-            labelFrom: '@Resources.From',
             labelTo: '@Resources.To',
             noInfo: '@Resources.NoInfo',
 

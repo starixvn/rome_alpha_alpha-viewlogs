@@ -166,9 +166,6 @@
   <data name="Disabled" xml:space="preserve">
     <value>비활성화</value>
   </data>
-  <data name="CustomerSetting" xml:space="preserve">
-    <value>회원설정</value>
-  </data>
   <data name="Status" xml:space="preserve">
     <value>상태</value>
   </data>
@@ -178,20 +175,11 @@
   <data name="UsernameOrFirstLastName" xml:space="preserve">
     <value>사용자 이름 또는 성(이름)</value>
   </data>
-  <data name="ViewBy" xml:space="preserve">
-    <value>~로 보기</value>
-  </data>
   <data name="ShowOldValues" xml:space="preserve">
     <value>Show old values</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>사용자 이름</value>
-  </data>
-  <data name="ViewDataInMonth" xml:space="preserve">
-    <value>월간 데이터보기</value>
-  </data>
-  <data name="From" xml:space="preserve">
-    <value>시작일</value>
   </data>
   <data name="To" xml:space="preserve">
     <value>종료일</value>
@@ -273,5 +261,8 @@
   </data>
   <data name="By" xml:space="preserve">
     <value>by</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>설정</value>
   </data>
 </root>

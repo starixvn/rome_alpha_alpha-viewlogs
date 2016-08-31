@@ -45,8 +45,8 @@ var creditView = {
 
             var key = (e.keyCode) ? e.keyCode : e.which;
             if (key == alphaViewLogs.keyCode.enter) {
-                customerSettingView.pageNumber = 0;
-                customerSettingView.pageSize = '';
+                creditView.pageNumber = 0;
+                creditView.pageSize = '';
                 creditController.viewLogs();
 
                 return alphaViewLogs.cancelBubbleEvent(e);
@@ -84,7 +84,7 @@ var creditView = {
             monthFormat: alphaViewLogs.format.monthFormat,
             fromDayId: 'ddl-fromday',
             toDayId: 'ddl-today',
-            fromDayLabel: viewModel.labelFrom,
+            fromDayLabel: '',
             toDayLabel: viewModel.labelTo,
             sortDesc: true,
             log: function (msg) {

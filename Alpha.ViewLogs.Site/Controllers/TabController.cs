@@ -7,7 +7,7 @@
     public class TabController : Controller
     {
         [ChildActionOnly]
-        public ActionResult Index(string tabName = TabType.CustomerSetting)
+        public ActionResult Index(string tabName = TabType.Setting)
         {
             return PartialView(new TabViewModel(tabName));
         }

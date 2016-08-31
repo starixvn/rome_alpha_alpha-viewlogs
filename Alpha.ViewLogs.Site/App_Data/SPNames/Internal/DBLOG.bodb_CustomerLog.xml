@@ -44,11 +44,8 @@
       <Mapping DataField="SPName" ObjectProperty="SPName" />
       <Mapping DataField="IP" ObjectProperty="IP" />
 
-      <Mapping DataField="ServerId" ObjectProperty="ServerId" />
       <Mapping DataField="Browser" ObjectProperty="Browser" />
       <Mapping DataField="Domain" ObjectProperty="Domain" />
-      <Mapping DataField="Platform" ObjectProperty="Platform" />
-      <Mapping DataField="CountryCode" ObjectProperty="CountryCode" />
     </Setting>
     <Setting Key="Acc_UserLog_RunSPSelTotalRecords" SpName="Acc_UserLog_RunSPSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNetView" />
     <Setting Key="Acc_UserLog_CreditSelTotalRecords" SpName="Acc_UserLog_CreditSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNetView" />

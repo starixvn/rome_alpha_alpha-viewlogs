@@ -6,13 +6,13 @@
     ]
   },
   {
-    "outputFileName": "assets/bundles/customersetting.js",
+    "outputFileName": "assets/bundles/setting.js",
     "inputFiles": [
       "assets/scripts/old-main.js",
       "assets/scripts/core.js",
       "assets/scripts/tab/index.js",
-      "assets/scripts/customersetting/index-view.js",
-      "assets/scripts/customersetting/index-controller.js"
+      "assets/scripts/setting/index-view.js",
+      "assets/scripts/setting/index-controller.js"
     ]
   },
   {

@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Site.ViewModels.CustomerSetting
+﻿namespace Alpha.ViewLogs.Site.ViewModels.Setting
 {
     using System.Collections.Generic;
     using Params;

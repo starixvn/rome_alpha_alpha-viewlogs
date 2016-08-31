@@ -16,7 +16,6 @@
                            autocomplete="off" />
                 </div>
                 <div class="form-group">
-                    <label>@Resources.ViewDataInMonth</label>
                     <div id="monthPickerID"><div id="ddlMonth"></div></div>
                 </div>
                 <div class="form-group submit-box">
@@ -41,7 +40,6 @@
                         <th>@Resources.Details</th>
                         <th>@Resources.Domain</th>
                         <th>@Resources.Browser</th>
-                        <th>@Resources.Country</th>
                         <th>@Resources.IP</th>
                     </tr>
 
@@ -63,8 +61,7 @@
                                 <td>@logItem.Details</td>
                                 <td>@logItem.Domain</td>
                                 <td>@logItem.Browser</td>
-                                <td align="center">@logItem.Country</td>
-                                <td>@Html.Raw(logItem.IP)</td>
+                                <td align="center">@Html.Raw(logItem.IP)</td>
                             </tr>
                         }
                     }
@@ -84,7 +81,6 @@
     @AssetScripts.Render("/bundles/site-viewlogs/default")
     <script type="text/javascript">
         var viewModel = {
-            labelFrom: '@Resources.From',
             labelTo: '@Resources.To',
             noInfo: '@Resources.NoInfo',
 

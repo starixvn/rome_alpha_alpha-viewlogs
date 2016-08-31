@@ -11,21 +11,21 @@
     using MediatR;
     using Models;
     using Params;
-    using Requests.CustomerSetting;
+    using Requests.Setting;
     using Services;
     using ViewLogs.Constants;
     using ViewLogs.Helpers;
     using ViewModels;
-    using ViewModels.CustomerSetting;
+    using ViewModels.Setting;
 
-    public class CustomerSettingHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
+    public class SettingHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
         private readonly LogFormatter logFormatter;
         private readonly TrackingValueFormatter trackingValueFormatter;
         private readonly LogService logService;
         private readonly TransformService transformService;
 
-        public CustomerSettingHandler(
+        public SettingHandler(
             LogService logService,
             TransformService transformService,
             LogFormatter logFormatter,
@@ -41,7 +41,7 @@
         {
             var fromDate = string.IsNullOrWhiteSpace(message.FromDate) ? DateTime.Now.AddDays(-1) : Converter.ToDateTime(message.FromDate);
             var toDate = string.IsNullOrWhiteSpace(message.ToDate) ? DateTime.Now : Converter.ToDateTime(message.ToDate);
-            var logsParam = new CustomerSettingParam
+            var logsParam = new SettingParam
             {
                 UplineId = message.UplineId,
                 SubAccId = message.SubAccId,

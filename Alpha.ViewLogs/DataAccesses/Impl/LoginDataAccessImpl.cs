@@ -46,11 +46,8 @@
                             ActionName = Converter.ToString2(reader["ActionName"]),
                             SPName = Converter.ToString2(reader["SPName"]),
                             IP = Converter.ToString2(reader["IP"]),
-                            ServerId = Converter.ToString2(reader["ServerId"]),
                             Browser = Converter.ToString2(reader["Browser"]),
-                            Domain = Converter.ToString2(reader["Domain"]),
-                            Platform = Converter.ToString2(reader["Platform"]),
-                            CountryCode = Converter.ToString2(reader["CountryCode"])
+                            Domain = Converter.ToString2(reader["Domain"])
                         });
                     }
                 }

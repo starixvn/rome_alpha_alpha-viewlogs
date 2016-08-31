@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Site.ViewModels.CustomerSetting
+﻿namespace Alpha.ViewLogs.Site.ViewModels
 {
     using Models;
     using ViewLogs.Constants;

@@ -95,7 +95,7 @@
     <Compile Include="Services\BaseServiceImplForTesting.cs" />
     <Compile Include="Services\BaseServiceTests.cs" />
     <Compile Include="Services\CustomerServiceImplTests.cs" />
-    <Compile Include="Services\CustomerSettingLogServiceImplTest.cs" />
+    <Compile Include="Services\SettingServiceImplTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

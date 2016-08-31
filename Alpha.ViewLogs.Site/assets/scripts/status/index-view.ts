@@ -92,7 +92,7 @@ var statusView = {
             monthFormat: alphaViewLogs.format.monthFormat,
             fromDayId: 'ddl-fromday',
             toDayId: 'ddl-today',
-            fromDayLabel: viewModel.labelFrom,
+            fromDayLabel: '',
             toDayLabel: viewModel.labelTo,
             sortDesc: true,
             log: function (msg) {

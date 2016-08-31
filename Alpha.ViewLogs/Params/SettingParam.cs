@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Params
 {
-    public class CustomerSettingParam : LogParam
+    public class SettingParam : LogParam
     {
         public int ActionTypeId { get; set; }
     }

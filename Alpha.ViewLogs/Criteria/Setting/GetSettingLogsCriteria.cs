@@ -1,9 +1,9 @@
-﻿namespace Alpha.ViewLogs.Criteria.CustomerSetting
+﻿namespace Alpha.ViewLogs.Criteria.Setting
 {
     using System;
     using Fanex.Data.Repository;
 
-    public class GetCustomerSettingLogsCriteria : CriteriaBase
+    public class GetSettingLogsCriteria : CriteriaBase
     {
         public int CustId { get; set; }
 

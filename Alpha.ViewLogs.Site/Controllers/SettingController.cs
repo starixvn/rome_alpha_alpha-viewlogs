@@ -2,13 +2,13 @@
 {
     using System.Web.Mvc;
     using MediatR;
-    using Requests.CustomerSetting;
+    using Requests.Setting;
 
-    public class CustomerSettingController : BaseController
+    public class SettingController : BaseController
     {
         private readonly IMediator mediator;
 
-        public CustomerSettingController(IMediator mediator)
+        public SettingController(IMediator mediator)
         {
             this.mediator = mediator;
         }

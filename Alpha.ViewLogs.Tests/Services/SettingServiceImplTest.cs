@@ -12,15 +12,15 @@
     using ViewLogs.Services.Impl.Logs;
 
     [TestFixture]
-    public class CustomerSettingLogServiceImplTest
+    public class SettingServiceImplTest
     {
-        private const string CacheKeyLogActionTypes = "Alpha.ViewLogs.CustomerSetting.LogActionTypes";
-        private const string CacheKeyTransformObject = "Alpha.ViewLogs.CustomerSetting.TransformObject";
+        private const string CacheKeyLogActionTypes = "Alpha.ViewLogs.Setting.LogActionTypes";
+        private const string CacheKeyTransformObject = "Alpha.ViewLogs.Setting.TransformObject";
 
         private CustomerService customerService;
         private LogDataAccess baseDataAccess;
         private IDynamicRepository dynamicRepository;
-        private CustomerSettingServiceImpl customerSettingLog;
+        private SettingServiceImpl settingService;
 
         private Cache cacheForTesting;
 
@@ -34,7 +34,7 @@
             baseDataAccess = Substitute.For<LogDataAccess>();
             dynamicRepository = Substitute.For<IDynamicRepository>();
 
-            customerSettingLog = new CustomerSettingServiceImpl(dynamicRepository, customerService, baseDataAccess);
+            settingService = new SettingServiceImpl(dynamicRepository, customerService, baseDataAccess);
         }
 
         [Test]
@@ -48,7 +48,7 @@
             dynamicRepository.Fetch<LogActionType>(Arg.Any<GetAllLogActionTypeCriteria>()).Returns(validActionTypeList);
 
             // Action
-            var actualActionTypes = customerSettingLog.GetLogActionTypes();
+            var actualActionTypes = settingService.GetLogActionTypes();
 
             // Assert
             Assert.That(actualActionTypes, Is.EquivalentTo(validActionTypeList));
@@ -65,7 +65,7 @@
             dynamicRepository.Fetch<LogActionType>(Arg.Any<GetAllLogActionTypeCriteria>()).Returns(validActionTypeList);
 
             // Action
-            var actualActionTypes = customerSettingLog.GetLogActionTypes();
+            var actualActionTypes = settingService.GetLogActionTypes();
 
             // Assert
             cacheForTesting.Received().Set(CacheKeyLogActionTypes, Arg.Any<List<LogActionType>>(), Arg.Any<CacheItemOptions>());

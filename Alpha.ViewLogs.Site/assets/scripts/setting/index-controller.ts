@@ -3,31 +3,31 @@
 /// <reference path="index-view.ts" />
 
 'use strict';
-/*global customerSettingView, alphaViewLogs, tabController*/
+/*global settingView, alphaViewLogs, tabController*/
 declare var $: any;
 declare var viewModel: any;
 
-var customerSettingController = {
+var settingController = {
     urls: {
         index: (<HTMLInputElement>document.getElementById('indexPath')).value
     },
     init: function () {
-        customerSettingView.initElements(viewModel);
+        settingView.initElements(viewModel);
 
-        tabController.viewLogsParams = customerSettingView.getParams();
+        tabController.viewLogsParams = settingView.getParams();
     },
     viewLogs: function () {
         setVisible('hidden');
-        customerSettingView.showLoadingState();
+        settingView.showLoadingState();
 
-        var viewLogsParams = customerSettingView.getParams();
+        var viewLogsParams = settingView.getParams();
         tabController.viewLogsParams = viewLogsParams;
 
-        var url = customerSettingController.urls.index + "?" + $.param(viewLogsParams);
+        var url = settingController.urls.index + "?" + $.param(viewLogsParams);
         window.location.href = url;
     }
 };
 
 $(function () {
-    customerSettingController.init();
+    settingController.init();
 });

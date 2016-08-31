@@ -4,8 +4,8 @@
 
 @model TabViewModel
 <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="@(string.Equals(Model.SelectedTabName, TabType.CustomerSetting,StringComparison.OrdinalIgnoreCase) ? "active" : string.Empty)">
-        <a data-tablink="/@AppSettings.VirtualDirectory/customersetting/index" role="tab" aria-controls="@TabType.CustomerSetting" data-toggle="tab" class="lnk-changetab">@Resources.CustomerSetting</a>
+    <li role="presentation" class="@(string.Equals(Model.SelectedTabName, TabType.Setting,StringComparison.OrdinalIgnoreCase) ? "active" : string.Empty)">
+        <a data-tablink="/@AppSettings.VirtualDirectory/setting/index" role="tab" aria-controls="@TabType.Setting" data-to data-toggle="tab" class="lnk-changetab">@Resources.Setting</a>
     </li>
     <li role="presentation" class="@(string.Equals(Model.SelectedTabName, TabType.Status,StringComparison.OrdinalIgnoreCase) ? "active" : string.Empty)">
         <a data-tablink="/@AppSettings.VirtualDirectory/status/index" role="tab" aria-controls="@TabType.Status" data-toggle="tab" class="lnk-changetab">@Resources.Status</a>

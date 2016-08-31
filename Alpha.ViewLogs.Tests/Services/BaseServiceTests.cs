@@ -15,8 +15,8 @@
     [TestFixture]
     public class BaseServiceTests
     {
-        private const string LogActionCacheKey = "Alpha.ViewLogs.CustomerSetting.LogAction";
-        private const string LogActionTypesCacheKey = "Alpha.ViewLogs.CustomerSetting.LogActionTypes";
+        private const string LogActionCacheKey = "Alpha.ViewLogs.Setting.LogAction";
+        private const string LogActionTypesCacheKey = "Alpha.ViewLogs.Setting.LogActionTypes";
 
         private BaseServiceForTesting baseService;
 

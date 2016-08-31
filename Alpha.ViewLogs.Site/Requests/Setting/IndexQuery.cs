@@ -1,9 +1,9 @@
-﻿namespace Alpha.ViewLogs.Site.Requests.CustomerSetting
+﻿namespace Alpha.ViewLogs.Site.Requests.Setting
 {
     using System.Collections.Generic;
     using MediatR;
     using Sunplus.Agent.Model.Entities;
-    using ViewModels.CustomerSetting;
+    using ViewModels.Setting;
 
     public class IndexQuery : LogQuery, IRequest<IndexViewModel>
     {

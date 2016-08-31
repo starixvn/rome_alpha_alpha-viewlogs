@@ -120,8 +120,8 @@
   <data name="ViewLogCredit" xml:space="preserve">
     <value>View Log Credit</value>
   </data>
-  <data name="ViewLogCustomerSetting" xml:space="preserve">
-    <value>View Log Customer Setting</value>
+  <data name="ViewLogSetting" xml:space="preserve">
+    <value>View Log Setting</value>
   </data>
   <data name="ViewLogLogin" xml:space="preserve">
     <value>View Log Login</value>
@@ -216,9 +216,6 @@
   <data name="Disabled" xml:space="preserve">
     <value>Disabled</value>
   </data>
-  <data name="CustomerSetting" xml:space="preserve">
-    <value>Customer Setting</value>
-  </data>
   <data name="Status" xml:space="preserve">
     <value>Status</value>
   </data>
@@ -231,9 +228,6 @@
   <data name="UsernameOrFirstLastName" xml:space="preserve">
     <value>Username or First/Last Name</value>
   </data>
-  <data name="ViewBy" xml:space="preserve">
-    <value>View by</value>
-  </data>
   <data name="ShowOldValues" xml:space="preserve">
     <value>Show old values</value>
   </data>
@@ -242,12 +236,6 @@
   </data>
   <data name="Username" xml:space="preserve">
     <value>Username</value>
-  </data>
-  <data name="ViewDataInMonth" xml:space="preserve">
-    <value>View data in month</value>
-  </data>
-  <data name="From" xml:space="preserve">
-    <value>From</value>
   </data>
   <data name="To" xml:space="preserve">
     <value>To</value>
@@ -344,5 +332,8 @@
   </data>
   <data name="By" xml:space="preserve">
     <value>by</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>Setting</value>
   </data>
 </root>

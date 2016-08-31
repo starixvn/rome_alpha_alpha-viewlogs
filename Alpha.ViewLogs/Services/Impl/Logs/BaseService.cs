@@ -13,8 +13,8 @@
 
     public abstract class BaseService
     {
-        private const string LogActionCacheKey = "Alpha.ViewLogs.CustomerSetting.LogAction";
-        private const string LogActionTypesCacheKey = "Alpha.ViewLogs.CustomerSetting.LogActionTypes";
+        private const string LogActionCacheKey = "Alpha.ViewLogs.Setting.LogAction";
+        private const string LogActionTypesCacheKey = "Alpha.ViewLogs.Setting.LogActionTypes";
         private const int OneHour = 1;
 
         private readonly IDynamicRepository dynamicRepository;

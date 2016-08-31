@@ -76,8 +76,7 @@
                     IP = this.logFormatter.FormatIP(log.IP),
 
                     Domain = log.Domain,
-                    Browser = log.Browser,
-                    Country = this.logFormatter.FormatCountryCode(log.IP, log.CountryCode)
+                    Browser = log.Browser
                 });
             }
 

@@ -166,9 +166,6 @@
   <data name="Disabled" xml:space="preserve">
     <value>禁用</value>
   </data>
-  <data name="CustomerSetting" xml:space="preserve">
-    <value>会员设定</value>
-  </data>
   <data name="Status" xml:space="preserve">
     <value>状态</value>
   </data>
@@ -181,9 +178,6 @@
   <data name="UsernameOrFirstLastName" xml:space="preserve">
     <value>用户名或名/姓</value>
   </data>
-  <data name="ViewBy" xml:space="preserve">
-    <value>查看在月数据</value>
-  </data>
   <data name="ShowOldValues" xml:space="preserve">
     <value>显示旧数值</value>
   </data>
@@ -192,12 +186,6 @@
   </data>
   <data name="Username" xml:space="preserve">
     <value>用户名</value>
-  </data>
-  <data name="ViewDataInMonth" xml:space="preserve">
-    <value>查阅每月报告</value>
-  </data>
-  <data name="From" xml:space="preserve">
-    <value>从</value>
   </data>
   <data name="To" xml:space="preserve">
     <value>到</value>
@@ -285,5 +273,8 @@
   </data>
   <data name="By" xml:space="preserve">
     <value>by</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>设定</value>
   </data>
 </root>

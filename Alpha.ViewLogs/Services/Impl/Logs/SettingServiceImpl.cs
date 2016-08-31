@@ -1,14 +1,14 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
-    using Criteria.CustomerSetting;
+    using Criteria.Setting;
     using DataAccesses;
     using Fanex.Data.Repository;
     using Helpers;
     using Params;
 
-    public class CustomerSettingServiceImpl : BaseService, LogService
+    public class SettingServiceImpl : BaseService, LogService
     {
-        public CustomerSettingServiceImpl(
+        public SettingServiceImpl(
              IDynamicRepository dynamicRepository,
              CustomerService customerService,
              LogDataAccess baseDataAccess) :
@@ -23,7 +23,7 @@
                 return null;
             }
 
-            return new GetCustomerSettingLogsCriteria
+            return new GetSettingLogsCriteria
             {
                 CustId = logParam.CustId,
                 CustName = logParam.Username,
@@ -42,7 +42,7 @@
                 return null;
             }
 
-            return new GetTotalCustomerSettingLogsCriteria
+            return new GetTotalSettingLogsCriteria
             {
                 CustId = logParam.CustId,
                 FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),

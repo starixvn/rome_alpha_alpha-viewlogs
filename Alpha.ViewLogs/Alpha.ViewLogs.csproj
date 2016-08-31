@@ -51,8 +51,8 @@
     <Compile Include="Criteria\Credit\GetCreditLogsCriteria.cs" />
     <Compile Include="Criteria\Credit\GetTotalCreditLogsCriteria.cs" />
     <Compile Include="Criteria\GetAllLogActionTypeCriteria.cs" />
-    <Compile Include="Criteria\CustomerSetting\GetCustomerSettingLogsCriteria.cs" />
-    <Compile Include="Criteria\CustomerSetting\GetTotalCustomerSettingLogsCriteria.cs" />
+    <Compile Include="Criteria\Setting\GetSettingLogsCriteria.cs" />
+    <Compile Include="Criteria\Setting\GetTotalSettingLogsCriteria.cs" />
     <Compile Include="Criteria\GetIPVNCriteria.cs" />
     <Compile Include="Criteria\GetLogActionsCriteria.cs" />
     <Compile Include="Criteria\Login\GetLoginLogsCriteria.cs" />
@@ -75,7 +75,7 @@
     <Compile Include="Models\LoginLog.cs" />
     <Compile Include="Models\PagingLogs.cs" />
     <Compile Include="Models\SportDisplay.cs" />
-    <Compile Include="Params\CustomerSettingParam.cs" />
+    <Compile Include="Params\SettingParam.cs" />
     <Compile Include="Params\LogParam.cs" />
     <Compile Include="Params\TransformParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,7 +84,7 @@
     <Compile Include="Services\Impl\Logs\BaseService.cs" />
     <Compile Include="Services\Impl\CustomerServiceImpl.cs" />
     <Compile Include="Services\Impl\Logs\CreditServiceImpl.cs" />
-    <Compile Include="Services\Impl\Logs\CustomerSettingServiceImpl.cs" />
+    <Compile Include="Services\Impl\Logs\SettingServiceImpl.cs" />
     <Compile Include="Services\Impl\IPServiceImpl.cs" />
     <Compile Include="Services\Impl\Logs\LoginServiceImpl.cs" />
     <Compile Include="Services\Impl\Logs\StatusServiceImpl.cs" />
