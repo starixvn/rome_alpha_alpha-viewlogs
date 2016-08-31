@@ -20,10 +20,10 @@
         /// </summary>
         public override bool Equals(object obj)
         {
-            var compareViewModel = (PagingLogs<LogType>)obj;
-            if ((Logs == null && compareViewModel.Logs != null) ||
-                (Logs != null && compareViewModel.Logs == null) ||
-                (Logs.Count() != compareViewModel.Logs.Count()))
+            var compareObject = (PagingLogs<LogType>)obj;
+            if ((Logs == null && compareObject.Logs != null) ||
+                (Logs != null && compareObject.Logs == null) ||
+                (Logs.Count() != compareObject.Logs.Count()))
             {
                 return false;
             }
@@ -31,7 +31,7 @@
             var isEqual = true;
             foreach (var log in Logs)
             {
-                var compareLog = compareViewModel.Logs.Where(l => l.LogId == log.LogId).First();
+                var compareLog = compareObject.Logs.Where(l => l.LogId == log.LogId).First();
                 if (compareLog == null || !compareLog.Equals(log))
                 {
                     isEqual = false;
@@ -39,7 +39,7 @@
                 }
             }
 
-            isEqual &= TotalRecords == compareViewModel.TotalRecords;
+            isEqual &= TotalRecords == compareObject.TotalRecords;
 
             return isEqual;
         }

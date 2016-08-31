@@ -40,23 +40,23 @@
         /// </summary>
         public override bool Equals(object obj)
         {
-            var compareViewModel = (Log)obj;
+            var compareObject = (Log)obj;
 
-            var isEqual = ActionId == compareViewModel.ActionId &&
-                ActionName == compareViewModel.ActionName &&
-                ActionTypeId == compareViewModel.ActionTypeId &&
-                CustId == compareViewModel.CustId &&
-                CustName == compareViewModel.CustName &&
-                IsInternal == compareViewModel.IsInternal &&
-                LogDate == compareViewModel.LogDate &&
-                LogId == compareViewModel.LogId &&
-                SPName == compareViewModel.SPName &&
-                UserId == compareViewModel.UserId &&
-                Username == compareViewModel.Username &&
-                TrackingValue == compareViewModel.TrackingValue &&
-                TrackingValueOld == compareViewModel.TrackingValueOld &&
-                IP == compareViewModel.IP &&
-                Details == compareViewModel.Details;
+            var isEqual = ActionId == compareObject.ActionId &&
+                ActionName == compareObject.ActionName &&
+                ActionTypeId == compareObject.ActionTypeId &&
+                CustId == compareObject.CustId &&
+                CustName == compareObject.CustName &&
+                IsInternal == compareObject.IsInternal &&
+                LogDate == compareObject.LogDate &&
+                LogId == compareObject.LogId &&
+                SPName == compareObject.SPName &&
+                UserId == compareObject.UserId &&
+                Username == compareObject.Username &&
+                TrackingValue == compareObject.TrackingValue &&
+                TrackingValueOld == compareObject.TrackingValueOld &&
+                IP == compareObject.IP &&
+                Details == compareObject.Details;
 
             return isEqual;
         }

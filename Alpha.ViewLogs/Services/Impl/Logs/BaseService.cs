@@ -40,7 +40,7 @@
 
         protected abstract ICriteria CreateGetTotalLogsCriteria(LogParam logParam);
 
-        private string GetLogActionName(int actionId, string language)
+        public string GetLogActionName(int actionId, string language)
         {
             var logAction = GetLogAction(actionId);
             switch (language)
@@ -85,7 +85,7 @@
             return logActionTypes;
         }
 
-        private LogAction GetLogAction(int actionId)
+        public LogAction GetLogAction(int actionId)
         {
             var logActionDictionary = CacheService.Get<Dictionary<int, LogAction>>(LogActionCacheKey);
 
@@ -99,7 +99,12 @@
                 CacheService.Set(LogActionCacheKey, logActionDictionary, DefaultVariables.CacheItemOptions);
             }
 
-            return logActionDictionary[actionId];
+            return logActionDictionary.ContainsKey(actionId) ?
+                logActionDictionary[actionId] :
+                new LogAction
+                {
+                    Id = actionId
+                };
         }
 
         public PagingLogs<Log> GetPagingLogs(LogParam logParam)

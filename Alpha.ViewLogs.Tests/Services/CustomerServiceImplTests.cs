@@ -1,80 +1,72 @@
-﻿////namespace Alpha.ViewLogs.Tests.Services
-////{
-////    using Criteria;
-////    using DataAccesses;
-////    using Fanex.Data.Repository;
-////    using Models;
-////    using NSubstitute;
-////    using NUnit.Framework;
-////    using System;
-////    using ViewLogs.Services.Impl;
+﻿namespace Alpha.ViewLogs.Tests.Services
+{
+    using Criteria;
+    using Fanex.Data.Repository;
+    using Models;
+    using NSubstitute;
+    using NUnit.Framework;
+    using ViewLogs.Services.Impl;
 
-////    [TestFixture]
-////    public class CustomerServiceImplTests
-////    {
-////        private const string ValidUsername = "validUsername";
-////        private const int ValidCustId = 1;
+    [TestFixture]
+    public class CustomerServiceImplTests
+    {
+        private const string ValidUsername = "validUsername";
+        private const int ValidCustId = 1;
 
-////        private CustomerDataAccess customerDataAccess;
-////        private CustomerServiceImpl customerService;
+        private IDynamicRepository dynamicRepository;
+        private CustomerServiceImpl customerService;
 
-////        [SetUp]
-////        public void SetUp()
-////        {
-////            customerDataAccess = Substitute.For<CustomerDataAccess>();
+        [SetUp]
+        public void SetUp()
+        {
+            dynamicRepository = Substitute.For<IDynamicRepository>();
 
-////            customerService = new CustomerServiceImpl(customerDataAccess);
-////        }
+            customerService = new CustomerServiceImpl(dynamicRepository);
+        }
 
-////        [Test]
-////        public void CheckIsBelongingByUsername_NullCriteria_ThrowNullReferenceException()
-////        {
-////            // Arrange
-////            GetCustInfoByUsernameCriteria nullCriteria = null;
+        [TestCase("")]
+        [TestCase(null)]
+        public void CheckIsBelongingByUsername_NullOrEmptyUsername_ReturnsDefaultCustomerInfo(string username)
+        {
+            // Arrange 
+            var expectedCustomerInfo = new CustomerInfo();
 
-////            // Action & Assert
-////            Assert.Throws<NullReferenceException>(new TestDelegate(() => customerService.GetDownlineInfoByUsername(nullCriteria)));
-////        }
+            // Action 
+            var customerInfo = customerService.GetDownlineInfoByUsername(username, 0);
 
-////        [TestCase("")]
-////        [TestCase(null)]
-////        public void CheckIsBelongingByUsername_NullOrEmptyUsername_ReturnsNull(string username)
-////        {
-////            // Arrange
-////            var criteria = new GetCustInfoByUsernameCriteria
-////            {
-////                Username = username
-////            };
+            // Assert
+            Assert.AreEqual(expectedCustomerInfo, customerInfo);
+        }
 
-////            // Action 
-////            var customerInfo = customerService.GetDownlineInfoByUsername(criteria);
+        [Test]
+        public void CheckIsBelongingByUsername_ValidUsername_ReturnCustomerInfoFromDataAccess()
+        {
+            // Arrange
+            var criteria = new GetCustInfoByUsernameCommand
+            {
+                Username = ValidUsername,
+                UplineId = 0
+            };
 
-////            // Assert
-////            Assert.IsNull(customerInfo);
-////        }
+            var expectedCustomerInfo = new CustomerInfo
+            {
+                IsSubAcc = true,
+                CustId = ValidCustId
+            };
 
-////        [Test]
-////        public void CheckIsBelongingByUsername_ValidUsername_ReturnCustomerInfoFromDataAccess()
-////        {
-////            // Arrange
-////            var criteria = new GetCustInfoByUsernameCriteria
-////            {
-////                Username = ValidUsername
-////            };
+            dynamicRepository.When(d => d.Execute(Arg.Is<GetCustInfoByUsernameCommand>(x => x.Username == criteria.Username && x.CustId == criteria.CustId)))
+                .Do(c =>
+                {
+                    var custInfo = c[0] as GetCustInfoByUsernameCommand;
+                    custInfo.CustId = ValidCustId;
+                    custInfo.IsSubAcc = true;
+                });
 
-////            var expectedCustomerInfo = new CustomerInfo
-////            {
-////                IsSubAcc = true,
-////                CustId = ValidCustId
-////            };
+            // Action 
+            var actualCustomerInfo = customerService.GetDownlineInfoByUsername(ValidUsername, 0);
 
-////            customerDataAccess.GetCustInfoByUsername(criteria).Returns<CustomerInfo>(expectedCustomerInfo);
-
-////            // Action 
-////            var actualCustomerInfo = customerService.GetDownlineInfoByUsername(criteria);
-
-////            // Assert
-////            Assert.AreEqual(actualCustomerInfo, expectedCustomerInfo);
-////        }
-////    }
-////}
+            // Assert
+            Assert.AreEqual(actualCustomerInfo, expectedCustomerInfo);
+        }
+    }
+}
