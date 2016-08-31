@@ -64,6 +64,10 @@ $height-td: 28px;
     td:last-child {
         padding: 0;
     }
+
+    tbody td.col-action {
+        padding-left: 20px;
+    }
 }
 
 .tblRpt .tblDesc, .tbl-sub-details {
@@ -102,22 +106,16 @@ $height-td: 28px;
 
         .valuechanged, .valueold {
             height: 27px;
-            line-height: 27px;
+            display: block;
+            padding: 6px 0;
         }
 
         .valuechanged {
-            color: #f00;
+            color: #16c763;
+            padding-bottom: 0;
         }
-
         .valueold {
-            color: #799;
-        }
-
-        .line {
-            border-bottom: 1px solid #ddd;
-            display: block;
-            line-height: 5px;
-            margin: 2px -8px;
+            padding-top: 0;
         }
     }
 
@@ -126,12 +124,12 @@ $height-td: 28px;
     }
 
     .headerDetail {
-        background-color: #bdc0c7;
         font-size: 14px;
         text-transform: capitalize;
         font-weight: bold;
         cursor: pointer;
         text-align: left;
+        background-color: #bdc0c7;
     }
 
     .body-detail > td {
@@ -141,11 +139,13 @@ $height-td: 28px;
     tr.headerDetail {
         td {
             padding: 0 8px;
+            background-color: #bdc0c7 !important;
         }
     }
 
     tr.headerSportTypeDetail td {
         padding: 0 16px;
+        background: $sporttype-detail-bg !important;
     }
 }
 
@@ -154,12 +154,12 @@ $height-td: 28px;
 }
 
 .headerSportTypeDetail {
-    background: $sporttype-detail-bg;
     text-transform: capitalize;
     height: 28px;
     line-height: 28px;
     padding: 0 8px;
     font-weight: bold;
+    background: $sporttype-detail-bg;
 }
 
 .output {
@@ -167,6 +167,7 @@ $height-td: 28px;
     @include box-shadow-multiple('0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)');
     background: #fff;
     position: absolute;
+    left: 16px;
     top: 85px;
     width: 230px;
 
@@ -182,6 +183,7 @@ $height-td: 28px;
 
 .action-name {
     font-weight: bold;
+    color: #990000;
 }
 
 .username, .log-date {
@@ -194,16 +196,5 @@ $height-td: 28px;
     color: #404040;
 }
 
-.valuechanged, .valueold {
-    display: block;
-    padding: 6px 0;
-}
 
-.valuechanged {
-    color: #14b332;
-    padding-bottom: 0;
-}
 
-.valueold {
-    padding-top: 0;
-}
