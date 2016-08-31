@@ -230,50 +230,11 @@
     <TypeScriptCompile Include="assets\scripts\credit\index-view.ts" />
     <TypeScriptCompile Include="assets\scripts\login\index-controller.ts" />
     <TypeScriptCompile Include="assets\scripts\login\index-view.ts" />
-    <Content Include="assets\bundles\credit.js" />
-    <Content Include="assets\bundles\credit.min.js">
-      <DependentUpon>credit.js</DependentUpon>
-    </Content>
-    <Content Include="assets\bundles\customersetting.js" />
-    <Content Include="assets\bundles\customersetting.min.js">
-      <DependentUpon>customersetting.js</DependentUpon>
-    </Content>
-    <Content Include="assets\bundles\default.css" />
-    <Content Include="assets\bundles\default.min.css">
-      <DependentUpon>default.css</DependentUpon>
-    </Content>
-    <Content Include="assets\bundles\login.js" />
-    <Content Include="assets\bundles\login.min.js">
-      <DependentUpon>login.js</DependentUpon>
-    </Content>
-    <Content Include="assets\bundles\setting.js" />
-    <Content Include="assets\bundles\setting.min.js">
-      <DependentUpon>setting.js</DependentUpon>
-    </Content>
-    <Content Include="assets\bundles\status.js" />
-    <Content Include="assets\bundles\status.min.js">
-      <DependentUpon>status.js</DependentUpon>
-    </Content>
-    <Content Include="assets\scripts\old-main.js" />
-    <Content Include="assets\styles\viewlog.css">
-      <DependentUpon>viewlog.scss</DependentUpon>
-    </Content>
-    <Content Include="assets\styles\viewlog.min.css">
-      <DependentUpon>viewlog.css</DependentUpon>
-    </Content>
-    <Content Include="assets\styles\viewlog.scss" />
-    <Content Include="assets\styles\_mixins.scss" />
-    <None Include="compilerconfig.json.defaults">
-      <DependentUpon>compilerconfig.json</DependentUpon>
-    </None>
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1000.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1001.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1002.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1003.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1004.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_101.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_102.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1100.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1101.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1102.xslt" />
@@ -368,7 +329,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_246.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_247.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_248.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_3.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_300.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_301.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_302.xslt" />
@@ -450,9 +410,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_401.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_402.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_403.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_404.xslt">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_404.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_405.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_406.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_407.xslt" />
@@ -568,14 +526,53 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_921.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_922.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_924.xslt" />
-    <TypeScriptCompile Include="assets\scripts\setting\index-view.ts" />
-    <TypeScriptCompile Include="assets\scripts\setting\index-controller.ts" />
+    <Content Include="assets\bundles\credit.js" />
+    <Content Include="assets\bundles\credit.min.js">
+      <DependentUpon>credit.js</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\customersetting.js" />
+    <Content Include="assets\bundles\customersetting.min.js">
+      <DependentUpon>customersetting.js</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\default.css" />
+    <Content Include="assets\bundles\default.min.css">
+      <DependentUpon>default.css</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\login.js" />
+    <Content Include="assets\bundles\login.min.js">
+      <DependentUpon>login.js</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\setting.js" />
+    <Content Include="assets\bundles\setting.min.js">
+      <DependentUpon>setting.js</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\status.js" />
+    <Content Include="assets\bundles\status.min.js">
+      <DependentUpon>status.js</DependentUpon>
+    </Content>
+    <Content Include="assets\scripts\old-main.js" />
+    <Content Include="assets\styles\viewlog.css">
+      <DependentUpon>viewlog.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\styles\viewlog.min.css">
+      <DependentUpon>viewlog.css</DependentUpon>
+    </Content>
+    <Content Include="assets\styles\viewlog.scss" />
+    <Content Include="assets\styles\_mixins.scss" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\action_101.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\action_102.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\action_3.xslt" />
     <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />
     <Content Include="Global.asax" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Credit\Index.cshtml" />
     <Content Include="Views\Shared\MonthNames.cshtml" />
     <Content Include="Views\Tab\Index.cshtml" />
+    <Content Include="Views\Setting\Index.cshtml" />
     <None Include="Web.AppSettings.config" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Status\Index.cshtml" />
@@ -583,6 +580,8 @@
       <SubType>Designer</SubType>
     </Content>
     <TypeScriptCompile Include="assets\scripts\core.ts" />
+    <TypeScriptCompile Include="assets\scripts\setting\index-controller.ts" />
+    <TypeScriptCompile Include="assets\scripts\setting\index-view.ts" />
     <TypeScriptCompile Include="assets\scripts\status\index-controller.ts" />
     <TypeScriptCompile Include="assets\scripts\status\index-view.ts" />
     <TypeScriptCompile Include="assets\scripts\tab\index.ts" />
@@ -594,8 +593,8 @@
     <Compile Include="Constants\TabType.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CreditController.cs" />
-    <Compile Include="Controllers\SettingController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\SettingController.cs" />
     <Compile Include="Controllers\StatusController.cs" />
     <Compile Include="Controllers\TabController.cs" />
     <Compile Include="Global.asax.cs">
@@ -604,8 +603,8 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Handlers\BaseHandler.cs" />
     <Compile Include="Handlers\CreditHandler.cs" />
-    <Compile Include="Handlers\SettingHandler.cs" />
     <Compile Include="Handlers\LoginHandler.cs" />
+    <Compile Include="Handlers\SettingHandler.cs" />
     <Compile Include="Handlers\StatusHandler.cs" />
     <Compile Include="Helpers\AppPathHelper.cs" />
     <Compile Include="Helpers\StaticResources\AssetScripts.cs" />
@@ -619,15 +618,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\LogQuery.cs" />
     <Compile Include="Requests\Credit\IndexQuery.cs" />
-    <Compile Include="Requests\Setting\IndexQuery.cs" />
     <Compile Include="Requests\Login\IndexQuery.cs" />
+    <Compile Include="Requests\Setting\IndexQuery.cs" />
     <Compile Include="Requests\Status\IndexQuery.cs" />
+    <Compile Include="ViewModels\LogActionTypeViewModel.cs" />
     <Compile Include="ViewModels\LogItemViewModel.cs" />
     <Compile Include="ViewModels\LogViewModel.cs" />
-    <Compile Include="ViewModels\Setting\IndexViewModel.cs" />
-    <Compile Include="ViewModels\LogActionTypeViewModel.cs" />
     <Compile Include="ViewModels\Login\IndexViewModel.cs" />
     <Compile Include="ViewModels\Login\LoginLogItemViewModel.cs" />
+    <Compile Include="ViewModels\Setting\IndexViewModel.cs" />
     <Compile Include="ViewModels\TabViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -635,7 +634,6 @@
     <Content Include="packages.config" />
     <Content Include="bundleconfig.json" />
     <Content Include="compilerconfig.json" />
-    <Content Include="Views\Setting\Index.cshtml" />
     <Content Include="Web.AppSettings.local.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
