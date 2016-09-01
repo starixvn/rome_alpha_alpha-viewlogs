@@ -25,6 +25,7 @@
 
             return new GetSettingLogsCriteria
             {
+                ActionTypeId = ((SettingParam)logParam).ActionTypeId,
                 CustId = logParam.CustId,
                 CustName = logParam.Username,
                 FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
