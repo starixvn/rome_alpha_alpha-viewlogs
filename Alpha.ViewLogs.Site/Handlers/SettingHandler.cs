@@ -39,8 +39,8 @@
 
         public IndexViewModel Handle(IndexQuery message)
         {
-            var fromDate = string.IsNullOrWhiteSpace(message.FromDate) ? DateTime.Now.AddDays(-1) : Converter.ToDateTime(message.FromDate);
-            var toDate = string.IsNullOrWhiteSpace(message.ToDate) ? DateTime.Now : Converter.ToDateTime(message.ToDate);
+            var fromDate = GetFromDate(message);
+            var toDate = GetToDate(message);
             var logsParam = new SettingParam
             {
                 UplineId = message.UplineId,

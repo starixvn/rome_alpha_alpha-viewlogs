@@ -1,6 +1,5 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
-    using System;
     using Alpha.ViewLogs.Services.Impl;
     using DataAccesses;
     using Fanex.Data.Repository;

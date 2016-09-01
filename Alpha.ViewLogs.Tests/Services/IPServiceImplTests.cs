@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
-    using System;
     using System.Collections.Generic;
+    using Criteria;
     using Fanex.Caching;
     using Fanex.Data.Repository;
     using Models;
@@ -81,8 +81,8 @@
                 {
                     new IPRange
                     {
-                        From = Math.Pow(256,3) + Math.Pow(256,2) + Math.Pow(256,1),
-                        To =  Math.Pow(256,3) + Math.Pow(256,2) + Math.Pow(256,1) + 255
+                        From = 4311810048, // 1.1.1.0 = 256^4 + 256^3 + 256^2
+                        To =  4311875328 // 1.1.1.255 = 256^4 + 256^3 + 256^2 + 255
                     }
                 };
 
@@ -94,6 +94,28 @@
 
             // Assert
             Assert.AreEqual(expectedIP, actualIP);
+        }
+
+        [TestCase("1.1.1.1", true, "<a class=\"iplink\" href=\"javascript:OpenIPInfo('1.1.1.1');\">1.1.1.1</a>")]
+        [TestCase("1.1.1.1", false, "<a class=\"iplink\" href=\"javascript:OpenIPInfo('1.1.1.1');\">1.1.1.1</a>")]
+        public void FormatIP_MatchIPVailidationAndNotVNIP_ReturnsCorrectIP(string ip, bool canViewVNIP, string expectedIP)
+        {  // Arrange
+            userSession.IsAdminCanViewVNIP.Returns(canViewVNIP);
+
+            var ipVNList = new List<IPRange>();
+            cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(false);
+            dynamicRepository.Fetch<IPRange>(Arg.Any<GetIPVNCriteria>()).Returns(ipVNList);
+
+            // Action
+            var actualIP = ipService.FormatIP(ip);
+
+            // Assert
+            Assert.AreEqual(expectedIP, actualIP);
+        }
+
+        public void ConvertIPToNumber_InvalidIP_ReturnZero()
+        {
+
         }
     }
 }

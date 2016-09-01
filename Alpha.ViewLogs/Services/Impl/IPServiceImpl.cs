@@ -68,11 +68,11 @@
             return country;
         }
 
-        private double ConvertIPToNumber(string ip)
+        public double ConvertIPToNumber(string ip)
         {
             double num = 0.0;
 
-            if (!IsValidIP(ip))
+            if (string.IsNullOrWhiteSpace(ip) || !IsValidIP(ip))
             {
                 return num;
             }
@@ -83,7 +83,7 @@
 
             for (var i = 0; i < decimalNumbersCount; i++)
             {
-                num += double.Parse(strArray[i]) * Math.Pow(ipRange, decimalNumbersCount - i - 1);
+                num += double.Parse(strArray[i]) * Math.Pow(ipRange, decimalNumbersCount - i);
             }
 
             return num;
@@ -106,7 +106,7 @@
             double ipNumber = ConvertIPToNumber(ip);
             var listIPVN = GetIPVNList();
 
-            if (listIPVN == null)
+            if (listIPVN == null || !listIPVN.Any())
             {
                 return false;
             }

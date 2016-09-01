@@ -10,13 +10,8 @@
     {
         protected LogParam CreateLogParam(LogQuery logQuery)
         {
-            var fromDate = string.IsNullOrWhiteSpace(logQuery.FromDate)
-                ? DateTime.Now.AddDays(-1)
-                : Converter.ToDateTime(logQuery.FromDate);
-
-            var toDate = string.IsNullOrWhiteSpace(logQuery.ToDate)
-                ? DateTime.Now
-                : Converter.ToDateTime(logQuery.ToDate);
+            var fromDate = GetFromDate(logQuery);
+            var toDate = GetToDate(logQuery);
 
             return new LogParam
             {
@@ -44,6 +39,25 @@
                 MinReportDate = logQuery.MinReportDate,
                 IsShowOldValue = logQuery.IsShowOldValue
             };
+        }
+
+        protected DateTime GetFromDate(LogQuery logQuery)
+        {
+            if (logQuery == null || string.IsNullOrWhiteSpace(logQuery.FromDate))
+            {
+                return DateTime.Now.Day > 1
+                    ? DateTime.Now.AddDays(-1)
+                    : DateTime.Now;
+            }
+
+            return Converter.ToDateTime(logQuery.FromDate);
+        }
+
+        protected DateTime GetToDate(LogQuery logQuery)
+        {
+            return logQuery == null || string.IsNullOrWhiteSpace(logQuery.ToDate)
+                ? DateTime.Now
+                : Converter.ToDateTime(logQuery.ToDate);
         }
     }
 }
