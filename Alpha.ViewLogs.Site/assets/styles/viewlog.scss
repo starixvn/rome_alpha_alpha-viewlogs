@@ -68,6 +68,14 @@ $height-td: 28px;
     tbody td.col-action {
         padding-left: 20px;
     }
+
+    &.tblRpt-bordered > tbody > tr > td {
+        border-bottom: 1px solid #333;
+    }
+}
+
+.tblRpt .tblDesc tr:last-child .tblDesc > tbody > tr > td {
+    border-bottom: 1px solid #ddd;
 }
 
 .tblRpt .tblDesc, .tbl-sub-details {
