@@ -530,10 +530,6 @@
     <Content Include="assets\bundles\credit.min.js">
       <DependentUpon>credit.js</DependentUpon>
     </Content>
-    <Content Include="assets\bundles\customersetting.js" />
-    <Content Include="assets\bundles\customersetting.min.js">
-      <DependentUpon>customersetting.js</DependentUpon>
-    </Content>
     <Content Include="assets\bundles\default.css" />
     <Content Include="assets\bundles\default.min.css">
       <DependentUpon>default.css</DependentUpon>
