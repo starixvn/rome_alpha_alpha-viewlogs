@@ -98,32 +98,17 @@ $height-td: 28px;
             padding: 0 16px;
         }
     }
-
     td.colW2 {
         text-transform: capitalize;
         width: 16.6667%;
         text-align: center;
-
-        .valuechanged, .valueold {
-            height: 27px;
-            display: block;
-            padding: 6px 0;
-        }
-
-        .valuechanged {
-            color: #16c763;
-            padding-bottom: 0;
-        }
-        .valueold {
-            padding-top: 0;
-        }
     }
 
     td[colspan="6"] {
         padding: 0;
     }
 
-    .headerDetail {
+    .headerDetail, .headerDetailNormal {
         font-size: 14px;
         text-transform: capitalize;
         font-weight: bold;
@@ -136,7 +121,7 @@ $height-td: 28px;
         padding: 0;
     }
 
-    tr.headerDetail {
+    tr.headerDetail, tr.headerDetailNormal {
         td {
             padding: 0 8px;
             background-color: #bdc0c7 !important;
@@ -146,6 +131,23 @@ $height-td: 28px;
     tr.headerSportTypeDetail td {
         padding: 0 16px;
         background: $sporttype-detail-bg !important;
+    }
+}
+
+
+.tblRpt  td {
+    .valuechanged, .valueold {
+        height: 27px;
+        display: block;
+        padding: 6px 0;
+    }
+
+    .valuechanged {
+        color: #16c763;
+        padding-bottom: 0;
+    }
+    .valueold {
+        padding-top: 0;
     }
 }
 
@@ -183,7 +185,6 @@ $height-td: 28px;
 
 .action-name {
     font-weight: bold;
-    color: #990000;
 }
 
 .username, .log-date {
@@ -194,6 +195,21 @@ $height-td: 28px;
 .logid {
     font-style: italic;
     color: #404040;
+}
+.tblRpt .tblDesc tbody tr:first-child:nth-last-child(1) td{
+    height: 70px;
+}
+
+.tblRpt .tblDesc tbody tr:first-child:nth-last-child(2), 
+.tblRpt .tblDesc tbody tr:first-child:nth-last-child(2) ~ tr {
+    td { height: 35px;}
+}
+
+.tblRpt > tbody > tr > td .tblDesc {
+    border-top: 1px solid #ddd;
+    &:first-child {
+        border-top: none;
+    }
 }
 
 
