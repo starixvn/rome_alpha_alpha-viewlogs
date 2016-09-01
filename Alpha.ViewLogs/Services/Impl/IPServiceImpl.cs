@@ -83,7 +83,7 @@
 
             for (var i = 0; i < decimalNumbersCount; i++)
             {
-                num += double.Parse(strArray[i]) * Math.Pow(ipRange, decimalNumbersCount - i);
+                num += double.Parse(strArray[i]) * Math.Pow(ipRange, decimalNumbersCount - i - 1);
             }
 
             return num;
