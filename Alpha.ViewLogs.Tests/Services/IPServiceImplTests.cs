@@ -21,6 +21,8 @@
 
         private Cache cacheForTesting;
 
+        private List<IPRange> VNIPs;
+
         [SetUp]
         public void SetUp()
         {
@@ -31,6 +33,15 @@
             userSession = Substitute.For<IUserSession>();
 
             ipService = new IPServiceImpl(userSession, dynamicRepository);
+
+            VNIPs = new List<IPRange>()
+            {
+                new IPRange
+                {
+                    From = 16843008, // 1.1.1.0 = 256^3 + 256^2 + 256^1
+                    To =  16843263 // 1.1.1.255 = 256^3 + 256^2 + 256^1 + 255
+                }
+            };
         }
 
         [TestCase(null)]
@@ -77,14 +88,7 @@
             List<IPRange> ipVNList;
             cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
             {
-                x[1] = new List<IPRange>()
-                {
-                    new IPRange
-                    {
-                        From = 4311810048, // 1.1.1.0 = 256^4 + 256^3 + 256^2
-                        To =  4311875328 // 1.1.1.255 = 256^4 + 256^3 + 256^2 + 255
-                    }
-                };
+                x[1] = VNIPs;
 
                 return true;
             });
@@ -113,9 +117,99 @@
             Assert.AreEqual(expectedIP, actualIP);
         }
 
-        public void ConvertIPToNumber_InvalidIP_ReturnZero()
+        [TestCase(null)]
+        [TestCase("")]
+        [TestCase(" ")]
+        [TestCase("  ")]
+        public void ConvertIPToNumber_InvalidIP_ReturnsZero(string ip)
         {
+            // Arrange
+            var expectedValue = 0;
 
+            // Action
+            var actualValue = ipService.ConvertIPToNumber(ip);
+
+            // Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [TestCase("1.1.1.0", 16843008)]
+        [TestCase("1.1.1.1", 16843009)]
+        [TestCase("1.1.1.255", 16843263)]
+        public void ConvertIPToNumber_ValidIP_ReturnsNumberOfIP(string ip, double expectedValue)
+        {
+            // Action
+            var actualValue = ipService.ConvertIPToNumber(ip);
+
+            // Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [TestCase(null)]
+        [TestCase("")]
+        [TestCase(" ")]
+        [TestCase("  ")]
+        public void IsVNIP_NullOrEmptyIP_ReturnsFalse(string ip)
+        {
+            // Arrange
+            var expectedValue = false;
+
+            // Action
+            var isVNIP = ipService.IsVNIP(ip);
+
+            // Assert
+            Assert.AreEqual(expectedValue, isVNIP);
+        }
+
+        [TestCase("#")]
+        [TestCase("1.1.1.1.1")]
+        [TestCase("1")]
+        [TestCase("1.1")]
+        [TestCase("1.1.1")]
+        [TestCase("::1")]
+        [TestCase("1.1.0.1")]
+        [TestCase("1.1.2.1")]
+        public void IsVNIP_NotVNIP_ReturnsFalse(string ip)
+        {
+            // Arrange
+            var expectedValue = false;
+
+            List<IPRange> ipVNList;
+            cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
+            {
+                x[1] = VNIPs;
+
+                return true;
+            });
+
+            // Action
+            var isVNIP = ipService.IsVNIP(ip);
+
+            // Assert
+            Assert.AreEqual(expectedValue, isVNIP);
+        }
+
+        [TestCase("1.1.1.0")]
+        [TestCase("1.1.1.1")]
+        [TestCase("1.1.1.255")]
+        public void IsVNIP_VNIP_ReturnsTrue(string ip)
+        {
+            // Arrange
+            var expectedValue = true;
+
+            List<IPRange> ipVNList;
+            cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
+            {
+                x[1] = VNIPs;
+
+                return true;
+            });
+
+            // Action
+            var isVNIP = ipService.IsVNIP(ip);
+
+            // Assert
+            Assert.AreEqual(expectedValue, isVNIP);
         }
     }
 }

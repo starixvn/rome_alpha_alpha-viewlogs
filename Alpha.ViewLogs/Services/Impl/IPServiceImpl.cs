@@ -15,7 +15,7 @@
     public class IPServiceImpl : IPService
     {
         private const string VietnamIPListCacheKey = "Alpha.ViewLogs.VietnamIPList";
-        private const string IPValidateRegex = @"(?<First>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Second>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Third>2[0-4]\d|25[0-5]|[01]?\d\d?)\.(?<Fourth>2[0-4]\d|25[0-5]|[01]?\d\d?)";
+        private const string IPValidateRegex = @"(?:2[0-4]\d|25[0-5]|[01]?\d\d?\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)";
         private const int OneHour = 1;
 
         private readonly IUserSession userSession;
@@ -72,7 +72,9 @@
         {
             double num = 0.0;
 
-            if (string.IsNullOrWhiteSpace(ip) || !IsValidIP(ip))
+            Regex regex = new Regex(IPValidateRegex);
+
+            if (string.IsNullOrWhiteSpace(ip) || !string.Equals(regex.Match(ip).Value, ip))
             {
                 return num;
             }
@@ -83,20 +85,13 @@
 
             for (var i = 0; i < decimalNumbersCount; i++)
             {
-                num += double.Parse(strArray[i]) * Math.Pow(ipRange, decimalNumbersCount - i);
+                num += double.Parse(strArray[i]) * Math.Pow(ipRange, decimalNumbersCount - i - 1);
             }
 
             return num;
         }
 
-        private bool IsValidIP(string ipAddress)
-        {
-            IPAddress ip;
-            return !string.IsNullOrWhiteSpace(ipAddress)
-                && IPAddress.TryParse(ipAddress, out ip);
-        }
-
-        private bool IsVNIP(string ip)
+        public bool IsVNIP(string ip)
         {
             if (string.IsNullOrWhiteSpace(ip))
             {
@@ -115,6 +110,13 @@
                 .Any();
 
             return isVNIP;
+        }
+
+        private bool IsValidIP(string ipAddress)
+        {
+            IPAddress ip;
+            return !string.IsNullOrWhiteSpace(ipAddress)
+                && IPAddress.TryParse(ipAddress, out ip);
         }
 
         private List<IPRange> GetIPVNList()
