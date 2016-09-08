@@ -648,6 +648,13 @@
     <Content Include="Web.AppSettings.uati1.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
+    <None Include="Web.ConnectionStrings.config" />
+    <None Include="Web.ConnectionStrings.local.config" />
+    <None Include="Web.ConnectionStrings.napexternal.config" />
+    <None Include="Web.ConnectionStrings.napinternal.config" />
+    <None Include="Web.ConnectionStrings.proi1.config" />
+    <None Include="Web.ConnectionStrings.sit.config" />
+    <None Include="Web.ConnectionStrings.uati1.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
