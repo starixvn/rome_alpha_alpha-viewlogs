@@ -214,7 +214,7 @@
               </td>
             </tr>
 			  <tr>
-				  <td colspan="6">
+				  <td colspan="8">
 					  <div >
 						  <table class="tblDesc" >
 							  <tr >

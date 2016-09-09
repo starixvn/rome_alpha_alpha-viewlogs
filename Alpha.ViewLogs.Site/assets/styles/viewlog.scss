@@ -66,11 +66,11 @@ $height-td: 28px;
     }
 
     tbody td.col-action {
-        padding-left: 20px;
+        padding-left: 8px;
     }
 
     &.tblRpt-bordered > tbody > tr > td {
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid #666;
     }
 }
 
@@ -95,24 +95,24 @@ $height-td: 28px;
         border-bottom: none;
     }
 
-    td.colW1 {
+    td.colW1, td.colTitle {
         text-align: left;
         text-transform: capitalize;
         width: 18.1818%;
     }
 
     .tblDesc {
-        td.colW1 {
+        td.colW1, td.colTitle {
             padding: 0 16px;
         }
     }
-    td.colW2 {
+    td.colW2, td.colValue {
         text-transform: capitalize;
         width: 16.6667%;
         text-align: center;
     }
 
-    td[colspan="6"] {
+    td[colspan="6"], td[colspan="8"] {
         padding: 0;
     }
 
@@ -180,6 +180,7 @@ $height-td: 28px;
     left: 16px;
     top: 85px;
     width: 230px;
+    z-index: 9999;
 
     .opOut, .opOver {
         padding: 0 5px;

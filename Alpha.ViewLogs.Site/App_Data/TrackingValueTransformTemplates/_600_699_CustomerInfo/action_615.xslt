@@ -11,7 +11,7 @@
                     <xsl:value-of select="@membername" />
                 </td>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('OldAgentId')" /></td>
-                <td class="colW2">
+                <td class="colW2" colspan="3">
                     <xsl:value-of select="@oldagentid" />
                 </td>
             </tr>
@@ -21,7 +21,7 @@
                     <xsl:value-of select="@newagentname" />
                 </td>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('NewAgentId')" /></td>
-                <td class="colW2">
+                <td class="colW2" colspan="3">
                     <xsl:value-of select="@newagentid" />
                 </td>
             </tr>
