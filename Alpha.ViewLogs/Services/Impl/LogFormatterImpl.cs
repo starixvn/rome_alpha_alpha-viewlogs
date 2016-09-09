@@ -83,7 +83,7 @@
             var newValue = string.Empty;
             var oldValue = string.Empty;
 
-            var nodeCountIncaseOfHavingNewOldDivs = 3;
+            var nodeCountIncaseOfHavingNewOldDivs = 2;
 
             if (nodeCount == nodeCountIncaseOfHavingNewOldDivs)
             {
