@@ -569,7 +569,7 @@
     <Content Include="Views\Shared\MonthNames.cshtml" />
     <Content Include="Views\Tab\Index.cshtml" />
     <Content Include="Views\Setting\Index.cshtml" />
-    <None Include="Web.AppSettings.config" />
+    <Content Include="Web.AppSettings.config" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Status\Index.cshtml" />
     <Content Include="Web.config">
@@ -648,35 +648,47 @@
     <Content Include="Web.AppSettings.uati1.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-    <None Include="Web.ConnectionStrings.config" />
-    <None Include="Web.ConnectionStrings.local.config" />
-    <None Include="Web.ConnectionStrings.napexternal.config" />
-    <None Include="Web.ConnectionStrings.napinternal.config" />
-    <None Include="Web.ConnectionStrings.proi1.config" />
-    <None Include="Web.ConnectionStrings.sit.config" />
-    <None Include="Web.ConnectionStrings.uati1.config" />
+    <Content Include="Web.ConnectionStrings.config" />
+    <None Include="Web.ConnectionStrings.local.config">
+      <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
+    </None>
+    <None Include="Web.ConnectionStrings.napexternal.config">
+      <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
+    </None>
+    <None Include="Web.ConnectionStrings.napinternal.config">
+      <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
+    </None>
+    <None Include="Web.ConnectionStrings.proi1.config">
+      <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
+    </None>
+    <None Include="Web.ConnectionStrings.sit.config">
+      <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="Web.local.config" />
-    <None Include="Web.napexternal.config">
-      <DependentUpon>Web.local.config</DependentUpon>
+    <None Include="Web.ConnectionStrings.uati1.config">
+      <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
     </None>
-    <None Include="Web.napinternal.config">
+    <Content Include="Web.local.config" />
+    <Content Include="Web.napexternal.config">
       <DependentUpon>Web.local.config</DependentUpon>
-    </None>
-    <None Include="Web.proi1.config">
+    </Content>
+    <Content Include="Web.napinternal.config">
       <DependentUpon>Web.local.config</DependentUpon>
-    </None>
+    </Content>
+    <Content Include="Web.proi1.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="Web.sit.config">
+    <Content Include="Web.sit.config">
       <DependentUpon>Web.local.config</DependentUpon>
-    </None>
-    <None Include="Web.uati1.config">
+    </Content>
+    <Content Include="Web.uati1.config">
       <DependentUpon>Web.local.config</DependentUpon>
-    </None>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
