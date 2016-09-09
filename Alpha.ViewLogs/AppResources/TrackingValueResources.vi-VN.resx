@@ -263,7 +263,7 @@
     <value>Cá cược tổng hợp</value>
   </data>
   <data name="AccountRemark" xml:space="preserve">
-    <value>AccountRemark</value>
+    <value>Account Remark</value>
   </data>
   <data name="disableautompt" xml:space="preserve">
     <value>Không cho phép Auto PT đối với Master</value>
@@ -512,7 +512,7 @@
     <value>Cược Chấp</value>
   </data>
   <data name="maxv11pt_20" xml:space="preserve">
-    <value>PT lớn nhất cho MoneyLine</value>
+    <value>PT lớn nhất cho Moneyline</value>
   </data>
   <data name="autoSuspend" xml:space="preserve">
     <value>Tự động đình chỉ</value>
@@ -587,7 +587,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="AccountRemarkDate" xml:space="preserve">
-    <value>AccountRemarkDate</value>
+    <value>Account Remark Date</value>
   </data>
   <data name="ummbv11" xml:space="preserve">
     <value>Cập nhật tiền cược nhỏ nhất / lớn nhất của  Đua xe Môtô</value>
@@ -599,7 +599,7 @@
     <value>Cập nhật tiền cược nhỏ nhất / lớn nhất của Các môn thể thao khác</value>
   </data>
   <data name="GroupID" xml:space="preserve">
-    <value>Nhóm D</value>
+    <value>ID của Nhóm</value>
   </data>
   <data name="NewAgentId" xml:space="preserve">
     <value>ID của Agent mới</value>

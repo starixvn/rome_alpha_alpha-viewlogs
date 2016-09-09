@@ -263,7 +263,7 @@
     <value>การเล่นบอลชุด</value>
   </data>
   <data name="AccountRemark" xml:space="preserve">
-    <value>AccountRemark</value>
+    <value>Account Remark</value>
   </data>
   <data name="disableautompt" xml:space="preserve">
     <value>ปิดการใช้งานแบ่งสู้อัตโนมัติของมาสเตอร์</value>
@@ -371,7 +371,7 @@
     <value>แฮนดิแคป</value>
   </data>
   <data name="InstallmentDate" xml:space="preserve">
-    <value>InstallmentDate</value>
+    <value>Installment Date</value>
   </data>
   <data name="v10spt_2" xml:space="preserve">
     <value>คี่ / คู่</value>
@@ -515,7 +515,7 @@
     <value>มันนี่ไลน์ สูงสุด </value>
   </data>
   <data name="autoSuspend" xml:space="preserve">
-    <value>AutoSuspend</value>
+    <value>Auto Suspend</value>
   </data>
   <data name="isa_v11mpt_1" xml:space="preserve">
     <value>แฮนดิแคป</value>
@@ -587,7 +587,7 @@
     <value>คี่ / คู่</value>
   </data>
   <data name="AccountRemarkDate" xml:space="preserve">
-    <value>AccountRemarkDate</value>
+    <value>Account Remark Date</value>
   </data>
   <data name="ummbv11" xml:space="preserve">
     <value>อัพเดทเดิมพัน ต่ำสุด/สูงสุดของมอเตอร์สปอร์ต</value>
@@ -599,7 +599,7 @@
     <value>อัพเดทเดิมพัน ต่ำสุด/สูงสุดของกีฬาอื่นๆ</value>
   </data>
   <data name="GroupID" xml:space="preserve">
-    <value>GroupID</value>
+    <value>Group ID</value>
   </data>
   <data name="NewAgentId" xml:space="preserve">
     <value>ไอดีของเอเย่นใหม่</value>
@@ -650,7 +650,7 @@
     <value>ประเทศ</value>
   </data>
   <data name="InstallmentAmount" xml:space="preserve">
-    <value>InstallmentAmount</value>
+    <value>Installment Amount</value>
   </data>
   <data name="othercomm" xml:space="preserve">
     <value>ค่าคอมมิชชั่นสำหรับประเภทการเดิมพันอื่นๆ</value>

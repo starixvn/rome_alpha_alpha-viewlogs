@@ -1960,7 +1960,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AccountRemark.
+        ///   Looks up a localized string similar to Account Remark.
         /// </summary>
         public static string AccountRemark {
             get {
@@ -1969,7 +1969,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AccountRemarkDate.
+        ///   Looks up a localized string similar to Account Remark Date.
         /// </summary>
         public static string AccountRemarkDate {
             get {
@@ -2302,7 +2302,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AutoSuspend.
+        ///   Looks up a localized string similar to Auto Suspend.
         /// </summary>
         public static string autoSuspend {
             get {
@@ -2536,7 +2536,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Custid.
+        ///   Looks up a localized string similar to Cust ID.
         /// </summary>
         public static string Custid {
             get {
@@ -3094,7 +3094,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to doublecommission.
+        ///   Looks up a localized string similar to Double Commission.
         /// </summary>
         public static string doublecommission {
             get {
@@ -3310,7 +3310,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GroupID.
+        ///   Looks up a localized string similar to Group ID.
         /// </summary>
         public static string GroupID {
             get {
@@ -3382,7 +3382,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to InstallmentAmount.
+        ///   Looks up a localized string similar to Installment Amount.
         /// </summary>
         public static string InstallmentAmount {
             get {
@@ -3391,7 +3391,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to InstallmentDate.
+        ///   Looks up a localized string similar to Installment Date.
         /// </summary>
         public static string InstallmentDate {
             get {
@@ -5272,7 +5272,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v3smpt_20 {
             get {
@@ -5875,7 +5875,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to IsGroupHeadline.
+        ///   Looks up a localized string similar to Is Group Headline.
         /// </summary>
         public static string IsGroupHeadline {
             get {
@@ -6622,7 +6622,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max Money Line.
+        ///   Looks up a localized string similar to Max Moneyline.
         /// </summary>
         public static string maxv10pt_20 {
             get {
@@ -6649,7 +6649,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max MoneyLine.
+        ///   Looks up a localized string similar to Max Moneyline.
         /// </summary>
         public static string maxv11pt_20 {
             get {
@@ -8368,7 +8368,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New AgentID.
+        ///   Looks up a localized string similar to New Agent ID.
         /// </summary>
         public static string NewAgentId {
             get {
@@ -8395,7 +8395,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New MasterID.
+        ///   Looks up a localized string similar to New Master ID.
         /// </summary>
         public static string newMasterId {
             get {
@@ -8539,7 +8539,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Old MasterID.
+        ///   Looks up a localized string similar to Old Master ID.
         /// </summary>
         public static string oldMasterId {
             get {

@@ -263,7 +263,7 @@
     <value>混合过关</value>
   </data>
   <data name="AccountRemark" xml:space="preserve">
-    <value>AccountRemark</value>
+    <value>Account Remark</value>
   </data>
   <data name="disableautompt" xml:space="preserve">
     <value>禁用自动总代占成</value>
@@ -371,7 +371,7 @@
     <value>亚洲盘</value>
   </data>
   <data name="InstallmentDate" xml:space="preserve">
-    <value>InstallmentDate</value>
+    <value>Installment Date</value>
   </data>
   <data name="v10spt_2" xml:space="preserve">
     <value>单双</value>
@@ -515,7 +515,7 @@
     <value>最高让球</value>
   </data>
   <data name="autoSuspend" xml:space="preserve">
-    <value>AutoSuspend</value>
+    <value>Auto Suspend</value>
   </data>
   <data name="isa_v11mpt_1" xml:space="preserve">
     <value>亚洲盘</value>
@@ -587,7 +587,7 @@
     <value>单双</value>
   </data>
   <data name="AccountRemarkDate" xml:space="preserve">
-    <value>AccountRemarkDate</value>
+    <value>Account Remark Date</value>
   </data>
   <data name="ummbv11" xml:space="preserve">
     <value>更新最低-最高赛车投注</value>
@@ -599,7 +599,7 @@
     <value>更新最低-最高其他投注</value>
   </data>
   <data name="GroupID" xml:space="preserve">
-    <value>GroupID</value>
+    <value>Group ID</value>
   </data>
   <data name="NewAgentId" xml:space="preserve">
     <value>新代理编号</value>
@@ -650,7 +650,7 @@
     <value>国家</value>
   </data>
   <data name="InstallmentAmount" xml:space="preserve">
-    <value>InstallmentAmount</value>
+    <value>Installment Amount</value>
   </data>
   <data name="othercomm" xml:space="preserve">
     <value>其他佣金</value>

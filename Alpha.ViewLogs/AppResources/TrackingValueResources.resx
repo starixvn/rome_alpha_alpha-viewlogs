@@ -263,7 +263,7 @@
     <value>Mix Parlay</value>
   </data>
   <data name="AccountRemark" xml:space="preserve">
-    <value>AccountRemark</value>
+    <value>Account Remark</value>
   </data>
   <data name="disableautompt" xml:space="preserve">
     <value>Disable Auto Master PT</value>
@@ -353,13 +353,13 @@
     <value>Money Line</value>
   </data>
   <data name="newMasterId" xml:space="preserve">
-    <value>New MasterID</value>
+    <value>New Master ID</value>
   </data>
   <data name="v11spt_1" xml:space="preserve">
     <value>Handicap</value>
   </data>
   <data name="Custid" xml:space="preserve">
-    <value>Custid</value>
+    <value>Cust ID</value>
   </data>
   <data name="v3spt_20" xml:space="preserve">
     <value>Money Line</value>
@@ -371,7 +371,7 @@
     <value>Handicap</value>
   </data>
   <data name="InstallmentDate" xml:space="preserve">
-    <value>InstallmentDate</value>
+    <value>Installment Date</value>
   </data>
   <data name="v10spt_2" xml:space="preserve">
     <value>Odd/Even</value>
@@ -434,7 +434,7 @@
     <value>Live 1st Hdp</value>
   </data>
   <data name="IsGroupHeadline" xml:space="preserve">
-    <value>IsGroupHeadline</value>
+    <value>Is Group Headline</value>
   </data>
   <data name="isa_v11smpt_20" xml:space="preserve">
     <value>Money Line</value>
@@ -512,10 +512,10 @@
     <value>Handicap</value>
   </data>
   <data name="maxv11pt_20" xml:space="preserve">
-    <value>Max MoneyLine</value>
+    <value>Max Moneyline</value>
   </data>
   <data name="autoSuspend" xml:space="preserve">
-    <value>AutoSuspend</value>
+    <value>Auto Suspend</value>
   </data>
   <data name="isa_v11mpt_1" xml:space="preserve">
     <value>Handicap</value>
@@ -530,7 +530,7 @@
     <value>Handicap</value>
   </data>
   <data name="maxv10pt_20" xml:space="preserve">
-    <value>Max Money Line</value>
+    <value>Max Moneyline</value>
   </data>
   <data name="fromTrans" xml:space="preserve">
     <value>From Trans</value>
@@ -578,7 +578,7 @@
     <value>Outright</value>
   </data>
   <data name="isa_v3smpt_20" xml:space="preserve">
-    <value>Money Line</value>
+    <value>Moneyline</value>
   </data>
   <data name="isa_v201smpt_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -587,7 +587,7 @@
     <value>Odd/Even</value>
   </data>
   <data name="AccountRemarkDate" xml:space="preserve">
-    <value>AccountRemarkDate</value>
+    <value>Account Remark Date</value>
   </data>
   <data name="ummbv11" xml:space="preserve">
     <value>Update Min-Max Bet Motorsports</value>
@@ -599,10 +599,10 @@
     <value>Update Min-Max Bet OtherSports</value>
   </data>
   <data name="GroupID" xml:space="preserve">
-    <value>GroupID</value>
+    <value>Group ID</value>
   </data>
   <data name="NewAgentId" xml:space="preserve">
-    <value>New AgentID</value>
+    <value>New Agent ID</value>
   </data>
   <data name="MinBv151" xml:space="preserve">
     <value>SA Horse Racing-Min Bet</value>
@@ -617,7 +617,7 @@
     <value>New site</value>
   </data>
   <data name="oldMasterId" xml:space="preserve">
-    <value>Old MasterID</value>
+    <value>Old Master ID</value>
   </data>
   <data name="lblMobilePhone" xml:space="preserve">
     <value>Mobile phone</value>
@@ -650,7 +650,7 @@
     <value>Country</value>
   </data>
   <data name="InstallmentAmount" xml:space="preserve">
-    <value>InstallmentAmount</value>
+    <value>Installment Amount</value>
   </data>
   <data name="othercomm" xml:space="preserve">
     <value>SA Tote Place Comm</value>
@@ -3764,7 +3764,7 @@
     <value>Apply downlines</value>
   </data>
   <data name="doublecommission" xml:space="preserve">
-    <value>doublecommission</value>
+    <value>Double Commission</value>
   </data>
   <data name="disableColossusBets" xml:space="preserve">
     <value>Disable Colossus Bets</value>
