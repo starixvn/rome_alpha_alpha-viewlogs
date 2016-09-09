@@ -54,7 +54,7 @@
                 var newValue = newAttribute.Value;
 
                 var oldAttribute = oldAttributes[newAttribute.Name];
-                var oldValue = oldAttribute.Value;
+                var oldValue = oldAttribute == null ? newValue : oldAttribute.Value;
 
                 newValue = StandardizeAttributeValue(newValue);
                 oldValue = StandardizeAttributeValue(oldValue);
