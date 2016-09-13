@@ -13,7 +13,9 @@ var loginView = {
         iconLoading: null,
         txtUsername: null,
         pagination: null,
-        longMonthsInYear: null
+        longMonthsInYear: null,
+        dataLog: null,
+        navTabs: null
     },
     showOldValuesCookieName: '',
     pageNumber: 0,
@@ -25,6 +27,8 @@ var loginView = {
         loginView.elelments.txtUsername = $('#txt-username');
         loginView.elelments.pagination = $('#pagination');
         loginView.elelments.longMonthsInYear = $('#longMonthsInYear');
+        loginView.elelments.dataLog = $('#DataLog');
+        loginView.elelments.navTabs = $('#nav-tabs');
     },
     initElements: function (viewModel) {
         loginView.cacheElements();
@@ -69,6 +73,7 @@ var loginView = {
 
         loginView.pageNumber = viewModel.pageIndex;
         loginView.pageSize = viewModel.pageSize;
+        loginView.elelments.dataLog.stickyTableHeaders({ fixedOffset: loginView.elelments.navTabs });
     },
     initMonthPicker: function (viewModel) {
         loginView.elelments.ddlMonth.monPickr({

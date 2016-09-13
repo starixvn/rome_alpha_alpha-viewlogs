@@ -16,7 +16,9 @@ var statusView = {
         chkOldValues: null,
         txtUsername: null,
         linkChangTabs: null,
-        pagination: null
+        pagination: null,
+        dataLog: null,
+        navTabs: null
     },
     showOldValuesCookieName: '',
     pageNumber: 0,
@@ -28,6 +30,8 @@ var statusView = {
         statusView.elelments.chkOldValues = $('#chk-oldvalues');
         statusView.elelments.txtUsername = $('#txt-username');
         statusView.elelments.pagination = $('#pagination');
+        statusView.elelments.dataLog = $('#DataLog');
+        statusView.elelments.navTabs = $('#nav-tabs');
     },
     initElements: function (viewModel) {
         statusView.cacheElements();
@@ -78,6 +82,8 @@ var statusView = {
 
         statusView.pageNumber = viewModel.pageIndex;
         statusView.pageSize = viewModel.pageSize;
+
+        statusView.elelments.dataLog.stickyTableHeaders({ fixedOffset: statusView.elelments.navTabs });
     },
     initMonthPicker: function (viewModel) {
         statusView.elelments.ddlMonth.monPickr({

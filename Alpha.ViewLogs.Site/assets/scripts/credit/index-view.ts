@@ -13,7 +13,9 @@ var creditView = {
         iconLoading: null,
         txtUsername: null,
         pagination: null,
-        longMonthsInYear: null
+        longMonthsInYear: null,
+        dataLog: null,
+        navTabs: null
     },
     showOldValuesCookieName: '',
     pageNumber: 0,
@@ -25,6 +27,8 @@ var creditView = {
         creditView.elelments.txtUsername = $('#txt-username');
         creditView.elelments.pagination = $('#pagination');
         creditView.elelments.longMonthsInYear = $('#longMonthsInYear');
+        creditView.elelments.dataLog = $('#DataLog');
+        creditView.elelments.navTabs = $('#nav-tabs');
     },
     initElements: function (viewModel) {
         creditView.cacheElements();
@@ -69,6 +73,7 @@ var creditView = {
 
         creditView.pageNumber = viewModel.pageIndex;
         creditView.pageSize = viewModel.pageSize;
+        creditView.elelments.dataLog.stickyTableHeaders({ fixedOffset: creditView.elelments.navTabs });
     },
     initMonthPicker: function (viewModel) {
         creditView.elelments.ddlMonth.monPickr({
