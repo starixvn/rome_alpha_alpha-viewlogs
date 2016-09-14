@@ -32,10 +32,7 @@
         </td>
         <xsl:choose>
           <xsl:when test="$IsInternal = 0">
-            <td class="colW1"></td>
-            <td class="colW2">
-
-            </td>
+            <td colspan="2"></td>
 
           </xsl:when>
           <xsl:otherwise>
@@ -60,23 +57,11 @@
             <td class="colW2">
               <xsl:value-of select="@newsuperid" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-
-            </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-
-            </td>
+            <td colspan="4"></td>
           </tr>
 
         </xsl:otherwise>
       </xsl:choose>
-
-
-
     </table>
-
-
   </xsl:template>
 </xsl:stylesheet>

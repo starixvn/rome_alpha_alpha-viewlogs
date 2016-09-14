@@ -3,7 +3,7 @@
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
   <xsl:template match="acc_custsetting_agentptonmemberupd">
-    <table class="tblDesc">
+    <table class="tblDesc-ex">
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
@@ -44,7 +44,7 @@
           </xsl:otherwise>
         </xsl:choose>
       </div>
-      <table  class="tblDesc">
+      <table  class="tblDesc-ex">
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('AgentPT')" />
@@ -58,10 +58,7 @@
         <td class="colW2">
           <xsl:value-of select="@islive" />
         </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
-        </td>
+        <td colspan="2"></td>
       </tr>
     </table>
     </xsl:for-each>

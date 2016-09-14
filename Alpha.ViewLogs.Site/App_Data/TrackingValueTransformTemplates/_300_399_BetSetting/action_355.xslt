@@ -52,18 +52,7 @@
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <td>
-
-        </td>
-        <td>
-
-        </td>
-        <td>
-
-        </td>
-        <td>
-
-        </td>
+        <td colspan="4"></td>
       </tr>
     </table>
   </xsl:template>

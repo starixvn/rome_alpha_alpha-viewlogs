@@ -38,61 +38,61 @@
                 </tr>
 
                 <xsl:if test="xslLogFormat:IsVisible('151_41') = 'True'">
-                  <tr>
-                    <td class="colW1" colspan="3">
+                  <tr class="ex-row">
+                    <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset_41')" />
                     </td>
-                    <td class="colW2" colspan="3">
+                    <td class="colW2">
                       <xsl:value-of select="@iscopypreset_41" />
                     </td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_31') = 'True'">
-                  <tr>
-                    <td class="colW1" colspan="3">
+                  <tr class="ex-row">
+                    <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset_31')" />
                     </td>
-                    <td class="colW2" colspan="3">
+                    <td class="colW2">
                       <xsl:value-of select="@iscopypreset_31" />
                     </td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_51') = 'True'">
-                  <tr>
-                    <td class="colW1" colspan="3">
+                  <tr class="ex-row">
+                    <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset_51')" />
                     </td>
-                    <td class="colW2" colspan="3">
+                    <td class="colW2">
                       <xsl:value-of select="@iscopypreset151_51" />
                     </td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_41') = 'True'">
-                  <tr>
-                    <td class="colW1" colspan="3">
+                  <tr class="ex-row">
+                    <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset152_41')" />
                     </td>
-                    <td class="colW2" colspan="3">
+                    <td class="colW2">
                       <xsl:value-of select="@iscopypreset152_41" />
                     </td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_51') = 'True'">
-                  <tr>
-                    <td class="colW1" colspan="3">
+                  <tr class="ex-row">
+                    <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset152_51')" />
                     </td>
-                    <td class="colW2" colspan="3">
+                    <td class="colW2">
                       <xsl:value-of select="@iscopypreset152_51" />
                     </td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('153_51') = 'True'">
-                  <tr>
-                    <td class="colW1" colspan="3">
+                  <tr class="ex-row">
+                    <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset153_51')" />
                     </td>
-                    <td class="colW2" colspan="3">
+                    <td class="colW2">
                       <xsl:value-of select="@iscopypreset153_51" />
                     </td>
                   </tr>

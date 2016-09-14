@@ -11,9 +11,10 @@
                     <xsl:value-of select="@membername" />
                 </td>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('OldAgentId')" /></td>
-                <td class="colW2" colspan="3">
+                <td class="colW2">
                     <xsl:value-of select="@oldagentid" />
                 </td>
+                <td colspan="2"></td>
             </tr>
             <tr>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('NewAgentName')" /></td>
@@ -21,9 +22,10 @@
                     <xsl:value-of select="@newagentname" />
                 </td>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('NewAgentId')" /></td>
-                <td class="colW2" colspan="3">
+                <td class="colW2">
                     <xsl:value-of select="@newagentid" />
                 </td>
+                <td colspan="2"></td>
             </tr>
             <tr>
                 <!--<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('userid')" /></td>
@@ -61,14 +63,5 @@
                 </td>
             </tr>
         </table>
-
-
-
-
-
-
-
-
-
     </xsl:template>
 </xsl:stylesheet>

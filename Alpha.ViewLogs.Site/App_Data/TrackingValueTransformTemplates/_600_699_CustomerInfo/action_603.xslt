@@ -115,9 +115,10 @@
             <td class="colW1">
               <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
             </td>
-            <td class="colW2" colspan="5">
+            <td class="colW2">
               <xsl:value-of select="@errmsg" />
             </td>
+            <td colspan="4"></td>
           </tr>
           <xsl:choose>
             <xsl:when test="@minb">
@@ -171,13 +172,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@playerdiscountmyanmarodds" />
                   </td>
-                  <td class="colW1">
-                  </td>
-                  <td class="colW2">
-                  </td>
-                  <td class="colW1">
-                  </td>
-                  <td class="colW2">
+                  <td colspan="4">
                   </td>
                 </tr>
               </xsl:if>
@@ -374,10 +369,7 @@
                 <td class="colW2">
                   <xsl:value-of select="@disableoutright" />
                 </td>
-                <td class="colW1"></td>
-                <td class="colW2">
-
-                </td>
+                <td colspan="2"></td>
               </tr>
 
             </xsl:when>
@@ -400,10 +392,7 @@
                 <td class="colW2">
                   <xsl:value-of select="@recommend" />
                 </td>
-                <td class="colW1"></td>
-                <td class="colW2">
-
-                </td>
+                <td colspan="2"></td>
               </tr>
             </xsl:otherwise>
           </xsl:choose>

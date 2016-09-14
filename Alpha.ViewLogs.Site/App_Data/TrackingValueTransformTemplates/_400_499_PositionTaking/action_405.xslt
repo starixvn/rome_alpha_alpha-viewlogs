@@ -48,20 +48,13 @@
 									<td class="colW2">
 										<xsl:value-of select="@language" />
 									</td>
-									<td class="colTitle"></td>
-									<td class="colValue">
-
-									</td>
+									<td colspan="2"></td>
 								</tr>
 
 							</table>
 						</div>
 					</td>
 				</tr>
-
-
-
-
 			</xsl:for-each>
 			<xsl:for-each select="s">
 				<tr class="headerDetailNormal" onclick="slideToggle(this);">
@@ -82,10 +75,7 @@
 					<td class="colW2">
 						<xsl:value-of select="@v201spt_3" />
 					</td>
-					<td class="colTitle"></td>
-					<td class="colValue">
-
-					</td>
+					<td colspan="2"></td>
 				</tr>
 
 			</xsl:for-each>
@@ -108,10 +98,7 @@
 					<td class="colW2">
 						<xsl:value-of select="@a_v201spt_3" />
 					</td>
-					<td class="colTitle"></td>
-					<td class="colValue">
-
-					</td>
+					<td colspan="2"></td>
 				</tr>
 
 
@@ -135,10 +122,7 @@
 					<td class="colW2">
 						<xsl:value-of select="@isa_v201spt_3" />
 					</td>
-					<td class="colTitle"></td>
-					<td class="colValue">
-
-					</td>
+					<td colspan="2"></td>
 				</tr>
 
 

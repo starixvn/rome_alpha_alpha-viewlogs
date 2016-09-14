@@ -33,10 +33,7 @@
 
                 <xsl:choose>
                     <xsl:when test="$IsInternal = 0">
-                        <td class="colW1"></td>
-                        <td class="colW2">
-
-                        </td>
+                        <td colspan="2"></td>
                     </xsl:when>
                     <xsl:otherwise>
                         <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('loginSubAccID')" /></td>

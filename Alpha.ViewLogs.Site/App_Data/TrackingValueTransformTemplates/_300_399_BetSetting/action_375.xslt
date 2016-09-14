@@ -18,9 +18,7 @@
         <td class="colW2">
           <xsl:value-of select="@isautoresetlivecasino" />
         </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
+        <td colspan="2">
         </td>
       </tr>
       <tr>
@@ -56,11 +54,7 @@
         <td class="colW2">
           <xsl:value-of select="@errmsg" />
         </td>
-        <td class="colW1">
-
-        </td>
-        <td class="colW2">
-
+        <td colspan="2">
         </td>
       </tr>
     </table>

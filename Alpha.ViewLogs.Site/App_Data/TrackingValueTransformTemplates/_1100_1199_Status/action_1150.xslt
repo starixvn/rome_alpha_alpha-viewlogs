@@ -54,18 +54,7 @@
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <td class="colW1">
-
-        </td>
-        <td class="colW2">
-
-        </td>
-        <td class="colW1">
-
-        </td>
-        <td class="colW2">
-
-        </td>
+        <td colspan="4"></td>
       </tr>
       <xsl:choose>
         <xsl:when test="@subaccid">
@@ -81,18 +70,7 @@
                 <td class="colW2">
                   <xsl:value-of select="@subaccid" />
                 </td>
-                <td class="colW1">
-
-                </td>
-                <td class="colW2">
-
-                </td>
-                <td class="colW1">
-
-                </td>
-                <td class="colW2">
-
-                </td>
+                <td colspan="4"></td>
               </tr>
             </xsl:otherwise>
           </xsl:choose>

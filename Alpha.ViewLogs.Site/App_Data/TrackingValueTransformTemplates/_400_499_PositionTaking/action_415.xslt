@@ -48,14 +48,7 @@
                                 <td class="colW2">
                                     <xsl:value-of select="@errmsg" />
                                 </td>
-                                 <td class="colTitle"></td>
-                                <td class="colValue">
-                                    
-                                </td>
-                                <td class="colTitle"></td>
-                                <td class="colValue">
-
-                                </td>
+                              <td colspan="4"></td>
                             </tr>
                         </table>
                       </div>
@@ -79,10 +72,7 @@
                                 <td class="colW2">
                                     <xsl:value-of select="@v201spt_3" />
                                 </td>
-                                    <td class="colTitle"></td>
-                                <td class="colValue">
-
-                                </td>
+                              <td colspan="2"></td>
                             </tr>
                         </table>
                       </div>
@@ -106,10 +96,7 @@
                                 <td class="colW2">
                                     <xsl:value-of select="@a_v201spt_3" />
                                 </td>
-                                   <td class="colTitle"></td>
-                                <td class="colValue">
-
-                                </td>
+                              <td colspan="2"></td>
                             </tr>
                         </table>
                       </div>
@@ -133,10 +120,7 @@
                                 <td class="colW2">
                                     <xsl:value-of select="@isa_v201spt_3" />
                                 </td>
-                                    <td class="colTitle"></td>
-                                <td class="colValue">
-
-                                </td>
+                              <td colspan="2"></td>
                             </tr>
                         </table>
                       </div>
@@ -160,10 +144,7 @@
                                 <td class="colW2">
                                     <xsl:value-of select="@v201mpt_3" />
                                 </td>
-                                   <td class="colTitle"></td>
-                                <td class="colValue">
-
-                                </td>
+                              <td colspan="2"></td>
                             </tr>
                         </table>
                       </div>

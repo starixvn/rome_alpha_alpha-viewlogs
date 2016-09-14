@@ -101,17 +101,7 @@
                 <td class="colW2">
                   <xsl:value-of select="@minv151pt_42" />
                 </td>
-                <td class="colW1">
-                
-                </td>
-                <td class="colW2">
-               
-                </td>
-                <td class="colW1">
-
-                </td>
-                <td class="colW2">
-
+                <td colspan="4">
                 </td>
               </tr>
             </xsl:when>
@@ -277,24 +267,7 @@
 								  <td class="colW2">
 									  <xsl:value-of select="@errmsg" />
 								  </td>
-								  <td>
-
-								  </td>
-								  <td>
-
-								  </td>
-								  <td>
-
-								  </td>
-								  <td>
-
-								  </td>
-								  <td>
-
-								  </td>
-								  <td>
-
-								  </td>
+								  <td colspan="6"></td>
 							  </tr>
 						  </table>
 					  </div>

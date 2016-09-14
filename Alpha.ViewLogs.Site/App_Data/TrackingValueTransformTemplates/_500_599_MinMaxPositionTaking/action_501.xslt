@@ -102,14 +102,7 @@
             <td class="colW2">
               <xsl:value-of select="@maxv201pt_3" />
             </td>
-            <td class="colTitle"></td>
-            <td class="colValue">
-
-            </td>
-            <td class="colTitle"></td>
-            <td class="colValue">
-
-            </td>
+            <td colspan="4"></td>
           </tr>
 
         </table>
@@ -258,14 +251,7 @@
               <td class="colW2">
                 <xsl:value-of select="@maxv201pt_3" />
               </td>
-              <td class="colTitle"></td>
-              <td class="colValue">
-
-              </td>
-              <td class="colTitle"></td>
-              <td class="colValue">
-
-              </td>
+              <td colspan="4"></td>
             </tr>
           </xsl:for-each>
         </table>

@@ -338,16 +338,7 @@
 
                         <xsl:value-of select="@creator" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-
-                      </td>
+                      <td colspan="4"></td>
                     </tr>
                   </xsl:otherwise>
                 </xsl:choose>
@@ -369,10 +360,7 @@
                   </td>
                   <xsl:choose>
                     <xsl:when test="$IsInternal = 0">
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <td colspan="2"></td>
                     </xsl:when>
                     <xsl:otherwise>
                       <td class="colW1">
@@ -506,13 +494,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@discountmyanmarodds" />
                   </td>
-                  <td class="colW1">
-                  </td>
-                  <td class="colW2">
-                  </td>
-                  <td class="colW1">
-                  </td>
-                  <td class="colW2">
+                  <td colspan="4">
                   </td>
                 </tr>
                 <tr>
@@ -718,16 +700,7 @@
 
                         <xsl:value-of select="@creator" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-
-                      </td>
+                      <td colspan="4"></td>
                     </tr>
                   </xsl:otherwise>
                 </xsl:choose>
@@ -749,10 +722,7 @@
                   </td>
                   <xsl:choose>
                     <xsl:when test="$IsInternal = 0">
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <td colspan="2"></td>
                     </xsl:when>
                     <xsl:otherwise>
                       <td class="colW1">

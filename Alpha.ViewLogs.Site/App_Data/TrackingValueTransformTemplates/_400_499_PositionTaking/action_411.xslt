@@ -3,7 +3,7 @@
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
   <xsl:template match="acc_customerupdmaster_positiontaking">
-    <table class="tblDesc">
+    <table class="tblDesc-ex">
       <xsl:for-each select="info">
         <tr class="headerDetail" onclick="slideToggle(this);">
           <td colspan="6">
@@ -13,11 +13,11 @@
 		  <tr>
 			  <td colspan="6">
 				  <div >
-					  <table class="tblDesc" >
+					  <table class="tblDesc-1" >
 						  <tr>
 							  <td colspan="6">
 								  <div style="display:block;">
-									  <table class="tblDesc" >
+									  <table class="tblDesc-2" >
 										  <tr>
 											  <td class="colW1">
 												  <xsl:value-of select="xslLogFormat:GetLogResource('Updallmembers')" />
@@ -139,21 +139,14 @@
 												  <xsl:value-of select="@errcode" />
 											  </td>											  
 										  </tr>
-                      <tr>
+                      <tr class="ex-row">
                         <td class="colTitle">
                           <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
                         </td>
                         <td class="colValue">
                           <xsl:value-of select="@errmsg" />
                         </td>
-                        <td class="colTitle">
-                        </td>
-                        <td class="colValue">
-                        </td>
-                        <td class="colTitle">
-                        </td>
-                        <td class="colValue">
-                        </td>
+                        <td colspan="4"></td>
                       </tr>
 									  </table>
 								  </div>

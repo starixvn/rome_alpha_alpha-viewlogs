@@ -14,7 +14,7 @@
         </xsl:otherwise>
       </xsl:choose>
     </div>
-    <table class="tblDesc">
+    <table class="tblDesc-ex">
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('AgentPT')" />

@@ -8,6 +8,9 @@ body {
 $sporttype-detail-bg: #d3d6db;
 $height-td: 28px;
 
+.page-viewlog {
+    padding: 0;
+}
 
 .tab-content {
     margin-bottom: 15px;
@@ -17,8 +20,8 @@ $height-td: 28px;
 .nav.nav-tabs {
     background: #f4f4f4;
     position: fixed;
-    left: 15px;
-    right: 15px;
+    left: 0;
+    right: 0;
     z-index: 99999;
 }
 
@@ -77,11 +80,12 @@ $height-td: 28px;
     }
 }
 
-.tblRpt .tblDesc tr:last-child .tblDesc > tbody > tr > td {
+.tblRpt .tblDesc tr:last-child .tblDesc > tbody > tr > td,
+.tblRpt .tblDesc-ex tr:last-child .tblDesc-ex > tbody > tr > td {
     border-bottom: 1px solid #ddd;
 }
 
-.tblRpt .tblDesc, .tbl-sub-details {
+.tblRpt .tblDesc, .tbl-sub-details, .tblRpt .tblDesc-ex {
     width: 100%;
 
     > tbody > tr > td {
@@ -92,6 +96,14 @@ $height-td: 28px;
         &:last-child {
             border-right: none;
         }
+    }
+
+    tbody tr.ex-row td:last-child {
+        border-right: 1px solid #ddd;
+    }
+
+    tbody tr.ex-row + tr td {
+        border-top: 1px solid #ddd;
     }
 
     tbody tr:last-child td {
@@ -105,11 +117,6 @@ $height-td: 28px;
         width: 18.1818%;
     }
 
-    .tblDesc {
-        td.colW1, td.colTitle {
-            padding: 0 16px;
-        }
-    }
     td.colW2, td.colValue {
         text-transform: capitalize;
         width: 16.6667%;
@@ -146,6 +153,16 @@ $height-td: 28px;
     }
 }
 
+.tblDesc, .tblDesc-ex {
+    td.colW1, td.colTitle {
+        padding: 0 16px;
+    }
+}
+
+.tblRpt .tblDesc-ex .tblDesc-1,
+.tblRpt .tblDesc-ex .tblDesc-2 {
+    width: 100%;
+}
 
 .tblRpt  td {
     .valuechanged, .valueold {
@@ -205,20 +222,45 @@ $height-td: 28px;
     font-style: italic;
     color: #404040;
 }
-.tblRpt .tblDesc tbody tr:first-child:nth-last-child(1) td{
-    height: 70px;
+.tblRpt .tblDesc-ex .tblDesc-1 .tblDesc-2 tbody tr:first-child:nth-last-child(1) td,
+.tblRpt .tblDesc tbody tr:first-child:nth-last-child(1) td
+{
+    height: 64px;
 }
 
 .tblRpt .tblDesc tbody tr:first-child:nth-last-child(2), 
 .tblRpt .tblDesc tbody tr:first-child:nth-last-child(2) ~ tr {
-    td { height: 35px;}
+    td { height: 32px;}
 }
 
-.tblRpt > tbody > tr > td .tblDesc {
+.tblRpt > tbody > tr > td .tblDesc{
     border-top: 1px solid #ddd;
     &:first-child {
         border-top: none;
     }
+}
+
+.tblRpt .tblDesc-ex .tblDesc-1 .tblDesc-2 tbody tr {
+    &:first-child {
+        td { border-top: none; }
+    }
+    td {
+        border-top: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    &.ex-row td:last-child {
+        border-right: 1px solid #ddd;
+    }
+
+    &.ex-row + tr td {
+        border-top: 1px solid #ddd;
+    }
+
+    
 }
 
 

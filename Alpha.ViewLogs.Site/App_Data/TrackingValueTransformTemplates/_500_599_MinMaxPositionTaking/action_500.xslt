@@ -186,14 +186,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv3pt_20" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-             
-            </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-             
-            </td>
+            <td colspan="4"></td>
 
           </tr>
 
@@ -226,10 +219,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv5pt_9999" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-             
-            </td>
+            <td colspan="2"></td>
 
           </tr>
 
@@ -275,15 +265,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv10pt_20" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-              
-            </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-            
-            </td>
-
+            <td colspan="4"></td>
           </tr>
 
           <tr class="headerSportTypeDetail">
@@ -298,10 +280,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv11pt_20" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-              
-            </td>
+            <td colspan="2"></td>
           </tr>
 
           <tr class="headerSportTypeDetail">
@@ -322,9 +301,7 @@
             <td class="colW2">
               <xsl:value-of select="@maxv154pt_20" />
             </td>
-            <td class="colW1">
-            </td>
-            <td class="colW2">
+            <td colspan="2">
             </td>
 
           </tr>        
@@ -355,9 +332,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv161livept_85" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2"> 
-            </td>
+            <td colspan="2"></td>
           </tr>
           
           <tr class="headerSportTypeDetail">
@@ -383,15 +358,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv99pt_20" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-              
-            </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-              
-            </td>
-
+            <td colspan="4"></td>
           </tr>
           <tr class="headerSportTypeDetail">
             <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('mixsports')" /></td>
@@ -401,14 +368,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv99pt_9" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-            </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-
-            </td>
-
+            <td colspan="4"></td>
           </tr>
         </table>
       </xsl:when>
@@ -456,10 +416,7 @@
             </td>
             <xsl:choose>
               <xsl:when test="$IsInternal = 0">
-                <td class="colW1"></td>
-                <td class="colW2">
-
-                </td>
+                <td colspan="2"></td>
               </xsl:when>
               <xsl:otherwise>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('SubAccID')" /></td>
@@ -592,17 +549,9 @@
             <td class="colW2">
               <xsl:value-of select="@minv2pt_10" />
             </td>
-            <td class="colW1">            
-            </td>
-            <td class="colW2">   
-            </td>
-            <td class="colW1">           
-            </td>
-            <td class="colW2">
+            <td colspan="4">            
             </td>
           </tr>
-          
-         
           <tr class="headerSportTypeDetail">
             <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('football')" /></td>
           </tr>
@@ -634,8 +583,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv3pt_10" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2"> </td>
+            <td colspan="2"></td>
           </tr>
   
           <tr class="headerSportTypeDetail">
@@ -699,10 +647,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv8pt_10" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2"></td>
-            <td class="colW1"></td>
-            <td class="colW2"></td>
+            <td colspan="4"></td>
           </tr>
         
           <tr class="headerSportTypeDetail">
@@ -734,8 +679,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv10pt_10" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2"></td>
+            <td colspan="2"></td>
           </tr>
 
           <tr class="headerSportTypeDetail">
@@ -776,9 +720,7 @@
             <td class="colW2">
               <xsl:value-of select="@maxv154pt_20" />
             </td>
-            <td class="colW1">
-            </td>
-            <td class="colW2">
+            <td colspan="2">
             </td>
 
           </tr>
@@ -811,10 +753,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv161livept_85" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-             
-            </td>
+            <td colspan="2"></td>
           </tr>
 
           
@@ -846,8 +785,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv10pt_10" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2"></td>
+            <td colspan="2"></td>
           </tr>
 
           <tr class="headerSportTypeDetail">
@@ -858,14 +796,7 @@
             <td class="colW2">
               <xsl:value-of select="@minv99pt_9" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-              
-            </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-            
-            </td>
+            <td colspan="4"></td>
 
           </tr>
         </table>

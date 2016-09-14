@@ -62,14 +62,7 @@
 
               <xsl:value-of select="@subaccid" />
             </td>
-            <td class="colTitle"></td>
-            <td class="colValue">
-
-            </td>
-            <td class="colTitle"></td>
-            <td class="colValue">
-
-            </td>
+            <td colspan="4"></td>
           </tr>
         </xsl:otherwise>
       </xsl:choose>

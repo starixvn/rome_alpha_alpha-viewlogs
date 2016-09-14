@@ -173,14 +173,7 @@
           <td class="colW2">
             <xsl:value-of select="@mpmv161" />
           </td>
-          <td class="colW1">
-          </td>
-          <td class="colW2">
-          </td>
-          <td class="colW1">
-          </td>
-          <td class="colW2">
-          </td>
+          <td colspan="4"></td>
         </tr>
       </table>
     </xsl:template>
@@ -400,10 +393,7 @@
                 <td class="colW2">
                     <xsl:value-of select="@errmsg" />
                 </td>
-                <td class="colW1"></td>
-                <td class="colW2">
-
-                </td>
+              <td colspan="2"></td>
             </tr>
         </table>
     </xsl:template>

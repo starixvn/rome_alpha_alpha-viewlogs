@@ -59,12 +59,13 @@
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('153_51') = 'True'">
             <tr>
-              <td class="colW1" colspan="3">
+              <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('v153discount_51')" />
               </td>
-              <td class="colW2" colspan="3">
+              <td class="colW2">
                 <xsl:value-of select="@v153discount_51" />
               </td>
+              <td colspan="4"></td>
             </tr>
           </xsl:if>
 
@@ -101,9 +102,7 @@
             <td class="colW2">
               <xsl:value-of select="@language" />
             </td>
-            <td class="colTitle"></td>
-            <td class="colValue">
-            </td>
+            <td colspan="2"></td>
           </tr>
         </table>
       </xsl:when>
@@ -159,14 +158,7 @@
             <td class="colW2">
               <xsl:value-of select="@errmsg" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-
-            </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-
-            </td>
+            <td colspan="4"></td>
           </tr>
         </table>
       </xsl:otherwise>

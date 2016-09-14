@@ -79,9 +79,10 @@
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
         </td>
-        <td class="colW2" colspan="5">
+        <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatErrMsg(@errmsg)" />
         </td>
+        <td colspan="4"></td>
       </tr>
     </table>
   </xsl:template>

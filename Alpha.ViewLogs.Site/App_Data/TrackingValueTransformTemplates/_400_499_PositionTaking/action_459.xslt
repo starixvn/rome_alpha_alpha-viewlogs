@@ -74,9 +74,10 @@
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
         </td>
-        <td class="colW2" colspan="3">
+        <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
+        <td colspan="2"></td>
       </tr>
     </table>
   </xsl:template>

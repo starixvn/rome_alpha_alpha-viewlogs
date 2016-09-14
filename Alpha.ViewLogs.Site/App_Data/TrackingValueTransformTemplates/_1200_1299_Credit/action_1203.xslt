@@ -73,10 +73,7 @@
               <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
             </td>
 
-            <td class="colTitle"></td>
-            <td class="colValue">
-
-            </td>
+            <td colspan="2"></td>
           </tr>
 
         </xsl:otherwise>

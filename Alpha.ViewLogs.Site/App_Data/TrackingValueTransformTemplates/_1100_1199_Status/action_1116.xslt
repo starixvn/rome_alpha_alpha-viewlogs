@@ -154,10 +154,7 @@
         <td class="colW2">
           <xsl:value-of select="@subaccname" />
         </td>
-        <td class="colTitle"></td>
-        <td class="colValue">
-
-        </td>
+        <td colspan="2"></td>
       </tr>
 
 
