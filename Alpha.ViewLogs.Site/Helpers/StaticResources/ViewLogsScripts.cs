@@ -6,7 +6,7 @@
     {
         public static string GetAbsolutePath(string relativePath)
         {
-            return VirtualPathUtility.ToAbsolute($"{relativePath}{MinText}.js");
+            return VirtualPathUtility.ToAbsolute($"{relativePath}{MinText}.js?v={StaticResourcesVersion}");
         }
     }
 }
