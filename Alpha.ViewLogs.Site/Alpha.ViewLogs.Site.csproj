@@ -292,7 +292,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1211.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1400_1499_SpecialDelete\action_1400.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1500.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1501.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1502.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1503.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1504.xslt" />
@@ -530,10 +532,10 @@
     <Content Include="assets\bundles\credit.min.js">
       <DependentUpon>credit.js</DependentUpon>
     </Content>
-    <Content Include="assets\bundles\customersetting.js" />
-    <Content Include="assets\bundles\customersetting.min.js" />
     <Content Include="assets\bundles\default.css" />
-    <Content Include="assets\bundles\default.min.css" />
+    <Content Include="assets\bundles\default.min.css">
+      <DependentUpon>default.css</DependentUpon>
+    </Content>
     <Content Include="assets\bundles\login.js" />
     <Content Include="assets\bundles\login.min.js">
       <DependentUpon>login.js</DependentUpon>
