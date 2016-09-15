@@ -27,18 +27,17 @@ $height-td: 28px;
 
 .filter {
     .form-group {
+        vertical-align: middle;
         #txt-username {
             width: 200px;
         }
 
-        #monthPickerID {
-            display: inline-block;
-            vertical-align: bottom;
+        .monpickr-wrap-parent {
+            height: 28px !important;
         }
 
         &.submit-box {
             width: 120px;
-            margin-top: -2px;
         }
         label { margin-bottom: 2px;}
     }
