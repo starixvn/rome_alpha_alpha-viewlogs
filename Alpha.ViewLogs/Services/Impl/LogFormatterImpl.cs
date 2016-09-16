@@ -7,7 +7,6 @@
     using AppResources;
     using Constants;
     using Helpers;
-    using Models;
     using Params;
     using Sunplus.Agent.Model.BL.Cache;
 
