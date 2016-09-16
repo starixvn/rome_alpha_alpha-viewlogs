@@ -229,10 +229,10 @@
         </td>
       </tr>
       <tr>
-        <td class="colW1" colspan="3">
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MPBv161')" />
         </td>
-        <td class="colW2" colspan="3">
+        <td class="colW2">
           <xsl:value-of select="@mpbv161" />
         </td>
       </tr>

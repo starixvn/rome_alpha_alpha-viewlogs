@@ -8,7 +8,7 @@
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:FormatBetTypeId(@bettype)" />
         </td>
-        <td class="colW2" colspan="3">
+        <td class="colW2">
           <xsl:value-of select="@stakelevel1" />
         </td>
         <td class="colW1">
@@ -17,6 +17,7 @@
         <td class="colW2">
           <xsl:value-of select="@subaccname" />
         </td>
+        <td colspan="2"></td>
       </tr>
       <tr>
         <td class="colW1">

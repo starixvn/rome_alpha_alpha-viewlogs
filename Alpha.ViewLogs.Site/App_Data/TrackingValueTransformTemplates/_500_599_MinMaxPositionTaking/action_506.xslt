@@ -56,9 +56,10 @@
 					<xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
 				</td>
 				<xsl:if test="@userid = 8">
-				<td class="colW2" colspan="3">
+				<td class="colW2">
 					<xsl:value-of select="xslLogFormat:FormatErrMsg(@errmsg)" />
 				</td>
+          <td colspan="2"></td>
 				</xsl:if>
 				<xsl:if test="@userid != 8">
 					<td class="colW2">
