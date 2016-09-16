@@ -85,10 +85,12 @@
 
             var nodeCountIncaseOfHavingNewOldDivs = 2;
 
-            if (nodeCount == nodeCountIncaseOfHavingNewOldDivs)
+            if (nodeCount >= nodeCountIncaseOfHavingNewOldDivs)
             {
                 newValue = codes.First().Value;
-                oldValue = codes.Last().Value;
+
+                // oldValue has format: (7 flags for 7 days)
+                oldValue = codes.Last().Value.Substring(1, 8);
 
                 dayCodesWithDiff = dayCodesWithDiff.Replace(newValue, CovertCodeCondition(newValue))
                                                    .Replace(oldValue, CovertCodeCondition(oldValue));
