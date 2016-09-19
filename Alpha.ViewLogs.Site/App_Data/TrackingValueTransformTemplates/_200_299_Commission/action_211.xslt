@@ -8,63 +8,75 @@
       <xsl:when test="@v151discount_31">
         <table class="tblDesc">
           <xsl:if test="xslLogFormat:IsVisible('151_41') = 'True'">
-            <tr class="ex-row">
+            <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('v151discount_41')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@v151discount_41" />
               </td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('151_31') = 'True'">
-            <tr class="ex-row">
+            <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('v151discount_31')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@v151discount_31" />
               </td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('151_51') = 'True'">
-            <tr class="ex-row">
+            <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('v151discount_51')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@v151discount_51" />
               </td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('152_41') = 'True'">
-            <tr class="ex-row">
+            <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('v152discount_41')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@v152discount_41" />
               </td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('152_51') = 'True'">
-            <tr class="ex-row">
+            <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('v152discount_51')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@v152discount_51" />
               </td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('153_51') = 'True'">
-            <tr class="ex-row">
+            <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('v153discount_51')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@v153discount_51" />
               </td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
 
@@ -101,7 +113,7 @@
             <td class="colW2">
               <xsl:value-of select="@language" />
             </td>
-            <td colspan="2"></td>
+            <td class="colW1"></td><td class="colW2"></td>
           </tr>
         </table>
       </xsl:when>
@@ -164,8 +176,8 @@
                 <td class="colW2">
                   <xsl:value-of select="@subaccid" />
                 </td>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
+                <td class="colW1"></td><td class="colW2"></td>
+                <td class="colW1"></td><td class="colW2"></td>
               </tr>
             </xsl:otherwise>
           </xsl:choose>

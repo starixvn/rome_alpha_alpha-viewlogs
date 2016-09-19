@@ -44,7 +44,7 @@
             </td>
           </xsl:when>
           <xsl:otherwise>
-            <td colspan="2"></td>
+            <td class="colW1"></td><td class="colW2"></td>
           </xsl:otherwise>
         </xsl:choose>
       </tr>
@@ -71,7 +71,7 @@
             </td>
           </xsl:when>
           <xsl:otherwise>
-            <td colspan="2"></td>
+            <td class="colW1"></td><td class="colW2"></td>
           </xsl:otherwise>
         </xsl:choose>
       </tr>

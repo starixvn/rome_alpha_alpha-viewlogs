@@ -36,7 +36,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
         </td>
         <td class="colW2"></td>
-        <td colspan="2"></td>
+        <td class="colW1"></td><td class="colW2"></td>
       </tr>
     </table>
   </xsl:template>

@@ -228,21 +228,25 @@
           <xsl:value-of select="@mpmv161" />
         </td>
       </tr>
-      <tr class="ex-row">
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MPBv161')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@mpbv161" />
         </td>
+        <td class="colW1"></td><td class="colW2"></td>
+        <td class="colW1"></td><td class="colW2"></td>
       </tr>
-      <tr class="ex-row">
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('UpdMultiple')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@updmultiple" />
         </td>
+        <td class="colW1"></td><td class="colW2"></td>
+        <td class="colW1"></td><td class="colW2"></td>
       </tr>
       <tr>
         <td class="colW1">
@@ -257,7 +261,8 @@
         <td class="colW2">
           <xsl:value-of select="@language" />
         </td>
-        <td colspan="2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
       </tr>
       <tr>
         <td class="colW1">

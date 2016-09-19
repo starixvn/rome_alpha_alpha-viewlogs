@@ -18,7 +18,7 @@
         <td class="colW2">
           <xsl:value-of select="@language" />
         </td>
-      <td colspan="2"></td>
+        <td class="colW1"></td><td class="colW2"></td>
       </tr>
       <tr>
         <td class="colW1">

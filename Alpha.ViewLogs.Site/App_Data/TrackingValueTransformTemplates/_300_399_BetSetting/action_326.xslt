@@ -36,7 +36,7 @@
             </tr>
             <tr>
             </tr>
-            <tr class="ex-row">                
+            <tr>                
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" /></td>
                 <td class="colW2">
                     <xsl:value-of select="@errcode" />
@@ -45,6 +45,8 @@
                 <td class="colW2">
                     <xsl:value-of select="@errmsg" />
                 </td>
+              <td class="colW1"></td>
+              <td class="colW2"></td>
             </tr>
         </table>
     </xsl:template>

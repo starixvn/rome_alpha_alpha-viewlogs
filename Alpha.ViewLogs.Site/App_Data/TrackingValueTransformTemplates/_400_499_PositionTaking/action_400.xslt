@@ -97,7 +97,7 @@
               </td>
               <xsl:choose>
                 <xsl:when test="$IsInternal = 0">
-                  <td colspan="2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </xsl:when>
                 <xsl:otherwise>
                   <td class="colW1">
@@ -111,7 +111,7 @@
                 </xsl:otherwise>
               </xsl:choose>
 
-              <td colspan="2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
             <tr>
               <td class="colW1">
@@ -402,7 +402,8 @@
               <td class="colW2">
                 <xsl:value-of select="@errmsg" />
               </td>
-              <td colspan="4"></td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </table>
         </xsl:if>
@@ -497,7 +498,7 @@
               </td>
               <xsl:choose>
                 <xsl:when test="$IsInternal = 0">
-                  <td colspan="2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </xsl:when>
                 <xsl:otherwise>
                   <td class="colW1">
@@ -511,7 +512,7 @@
                 </xsl:otherwise>
               </xsl:choose>
 
-              <td colspan="2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
 
             </tr>
             <tr>
@@ -561,8 +562,8 @@
               <td class="colW2">
                 <xsl:value-of select="@discountmyanmarodds" />
               </td>
-              <td colspan="4">
-              </td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
             <tr>
               <td class="colW1">
@@ -793,7 +794,8 @@
               <td class="colW2">
                 <xsl:value-of select="@errmsg" />
               </td>
-              <td colspan="4"></td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </table>
         </xsl:if>
@@ -1646,7 +1648,8 @@
                       <td class="colValue">
                         <xsl:value-of select="@v11mpt_20" />
                       </td>
-                      <td colspan="2"></td>
+                      <td class="colW1"></td>
+                      <td class="colW2"></td>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">

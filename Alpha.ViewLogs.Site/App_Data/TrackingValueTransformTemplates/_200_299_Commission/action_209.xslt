@@ -15,7 +15,8 @@
               <td class="colW2">
                 <xsl:value-of select="@v151discount_41" />
               </td>
-              <td colspan="4"></td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('151_31') = 'True'">
@@ -26,7 +27,8 @@
               <td class="colW2">
                 <xsl:value-of select="@v151discount_31" />
               </td>
-              <td colspan="4"></td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('151_51') = 'True'">
@@ -37,7 +39,8 @@
               <td class="colW2">
                 <xsl:value-of select="@v151discount_51" />
               </td>
-              <td colspan="4"></td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('152_41') = 'True'">
@@ -48,7 +51,8 @@
               <td class="colW2">
                 <xsl:value-of select="@v152discount_41" />
               </td>
-              <td colspan="4"></td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('152_51') = 'True'">
@@ -59,7 +63,8 @@
               <td class="colW2">
                 <xsl:value-of select="@v152discount_51" />
               </td>
-              <td colspan="4"></td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
           <xsl:if test="xslLogFormat:IsVisible('153_51') = 'True'">
@@ -70,7 +75,8 @@
               <td class="colW2">
                 <xsl:value-of select="@v153discount_51" />
               </td>
-              <td colspan="4"></td>
+              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
           </xsl:if>
 
@@ -107,7 +113,7 @@
             <td class="colW2">
               <xsl:value-of select="@language" />
             </td>
-            <td colspan="2"></td>
+            <td class="colW1"></td><td class="colW2"></td>
           </tr>
         </table>
       </xsl:when>
@@ -163,7 +169,8 @@
             <td class="colW2">
               <xsl:value-of select="@errmsg" />
             </td>
-            <td colspan="4"></td>
+            <td class="colW1"></td><td class="colW2"></td>
+            <td class="colW1"></td><td class="colW2"></td>
           </tr>
         </table>
       </xsl:otherwise>

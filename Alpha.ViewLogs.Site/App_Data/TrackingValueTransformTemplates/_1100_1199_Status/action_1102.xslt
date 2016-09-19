@@ -182,7 +182,7 @@
           <td class="colW2">
             <xsl:value-of select="@disable202_1515" />
           </td>
-          <td colspan="2"></td>
+          <td class="colW1"></td><td class="colW2"></td>
         </tr>
       </xsl:if>
       <xsl:for-each select="@*">

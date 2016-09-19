@@ -13,7 +13,7 @@
 		  <td class="colW2">
 			  <xsl:value-of select="@accountremarkdate" />
 		  </td>
-      <td colspan="2"></td>
+      <td class="colW1"></td><td class="colW2"></td>
       </tr>
     </table>
 </xsl:template>

@@ -31,7 +31,8 @@
                 </td>-->
                 <xsl:choose>
                     <xsl:when test="$IsInternal = 0">
-                      <td colspan="2"></td>
+                      <td class="colW1"></td>
+                      <td class="colW2"></td>
                     </xsl:when>
                     <xsl:otherwise>
                         <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('oldMasterId')" /></td>
@@ -44,7 +45,8 @@
                 </xsl:choose>
                 <xsl:choose>
                     <xsl:when test="$IsInternal = 0">
-                        <td colspan="2"></td>
+                      <td class="colW1"></td>
+                      <td class="colW2"></td>
                     </xsl:when>
                     <xsl:otherwise>
                         <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('newMasterId')" /></td>
@@ -56,7 +58,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
 
-                <td colspan="2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
                 <!--<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('userID')" /></td>
         <td class="colW2">
           <xsl:value-of select="@userid" />

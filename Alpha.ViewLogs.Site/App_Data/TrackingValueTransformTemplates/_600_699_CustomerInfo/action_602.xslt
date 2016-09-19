@@ -42,8 +42,7 @@
               <td class="colW2">
                 <xsl:value-of select="@mphone" />
               </td>
-              <td colspan="2">             
-              </td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
             <tr>
               <td class="colW1">
@@ -59,8 +58,7 @@
               <td class="colW2">
                 <xsl:value-of select="@address" />
               </td>
-              <td colspan="2">             
-              </td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>          
             <tr>
               <td class="colW1">
@@ -382,7 +380,8 @@
                   <td class="colW2">
                     <xsl:value-of select="@errcode" />
                   </td>
-                  <td colspan="4"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
               </xsl:when>
               <xsl:otherwise>
@@ -399,7 +398,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@errcode" />
                   </td>
-                  <td colspan="2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
               </xsl:otherwise>
             </xsl:choose>
@@ -441,8 +440,7 @@
               <td class="colW2">
                 <xsl:value-of select="@mphone" />
               </td>
-              <td colspan="2">               
-              </td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>
             <tr>
               <td class="colW1">
@@ -458,8 +456,7 @@
               <td class="colW2">
                 <xsl:value-of select="@address" />
               </td>
-              <td colspan="2">               
-              </td>
+              <td class="colW1"></td><td class="colW2"></td>
             </tr>        
             <tr>
               <td class="colW1">
@@ -581,8 +578,8 @@
                   <td class="colW2">
                     <xsl:value-of select="@discountmyanmarodds" />
                   </td>
-                  <td colspan="4">
-                  </td>
+                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
                 <tr>
                   <td class="colW1">
@@ -772,7 +769,8 @@
                   <td class="colW2">
                     <xsl:value-of select="@errcode" />
                   </td>
-                  <td colspan="4"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
               </xsl:when>
               <xsl:otherwise>
@@ -789,7 +787,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@errcode" />
                   </td>
-                  <td colspan="2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
               </xsl:otherwise>
             </xsl:choose>

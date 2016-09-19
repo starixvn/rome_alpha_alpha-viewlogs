@@ -42,7 +42,7 @@
             <td class="colW2">
               <xsl:value-of select="@discount" />
             </td>
-            <td colspan="2"></td>
+            <td class="colW1"></td><td class="colW2"></td>
           </xsl:when>
           <xsl:otherwise>
             <td class="colW1">
@@ -66,7 +66,7 @@
               <xsl:value-of select="@discount" />
             </td>
             <xsl:if test="not(@bettype)">
-              <td colspan="2"></td>
+              <td class="colW1"></td><td class="colW2"></td>
             </xsl:if>
           </xsl:otherwise>
         </xsl:choose>   

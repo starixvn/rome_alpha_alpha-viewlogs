@@ -37,7 +37,8 @@
 
               <xsl:value-of select="@agentid" />
             </td>
-            <td colspan="4"></td>
+            <td class="colW1"></td><td class="colW2"></td>
+            <td class="colW1"></td><td class="colW2"></td>
           </tr>
 
         </xsl:otherwise>

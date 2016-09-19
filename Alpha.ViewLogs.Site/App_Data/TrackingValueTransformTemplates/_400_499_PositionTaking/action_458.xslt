@@ -64,7 +64,7 @@
           <xsl:value-of select="xslLogFormat:FormatErrMsg(@errmsg)" />
         </td>
       </tr>
-      <tr class="ex-row">
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
         </td>
@@ -77,6 +77,7 @@
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
+        <td class="colW1"></td><td class="colW2"></td>
       </tr>
     </table>
   </xsl:template>

@@ -139,14 +139,15 @@
 												  <xsl:value-of select="@errcode" />
 											  </td>											  
 										  </tr>
-                      <tr class="ex-row">
+                      <tr>
                         <td class="colTitle">
                           <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
                         </td>
                         <td class="colValue">
                           <xsl:value-of select="@errmsg" />
                         </td>
-                        <td colspan="4"></td>
+                        <td class="colW1"></td><td class="colW2"></td>
+                        <td class="colW1"></td><td class="colW2"></td>
                       </tr>
 									  </table>
 								  </div>
@@ -328,10 +329,8 @@
                   <td class="colW2">
                     <xsl:value-of select="@v2spt_10" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
               
 
@@ -373,10 +372,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@v3spt_10" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2">
-
-                  </td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
                 <tr class="headerSportTypeDetail">
                   <td colspan="6">
@@ -457,10 +453,8 @@
                   <td class="colW2">
                     <xsl:value-of select="@v8spt_10" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
               
                 <tr class="headerSportTypeDetail">
@@ -502,8 +496,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@v10spt_10" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
                 
                 <tr class="headerSportTypeDetail">
@@ -571,8 +564,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@v99spt_10" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">
@@ -587,14 +579,8 @@
                   <td class="colW2">
                     <xsl:value-of select="@v154spt_20" />
                   </td>
-                  <td class="colW1">
-                  </td>
-                  <td class="colW2">
-                  </td>
-                  <td class="colW1">
-                  </td>
-                  <td class="colW2">
-                  </td>
+                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">
@@ -681,12 +667,8 @@
                   <td class="colW2">
                     <xsl:value-of select="@v99spt_9" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2">
-
-                  </td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
               </table>
             </div>

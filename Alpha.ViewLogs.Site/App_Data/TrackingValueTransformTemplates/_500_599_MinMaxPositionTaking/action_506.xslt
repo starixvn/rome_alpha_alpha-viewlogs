@@ -59,7 +59,7 @@
 				<td class="colW2">
 					<xsl:value-of select="xslLogFormat:FormatErrMsg(@errmsg)" />
 				</td>
-          <td colspan="2"></td>
+          <td class="colW1"></td><td class="colW2"></td>
 				</xsl:if>
 				<xsl:if test="@userid != 8">
 					<td class="colW2">

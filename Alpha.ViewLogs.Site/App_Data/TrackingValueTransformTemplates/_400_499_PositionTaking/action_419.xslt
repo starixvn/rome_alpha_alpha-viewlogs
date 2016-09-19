@@ -15,63 +15,75 @@
             <div style="display:block;">
               <table class="tblDesc">
                 <xsl:if test="xslLogFormat:IsVisible('151_41') = 'True'">
-                  <tr class="ex-row">
+                  <tr>
                     <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset_41')" />
                     </td>
                     <td class="colW2">
                       <xsl:value-of select="@iscopypreset_41" />
                     </td>
+                    <td class="colW1"></td><td class="colW2"></td>
+                    <td class="colW1"></td><td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_31') = 'True'">
-                  <tr class="ex-row">
+                  <tr>
                     <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset_31')" />
                     </td>
                     <td class="colW2">
                       <xsl:value-of select="@iscopypreset_31" />
                     </td>
+                    <td class="colW1"></td><td class="colW2"></td>
+                    <td class="colW1"></td><td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_51') = 'True'">
-                  <tr class="ex-row">
+                  <tr>
                     <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset_51')" />
                     </td>
                     <td class="colW2">
                       <xsl:value-of select="@iscopypreset_51" />
                     </td>
+                    <td class="colW1"></td><td class="colW2"></td>
+                    <td class="colW1"></td><td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_41') = 'True'">
-                  <tr class="ex-row">
+                  <tr>
                     <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset152_41')" />
                     </td>
                     <td class="colW2">
                       <xsl:value-of select="@iscopypreset152_41" />
                     </td>
+                    <td class="colW1"></td><td class="colW2"></td>
+                    <td class="colW1"></td><td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_51') = 'True'">
-                  <tr class="ex-row">
+                  <tr>
                     <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset152_51')" />
                     </td>
                     <td class="colW2">
                       <xsl:value-of select="@iscopypreset152_51" />
                     </td>
+                    <td class="colW1"></td><td class="colW2"></td>
+                    <td class="colW1"></td><td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('153_51') = 'True'">
-                  <tr class="ex-row">
+                  <tr>
                     <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('IsCopyPreset153_51')" />
                     </td>
                     <td class="colW2">
                       <xsl:value-of select="@iscopypreset153_51" />
                     </td>
+                    <td class="colW1"></td><td class="colW2"></td>
+                    <td class="colW1"></td><td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <tr>
@@ -162,6 +174,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v151spt_42" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_31') = 'True'">
@@ -178,6 +192,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v151spt_32" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_51') = 'True'">
@@ -194,6 +210,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v151spt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_41') = 'True'">
@@ -210,6 +228,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v152spt_42" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_51') = 'True'">
@@ -226,6 +246,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v152spt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('153_51') = 'True'">
@@ -242,6 +264,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v153spt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
               </table>
@@ -275,6 +299,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@a_v151spt_42" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_31') = 'True'">
@@ -291,6 +317,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@a_v151spt_32" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_51') = 'True'">
@@ -307,6 +335,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@a_v151spt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_41') = 'True'">
@@ -323,6 +353,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@a_v152spt_42" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_51') = 'True'">
@@ -339,6 +371,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@a_v152spt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('153_51') = 'True'">
@@ -355,6 +389,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@a_v153spt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
               </table>
@@ -388,6 +424,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@isa_v151spt_42" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_31') = 'True'">
@@ -404,6 +442,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@isa_v151spt_32" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_51') = 'True'">
@@ -420,6 +460,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@isa_v151spt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_41') = 'True'">
@@ -436,6 +478,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@isa_v152spt_42" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_51') = 'True'">
@@ -452,6 +496,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@isa_v152spt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('153_51') = 'True'">
@@ -468,7 +514,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@isa_v153spt_52" />
                     </td>
-
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
               </table>
@@ -501,6 +548,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v151mpt_42" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_31') = 'True'">
@@ -517,6 +566,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v151mpt_32" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('151_51') = 'True'">
@@ -533,6 +584,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v151mpt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_41') = 'True'">
@@ -549,6 +602,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v152mpt_42" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('152_51') = 'True'">
@@ -565,6 +620,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v152mpt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
                 <xsl:if test="xslLogFormat:IsVisible('153_51') = 'True'">
@@ -581,6 +638,8 @@
                     <td class="colW2">
                       <xsl:value-of select="@v153mpt_52" />
                     </td>
+                    <td class="colW1"></td>
+                    <td class="colW2"></td>
                   </tr>
                 </xsl:if>
               </table>

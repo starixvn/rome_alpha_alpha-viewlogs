@@ -136,7 +136,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@v2spt_10" />
                   </td>
-                  <td colspan="2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
                 
                 <tr class="headerSportTypeDetail">
@@ -169,7 +169,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@v3spt_10" />
                   </td>
-                  <td colspan="2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
                 
                 <tr class="headerSportTypeDetail">
@@ -236,7 +236,8 @@
                   <td class="colW2">
                     <xsl:value-of select="@v8spt_10" />
                   </td>
-                  <td colspan="4"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
                 
                 <tr class="headerSportTypeDetail">
@@ -270,7 +271,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@v10spt_10" />
                   </td>
-                  <td colspan="2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
                 
                 <tr class="headerSportTypeDetail">
@@ -325,7 +326,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@v99spt_10" />
                   </td>
-                  <td colspan="2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">
@@ -340,8 +341,8 @@
                   <td class="colW2">
                     <xsl:value-of select="@v154spt_20" />
                   </td>
-                  <td colspan="4">
-                  </td>
+                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">

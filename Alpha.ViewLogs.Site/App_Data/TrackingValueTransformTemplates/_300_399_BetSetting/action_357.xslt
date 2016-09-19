@@ -11,7 +11,8 @@
         <td class="colW2">
           <xsl:value-of select="@stakelevel" />
         </td>
-        <td colspan="4"></td>
+        <td class="colW1"></td><td class="colW2"></td>
+        <td class="colW1"></td><td class="colW2"></td>
       </tr>
       <tr>
         <td class="colW1">
@@ -46,6 +47,8 @@
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatErrMsg(@errmsg)" />
         </td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
       </tr>
     </table>
   </xsl:template>

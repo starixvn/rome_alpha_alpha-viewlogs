@@ -119,7 +119,7 @@
         <td class="colW2">
           <xsl:value-of select="@disablebingo" />
         </td>
-        <td colspan="2"></td>
+        <td class="colW1"></td><td class="colW2"></td>
       </tr>
       <xsl:if test="xslLogFormat:IsVisibleKeno(@hidekeno) = 'True'">
         <tr >
@@ -195,7 +195,7 @@
           <td class="colW2">
             <xsl:value-of select="@disable202_1515" />
           </td>
-          <td colspan="2"></td>
+          <td class="colW1"></td><td class="colW2"></td>
         </tr>
       </xsl:if>
       <xsl:for-each select="@*">

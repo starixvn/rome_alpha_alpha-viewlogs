@@ -118,7 +118,8 @@
             <td class="colW2">
               <xsl:value-of select="@errmsg" />
             </td>
-            <td colspan="4"></td>
+            <td class="colW1"></td><td class="colW2"></td>
+            <td class="colW1"></td><td class="colW2"></td>
           </tr>
           <xsl:choose>
             <xsl:when test="@minb">
@@ -172,8 +173,8 @@
                   <td class="colW2">
                     <xsl:value-of select="@playerdiscountmyanmarodds" />
                   </td>
-                  <td colspan="4">
-                  </td>
+                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td><td class="colW2"></td>
                 </tr>
               </xsl:if>
               <tr>
@@ -369,7 +370,7 @@
                 <td class="colW2">
                   <xsl:value-of select="@disableoutright" />
                 </td>
-                <td colspan="2"></td>
+                <td class="colW1"></td><td class="colW2"></td>
               </tr>
 
             </xsl:when>
@@ -392,7 +393,7 @@
                 <td class="colW2">
                   <xsl:value-of select="@recommend" />
                 </td>
-                <td colspan="2"></td>
+                <td class="colW1"></td><td class="colW2"></td>
               </tr>
             </xsl:otherwise>
           </xsl:choose>
@@ -508,7 +509,8 @@
                       <td class="colValue">
                         <xsl:value-of select="@alivept_8" />
                       </td>
-                      <td colspan="2"></td>
+                      <td class="colW1"></td>
+                      <td class="colW2"></td>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">

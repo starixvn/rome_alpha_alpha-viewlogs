@@ -17,7 +17,7 @@
         <td class="colW2">
           <xsl:value-of select="@subaccname" />
         </td>
-        <td colspan="2"></td>
+        <td class="colW1"></td><td class="colW2"></td>
       </tr>
       <tr>
         <td class="colW1">
@@ -47,7 +47,8 @@
         <td class="colW2">
           <xsl:value-of select="@errmsg" />
         </td>
-        <td colspan="4"></td>
+        <td class="colW1"></td><td class="colW2"></td>
+        <td class="colW1"></td><td class="colW2"></td>
       </tr>
     </table>
   </xsl:template>

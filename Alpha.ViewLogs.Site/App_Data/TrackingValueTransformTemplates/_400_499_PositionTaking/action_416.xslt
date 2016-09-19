@@ -49,7 +49,7 @@
 							  <td class="colW2">
 								  <xsl:value-of select="@errmsg" />
 							  </td>
-                <td colspan="2"></td>
+                <td class="colW1"></td><td class="colW2"></td>
 						  </tr>
 					  </table>
 				  </div>
@@ -76,7 +76,7 @@
           <td class="colW2">
             <xsl:value-of select="@v201apt_3" />
           </td>
-          <td colspan="2"></td>
+          <td class="colW1"></td><td class="colW2"></td>
         </tr>
 
       </xsl:for-each>
@@ -99,7 +99,7 @@
           <td class="colW2">
             <xsl:value-of select="@v201mpt_3" />
           </td>
-          <td colspan="2"></td>
+          <td class="colW1"></td><td class="colW2"></td>
         </tr>
 
       </xsl:for-each>
@@ -122,7 +122,7 @@
           <td class="colW2">
             <xsl:value-of select="@a_v201mpt_3" />
           </td>
-          <td colspan="2"></td>
+          <td class="colW1"></td><td class="colW2"></td>
         </tr>
 
       </xsl:for-each>
@@ -145,7 +145,7 @@
           <td class="colW2">
             <xsl:value-of select="@isa_v201mpt_3" />
           </td>
-          <td colspan="2"></td>
+          <td class="colW1"></td><td class="colW2"></td>
         </tr>
 
       </xsl:for-each>

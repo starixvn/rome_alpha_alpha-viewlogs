@@ -36,7 +36,8 @@
         </td>
         <xsl:choose>
           <xsl:when test="$IsInternal = 0">
-            <td colspan="4"></td>
+            <td class="colW1"></td><td class="colW2"></td>
+            <td class="colW1"></td><td class="colW2"></td>
           </xsl:when>
           <xsl:otherwise>
             <td class="colW1">
@@ -46,7 +47,7 @@
               <xsl:value-of select="@important" />
             </td>
 
-            <td colspan="2"></td>
+            <td class="colW1"></td><td class="colW2"></td>
           </xsl:otherwise>
         </xsl:choose>
 

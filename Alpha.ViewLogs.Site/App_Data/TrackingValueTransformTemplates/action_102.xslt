@@ -1017,7 +1017,8 @@
                       <td class="colValue">
                         <xsl:value-of select="@alivept_8" />
                       </td>
-                      <td colspan="2"></td>
+                      <td class="colW1"></td>
+                      <td class="colW2"></td>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1638,7 +1639,8 @@
                       <td class="colValue">
                         <xsl:value-of select="@v11mpt_20" />
                       </td>
-                      <td colspan="2"></td>
+                      <td class="colW1"></td>
+                      <td class="colW2"></td>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -2027,7 +2029,8 @@
                       <td class="colValue">
                         <xsl:value-of select="@a_v11mpt_20" />
                       </td>
-                      <td colspan="2"></td>
+                      <td class="colW1"></td>
+                      <td class="colW2"></td>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">

@@ -162,7 +162,8 @@
           <td class="colW2">
             <xsl:value-of select="@playerdiscountmyanmarodds" />
           </td>
-          <td colspan="4"></td>
+          <td class="colW1"></td><td class="colW2"></td>
+          <td class="colW1"></td><td class="colW2"></td>
         </tr>
       </table>
     </xsl:if>

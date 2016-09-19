@@ -108,8 +108,7 @@
 							  <td class="colW2">
 								  <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
 							  </td>
-							  <td colspan="2">
-							  </td>
+                <td class="colW1"></td><td class="colW2"></td>
 						  </tr>
 
 						  <tr >
@@ -356,10 +355,8 @@
                   <td class="colValue">
                     <xsl:value-of select="@v8apt_10" />
                   </td>
-                  <td class="colTitle"></td>
-                  <td class="colValue"></td>
-                  <td class="colTitle"></td>
-                  <td class="colValue"></td>
+                  <td class="colTitle"></td><td class="colValue"></td>
+                  <td class="colTitle"></td><td class="colValue"></td>
                 </tr>
                 
                 <tr class="headerSportTypeDetail">
@@ -422,14 +419,8 @@
                   <td class="colValue">
                     <xsl:value-of select="@v154apt_20" />
                   </td>
-                  <td class="colTitle">
-                  </td>
-                  <td class="colValue">
-                  </td>
-                  <td class="colTitle">
-                  </td>
-                  <td class="colValue">
-                  </td>
+                  <td class="colTitle"></td><td class="colValue"></td>
+                  <td class="colTitle"></td><td class="colValue"></td>
                 </tr>
                 
                 <tr class="headerSportTypeDetail">
@@ -526,10 +517,8 @@
                   <td class="colValue">
                     <xsl:value-of select="@v99apt_9" />
                   </td>
-                  <td class="colTitle"></td>
-                  <td class="colValue"></td>
-                  <td class="colTitle"></td>
-                  <td class="colValue"></td>
+                  <td class="colTitle"></td><td class="colValue"></td>
+                  <td class="colTitle"></td><td class="colValue"></td>
                 </tr>
               </table>
             </div>
