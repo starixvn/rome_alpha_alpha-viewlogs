@@ -4,7 +4,7 @@
   <xsl:output method="html" indent="no" />
 
   <xsl:template match="acc_custsetting_stakelevelupd">
-    <table class="tblDesc">
+    <table class="tblDesc-ex">
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
@@ -30,7 +30,7 @@
      <xsl:value-of select="@productname" />
     </div>
     <xsl:for-each select="stakelevel">
-      <table  class="tblDesc">
+      <table  class="tblDesc-ex">
         <tr>
           <xsl:choose>
             <xsl:when test="@bettype">
