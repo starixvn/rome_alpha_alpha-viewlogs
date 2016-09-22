@@ -2,13 +2,11 @@
 {
     using System.Collections.Generic;
     using Fanex.Common;
-    using Helpers;
     using MediatR;
     using Models;
     using Requests;
     using Requests.Credit;
     using Services;
-    using Sunplus.Agent.Utilities;
     using ViewLogs.Helpers;
     using ViewModels;
 
@@ -47,7 +45,7 @@
 
             foreach (var log in pagingLogs.Logs)
             {
-                if (message.ActionIdVisibilities.ContainsKey(log.ActionId) 
+                if (message.ActionIdVisibilities.ContainsKey(log.ActionId)
                     && !message.ActionIdVisibilities[log.ActionId])
                 {
                     viewModel.TotalRecords -= 1;
@@ -67,8 +65,8 @@
                     UserId = log.UserId,
                     Username = log.Username,
 
-                    TrackingValue = Formater.DecFormat(Converter.ToDecimal(log.TrackingValue), 2),
-                    TrackingValueOld = Formater.DecFormat(Converter.ToDecimal(log.TrackingValueOld), 2),
+                    TrackingValue = StringHelper.FormatThousandSeparate(Converter.ToDecimal(log.TrackingValue), 2),
+                    TrackingValueOld = StringHelper.FormatThousandSeparate(Converter.ToDecimal(log.TrackingValueOld), 2),
                     Details = log.Details,
                     IP = this.logFormatter.FormatIP(log.IP)
                 });

@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Helpers
 {
     using System;
+    using System.Linq;
 
     public static class StringHelper
     {
@@ -40,6 +41,12 @@
             }
 
             return value;
+        }
+
+        public static string FormatThousandSeparate(decimal value, int decDigits)
+        {
+            var decPart = string.Join(string.Empty, Enumerable.Repeat("#", decDigits));
+            return value.ToString($"#,##0.{decPart}");
         }
     }
 }

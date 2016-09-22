@@ -47,7 +47,9 @@
                                     <br />
                                     <span class="logid">#@logItem.LogId</span>
                                 </td>
-                                <td align="center">
+                                <td align="left">
+                                    @Html.Raw(logItem.Details)
+                                    <br />
                                     <span class="valuechanged">@Html.Raw(logItem.TrackingValue)</span>
                                     <span class="valueold\">(@Html.Raw(logItem.TrackingValueOld))</span>
                                 </td>

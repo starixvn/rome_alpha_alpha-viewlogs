@@ -54,13 +54,7 @@
             var regex = new Regex(IPValidateRegex);
 
             if (!IsValidIP(ip)
-                || !regex.IsMatch(ip, 0))
-            {
-                return string.Empty;
-            }
-
-            if (IsVNIP(ip)
-                && !userSession.IsAdminCanViewVNIP)
+                || (IsVNIP(ip) && !userSession.IsAdminCanViewVNIP))
             {
                 return string.Empty;
             }

@@ -129,7 +129,7 @@ var loginView = {
                     loginView.pageNumber = pageNumber - 1;
                     loginView.pageSize = pageSize;
 
-                    loginController.viewLogs();
+                    loginController.pageLogs();
                 },
                 beforePageText: viewModel.Page,
                 afterPageText: viewModel.of + ' {pages}',

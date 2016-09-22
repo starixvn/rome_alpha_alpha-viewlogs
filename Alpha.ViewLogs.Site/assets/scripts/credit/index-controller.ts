@@ -25,6 +25,16 @@ var creditController = {
 
         var url = creditController.urls.index + "?" + $.param(viewLogsParams);
         window.location.href = url;
+    },
+    pageLogs: function () {
+        setVisible('hidden');
+        creditView.showLoadingState();
+
+        tabController.viewLogsParams.PageIndex = creditView.pageNumber;
+        tabController.viewLogsParams.PageSize = creditView.pageSize;
+
+        var url = creditController.urls.index + "?" + $.param(tabController.viewLogsParams);
+        window.location.href = url;
     }
 };
 

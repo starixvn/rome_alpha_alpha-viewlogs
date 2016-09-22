@@ -129,7 +129,7 @@ var creditView = {
                     creditView.pageNumber = pageNumber - 1;
                     creditView.pageSize = pageSize;
 
-                    creditController.viewLogs();
+                    creditController.pageLogs();
                 },
                 beforePageText: viewModel.Page,
                 afterPageText: viewModel.of + ' {pages}',

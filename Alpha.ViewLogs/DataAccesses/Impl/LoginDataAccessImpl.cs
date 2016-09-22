@@ -47,7 +47,8 @@
                             SPName = Converter.ToString2(reader["SPName"]),
                             IP = Converter.ToString2(reader["IP"]),
                             Browser = Converter.ToString2(reader["Browser"]),
-                            Domain = Converter.ToString2(reader["Domain"])
+                            Domain = Converter.ToString2(reader["Domain"]),
+                            Country = Converter.ToString2(reader["CountryCode"])
                         });
                     }
                 }

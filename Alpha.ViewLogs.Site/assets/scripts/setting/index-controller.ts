@@ -25,6 +25,16 @@ var settingController = {
 
         var url = settingController.urls.index + "?" + $.param(viewLogsParams);
         window.location.href = url;
+    },
+    pageLogs: function () {
+        setVisible('hidden');
+        settingView.showLoadingState();
+
+        tabController.viewLogsParams.PageIndex = settingView.pageNumber;
+        tabController.viewLogsParams.PageSize = settingView.pageSize;
+
+        var url = settingController.urls.index + "?" + $.param(tabController.viewLogsParams);
+        window.location.href = url;
     }
 };
 

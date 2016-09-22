@@ -137,7 +137,7 @@ var statusView = {
                     statusView.pageNumber = pageNumber - 1;
                     statusView.pageSize = pageSize;
 
-                    statusController.viewLogs();
+                    statusController.pageLogs();
                 },
                 beforePageText: viewModel.Page,
                 afterPageText: viewModel.of + ' {pages}',

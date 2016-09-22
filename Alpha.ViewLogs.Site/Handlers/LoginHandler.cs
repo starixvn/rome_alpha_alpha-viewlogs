@@ -34,7 +34,6 @@
 
             TransformLogs(pagingLogs, message, viewModel);
 
-            viewModel.IsAgent = viewModel.RoleId == UserLevel.Agent.Value;
             viewModel.PreviousUsername = message.PreviousUsername;
             viewModel.ActionTypeId = message.ActionTypeId;
             viewModel.Username = viewModel.RoleId == UserLevel.Agent.Value ? viewModel.PreviousUsername : viewModel.Username;
@@ -76,7 +75,8 @@
                     IP = this.logFormatter.FormatIP(log.IP),
 
                     Domain = log.Domain,
-                    Browser = log.Browser
+                    Browser = log.Browser,
+                    Country = this.logFormatter.FormatCountryCode(log.IP, log.Country)
                 });
             }
 

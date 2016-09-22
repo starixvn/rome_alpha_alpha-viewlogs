@@ -5,5 +5,7 @@
         public string Browser { get; set; }
 
         public string Domain { get; set; }
+
+        public string Country { get; set; }
     }
 }

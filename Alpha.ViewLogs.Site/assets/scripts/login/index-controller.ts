@@ -25,6 +25,16 @@ var loginController = {
 
         var url = loginController.urls.index + "?" + $.param(viewLogsParams);
         window.location.href = url;
+    },
+    pageLogs: function () {
+        setVisible('hidden');
+        loginView.showLoadingState();
+
+        tabController.viewLogsParams.PageIndex = loginView.pageNumber;
+        tabController.viewLogsParams.PageSize = loginView.pageSize;
+
+        var url = loginController.urls.index + "?" + $.param(tabController.viewLogsParams);
+        window.location.href = url;
     }
 };
 

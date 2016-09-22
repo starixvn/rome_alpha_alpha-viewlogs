@@ -25,6 +25,16 @@ var statusController = {
 
         var url = statusController.urls.index + "?" + $.param(viewLogsParams);
         window.location.href = url;
+    },
+    pageLogs: function () {
+        setVisible('hidden');
+        statusView.showLoadingState();
+
+        tabController.viewLogsParams.PageIndex = statusView.pageNumber;
+        tabController.viewLogsParams.PageSize = statusView.pageSize;
+
+        var url = statusController.urls.index + "?" + $.param(tabController.viewLogsParams);
+        window.location.href = url;
     }
 };
 

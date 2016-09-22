@@ -69,6 +69,11 @@
             return CacheRef.GetBettype(betType);
         }
 
+        public string GetProductName(int productId)
+        {
+            return CacheRef.GetProductName(productId);
+        }
+
         public string TransferConditionFromCode(string dayCodesWithDiff)
         {
             if (string.IsNullOrWhiteSpace(dayCodesWithDiff))
