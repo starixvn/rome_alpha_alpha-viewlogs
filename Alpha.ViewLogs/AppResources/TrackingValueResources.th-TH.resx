@@ -1162,9 +1162,6 @@
   <data name="isa_mpt_10" xml:space="preserve">
     <value>การทายผู้ที่จะได้เข้ารอบหรือผู้ที่จะได้แชมป์</value>
   </data>
-  <data name="isa_v5spt_20" xml:space="preserve">
-    <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
-  </data>
   <data name="agentID" xml:space="preserve">
     <value>ไอดีเอเย่น</value>
   </data>
@@ -1373,7 +1370,7 @@
     <value>แนะนำ</value>
   </data>
   <data name="PreAgreeAmount" xml:space="preserve">
-    <value>PreAgreeAmount</value>
+    <value>Pre Agree Amount</value>
   </data>
   <data name="slivept_8" xml:space="preserve">
     <value>เกมสดครึ่งแรก สูงต่ำ</value>
@@ -3535,9 +3532,6 @@
   <data name="copiedFromUsername" xml:space="preserve">
     <value>คัดลอกจากชื่อผู้ใช้</value>
   </data>
-  <data name="IsEnable" xml:space="preserve">
-    <value>IsEnable</value>
-  </data>
   <data name="MinPT" xml:space="preserve">
     <value>แบ่งสู้ขั้นต่ำ</value>
   </data>
@@ -3679,18 +3673,6 @@
   <data name="v154spt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
   </data>
-  <data name="a_v154mpt_20" xml:space="preserve">
-    <value>Money Line</value>
-  </data>
-  <data name="a_v154spt_20" xml:space="preserve">
-    <value>Money Line</value>
-  </data>
-  <data name="isa_v154mpt_20" xml:space="preserve">
-    <value>Money Line</value>
-  </data>
-  <data name="isa_v154spt_20" xml:space="preserve">
-    <value>Money Line</value>
-  </data>
   <data name="Updptv154" xml:space="preserve">
     <value>Update Position Taking HR Fixed Odds</value>
   </data>
@@ -3711,9 +3693,6 @@
   </data>
   <data name="disabledhrfixedodds" xml:space="preserve">
     <value>Disabled HR Fixed Odds</value>
-  </data>
-  <data name="isDefault" xml:space="preserve">
-    <value>IsDefault</value>
   </data>
   <data name="MaximumWin" xml:space="preserve">
     <value>วงเงินชนะสูงสุด</value>
@@ -3810,5 +3789,20 @@
   </data>
   <data name="Disable211_2401" xml:space="preserve">
     <value>Disabled Allbet</value>
+  </data>
+  <data name="isa_v5spt_20" xml:space="preserve">
+    <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
+  </data>
+  <data name="a_v154mpt_20" xml:space="preserve">
+    <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
+  </data>
+  <data name="a_v154spt_20" xml:space="preserve">
+    <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
+  </data>
+  <data name="isa_v154mpt_20" xml:space="preserve">
+    <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
+  </data>
+  <data name="isa_v154spt_20" xml:space="preserve">
+    <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
   </data>
 </root>

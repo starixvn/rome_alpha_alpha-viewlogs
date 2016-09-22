@@ -1162,9 +1162,6 @@
   <data name="isa_mpt_10" xml:space="preserve">
     <value>優勝冠軍</value>
   </data>
-  <data name="isa_v5spt_20" xml:space="preserve">
-    <value>獨贏</value>
-  </data>
   <data name="agentID" xml:space="preserve">
     <value>代理簡別號碼</value>
   </data>
@@ -1373,7 +1370,7 @@
     <value>建議</value>
   </data>
   <data name="PreAgreeAmount" xml:space="preserve">
-    <value>PreAgreeAmount</value>
+    <value>Pre Agree Amount</value>
   </data>
   <data name="slivept_8" xml:space="preserve">
     <value>現場上半場大小</value>
@@ -3535,9 +3532,6 @@
   <data name="copiedFromUsername" xml:space="preserve">
     <value>從用戶名複製</value>
   </data>
-  <data name="IsEnable" xml:space="preserve">
-    <value>IsEnable</value>
-  </data>
   <data name="MinPT" xml:space="preserve">
     <value>最低占成</value>
   </data>
@@ -3673,12 +3667,6 @@
   <data name="hrfixedodds" xml:space="preserve">
     <value>固定賠率賽馬</value>
   </data>
-  <data name="v154apt_20" xml:space="preserve">
-    <value>Money Line</value>
-  </data>
-  <data name="v154spt_20" xml:space="preserve">
-    <value>Money Line</value>
-  </data>
   <data name="a_v154mpt_20" xml:space="preserve">
     <value>獨贏</value>
   </data>
@@ -3694,9 +3682,6 @@
   <data name="Updptv154" xml:space="preserve">
     <value>Update Position Taking HR Fixed Odds</value>
   </data>
-  <data name="v154mpt_20" xml:space="preserve">
-    <value>Money Line</value>
-  </data>
   <data name="disablehrfixedodds" xml:space="preserve">
     <value>Disable HR Fixed Odds</value>
   </data>
@@ -3711,9 +3696,6 @@
   </data>
   <data name="disabledhrfixedodds" xml:space="preserve">
     <value>Disabled HR Fixed Odds</value>
-  </data>
-  <data name="isDefault" xml:space="preserve">
-    <value>IsDefault</value>
   </data>
   <data name="MaximumWin" xml:space="preserve">
     <value>最高贏取倍數</value>
@@ -3810,5 +3792,17 @@
   </data>
   <data name="Disable211_2401" xml:space="preserve">
     <value>Disabled Allbet</value>
+  </data>
+  <data name="isa_v5spt_20" xml:space="preserve">
+    <value>獨贏</value>
+  </data>
+  <data name="v154apt_20" xml:space="preserve">
+    <value>獨贏</value>
+  </data>
+  <data name="v154spt_20" xml:space="preserve">
+    <value>獨贏</value>
+  </data>
+  <data name="v154mpt_20" xml:space="preserve">
+    <value>獨贏</value>
   </data>
 </root>

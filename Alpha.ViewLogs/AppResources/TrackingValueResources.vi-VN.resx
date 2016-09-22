@@ -109,9 +109,6 @@
   <data name="v201apt_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
-  <data name="v10mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="v201mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
@@ -123,9 +120,6 @@
   </data>
   <data name="v201spt_3" xml:space="preserve">
     <value>Over/Under</value>
-  </data>
-  <data name="v3apt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="updptv5" xml:space="preserve">
     <value>Cập nhật giá trị PT của Quấn Vợt</value>
@@ -147,9 +141,6 @@
   </data>
   <data name="MemberName" xml:space="preserve">
     <value>Tên thành viên</value>
-  </data>
-  <data name="isa_v3spt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="isa_v3smpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -193,9 +184,6 @@
   <data name="a_v11spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
-  <data name="a_v3spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="a_v10mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
@@ -214,9 +202,6 @@
   <data name="a_v10spt_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
-  <data name="isa_v10mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="lastname" xml:space="preserve">
     <value>Họ</value>
   </data>
@@ -234,9 +219,6 @@
   </data>
   <data name="discount" xml:space="preserve">
     <value>Chiết khấu</value>
-  </data>
-  <data name="isa_v2spt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="TotalUser" xml:space="preserve">
     <value>Tổng số thành viên</value>
@@ -338,19 +320,10 @@
     <value>Tổng số bàn thắng</value>
   </data>
   <data name="refcode1" xml:space="preserve">
-    <value>RefCode1</value>
+    <value>Ref Code 1</value>
   </data>
   <data name="refcode2" xml:space="preserve">
-    <value>RefCode2</value>
-  </data>
-  <data name="a_v8mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="a_v11spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="v3mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
+    <value>Ref Code 2</value>
   </data>
   <data name="newMasterId" xml:space="preserve">
     <value>ID của Master mới</value>
@@ -360,9 +333,6 @@
   </data>
   <data name="Custid" xml:space="preserve">
     <value>Custid</value>
-  </data>
-  <data name="v3spt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="v11apt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -381,12 +351,6 @@
   </data>
   <data name="v10spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
-  </data>
-  <data name="a_v3mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="a_v99spt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="v10apt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -435,12 +399,6 @@
   </data>
   <data name="IsGroupHeadline" xml:space="preserve">
     <value>Nhóm trên cùng</value>
-  </data>
-  <data name="isa_v11smpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="a_v10mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="minlivept_3" xml:space="preserve">
     <value>PT nhỏ nhất cho OU trực tiếp</value>
@@ -577,9 +535,6 @@
   <data name="a_spt_10" xml:space="preserve">
     <value>Cược Thắng</value>
   </data>
-  <data name="isa_v3smpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isa_v201smpt_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
@@ -660,12 +615,6 @@
   </data>
   <data name="creator" xml:space="preserve">
     <value>Người tạo</value>
-  </data>
-  <data name="v99spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="isa_v99smpt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="a_v201mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -748,20 +697,11 @@
   <data name="mobilephone" xml:space="preserve">
     <value>Điện thoại di động</value>
   </data>
-  <data name="v11spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="Checker" xml:space="preserve">
     <value>Checker</value>
   </data>
   <data name="isa_smpt_10" xml:space="preserve">
     <value>Cược Thắng</value>
-  </data>
-  <data name="a_v10spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="a_v5spt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="v99spt_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -847,9 +787,6 @@
   <data name="a_v2mpt_7" xml:space="preserve">
     <value>Hiệp 1 -  Handicap</value>
   </data>
-  <data name="v8mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="minV151PT_31" xml:space="preserve">
     <value>PT nhỏ nhất cho Racing's SA - đặt Win</value>
   </data>
@@ -916,9 +853,6 @@
   <data name="disableFinancialWC" xml:space="preserve">
     <value>disableFinancialWC</value>
   </data>
-  <data name="isa_v2smpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isinternal0" xml:space="preserve">
     <value>isinternal0</value>
   </data>
@@ -930,9 +864,6 @@
   </data>
   <data name="address" xml:space="preserve">
     <value>Địa chỉ</value>
-  </data>
-  <data name="v8apt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="alivept_8" xml:space="preserve">
     <value>Trực tiếp - Hiệp 1 - OU</value>
@@ -966,9 +897,6 @@
   </data>
   <data name="maxv99pt_20" xml:space="preserve">
     <value>PT lớn nhất cho Moneyline</value>
-  </data>
-  <data name="v99apt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="isa_v99mpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -1144,9 +1072,6 @@
   <data name="updptv99" xml:space="preserve">
     <value>Cập nhật giá trị PT cho Các môn thể thao khác</value>
   </data>
-  <data name="v11apt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isa_v99smpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
@@ -1156,14 +1081,8 @@
   <data name="isa_v99smpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
-  <data name="isa_v99spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isa_mpt_10" xml:space="preserve">
     <value>Cược Thắng</value>
-  </data>
-  <data name="isa_v5spt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="agentID" xml:space="preserve">
     <value>ID của Agent</value>
@@ -1180,20 +1099,11 @@
   <data name="isa_v11smpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
-  <data name="isa_v11spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="MatchLimit" xml:space="preserve">
     <value>Giới hạn của trận đấu</value>
   </data>
-  <data name="a_v5mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="creditProblem" xml:space="preserve">
     <value>Credit Problem</value>
-  </data>
-  <data name="isa_v5mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="MaxBv151" xml:space="preserve">
     <value>Tiền cược lớn nhất cho SA Horse Racing</value>
@@ -1255,14 +1165,8 @@
   <data name="isa_v3spt_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
-  <data name="isa_v8mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isa_spt_10" xml:space="preserve">
     <value>Cược Thắng</value>
-  </data>
-  <data name="v99mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="v201discount" xml:space="preserve">
     <value>Chiết khấu</value>
@@ -1303,9 +1207,6 @@
   <data name="minV99PT_1" xml:space="preserve">
     <value>PT nhỏ nhất cho Hdp</value>
   </data>
-  <data name="v5apt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isa_v5spt_2" xml:space="preserve">
     <value>Lẻ/Chẳn</value>
   </data>
@@ -1323,15 +1224,6 @@
   </data>
   <data name="isa_v5mpt_3" xml:space="preserve">
     <value>Over/Under</value>
-  </data>
-  <data name="v11mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="v8spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="v2apt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="minbv99" xml:space="preserve">
     <value>Tiền cược nhỏ nhất cho các môn thể thao khác</value>
@@ -1373,7 +1265,7 @@
     <value>Gợi ý</value>
   </data>
   <data name="PreAgreeAmount" xml:space="preserve">
-    <value>PreAgreeAmount</value>
+    <value>Pre Agree Amount</value>
   </data>
   <data name="slivept_8" xml:space="preserve">
     <value>Trực tiếp - Hiệp 1 - OU</value>
@@ -1389,9 +1281,6 @@
   </data>
   <data name="closedMultiple" xml:space="preserve">
     <value>Bị khóa đồng loạt</value>
-  </data>
-  <data name="v5mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="isa_v2mpt_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -1441,20 +1330,14 @@
   <data name="mlivept_8" xml:space="preserve">
     <value>Trực tiếp - Hiệp 1 - OU</value>
   </data>
-  <data name="v10spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="OldAgentId" xml:space="preserve">
     <value>ID cũ của Agent</value>
   </data>
   <data name="newSuperName" xml:space="preserve">
     <value>Tên của Super mới</value>
   </data>
-  <data name="isa_v99mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="transID" xml:space="preserve">
-    <value>TransID</value>
+    <value>Trans ID</value>
   </data>
   <data name="minv99pt_20" xml:space="preserve">
     <value>PT nhỏ nhất cho Moneyline</value>
@@ -1512,12 +1395,6 @@
   </data>
   <data name="isa_v201spt_3" xml:space="preserve">
     <value>Over/Under</value>
-  </data>
-  <data name="v5spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="isa_v11mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="maxv5pt_20" xml:space="preserve">
     <value>PT lớn nhất cho Moneyline</value>
@@ -1627,9 +1504,6 @@
   <data name="oldSuperId" xml:space="preserve">
     <value>ID cũ của Supper</value>
   </data>
-  <data name="v2mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="DepositUserID" xml:space="preserve">
     <value>Deposit UserID</value>
   </data>
@@ -1651,12 +1525,6 @@
   <data name="maxv10pt_2" xml:space="preserve">
     <value>PT lớn nhất cho OE</value>
   </data>
-  <data name="isa_v5smpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="a_v2spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="addNew" xml:space="preserve">
     <value>Thêm mới</value>
   </data>
@@ -1665,9 +1533,6 @@
   </data>
   <data name="apt_10" xml:space="preserve">
     <value>Cược Thắng</value>
-  </data>
-  <data name="a_v2mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="CreditGrade" xml:space="preserve">
     <value>Thứ hạng Danh Vọng</value>
@@ -1753,9 +1618,6 @@
   <data name="minv8pt_20" xml:space="preserve">
     <value>PT nhỏ nhất cho Moneyline</value>
   </data>
-  <data name="isa_v10spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isUpdateDownline" xml:space="preserve">
     <value>Cập nhật người chơi cấp dưới</value>
   </data>
@@ -1777,9 +1639,6 @@
   <data name="credit" xml:space="preserve">
     <value>Hạn mức tín dụng</value>
   </data>
-  <data name="isa_v8smpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="maxv99pt_1" xml:space="preserve">
     <value>PT lớn nhất cho Hdp</value>
   </data>
@@ -1789,23 +1648,11 @@
   <data name="maxv99pt_3" xml:space="preserve">
     <value>PT lớn nhất cho OU</value>
   </data>
-  <data name="v2spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="isa_v10smpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="newspt" xml:space="preserve">
     <value>PT của Super mới</value>
   </data>
   <data name="newmpt" xml:space="preserve">
     <value>PT của Master mới </value>
-  </data>
-  <data name="v10apt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="a_v11mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="v2apt_9" xml:space="preserve">
     <value>Cá cược tổng hợp</value>
@@ -1845,9 +1692,6 @@
   </data>
   <data name="language" xml:space="preserve">
     <value>Ngôn ngữ</value>
-  </data>
-  <data name="isa_v8spt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="isa_v8smpt_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -1942,9 +1786,6 @@
   <data name="ummbv8" xml:space="preserve">
     <value>Cập nhật tiền cược nhỏ nhất / lớn nhất của Bóng Chày</value>
   </data>
-  <data name="a_v99mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="ukcomm" xml:space="preserve">
     <value>SA Tote Win Comm</value>
   </data>
@@ -2016,12 +1857,6 @@
   </data>
   <data name="postal" xml:space="preserve">
     <value>Mã bưu điện</value>
-  </data>
-  <data name="isa_v2mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="isa_v3mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="v8mpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2127,9 +1962,6 @@
   </data>
   <data name="remark" xml:space="preserve">
     <value>Ghi chú</value>
-  </data>
-  <data name="a_v8spt_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="status" xml:space="preserve">
     <value>Trạng thái</value>
@@ -2260,9 +2092,6 @@
   <data name="sun" xml:space="preserve">
     <value>Chủ nhật</value>
   </data>
-  <data name="agID" xml:space="preserve">
-    <value>AgentId</value>
-  </data>
   <data name="MinBet" xml:space="preserve">
     <value>Cược nhỏ nhất</value>
   </data>
@@ -2329,26 +2158,17 @@
   <data name="a_v10mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
-  <data name="a_v10mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="a_v10mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
   <data name="a_v11mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
-  <data name="a_v11mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="a_v2mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="a_v2mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="a_v2mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="a_v2mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -2368,9 +2188,6 @@
   <data name="a_v3mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
-  <data name="a_v3mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="a_v3mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
@@ -2380,17 +2197,11 @@
   <data name="a_v5mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
-  <data name="a_v5mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="a_v5mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
   <data name="a_v8mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
-  </data>
-  <data name="a_v8mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="a_v8mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -2400,9 +2211,6 @@
   </data>
   <data name="a_v99mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="a_v99mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="a_v99mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -2455,26 +2263,17 @@
   <data name="isa_v10mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
-  <data name="isa_v10mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isa_v10mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
   <data name="isa_v11mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
-  <data name="isa_v11mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isa_v2mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="isa_v2mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="isa_v2mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="isa_v2mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -2494,9 +2293,6 @@
   <data name="isa_v3mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
-  <data name="isa_v3mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isa_v3mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
@@ -2506,17 +2302,11 @@
   <data name="isa_v5mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
-  <data name="isa_v5mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="isa_v5mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
   <data name="isa_v8mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
-  </data>
-  <data name="isa_v8mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="isa_v8mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -2526,9 +2316,6 @@
   </data>
   <data name="isa_v99mpt_mem_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="isa_v99mpt_mem_20" xml:space="preserve">
-    <value>Moneyline</value>
   </data>
   <data name="isa_v99mpt_mem_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -3580,9 +3367,6 @@
   <data name="baccarat" xml:space="preserve">
     <value>Baccarat</value>
   </data>
-  <data name="casinoNo" xml:space="preserve">
-    <value>CasinoNo</value>
-  </data>
   <data name="masterId" xml:space="preserve">
     <value>Master ID</value>
   </data>
@@ -3673,47 +3457,17 @@
   <data name="hrfixedodds" xml:space="preserve">
     <value>Đua ngựa tỷ lệ cố định</value>
   </data>
-  <data name="v154apt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="v154spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="a_v154mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="a_v154spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="isa_v154mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
-  <data name="isa_v154spt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="Updptv154" xml:space="preserve">
     <value>Update Position Taking HR Fixed Odds</value>
   </data>
-  <data name="v154mpt_20" xml:space="preserve">
-    <value>Moneyline</value>
-  </data>
   <data name="disablehrfixedodds" xml:space="preserve">
     <value>Disable HR Fixed Odds</value>
-  </data>
-  <data name="maxv154pt_20" xml:space="preserve">
-    <value>Max Moneyline</value>
-  </data>
-  <data name="minv154pt_20" xml:space="preserve">
-    <value>Min Moneyline</value>
   </data>
   <data name="UMMBv154" xml:space="preserve">
     <value>Cập nhật tiền cược nhỏ nhất-lớn nhất cho Đua ngựa tỷ lệ cố định.</value>
   </data>
   <data name="disabledhrfixedodds" xml:space="preserve">
     <value>Disabled HR Fixed Odds</value>
-  </data>
-  <data name="isDefault" xml:space="preserve">
-    <value>IsDefault</value>
   </data>
   <data name="MaximumWin" xml:space="preserve">
     <value>Tiền thắng cược tối đa</value>
@@ -3810,5 +3564,11 @@
   </data>
   <data name="Disable211_2401" xml:space="preserve">
     <value>Disabled Allbet</value>
+  </data>
+  <data name="maxv154pt_20" xml:space="preserve">
+    <value>PT lớn nhất cho Moneyline</value>
+  </data>
+  <data name="minv154pt_20" xml:space="preserve">
+    <value>PT nhỏ nhất cho  Moneyline</value>
   </data>
 </root>

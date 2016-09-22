@@ -511,7 +511,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v10mpt_20 {
             get {
@@ -547,7 +547,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v10mpt_mem_20 {
             get {
@@ -583,7 +583,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v10spt_20 {
             get {
@@ -610,7 +610,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v11mpt_20 {
             get {
@@ -628,7 +628,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v11mpt_mem_20 {
             get {
@@ -646,7 +646,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v11spt_20 {
             get {
@@ -979,7 +979,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v154mpt_20 {
             get {
@@ -988,7 +988,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v154spt_20 {
             get {
@@ -1339,7 +1339,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v2mpt_20 {
             get {
@@ -1402,7 +1402,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v2mpt_mem_20 {
             get {
@@ -1465,7 +1465,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v2spt_20 {
             get {
@@ -1528,7 +1528,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v3mpt_20 {
             get {
@@ -1564,7 +1564,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v3mpt_mem_20 {
             get {
@@ -1600,7 +1600,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v3spt_20 {
             get {
@@ -1636,7 +1636,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v5mpt_20 {
             get {
@@ -1672,7 +1672,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v5mpt_mem_20 {
             get {
@@ -1708,7 +1708,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v5spt_20 {
             get {
@@ -1735,7 +1735,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v8mpt_20 {
             get {
@@ -1762,7 +1762,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v8mpt_mem_20 {
             get {
@@ -1789,7 +1789,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v8spt_20 {
             get {
@@ -1825,7 +1825,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v99mpt_20 {
             get {
@@ -1870,7 +1870,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v99mpt_mem_20 {
             get {
@@ -1915,7 +1915,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string a_v99spt_20 {
             get {
@@ -2095,7 +2095,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AgentId.
+        ///   Looks up a localized string similar to Agent Id.
         /// </summary>
         public static string agID {
             get {
@@ -2374,7 +2374,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CasinoNo.
+        ///   Looks up a localized string similar to Casino No.
         /// </summary>
         public static string casinoNo {
             get {
@@ -2608,7 +2608,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deposit UserID.
+        ///   Looks up a localized string similar to Deposit User ID.
         /// </summary>
         public static string DepositUserID {
             get {
@@ -2617,7 +2617,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deposit UserName.
+        ///   Looks up a localized string similar to Deposit Username.
         /// </summary>
         public static string DepositUserName {
             get {
@@ -3040,7 +3040,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to discount1x2.
+        ///   Looks up a localized string similar to Discount 1x2.
         /// </summary>
         public static string discount1x2 {
             get {
@@ -3166,7 +3166,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FileSize.
+        ///   Looks up a localized string similar to File Size.
         /// </summary>
         public static string FileSize {
             get {
@@ -3940,7 +3940,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v10mpt_20 {
             get {
@@ -3976,7 +3976,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v10mpt_mem_20 {
             get {
@@ -4012,7 +4012,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v10smpt_20 {
             get {
@@ -4048,7 +4048,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v10spt_20 {
             get {
@@ -4075,7 +4075,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v11mpt_20 {
             get {
@@ -4093,7 +4093,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v11mpt_mem_20 {
             get {
@@ -4111,7 +4111,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v11smpt_20 {
             get {
@@ -4129,7 +4129,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v11spt_20 {
             get {
@@ -4570,7 +4570,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v154mpt_20 {
             get {
@@ -4579,7 +4579,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v154spt_20 {
             get {
@@ -4948,7 +4948,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v2mpt_20 {
             get {
@@ -5011,7 +5011,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v2mpt_mem_20 {
             get {
@@ -5074,7 +5074,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v2smpt_20 {
             get {
@@ -5137,7 +5137,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v2spt_20 {
             get {
@@ -5200,7 +5200,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v3mpt_20 {
             get {
@@ -5236,7 +5236,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v3mpt_mem_20 {
             get {
@@ -5308,7 +5308,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v3spt_20 {
             get {
@@ -5344,7 +5344,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v5mpt_20 {
             get {
@@ -5380,7 +5380,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v5mpt_mem_20 {
             get {
@@ -5416,7 +5416,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v5smpt_20 {
             get {
@@ -5452,7 +5452,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v5spt_20 {
             get {
@@ -5479,7 +5479,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v8mpt_20 {
             get {
@@ -5506,7 +5506,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v8mpt_mem_20 {
             get {
@@ -5533,7 +5533,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v8smpt_20 {
             get {
@@ -5560,7 +5560,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v8spt_20 {
             get {
@@ -5596,7 +5596,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v99mpt_20 {
             get {
@@ -5641,7 +5641,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v99mpt_mem_20 {
             get {
@@ -5686,7 +5686,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v99smpt_20 {
             get {
@@ -5722,7 +5722,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string isa_v99spt_20 {
             get {
@@ -5830,7 +5830,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to IsDefault.
+        ///   Looks up a localized string similar to Is Default.
         /// </summary>
         public static string isDefault {
             get {
@@ -5857,7 +5857,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to IsEnable.
+        ///   Looks up a localized string similar to Is Enable.
         /// </summary>
         public static string IsEnable {
             get {
@@ -6154,7 +6154,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to login Sub-AccountID.
+        ///   Looks up a localized string similar to login Sub-Account ID.
         /// </summary>
         public static string loginSubAccID {
             get {
@@ -6559,7 +6559,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max TotalGoal.
+        ///   Looks up a localized string similar to Max Total Goal.
         /// </summary>
         public static string maxpt_6 {
             get {
@@ -6658,7 +6658,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max Money Line.
+        ///   Looks up a localized string similar to Max Moneyline.
         /// </summary>
         public static string maxv12pt_2 {
             get {
@@ -6793,7 +6793,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max Money Line.
+        ///   Looks up a localized string similar to Max Moneyline.
         /// </summary>
         public static string maxv154pt_20 {
             get {
@@ -6928,7 +6928,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max Money Line.
+        ///   Looks up a localized string similar to Max Moneyline.
         /// </summary>
         public static string maxv2pt_20 {
             get {
@@ -6991,7 +6991,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max Money Line.
+        ///   Looks up a localized string similar to Max Moneyline.
         /// </summary>
         public static string maxv3pt_20 {
             get {
@@ -7027,7 +7027,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max Money Line.
+        ///   Looks up a localized string similar to Max Moneyline.
         /// </summary>
         public static string maxv5pt_20 {
             get {
@@ -7054,7 +7054,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max Money Line.
+        ///   Looks up a localized string similar to Max Moneyline.
         /// </summary>
         public static string maxv8pt_20 {
             get {
@@ -7090,7 +7090,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max Money Line.
+        ///   Looks up a localized string similar to Max Moneyline.
         /// </summary>
         public static string maxv99pt_20 {
             get {
@@ -7495,7 +7495,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Min Money Line.
+        ///   Looks up a localized string similar to Min Moneyline.
         /// </summary>
         public static string minv10pt_20 {
             get {
@@ -7522,7 +7522,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Min Money Line.
+        ///   Looks up a localized string similar to Min Moneyline.
         /// </summary>
         public static string minv11pt_20 {
             get {
@@ -7657,7 +7657,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Min Money Line.
+        ///   Looks up a localized string similar to Min Moneyline.
         /// </summary>
         public static string minv154pt_20 {
             get {
@@ -7792,7 +7792,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Min Money Line.
+        ///   Looks up a localized string similar to Min Moneyline.
         /// </summary>
         public static string minv2pt_20 {
             get {
@@ -7855,7 +7855,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Min Money Line.
+        ///   Looks up a localized string similar to Min Moneyline.
         /// </summary>
         public static string minv3pt_20 {
             get {
@@ -7891,7 +7891,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Min Money Line.
+        ///   Looks up a localized string similar to Min Moneyline.
         /// </summary>
         public static string minv5pt_20 {
             get {
@@ -7918,7 +7918,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Min Money Line.
+        ///   Looks up a localized string similar to Min Moneyline.
         /// </summary>
         public static string minv8pt_20 {
             get {
@@ -7954,7 +7954,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Min Money Line.
+        ///   Looks up a localized string similar to Min Moneyline.
         /// </summary>
         public static string minv99pt_20 {
             get {
@@ -8449,7 +8449,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New SuperID.
+        ///   Looks up a localized string similar to New Super ID.
         /// </summary>
         public static string newSuperId {
             get {
@@ -8530,7 +8530,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Old AgentId.
+        ///   Looks up a localized string similar to Old Agent Id.
         /// </summary>
         public static string OldAgentId {
             get {
@@ -8557,7 +8557,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Old SupperID.
+        ///   Looks up a localized string similar to Old Supper ID.
         /// </summary>
         public static string oldSuperId {
             get {
@@ -8710,7 +8710,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PreAgreeAmount.
+        ///   Looks up a localized string similar to Pre Agree Amount.
         /// </summary>
         public static string PreAgreeAmount {
             get {
@@ -8755,7 +8755,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to RefCode1.
+        ///   Looks up a localized string similar to Ref Code 1.
         /// </summary>
         public static string refcode1 {
             get {
@@ -8764,7 +8764,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to RefCode2.
+        ///   Looks up a localized string similar to Ref Code 2.
         /// </summary>
         public static string refcode2 {
             get {
@@ -9232,7 +9232,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TransID.
+        ///   Looks up a localized string similar to Trans ID.
         /// </summary>
         public static string transID {
             get {
@@ -9403,7 +9403,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UpdAllMembers.
+        ///   Looks up a localized string similar to Update All Members.
         /// </summary>
         public static string Updallmembers {
             get {
@@ -9610,7 +9610,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v10apt_20 {
             get {
@@ -9646,7 +9646,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v10mpt_20 {
             get {
@@ -9682,7 +9682,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v10spt_20 {
             get {
@@ -9709,7 +9709,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v11apt_20 {
             get {
@@ -9727,7 +9727,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v11mpt_20 {
             get {
@@ -9745,7 +9745,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v11spt_20 {
             get {
@@ -10150,7 +10150,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v154apt_20 {
             get {
@@ -10159,7 +10159,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v154mpt_20 {
             get {
@@ -10168,7 +10168,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v154spt_20 {
             get {
@@ -10573,7 +10573,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v2apt_20 {
             get {
@@ -10636,7 +10636,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v2mpt_20 {
             get {
@@ -10699,7 +10699,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v2spt_20 {
             get {
@@ -10762,7 +10762,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v3apt_20 {
             get {
@@ -10798,7 +10798,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v3mpt_20 {
             get {
@@ -10834,7 +10834,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v3spt_20 {
             get {
@@ -10870,7 +10870,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v5apt_20 {
             get {
@@ -10906,7 +10906,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v5mpt_20 {
             get {
@@ -10942,7 +10942,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v5spt_20 {
             get {
@@ -10969,7 +10969,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v8apt_20 {
             get {
@@ -10996,7 +10996,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v8mpt_20 {
             get {
@@ -11023,7 +11023,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v8spt_20 {
             get {
@@ -11059,7 +11059,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v99apt_20 {
             get {
@@ -11104,7 +11104,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v99mpt_20 {
             get {
@@ -11149,7 +11149,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to Moneyline.
         /// </summary>
         public static string v99spt_20 {
             get {

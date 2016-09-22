@@ -83,7 +83,7 @@
                 .Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))
                 .ToList();
 
-            logActionTypeViewModels.Insert(0, new LogActionTypeViewModel(ActionType.All, Resources.All));
+            logActionTypeViewModels.Insert(0, new LogActionTypeViewModel(ActionType.All, Resources.AllTypes));
 
             return logActionTypeViewModels;
         }

@@ -235,7 +235,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1002.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1003.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1004.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1100.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1100.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1101.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1102.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1103.xslt" />

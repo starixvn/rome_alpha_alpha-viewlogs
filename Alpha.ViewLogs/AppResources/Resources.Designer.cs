@@ -88,11 +88,11 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All.
+        ///   Looks up a localized string similar to All Types.
         /// </summary>
-        public static string All {
+        public static string AllTypes {
             get {
-                return ResourceManager.GetString("All", resourceCulture);
+                return ResourceManager.GetString("AllTypes", resourceCulture);
             }
         }
         
