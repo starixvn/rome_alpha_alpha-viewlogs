@@ -15,7 +15,7 @@
     public class IPServiceImpl : IPService
     {
         private const string VietnamIPListCacheKey = "Alpha.ViewLogs.VietnamIPList";
-        private const string IPValidateRegex = @"(?:2[0-4]\d|25[0-5]|[01]?\d\d?\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)";
+        private const string IPValidateRegex = @"(?:(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?)";
         private const int OneHour = 1;
 
         private readonly IUserSession userSession;

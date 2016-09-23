@@ -1369,9 +1369,6 @@
   <data name="recommend" xml:space="preserve">
     <value>建議</value>
   </data>
-  <data name="PreAgreeAmount" xml:space="preserve">
-    <value>Pre Agree Amount</value>
-  </data>
   <data name="slivept_8" xml:space="preserve">
     <value>現場上半場大小</value>
   </data>

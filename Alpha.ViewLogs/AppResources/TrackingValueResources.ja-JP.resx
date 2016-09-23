@@ -1246,9 +1246,6 @@
   <data name="recommend" xml:space="preserve">
     <value>Recommend</value>
   </data>
-  <data name="PreAgreeAmount" xml:space="preserve">
-    <value>Pre Agree Amount</value>
-  </data>
   <data name="slivept_8" xml:space="preserve">
     <value>Live 1st OU</value>
   </data>
