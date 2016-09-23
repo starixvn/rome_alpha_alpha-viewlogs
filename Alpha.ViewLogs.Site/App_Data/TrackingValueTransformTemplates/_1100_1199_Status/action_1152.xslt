@@ -21,13 +21,13 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@productname" />
+          <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
         </td>
       </tr>
     </table>
-   <xsl:for-each select="productstatus">
-     <div class="headerSportTypeDetail">
-      <xsl:choose>
+    <xsl:for-each select="productstatus">
+      <div class="headerSportTypeDetail">
+        <xsl:choose>
           <xsl:when test="@sporttype">
             <xsl:choose>
               <xsl:when test="@bettype">
@@ -43,7 +43,7 @@
             <xsl:value-of select="xslLogFormat:GetBettypeName(@bettype)" />
           </xsl:otherwise>
         </xsl:choose>
-     </div>
+      </div>
       <table  class="tblDesc">
         <tr>
           <td class="colW1">
@@ -58,7 +58,8 @@
           <td class="colW2">
             <xsl:value-of select="@isdisableddownline" />
           </td>
-          <td class="colW1"></td><td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
         </tr>
       </table>
     </xsl:for-each>

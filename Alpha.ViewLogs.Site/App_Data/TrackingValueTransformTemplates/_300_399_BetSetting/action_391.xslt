@@ -22,12 +22,12 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@productname" />
+          <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
         </td>
       </tr>
     </table>
     <div class="headerSportTypeDetail">
-     <xsl:value-of select="@productname" />
+      <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
     </div>
     <xsl:for-each select="stakelevel">
       <table  class="tblDesc-ex">
@@ -51,8 +51,10 @@
           <td class="colW2">
             <xsl:value-of select="@stakelevellist" />
           </td>
-          <td class="colW1"></td><td class="colW2"></td>
-          <td class="colW1"></td><td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
         </tr>
       </table>
     </xsl:for-each>

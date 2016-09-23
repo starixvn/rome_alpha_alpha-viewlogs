@@ -28,10 +28,12 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@productname" />
+          <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
-        <td class="colW1"></td><td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
       </tr>
     </table>
     <xsl:for-each select="pt">

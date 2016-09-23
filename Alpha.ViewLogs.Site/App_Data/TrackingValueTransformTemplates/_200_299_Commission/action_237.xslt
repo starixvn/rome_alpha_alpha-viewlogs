@@ -21,56 +21,56 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@productname" />
+          <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
         </td>
       </tr>
       <xsl:for-each select="discount">
-          <tr>
-            <xsl:choose>
-              <xsl:when test="@sporttype = '206'">
+        <tr>
+          <xsl:choose>
+            <xsl:when test="@sporttype = '206'">
+              <td class="colW1">
+                <xsl:value-of select="xslLogFormat:GetLogResource('Sport')" />
+              </td>
+              <td class="colW2">
+                <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+              </td>
+              <td class="colW1">
+                <xsl:value-of select="xslLogFormat:GetLogResource('discount')" />
+              </td>
+              <td class="colW2">
+                <xsl:value-of select="@discount" />
+              </td>
+              <td class="colW1"></td>
+              <td class="colW2"></td>
+            </xsl:when>
+            <xsl:otherwise>
+              <td class="colW1">
+                <xsl:value-of select="xslLogFormat:GetLogResource('Sport')" />
+              </td>
+              <td class="colW2">
+                <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+              </td>
+              <xsl:if test="@bettype">
                 <td class="colW1">
-                  <xsl:value-of select="xslLogFormat:GetLogResource('Sport')" />
+                  <xsl:value-of select="xslLogFormat:GetLogResource('bettype')" />
                 </td>
                 <td class="colW2">
-                  <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+                  <xsl:value-of select="xslLogFormat:GetBettypeName(@bettype)" />
                 </td>
-                <td class="colW1">
-                  <xsl:value-of select="xslLogFormat:GetLogResource('discount')" />
-                </td>
-                <td class="colW2">
-                  <xsl:value-of select="@discount" />
-                </td>
+              </xsl:if>
+              <td class="colW1">
+                <xsl:value-of select="xslLogFormat:GetLogResource('discount')" />
+              </td>
+              <td class="colW2">
+                <xsl:value-of select="@discount" />
+              </td>
+              <xsl:if test="not(@bettype)">
                 <td class="colW1"></td>
                 <td class="colW2"></td>
-              </xsl:when>
-              <xsl:otherwise>
-                <td class="colW1">
-                  <xsl:value-of select="xslLogFormat:GetLogResource('Sport')" />
-                </td>
-                <td class="colW2">
-                  <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
-                </td>
-                <xsl:if test="@bettype">
-                  <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('bettype')" />
-                  </td>
-                  <td class="colW2">
-                    <xsl:value-of select="xslLogFormat:GetBettypeName(@bettype)" />
-                  </td>
-                </xsl:if>
-                <td class="colW1">
-                  <xsl:value-of select="xslLogFormat:GetLogResource('discount')" />
-                </td>
-                <td class="colW2">
-                  <xsl:value-of select="@discount" />
-                </td>
-                <xsl:if test="not(@bettype)">
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
-                </xsl:if>
-              </xsl:otherwise>
-            </xsl:choose>
-          </tr>
+              </xsl:if>
+            </xsl:otherwise>
+          </xsl:choose>
+        </tr>
       </xsl:for-each>
     </table>
 

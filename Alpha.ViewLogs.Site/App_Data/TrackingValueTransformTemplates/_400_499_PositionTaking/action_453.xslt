@@ -21,7 +21,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@productname" />
+          <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
         </td>
       </tr>
     </table>
@@ -45,22 +45,23 @@
         </xsl:choose>
       </div>
       <table  class="tblDesc-ex">
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('AgentPT')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@agentpt" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('IsLive')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@islive" />
-        </td>
-        <td class="colW1"></td><td class="colW2"></td>
-      </tr>
-    </table>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('AgentPT')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@agentpt" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('IsLive')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@islive" />
+          </td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
+        </tr>
+      </table>
     </xsl:for-each>
   </xsl:template>
 

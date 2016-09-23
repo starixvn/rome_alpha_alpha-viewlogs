@@ -21,7 +21,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@productname" />
+          <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
         </td>
       </tr>
     </table>
@@ -45,65 +45,65 @@
         </xsl:choose>
       </div>
       <table  class="tblDesc">
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('lblPresetPTSuper')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@superpt" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('isSuperAutoPT')" />
-        </td>
-        <td  class="colW2">
-          <xsl:value-of select="@isautosuperpt" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('lblAutoPTSuper')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@autosuperpt" />
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTMaster')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@masterpt" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('lblMinPTMaster')" />
-        </td>
-        <td  class="colW2">
-          <xsl:value-of select="@masterminpt" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('Updallmembers')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@updallmems" />
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('newspt')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@newsuperpt" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('IsLive')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@islive" />
-        </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
-        </td>
-      </tr>
-    </table>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('lblPresetPTSuper')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@superpt" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('isSuperAutoPT')" />
+          </td>
+          <td  class="colW2">
+            <xsl:value-of select="@isautosuperpt" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('lblAutoPTSuper')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@autosuperpt" />
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTMaster')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@masterpt" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('lblMinPTMaster')" />
+          </td>
+          <td  class="colW2">
+            <xsl:value-of select="@masterminpt" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('Updallmembers')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@updallmems" />
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('newspt')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@newsuperpt" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('IsLive')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@islive" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+        </tr>
+      </table>
     </xsl:for-each>
   </xsl:template>
 

@@ -18,6 +18,8 @@
 
         string GetBettypeName(int betType);
 
+        string GetProductName(int productId);
+
         string TransferConditionFromCode(string dayCodesWithDiff);
 
         string FormatBetTypeId(string betTypeId);

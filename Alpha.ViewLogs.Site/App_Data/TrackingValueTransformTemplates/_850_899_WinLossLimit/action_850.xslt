@@ -22,7 +22,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@productname" />
+<xsl:value-of select="xslLogFormat:GetProductName(@productid)" />	
         </td>
       </tr>
     </table>

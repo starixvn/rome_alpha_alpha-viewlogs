@@ -652,7 +652,9 @@
     <Content Include="Web.AppSettings.uati1.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-    <Content Include="Web.ConnectionStrings.config" />
+    <Content Include="Web.ConnectionStrings.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.ConnectionStrings.local.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
     </Content>
@@ -673,6 +675,7 @@
     </None>
     <Content Include="Web.ConnectionStrings.uati1.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.local.config" />
     <Content Include="Web.napexternal.config">
@@ -692,6 +695,7 @@
     </Content>
     <Content Include="Web.uati1.config">
       <DependentUpon>Web.local.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup />
