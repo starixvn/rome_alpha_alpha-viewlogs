@@ -13,12 +13,14 @@
         {
             double numberValue;
 
-            if (double.TryParse(value, out numberValue))
+            if (string.IsNullOrWhiteSpace(value)
+                || !char.IsDigit(value[0])
+                || !double.TryParse(value, out numberValue))
             {
-                return numberValue == 0 ? value : numberValue.ToString();
+                return value;
             }
 
-            return value;            
+            return numberValue.ToString();
         }
     }
 }
