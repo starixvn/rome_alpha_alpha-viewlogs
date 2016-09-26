@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Tests.Extensions
 {
-    using ViewLogs.Extensions;
     using NUnit.Framework;
+    using ViewLogs.Extensions;
 
     [TestFixture]
     public class DecimalExtensionTests

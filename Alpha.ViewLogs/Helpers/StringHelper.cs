@@ -1,7 +1,5 @@
 ﻿namespace Alpha.ViewLogs.Helpers
 {
-    using System;
-
     public static class StringHelper
     {
         /// <summary>
