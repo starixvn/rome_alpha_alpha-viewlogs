@@ -1,11 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web;
     using AppResources;
-    using Constants;
     using Fanex.Common;
     using Helpers;
     using MediatR;

@@ -35,7 +35,7 @@
             currentUserSession = currentUserSession ?? UserSession.Current;
             this.IsShowOldValue = isShowOldValue ?? GetShowOldValueFromCookie();
             this.actionIdVisibilities = actionIdVisibilities ?? GetActionIdVisibilities();
-            this.custStatuses = custStatuses ?? GetCustStatuses();
+            this.custStatuses = custStatuses;
 
             // Limit time range for view log in 2 years (start from beginning of last year)
             this.maxReportDate = DateTime.Today;
@@ -90,7 +90,7 @@
         {
             get
             {
-                return custStatuses;
+                return custStatuses ?? GetCustStatuses();
             }
         }
 
@@ -127,8 +127,8 @@
         }
 
         private void AddActionVisibilities(
-            Dictionary<int, bool> actionVisibilities, 
-            IEnumerable<int> actionIds, 
+            Dictionary<int, bool> actionVisibilities,
+            IEnumerable<int> actionIds,
             bool visibility)
         {
             foreach (var actionId in actionIds)

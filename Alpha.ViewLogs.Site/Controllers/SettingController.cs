@@ -6,6 +6,7 @@
 
     public class SettingController : BaseController
     {
+        private const string TemplatePath = "~/App_Data/TrackingValueTransformTemplates";
         private readonly IMediator mediator;
 
         public SettingController(IMediator mediator)
@@ -15,7 +16,7 @@
 
         public ActionResult Index(IndexQuery indexQuery)
         {
-            indexQuery.TrackingValueTransformTemplatePath = HttpContext.Server.MapPath("~/App_Data/TrackingValueTransformTemplates");
+            indexQuery.TrackingValueTransformTemplatePath = HttpContext.Server.MapPath(TemplatePath);
 
             var viewModel = mediator.Send(indexQuery);
 

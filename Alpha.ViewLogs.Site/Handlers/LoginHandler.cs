@@ -1,13 +1,11 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
     using System.Collections.Generic;
-    using Fanex.Common;
     using MediatR;
     using Models;
     using Models.Enumerations;
     using Requests.Login;
     using Services;
-    using Sunplus.Agent.Utilities;
     using ViewLogs.Helpers;
     using ViewModels;
     using ViewModels.Login;
