@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
     using System.Collections.Generic;
+    using Alpha.ViewLogs.Extensions;
     using Fanex.Common;
     using MediatR;
     using Models;
@@ -65,8 +66,8 @@
                     UserId = log.UserId,
                     Username = log.Username,
 
-                    TrackingValue = StringHelper.FormatThousandSeparate(Converter.ToDecimal(log.TrackingValue), 2),
-                    TrackingValueOld = StringHelper.FormatThousandSeparate(Converter.ToDecimal(log.TrackingValueOld), 2),
+                    TrackingValue = Converter.ToDecimal(log.TrackingValue).ToNumericString(),
+                    TrackingValueOld = Converter.ToDecimal(log.TrackingValueOld).ToNumericString(),
                     Details = log.Details,
                     IP = this.logFormatter.FormatIP(log.IP)
                 });

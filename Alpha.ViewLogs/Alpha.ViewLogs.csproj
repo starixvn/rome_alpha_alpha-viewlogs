@@ -62,6 +62,7 @@
     <Compile Include="DataAccesses\LogDataAccess.cs" />
     <Compile Include="DataAccesses\Impl\LogDataAccessImpl.cs" />
     <Compile Include="DataAccesses\Impl\LoginDataAccessImpl.cs" />
+    <Compile Include="Extensions\DecimalExtension.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\DateTimeHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />

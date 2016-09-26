@@ -1,5 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Tests.Helpers
 {
+    using Alpha.ViewLogs.Extensions;
     using NUnit.Framework;
     using ViewLogs.Helpers;
 
@@ -81,10 +82,9 @@
         public void FormatThousandSeparate_NumberOnlyHasFractionalPart_Return(decimal value, string expectedValue)
         {
             // Arrange
-            var decDigits = 2;
 
             // Action
-            var actualValue = StringHelper.FormatThousandSeparate(value, decDigits);
+            var actualValue = value.ToNumericString();
 
             // Assert
             Assert.AreEqual(expectedValue, actualValue);
