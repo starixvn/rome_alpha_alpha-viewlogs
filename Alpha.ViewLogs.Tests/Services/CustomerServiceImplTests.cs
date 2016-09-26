@@ -26,7 +26,7 @@
 
         [TestCase("")]
         [TestCase(null)]
-        public void CheckIsBelongingByUsername_NullOrEmptyUsername_ReturnsDefaultCustomerInfo(string username)
+        public void GetDownlineInfoByUsername_NullOrEmptyUsername_ReturnsDefaultCustomerInfo(string username)
         {
             // Arrange 
             var expectedCustomerInfo = new CustomerInfo();
@@ -39,7 +39,7 @@
         }
 
         [Test]
-        public void CheckIsBelongingByUsername_ValidUsername_ReturnCustomerInfoFromDataAccess()
+        public void GetDownlineInfoByUsername_ValidUsername_ReturnCustomerInfoFromDataAccess()
         {
             // Arrange
             var criteria = new GetCustInfoByUsernameCommand

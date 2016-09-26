@@ -51,13 +51,10 @@
 
         public string FormatCountryCode(string ip, string country)
         {
-            if (!IsValidIP(ip)
-                || (IsVNIP(ip) && !userSession.IsAdminCanViewVNIP))
-            {
-                return string.Empty;
-            }
+            var isShowIP = IsValidIP(ip)
+                && (!IsVNIP(ip) || userSession.IsAdminCanViewVNIP);
 
-            return country;
+            return isShowIP ? country : string.Empty;
         }
 
         public double ConvertIPToNumber(string ip)

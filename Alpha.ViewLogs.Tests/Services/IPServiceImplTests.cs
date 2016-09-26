@@ -14,6 +14,7 @@
     public class IPServiceImplTests
     {
         private const string VietnamIPListCacheKey = "Alpha.ViewLogs.VietnamIPList";
+        private const string ValidCountry = "validCountry";
 
         private IUserSession userSession;
         private IDynamicRepository dynamicRepository;
@@ -102,7 +103,7 @@
 
         [TestCase("1.1.1.1", true, "<a class=\"iplink\" href=\"javascript:OpenIPInfo('1.1.1.1');\">1.1.1.1</a>")]
         [TestCase("1.1.1.1", false, "<a class=\"iplink\" href=\"javascript:OpenIPInfo('1.1.1.1');\">1.1.1.1</a>")]
-        public void FormatIP_MatchIPVailidationAndNotVNIP_ReturnsCorrectIP(string ip, bool canViewVNIP, string expectedIP)
+        public void FormatIP_MatchIPValidationAndNotVNIP_ReturnsCorrectIP(string ip, bool canViewVNIP, string expectedIP)
         {  // Arrange
             userSession.IsAdminCanViewVNIP.Returns(canViewVNIP);
 
@@ -210,6 +211,133 @@
 
             // Assert
             Assert.AreEqual(expectedValue, isVNIP);
+        }
+
+        [TestCase("1.1.1.0")]
+        [TestCase("1.1.1.1")]
+        [TestCase("1.1.1.255")]
+        public void IsVNIP_CheckValidIPWithNoDataForVNIPInCache_GetVNIPsFromDatabase(string ip)
+        {
+            // Arrange
+            List<IPRange> ipVNList;
+            cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
+            {
+                x[1] = new List<IPRange>();
+
+                return true;
+            });
+
+            // Action 
+            ipService.IsVNIP(ip);
+
+            // Assert
+            dynamicRepository.Received().Fetch<IPRange>(Arg.Any<GetIPVNCriteria>());
+        }
+
+        [TestCase(null)]
+        [TestCase("")]
+        [TestCase(" ")]
+        [TestCase("  ")]
+        [TestCase("#")]
+        [TestCase("1.1.1.1.1")]
+        public void FormatCountryCode_InvalidIP_ReturnsEmpty(string ip)
+        {
+            // Arrange
+            var country = ValidCountry;
+
+            // Action
+            var actualCountry = ipService.FormatCountryCode(ip, country);
+
+            // Assert
+            Assert.IsEmpty(actualCountry);
+        }
+
+        [TestCase("1.1.1.0")]
+        [TestCase("1.1.1.1")]
+        [TestCase("1.1.1.255")]
+        public void FormatCountryCode_VNIPAndUserCannotViewVNIP_ReturnsEmpty(string ip)
+        {
+            // Arrange
+            var country = ValidCountry;
+
+            List<IPRange> ipVNList;
+            cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
+            {
+                x[1] = VNIPs;
+
+                return true;
+            });
+
+            userSession.IsAdminCanViewVNIP.Returns(false);
+
+            // Action
+            var actualCountry = ipService.FormatCountryCode(ip, country);
+
+            // Assert
+            Assert.IsEmpty(actualCountry);
+        }
+
+        [TestCase("1.1.1.0", ValidCountry)]
+        [TestCase("1.1.1.1", ValidCountry)]
+        [TestCase("1.1.1.255", ValidCountry)]
+        public void FormatCountryCode_VNIPAndUserCanViewVNIP_ReturnsCountry(string ip, string country)
+        {
+            // Arrange
+            var expectedCountry = country;
+
+            List<IPRange> ipVNList;
+            cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
+            {
+                x[1] = VNIPs;
+
+                return true;
+            });
+
+            userSession.IsAdminCanViewVNIP.Returns(true);
+
+            // Action
+            var actualCountry = ipService.FormatCountryCode(ip, country);
+
+            // Assert
+            Assert.AreEqual(expectedCountry, actualCountry);
+        }
+
+        [TestCase("#", true, ValidCountry)]
+        [TestCase("1.1.1.1.1", true, ValidCountry)]
+        [TestCase("1", true, ValidCountry)]
+        [TestCase("1.1", true, ValidCountry)]
+        [TestCase("1.1.1", true, ValidCountry)]
+        [TestCase("::1", true, ValidCountry)]
+        [TestCase("1.1.0.1", true, ValidCountry)]
+        [TestCase("1.1.2.1", true, ValidCountry)]
+        [TestCase("#", false, ValidCountry)]
+        [TestCase("1.1.1.1.1", false, ValidCountry)]
+        [TestCase("1", false, ValidCountry)]
+        [TestCase("1.1", false, ValidCountry)]
+        [TestCase("1.1.1", false, ValidCountry)]
+        [TestCase("::1", false, ValidCountry)]
+        [TestCase("1.1.0.1", false, ValidCountry)]
+        [TestCase("1.1.2.1", false, ValidCountry)]
+        public void FormatCountryCode_ValidIPButNotVNIP_ReturnsCountry(string ip, bool canViewVNIP, string country)
+        {
+            // Arrange
+            var expectedCountry = country;
+
+            List<IPRange> ipVNList;
+            cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
+            {
+                x[1] = VNIPs;
+
+                return true;
+            });
+
+            userSession.IsAdminCanViewVNIP.Returns(canViewVNIP);
+
+            // Action
+            var actualCountry = ipService.FormatCountryCode(ip, country);
+
+            // Assert
+            Assert.AreEqual(expectedCountry, actualCountry);
         }
     }
 }

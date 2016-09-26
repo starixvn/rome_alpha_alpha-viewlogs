@@ -69,8 +69,6 @@
                     UserId = log.UserId,
                     Username = log.Username,
 
-                    TrackingValue = Formater.DecFormat(Converter.ToDecimal(log.TrackingValue), 2),
-                    TrackingValueOld = Formater.DecFormat(Converter.ToDecimal(log.TrackingValueOld), 2),
                     Details = log.Details,
                     IP = this.logFormatter.FormatIP(log.IP),
 

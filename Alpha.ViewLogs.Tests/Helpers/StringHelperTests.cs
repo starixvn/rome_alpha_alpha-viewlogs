@@ -71,5 +71,23 @@
             // Assert
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        [TestCase(0.0, "0")]
+        [TestCase(0.1, "0.1")]
+        [TestCase(0.10, "0.1")]
+        [TestCase(0.11, "0.11")]
+        [TestCase(0.110, "0.11")]
+        [TestCase(0.111, "0.11")]
+        public void FormatThousandSeparate_NumberOnlyHasFractionalPart_Return(decimal value, string expectedValue)
+        {
+            // Arrange
+            var decDigits = 2;
+
+            // Action
+            var actualValue = StringHelper.FormatThousandSeparate(value, decDigits);
+
+            // Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
