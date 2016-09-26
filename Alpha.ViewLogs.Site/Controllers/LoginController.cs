@@ -4,12 +4,13 @@
     using MediatR;
     using Models.Enumerations;
     using Requests.Login;
+    using Sunplus.Agent.Model.Entities;
 
     public class LoginController : BaseController
     {
         private readonly IMediator mediator;
 
-        public LoginController(IMediator mediator)
+        public LoginController(IUserSession userSession, IMediator mediator) : base(userSession)
         {
             this.mediator = mediator;
         }

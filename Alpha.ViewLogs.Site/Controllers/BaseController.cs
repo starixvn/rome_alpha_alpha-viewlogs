@@ -18,6 +18,11 @@
     {
         private CultureInfo defaultCulture = CultureInfo.CreateSpecificCulture(LanguageCode.Default);
 
+        protected BaseController(IUserSession userSession)
+        {
+            this.UserSession = userSession;
+        }
+
         public IUserSession UserSession { get; set; }
 
         protected override void OnAuthentication(AuthenticationContext filterContext)

@@ -142,10 +142,6 @@
     <value>送金
 </value>
   </data>
-  <data name="Fri" xml:space="preserve">
-    <value></value>
-    <comment>Fri</comment>
-  </data>
   <data name="DisableAllBet" xml:space="preserve">
     <value>Disabled Allbet</value>
   </data>

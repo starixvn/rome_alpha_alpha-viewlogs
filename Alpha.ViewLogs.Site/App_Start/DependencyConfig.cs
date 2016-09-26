@@ -18,6 +18,7 @@
     using SimpleInjector;
     using SimpleInjector.Integration.Web;
     using SimpleInjector.Integration.Web.Mvc;
+    using Sunplus.Agent.Model.Base;
     using Sunplus.Agent.Model.Entities;
 
     public static class DependencyConfig
@@ -65,13 +66,7 @@
 
         private static void RegisterServices(Container container)
         {
-            //// Transient
-            container.Register(GetUserSession, Lifestyle.Transient);
-
-            container.RegisterInitializer<BaseController>(handler =>
-            {
-                handler.UserSession = GetUserSession();
-            });
+            container.Register<IUserSession, UserSessionExt>(Lifestyle.Scoped);
 
             container.Register<CustomerService, CustomerServiceImpl>(Lifestyle.Transient);
             container.Register<TransformService, TransformServiceImpl>(Lifestyle.Transient);
@@ -86,18 +81,6 @@
             container.RegisterConditional<LogService, StatusServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(StatusHandler));
             container.RegisterConditional<LogService, CreditServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(CreditHandler));
             container.RegisterConditional<LogService, LoginServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(LoginHandler));
-        }
-
-        private static IUserSession GetUserSession()
-        {
-            if (HttpContext.Current != null
-                && (HttpContext.Current.Handler is IRequiresSessionState
-                || HttpContext.Current.Handler is IReadOnlySessionState))
-            {
-                return UserSession.Current;
-            }
-
-            return new UserSessionBase(string.Empty);
         }
 
         private static void RegisterDataAccesses(Container container)

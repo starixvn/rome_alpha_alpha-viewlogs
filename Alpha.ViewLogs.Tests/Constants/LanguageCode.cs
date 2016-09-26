@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Tests.Consts
+﻿namespace Alpha.ViewLogs.Tests.Constants
 {
     public class LanguageCode
     {

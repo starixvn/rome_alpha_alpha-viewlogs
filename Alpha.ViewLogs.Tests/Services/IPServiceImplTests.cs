@@ -4,10 +4,10 @@
     using Criteria;
     using Fanex.Caching;
     using Fanex.Data.Repository;
-    using Models;
     using NSubstitute;
     using NUnit.Framework;
     using Sunplus.Agent.Model.Entities;
+    using ViewLogs.Models;
     using ViewLogs.Services.Impl;
 
     [TestFixture]
@@ -302,22 +302,12 @@
             Assert.AreEqual(expectedCountry, actualCountry);
         }
 
-        [TestCase("#", true, ValidCountry)]
-        [TestCase("1.1.1.1.1", true, ValidCountry)]
-        [TestCase("1", true, ValidCountry)]
-        [TestCase("1.1", true, ValidCountry)]
-        [TestCase("1.1.1", true, ValidCountry)]
-        [TestCase("::1", true, ValidCountry)]
-        [TestCase("1.1.0.1", true, ValidCountry)]
-        [TestCase("1.1.2.1", true, ValidCountry)]
-        [TestCase("#", false, ValidCountry)]
-        [TestCase("1.1.1.1.1", false, ValidCountry)]
-        [TestCase("1", false, ValidCountry)]
-        [TestCase("1.1", false, ValidCountry)]
-        [TestCase("1.1.1", false, ValidCountry)]
-        [TestCase("::1", false, ValidCountry)]
-        [TestCase("1.1.0.1", false, ValidCountry)]
-        [TestCase("1.1.2.1", false, ValidCountry)]
+        [TestCase("2.1.1.0", true, ValidCountry)]
+        [TestCase("2.1.1.1", true, ValidCountry)]
+        [TestCase("2.1.1.255", true, ValidCountry)]
+        [TestCase("2.1.1.0", false, ValidCountry)]
+        [TestCase("2.1.1.1", false, ValidCountry)]
+        [TestCase("2.1.1.255", false, ValidCountry)]
         public void FormatCountryCode_ValidIPButNotVNIP_ReturnsCountry(string ip, bool canViewVNIP, string country)
         {
             // Arrange

@@ -3,13 +3,14 @@
     using System.Web.Mvc;
     using MediatR;
     using Requests.Setting;
+    using Sunplus.Agent.Model.Entities;
 
     public class SettingController : BaseController
     {
         private const string TemplatePath = "~/App_Data/TrackingValueTransformTemplates";
         private readonly IMediator mediator;
 
-        public SettingController(IMediator mediator)
+        public SettingController(IUserSession userSession, IMediator mediator) : base(userSession)
         {
             this.mediator = mediator;
         }
