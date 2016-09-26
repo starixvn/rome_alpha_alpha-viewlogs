@@ -28,10 +28,6 @@
         [TestCase("ab")] // non-numeric characters
         [TestCase("ab0")] // has non-numeric characters and numbers
         [TestCase("a0")] // has non-numeric characters and numbers
-        [TestCase("00")] // only contains 2+ zeros
-        [TestCase("01")] // leading zeros and having numbers
-        [TestCase("010")] // leading/ending zeros and having numbers
-        [TestCase("0100")] // leading zeros, ending with multi-zeros and having numbers
         [TestCase(".a")] // start with dot, remain is non-numeric characters
         [TestCase(".0")] // start with dot, remain is zeros
         [TestCase(".1")] // start with dot, remain is numbers
@@ -63,6 +59,10 @@
         [TestCase("10.100", "10.1")] // not start with zeros, real part ends with zero and decimal partends with zeros
         [TestCase("10", "10")] // not start with zeros, real part ends with zero and not have decimal part
         [TestCase("100", "100")] // not start with zeros, real part ends with zeros and not have decimal part
+        [TestCase("00", "0")] // only contains 2+ zeros
+        [TestCase("01", "1")] // leading zeros and having numbers
+        [TestCase("010", "10")] // leading/ending zeros and having numbers
+        [TestCase("0100", "100")] // leading zeros, ending with multi-zeros and having numbers
         public void RemoveTrailingZeros_NumberValue_ReturnsTrailingZerosValue(string inputValue, string expectedValue)
         {
             // Action
