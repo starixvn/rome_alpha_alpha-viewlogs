@@ -12,7 +12,7 @@ var loginController = {
         index: (<HTMLInputElement>document.getElementById('indexPath')).value
     },
     init: function () {
-        loginView.initElements(viewModel);
+        loginView.initElements(loginView.viewModel);
 
         tabController.viewLogsParams = loginView.getParams();
     },

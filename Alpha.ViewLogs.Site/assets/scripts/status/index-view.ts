@@ -9,6 +9,26 @@ declare var initAutoComplete: any;
 declare var setVisible: any;
 
 var statusView = {
+    viewModel: {
+        labelTo: (<HTMLInputElement>document.getElementById('labelTo')).value,
+        noInfo: (<HTMLInputElement>document.getElementById('noInfo')).value,
+        Page: (<HTMLInputElement>document.getElementById('Page')).value,
+        of: (<HTMLInputElement>document.getElementById('of')).value,
+        Pager_DisplayItems: (<HTMLInputElement>document.getElementById('Pager_DisplayItems')).value,
+
+        maxReportDate: (<HTMLInputElement>document.getElementById('maxReportDate')).value,
+        minReportDate: (<HTMLInputElement>document.getElementById('minReportDate')).value,
+        fromDate: $('fromDate').val(),
+        toDate: $('toDate').val(),
+        dayInMonth: (<HTMLInputElement>document.getElementById('dayInMonth')).value,
+
+        totalRecords: (<HTMLInputElement>document.getElementById('totalRecords')).value,
+        pageSize: (<HTMLInputElement>document.getElementById('pageSize')).value,
+        pageIndex: parseInt((<HTMLInputElement>document.getElementById('pageIndex')).value),
+        actionTypeId: (<HTMLInputElement>document.getElementById('actionTypeId')).value,
+
+        showOldValuesCookieName: (<HTMLInputElement>document.getElementById('showOldValuesCookieName')).value
+    },
     elelments: {
         btnSubmit: null,
         ddlMonth: null,
@@ -99,7 +119,7 @@ var statusView = {
             fromDayId: 'ddl-fromday',
             toDayId: 'ddl-today',
             fromDayLabel: '',
-            toDayLabel: viewModel.labelTo,
+            toDayLabel: statusView.viewModel.labelTo,
             sortDesc: true,
             log: function (msg) {
                 console.warn(msg);
@@ -116,7 +136,7 @@ var statusView = {
     },
     getParams: function () {
         return {
-            ActionTypeId: viewModel.actionTypeId,
+            ActionTypeId: statusView.viewModel.actionTypeId,
             PageIndex: statusView.pageNumber,
             PageSize: statusView.pageSize,
             Username: statusView.elelments.txtUsername.val(),
@@ -139,9 +159,9 @@ var statusView = {
 
                     statusController.pageLogs();
                 },
-                beforePageText: viewModel.Page,
-                afterPageText: viewModel.of + ' {pages}',
-                displayMsg: viewModel.Pager_DisplayItems
+                beforePageText: statusView.viewModel.Page,
+                afterPageText: statusView.viewModel.of + ' {pages}',
+                displayMsg: statusView.viewModel.Pager_DisplayItems
             });
 
             statusView.elelments.pagination.removeClass("hide");

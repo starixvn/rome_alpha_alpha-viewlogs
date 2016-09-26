@@ -8,6 +8,26 @@ declare var $: any;
 declare var initAutoComplete: any;
 
 var settingView = {
+    viewModel: {
+        labelTo: (<HTMLInputElement>document.getElementById('labelTo')).value,
+        noInfo: (<HTMLInputElement>document.getElementById('noInfo')).value,
+        Page: (<HTMLInputElement>document.getElementById('Page')).value,
+        of: (<HTMLInputElement>document.getElementById('of')).value,
+        Pager_DisplayItems: (<HTMLInputElement>document.getElementById('Pager_DisplayItems')).value,
+
+        maxReportDate: (<HTMLInputElement>document.getElementById('maxReportDate')).value,
+        minReportDate: (<HTMLInputElement>document.getElementById('minReportDate')).value,
+        fromDate: $('fromDate').val(),
+        toDate: $('toDate').val(),
+        dayInMonth: (<HTMLInputElement>document.getElementById('dayInMonth')).value,
+
+        totalRecords: (<HTMLInputElement>document.getElementById('totalRecords')).value,
+        pageSize: (<HTMLInputElement>document.getElementById('pageSize')).value,
+        pageIndex: parseInt((<HTMLInputElement>document.getElementById('pageIndex')).value),
+        actionTypeId: (<HTMLInputElement>document.getElementById('actionTypeId')).value,
+
+        showOldValuesCookieName: (<HTMLInputElement>document.getElementById('showOldValuesCookieName')).value
+    },
     elelments: {
         ddlLogActionType: null,
         btnSubmit: null,
@@ -151,9 +171,9 @@ var settingView = {
 
                     settingController.viewLogs();
                 },
-                beforePageText: viewModel.Page,
-                afterPageText: viewModel.of + ' {pages}',
-                displayMsg: viewModel.Pager_DisplayItems
+                beforePageText: settingView.viewModel.Page,
+                afterPageText: settingView.viewModel.of + ' {pages}',
+                displayMsg: settingView.viewModel.Pager_DisplayItems
             });
 
             settingView.elelments.pagination.removeClass("hide");

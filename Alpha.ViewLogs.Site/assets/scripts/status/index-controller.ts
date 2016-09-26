@@ -12,7 +12,7 @@ var statusController = {
         index: (<HTMLInputElement>document.getElementById('indexPath')).value
     },
     init: function () {
-        statusView.initElements(viewModel);
+        statusView.initElements(statusView.viewModel);
 
         tabController.viewLogsParams = statusView.getParams();
     },

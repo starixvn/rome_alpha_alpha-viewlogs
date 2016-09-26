@@ -7,6 +7,26 @@ declare var $: any;
 declare var initAutoComplete: any;
 
 var loginView = {
+    viewModel: {
+        labelTo: (<HTMLInputElement>document.getElementById('labelTo')).value,
+        noInfo: (<HTMLInputElement>document.getElementById('noInfo')).value,
+        Page: (<HTMLInputElement>document.getElementById('Page')).value,
+        of: (<HTMLInputElement>document.getElementById('of')).value,
+        Pager_DisplayItems: (<HTMLInputElement>document.getElementById('Pager_DisplayItems')).value,
+
+        maxReportDate: (<HTMLInputElement>document.getElementById('maxReportDate')).value,
+        minReportDate: (<HTMLInputElement>document.getElementById('minReportDate')).value,
+        fromDate: $('fromDate').val(),
+        toDate: $('toDate').val(),
+        dayInMonth: (<HTMLInputElement>document.getElementById('dayInMonth')).value,
+
+        totalRecords: (<HTMLInputElement>document.getElementById('totalRecords')).value,
+        pageSize: (<HTMLInputElement>document.getElementById('pageSize')).value,
+        pageIndex: parseInt((<HTMLInputElement>document.getElementById('pageIndex')).value),
+        actionTypeId: (<HTMLInputElement>document.getElementById('actionTypeId')).value,
+
+        showOldValuesCookieName: (<HTMLInputElement>document.getElementById('showOldValuesCookieName')).value
+    },
     elelments: {
         btnSubmit: null,
         ddlMonth: null,
@@ -90,7 +110,7 @@ var loginView = {
             fromDayId: 'ddl-fromday',
             toDayId: 'ddl-today',
             fromDayLabel: '',
-            toDayLabel: viewModel.labelTo,
+            toDayLabel: loginView.viewModel.labelTo,
             sortDesc: true,
             log: function (msg) {
                 console.warn(msg);
@@ -108,7 +128,7 @@ var loginView = {
 
     getParams: function () {
         return {
-            ActionTypeId: viewModel.actionTypeId,
+            ActionTypeId: loginView.viewModel.actionTypeId,
             PageIndex: loginView.pageNumber,
             PageSize: loginView.pageSize,
             Username: loginView.elelments.txtUsername.val(),
@@ -131,9 +151,9 @@ var loginView = {
 
                     loginController.pageLogs();
                 },
-                beforePageText: viewModel.Page,
-                afterPageText: viewModel.of + ' {pages}',
-                displayMsg: viewModel.Pager_DisplayItems
+                beforePageText: loginView.viewModel.Page,
+                afterPageText: loginView.viewModel.of + ' {pages}',
+                displayMsg: loginView.viewModel.Pager_DisplayItems
             });
 
             loginView.elelments.pagination.removeClass("hide");

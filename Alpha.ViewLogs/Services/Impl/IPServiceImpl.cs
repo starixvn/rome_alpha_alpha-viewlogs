@@ -51,8 +51,6 @@
 
         public string FormatCountryCode(string ip, string country)
         {
-            var regex = new Regex(IPValidateRegex);
-
             if (!IsValidIP(ip)
                 || (IsVNIP(ip) && !userSession.IsAdminCanViewVNIP))
             {

@@ -12,7 +12,7 @@ var settingController = {
         index: (<HTMLInputElement>document.getElementById('indexPath')).value
     },
     init: function () {
-        settingView.initElements(viewModel);
+        settingView.initElements(settingView.viewModel);
 
         tabController.viewLogsParams = settingView.getParams();
     },

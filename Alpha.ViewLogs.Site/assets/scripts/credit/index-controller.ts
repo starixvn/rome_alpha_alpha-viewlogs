@@ -12,7 +12,7 @@ var creditController = {
         index: (<HTMLInputElement>document.getElementById('indexPath')).value
     },
     init: function () {
-        creditView.initElements(viewModel);
+        creditView.initElements(creditView.viewModel);
 
         tabController.viewLogsParams = creditView.getParams();
     },
