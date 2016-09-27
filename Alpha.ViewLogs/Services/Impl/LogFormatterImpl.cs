@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Resources;
     using System.Xml.Linq;
     using AppResources;
     using Constants;
@@ -15,6 +16,7 @@
         private const string StatusHtmlFormat = "<tr><td colspan=\"3\" class=\"colW1\">{0}</td><td colspan=\"3\" class=\"colW2\">{1}</td></tr>";
 
         private IPService ipService;
+
         private Dictionary<string, bool> custStatuses;
         private bool isShowMyanmarOdds;
 
@@ -22,6 +24,8 @@
         {
             this.ipService = ipService;
         }
+
+        public ResourceManager ResourceManager { get; set; }
 
         /// <summary>
         /// Need be reviewed code here, AssignParams should not in formatter class
@@ -50,13 +54,13 @@
 
         public bool IsVisible(string key)
         {
-            return custStatuses[key];
+            return custStatuses.ContainsKey(key) && custStatuses[key];
         }
 
         public string GetLogResource(string key)
         {
-            TrackingValueResources.ResourceManager.IgnoreCase = true;
-            return TrackingValueResources.ResourceManager.GetString(key) ?? string.Empty;
+            ResourceManager.IgnoreCase = true;
+            return ResourceManager.GetString(key) ?? string.Empty;
         }
 
         public string GetSportName(int sportType)

@@ -34,7 +34,8 @@
 
             viewModel.PreviousUsername = message.PreviousUsername;
             viewModel.ActionTypeId = message.ActionTypeId;
-            viewModel.Username = viewModel.RoleId == UserLevel.Agent.Value ? viewModel.PreviousUsername : viewModel.Username;
+            viewModel.IsAgent = viewModel.RoleId == UserLevel.Agent.Value;
+            viewModel.Username = viewModel.IsAgent ? viewModel.PreviousUsername : viewModel.Username;
 
             return viewModel;
         }

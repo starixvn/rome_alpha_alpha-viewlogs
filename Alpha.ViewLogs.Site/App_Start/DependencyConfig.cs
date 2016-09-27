@@ -2,9 +2,8 @@
 {
     using System.Collections.Generic;
     using System.Reflection;
-    using System.Web;
     using System.Web.Mvc;
-    using System.Web.SessionState;
+    using AppResources;
     using Controllers;
     using DataAccesses;
     using DataAccesses.Impl;
@@ -66,6 +65,11 @@
 
         private static void RegisterServices(Container container)
         {
+            container.RegisterInitializer<LogFormatterImpl>(logFormatter =>
+            {
+                logFormatter.ResourceManager = TrackingValueResources.ResourceManager;
+            });
+
             container.Register<IUserSession, UserSessionExt>(Lifestyle.Scoped);
 
             container.Register<CustomerService, CustomerServiceImpl>(Lifestyle.Transient);

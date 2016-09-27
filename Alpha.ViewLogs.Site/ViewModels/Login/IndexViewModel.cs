@@ -8,6 +8,8 @@
         {
         }
 
+        public bool IsAgent { get; set; }
+
         public string PreviousUsername { get; set; }
     }
 }

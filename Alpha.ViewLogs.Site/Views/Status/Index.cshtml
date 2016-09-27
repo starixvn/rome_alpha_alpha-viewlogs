@@ -69,14 +69,14 @@
 </div>
 @Html.Hidden("maxReportDate", Model.MaxReportDate)
 @Html.Hidden("minReportDate", Model.MinReportDate)
-@Html.Hidden("fromDate", Model.FromDate)
-@Html.Hidden("toDate", Model.ToDate)
 @Html.Hidden("dayInMonth", Model.DayInMonth)
 @Html.Hidden("totalRecords", Model.TotalRecords)
-@Html.Hidden("pageSize", Model.PageSize)
 @Html.Hidden("pageIndex", Model.PageIndex)
 @Html.Hidden("actionTypeId", Model.ActionTypeId)
 @Html.Hidden("showOldValuesCookieName", Model.ShowOldValuesCookieName)
+@Html.Hidden("viewmodal-fromdate", Model.FromDate)
+@Html.Hidden("viewmodal-todate", Model.ToDate)
+@Html.Hidden("viewmodal-pagesize", Model.PageSize)
 
 @Html.Hidden("labelTo", Resources.To)
 @Html.Hidden("noInfo", Resources.NoInfo)

@@ -16,12 +16,12 @@ var creditView = {
 
         maxReportDate: (<HTMLInputElement>document.getElementById('maxReportDate')).value,
         minReportDate: (<HTMLInputElement>document.getElementById('minReportDate')).value,
-        fromDate: $('fromDate').val(),
-        toDate: $('toDate').val(),
+        fromDate: (<HTMLInputElement>document.getElementById('viewmodal-fromdate')).value,
+        toDate: (<HTMLInputElement>document.getElementById('viewmodal-todate')).value,
         dayInMonth: (<HTMLInputElement>document.getElementById('dayInMonth')).value,
 
         totalRecords: (<HTMLInputElement>document.getElementById('totalRecords')).value,
-        pageSize: (<HTMLInputElement>document.getElementById('pageSize')).value,
+        pageSize: (<HTMLInputElement>document.getElementById('viewmodal-pagesize')).value,
         pageIndex: parseInt((<HTMLInputElement>document.getElementById('pageIndex')).value),
         actionTypeId: (<HTMLInputElement>document.getElementById('actionTypeId')).value,
 
