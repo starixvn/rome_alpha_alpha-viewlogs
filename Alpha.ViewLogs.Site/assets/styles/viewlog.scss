@@ -59,6 +59,10 @@ $height-td: 28px;
     width: 100%;
 }
 
+.tblRpt .tblDesc tbody tr td {
+    white-space: initial;
+}
+
 .tblRpt {
     background: #fff;
 
@@ -166,7 +170,6 @@ $height-td: 28px;
 
 .tblRpt  td {
     .valuechanged, .valueold {
-        height: 27px;
         display: block;
         padding: 6px 0;
     }
