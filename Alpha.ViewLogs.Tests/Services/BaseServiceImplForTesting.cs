@@ -1,5 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
+    using System;
     using Alpha.ViewLogs.Services.Impl;
     using DataAccesses;
     using Fanex.Data.Repository;
@@ -18,12 +19,12 @@
 
         protected override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
-            return null;
+            throw new NotImplementedException();
         }
 
         protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
-            return null;
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
+    using System;
     using Criteria.Setting;
     using DataAccesses;
     using Fanex.Data.Repository;
@@ -20,7 +21,7 @@
         {
             if (logParam == null)
             {
-                return null;
+                throw new ArgumentNullException("logParam");
             }
 
             return new GetSettingLogsCriteria
@@ -40,7 +41,7 @@
         {
             if (logParam == null)
             {
-                return null;
+                throw new ArgumentNullException("logParam");
             }
 
             return new GetTotalSettingLogsCriteria

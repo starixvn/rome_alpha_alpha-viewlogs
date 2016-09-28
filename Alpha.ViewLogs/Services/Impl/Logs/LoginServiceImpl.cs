@@ -1,5 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
+    using System;
     using System.Collections.Generic;
     using Criteria.Login;
     using DataAccesses;
@@ -30,7 +31,7 @@
         {
             if (logParam == null)
             {
-                return null;
+                throw new ArgumentNullException("logParam");
             }
 
             return new GetLoginLogsCriteria
@@ -49,7 +50,7 @@
         {
             if (logParam == null)
             {
-                return null;
+                throw new ArgumentNullException("logParam");
             }
 
             return new GetTotalLoginLogsCriteria
