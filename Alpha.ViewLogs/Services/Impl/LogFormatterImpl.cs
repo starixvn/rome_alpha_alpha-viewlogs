@@ -100,7 +100,8 @@
             {
                 newValue = codes.First().Value;
 
-                // oldValue has format: (7 flags for 7 days)
+                // remove char ( at the beginning of oldValue
+                // 7 days => 7 characters
                 oldValue = codes.Last().Value.Substring(1, 8);
 
                 dayCodesWithDiff = dayCodesWithDiff.Replace(newValue, CovertCodeCondition(newValue))
