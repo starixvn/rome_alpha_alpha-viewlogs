@@ -35,7 +35,7 @@
           <xsl:choose>
             <xsl:when test="@bettype">
               <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetBettypeName(@bettype)" />
+                <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
               </td>
             </xsl:when>
             <xsl:when test="@sporttype">

@@ -5,7 +5,7 @@
     <table width="100%" class="tblDesc">
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetBettypeName(@gametypeid)" />
+          <xsl:value-of select="xslLogFormat:GetBetTypeName(@gametypeid)" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@stakelevel" />

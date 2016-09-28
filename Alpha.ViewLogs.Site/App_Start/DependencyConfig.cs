@@ -78,6 +78,7 @@
             container.Register<TrackingValueFormatter, TrackingValueFormatterImpl>(Lifestyle.Transient);
 
             container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);
+            container.Register<RemotingRefWrapper, RemotingRefWrapperImpl>(Lifestyle.Transient);
 
             container.RegisterConditional<LogService, SettingServiceImpl>(
                 Lifestyle.Transient,

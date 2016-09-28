@@ -9,20 +9,23 @@
     using Constants;
     using Helpers;
     using Params;
-    using Sunplus.Agent.Model.BL.Cache;
 
     public class LogFormatterImpl : LogFormatter
     {
         private const string StatusHtmlFormat = "<tr><td colspan=\"3\" class=\"colW1\">{0}</td><td colspan=\"3\" class=\"colW2\">{1}</td></tr>";
 
         private IPService ipService;
+        private RemotingRefWrapper remotingRef;
 
         private Dictionary<string, bool> custStatuses;
         private bool isShowMyanmarOdds;
 
-        public LogFormatterImpl(IPService ipService)
+        public LogFormatterImpl(
+            IPService ipService,
+            RemotingRefWrapper remotingRef)
         {
             this.ipService = ipService;
+            this.remotingRef = remotingRef;
         }
 
         public ResourceManager ResourceManager { get; set; }
@@ -65,17 +68,17 @@
 
         public string GetSportName(int sportType)
         {
-            return CacheRef.GetSportName(sportType);
+            return remotingRef.GetSportName(sportType);
         }
 
-        public string GetBettypeName(int betType)
+        public string GetBetTypeName(int betType)
         {
-            return CacheRef.GetBettype(betType);
+            return remotingRef.GetBetType(betType);
         }
 
         public string GetProductName(int productId)
         {
-            return CacheRef.GetProductName(productId);
+            return remotingRef.GetProductName(productId);
         }
 
         public string TransferConditionFromCode(string dayCodesWithDiff)
@@ -121,11 +124,6 @@
             }
 
             return CovertCodeCondition(dayCodesWithDiff);
-        }
-
-        public string FormatBetTypeId(string betTypeId)
-        {
-            return CacheRef.GetBettype((object)betTypeId);
         }
 
         public string FormatCodeSite(string code)
@@ -186,7 +184,7 @@
 
         public string GetDisabledKenoBetTypeName(string disableBetType)
         {
-            return string.Format("{0} {1}", Resources.Disabled, CacheRef.GetBetTypeName(disableBetType));
+            return string.Format("{0} {1}", Resources.Disabled, remotingRef.GetBetTypeName(disableBetType));
         }
 
         public bool IsShowMyanmarOdds()
@@ -206,17 +204,30 @@
             return sportType == SportId.GoldDeluxe;
         }
 
+        public string RenderCustStatus(string name, string value)
+        {
+            if (!string.IsNullOrWhiteSpace(name) &&
+                custStatuses.ContainsKey(name.ToLower())
+                && custStatuses[name.ToLower()])
+            {
+                return string.Format(StatusHtmlFormat, GetLogResource(name), value);
+            }
+
+            return string.Empty;
+        }
+
         private string CovertCodeCondition(string dayCodes)
         {
             char[] codes = dayCodes.Trim().ToCharArray();
             string condition = string.Empty;
 
-            if (!codes.Any())
+            var indicatorOfWeekly = 7;
+
+            if (!codes.Any()
+                || codes.Length < indicatorOfWeekly)
             {
                 return condition;
             }
-
-            var indicatorOfWeekly = 7;
 
             if (codes[indicatorOfWeekly].ToString() == "0")
             {
@@ -236,18 +247,6 @@
             }
 
             return Resources.Weekly + " (" + string.Join(" - ", selectedDays) + ")";
-        }
-
-        public string RenderCustStatus(string name, string value)
-        {
-            if (!string.IsNullOrWhiteSpace(name) &&
-                custStatuses.ContainsKey(name.ToLower())
-                && custStatuses[name.ToLower()])
-            {
-                return string.Format(StatusHtmlFormat, GetLogResource(name), value);
-            }
-
-            return string.Empty;
         }
     }
 }

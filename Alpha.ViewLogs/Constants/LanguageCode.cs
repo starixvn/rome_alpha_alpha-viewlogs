@@ -9,7 +9,6 @@
         public const string Thai = "th-TH";
         public const string Korean = "ko-KR";
         public const string Vietnamese = "vi-VN";
-
         public const string Default = English;
     }
 }

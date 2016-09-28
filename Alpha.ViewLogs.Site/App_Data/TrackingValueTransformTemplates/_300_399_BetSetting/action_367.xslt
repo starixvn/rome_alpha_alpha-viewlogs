@@ -74,19 +74,23 @@
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatErrMsg(@errmsg)" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
-        <td class="colW1"></td><td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
       </tr>
       <xsl:for-each select="gametype">
         <tr>
           <td class="colW1">
-            <xsl:value-of select="xslLogFormat:FormatBetTypeId(@bettypeid)" />
+            <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettypeid)" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@stakelevel" />
           </td>
-          <td class="colW1"></td><td class="colW2"></td>
-          <td class="colW1"></td><td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
         </tr>
       </xsl:for-each>
     </table>

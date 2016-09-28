@@ -16,13 +16,11 @@
 
         string GetSportName(int sportType);
 
-        string GetBettypeName(int betType);
+        string GetBetTypeName(int betType);
 
         string GetProductName(int productId);
 
         string TransferConditionFromCode(string dayCodesWithDiff);
-
-        string FormatBetTypeId(string betTypeId);
 
         string FormatErrCode(string code);
 

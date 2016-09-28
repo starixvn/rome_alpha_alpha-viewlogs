@@ -55,7 +55,7 @@
                   <xsl:value-of select="xslLogFormat:GetLogResource('bettype')" />
                 </td>
                 <td class="colW2">
-                  <xsl:value-of select="xslLogFormat:GetBettypeName(@bettype)" />
+                  <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
                 </td>
               </xsl:if>
               <td class="colW1">

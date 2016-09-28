@@ -22,7 +22,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
         <td class="colW2">
-<xsl:value-of select="xslLogFormat:GetProductName(@productid)" />	
+          <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
         </td>
       </tr>
     </table>
@@ -33,7 +33,7 @@
             <xsl:choose>
               <xsl:when test="@bettype">
                 <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" /> -
-                <xsl:value-of select="xslLogFormat:GetBettypeName(@bettype)" />
+                <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
@@ -41,7 +41,7 @@
             </xsl:choose>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="xslLogFormat:GetBettypeName(@bettype)" />
+            <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
           </xsl:otherwise>
         </xsl:choose>
       </div>

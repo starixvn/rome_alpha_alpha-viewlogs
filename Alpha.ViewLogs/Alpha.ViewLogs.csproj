@@ -46,6 +46,7 @@
     <Compile Include="Constants\DefaultVariables.cs" />
     <Compile Include="Constants\LanguageCode.cs" />
     <Compile Include="Constants\PageAccessType.cs" />
+    <Compile Include="Constants\ShortLanguageCode.cs" />
     <Compile Include="Constants\SportId.cs" />
     <Compile Include="Criteria\GetCustInfoByUsernameCommand.cs" />
     <Compile Include="Criteria\Credit\GetCreditLogsCriteria.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Params\LogParam.cs" />
     <Compile Include="Params\TransformParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Impl\RemotingRefWrapperImpl.cs" />
     <Compile Include="Services\LogService.cs" />
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\Impl\Logs\BaseService.cs" />
@@ -92,6 +94,7 @@
     <Compile Include="Services\Impl\TransformServiceImpl.cs" />
     <Compile Include="Services\Impl\LogFormatterImpl.cs" />
     <Compile Include="Services\IPService.cs" />
+    <Compile Include="Services\RemotingRefWrapper.cs" />
     <Compile Include="Services\TransformService.cs" />
     <Compile Include="Services\LogFormatter.cs" />
   </ItemGroup>
@@ -161,10 +164,6 @@
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.1.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.1.5\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Sunplus.Agent.Model.RemotingRef, Version=3.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.RemotingRef.3.0.0.3-siteviewlogs-01\lib\net40\Sunplus.Agent.Model.RemotingRef.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

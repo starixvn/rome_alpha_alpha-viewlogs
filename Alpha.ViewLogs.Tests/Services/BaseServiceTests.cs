@@ -121,7 +121,7 @@
             dynamicRepository.Fetch<LogActionType>(Arg.Any<GetAllLogActionTypeCriteria>()).Returns(expectedLogActionTypes);
 
             // Action
-            var actualActionTypes = baseService.GetLogActionTypes();
+            baseService.GetLogActionTypes();
 
             // Assert
             cacheForTesting.Received().Set(LogActionTypesCacheKey, expectedLogActionTypes, Arg.Any<CacheItemOptions>());
@@ -246,9 +246,9 @@
             Assert.AreEqual(expectedPagingLogs, actualPagingLogs);
         }
 
-        [TestCase(1, "Action 1")]
-        [TestCase(2, "Action 2")]
-        public void GetLogAction_HasDataInCache_ReturnsDataInCache(int actionId, string expectedActionName)
+        [TestCase(1)]
+        [TestCase(2)]
+        public void GetLogAction_HasDataInCache_ReturnsDataInCache(int actionId)
         {
             // Arrange
             var expectedActionDictionary = new Dictionary<int, LogAction>

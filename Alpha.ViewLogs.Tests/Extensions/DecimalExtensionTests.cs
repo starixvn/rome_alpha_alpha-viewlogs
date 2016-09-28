@@ -12,7 +12,7 @@
         [TestCase(0.11, "0.11")]
         [TestCase(0.110, "0.11")]
         [TestCase(0.111, "0.11")]
-        public void FormatThousandSeparate_NumberOnlyHasFractionalPart_Return(decimal value, string expectedValue)
+        public void ToNumericString_NumberOnlyHasFractionalPart_Return(decimal value, string expectedValue)
         {
             // Arrange
 
