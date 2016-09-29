@@ -2,14 +2,14 @@
 /// <reference path="../tab/index.ts" />
 /// <reference path="index-view.ts" />
 
-'use strict';
+"use strict";
 /*global loginView, alphaViewLogs, tabController*/
 declare var $: any;
 declare var viewModel: any;
 
 var loginController = {
     urls: {
-        index: (<HTMLInputElement>document.getElementById('indexPath')).value
+        index: (<HTMLInputElement>document.getElementById("indexPath")).value
     },
     init: function () {
         loginView.initElements(loginView.viewModel);
@@ -17,7 +17,7 @@ var loginController = {
         tabController.viewLogsParams = loginView.getParams();
     },
     viewLogs: function () {
-        setVisible('hidden');
+        setVisible("hidden");
         loginView.showLoadingState();
 
         var viewLogsParams = loginView.getParams();
@@ -27,7 +27,7 @@ var loginController = {
         window.location.href = url;
     },
     pageLogs: function () {
-        setVisible('hidden');
+        setVisible("hidden");
         loginView.showLoadingState();
 
         tabController.viewLogsParams.PageIndex = loginView.pageNumber;

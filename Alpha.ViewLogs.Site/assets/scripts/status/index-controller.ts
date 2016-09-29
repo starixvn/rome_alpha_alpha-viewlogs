@@ -2,14 +2,14 @@
 /// <reference path="../tab/index.ts" />
 /// <reference path="index-view.ts" />
 
-'use strict';
+"use strict";
 /*global statusView, alphaViewLogs, tabController*/
 declare var $: any;
 declare var viewModel: any;
 
 var statusController = {
     urls: {
-        index: (<HTMLInputElement>document.getElementById('indexPath')).value
+        index: (<HTMLInputElement>document.getElementById("indexPath")).value
     },
     init: function () {
         statusView.initElements(statusView.viewModel);
@@ -17,7 +17,7 @@ var statusController = {
         tabController.viewLogsParams = statusView.getParams();
     },
     viewLogs: function () {
-        setVisible('hidden');
+        setVisible("hidden");
         statusView.showLoadingState();
 
         var viewLogsParams = statusView.getParams();
@@ -27,7 +27,7 @@ var statusController = {
         window.location.href = url;
     },
     pageLogs: function () {
-        setVisible('hidden');
+        setVisible("hidden");
         statusView.showLoadingState();
 
         tabController.viewLogsParams.PageIndex = statusView.pageNumber;

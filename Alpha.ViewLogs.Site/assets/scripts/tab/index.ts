@@ -1,9 +1,9 @@
-﻿'use strict';
+﻿"use strict";
 
 var tabController = {
     viewLogsParams: null,
     init: function () {
-        $('.lnk-changetab').click(function () {
+        $(".lnk-changetab").click(function () {
             var url = $(this).data("tablink") + "?" + $.param({
                 Username: tabController.viewLogsParams.Username,
                 FromDate: tabController.viewLogsParams.FromDate,

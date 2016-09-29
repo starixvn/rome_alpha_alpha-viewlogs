@@ -39,6 +39,9 @@
         {
             var fromDate = GetFromDate(message);
             var toDate = GetToDate(message);
+
+            var pageSize = string.IsNullOrWhiteSpace(message.PageSize) ? DefaultVariables.PageSize : Converter.ToInt(message.PageSize);
+
             var logsParam = new SettingParam
             {
                 UplineId = message.UplineId,
@@ -49,7 +52,7 @@
                 Username = message.Username,
                 IsInternal = message.IsInternal,
 
-                PageSize = string.IsNullOrWhiteSpace(message.PageSize) ? DefaultVariables.PageSize : Converter.ToInt(message.PageSize),
+                PageSize = pageSize == 0 ? DefaultVariables.PageSize : pageSize,
                 PageIndex = string.IsNullOrWhiteSpace(message.PageIndex) ? 0 : Converter.ToInt(message.PageIndex),
 
                 Language = message.Language,

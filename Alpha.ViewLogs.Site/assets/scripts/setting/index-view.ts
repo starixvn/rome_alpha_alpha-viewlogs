@@ -1,32 +1,31 @@
-﻿//# sourceMappingURL=core.js.map
-/// <reference path="../core.ts" />
+﻿/// <reference path="../core.ts" />
 /// <reference path="index-controller.ts" />
 
-'use strict';
+"use strict";
 /*global settingController, alphaViewLogs, viewModel*/
 declare var $: any;
 declare var initAutoComplete: any;
 
 var settingView = {
     viewModel: {
-        labelTo: (<HTMLInputElement>document.getElementById('labelTo')).value,
-        noInfo: (<HTMLInputElement>document.getElementById('noInfo')).value,
-        Page: (<HTMLInputElement>document.getElementById('Page')).value,
-        of: (<HTMLInputElement>document.getElementById('of')).value,
-        Pager_DisplayItems: (<HTMLInputElement>document.getElementById('Pager_DisplayItems')).value,
+        labelTo: (<HTMLInputElement>document.getElementById("labelTo")).value,
+        noInfo: (<HTMLInputElement>document.getElementById("noInfo")).value,
+        Page: (<HTMLInputElement>document.getElementById("Page")).value,
+        of: (<HTMLInputElement>document.getElementById("of")).value,
+        Pager_DisplayItems: (<HTMLInputElement>document.getElementById("Pager_DisplayItems")).value,
 
-        maxReportDate: (<HTMLInputElement>document.getElementById('maxReportDate')).value,
-        minReportDate: (<HTMLInputElement>document.getElementById('minReportDate')).value,
-        fromDate: (<HTMLInputElement>document.getElementById('viewmodal-fromdate')).value,
-        toDate: (<HTMLInputElement>document.getElementById('viewmodal-todate')).value,
-        dayInMonth: (<HTMLInputElement>document.getElementById('dayInMonth')).value,
+        maxReportDate: (<HTMLInputElement>document.getElementById("maxReportDate")).value,
+        minReportDate: (<HTMLInputElement>document.getElementById("minReportDate")).value,
+        fromDate: (<HTMLInputElement>document.getElementById("viewmodal-fromdate")).value,
+        toDate: (<HTMLInputElement>document.getElementById("viewmodal-todate")).value,
+        dayInMonth: (<HTMLInputElement>document.getElementById("dayInMonth")).value,
 
-        totalRecords: (<HTMLInputElement>document.getElementById('totalRecords')).value,
-        pageSize: (<HTMLInputElement>document.getElementById('viewmodal-pagesize')).value,
-        pageIndex: parseInt((<HTMLInputElement>document.getElementById('pageIndex')).value),
-        actionTypeId: (<HTMLInputElement>document.getElementById('actionTypeId')).value,
+        totalRecords: (<HTMLInputElement>document.getElementById("totalRecords")).value,
+        pageSize: (<HTMLInputElement>document.getElementById("viewmodal-pagesize")).value,
+        pageIndex: parseInt((<HTMLInputElement>document.getElementById("pageIndex")).value, 0),
+        actionTypeId: (<HTMLInputElement>document.getElementById("actionTypeId")).value,
 
-        showOldValuesCookieName: (<HTMLInputElement>document.getElementById('showOldValuesCookieName')).value
+        showOldValuesCookieName: (<HTMLInputElement>document.getElementById("showOldValuesCookieName")).value
     },
     elelments: {
         ddlLogActionType: null,
@@ -40,28 +39,28 @@ var settingView = {
         dataLog: null,
         navTabs: null
     },
-    showOldValuesCookieName: '',
+    showOldValuesCookieName: "",
     pageNumber: 0,
-    pageSize: null,
+    pageSize: 0,
     cacheElements: function () {
-        settingView.elelments.ddlLogActionType = $('#ddl-logactiontype');
+        settingView.elelments.ddlLogActionType = $("#ddl-logactiontype");
         settingView.elelments.btnSubmit = $("#btn-submit");
-        settingView.elelments.ddlMonth = $('#ddlMonth');
-        settingView.elelments.iconLoading = $('#icon-loading');
-        settingView.elelments.chkOldValues = $('#chk-oldvalues');
-        settingView.elelments.txtUsername = $('#txt-username');
-        settingView.elelments.pagination = $('#pagination');
-        settingView.elelments.longMonthsInYear = $('#longMonthsInYear');
-        settingView.elelments.dataLog = $('#DataLog');
-        settingView.elelments.navTabs = $('#nav-tabs');
+        settingView.elelments.ddlMonth = $("#ddlMonth");
+        settingView.elelments.iconLoading = $("#icon-loading");
+        settingView.elelments.chkOldValues = $("#chk-oldvalues");
+        settingView.elelments.txtUsername = $("#txt-username");
+        settingView.elelments.pagination = $("#pagination");
+        settingView.elelments.longMonthsInYear = $("#longMonthsInYear");
+        settingView.elelments.dataLog = $("#DataLog");
+        settingView.elelments.navTabs = $("#nav-tabs");
 
     },
-    initElements: function (viewModel) {
+    initElements: function (viewModel: any) {
         settingView.cacheElements();
 
         settingView.elelments.ddlLogActionType.change(function () {
             settingView.pageNumber = 0;
-            settingView.pageSize = '';
+            settingView.pageSize = 0;
 
             settingController.viewLogs();
         });
@@ -70,26 +69,26 @@ var settingView = {
 
         settingView.elelments.btnSubmit.click(function () {
             settingView.pageNumber = 0;
-            settingView.pageSize = '';
+            settingView.pageSize = 0;
 
             settingController.viewLogs();
         });
 
         settingView.elelments.chkOldValues.click(function () {
             var isShowOldValues = settingView.elelments.chkOldValues.prop("checked") ? 1 : 0;
-            $.cookie(viewModel.showOldValuesCookieName, isShowOldValues, { path: '/' });
+            $.cookie(viewModel.showOldValuesCookieName, isShowOldValues, { path: "/" });
             settingController.viewLogs();
         });
 
-        settingView.elelments.txtUsername.keypress(function (e) {
+        settingView.elelments.txtUsername.keypress(function (e: any) {
             if (!e) {
                 e = window.event;
             }
 
             var key = (e.keyCode) ? e.keyCode : e.which;
-            if (key == alphaViewLogs.keyCode.enter) {
+            if (key === alphaViewLogs.keyCode.enter) {
                 settingView.pageNumber = 0;
-                settingView.pageSize = '';
+                settingView.pageSize = 0;
                 settingController.viewLogs();
 
                 return alphaViewLogs.cancelBubbleEvent(e);
@@ -102,7 +101,7 @@ var settingView = {
                 ismember: 0
             });
 
-        initAutoComplete($('#txt-username')[0], queryUsernameURL);
+        initAutoComplete($("#txt-username")[0], queryUsernameURL);
 
         settingView.renderPager({
             totalRecords: viewModel.totalRecords,
@@ -115,7 +114,7 @@ var settingView = {
 
         settingView.elelments.dataLog.stickyTableHeaders({ fixedOffset: settingView.elelments.navTabs });
     },
-    initMonthPicker: function (viewModel) {
+    initMonthPicker: function (viewModel: any) {
         settingView.elelments.ddlMonth.monPickr({
             longMonthsInYear: settingView.getLongMonthsInYear(),
             maxDate: viewModel.maxReportDate,
@@ -127,23 +126,23 @@ var settingView = {
 
             showDateRange: true,
             monthFormat: alphaViewLogs.format.monthFormat,
-            fromDayId: 'ddl-fromday',
-            toDayId: 'ddl-today',
-            fromDayLabel: '',
+            fromDayId: "ddl-fromday",
+            toDayId: "ddl-today",
+            fromDayLabel: "",
             toDayLabel: viewModel.labelTo,
             sortDesc: true,
-            log: function (msg) {
+            log: function (msg: string) {
                 console.warn(msg);
             }
         });
     },
     showLoadingState: function () {
-        settingView.elelments.btnSubmit.attr('disabled', 'disabled');
-        settingView.elelments.iconLoading.removeClass('hide');
+        settingView.elelments.btnSubmit.attr("disabled", "disabled");
+        settingView.elelments.iconLoading.removeClass("hide");
     },
     showCompleteLoadingState: function () {
-        settingView.elelments.iconLoading.addClass('hide');
-        settingView.elelments.btnSubmit.attr('disabled', null);
+        settingView.elelments.iconLoading.addClass("hide");
+        settingView.elelments.btnSubmit.attr("disabled", null);
     },
 
     getParams: function () {
@@ -156,7 +155,7 @@ var settingView = {
             ActionTypeId: settingView.elelments.ddlLogActionType.val()
         };
     },
-    renderPager: function (options) {
+    renderPager: function (options: any) {
         if (alphaViewLogs.pageList[0] <= options.totalRecords) {
             settingView.elelments.pagination.pagination({
                 pageList: alphaViewLogs.pageList,
@@ -165,14 +164,14 @@ var settingView = {
                 pageNumber: options.pageIndex,
 
                 showRefresh: false,
-                onSelectPage: function (pageNumber, pageSize) {
+                onSelectPage: function (pageNumber: number, pageSize: number) {
                     settingView.pageNumber = pageNumber - 1;
                     settingView.pageSize = pageSize;
 
                     settingController.viewLogs();
                 },
                 beforePageText: settingView.viewModel.Page,
-                afterPageText: settingView.viewModel.of + ' {pages}',
+                afterPageText: settingView.viewModel.of + " {pages}",
                 displayMsg: settingView.viewModel.Pager_DisplayItems
             });
 
@@ -182,7 +181,7 @@ var settingView = {
         }
     },
     getLongMonthsInYear: function () {
-        var longMonthsInYear = eval(settingView.elelments.longMonthsInYear.val());
+        var longMonthsInYear = $.parseJSON(settingView.elelments.longMonthsInYear.val());
         return longMonthsInYear;
     }
 };

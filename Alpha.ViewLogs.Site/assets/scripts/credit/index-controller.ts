@@ -2,14 +2,15 @@
 /// <reference path="../tab/index.ts" />
 /// <reference path="index-view.ts" />
 
-'use strict';
+/*jslint node: true */
+"use strict";
 /*global creditView, alphaViewLogs, tabController*/
 declare var $: any;
 declare var viewModel: any;
 
 var creditController = {
     urls: {
-        index: (<HTMLInputElement>document.getElementById('indexPath')).value
+        index: (<HTMLInputElement>document.getElementById("indexPath")).value
     },
     init: function () {
         creditView.initElements(creditView.viewModel);
@@ -17,7 +18,7 @@ var creditController = {
         tabController.viewLogsParams = creditView.getParams();
     },
     viewLogs: function () {
-        setVisible('hidden');
+        setVisible("hidden");
         creditView.showLoadingState();
 
         var viewLogsParams = creditView.getParams();
@@ -27,7 +28,7 @@ var creditController = {
         window.location.href = url;
     },
     pageLogs: function () {
-        setVisible('hidden');
+        setVisible("hidden");
         creditView.showLoadingState();
 
         tabController.viewLogsParams.PageIndex = creditView.pageNumber;

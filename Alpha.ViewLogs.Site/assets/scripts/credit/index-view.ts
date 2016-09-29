@@ -1,31 +1,30 @@
 ﻿/// <reference path="../core.ts" />
 /// <reference path="index-controller.ts" />
 
-'use strict';
+/*jslint node: true */
+"use strict";
 /*global creditController, alphaViewLogs, viewModel*/
 declare var $: any;
 declare var initAutoComplete: any;
 
 var creditView = {
     viewModel: {
-        labelTo: (<HTMLInputElement>document.getElementById('labelTo')).value,
-        noInfo: (<HTMLInputElement>document.getElementById('noInfo')).value,
-        Page: (<HTMLInputElement>document.getElementById('Page')).value,
-        of: (<HTMLInputElement>document.getElementById('of')).value,
-        Pager_DisplayItems: (<HTMLInputElement>document.getElementById('Pager_DisplayItems')).value,
+        labelTo: (<HTMLInputElement>document.getElementById("labelTo")).value,
+        noInfo: (<HTMLInputElement>document.getElementById("noInfo")).value,
+        Page: (<HTMLInputElement>document.getElementById("Page")).value,
+        of: (<HTMLInputElement>document.getElementById("of")).value,
+        Pager_DisplayItems: (<HTMLInputElement>document.getElementById("Pager_DisplayItems")).value,
 
-        maxReportDate: (<HTMLInputElement>document.getElementById('maxReportDate')).value,
-        minReportDate: (<HTMLInputElement>document.getElementById('minReportDate')).value,
-        fromDate: (<HTMLInputElement>document.getElementById('viewmodal-fromdate')).value,
-        toDate: (<HTMLInputElement>document.getElementById('viewmodal-todate')).value,
-        dayInMonth: (<HTMLInputElement>document.getElementById('dayInMonth')).value,
+        maxReportDate: (<HTMLInputElement>document.getElementById("maxReportDate")).value,
+        minReportDate: (<HTMLInputElement>document.getElementById("minReportDate")).value,
+        fromDate: (<HTMLInputElement>document.getElementById("viewmodal-fromdate")).value,
+        toDate: (<HTMLInputElement>document.getElementById("viewmodal-todate")).value,
+        dayInMonth: (<HTMLInputElement>document.getElementById("dayInMonth")).value,
 
-        totalRecords: (<HTMLInputElement>document.getElementById('totalRecords')).value,
-        pageSize: (<HTMLInputElement>document.getElementById('viewmodal-pagesize')).value,
-        pageIndex: parseInt((<HTMLInputElement>document.getElementById('pageIndex')).value),
-        actionTypeId: (<HTMLInputElement>document.getElementById('actionTypeId')).value,
-
-        showOldValuesCookieName: (<HTMLInputElement>document.getElementById('showOldValuesCookieName')).value
+        totalRecords: (<HTMLInputElement>document.getElementById("totalRecords")).value,
+        pageSize: (<HTMLInputElement>document.getElementById("viewmodal-pagesize")).value,
+        pageIndex: parseInt((<HTMLInputElement>document.getElementById("pageIndex")).value, 0),
+        actionTypeId: (<HTMLInputElement>document.getElementById("actionTypeId")).value
     },
     elelments: {
         btnSubmit: null,
@@ -37,40 +36,39 @@ var creditView = {
         dataLog: null,
         navTabs: null
     },
-    showOldValuesCookieName: '',
     pageNumber: 0,
-    pageSize: null,
+    pageSize: 0,
     cacheElements: function () {
         creditView.elelments.btnSubmit = $("#btn-submit");
-        creditView.elelments.ddlMonth = $('#ddlMonth');
-        creditView.elelments.iconLoading = $('#icon-loading');
-        creditView.elelments.txtUsername = $('#txt-username');
-        creditView.elelments.pagination = $('#pagination');
-        creditView.elelments.longMonthsInYear = $('#longMonthsInYear');
-        creditView.elelments.dataLog = $('#DataLog');
-        creditView.elelments.navTabs = $('#nav-tabs');
+        creditView.elelments.ddlMonth = $("#ddlMonth");
+        creditView.elelments.iconLoading = $("#icon-loading");
+        creditView.elelments.txtUsername = $("#txt-username");
+        creditView.elelments.pagination = $("#pagination");
+        creditView.elelments.longMonthsInYear = $("#longMonthsInYear");
+        creditView.elelments.dataLog = $("#DataLog");
+        creditView.elelments.navTabs = $("#nav-tabs");
     },
-    initElements: function (viewModel) {
+    initElements: function (viewModel: any) {
         creditView.cacheElements();
 
         creditView.initMonthPicker(viewModel);
 
         creditView.elelments.btnSubmit.click(function () {
             creditView.pageNumber = 0;
-            creditView.pageSize = '';
+            creditView.pageSize = 0;
 
             creditController.viewLogs();
         });
 
-        creditView.elelments.txtUsername.keypress(function (e) {
+        creditView.elelments.txtUsername.keypress(function (e: any) {
             if (!e) {
                 e = window.event;
             }
 
             var key = (e.keyCode) ? e.keyCode : e.which;
-            if (key == alphaViewLogs.keyCode.enter) {
+            if (key === alphaViewLogs.keyCode.enter) {
                 creditView.pageNumber = 0;
-                creditView.pageSize = '';
+                creditView.pageSize = 0;
                 creditController.viewLogs();
 
                 return alphaViewLogs.cancelBubbleEvent(e);
@@ -83,7 +81,7 @@ var creditView = {
                 ismember: 0
             });
 
-        initAutoComplete($('#txt-username')[0], queryUsernameURL);
+        initAutoComplete($("#txt-username")[0], queryUsernameURL);
 
         creditView.renderPager({
             totalRecords: viewModel.totalRecords,
@@ -95,7 +93,7 @@ var creditView = {
         creditView.pageSize = viewModel.pageSize;
         creditView.elelments.dataLog.stickyTableHeaders({ fixedOffset: creditView.elelments.navTabs });
     },
-    initMonthPicker: function (viewModel) {
+    initMonthPicker: function (viewModel: any) {
         creditView.elelments.ddlMonth.monPickr({
             longMonthsInYear: creditView.getLongMonthsInYear(),
             maxDate: viewModel.maxReportDate,
@@ -107,23 +105,23 @@ var creditView = {
 
             showDateRange: true,
             monthFormat: alphaViewLogs.format.monthFormat,
-            fromDayId: 'ddl-fromday',
-            toDayId: 'ddl-today',
-            fromDayLabel: '',
+            fromDayId: "ddl-fromday",
+            toDayId: "ddl-today",
+            fromDayLabel: "",
             toDayLabel: viewModel.labelTo,
             sortDesc: true,
-            log: function (msg) {
+            log: function (msg: string) {
                 console.warn(msg);
             }
         });
     },
     showLoadingState: function () {
-        creditView.elelments.btnSubmit.attr('disabled', 'disabled');
-        creditView.elelments.iconLoading.removeClass('hide');
+        creditView.elelments.btnSubmit.attr("disabled", "disabled");
+        creditView.elelments.iconLoading.removeClass("hide");
     },
     showCompleteLoadingState: function () {
-        creditView.elelments.iconLoading.addClass('hide');
-        creditView.elelments.btnSubmit.attr('disabled', null);
+        creditView.elelments.iconLoading.addClass("hide");
+        creditView.elelments.btnSubmit.attr("disabled", null);
     },
 
     getParams: function () {
@@ -136,7 +134,7 @@ var creditView = {
             ToDate: creditView.elelments.ddlMonth.monPickr("getToDate", alphaViewLogs.format.shortDateWithSlash)
         };
     },
-    renderPager: function (options) {
+    renderPager: function (options: any) {
         if (alphaViewLogs.pageList[0] <= options.totalRecords) {
             creditView.elelments.pagination.pagination({
                 pageList: alphaViewLogs.pageList,
@@ -145,14 +143,14 @@ var creditView = {
                 pageNumber: options.pageIndex,
 
                 showRefresh: false,
-                onSelectPage: function (pageNumber, pageSize) {
+                onSelectPage: function (pageNumber: number, pageSize: number) {
                     creditView.pageNumber = pageNumber - 1;
                     creditView.pageSize = pageSize;
 
                     creditController.pageLogs();
                 },
                 beforePageText: creditView.viewModel.Page,
-                afterPageText: creditView.viewModel.of + ' {pages}',
+                afterPageText: creditView.viewModel.of + " {pages}",
                 displayMsg: creditView.viewModel.Pager_DisplayItems
             });
 
@@ -162,7 +160,8 @@ var creditView = {
         }
     },
     getLongMonthsInYear: function () {
-        var longMonthsInYear = eval(creditView.elelments.longMonthsInYear.val());
+        // $.parseJSON: string must start/end with "
+        var longMonthsInYear = $.parseJSON(creditView.elelments.longMonthsInYear.val());
         return longMonthsInYear;
     }
 };

@@ -338,7 +338,6 @@
             string dayCodesWithDiff,
             string expectedTransferCondition)
         {
-
         }
     }
 }

@@ -2,14 +2,14 @@
 /// <reference path="../tab/index.ts" />
 /// <reference path="index-view.ts" />
 
-'use strict';
+"use strict";
 /*global settingView, alphaViewLogs, tabController*/
 declare var $: any;
 declare var viewModel: any;
 
 var settingController = {
     urls: {
-        index: (<HTMLInputElement>document.getElementById('indexPath')).value
+        index: (<HTMLInputElement>document.getElementById("indexPath")).value
     },
     init: function () {
         settingView.initElements(settingView.viewModel);
@@ -17,7 +17,7 @@ var settingController = {
         tabController.viewLogsParams = settingView.getParams();
     },
     viewLogs: function () {
-        setVisible('hidden');
+        setVisible("hidden");
         settingView.showLoadingState();
 
         var viewLogsParams = settingView.getParams();
@@ -27,7 +27,7 @@ var settingController = {
         window.location.href = url;
     },
     pageLogs: function () {
-        setVisible('hidden');
+        setVisible("hidden");
         settingView.showLoadingState();
 
         tabController.viewLogsParams.PageIndex = settingView.pageNumber;

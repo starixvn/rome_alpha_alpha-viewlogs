@@ -1,8 +1,7 @@
-﻿//# sourceMappingURL=core.js.map
-/// <reference path="../core.ts" />
+﻿/// <reference path="../core.ts" />
 /// <reference path="index-controller.ts" />
 
-'use strict';
+"use strict";
 /*global statusController, alphaViewLogs*/
 declare var $: any;
 declare var initAutoComplete: any;
@@ -10,24 +9,24 @@ declare var setVisible: any;
 
 var statusView = {
     viewModel: {
-        labelTo: (<HTMLInputElement>document.getElementById('labelTo')).value,
-        noInfo: (<HTMLInputElement>document.getElementById('noInfo')).value,
-        Page: (<HTMLInputElement>document.getElementById('Page')).value,
-        of: (<HTMLInputElement>document.getElementById('of')).value,
-        Pager_DisplayItems: (<HTMLInputElement>document.getElementById('Pager_DisplayItems')).value,
+        labelTo: (<HTMLInputElement>document.getElementById("labelTo")).value,
+        noInfo: (<HTMLInputElement>document.getElementById("noInfo")).value,
+        Page: (<HTMLInputElement>document.getElementById("Page")).value,
+        of: (<HTMLInputElement>document.getElementById("of")).value,
+        Pager_DisplayItems: (<HTMLInputElement>document.getElementById("Pager_DisplayItems")).value,
 
-        maxReportDate: (<HTMLInputElement>document.getElementById('maxReportDate')).value,
-        minReportDate: (<HTMLInputElement>document.getElementById('minReportDate')).value,
-        fromDate: (<HTMLInputElement>document.getElementById('viewmodal-fromdate')).value,
-        toDate: (<HTMLInputElement>document.getElementById('viewmodal-todate')).value,
-        dayInMonth: (<HTMLInputElement>document.getElementById('dayInMonth')).value,
+        maxReportDate: (<HTMLInputElement>document.getElementById("maxReportDate")).value,
+        minReportDate: (<HTMLInputElement>document.getElementById("minReportDate")).value,
+        fromDate: (<HTMLInputElement>document.getElementById("viewmodal-fromdate")).value,
+        toDate: (<HTMLInputElement>document.getElementById("viewmodal-todate")).value,
+        dayInMonth: (<HTMLInputElement>document.getElementById("dayInMonth")).value,
 
-        totalRecords: (<HTMLInputElement>document.getElementById('totalRecords')).value,
-        pageSize: (<HTMLInputElement>document.getElementById('viewmodal-pagesize')).value,
-        pageIndex: parseInt((<HTMLInputElement>document.getElementById('pageIndex')).value),
-        actionTypeId: (<HTMLInputElement>document.getElementById('actionTypeId')).value,
+        totalRecords: (<HTMLInputElement>document.getElementById("totalRecords")).value,
+        pageSize: (<HTMLInputElement>document.getElementById("viewmodal-pagesize")).value,
+        pageIndex: parseInt((<HTMLInputElement>document.getElementById("pageIndex")).value, 0),
+        actionTypeId: (<HTMLInputElement>document.getElementById("actionTypeId")).value,
 
-        showOldValuesCookieName: (<HTMLInputElement>document.getElementById('showOldValuesCookieName')).value
+        showOldValuesCookieName: (<HTMLInputElement>document.getElementById("showOldValuesCookieName")).value
     },
     elelments: {
         btnSubmit: null,
@@ -40,46 +39,46 @@ var statusView = {
         dataLog: null,
         navTabs: null
     },
-    showOldValuesCookieName: '',
+    showOldValuesCookieName: "",
     pageNumber: 0,
-    pageSize: null,
+    pageSize: 0,
     cacheElements: function () {
         statusView.elelments.btnSubmit = $("#btn-submit");
-        statusView.elelments.ddlMonth = $('#ddlMonth');
-        statusView.elelments.iconLoading = $('#icon-loading');
-        statusView.elelments.chkOldValues = $('#chk-oldvalues');
-        statusView.elelments.txtUsername = $('#txt-username');
-        statusView.elelments.pagination = $('#pagination');
-        statusView.elelments.dataLog = $('#DataLog');
-        statusView.elelments.navTabs = $('#nav-tabs');
+        statusView.elelments.ddlMonth = $("#ddlMonth");
+        statusView.elelments.iconLoading = $("#icon-loading");
+        statusView.elelments.chkOldValues = $("#chk-oldvalues");
+        statusView.elelments.txtUsername = $("#txt-username");
+        statusView.elelments.pagination = $("#pagination");
+        statusView.elelments.dataLog = $("#DataLog");
+        statusView.elelments.navTabs = $("#nav-tabs");
     },
-    initElements: function (viewModel) {
+    initElements: function (viewModel: any) {
         statusView.cacheElements();
 
         statusView.initMonthPicker(viewModel);
 
         statusView.elelments.btnSubmit.click(function () {
             statusView.pageNumber = 0;
-            statusView.pageSize = '';
+            statusView.pageSize = 0;
 
             statusController.viewLogs();
         });
 
         statusView.elelments.chkOldValues.click(function () {
             var isShowOldValues = statusView.elelments.chkOldValues.prop("checked") ? 1 : 0;
-            $.cookie(viewModel.showOldValuesCookieName, isShowOldValues, { path: '/' });
+            $.cookie(viewModel.showOldValuesCookieName, isShowOldValues, { path: "/" });
             statusController.viewLogs();
         });
 
-        statusView.elelments.txtUsername.keypress(function (e) {
+        statusView.elelments.txtUsername.keypress(function (e: any) {
             if (!e) {
                 e = window.event;
             }
 
             var key = (e.keyCode) ? e.keyCode : e.which;
-            if (key == alphaViewLogs.keyCode.enter) {
+            if (key === alphaViewLogs.keyCode.enter) {
                 statusView.pageNumber = 0;
-                statusView.pageSize = '';
+                statusView.pageSize = 0;
                 statusController.viewLogs();
 
                 return alphaViewLogs.cancelBubbleEvent(e);
@@ -92,7 +91,7 @@ var statusView = {
                 ismember: 0
             });
 
-        initAutoComplete($('#txt-username')[0], queryUsernameURL);
+        initAutoComplete($("#txt-username")[0], queryUsernameURL);
 
         statusView.renderPager({
             totalRecords: viewModel.totalRecords,
@@ -105,7 +104,7 @@ var statusView = {
 
         statusView.elelments.dataLog.stickyTableHeaders({ fixedOffset: statusView.elelments.navTabs });
     },
-    initMonthPicker: function (viewModel) {
+    initMonthPicker: function (viewModel: any) {
         statusView.elelments.ddlMonth.monPickr({
             maxDate: viewModel.maxReportDate,
             minDate: viewModel.minReportDate,
@@ -116,23 +115,23 @@ var statusView = {
 
             showDateRange: true,
             monthFormat: alphaViewLogs.format.monthFormat,
-            fromDayId: 'ddl-fromday',
-            toDayId: 'ddl-today',
-            fromDayLabel: '',
+            fromDayId: "ddl-fromday",
+            toDayId: "ddl-today",
+            fromDayLabel: "",
             toDayLabel: statusView.viewModel.labelTo,
             sortDesc: true,
-            log: function (msg) {
+            log: function (msg: string) {
                 console.warn(msg);
             }
         });
     },
     showLoadingState: function () {
-        statusView.elelments.btnSubmit.attr('disabled', 'disabled');
-        statusView.elelments.iconLoading.removeClass('hide');
+        statusView.elelments.btnSubmit.attr("disabled", "disabled");
+        statusView.elelments.iconLoading.removeClass("hide");
     },
     showCompleteLoadingState: function () {
-        statusView.elelments.iconLoading.addClass('hide');
-        statusView.elelments.btnSubmit.attr('disabled', null);
+        statusView.elelments.iconLoading.addClass("hide");
+        statusView.elelments.btnSubmit.attr("disabled", null);
     },
     getParams: function () {
         return {
@@ -144,7 +143,7 @@ var statusView = {
             ToDate: statusView.elelments.ddlMonth.monPickr("getToDate", alphaViewLogs.format.shortDateWithSlash)
         };
     },
-    renderPager: function (options) {
+    renderPager: function (options: any) {
         if (alphaViewLogs.pageList[0] <= options.totalRecords) {
             statusView.elelments.pagination.pagination({
                 pageList: alphaViewLogs.pageList,
@@ -153,14 +152,14 @@ var statusView = {
                 pageNumber: options.pageIndex,
 
                 showRefresh: false,
-                onSelectPage: function (pageNumber, pageSize) {
+                onSelectPage: function (pageNumber: number, pageSize: number) {
                     statusView.pageNumber = pageNumber - 1;
                     statusView.pageSize = pageSize;
 
                     statusController.pageLogs();
                 },
                 beforePageText: statusView.viewModel.Page,
-                afterPageText: statusView.viewModel.of + ' {pages}',
+                afterPageText: statusView.viewModel.of + " {pages}",
                 displayMsg: statusView.viewModel.Pager_DisplayItems
             });
 

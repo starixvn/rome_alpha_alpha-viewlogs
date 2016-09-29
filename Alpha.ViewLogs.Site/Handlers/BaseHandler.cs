@@ -12,7 +12,9 @@
         {
             var fromDate = GetFromDate(logQuery);
             var toDate = GetToDate(logQuery);
-
+            var pageSize = string.IsNullOrWhiteSpace(logQuery.PageSize)
+                ? DefaultVariables.PageSize
+                : Converter.ToInt(logQuery.PageSize);
             return new LogParam
             {
                 UplineId = logQuery.UplineId,
@@ -23,10 +25,7 @@
                 Username = logQuery.Username,
                 IsInternal = logQuery.IsInternal,
 
-                PageSize = string.IsNullOrWhiteSpace(logQuery.PageSize)
-                ? DefaultVariables.PageSize
-                : Converter.ToInt(logQuery.PageSize),
-
+                PageSize = pageSize == 0 ? DefaultVariables.PageSize : pageSize,
                 PageIndex = string.IsNullOrWhiteSpace(logQuery.PageIndex)
                 ? 0
                 : Converter.ToInt(logQuery.PageIndex),

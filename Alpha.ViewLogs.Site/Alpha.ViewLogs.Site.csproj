@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.2.0.3\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.2.0.3\build\Microsoft.TypeScript.MSBuild.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
@@ -226,6 +227,22 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="assets\bundles\credit.js" />
+    <Content Include="assets\bundles\credit.min.js">
+      <DependentUpon>credit.js</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\login.js" />
+    <Content Include="assets\bundles\login.min.js">
+      <DependentUpon>login.js</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\setting.js" />
+    <Content Include="assets\bundles\setting.min.js">
+      <DependentUpon>setting.js</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\status.js" />
+    <Content Include="assets\bundles\status.min.js">
+      <DependentUpon>status.js</DependentUpon>
+    </Content>
     <Content Include="Web.AppSettings.pro.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
@@ -542,26 +559,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_921.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_922.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_924.xslt" />
-    <Content Include="assets\bundles\credit.js" />
-    <Content Include="assets\bundles\credit.min.js">
-      <DependentUpon>credit.js</DependentUpon>
-    </Content>
-    <Content Include="assets\bundles\default.css" />
-    <Content Include="assets\bundles\default.min.css">
-      <DependentUpon>default.css</DependentUpon>
-    </Content>
-    <Content Include="assets\bundles\login.js" />
-    <Content Include="assets\bundles\login.min.js">
-      <DependentUpon>login.js</DependentUpon>
-    </Content>
-    <Content Include="assets\bundles\setting.js" />
-    <Content Include="assets\bundles\setting.min.js">
-      <DependentUpon>setting.js</DependentUpon>
-    </Content>
-    <Content Include="assets\bundles\status.js" />
-    <Content Include="assets\bundles\status.min.js">
-      <DependentUpon>status.js</DependentUpon>
-    </Content>
     <Content Include="assets\scripts\old-main.js" />
     <Content Include="assets\styles\viewlog.css">
       <DependentUpon>viewlog.scss</DependentUpon>
@@ -739,6 +736,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.2.0.3\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.2.0.3\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.2.0.3\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.2.0.3\build\Microsoft.TypeScript.MSBuild.targets'))" />
   </Target>
   <PropertyGroup>
     <PostBuildEvent>if not exist "$(WebProjectOutputDir)\bin\Roslyn" md "$(WebProjectOutputDir)\bin\Roslyn"  
@@ -747,6 +746,7 @@ cd $(ProjectDir)
 cd ..
 BuildTask.Release</PostBuildEvent>
   </PropertyGroup>
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.2.0.3\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.2.0.3\build\Microsoft.TypeScript.MSBuild.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

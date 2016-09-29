@@ -15,4 +15,4 @@
     };
 }
 
-@Html.Hidden("longMonthsInYear", "['" + string.Join("','", longMonthsInYear) + "']")
+@Html.Hidden("longMonthsInYear", "[\"" + string.Join("\",\"", longMonthsInYear) + "\"]")
