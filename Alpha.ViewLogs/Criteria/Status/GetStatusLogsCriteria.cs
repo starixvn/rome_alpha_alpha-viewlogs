@@ -1,11 +1,33 @@
 ﻿namespace Alpha.ViewLogs.Criteria.Status
 {
     using System;
-    using Constants;
     using Fanex.Data.Repository;
 
     public class GetStatusLogsCriteria : CriteriaBase
     {
+        public GetStatusLogsCriteria(
+            int custId,
+            string custName,
+            int lowerActionId,
+            int upperActionId,
+            DateTime fromDate,
+            DateTime toDate,
+            bool isInternal,
+            int pageIndex,
+            int pageSize)
+        {
+            CustId = custId;
+            CustName = custName;
+            LowerActionId = lowerActionId;
+            UpperActionId = upperActionId;
+
+            FromDate = fromDate;
+            ToDate = toDate;
+            IsInternal = isInternal;
+            PageSize = pageSize;
+            PageIndex = pageIndex;
+        }
+
         public int CustId { get; set; }
 
         public string CustName { get; set; }

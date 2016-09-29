@@ -6,22 +6,40 @@
 
     public class GetLoginLogsCriteria : CriteriaBase
     {
+        public GetLoginLogsCriteria(
+            int custId,
+            string custName,
+            DateTime fromDate,
+            DateTime toDate,
+            bool isInternal,
+            int pageIndex,
+            int pageSize)
+        {
+            CustId = custId;
+            CustName = custName;
+            FromDate = fromDate;
+            ToDate = toDate;
+            IsInternal = isInternal;
+            PageIndex = pageIndex;
+            PageSize = pageSize;
+        }
+
         [SpParam(SqlParamName = "UserId")]
-        public int CustId { get; set; }
+        public int CustId { get; private set; }
 
         [SpParam(SqlParamName = "UserName")]
-        public string CustName { get; set; }
+        public string CustName { get; private set; }
 
-        public DateTime FromDate { get; set; }
+        public DateTime FromDate { get; private set; }
 
-        public DateTime ToDate { get; set; }
+        public DateTime ToDate { get; private set; }
 
         [SpParam(SqlParamName = "IsAdminAccess")]
-        public bool IsInternal { get; set; }
+        public bool IsInternal { get; private set; }
 
-        public int PageIndex { get; set; }
+        public int PageIndex { get; private set; }
 
-        public int PageSize { get; set; }
+        public int PageSize { get; private set; }
 
         public override string GetSettingKey()
         {

@@ -5,13 +5,25 @@
 
     public class GetTotalCreditLogsCriteria : CriteriaBase
     {
-        public int CustId { get; set; }
+        public GetTotalCreditLogsCriteria(
+            int custId,
+            DateTime fromDate,
+            DateTime toDate,
+            bool isInternal)
+        {
+            CustId = custId;
+            FromDate = fromDate;
+            ToDate = toDate;
+            IsInternal = isInternal;
+        }
 
-        public DateTime FromDate { get; set; }
+        public int CustId { get; private set; }
 
-        public DateTime ToDate { get; set; }
+        public DateTime FromDate { get; private set; }
 
-        public bool IsInternal { get; set; }
+        public DateTime ToDate { get; private set; }
+
+        public bool IsInternal { get; private set; }
 
         public override string GetSettingKey()
         {

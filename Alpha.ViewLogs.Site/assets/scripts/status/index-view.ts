@@ -75,7 +75,7 @@ var statusView = {
                 e = window.event;
             }
 
-            var key = (e.keyCode) ? e.keyCode : e.which;
+            var key = e.keyCode ? e.keyCode : e.which;
             if (key === alphaViewLogs.keyCode.enter) {
                 statusView.pageNumber = 0;
                 statusView.pageSize = 0;

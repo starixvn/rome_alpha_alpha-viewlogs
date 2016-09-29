@@ -6,15 +6,27 @@
 
     public class GetTotalLoginLogsCriteria : CriteriaBase
     {
+        public GetTotalLoginLogsCriteria(
+            int custId,
+            DateTime fromDate,
+            DateTime toDate,
+            bool isInternal)
+        {
+            CustId = custId;
+            FromDate = fromDate;
+            ToDate = toDate;
+            IsInternal = isInternal;
+        }
+
         [SpParam(SqlParamName = "UserId")]
-        public int CustId { get; set; }
+        public int CustId { get; private set; }
 
-        public DateTime FromDate { get; set; }
+        public DateTime FromDate { get; private set; }
 
-        public DateTime ToDate { get; set; }
+        public DateTime ToDate { get; private set; }
 
         [SpParam(SqlParamName = "IsAdminAccess")]
-        public bool IsInternal { get; set; }
+        public bool IsInternal { get; private set; }
 
         public override string GetSettingKey()
         {

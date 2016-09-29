@@ -27,19 +27,17 @@
                 throw new ArgumentNullException("logParam");
             }
 
-            return new GetStatusLogsCriteria
-            {
+            return new GetStatusLogsCriteria(
+                logParam.CustId,
+                logParam.Username,
                 //// Just get status from action id 1100 => 1199, because it uses same SP with customer setting log
-                LowerActionId = ActionIdFrom,
-                UpperActionId = ActionIdTo,
-                CustId = logParam.CustId,
-                CustName = logParam.Username,
-                FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(logParam.ToDate),
-                IsInternal = logParam.IsInternal,
-                PageSize = logParam.PageSize,
-                PageIndex = logParam.PageIndex
-            };
+                ActionIdFrom,
+                ActionIdTo,
+                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                logParam.IsInternal,
+                logParam.PageIndex,
+                logParam.PageSize);
         }
 
         protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
@@ -49,16 +47,14 @@
                 throw new ArgumentNullException("logParam");
             }
 
-            return new GetTotalStatusLogsCriteria
-            {
+            return new GetTotalStatusLogsCriteria(
+                logParam.CustId,
                 //// Just get status from action id 1100 => 1199, because it uses same SP with customer setting log
-                LowerActionId = ActionIdFrom,
-                UpperActionId = ActionIdTo,
-                CustId = logParam.CustId,
-                FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(logParam.ToDate),
-                IsInternal = logParam.IsInternal
-            };
+                ActionIdFrom,
+                ActionIdTo,
+                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                logParam.IsInternal);
         }
     }
 }

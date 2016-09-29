@@ -23,11 +23,7 @@
 
             dynamicRepository.Execute(criteria);
 
-            var customerInfo = new CustomerInfo
-            {
-                CustId = criteria.CustId,
-                IsSubAcc = criteria.IsSubAcc
-            };
+            var customerInfo = new CustomerInfo(criteria.CustId, criteria.IsSubAcc);
 
             return customerInfo;
         }

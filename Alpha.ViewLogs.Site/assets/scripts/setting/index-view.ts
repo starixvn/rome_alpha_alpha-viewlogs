@@ -85,7 +85,7 @@ var settingView = {
                 e = window.event;
             }
 
-            var key = (e.keyCode) ? e.keyCode : e.which;
+            var key = e.keyCode ? e.keyCode : e.which;
             if (key === alphaViewLogs.keyCode.enter) {
                 settingView.pageNumber = 0;
                 settingView.pageSize = 0;

@@ -34,16 +34,14 @@
                 throw new ArgumentNullException("logParam");
             }
 
-            return new GetLoginLogsCriteria
-            {
-                CustId = logParam.CustId,
-                CustName = logParam.Username,
-                FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(logParam.ToDate),
-                IsInternal = logParam.IsInternal,
-                PageSize = logParam.PageSize,
-                PageIndex = logParam.PageIndex
-            };
+            return new GetLoginLogsCriteria(
+                logParam.CustId,
+                logParam.Username,
+                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                logParam.IsInternal,
+                logParam.PageIndex,
+                logParam.PageSize);
         }
 
         protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
@@ -53,13 +51,11 @@
                 throw new ArgumentNullException("logParam");
             }
 
-            return new GetTotalLoginLogsCriteria
-            {
-                CustId = logParam.CustId,
-                FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(logParam.ToDate),
-                IsInternal = logParam.IsInternal
-            };
+            return new GetTotalLoginLogsCriteria(
+                logParam.CustId,
+                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                logParam.IsInternal);
         }
     }
 }

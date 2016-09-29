@@ -5,6 +5,23 @@
 
     public class GetTotalStatusLogsCriteria : CriteriaBase
     {
+        public GetTotalStatusLogsCriteria(
+            int custId,
+            int lowerActionId,
+            int upperActionId,
+            DateTime fromDate,
+            DateTime toDate,
+            bool isInternal)
+        {
+            CustId = custId;
+            LowerActionId = lowerActionId;
+            UpperActionId = upperActionId;
+
+            FromDate = fromDate;
+            ToDate = toDate;
+            IsInternal = isInternal;
+        }
+
         public int CustId { get; set; }
 
         public int LowerActionId { get; set; }

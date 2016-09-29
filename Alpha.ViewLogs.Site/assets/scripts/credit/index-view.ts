@@ -65,7 +65,7 @@ var creditView = {
                 e = window.event;
             }
 
-            var key = (e.keyCode) ? e.keyCode : e.which;
+            var key = e.keyCode ? e.keyCode : e.which;
             if (key === alphaViewLogs.keyCode.enter) {
                 creditView.pageNumber = 0;
                 creditView.pageSize = 0;

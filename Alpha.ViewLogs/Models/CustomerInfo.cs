@@ -4,9 +4,17 @@
 
     public class CustomerInfo
     {
-        public int CustId { get; set; }
+        public CustomerInfo(
+            int custId,
+            bool isSubAcc)
+        {
+            CustId = custId;
+            IsSubAcc = isSubAcc;
+        }
 
-        public bool IsSubAcc { get; set; }
+        public int CustId { get; private set; }
+
+        public bool IsSubAcc { get; private set; }
 
         /// <summary>
         /// Equals: used for compare two object (Unit test)

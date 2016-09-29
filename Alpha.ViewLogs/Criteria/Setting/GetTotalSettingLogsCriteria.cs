@@ -5,6 +5,20 @@
 
     public class GetTotalSettingLogsCriteria : CriteriaBase
     {
+        public GetTotalSettingLogsCriteria(
+            int custId,
+            int actionTypeId,
+            DateTime fromDate,
+            DateTime toDate,
+            bool isInternal)
+        {
+            CustId = custId;
+            ActionTypeId = actionTypeId;
+            FromDate = fromDate;
+            ToDate = toDate;
+            IsInternal = isInternal;
+        }
+
         public int CustId { get; set; }
 
         public int ActionTypeId { get; set; }

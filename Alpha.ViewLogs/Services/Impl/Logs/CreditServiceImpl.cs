@@ -24,16 +24,14 @@
                 throw new ArgumentNullException("logParam");
             }
 
-            return new GetCreditLogsCriteria
-            {
-                CustId = logParam.CustId,
-                CustName = logParam.Username,
-                FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(logParam.ToDate),
-                IsInternal = logParam.IsInternal,
-                PageSize = logParam.PageSize,
-                PageIndex = logParam.PageIndex
-            };
+            return new GetCreditLogsCriteria(
+                logParam.CustId,
+                logParam.Username,
+                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                logParam.IsInternal,
+                logParam.PageIndex,
+                logParam.PageSize);
         }
 
         protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
@@ -43,13 +41,11 @@
                 throw new ArgumentNullException("logParam");
             }
 
-            return new GetTotalCreditLogsCriteria
-            {
-                CustId = logParam.CustId,
-                FromDate = DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                ToDate = DateTimeHelper.GetEndingOfDate(logParam.ToDate),
-                IsInternal = logParam.IsInternal
-            };
+            return new GetTotalCreditLogsCriteria(
+                logParam.CustId,
+                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                logParam.IsInternal);
         }
     }
 }
