@@ -44,7 +44,7 @@
                             ActionId = Converter.ToInt(reader["ActionID"]),
                             IsInternal = (byte)Converter.ToInt(reader["IsInternal"]),
                             ActionName = Converter.ToString2(reader["ActionName"]),
-                            SPName = Converter.ToString2(reader["SPName"]),
+                            StoreProcedureName = Converter.ToString2(reader["SPName"]),
                             IP = Converter.ToString2(reader["IP"]),
                             Browser = Converter.ToString2(reader["Browser"]),
                             Domain = Converter.ToString2(reader["Domain"]),
@@ -52,9 +52,9 @@
                         });
                     }
                 }
-            }
 
-            return logs;
+                return logs;
+            }
         }
     }
 }

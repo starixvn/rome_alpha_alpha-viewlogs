@@ -10,7 +10,7 @@
       <Mapping DataField="LogDate" ObjectProperty="LogDate" />
       <Mapping DataField="ActionID" ObjectProperty="ActionId" />
       <Mapping DataField="ActionTypeID" ObjectProperty="ActionTypeId" />
-      <Mapping DataField="SPName" ObjectProperty="SPName" />
+      <Mapping DataField="SPName" ObjectProperty="StoreProcedureName" />
       <Mapping DataField="IsInternal" ObjectProperty="IsInternal" />
       <Mapping DataField="CustID" ObjectProperty="CustId" />
       <Mapping DataField="CustName" ObjectProperty="CustName" />
@@ -28,7 +28,7 @@
       <Mapping DataField="ActionID" ObjectProperty="ActionId" />
       <Mapping DataField="IsInternal" ObjectProperty="IsInternal" />
       <Mapping DataField="ActionTypeID" ObjectProperty="ActionTypeId" />
-      <Mapping DataField="SPName" ObjectProperty="SPName" />
+      <Mapping DataField="SPName" ObjectProperty="StoreProcedureName" />
       <Mapping DataField="Username" ObjectProperty="Username" />
       <Mapping DataField="ActionName" ObjectProperty="ActionName" />
     </Setting>
@@ -41,7 +41,7 @@
       <Mapping DataField="ActionID" ObjectProperty="ActionId" />
       <Mapping DataField="IsInternal" ObjectProperty="IsInternal" />
       <Mapping DataField="ActionName" ObjectProperty="ActionName" />
-      <Mapping DataField="SPName" ObjectProperty="SPName" />
+      <Mapping DataField="SPName" ObjectProperty="StoreProcedureName" />
       <Mapping DataField="IP" ObjectProperty="IP" />
 
       <Mapping DataField="Browser" ObjectProperty="Browser" />

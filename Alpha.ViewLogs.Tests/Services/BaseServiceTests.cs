@@ -1,5 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
+    using System;
     using System.Collections.Generic;
     using Constants;
     using Criteria;
@@ -212,25 +213,9 @@
 
             dynamicRepository.Fetch<Log>(Arg.Any<ICriteria>()).Returns(logs);
 
-            Dictionary<int, LogAction> logActions;
-
-            cacheForTesting.TryGet(LogActionCacheKey, out logActions).Returns(
-                x =>
-                {
-                    x[1] = new Dictionary<int, LogAction>()
-                    {
-                        { 1, new LogAction() { EnglishName = "Action 1" } }
-                    };
-
-                    return true;
-                });
-
             var expectedPagingLogs = new PagingLogs<Log>
             {
-                Logs = new List<Log>
-                {
-                    new Log { ActionId = 1, ActionName = "Action 1" }
-                }
+                Logs = logs
             };
 
             // Action

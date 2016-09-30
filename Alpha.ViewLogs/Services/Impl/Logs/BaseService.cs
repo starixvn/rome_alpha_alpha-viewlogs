@@ -127,11 +127,6 @@
             pagingLogs.Logs = GetLogs(logParam);
             pagingLogs.TotalRecords = GetTotalLogs(logParam);
 
-            foreach (var log in pagingLogs.Logs)
-            {
-                log.ActionName = GetLogActionName(log.ActionId, logParam.Language);
-            }
-
             return pagingLogs;
         }
 

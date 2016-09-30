@@ -18,15 +18,15 @@
                 return string.Empty;
             }
 
-            log.TrackingValue = StandardizeTrackingValue(log.TrackingValue);
-            log.TrackingValueOld = StandardizeTrackingValue(log.TrackingValueOld);
+            var trackingValue = StandardizeTrackingValue(log.TrackingValue);
+            var trackingValueOld = StandardizeTrackingValue(log.TrackingValueOld);
 
             var trackingValueDoc = new XmlDocument();
-            trackingValueDoc.InnerXml = log.TrackingValue;
+            trackingValueDoc.InnerXml = trackingValue;
 
-            var hasOldXml = !string.IsNullOrWhiteSpace(log.TrackingValueOld);
+            var hasOldXml = !string.IsNullOrWhiteSpace(trackingValueOld);
             var trackingValueOldDoc = hasOldXml ? new XmlDocument() : trackingValueDoc;
-            trackingValueOldDoc.InnerXml = hasOldXml ? log.TrackingValueOld : trackingValueDoc.InnerXml;
+            trackingValueOldDoc.InnerXml = hasOldXml ? trackingValueOld : trackingValueDoc.InnerXml;
 
             FormatDiffAttributes(trackingValueDoc.DocumentElement.Attributes, trackingValueOldDoc.DocumentElement.Attributes, isShowOldValue);
 

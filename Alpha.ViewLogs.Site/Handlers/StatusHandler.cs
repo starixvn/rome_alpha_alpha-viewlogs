@@ -74,13 +74,14 @@
                     new LogItemViewModel
                     {
                         ActionId = log.ActionId,
-                        ActionName = log.ActionName,
+                        ActionName = logService.GetLogActionName(log.ActionId, message.Language),
+
                         ActionTypeId = log.ActionTypeId,
                         CustId = log.CustId,
                         CustName = log.CustName,
                         LogDate = DateTimeHelper.ToLongDateWithSlash(log.LogDate),
                         LogId = log.LogId,
-                        SPName = log.SPName,
+                        SPName = log.StoreProcedureName,
                         UserId = log.UserId,
                         Username = log.Username,
                         TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),

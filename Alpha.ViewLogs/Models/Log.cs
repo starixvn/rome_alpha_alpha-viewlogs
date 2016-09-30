@@ -21,7 +21,7 @@
 
         public long LogId { get; set; }
 
-        public string SPName { get; set; }
+        public string StoreProcedureName { get; set; }
 
         public int UserId { get; set; }
 
@@ -50,7 +50,7 @@
                 IsInternal == compareObject.IsInternal &&
                 LogDate == compareObject.LogDate &&
                 LogId == compareObject.LogId &&
-                SPName == compareObject.SPName &&
+                StoreProcedureName == compareObject.StoreProcedureName &&
                 UserId == compareObject.UserId &&
                 Username == compareObject.Username &&
                 TrackingValue == compareObject.TrackingValue &&
@@ -71,7 +71,7 @@
                 IsInternal.GetHashCode() ^
                 LogDate.GetHashCode() ^
                 LogId.GetHashCode() ^
-                SPName.GetHashCode() ^
+                StoreProcedureName.GetHashCode() ^
                 UserId.GetHashCode() ^
                 Username.GetHashCode() ^
                 TrackingValue.GetHashCode() ^
@@ -95,7 +95,7 @@
             result.AppendLine("IsInternal: " + IsInternal);
             result.AppendLine("LogDate: " + LogDate);
             result.AppendLine("LogId: " + LogId);
-            result.AppendLine("SPName: " + SPName);
+            result.AppendLine("SPName: " + StoreProcedureName);
             result.AppendLine("UserId: " + UserId);
             result.AppendLine("Username: " + Username);
             result.AppendLine("TrackingValue: " + TrackingValue);
