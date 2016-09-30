@@ -230,6 +230,8 @@
     <Content Include="assets\bundles\credit.min.js">
       <DependentUpon>credit.js</DependentUpon>
     </Content>
+    <Content Include="assets\bundles\default.css" />
+    <Content Include="assets\bundles\default.min.css" />
     <Content Include="assets\bundles\login.js" />
     <Content Include="assets\bundles\login.min.js">
       <DependentUpon>login.js</DependentUpon>
