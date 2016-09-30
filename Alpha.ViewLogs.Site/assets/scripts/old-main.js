@@ -7,7 +7,8 @@ function slideToggle(id) {
         rowIndex = id.rowIndex;
         p = id.parentNode || id.parentElement;
         table = p.parentNode || p.parentElement;
-        obj = table.rows[rowIndex + 1];
+        var cell = table.rows[rowIndex + 1].cells[0];
+        obj = cell.firstElementChild ? cell.firstElementChild : cell.firstChild;
     } else {
         obj = document.getElementById(id);
     }
