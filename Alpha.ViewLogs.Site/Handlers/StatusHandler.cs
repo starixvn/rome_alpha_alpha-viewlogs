@@ -33,7 +33,7 @@
         public LogViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = this.logService.GetPagingLogs(logsParam);
+            var pagingLogs = logService.GetPagingLogs(logsParam);
 
             var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords);
             viewModel.ActionTypeId = message.ActionTypeId;
@@ -86,7 +86,7 @@
                         UserId = log.UserId,
                         Username = log.Username,
                         TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
-                        IP = this.logFormatter.FormatIP(log.IP)
+                        IP = logFormatter.FormatIP(log.IP)
                     });
             }
 

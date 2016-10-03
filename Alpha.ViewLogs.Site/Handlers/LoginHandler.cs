@@ -26,7 +26,7 @@
         public IndexViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = this.logService.GetPagingLogs(logsParam);
+            var pagingLogs = logService.GetPagingLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
 
@@ -70,11 +70,11 @@
                     Username = log.Username,
 
                     Details = log.Details,
-                    IP = this.logFormatter.FormatIP(log.IP),
+                    IP = logFormatter.FormatIP(log.IP),
 
                     Domain = log.Domain,
                     Browser = log.Browser,
-                    Country = this.logFormatter.FormatCountryCode(log.IP, log.Country)
+                    Country = logFormatter.FormatCountryCode(log.IP, log.Country)
                 });
             }
 

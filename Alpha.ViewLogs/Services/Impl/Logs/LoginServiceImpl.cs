@@ -24,7 +24,7 @@
         {
             var criteria = CreateGetLogsCriteria(logParam);
 
-            return this.LogDataAccess.GetLogs(criteria);
+            return LogDataAccess.GetLogs(criteria);
         }
 
         protected override ICriteria CreateGetLogsCriteria(LogParam logParam)

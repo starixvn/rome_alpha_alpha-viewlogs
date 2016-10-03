@@ -12,8 +12,8 @@
                 return;
             }
 
-            this.Id = logActionType.Id;
-            this.Name = GetName(logActionType, language);
+            Id = logActionType.Id;
+            Name = GetName(logActionType, language);
         }
 
         public LogActionTypeViewModel(int id, string name)

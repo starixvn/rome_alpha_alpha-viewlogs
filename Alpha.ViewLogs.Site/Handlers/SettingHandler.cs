@@ -65,7 +65,7 @@
                 ActionTypeId = string.IsNullOrWhiteSpace(message.ActionTypeId) ? ActionType.All : Converter.ToInt(message.ActionTypeId)
             };
 
-            var pagingLogs = this.logService.GetPagingLogs(logsParam);
+            var pagingLogs = logService.GetPagingLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
             viewModel.LogActionTypes = BuildLogActionTypeViewModels(message);
@@ -78,7 +78,7 @@
 
         private IEnumerable<LogActionTypeViewModel> BuildLogActionTypeViewModels(IndexQuery message)
         {
-            var logActionTypes = this.logService.GetLogActionTypes();
+            var logActionTypes = logService.GetLogActionTypes();
 
             var logActionTypeViewModels = logActionTypes
                 .Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))
@@ -131,7 +131,7 @@
                     UserId = log.UserId,
                     Username = log.Username,
                     TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
-                    IP = this.logFormatter.FormatIP(log.IP)
+                    IP = logFormatter.FormatIP(log.IP)
                 });
             }
 

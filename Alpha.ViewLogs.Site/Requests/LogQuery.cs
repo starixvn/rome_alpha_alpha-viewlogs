@@ -35,22 +35,22 @@
             bool? isShowMyanmarOdds = null)
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
-            this.IsShowOldValue = isShowOldValue ?? GetShowOldValueFromCookie();
+            IsShowOldValue = isShowOldValue ?? GetShowOldValueFromCookie();
             this.actionIdVisibilities = actionIdVisibilities ?? GetActionIdVisibilities();
             this.custStatuses = custStatuses;
             this.resourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef;
 
             // Limit time range for view log in 2 years (start from beginning of last year)
-            this.maxReportDate = DateTime.Today;
-            this.minReportDate = new DateTime(DateTime.Today.AddYears(-1).Year, 1, 1);
+            maxReportDate = DateTime.Today;
+            minReportDate = new DateTime(DateTime.Today.AddYears(-1).Year, 1, 1);
 
-            this.RoleId = currentUserSession.RoleId;
-            this.HasViewLogPermission = currentUserSession.SubPageAccess != null && currentUserSession.SubPageAccess.ViewLog;
-            this.Language = currentUserSession.Language;
-            this.IsInternal = false;
-            this.UplineId = currentUserSession.CustId;
-            this.IsShowMyanmarOdds = isShowMyanmarOdds ?? UserPermission.IsShowMyanmarOdds;
-            this.PreviousUsername = this.Username;
+            RoleId = currentUserSession.RoleId;
+            HasViewLogPermission = currentUserSession.SubPageAccess != null && currentUserSession.SubPageAccess.ViewLog;
+            Language = currentUserSession.Language;
+            IsInternal = false;
+            UplineId = currentUserSession.CustId;
+            IsShowMyanmarOdds = isShowMyanmarOdds ?? UserPermission.IsShowMyanmarOdds;
+            PreviousUsername = Username;
         }
 
         public string PreviousUsername { get; set; }

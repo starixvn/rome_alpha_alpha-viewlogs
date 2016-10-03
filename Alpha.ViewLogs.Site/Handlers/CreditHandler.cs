@@ -27,7 +27,7 @@
         public LogViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = this.logService.GetPagingLogs(logsParam);
+            var pagingLogs = logService.GetPagingLogs(logsParam);
             var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords);
 
             TransformLogs(pagingLogs, message, viewModel);
@@ -70,7 +70,7 @@
                     TrackingValue = Converter.ToDecimal(log.TrackingValue).ToNumericString(),
                     TrackingValueOld = Converter.ToDecimal(log.TrackingValueOld).ToNumericString(),
                     Details = log.Details,
-                    IP = this.logFormatter.FormatIP(log.IP)
+                    IP = logFormatter.FormatIP(log.IP)
                 });
             }
 

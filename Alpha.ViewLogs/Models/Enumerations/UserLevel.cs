@@ -56,7 +56,7 @@
 
         public bool IsDirectUplineOf(byte downlineLevelValue)
         {
-            return GapBetweenTwoLevels(this.Value, downlineLevelValue) == 1;
+            return GapBetweenTwoLevels(Value, downlineLevelValue) == 1;
         }
 
         public bool IsNotDirectUplineOf(byte downlineLevelValue)
@@ -86,7 +86,7 @@
                 return false;
             }
 
-            return GapBetweenTwoLevels(uplineLevel.Value, this.Value) == 1;
+            return GapBetweenTwoLevels(uplineLevel.Value, Value) == 1;
         }
 
         public bool IsNotDirectDownlineOf(Enumeration uplineLevel)
