@@ -6,9 +6,11 @@
 
     public static class AppSettings
     {
-        private static readonly object LockObject = new object();
+        private static readonly object LockObjectStatusMappings = new object();
+        private static readonly object LockObjectResourcesByBetTypeCacheRef = new object();
 
         private static Dictionary<string, int> statusMappings;
+        private static Dictionary<string, int> resourcesByBetTypeCacheRef;
 
         private static IEnumerable<int> actionIdsRacing15131;
         private static IEnumerable<int> actionIdsRacing15141;
@@ -143,6 +145,22 @@
             }
         }
 
+        /// <summary>
+        /// Key: statusName. Value: betTypeId
+        /// </summary>
+        public static Dictionary<string, int> ResourcesByBetTypeCacheRef
+        {
+            get
+            {
+                if (resourcesByBetTypeCacheRef == null)
+                {
+                    InitResourcesByBetTypeCacheRef();
+                }
+
+                return resourcesByBetTypeCacheRef;
+            }
+        }
+
         public static string StoreProcedurePath
         {
             get
@@ -150,7 +168,7 @@
                 return GetConfigValue("StoreProcedurePath");
             }
         }
-        
+
         public static string GetConfigValue(string configName)
         {
             return ConfigurationManager.AppSettings[configName];
@@ -169,7 +187,7 @@
 
         private static void InitStatusMappings()
         {
-            lock (LockObject)
+            lock (LockObjectStatusMappings)
             {
                 if (statusMappings == null)
                 {
@@ -191,6 +209,36 @@
                             if (keyValue.Length > 1)
                             {
                                 statusMappings.Add(keyValue[0].ToLower(), int.Parse(keyValue[1]));
+                            }
+                        });
+                }
+            }
+        }
+
+        private static void InitResourcesByBetTypeCacheRef()
+        {
+            lock (LockObjectResourcesByBetTypeCacheRef)
+            {
+                if (resourcesByBetTypeCacheRef == null)
+                {
+                    resourcesByBetTypeCacheRef = new Dictionary<string, int>();
+                    var resourcesByBetTypeCacheRefSetting = GetConfigValue("ResourcesByBetTypeCacheRef");
+
+                    if (string.IsNullOrWhiteSpace(resourcesByBetTypeCacheRefSetting))
+                    {
+                        return;
+                    }
+
+                    resourcesByBetTypeCacheRefSetting.Split(',')
+                        .ToList()
+                        .ForEach((combinedValue) =>
+                        {
+                            //// format: statusName:productId
+                            var keyValue = combinedValue.Split(':');
+
+                            if (keyValue.Length > 1)
+                            {
+                                resourcesByBetTypeCacheRef.Add(keyValue[0].ToLower(), int.Parse(keyValue[1]));
                             }
                         });
                 }

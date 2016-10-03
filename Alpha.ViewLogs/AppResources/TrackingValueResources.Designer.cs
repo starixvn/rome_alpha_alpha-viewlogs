@@ -2743,15 +2743,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disabled Allbet.
-        /// </summary>
-        public static string Disable211_2401 {
-            get {
-                return ResourceManager.GetString("Disable211_2401", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Disabled Macau Games.
         /// </summary>
         public static string Disable212_4001 {
@@ -2808,9 +2799,9 @@ namespace Alpha.ViewLogs.AppResources {
         /// <summary>
         ///   Looks up a localized string similar to Disable Colossus Bets.
         /// </summary>
-        public static string disableColossusBets {
+        public static string Disablecolossusbet {
             get {
-                return ResourceManager.GetString("disableColossusBets", resourceCulture);
+                return ResourceManager.GetString("Disablecolossusbet", resourceCulture);
             }
         }
         
@@ -2910,15 +2901,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string DisabledP2P {
             get {
                 return ResourceManager.GetString("DisabledP2P", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Disabled Virtual Sports.
-        /// </summary>
-        public static string disabledVS {
-            get {
-                return ResourceManager.GetString("disabledVS", resourceCulture);
             }
         }
         
@@ -3036,6 +3018,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string DisableP2PDownline {
             get {
                 return ResourceManager.GetString("DisableP2PDownline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disabled Virtual Sports.
+        /// </summary>
+        public static string Disablevirtualsports {
+            get {
+                return ResourceManager.GetString("Disablevirtualsports", resourceCulture);
             }
         }
         

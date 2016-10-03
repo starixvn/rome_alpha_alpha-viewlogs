@@ -12,12 +12,11 @@
 
     public class LogFormatterImpl : LogFormatter
     {
-        private const string StatusHtmlFormat = "<tr><td colspan=\"3\" class=\"colW1\">{0}</td><td colspan=\"3\" class=\"colW2\">{1}</td></tr>";
-
         private IPService ipService;
         private RemotingRefWrapper remotingRef;
 
         private Dictionary<string, bool> custStatuses;
+        private Dictionary<string, int> resourcesByBetTypeCacheRef;
         private bool isShowMyanmarOdds;
 
         public LogFormatterImpl(
@@ -42,6 +41,7 @@
             }
 
             custStatuses = transformParam.CustStatuses;
+            resourcesByBetTypeCacheRef = transformParam.ResourcesByBetTypeCacheRef;
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
         }
 
@@ -212,14 +212,26 @@
 
         public string RenderCustStatus(string name, string value)
         {
-            if (!string.IsNullOrWhiteSpace(name) &&
-                custStatuses.ContainsKey(name.ToLower())
-                && custStatuses[name.ToLower()])
+            if (string.IsNullOrWhiteSpace(name))
             {
-                return string.Format(StatusHtmlFormat, GetLogResource(name), value);
+                return string.Empty;
             }
 
-            return string.Empty;
+            string statusHtmlFormat = "<tr><td colspan=\"3\" class=\"colW1\">{0}</td><td colspan=\"3\" class=\"colW2\">{1}</td></tr>";
+            var lowerCaseResourceName = name.ToLower();
+
+            var resourceValue = string.Empty;
+            if (resourcesByBetTypeCacheRef.ContainsKey(lowerCaseResourceName))
+            {
+                resourceValue = GetBetTypeName(resourcesByBetTypeCacheRef[lowerCaseResourceName]);
+            }
+            else if (custStatuses.ContainsKey(lowerCaseResourceName)
+                && custStatuses[lowerCaseResourceName])
+            {
+                resourceValue = GetLogResource(name);
+            }
+
+            return string.IsNullOrEmpty(resourceValue) ? string.Empty : string.Format(statusHtmlFormat, resourceValue, value);
         }
 
         private string CovertCodeCondition(string dayCodes)

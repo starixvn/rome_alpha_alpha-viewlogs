@@ -3427,7 +3427,7 @@
   <data name="lblMinPTMaster" xml:space="preserve">
     <value>PT nhỏ nhất của Master</value>
   </data>
-  <data name="disabledVS" xml:space="preserve">
+  <data name="Disablevirtualsports" xml:space="preserve">
     <value>Không cho phép chơi Virtual Sports</value>
   </data>
   <data name="updateAllMembers" xml:space="preserve">
@@ -3517,7 +3517,7 @@
   <data name="doublecommission" xml:space="preserve">
     <value>Nhân đôi hoa hồng</value>
   </data>
-  <data name="disableColossusBets" xml:space="preserve">
+  <data name="Disablecolossusbet" xml:space="preserve">
     <value>Disable Colossus Bets</value>
   </data>
   <data name="v204discountvalue_cashinshare" xml:space="preserve">
@@ -3558,9 +3558,6 @@
   </data>
   <data name="Disable50_501" xml:space="preserve">
     <value>Disabled Cricket</value>
-  </data>
-  <data name="Disable211_2401" xml:space="preserve">
-    <value>Disabled Allbet</value>
   </data>
   <data name="maxv154pt_20" xml:space="preserve">
     <value>PT lớn nhất cho Moneyline</value>

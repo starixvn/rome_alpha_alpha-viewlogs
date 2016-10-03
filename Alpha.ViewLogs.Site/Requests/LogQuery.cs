@@ -7,7 +7,6 @@
     using Fanex.Common;
     using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Model.Entities.Permission;
-    using ViewLogs.Constants;
 
     public class LogQuery
     {
@@ -21,6 +20,8 @@
 
         private readonly Dictionary<string, bool> custStatuses;
 
+        private readonly Dictionary<string, int> resourcesByBetTypeCacheRef;
+
         public LogQuery() : this(null, null, null, null)
         {
         }
@@ -30,12 +31,14 @@
             bool? isShowOldValue,
             Dictionary<int, bool> actionIdVisibilities = null,
             Dictionary<string, bool> custStatuses = null,
+            Dictionary<string, int> resourcesByBetTypeCacheRef = null,
             bool? isShowMyanmarOdds = null)
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
             this.IsShowOldValue = isShowOldValue ?? GetShowOldValueFromCookie();
             this.actionIdVisibilities = actionIdVisibilities ?? GetActionIdVisibilities();
             this.custStatuses = custStatuses;
+            this.resourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef;
 
             // Limit time range for view log in 2 years (start from beginning of last year)
             this.maxReportDate = DateTime.Today;
@@ -91,6 +94,14 @@
             get
             {
                 return custStatuses ?? GetCustStatuses();
+            }
+        }
+
+        public Dictionary<string, int> ResourcesByBetTypeCacheRef
+        {
+            get
+            {
+                return resourcesByBetTypeCacheRef ?? GetResourcesByBetTypeCacheRef();
             }
         }
 
@@ -164,6 +175,11 @@
             }
 
             return custStatusDict;
+        }
+
+        private Dictionary<string, int> GetResourcesByBetTypeCacheRef()
+        {
+            return AppSettings.ResourcesByBetTypeCacheRef;
         }
 
         private bool GetShowOldValueFromCookie()
