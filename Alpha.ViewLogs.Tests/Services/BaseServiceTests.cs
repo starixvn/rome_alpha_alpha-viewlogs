@@ -1,6 +1,5 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
-    using System;
     using System.Collections.Generic;
     using Constants;
     using Criteria;
@@ -8,6 +7,7 @@
     using Fanex.Caching;
     using Fanex.Data.Repository;
     using Models;
+    using ModelsForTesting;
     using NSubstitute;
     using NUnit.Framework;
     using Params;
@@ -150,10 +150,10 @@
         {
             // Arrange
             LogParam nullLogParam = null;
-            var emptyPagingLogs = new PagingLogs<Log>();
+            var emptyPagingLogs = PagingLogsForTesting<Log>.FromPagingLogs(new PagingLogs<Log>());
 
             // Action
-            var actualPagingLogs = baseService.GetPagingLogs(nullLogParam);
+            var actualPagingLogs = PagingLogsForTesting<Log>.FromPagingLogs(baseService.GetPagingLogs(nullLogParam));
 
             // Assert
             Assert.AreEqual(emptyPagingLogs, actualPagingLogs);
@@ -184,10 +184,10 @@
 
             customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(invalidDownlineInfo);
 
-            var emptyPagingLogs = new PagingLogs<Log>();
+            var emptyPagingLogs = PagingLogsForTesting<Log>.FromPagingLogs(new PagingLogs<Log>());
 
             // Action
-            var actualPagingLogs = baseService.GetPagingLogs(logParam);
+            var actualPagingLogs = PagingLogsForTesting<Log>.FromPagingLogs(baseService.GetPagingLogs(logParam));
 
             // Assert
             Assert.AreEqual(emptyPagingLogs, actualPagingLogs);
@@ -213,13 +213,10 @@
 
             dynamicRepository.Fetch<Log>(Arg.Any<ICriteria>()).Returns(logs);
 
-            var expectedPagingLogs = new PagingLogs<Log>
-            {
-                Logs = logs
-            };
+            var expectedPagingLogs = PagingLogsForTesting<Log>.FromPagingLogs(new PagingLogs<Log> { Logs = logs });
 
             // Action
-            var actualPagingLogs = baseService.GetPagingLogs(logParam);
+            var actualPagingLogs = PagingLogsForTesting<Log>.FromPagingLogs(baseService.GetPagingLogs(logParam));
 
             // Assert
             Assert.AreEqual(expectedPagingLogs, actualPagingLogs);

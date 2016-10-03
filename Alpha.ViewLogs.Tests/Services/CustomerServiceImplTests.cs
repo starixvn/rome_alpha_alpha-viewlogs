@@ -3,6 +3,7 @@
     using Criteria;
     using Fanex.Data.Repository;
     using Models;
+    using ModelsForTesting;
     using NSubstitute;
     using NUnit.Framework;
     using ViewLogs.Services.Impl;
@@ -29,13 +30,13 @@
         public void GetDownlineInfoByUsername_NullOrEmptyUsername_ReturnsDefaultCustomerInfo(string username)
         {
             // Arrange 
-            var expectedCustomerInfo = new CustomerInfo(0, false);
+            var expectedCustomerInfo = CustomerInfoForTesting.FromCustomerInfo(new CustomerInfo(0, false));
 
             // Action 
-            var customerInfo = customerService.GetDownlineInfoByUsername(username, 0);
+            var actualCustomerInfo = CustomerInfoForTesting.FromCustomerInfo(customerService.GetDownlineInfoByUsername(username, 0));
 
             // Assert
-            Assert.AreEqual(expectedCustomerInfo, customerInfo);
+            Assert.AreEqual(expectedCustomerInfo, actualCustomerInfo);
         }
 
         [Test]
@@ -48,7 +49,7 @@
                 UplineId = 0
             };
 
-            var expectedCustomerInfo = new CustomerInfo(ValidCustId, true);
+            var expectedCustomerInfo = CustomerInfoForTesting.FromCustomerInfo(new CustomerInfo(ValidCustId, true));
 
             dynamicRepository.When(d => d.Execute(Arg.Is<GetCustInfoByUsernameCommand>(x => x.Username == criteria.Username && x.CustId == criteria.CustId)))
                 .Do(c =>
@@ -59,10 +60,10 @@
                 });
 
             // Action 
-            var actualCustomerInfo = customerService.GetDownlineInfoByUsername(ValidUsername, 0);
+            var actualCustomerInfo = CustomerInfoForTesting.FromCustomerInfo(customerService.GetDownlineInfoByUsername(ValidUsername, 0));
 
             // Assert
-            Assert.AreEqual(actualCustomerInfo, expectedCustomerInfo);
+            Assert.AreEqual(expectedCustomerInfo, actualCustomerInfo);
         }
     }
 }
