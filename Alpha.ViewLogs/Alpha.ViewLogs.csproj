@@ -43,6 +43,7 @@
       <DependentUpon>TrackingValueResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Constants\ActionType.cs" />
+    <Compile Include="Constants\BetTypeId.cs" />
     <Compile Include="Constants\DefaultVariables.cs" />
     <Compile Include="Constants\LanguageCode.cs" />
     <Compile Include="Constants\PageAccessType.cs" />

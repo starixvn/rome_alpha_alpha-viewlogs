@@ -2149,6 +2149,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Baccarat, Roulette, Sic Bo, Dragon Tiger.
+        /// </summary>
+        public static string AllbetNormalGames {
+            get {
+                return ResourceManager.GetString("AllbetNormalGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Allow Update PT.
         /// </summary>
         public static string allowupdpt {

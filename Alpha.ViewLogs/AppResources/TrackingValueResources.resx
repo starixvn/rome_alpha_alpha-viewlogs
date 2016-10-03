@@ -3814,4 +3814,7 @@
   <data name="isa_v5spt_20" xml:space="preserve">
     <value>Moneyline</value>
   </data>
+  <data name="AllbetNormalGames" xml:space="preserve">
+    <value>Baccarat, Roulette, Sic Bo, Dragon Tiger</value>
+  </data>
 </root>

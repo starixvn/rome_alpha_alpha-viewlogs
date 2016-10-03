@@ -73,6 +73,11 @@
 
         public string GetBetTypeName(int betType)
         {
+            if (betType == BetTypeId.AllBetNormalGames)
+            {
+                return TrackingValueResources.AllbetNormalGames;
+            }
+
             return remotingRef.GetBetType(betType);
         }
 
