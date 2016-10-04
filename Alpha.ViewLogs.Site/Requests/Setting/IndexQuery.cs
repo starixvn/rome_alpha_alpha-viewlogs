@@ -7,7 +7,7 @@
 
     public class IndexQuery : LogQuery, IRequest<IndexViewModel>
     {
-        public IndexQuery() : this(null, null, null, null, null)
+        public IndexQuery() : this(null, null)
         {
         }
 
@@ -17,6 +17,7 @@
             Dictionary<int, bool> actionIdVisibilities = null,
             Dictionary<string, bool> sportBetTypeVisibilities = null,
             Dictionary<string, int> resourcesByBetTypeCacheRef = null,
+            IEnumerable<string> sites = null,
             bool? isShowMyanmarOdds = null) :
             base(
                 currentUserSession,
@@ -24,6 +25,7 @@
                 actionIdVisibilities,
                 sportBetTypeVisibilities,
                 resourcesByBetTypeCacheRef,
+                sites,
                 isShowMyanmarOdds)
         {
         }

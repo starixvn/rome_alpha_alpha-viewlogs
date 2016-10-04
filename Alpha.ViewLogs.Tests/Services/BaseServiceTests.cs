@@ -252,6 +252,8 @@
 
         [TestCase(-1, null)]
         [TestCase(3, null)]
+        [TestCase(int.MaxValue, null)]
+        [TestCase(int.MinValue, null)]
         public void GetLogAction_NotMatchDataInCache_ReturnsDefaultAction(int actionId, string expectedActionName)
         {
             // Arrange
@@ -280,6 +282,8 @@
 
         [TestCase(-1, null)]
         [TestCase(3, null)]
+        [TestCase(int.MaxValue, null)]
+        [TestCase(int.MinValue, null)]
         public void GetLogAction_NoDataInCache_ReturnsDefaultAction(int actionId, string expectedActionName)
         {
             // Arrange
@@ -306,6 +310,9 @@
         [TestCase(-1, null, LanguageCode.Korean)]
         [TestCase(-1, null, LanguageCode.Vietnamese)]
         [TestCase(-1, null, LanguageCode.English)]
+        [TestCase(0, null, LanguageCode.English)]
+        [TestCase(int.MaxValue, null, LanguageCode.English)]
+        [TestCase(int.MinValue, null, LanguageCode.English)]
         [TestCase(1, "Action Name 1 - ChineseTraditional", LanguageCode.ChineseTraditional)]
         [TestCase(1, "Action Name 1 - ChineseSimplified", LanguageCode.ChineseSimplified)]
         [TestCase(1, "Action Name 1 - Japanese", LanguageCode.Japanese)]
@@ -328,7 +335,11 @@
                 ThaiName = "Action Name 1 - Thai",
                 KoreanName = "Action Name 1 - Korean",
                 VietnameseName = "Action Name 1 - Vietnamese",
-                EnglishName = "Action Name 1 - English"
+                EnglishName = "Action Name 1 - English",
+
+                ActionTypeId = 0,
+                IsInternal = false,
+                SPName = string.Empty
             };
 
             var expectedActionDictionary = new Dictionary<int, LogAction>

@@ -17,6 +17,8 @@
 
         private Dictionary<string, bool> custStatuses;
         private Dictionary<string, int> resourcesByBetTypeCacheRef;
+        private IEnumerable<string> sites;
+
         private bool isShowMyanmarOdds;
 
         public LogFormatterImpl(
@@ -42,6 +44,8 @@
 
             custStatuses = transformParam.CustStatuses;
             resourcesByBetTypeCacheRef = transformParam.ResourcesByBetTypeCacheRef;
+            sites = transformParam.Sites;
+
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
         }
 
@@ -141,13 +145,9 @@
                 return condition;
             }
 
-            var siteNames = new Dictionary<string, string>();
-            siteNames.Add("1", Resources.AccountingSite);
-            siteNames.Add("2", Resources.AgentSite);
-
-            if (siteNames.ContainsKey(code))
+            if (sites != null && sites.Contains(code))
             {
-                condition = siteNames[code];
+                condition = TrackingValueResources.ResourceManager.GetString("Site_" + code);
             }
 
             return condition;
@@ -163,14 +163,14 @@
             return code;
         }
 
-        public string FormatErrMsg(string code)
+        public string FormatErrMsg(string message)
         {
-            if (string.Equals(code, "no information is available", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(message, "no information is available", StringComparison.OrdinalIgnoreCase))
             {
-                code = string.Empty;
+                message = string.Empty;
             }
 
-            return code;
+            return message;
         }
 
         public string FormatMemberWinLimit(string value)
@@ -221,7 +221,7 @@
             var lowerCaseResourceName = name.ToLower();
 
             var resourceValue = string.Empty;
-            if (resourcesByBetTypeCacheRef.ContainsKey(lowerCaseResourceName))
+            if (resourcesByBetTypeCacheRef != null && resourcesByBetTypeCacheRef.ContainsKey(lowerCaseResourceName))
             {
                 resourceValue = GetBetTypeName(resourcesByBetTypeCacheRef[lowerCaseResourceName]);
             }

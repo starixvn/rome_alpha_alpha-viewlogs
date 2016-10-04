@@ -151,9 +151,6 @@
   <data name="Fri" xml:space="preserve">
     <value>Thứ 6</value>
   </data>
-  <data name="AgentSite" xml:space="preserve">
-    <value>Agent Site</value>
-  </data>
   <data name="Unlimited" xml:space="preserve">
     <value>Không giới hạn</value>
   </data>

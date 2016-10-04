@@ -151,9 +151,6 @@
   <data name="Fri" xml:space="preserve">
     <value>วันศุกร์</value>
   </data>
-  <data name="AgentSite" xml:space="preserve">
-    <value>เอเจนต์ ไซค์</value>
-  </data>
   <data name="Unlimited" xml:space="preserve">
     <value>ไม่จำกัด</value>
   </data>

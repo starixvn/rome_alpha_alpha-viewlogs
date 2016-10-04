@@ -3583,10 +3583,7 @@
   <data name="superId" xml:space="preserve">
     <value>超級總代理號</value>
   </data>
-  <data name="accountingSite" xml:space="preserve">
-    <value>Accounting Site</value>
-  </data>
-  <data name="agentSite" xml:space="preserve">
+  <data name="Site_2" xml:space="preserve">
     <value>代理系統</value>
   </data>
   <data name="roleId" xml:space="preserve">

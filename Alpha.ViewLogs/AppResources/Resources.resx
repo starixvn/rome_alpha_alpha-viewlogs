@@ -183,12 +183,6 @@
   <data name="Fri" xml:space="preserve">
     <value>Fri</value>
   </data>
-  <data name="AgentSite" xml:space="preserve">
-    <value>Agent Site</value>
-  </data>
-  <data name="AccountingSite" xml:space="preserve">
-    <value>Accounting Site</value>
-  </data>
   <data name="Unlimited" xml:space="preserve">
     <value>Unlimited</value>
   </data>

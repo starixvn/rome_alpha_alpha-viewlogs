@@ -3583,10 +3583,7 @@
   <data name="superId" xml:space="preserve">
     <value>ซูเปอร์ ID</value>
   </data>
-  <data name="accountingSite" xml:space="preserve">
-    <value>Accounting Site</value>
-  </data>
-  <data name="agentSite" xml:space="preserve">
+  <data name="Site_2" xml:space="preserve">
     <value>เอเจนต์ ไซค์</value>
   </data>
   <data name="roleId" xml:space="preserve">

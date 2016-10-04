@@ -3301,12 +3301,6 @@
   <data name="superId" xml:space="preserve">
     <value>Super ID</value>
   </data>
-  <data name="accountingSite" xml:space="preserve">
-    <value>Accounting Site</value>
-  </data>
-  <data name="agentSite" xml:space="preserve">
-    <value>Agent Site</value>
-  </data>
   <data name="roleId" xml:space="preserve">
     <value>Role ID</value>
   </data>

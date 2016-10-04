@@ -24,7 +24,7 @@
 
         string FormatErrCode(string code);
 
-        string FormatErrMsg(string code);
+        string FormatErrMsg(string message);
 
         string FormatMemberWinLimit(string value);
 

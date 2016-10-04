@@ -1951,15 +1951,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Accounting Site.
-        /// </summary>
-        public static string accountingSite {
-            get {
-                return ResourceManager.GetString("accountingSite", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Account Remark.
         /// </summary>
         public static string AccountRemark {
@@ -2082,15 +2073,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string AgentPT {
             get {
                 return ResourceManager.GetString("AgentPT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Agent Site.
-        /// </summary>
-        public static string agentSite {
-            get {
-                return ResourceManager.GetString("agentSite", resourceCulture);
             }
         }
         
@@ -8859,6 +8841,24 @@ namespace Alpha.ViewLogs.AppResources {
         public static string site {
             get {
                 return ResourceManager.GetString("site", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accounting Site.
+        /// </summary>
+        public static string Site_1 {
+            get {
+                return ResourceManager.GetString("Site_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agent Site.
+        /// </summary>
+        public static string Site_2 {
+            get {
+                return ResourceManager.GetString("Site_2", resourceCulture);
             }
         }
         

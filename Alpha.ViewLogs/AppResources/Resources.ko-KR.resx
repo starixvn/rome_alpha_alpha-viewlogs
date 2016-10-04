@@ -151,9 +151,6 @@
   <data name="Fri" xml:space="preserve">
     <value>금</value>
   </data>
-  <data name="AgentSite" xml:space="preserve">
-    <value>에이전트 사이트</value>
-  </data>
   <data name="Unlimited" xml:space="preserve">
     <value>무제한</value>
   </data>

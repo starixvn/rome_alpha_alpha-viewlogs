@@ -54,6 +54,7 @@
                 TrackingValueTransformTemplatePath = message.TrackingValueTransformTemplatePath,
                 CustStatuses = message.SportBetTypeVisibilities,
                 ResourcesByBetTypeCacheRef = message.ResourcesByBetTypeCacheRef,
+                Sites = message.Sites,
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds
             };
 

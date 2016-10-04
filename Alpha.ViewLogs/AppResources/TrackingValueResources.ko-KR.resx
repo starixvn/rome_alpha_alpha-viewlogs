@@ -3324,10 +3324,7 @@
   <data name="superId" xml:space="preserve">
     <value>슈퍼ID</value>
   </data>
-  <data name="accountingSite" xml:space="preserve">
-    <value>Accounting Site</value>
-  </data>
-  <data name="agentSite" xml:space="preserve">
+  <data name="Site_2" xml:space="preserve">
     <value>에이전트 사이트</value>
   </data>
   <data name="roleId" xml:space="preserve">

@@ -61,29 +61,11 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Accounting Site.
-        /// </summary>
-        public static string AccountingSite {
-            get {
-                return ResourceManager.GetString("AccountingSite", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Action.
         /// </summary>
         public static string Action {
             get {
                 return ResourceManager.GetString("Action", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Agent Site.
-        /// </summary>
-        public static string AgentSite {
-            get {
-                return ResourceManager.GetString("AgentSite", resourceCulture);
             }
         }
         

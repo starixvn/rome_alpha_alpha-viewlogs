@@ -133,7 +133,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\BetTypeId.cs" />
     <Compile Include="Constants\LanguageCode.cs" />
+    <Compile Include="Constants\SiteId.cs" />
+    <Compile Include="Constants\SportId.cs" />
     <Compile Include="Extensions\DecimalExtensionTests.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\DateTimeHelperTests.cs" />

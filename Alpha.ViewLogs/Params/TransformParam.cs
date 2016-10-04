@@ -12,6 +12,8 @@
 
         public Dictionary<string, int> ResourcesByBetTypeCacheRef { get; set; }
 
+        public IEnumerable<string> Sites { get; set; }
+
         public bool IsShowMyanmarOdds { get; set; }
     }
 }
