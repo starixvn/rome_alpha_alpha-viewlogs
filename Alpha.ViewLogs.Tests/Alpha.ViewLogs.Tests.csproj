@@ -64,8 +64,8 @@
       <HintPath>..\packages\Fanex.CustomerSetting.Module.KenoStatus.1.0.0.2\lib\net40\Fanex.CustomerSetting.Module.KenoStatus.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Data, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Data.2.0.1\lib\net461\Fanex.Data.dll</HintPath>
+    <Reference Include="Fanex.Data, Version=2.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Data.2.0.1.1\lib\net461\Fanex.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Data.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -140,6 +140,7 @@
     <Compile Include="Extensions\DecimalExtensionTests.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\DateTimeHelperTests.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Helpers\StringHelperTests.cs" />
     <Compile Include="ModelsForTesting\CustomerInfoForTesting.cs" />
     <Compile Include="ModelsForTesting\LogForTesting.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="Services\CustomerServiceImplTests.cs" />
     <Compile Include="Services\IPServiceImplTests.cs" />
     <Compile Include="Services\LogFormatterTests.cs" />
+    <Compile Include="Services\TransformServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -178,6 +180,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="TestData\TrackingValueTransformTemplates\action_1.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\TrackingValueTransformTemplates\_300_399_BetSetting\action_300.xslt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

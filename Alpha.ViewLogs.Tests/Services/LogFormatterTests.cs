@@ -27,6 +27,7 @@
         private LogFormatterImpl logFormatter;
 
         private Dictionary<string, bool> sportBetTypeVisibilities;
+
         [SetUp]
         public void SetUp()
         {

@@ -88,6 +88,11 @@
 
         private string FindTemplatePathInDirectoryByActionId(int actionId, string directory)
         {
+            if (!Directory.Exists(directory))
+            {
+                return string.Empty;
+            }
+
             var path = Path.Combine(directory, $"action_{actionId}.xslt");
 
             if (File.Exists(path))
