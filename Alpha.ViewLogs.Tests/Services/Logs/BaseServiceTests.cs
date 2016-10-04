@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Tests.Services
+﻿namespace Alpha.ViewLogs.Tests.Services.Logs
 {
     using System.Collections.Generic;
     using Constants;

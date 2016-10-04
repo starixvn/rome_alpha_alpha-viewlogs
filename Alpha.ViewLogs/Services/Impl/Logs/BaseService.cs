@@ -36,9 +36,9 @@
             }
         }
 
-        protected abstract ICriteria CreateGetLogsCriteria(LogParam logParam);
+        internal abstract ICriteria CreateGetLogsCriteria(LogParam logParam);
 
-        protected abstract ICriteria CreateGetTotalLogsCriteria(LogParam logParam);
+        internal abstract ICriteria CreateGetTotalLogsCriteria(LogParam logParam);
 
         public string GetLogActionName(int actionId, string language)
         {

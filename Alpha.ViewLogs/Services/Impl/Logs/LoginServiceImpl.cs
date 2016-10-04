@@ -27,7 +27,7 @@
             return LogDataAccess.GetLogs(criteria);
         }
 
-        protected override ICriteria CreateGetLogsCriteria(LogParam logParam)
+        internal override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
             if (logParam == null)
             {
@@ -44,7 +44,7 @@
                 logParam.PageSize);
         }
 
-        protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
+        internal override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
             if (logParam == null)
             {

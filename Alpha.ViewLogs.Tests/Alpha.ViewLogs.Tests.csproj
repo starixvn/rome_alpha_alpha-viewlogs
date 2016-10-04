@@ -146,11 +146,16 @@
     <Compile Include="ModelsForTesting\LogForTesting.cs" />
     <Compile Include="ModelsForTesting\PagingLogsForTesting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\BaseServiceImplForTesting.cs" />
-    <Compile Include="Services\BaseServiceTests.cs" />
+    <Compile Include="Services\Logs\BaseServiceImplForTesting.cs" />
+    <Compile Include="Services\Logs\BaseServiceTests.cs" />
     <Compile Include="Services\CustomerServiceImplTests.cs" />
     <Compile Include="Services\IPServiceImplTests.cs" />
     <Compile Include="Services\LogFormatterTests.cs" />
+    <Compile Include="Services\Logs\ConcreteServiceTests.cs" />
+    <Compile Include="Services\Logs\CreditServiceTests.cs" />
+    <Compile Include="Services\Logs\LoginServiceTests.cs" />
+    <Compile Include="Services\Logs\SettingServiceTests.cs" />
+    <Compile Include="Services\Logs\StatusServiceTests.cs" />
     <Compile Include="Services\TransformServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>

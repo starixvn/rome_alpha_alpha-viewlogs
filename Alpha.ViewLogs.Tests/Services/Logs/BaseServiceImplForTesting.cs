@@ -1,4 +1,4 @@
-﻿namespace Alpha.ViewLogs.Tests.Services
+﻿namespace Alpha.ViewLogs.Tests.Services.Logs
 {
     using System;
     using Criteria.Setting;
@@ -18,12 +18,12 @@
         {
         }
 
-        protected override ICriteria CreateGetLogsCriteria(LogParam logParam)
+        internal override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
             return new GetSettingLogsCriteria(0, string.Empty, 0, DateTime.Now, DateTime.Now, false, 0, 0);
         }
 
-        protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
+        internal override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
             return new GetTotalSettingLogsCriteria(0, 0, DateTime.Now, DateTime.Now, false);
         }

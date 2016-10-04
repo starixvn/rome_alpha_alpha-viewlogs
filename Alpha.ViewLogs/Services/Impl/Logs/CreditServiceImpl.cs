@@ -10,14 +10,14 @@
     public class CreditServiceImpl : BaseService, LogService
     {
         public CreditServiceImpl(
-             IDynamicRepository dynamicRepository,
-             CustomerService customerService,
-             LogDataAccess baseDataAccess) :
+            IDynamicRepository dynamicRepository,
+            CustomerService customerService,
+            LogDataAccess baseDataAccess) :
             base(dynamicRepository, customerService, baseDataAccess)
         {
         }
 
-        protected override ICriteria CreateGetLogsCriteria(LogParam logParam)
+        internal override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
             if (logParam == null)
             {
@@ -34,7 +34,7 @@
                 logParam.PageSize);
         }
 
-        protected override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
+        internal override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
             if (logParam == null)
             {
