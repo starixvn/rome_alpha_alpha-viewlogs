@@ -151,7 +151,7 @@
     <Compile Include="Services\CustomerServiceImplTests.cs" />
     <Compile Include="Services\IPServiceImplTests.cs" />
     <Compile Include="Services\LogFormatterTests.cs" />
-    <Compile Include="Services\Logs\ConcreteServiceTests.cs" />
+    <Compile Include="Services\Logs\ConcreteLogServiceTests.cs" />
     <Compile Include="Services\Logs\CreditServiceTests.cs" />
     <Compile Include="Services\Logs\LoginServiceTests.cs" />
     <Compile Include="Services\Logs\SettingServiceTests.cs" />

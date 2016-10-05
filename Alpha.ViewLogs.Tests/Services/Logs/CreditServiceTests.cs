@@ -3,7 +3,7 @@
     using NUnit.Framework;
     using ViewLogs.Services.Impl.Logs;
 
-    public class CreditServiceTests : ConcreteServiceTests
+    public class CreditServiceTests : ConcreteLogServiceTests
     {
         [SetUp]
         public override void SetUp()
