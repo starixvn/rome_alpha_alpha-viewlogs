@@ -14,7 +14,7 @@
     using ViewLogs.Services.Impl;
 
     [TestFixture]
-    public class TransformServiceTests
+    public class TransformServiceImplTests
     {
         private const int InvalidActionId = -1;
         private const int ValidActionId = 10;
@@ -136,28 +136,6 @@
         [TestCase("<div></div>", @"\TestData\TrackingValueTransformTemplates", 300)]
         [TestCase("<div />", @"\TestData\TrackingValueTransformTemplates", 1)]
         public void TransformTrackingValue_HasTransformFilesAndNotMatchTrackingValue_ReturnsEmpty(
-            string trackingValue,
-            string trackingValueTransformTemplatePath,
-            int actionId)
-        {
-            // Arrange
-            TransformParam transformParam = new TransformParam
-            {
-                TrackingValueTransformTemplatePath = FileHelper.GetFilePath(trackingValueTransformTemplatePath)
-            };
-
-            XslCompiledTransform compiledTransformInCache = null;
-
-            cacheForTesting.TryGet($"Alpha.ViewLogs.TransformObject_{actionId}", out compiledTransformInCache).Returns(false);
-
-            // Action
-            var actualTrackingValue = transformService.TransformTrackingValue(trackingValue, actionId, transformParam);
-
-            // Assert
-            Assert.IsEmpty(actualTrackingValue);
-        }
-
-        public void TransformTrackingValue_TrackingValueMatchWithTemplateFileAndNotEnoughTribute_ReturnsEmpty(
             string trackingValue,
             string trackingValueTransformTemplatePath,
             int actionId)

@@ -1,21 +1,17 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services.Logs
 {
-    using System.Collections.Generic;
-    using Fanex.Data.Repository;
-    using Models;
-    using NSubstitute;
     using NUnit.Framework;
     using ViewLogs.Services.Impl.Logs;
 
     [TestFixture]
-    public class LoginServiceTests : ConcreteLogServiceTests
+    public class SettingServiceImplTests : ConcreteLogServiceImplTests
     {
         [SetUp]
         public override void SetUp()
         {
             base.SetUp();
 
-            LogService = new LoginServiceImpl(DynamicRepository, CustomerService, BaseDataAccess);
+            LogService = new SettingServiceImpl(DynamicRepository, CustomerService, BaseDataAccess);
         }
 
         [Test]
@@ -34,11 +30,6 @@
         public override void CreateGetTotalLogsCriteria_NullLogParam_ThrowsArgumentNullException()
         {
             base.CreateGetTotalLogsCriteria_NullLogParam_ThrowsArgumentNullException();
-        }
-
-        protected override void SubstituteGetLogsFromDataAccess(IEnumerable<Log> logs)
-        {
-            BaseDataAccess.GetLogs(Arg.Any<ICriteria>()).Returns(logs);
         }
     }
 }

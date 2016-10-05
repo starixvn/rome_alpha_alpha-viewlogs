@@ -223,7 +223,7 @@
             var resourceValue = string.Empty;
             if (resourcesByBetTypeCacheRef != null && resourcesByBetTypeCacheRef.ContainsKey(lowerCaseResourceName))
             {
-                resourceValue = GetBetTypeName(resourcesByBetTypeCacheRef[lowerCaseResourceName]);
+                resourceValue = $"{TrackingValueResources.disabled} {GetBetTypeName(resourcesByBetTypeCacheRef[lowerCaseResourceName])}";
             }
             else if (custStatuses.ContainsKey(lowerCaseResourceName)
                 && custStatuses[lowerCaseResourceName])

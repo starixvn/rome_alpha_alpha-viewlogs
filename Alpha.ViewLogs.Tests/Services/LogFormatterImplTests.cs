@@ -14,7 +14,7 @@
     using ViewLogs.Services.Impl;
 
     [TestFixture]
-    public class LogFormatterTests
+    public class LogFormatterImplTests
     {
         private const string ValidCountry = "validCountry";
 
@@ -690,7 +690,7 @@
                 ResourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef
             });
 
-            var expectedCustStatus = $"<tr><td colspan=\"3\" class=\"colW1\">{validBetTypeName}</td><td colspan=\"3\" class=\"colW2\">{statusValue}</td></tr>";
+            var expectedCustStatus = $"<tr><td colspan=\"3\" class=\"colW1\">Disabled {validBetTypeName}</td><td colspan=\"3\" class=\"colW2\">{statusValue}</td></tr>";
 
             // Action
             var actualCustStatus = logFormatter.RenderCustStatus(name, statusValue);

@@ -13,7 +13,7 @@
     using ViewLogs.Services;
     using ViewLogs.Services.Impl;
 
-    public abstract class ConcreteLogServiceTests
+    public abstract class ConcreteLogServiceImplTests
     {
         protected BaseService LogService { get; set; }
 

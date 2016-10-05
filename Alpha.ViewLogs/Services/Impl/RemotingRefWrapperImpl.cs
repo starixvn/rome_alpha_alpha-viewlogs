@@ -1,11 +1,17 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl
 {
+    using System;
     using System.Threading;
     using Constants;
     using RemotingRef;
 
     public class RemotingRefWrapperImpl : RemotingRefWrapper
     {
+        private Func<string, string, string, string, string> getBetTypeNameWithResourceId = RefData.GetBetTypeName;
+        private Func<string, string, string> getBetTypeName = RefData.GetBetTypeName;
+        private Func<string, string, string, string> getSportNameWithDefaultValue = RefData.GetSportName;
+        private Func<string, string, string, string, string> getResourceDataByRefIdAndResourceIdWithDefaultValue = RefData.GetResourceDataByRefIdAndResourceId;
+
         private string CurrentLanguageCode
         {
             get
@@ -15,6 +21,18 @@
                     ? ShortLanguageCode.CodeFromCurrentLanguageMapping[currentLanguage]
                     : ShortLanguageCode.Default;
             }
+        }
+
+        public void SetRemotingRefFunctions(
+            Func<string, string, string, string, string> getBetTypeNameWithResourceIdFunc = null,
+            Func<string, string, string> getBetTypeNameFunc = null,
+            Func<string, string, string, string> getSportNameWithDefaultValueFunc = null,
+            Func<string, string, string, string, string> getResourceDataByRefIdAndResourceIdWithDefaultValueFunc = null)
+        {
+            getBetTypeNameWithResourceId = getBetTypeNameWithResourceIdFunc;
+            getBetTypeName = getBetTypeNameFunc;
+            getSportNameWithDefaultValue = getSportNameWithDefaultValueFunc;
+            getResourceDataByRefIdAndResourceIdWithDefaultValue = getResourceDataByRefIdAndResourceIdWithDefaultValueFunc;
         }
 
         public string GetBetType(object betTypeId, object betId = null)
@@ -29,13 +47,13 @@
 
             return betTypeId == null ?
                 string.Empty :
-                RefData.GetBetTypeName(betTypeId.ToString(), CurrentLanguageCode, string.Empty, resourceId);
+                getBetTypeNameWithResourceId(betTypeId.ToString(), CurrentLanguageCode, string.Empty, resourceId);
         }
 
         public string GetBetTypeName(object bettypeId)
         {
             return bettypeId != null
-                ? RefData.GetBetTypeName(bettypeId.ToString(), CurrentLanguageCode)
+                ? getBetTypeName(bettypeId.ToString(), CurrentLanguageCode)
                 : string.Empty;
         }
 
@@ -43,12 +61,12 @@
         {
             return sportId == null ?
                 string.Empty :
-                RefData.GetSportName(sportId.ToString(), CurrentLanguageCode, string.Empty);
+                getSportNameWithDefaultValue(sportId.ToString(), CurrentLanguageCode, string.Empty);
         }
 
         public string GetProductName(int productId)
         {
-            return RefData.GetResourceDataByRefIdAndResourceId("Product", productId.ToString(), CurrentLanguageCode, string.Empty);
+            return getResourceDataByRefIdAndResourceIdWithDefaultValue("Product", productId.ToString(), CurrentLanguageCode, string.Empty);
         }
     }
 }

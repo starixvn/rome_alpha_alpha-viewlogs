@@ -4,7 +4,7 @@
     using ViewLogs.Services.Impl.Logs;
 
     [TestFixture]
-    public class StatusServiceTests : ConcreteLogServiceTests
+    public class StatusServiceImplTests : ConcreteLogServiceImplTests
     {
         [SetUp]
         public override void SetUp()
