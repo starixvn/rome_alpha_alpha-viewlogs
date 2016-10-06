@@ -108,13 +108,9 @@
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettypeid)" />
           </td>
-          <td class="colW2">
+          <td class="colW2" colspan="5">
             <xsl:value-of select="@stakelevel" />
           </td>
-          <td class="colW1"></td>
-          <td class="colW2"></td>
-          <td class="colW1"></td>
-          <td class="colW2"></td>
         </tr>
       </xsl:for-each>
     </table>
