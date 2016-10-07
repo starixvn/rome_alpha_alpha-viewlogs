@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using Fanex.Common;
+    using Helpers;
     using Models;
     using NSubstitute;
     using NUnit.Framework;
@@ -14,35 +15,19 @@
     using ViewLogs.Constants;
     using ViewLogs.Helpers;
     using ViewModels;
+    using ViewModelsForTesting;
 
     [TestFixture]
-    public class CreditHandlerTests
+    public class CreditHandlerTests : ConcreteLogHandlerTests
     {
-        private LogService logService;
-        private LogFormatter logFormatter;
         private CreditHandler creditHandler;
-        private IDateTime dateTimeWrapper;
-
-        private IUserSession currentUserSession;
-
-        private Dictionary<int, bool> actionIdVisibilities;
-
-        private Dictionary<string, bool> custStatuses;
-
-        private Dictionary<string, int> resourcesByBetTypeCacheRef;
 
         [SetUp]
-        public void SetUp()
+        public override void SetUp()
         {
-            logService = Substitute.For<LogService>();
-            logFormatter = Substitute.For<LogFormatter>();
-            dateTimeWrapper = Substitute.For<IDateTime>();
-            creditHandler = new CreditHandler(logService, logFormatter, dateTimeWrapper);
+            base.SetUp();
 
-            currentUserSession = Substitute.For<IUserSession>();
-            actionIdVisibilities = new Dictionary<int, bool>();
-            custStatuses = new Dictionary<string, bool>();
-            resourcesByBetTypeCacheRef = new Dictionary<string, int>();
+            creditHandler = new CreditHandler(LogService, LogFormatter, DateTimeWrapper);
         }
 
         [Test]
@@ -59,37 +44,51 @@
         public void HandleIndexQuery_NullFromToDateAndTodayIsBeginningOfMonth_GetsPagingLogsFromBeginningOfMonthToBeginningOfMonth()
         {
             // Arrange
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
+            var indexQuery = new IndexQuery(
+                CurrentUserSession,
+                DateTimeWrapper,
+                true,
+                ActionIdVisibilities,
+                CustStatuses,
+                ResourcesByBetTypeCacheRef,
+                false);
 
             var toDate = new DateTime(2016, 10, 1);
-            dateTimeWrapper.Now.Returns(toDate);
+            DateTimeWrapper.Now.Returns(toDate);
 
-            logService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
+            LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
             // Action
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
-            logService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.FromDate == toDate && logParam.ToDate == toDate));
+            LogService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.FromDate == toDate && logParam.ToDate == toDate));
         }
 
         [Test]
         public void HandleIndexQuery_NullFromToDateAndTodayIsNotBeginningOfMonth_GetsPagingLogsFromYesterdayToToday()
         {
             // Arrange
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
+            var indexQuery = new IndexQuery(
+                CurrentUserSession,
+                DateTimeWrapper,
+                true,
+                ActionIdVisibilities,
+                CustStatuses,
+                ResourcesByBetTypeCacheRef,
+                false);
 
             var toDate = new DateTime(2016, 10, 2);
             var yesterday = new DateTime(2016, 10, 1);
-            dateTimeWrapper.Now.Returns(toDate);
+            DateTimeWrapper.Now.Returns(toDate);
 
-            logService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
+            LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
             // Action
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
-            logService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.FromDate == yesterday && logParam.ToDate == toDate));
+            LogService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.FromDate == yesterday && logParam.ToDate == toDate));
         }
 
         [TestCase("2016-10-09", "2016-10-09")]
@@ -104,17 +103,25 @@
             var fromDate = Converter.ToDateTime(fromDateString);
             var toDate = Converter.ToDateTime(toDateString);
 
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
+            var indexQuery = new IndexQuery(
+                CurrentUserSession,
+                DateTimeWrapper,
+                true,
+                ActionIdVisibilities,
+                CustStatuses,
+                ResourcesByBetTypeCacheRef,
+                false);
+
             indexQuery.FromDate = fromDateString;
             indexQuery.ToDate = toDateString;
 
-            logService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
+            LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
             // Action
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
-            logService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.FromDate == fromDate && logParam.ToDate == toDate));
+            LogService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.FromDate == fromDate && logParam.ToDate == toDate));
         }
 
         [TestCase(null)]
@@ -125,16 +132,24 @@
         public void HandleIndexQuery_NotHavePageSizeAndPageIndex_GetsPagingLogsWithDefaultPagingOptions(string pageSize)
         {
             // Arrange
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
+            var indexQuery = new IndexQuery(
+                CurrentUserSession,
+                DateTimeWrapper,
+                true,
+                ActionIdVisibilities,
+                CustStatuses,
+                ResourcesByBetTypeCacheRef,
+                false);
+
             indexQuery.PageSize = pageSize;
 
-            logService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
+            LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
             // Action
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
-            logService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.PageSize == DefaultVariables.PageSize
+            LogService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.PageSize == DefaultVariables.PageSize
                 && logParam.PageIndex == 0));
         }
 
@@ -143,20 +158,28 @@
         [TestCase("-1", -1)]
         [TestCase("2147483647", int.MaxValue)]
         [TestCase("-2147483648", int.MinValue)]
-        [TestCase("asdasd", DefaultVariables.PageSize)]
+        [TestCase(InvalidPageIndex, DefaultVariables.PageSize)]
         public void HandleIndexQuery_HasPageSize_GetsPagingLogsWithInputPageSize(string pageSize, int expectedPageSize)
         {
             // Arrange
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
+            var indexQuery = new IndexQuery(
+                CurrentUserSession,
+                DateTimeWrapper,
+                true,
+                ActionIdVisibilities,
+                CustStatuses,
+                ResourcesByBetTypeCacheRef,
+                false);
+
             indexQuery.PageSize = pageSize;
 
-            logService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
+            LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
             // Action
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
-            logService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.PageSize == expectedPageSize));
+            LogService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.PageSize == expectedPageSize));
         }
 
         [TestCase("0", 0)]
@@ -164,52 +187,179 @@
         [TestCase("-1", -1)]
         [TestCase("2147483647", int.MaxValue)]
         [TestCase("-2147483648", int.MinValue)]
-        [TestCase("asdasd", 0)]
-        public void HandleIndexQuery_HasPageIndex_GetsPagingLogsWithInputPageSize(string pageIndex, int expectedPageIndex)
+        [TestCase(InvalidPageIndex, 0)]
+        public void HandleIndexQuery_HasPageIndex_GetsPagingLogsWithInputPageIndex(string pageIndex, int expectedPageIndex)
         {
             // Arrange
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
+            var indexQuery = new IndexQuery(
+                CurrentUserSession,
+                DateTimeWrapper,
+                true,
+                ActionIdVisibilities,
+                CustStatuses,
+                ResourcesByBetTypeCacheRef,
+                false);
+
             indexQuery.PageIndex = pageIndex;
 
-            logService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
+            LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
             // Action
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
-            logService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.PageIndex == expectedPageIndex));
+            LogService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.PageIndex == expectedPageIndex));
         }
 
-        [Test]
-        public void HandleIndexQuery_HasLogsAndNotHideAnyLog_GetsPagingLogsWithInputPageSize()
+        [TestCase("1/1/0001", "01/01/0001")]
+        [TestCase("1/1/2014", "01/01/2014")]
+        [TestCase("1/1/2015", "01/01/2015")]
+        [TestCase("10/1/2016", "10/01/2016")]
+        [TestCase("10/1/2017", "10/01/2017")]
+        public void HandleIndexQuery_HasLogsAndNotHideAnyLog_GetsPagingLogsWithInputPageSize(
+            string fromDate,
+            string toDate)
         {
             // Arrange
             var actionIdVisibilities = new Dictionary<int, bool>();
             actionIdVisibilities.Add(1, true);
 
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
+            CurrentUserSession.RoleId.Returns(ValidRoleId);
+            var indexQuery = new IndexQuery(
+                CurrentUserSession,
+                DateTimeWrapper,
+                true,
+                actionIdVisibilities,
+                CustStatuses,
+                ResourcesByBetTypeCacheRef,
+                false);
+
             indexQuery.PageIndex = string.Empty;
             indexQuery.PageSize = DefaultVariables.PageSize.ToString();
+            indexQuery.FromDate = fromDate;
+            indexQuery.ToDate = toDate;
 
             var pagingLogs = new PagingLogs<Log>
             {
                 TotalRecords = 2,
                 Logs = new List<Log>
                 {
-                    new Log() { ActionId = 1 },
-                    new Log() { ActionId = 2 }
+                    new Log() { ActionId = 1, LogId = 1 },
+                    new Log() { ActionId = 2, LogId = 2 }
                 }
             };
 
-            logService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
+            var logParam = GetLogParam(indexQuery);
 
-            var expectedLogViewModel = new LogViewModel(Arg.Any<LogParam>(), pagingLogs.TotalRecords);
+            LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
+
+            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, MicroSites);
+            var expectedLogViewModelForTesting = LogViewModelForTesting.FromLogViewModel(expectedLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites);
+
+            var validLogItemViewModels = ValidLogItemViewModels();
+            expectedLogViewModelForTesting.LogItems = new List<LogItemViewModel>() { validLogItemViewModels[0], validLogItemViewModels[1] };
 
             // Action
-            var actualLogViewModel = creditHandler.Handle(indexQuery);
+            var actualLogViewModel = LogViewModelForTesting.FromLogViewModel(creditHandler.Handle(indexQuery), logParam, pagingLogs.TotalRecords, MicroSites);
 
             // Assert
-            Assert.AreEqual(expectedLogViewModel, actualLogViewModel);
+            Assert.AreEqual(expectedLogViewModelForTesting, actualLogViewModel);
+        }
+
+        [TestCase("1/1/0001", "01/01/0001")]
+        [TestCase("1/1/2014", "01/01/2014")]
+        [TestCase("1/1/2015", "01/01/2015")]
+        [TestCase("10/1/2016", "10/01/2016")]
+        [TestCase("10/1/2017", "10/01/2017")]
+        public void HandleIndexQuery_HasLogsAndHideOneLog_GetsPagingLogsWithInputPageSize(
+            string fromDate,
+            string toDate)
+        {
+            // Arrange
+            var actionIdVisibilities = new Dictionary<int, bool>();
+            actionIdVisibilities.Add(1, false);
+
+            CurrentUserSession.RoleId.Returns(ValidRoleId);
+            var indexQuery = new IndexQuery(
+                CurrentUserSession,
+                DateTimeWrapper,
+                true,
+                actionIdVisibilities,
+                CustStatuses,
+                ResourcesByBetTypeCacheRef,
+                false);
+
+            indexQuery.PageIndex = string.Empty;
+            indexQuery.PageSize = DefaultVariables.PageSize.ToString();
+            indexQuery.FromDate = fromDate;
+            indexQuery.ToDate = toDate;
+
+            var pagingLogs = new PagingLogs<Log>
+            {
+                TotalRecords = 2,
+                Logs = new List<Log>
+                {
+                    new Log() { ActionId = 1, LogId = 1 },
+                    new Log() { ActionId = 2, LogId = 2 }
+                }
+            };
+
+            var logParam = GetLogParam(indexQuery);
+
+            LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
+
+            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, MicroSites);
+            var expectedLogViewModelForTesting = LogViewModelForTesting.FromLogViewModel(expectedLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites);
+            expectedLogViewModelForTesting.TotalRecords = 1;
+            var validLogItemViewModels = ValidLogItemViewModels();
+            expectedLogViewModelForTesting.LogItems = new List<LogItemViewModel>() { validLogItemViewModels[1] };
+
+            // Action
+            var actualLogViewModel = LogViewModelForTesting.FromLogViewModel(creditHandler.Handle(indexQuery), logParam, pagingLogs.TotalRecords, MicroSites);
+
+            // Assert
+            Assert.AreEqual(expectedLogViewModelForTesting, actualLogViewModel);
+        }
+
+        private List<LogItemViewModel> ValidLogItemViewModels()
+        {
+            return new List<LogItemViewModel>()
+            {
+                new LogItemViewModel
+                {
+                    LogId = 1,
+                    LogDate = "01/01/0001 12:00:00 AM",
+                    ActionId = 1,
+                    ActionName = ValidLogActionName,
+                    TrackingValue = "0",
+                    TrackingValueOld = "0",
+                    IP = ValidIP
+                },
+                new LogItemViewModel
+                {
+                    LogId = 2,
+                    LogDate = "01/01/0001 12:00:00 AM",
+                    ActionId = 2,
+                    ActionName = ValidLogActionName,
+                    TrackingValue = "0",
+                    TrackingValueOld = "0",
+                    IP = ValidIP
+                }
+            };
+        }
+
+        private LogParam GetLogParam(IndexQuery indexQuery)
+        {
+            return new LogParam
+            {
+                RoleId = 4,
+                MinReportDate = indexQuery.MinReportDate,
+                MaxReportDate = indexQuery.MaxReportDate,
+                IsShowOldValue = true,
+                PageSize = 50,
+                FromDate = Converter.ToDateTime(indexQuery.FromDate),
+                ToDate = Converter.ToDateTime(indexQuery.ToDate)
+            };
         }
     }
 }

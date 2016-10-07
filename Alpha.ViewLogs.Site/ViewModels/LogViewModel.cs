@@ -9,8 +9,15 @@
 
     public class LogViewModel
     {
-        public LogViewModel(LogParam logParam, int totalRecords)
+        private MicroSites microSites;
+
+        public LogViewModel(
+            LogParam logParam,
+            int totalRecords,
+            MicroSites microSites = null)
         {
+            this.microSites = microSites ?? new MicroSitesImpl();
+
             if (logParam == null)
             {
                 return;
@@ -72,7 +79,7 @@
         {
             get
             {
-                return MicroSites.OldMainPath("~/_GlobalResources/Handlers/QueryUserName.ashx");
+                return microSites.OldMainPath("~/_GlobalResources/Handlers/QueryUserName.ashx");
             }
         }
 
@@ -80,7 +87,7 @@
         {
             get
             {
-                return MicroSites.OldMainPath("~/_IPInfo/IpInfo.aspx");
+                return microSites.OldMainPath("~/_IPInfo/IpInfo.aspx");
             }
         }
 

@@ -7,6 +7,8 @@
     using Fanex.Common;
     using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Model.Entities.Permission;
+    using ViewLogs.Helpers;
+    using ViewLogs.Helpers.Impl;
 
     public class LogQuery
     {
@@ -22,12 +24,13 @@
 
         private readonly Dictionary<string, int> resourcesByBetTypeCacheRef;
 
-        public LogQuery() : this(null, null)
+        public LogQuery() : this(null, null, null)
         {
         }
 
         public LogQuery(
             IUserSession currentUserSession,
+            IDateTime dateTimeWrap,
             bool? isShowOldValue,
             Dictionary<int, bool> actionIdVisibilities = null,
             Dictionary<string, bool> custStatuses = null,
@@ -35,14 +38,16 @@
             bool? isShowMyanmarOdds = null)
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
+            dateTimeWrap = dateTimeWrap ?? new DateTimeWrap();
+
             IsShowOldValue = isShowOldValue ?? GetShowOldValueFromCookie();
             this.actionIdVisibilities = actionIdVisibilities;
             this.custStatuses = custStatuses;
             this.resourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef;
 
             // Limit time range for view log in 2 years (start from beginning of last year)
-            maxReportDate = DateTime.Today;
-            minReportDate = new DateTime(DateTime.Today.AddYears(-1).Year, 1, 1);
+            maxReportDate = dateTimeWrap.Now;
+            minReportDate = new DateTime(dateTimeWrap.Now.AddYears(-1).Year, 1, 1);
 
             RoleId = currentUserSession.RoleId;
             HasViewLogPermission = currentUserSession.SubPageAccess != null && currentUserSession.SubPageAccess.ViewLog;

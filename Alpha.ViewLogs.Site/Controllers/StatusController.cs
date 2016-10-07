@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
     using System.Web.Mvc;
+    using Helpers;
     using MediatR;
     using Requests.Status;
     using Sunplus.Agent.Model.Entities;
@@ -10,7 +11,10 @@
         private const string TemplatePath = "~/App_Data/TrackingValueTransformTemplates";
         private readonly IMediator mediator;
 
-        public StatusController(IUserSession userSession, IMediator mediator) : base(userSession)
+        public StatusController(
+            IUserSession userSession,
+            IMediator mediator,
+            MicroSites microSites) : base(userSession, microSites)
         {
             this.mediator = mediator;
         }

@@ -67,8 +67,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\DefaultVariables.cs" />
+    <Compile Include="Handlers\ConcreteLogHandlerTests.cs" />
     <Compile Include="Handlers\CreditHandlerTests.cs" />
+    <Compile Include="Handlers\LoginHandlerTests.cs" />
+    <Compile Include="Handlers\SettingHandlerTests.cs" />
+    <Compile Include="Handlers\StatusHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModelsForTesting\LogItemViewModelForTesting.cs" />
+    <Compile Include="ViewModelsForTesting\LogViewModelForTesting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -76,7 +82,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
-    <Folder Include="ViewModelsForTesting\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Alpha.ViewLogs.Site\Alpha.ViewLogs.Site.csproj">

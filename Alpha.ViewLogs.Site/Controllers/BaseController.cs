@@ -17,10 +17,12 @@
     public abstract class BaseController : Controller
     {
         private CultureInfo defaultCulture = CultureInfo.CreateSpecificCulture(LanguageCode.Default);
+        private MicroSites microSites;
 
-        protected BaseController(IUserSession userSession)
+        protected BaseController(IUserSession userSession, MicroSites microSites)
         {
             this.UserSession = userSession;
+            this.microSites = microSites;
         }
 
         public IUserSession UserSession { get; set; }
@@ -39,7 +41,7 @@
 
             if (UserSession.IsSubAcc && !UserSession.SubPageAccess.ViewLog)
             {
-                Response.Redirect(MicroSites.OldMainPath(AppSettings.AccessDeniedPage));
+                Response.Redirect(microSites.OldMainPath(AppSettings.AccessDeniedPage));
             }
         }
 

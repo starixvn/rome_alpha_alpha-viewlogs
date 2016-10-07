@@ -70,6 +70,7 @@
         private static void RegisterCrossCuttingConcerns(Container container)
         {
             container.Register<IDateTime, DateTimeWrap>(Lifestyle.Singleton);
+            container.Register<MicroSites, MicroSitesImpl>(Lifestyle.Singleton);
         }
 
         private static void RegisterServices(Container container)

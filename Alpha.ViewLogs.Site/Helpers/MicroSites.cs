@@ -1,18 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Site.Helpers
 {
-    using System.Web;
-    using Configurations;
-
-    public static class MicroSites
+    public interface MicroSites
     {
-        public static string OldMainPath(string virtualPath)
-        {
-            return AppPathHelper.GetAppPath(AppSettings.OldMainAppPath, virtualPath);
-        }
+        string OldMainPath(string virtualPath);
 
-        public static string ViewLogsPath(string virtualPath)
-        {
-            return AppPathHelper.GetAppPath(HttpRuntime.AppDomainAppVirtualPath, virtualPath);
-        }
+        string ViewLogsPath(string virtualPath);
     }
 }

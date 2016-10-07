@@ -2,46 +2,90 @@
 {
     using System.Linq;
     using System.Text;
-    using Models;
+    using Helpers;
     using Params;
     using ViewModels;
 
     public class LogViewModelForTesting : LogViewModel
     {
-        public LogViewModelForTesting(LogParam logParam, int totalRecords)
+        public LogViewModelForTesting(LogParam logParam, int totalRecords, MicroSites microSites) :
+            base(logParam, totalRecords, microSites)
         {
         }
 
-        public static LogViewModelForTesting FromLog(LogViewModel logViewModel)
+        public static LogViewModelForTesting FromLogViewModel(
+            LogViewModel logViewModel,
+            LogParam logParam,
+            int totalRecords,
+            MicroSites microSites)
         {
             if (logViewModel == null)
             {
                 return null;
             }
 
-            return new LogViewModelForTesting
-            {
-                TotalRecords = pagingLogs.TotalRecords,
-                Logs = pagingLogs.Logs
-            };
+            var logViewModelForTesting = new LogViewModelForTesting(logParam, totalRecords, microSites);
+            logViewModelForTesting.HasViewLogPermission = logViewModel.HasViewLogPermission;
+            logViewModelForTesting.IsSubAccount = logViewModel.IsSubAccount;
+            logViewModelForTesting.RoleId = logViewModel.RoleId;
+            logViewModelForTesting.ShowOldValuesCookieName = logViewModel.ShowOldValuesCookieName;
+            logViewModelForTesting.ActionTypeId = logViewModel.ActionTypeId;
+            logViewModelForTesting.ShowOldValue = logViewModel.ShowOldValue;
+            logViewModelForTesting.TotalRecords = logViewModel.TotalRecords;
+            logViewModelForTesting.PageSize = logViewModel.PageSize;
+            logViewModelForTesting.PageIndex = logViewModel.PageIndex;
+            logViewModelForTesting.DayInMonth = logViewModel.DayInMonth;
+            logViewModelForTesting.FromDate = logViewModel.FromDate;
+            logViewModelForTesting.ToDate = logViewModel.ToDate;
+            logViewModelForTesting.MinReportDate = logViewModel.MinReportDate;
+            logViewModelForTesting.MaxReportDate = logViewModel.MaxReportDate;
+            logViewModelForTesting.Username = logViewModel.Username;
+
+            logViewModelForTesting.LogItems = logViewModel.LogItems;
+
+            return logViewModelForTesting;
         }
 
         public override bool Equals(object obj)
         {
-            var compareObject = (PagingLogs<Log>)obj;
+            var compareObject = (LogViewModel)obj;
 
-            var isEqual = true;
-            foreach (var log in Logs)
+            var isEqual = (LogItems == null && compareObject.LogItems == null) ||
+                (LogItems != null && compareObject.LogItems != null);
+
+            if (isEqual)
             {
-                var compareLog = compareObject.Logs.Where(l => l.LogId == log.LogId).First();
-                if (compareLog == null || !compareLog.Equals(log))
+                foreach (var log in LogItems)
                 {
-                    isEqual = false;
-                    break;
+                    var compareLog = LogItemViewModelForTesting.FromLogItemViewModel(compareObject.LogItems.Where(l => l.LogId == log.LogId).First());
+                    if (compareLog == null || !compareLog.Equals(log))
+                    {
+                        isEqual = false;
+                        break;
+                    }
                 }
             }
 
-            isEqual &= TotalRecords == compareObject.TotalRecords;
+            isEqual &= HasViewLogPermission == compareObject.HasViewLogPermission
+                && IsSubAccount == compareObject.IsSubAccount
+                && RoleId == compareObject.RoleId
+                && UserLevel == compareObject.UserLevel
+                && ShowOldValuesCookieName == compareObject.ShowOldValuesCookieName
+                && UsernameAutoSuggestionPath == compareObject.UsernameAutoSuggestionPath
+                && ViewIPInfoPath == compareObject.ViewIPInfoPath
+                && ActionTypeId == compareObject.ActionTypeId
+                && HasLogs == compareObject.HasLogs
+                && ShowOldValue == compareObject.ShowOldValue
+                && TotalRecords == compareObject.TotalRecords
+                && PageSize == compareObject.PageSize
+                && PageIndex == compareObject.PageIndex
+                && DayInMonth == compareObject.DayInMonth
+                && FromDate == compareObject.FromDate
+                && ToDate == compareObject.ToDate
+                && MinReportDate == compareObject.MinReportDate
+                && MaxReportDate == compareObject.MaxReportDate
+                && Username == compareObject.Username;
+
             return isEqual;
         }
 
@@ -93,9 +137,16 @@
             result.AppendLine("MaxReportDate: " + MaxReportDate);
             result.AppendLine("Username: " + Username);
 
-            foreach (var log in LogItems)
+            if (LogItems == null)
             {
-                result.AppendLine("Log: " + log);
+                result.AppendLine("LogItems: " + LogItems);
+            }
+            else
+            {
+                foreach (var log in LogItems)
+                {
+                    result.AppendLine("Log: " + LogItemViewModelForTesting.FromLogItemViewModel(log));
+                }
             }
 
             result.AppendLine(base.ToString());

@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
     using System.Web.Mvc;
+    using Helpers;
     using MediatR;
     using Requests.Credit;
     using Sunplus.Agent.Model.Entities;
@@ -9,7 +10,10 @@
     {
         private readonly IMediator mediator;
 
-        public CreditController(IUserSession userSession, IMediator mediator) : base(userSession)
+        public CreditController(
+            IUserSession userSession,
+            IMediator mediator,
+            MicroSites microSites) : base(userSession, microSites)
         {
             this.mediator = mediator;
         }

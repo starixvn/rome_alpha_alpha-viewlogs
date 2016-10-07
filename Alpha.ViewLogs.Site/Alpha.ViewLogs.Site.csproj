@@ -664,9 +664,10 @@
     <Compile Include="Handlers\SettingHandler.cs" />
     <Compile Include="Handlers\StatusHandler.cs" />
     <Compile Include="Helpers\AppPathHelper.cs" />
+    <Compile Include="Helpers\MicroSites.cs" />
     <Compile Include="Helpers\StaticResources\AssetScripts.cs" />
     <Compile Include="Helpers\StaticResources\AssetStyles.cs" />
-    <Compile Include="Helpers\MicroSites.cs" />
+    <Compile Include="Helpers\MicroSitesImpl.cs" />
     <Compile Include="Helpers\StaticResources\ViewLogsScripts.cs" />
     <Compile Include="Helpers\StaticResources\ViewLogsStyles.cs" />
     <Compile Include="Helpers\TrackingValueFormatter.cs" />
