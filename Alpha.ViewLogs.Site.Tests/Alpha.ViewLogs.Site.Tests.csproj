@@ -66,8 +66,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\DefaultVariables.cs" />
     <Compile Include="Handlers\CreditHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModelsForTesting\LogViewModelForTesting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -39,7 +39,7 @@
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
             IsShowOldValue = isShowOldValue ?? GetShowOldValueFromCookie();
-            this.actionIdVisibilities = actionIdVisibilities ?? GetActionIdVisibilities();
+            this.actionIdVisibilities = actionIdVisibilities;
             this.custStatuses = custStatuses;
             this.resourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef;
             this.sites = sites;
@@ -89,7 +89,7 @@
         {
             get
             {
-                return actionIdVisibilities;
+                return actionIdVisibilities ?? GetActionIdVisibilities();
             }
         }
 
@@ -117,7 +117,7 @@
             }
         }
 
-        public bool IsShowMyanmarOdds { get; set; }
+        public bool IsShowMyanmarOdds { get; private set; }
 
         public DateTime MaxReportDate
         {
