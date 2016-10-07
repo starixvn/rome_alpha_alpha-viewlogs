@@ -418,8 +418,7 @@
             logFormatter.Init(new TransformParam
             {
                 IsShowOldValue = false,
-                TrackingValueTransformTemplatePath = string.Empty,
-                Sites = new List<string>() { SiteId.Accounting.ToString(), SiteId.Agency.ToString() }
+                TrackingValueTransformTemplatePath = string.Empty
             });
 
             // Action

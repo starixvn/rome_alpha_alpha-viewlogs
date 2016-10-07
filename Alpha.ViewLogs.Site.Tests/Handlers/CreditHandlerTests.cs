@@ -31,8 +31,6 @@
 
         private Dictionary<string, int> resourcesByBetTypeCacheRef;
 
-        private IEnumerable<string> sites;
-
         [SetUp]
         public void SetUp()
         {
@@ -45,7 +43,6 @@
             actionIdVisibilities = new Dictionary<int, bool>();
             custStatuses = new Dictionary<string, bool>();
             resourcesByBetTypeCacheRef = new Dictionary<string, int>();
-            sites = new List<string>();
         }
 
         [Test]
@@ -62,7 +59,7 @@
         public void HandleIndexQuery_NullFromToDateAndTodayIsBeginningOfMonth_GetsPagingLogsFromBeginningOfMonthToBeginningOfMonth()
         {
             // Arrange
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, sites, false);
+            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
 
             var toDate = new DateTime(2016, 10, 1);
             dateTimeWrapper.Now.Returns(toDate);
@@ -80,7 +77,7 @@
         public void HandleIndexQuery_NullFromToDateAndTodayIsNotBeginningOfMonth_GetsPagingLogsFromYesterdayToToday()
         {
             // Arrange
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, sites, false);
+            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
 
             var toDate = new DateTime(2016, 10, 2);
             var yesterday = new DateTime(2016, 10, 1);
@@ -107,7 +104,7 @@
             var fromDate = Converter.ToDateTime(fromDateString);
             var toDate = Converter.ToDateTime(toDateString);
 
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, sites, false);
+            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
             indexQuery.FromDate = fromDateString;
             indexQuery.ToDate = toDateString;
 
@@ -128,7 +125,7 @@
         public void HandleIndexQuery_NotHavePageSizeAndPageIndex_GetsPagingLogsWithDefaultPagingOptions(string pageSize)
         {
             // Arrange
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, sites, false);
+            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
             indexQuery.PageSize = pageSize;
 
             logService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
@@ -150,7 +147,7 @@
         public void HandleIndexQuery_HasPageSize_GetsPagingLogsWithInputPageSize(string pageSize, int expectedPageSize)
         {
             // Arrange
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, sites, false);
+            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
             indexQuery.PageSize = pageSize;
 
             logService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
@@ -171,7 +168,7 @@
         public void HandleIndexQuery_HasPageIndex_GetsPagingLogsWithInputPageSize(string pageIndex, int expectedPageIndex)
         {
             // Arrange
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, sites, false);
+            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
             indexQuery.PageIndex = pageIndex;
 
             logService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
@@ -190,7 +187,7 @@
             var actionIdVisibilities = new Dictionary<int, bool>();
             actionIdVisibilities.Add(1, true);
 
-            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, sites, false);
+            var indexQuery = new IndexQuery(currentUserSession, true, actionIdVisibilities, custStatuses, resourcesByBetTypeCacheRef, false);
             indexQuery.PageIndex = string.Empty;
             indexQuery.PageSize = DefaultVariables.PageSize.ToString();
 

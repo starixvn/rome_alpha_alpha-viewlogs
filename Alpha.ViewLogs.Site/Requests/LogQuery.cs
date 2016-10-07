@@ -22,8 +22,6 @@
 
         private readonly Dictionary<string, int> resourcesByBetTypeCacheRef;
 
-        private readonly IEnumerable<string> sites;
-
         public LogQuery() : this(null, null)
         {
         }
@@ -34,7 +32,6 @@
             Dictionary<int, bool> actionIdVisibilities = null,
             Dictionary<string, bool> custStatuses = null,
             Dictionary<string, int> resourcesByBetTypeCacheRef = null,
-            IEnumerable<string> sites = null,
             bool? isShowMyanmarOdds = null)
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
@@ -42,7 +39,6 @@
             this.actionIdVisibilities = actionIdVisibilities;
             this.custStatuses = custStatuses;
             this.resourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef;
-            this.sites = sites;
 
             // Limit time range for view log in 2 years (start from beginning of last year)
             maxReportDate = DateTime.Today;
@@ -106,14 +102,6 @@
             get
             {
                 return resourcesByBetTypeCacheRef ?? AppSettings.ResourcesByBetTypeCacheRef;
-            }
-        }
-
-        public IEnumerable<string> Sites
-        {
-            get
-            {
-                return sites ?? AppSettings.Sites;
             }
         }
 

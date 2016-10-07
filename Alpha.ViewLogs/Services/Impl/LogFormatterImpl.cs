@@ -17,7 +17,6 @@
 
         private Dictionary<string, bool> custStatuses;
         private Dictionary<string, int> resourcesByBetTypeCacheRef;
-        private IEnumerable<string> sites;
 
         private bool isShowMyanmarOdds;
 
@@ -44,7 +43,6 @@
 
             custStatuses = transformParam.CustStatuses;
             resourcesByBetTypeCacheRef = transformParam.ResourcesByBetTypeCacheRef;
-            sites = transformParam.Sites;
 
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
         }
@@ -145,10 +143,7 @@
                 return condition;
             }
 
-            if (sites != null && sites.Contains(code))
-            {
-                condition = TrackingValueResources.ResourceManager.GetString("Site_" + code);
-            }
+            condition = TrackingValueResources.ResourceManager.GetString("Site_" + code) ?? string.Empty;
 
             return condition;
         }
