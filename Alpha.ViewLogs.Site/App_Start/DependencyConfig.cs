@@ -19,6 +19,8 @@
     using SimpleInjector.Integration.Web.Mvc;
     using Sunplus.Agent.Model.Base;
     using Sunplus.Agent.Model.Entities;
+    using ViewLogs.Helpers;
+    using ViewLogs.Helpers.Impl;
 
     public static class DependencyConfig
     {
@@ -29,6 +31,8 @@
             container.Options.DefaultScopedLifestyle = new WebRequestLifestyle();
 
             RegisterMediator(container);
+
+            RegisterCrossCuttingConcerns(container);
 
             RegisterDataAccesses(container);
 
@@ -61,6 +65,11 @@
         private static IEnumerable<Assembly> GetAssemblies()
         {
             yield return typeof(BaseController).Assembly;
+        }
+
+        private static void RegisterCrossCuttingConcerns(Container container)
+        {
+            container.Register<IDateTime, DateTimeWrap>(Lifestyle.Singleton);
         }
 
         private static void RegisterServices(Container container)

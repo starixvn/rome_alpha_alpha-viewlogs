@@ -13,21 +13,15 @@
 
     public class CreditHandler : BaseHandler, IRequestHandler<IndexQuery, LogViewModel>
     {
-        private readonly LogFormatter logFormatter;
-        private readonly LogService logService;
-
-        public CreditHandler(
-            LogService logService,
-            LogFormatter logFormatter)
+        public CreditHandler(LogService logService, LogFormatter logFormatter, IDateTime dateTimeWrapper) :
+            base(logService, logFormatter, dateTimeWrapper)
         {
-            this.logService = logService;
-            this.logFormatter = logFormatter;
         }
 
         public LogViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = logService.GetPagingLogs(logsParam);
+            var pagingLogs = LogService.GetPagingLogs(logsParam);
             var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords);
 
             TransformLogs(pagingLogs, message, viewModel);
@@ -56,7 +50,7 @@
                 logItems.Add(new LogItemViewModel
                 {
                     ActionId = log.ActionId,
-                    ActionName = logService.GetLogActionName(log.ActionId, message.Language),
+                    ActionName = LogService.GetLogActionName(log.ActionId, message.Language),
 
                     ActionTypeId = log.ActionTypeId,
                     CustId = log.CustId,
@@ -70,7 +64,7 @@
                     TrackingValue = Converter.ToDecimal(log.TrackingValue).ToNumericString(),
                     TrackingValueOld = Converter.ToDecimal(log.TrackingValueOld).ToNumericString(),
                     Details = log.Details,
-                    IP = logFormatter.FormatIP(log.IP)
+                    IP = LogFormatter.FormatIP(log.IP)
                 });
             }
 

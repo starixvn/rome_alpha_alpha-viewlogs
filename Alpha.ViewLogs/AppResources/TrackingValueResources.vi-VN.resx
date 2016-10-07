@@ -3451,14 +3451,8 @@
   <data name="Updptv154" xml:space="preserve">
     <value>Update Position Taking HR Fixed Odds</value>
   </data>
-  <data name="disablehrfixedodds" xml:space="preserve">
-    <value>Disable HR Fixed Odds</value>
-  </data>
   <data name="UMMBv154" xml:space="preserve">
     <value>Cập nhật tiền cược nhỏ nhất-lớn nhất cho Đua ngựa tỷ lệ cố định.</value>
-  </data>
-  <data name="disabledhrfixedodds" xml:space="preserve">
-    <value>Disabled HR Fixed Odds</value>
   </data>
   <data name="MaximumWin" xml:space="preserve">
     <value>Tiền thắng cược tối đa</value>
@@ -3484,9 +3478,6 @@
   <data name="others" xml:space="preserve">
     <value>Others</value>
   </data>
-  <data name="DisabledESports" xml:space="preserve">
-    <value>Disabled E-Sports</value>
-  </data>
   <data name="CheckedSecurityCode" xml:space="preserve">
     <value>Checked Security Code</value>
   </data>
@@ -3499,9 +3490,6 @@
   <data name="v255playerdiscount_1701" xml:space="preserve">
     <value>Hoa hồng</value>
   </data>
-  <data name="disableGoldDeluxe" xml:space="preserve">
-    <value>Disable Gold Deluxe</value>
-  </data>
   <data name="v255discount_1701" xml:space="preserve">
     <value>Hoa hồng</value>
   </data>
@@ -3510,9 +3498,6 @@
   </data>
   <data name="doublecommission" xml:space="preserve">
     <value>Nhân đôi hoa hồng</value>
-  </data>
-  <data name="Disablecolossusbet" xml:space="preserve">
-    <value>Disable Colossus Bets</value>
   </data>
   <data name="v204discountvalue_cashinshare" xml:space="preserve">
     <value>Cash-In Share</value>
@@ -3529,9 +3514,6 @@
   <data name="isdisabled" xml:space="preserve">
     <value>Is Disabled</value>
   </data>
-  <data name="isdisableddownline" xml:space="preserve">
-    <value>Is Disabled Downline</value>
-  </data>
   <data name="IsLive" xml:space="preserve">
     <value>Is Live</value>
   </data>
@@ -3544,14 +3526,8 @@
   <data name="product" xml:space="preserve">
     <value>Sản Phẩm</value>
   </data>
-  <data name="Disable206_1003" xml:space="preserve">
-    <value>Disabled Cockfighting</value>
-  </data>
   <data name="MaximumLoss" xml:space="preserve">
     <value>Maximum Loss</value>
-  </data>
-  <data name="Disable50_501" xml:space="preserve">
-    <value>Disabled Cricket</value>
   </data>
   <data name="maxv154pt_20" xml:space="preserve">
     <value>PT lớn nhất cho Moneyline</value>

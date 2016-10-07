@@ -266,7 +266,7 @@
     <value>Account Remark</value>
   </data>
   <data name="disableautompt" xml:space="preserve">
-    <value>Disable Auto Master PT</value>
+    <value>Disabled Auto Master PT</value>
   </data>
   <data name="isa_smlivept_3" xml:space="preserve">
     <value>Live OU</value>
@@ -887,7 +887,7 @@
     <value>important</value>
   </data>
   <data name="disabledownline" xml:space="preserve">
-    <value>Disable Downlines</value>
+    <value>Disabled Downlines</value>
   </data>
   <data name="Internal" xml:space="preserve">
     <value>Internal</value>
@@ -1670,7 +1670,7 @@
     <value>Credit Grade</value>
   </data>
   <data name="disableAMPT" xml:space="preserve">
-    <value>Disable Auto Master PT</value>
+    <value>Disabled Auto Master PT</value>
   </data>
   <data name="gender" xml:space="preserve">
     <value>Gender</value>
@@ -1880,7 +1880,7 @@
     <value>SA Tote</value>
   </data>
   <data name="disablefinancial" xml:space="preserve">
-    <value>Disable Financial</value>
+    <value>Disabled Financial</value>
   </data>
   <data name="v3apt_2" xml:space="preserve">
     <value>Odd/Even</value>
@@ -2873,7 +2873,7 @@
     <value>Max Mix Parlay</value>
   </data>
   <data name="disabledBG" xml:space="preserve">
-    <value>Disable Bingo</value>
+    <value>Disabled Bingo</value>
   </data>
   <data name="syncBG" xml:space="preserve">
     <value>Synchronized Bingo</value>
@@ -3605,10 +3605,10 @@
     <value>Disabled Fun Poker</value>
   </data>
   <data name="DisableP2PDownline" xml:space="preserve">
-    <value>Disable Poker Downlines</value>
+    <value>Disabled Poker Downlines</value>
   </data>
   <data name="DisableFunP2PDownline" xml:space="preserve">
-    <value>Disable Fun Poker Downlines</value>
+    <value>Disabled Fun Poker Downlines</value>
   </data>
   <data name="MaxTransfer" xml:space="preserve">
     <value>Max Transfer</value>
@@ -3695,7 +3695,7 @@
     <value>Moneyline</value>
   </data>
   <data name="disablehrfixedodds" xml:space="preserve">
-    <value>Disable HR Fixed Odds</value>
+    <value>Disabled HR Fixed Odds</value>
   </data>
   <data name="maxv154pt_20" xml:space="preserve">
     <value>Max Moneyline</value>
@@ -3752,7 +3752,7 @@
     <value>Comm</value>
   </data>
   <data name="disableGoldDeluxe" xml:space="preserve">
-    <value>Disable Gold Deluxe</value>
+    <value>Disabled Gold Deluxe</value>
   </data>
   <data name="v255discount_1701" xml:space="preserve">
     <value>Comm</value>
@@ -3764,7 +3764,7 @@
     <value>Double Commission</value>
   </data>
   <data name="Disablecolossusbet" xml:space="preserve">
-    <value>Disable Colossus Bets</value>
+    <value>Disabled Colossus Bets</value>
   </data>
   <data name="v204discountvalue_cashinshare" xml:space="preserve">
     <value>Cash-In Share</value>

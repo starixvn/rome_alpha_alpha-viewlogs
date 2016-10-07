@@ -142,9 +142,6 @@
     <value>送金
 </value>
   </data>
-  <data name="DisableAllBet" xml:space="preserve">
-    <value>Disabled Allbet</value>
-  </data>
   <data name="Login" xml:space="preserve">
     <value>入力</value>
   </data>

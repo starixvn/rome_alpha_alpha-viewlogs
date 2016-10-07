@@ -258,9 +258,6 @@
   <data name="AccountRemark" xml:space="preserve">
     <value>Account Remark</value>
   </data>
-  <data name="disableautompt" xml:space="preserve">
-    <value>Disable Auto Master PT</value>
-  </data>
   <data name="isa_smlivept_3" xml:space="preserve">
     <value>Live OU</value>
   </data>
@@ -828,9 +825,6 @@
   <data name="important" xml:space="preserve">
     <value>important</value>
   </data>
-  <data name="disabledownline" xml:space="preserve">
-    <value>Disable Downlines</value>
-  </data>
   <data name="Internal" xml:space="preserve">
     <value>Internal</value>
   </data>
@@ -1116,9 +1110,6 @@
   <data name="NewAgentName" xml:space="preserve">
     <value>New Agent name</value>
   </data>
-  <data name="DisableHorseRacing" xml:space="preserve">
-    <value>Disabled Racing SA Tote</value>
-  </data>
   <data name="closedOnly" xml:space="preserve">
     <value>Closed Only</value>
   </data>
@@ -1202,9 +1193,6 @@
   </data>
   <data name="playerdiscountcs" xml:space="preserve">
     <value>Player's Other Discount</value>
-  </data>
-  <data name="disableoutright" xml:space="preserve">
-    <value>Disabled Outright</value>
   </data>
   <data name="minV99PT_1" xml:space="preserve">
     <value>Min Hdp</value>
@@ -1470,9 +1458,6 @@
   <data name="allowupdpt" xml:space="preserve">
     <value>Allow Update PT</value>
   </data>
-  <data name="disabledOutright" xml:space="preserve">
-    <value>Disabled Outright</value>
-  </data>
   <data name="updmultiple" xml:space="preserve">
     <value>Update Multiple</value>
   </data>
@@ -1499,9 +1484,6 @@
   </data>
   <data name="CreditGrade" xml:space="preserve">
     <value>Credit Grade</value>
-  </data>
-  <data name="disableAMPT" xml:space="preserve">
-    <value>Disable Auto Master PT</value>
   </data>
   <data name="gender" xml:space="preserve">
     <value>Gender</value>
@@ -1685,9 +1667,6 @@
   </data>
   <data name="v151IBCpt_31" xml:space="preserve">
     <value>SA Tote</value>
-  </data>
-  <data name="disablefinancial" xml:space="preserve">
-    <value>Disable Financial</value>
   </data>
   <data name="v3apt_2" xml:space="preserve">
     <value>Odd/Even</value>
@@ -1901,9 +1880,6 @@
   </data>
   <data name="Size" xml:space="preserve">
     <value>Size</value>
-  </data>
-  <data name="disabledfi" xml:space="preserve">
-    <value>Disabled Finance</value>
   </data>
   <data name="disabledCS" xml:space="preserve">
     <value>DisabledCS</value>
@@ -2274,9 +2250,6 @@
   <data name="AgentPT" xml:space="preserve">
     <value>Agent Position Taking</value>
   </data>
-  <data name="DisableOpenTote" xml:space="preserve">
-    <value>Disabled Racing UK/Irish Tote</value>
-  </data>
   <data name="MinBv151OT" xml:space="preserve">
     <value>UK Horse Racing-Min Bet</value>
   </data>
@@ -2553,9 +2526,6 @@
   <data name="maxv161livept_87" xml:space="preserve">
     <value>Max Live Next High/Low</value>
   </data>
-  <data name="DisableNumber" xml:space="preserve">
-    <value>Disabled Number Game</value>
-  </data>
   <data name="isa_v161mpt_mem_81" xml:space="preserve">
     <value>1st/Last Over/Under</value>
   </data>
@@ -2609,9 +2579,6 @@
   </data>
   <data name="maxv99pt_9" xml:space="preserve">
     <value>Max Mix Parlay</value>
-  </data>
-  <data name="disabledBG" xml:space="preserve">
-    <value>Disable Bingo</value>
   </data>
   <data name="syncBG" xml:space="preserve">
     <value>Synchronized Bingo</value>
@@ -2889,41 +2856,8 @@
   <data name="isa_v153spt_51" xml:space="preserve">
     <value>Harness's Aust Tote Win</value>
   </data>
-  <data name="disabledHR" xml:space="preserve">
-    <value>Disabled Racing's SA Tote</value>
-  </data>
-  <data name="disableot" xml:space="preserve">
-    <value>Disabled Racing's UK/Irish Tote</value>
-  </data>
-  <data name="Disable151_51" xml:space="preserve">
-    <value>Disabled Racing's Aust Tote</value>
-  </data>
-  <data name="Disable151_AU" xml:space="preserve">
-    <value>Disabled Racing's Aust Tote</value>
-  </data>
-  <data name="Disable152_41" xml:space="preserve">
-    <value>Disabled Greyhound's UK/Irish Tote</value>
-  </data>
-  <data name="Disable152_UK" xml:space="preserve">
-    <value>Disabled Greyhound's UK/Irish Tote</value>
-  </data>
-  <data name="Disable152_51" xml:space="preserve">
-    <value>Disabled Greyhound's Aust Tote</value>
-  </data>
-  <data name="Disable152_AU" xml:space="preserve">
-    <value>Disabled Greyhound's Aust Tote</value>
-  </data>
-  <data name="Disable153_51" xml:space="preserve">
-    <value>Disabled Harness's Aust Tote</value>
-  </data>
-  <data name="Disable153_AU" xml:space="preserve">
-    <value>Disabled Harness's Aust Tote</value>
-  </data>
   <data name="DisableCasino" xml:space="preserve">
     <value>카지노 비활성화하기</value>
-  </data>
-  <data name="DisableBingo" xml:space="preserve">
-    <value>Disabled Bingo</value>
   </data>
   <data name="v151apt_41" xml:space="preserve">
     <value>Racing's UK/Irish Tote Win</value>
@@ -2960,12 +2894,6 @@
   </data>
   <data name="v153apt_52" xml:space="preserve">
     <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="Disable151_41" xml:space="preserve">
-    <value>Disabled Racing's UK/Irish Tote</value>
-  </data>
-  <data name="Disable151_31" xml:space="preserve">
-    <value>Disabled Racing's SA Tote</value>
   </data>
   <data name="minV151PT_52" xml:space="preserve">
     <value>Min Racing's Aust Tote Place</value>
@@ -3405,14 +3333,8 @@
   <data name="Updptv154" xml:space="preserve">
     <value>Update Position Taking HR Fixed Odds</value>
   </data>
-  <data name="disablehrfixedodds" xml:space="preserve">
-    <value>Disable HR Fixed Odds</value>
-  </data>
   <data name="UMMBv154" xml:space="preserve">
     <value>최소-최대베팅 HR 고정 배당률  업데이트하기</value>
-  </data>
-  <data name="disabledhrfixedodds" xml:space="preserve">
-    <value>Disabled HR Fixed Odds</value>
   </data>
   <data name="MaximumWin" xml:space="preserve">
     <value>최대 지급금액</value>
@@ -3438,9 +3360,6 @@
   <data name="others" xml:space="preserve">
     <value>Others</value>
   </data>
-  <data name="DisabledESports" xml:space="preserve">
-    <value>Disabled E-Sports</value>
-  </data>
   <data name="CheckedSecurityCode" xml:space="preserve">
     <value>Checked Security Code</value>
   </data>
@@ -3453,9 +3372,6 @@
   <data name="v255playerdiscount_1701" xml:space="preserve">
     <value>Comm</value>
   </data>
-  <data name="disableGoldDeluxe" xml:space="preserve">
-    <value>Disable Gold Deluxe</value>
-  </data>
   <data name="v255discount_1701" xml:space="preserve">
     <value>Comm</value>
   </data>
@@ -3464,9 +3380,6 @@
   </data>
   <data name="doublecommission" xml:space="preserve">
     <value>더블 커미션</value>
-  </data>
-  <data name="Disablecolossusbet" xml:space="preserve">
-    <value>Disable Colossus Bets</value>
   </data>
   <data name="v204discountvalue_cashinshare" xml:space="preserve">
     <value>Cash-In Share</value>
@@ -3483,9 +3396,6 @@
   <data name="isdisabled" xml:space="preserve">
     <value>Is Disabled</value>
   </data>
-  <data name="isdisableddownline" xml:space="preserve">
-    <value>Is Disabled Downline</value>
-  </data>
   <data name="IsLive" xml:space="preserve">
     <value>Is Live</value>
   </data>
@@ -3498,14 +3408,8 @@
   <data name="product" xml:space="preserve">
     <value>Product</value>
   </data>
-  <data name="Disable206_1003" xml:space="preserve">
-    <value>Disabled Cockfighting</value>
-  </data>
   <data name="MaximumLoss" xml:space="preserve">
     <value>Maximum Loss</value>
-  </data>
-  <data name="Disable50_501" xml:space="preserve">
-    <value>Disabled Cricket</value>
   </data>
   <data name="subAccID" xml:space="preserve">
     <value>Sub Account ID</value>

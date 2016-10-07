@@ -2812,9 +2812,6 @@
   <data name="maxv161livept_87" xml:space="preserve">
     <value>最高滾球下一個高/低</value>
   </data>
-  <data name="DisableNumber" xml:space="preserve">
-    <value>Disabled Number Game</value>
-  </data>
   <data name="isa_v161mpt_mem_81" xml:space="preserve">
     <value>第一球/最後一球 大/小</value>
   </data>
@@ -2868,9 +2865,6 @@
   </data>
   <data name="maxv99pt_9" xml:space="preserve">
     <value>混合過關最高投注</value>
-  </data>
-  <data name="disabledBG" xml:space="preserve">
-    <value>Disable Bingo</value>
   </data>
   <data name="syncBG" xml:space="preserve">
     <value>Synchronized Bingo</value>
@@ -3180,9 +3174,6 @@
   </data>
   <data name="DisableCasino" xml:space="preserve">
     <value>禁用娛樂城</value>
-  </data>
-  <data name="DisableBingo" xml:space="preserve">
-    <value>Disabled Bingo</value>
   </data>
   <data name="v151apt_41" xml:space="preserve">
     <value>英國/愛爾蘭賽馬彩池獨贏</value>
@@ -3676,9 +3667,6 @@
   <data name="Updptv154" xml:space="preserve">
     <value>Update Position Taking HR Fixed Odds</value>
   </data>
-  <data name="disablehrfixedodds" xml:space="preserve">
-    <value>Disable HR Fixed Odds</value>
-  </data>
   <data name="maxv154pt_20" xml:space="preserve">
     <value>最高讓球</value>
   </data>
@@ -3687,9 +3675,6 @@
   </data>
   <data name="UMMBv154" xml:space="preserve">
     <value>更新固定賠率賽馬遊戲最低/最高投註</value>
-  </data>
-  <data name="disabledhrfixedodds" xml:space="preserve">
-    <value>Disabled HR Fixed Odds</value>
   </data>
   <data name="MaximumWin" xml:space="preserve">
     <value>最高贏取倍數</value>
@@ -3730,9 +3715,6 @@
   <data name="v255playerdiscount_1701" xml:space="preserve">
     <value>佣金</value>
   </data>
-  <data name="disableGoldDeluxe" xml:space="preserve">
-    <value>Disable Gold Deluxe</value>
-  </data>
   <data name="v255discount_1701" xml:space="preserve">
     <value>佣金</value>
   </data>
@@ -3741,9 +3723,6 @@
   </data>
   <data name="doublecommission" xml:space="preserve">
     <value>雙倍佣金</value>
-  </data>
-  <data name="Disablecolossusbet" xml:space="preserve">
-    <value>Disable Colossus Bets</value>
   </data>
   <data name="v204discountvalue_cashinshare" xml:space="preserve">
     <value>Cash-In Share</value>
@@ -3760,9 +3739,6 @@
   <data name="isdisabled" xml:space="preserve">
     <value>Is Disabled</value>
   </data>
-  <data name="isdisableddownline" xml:space="preserve">
-    <value>Is Disabled Downline</value>
-  </data>
   <data name="IsLive" xml:space="preserve">
     <value>Is Live</value>
   </data>
@@ -3775,14 +3751,8 @@
   <data name="product" xml:space="preserve">
     <value>Product</value>
   </data>
-  <data name="Disable206_1003" xml:space="preserve">
-    <value>Disabled Cockfighting</value>
-  </data>
   <data name="MaximumLoss" xml:space="preserve">
     <value>Maximum Loss</value>
-  </data>
-  <data name="Disable50_501" xml:space="preserve">
-    <value>Disabled Cricket</value>
   </data>
   <data name="isa_v5spt_20" xml:space="preserve">
     <value>獨贏</value>

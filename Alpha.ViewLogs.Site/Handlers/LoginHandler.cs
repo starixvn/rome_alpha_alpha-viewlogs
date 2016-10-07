@@ -12,21 +12,15 @@
 
     public class LoginHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
-        private readonly LogFormatter logFormatter;
-        private readonly LogService logService;
-
-        public LoginHandler(
-            LogService logService,
-            LogFormatter logFormatter)
+        public LoginHandler(LogService logService, LogFormatter logFormatter, IDateTime dateTimeWrapper) :
+            base(logService, logFormatter, dateTimeWrapper)
         {
-            this.logService = logService;
-            this.logFormatter = logFormatter;
         }
 
         public IndexViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = logService.GetPagingLogs(logsParam);
+            var pagingLogs = LogService.GetPagingLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
 
@@ -58,7 +52,7 @@
                 logItems.Add(new LoginLogItemViewModel
                 {
                     ActionId = log.ActionId,
-                    ActionName = logService.GetLogActionName(log.ActionId, message.Language),
+                    ActionName = LogService.GetLogActionName(log.ActionId, message.Language),
 
                     ActionTypeId = log.ActionTypeId,
                     CustId = log.CustId,
@@ -70,11 +64,11 @@
                     Username = log.Username,
 
                     Details = log.Details,
-                    IP = logFormatter.FormatIP(log.IP),
+                    IP = LogFormatter.FormatIP(log.IP),
 
                     Domain = log.Domain,
                     Browser = log.Browser,
-                    Country = logFormatter.FormatCountryCode(log.IP, log.Country)
+                    Country = LogFormatter.FormatCountryCode(log.IP, log.Country)
                 });
             }
 

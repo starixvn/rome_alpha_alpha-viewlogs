@@ -196,7 +196,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Colossus Bets.
+        ///   Looks up a localized string similar to Disabled Colossus Bets.
         /// </summary>
         public static string DisableColossusBets {
             get {
@@ -223,7 +223,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Gold Deluxe.
+        ///   Looks up a localized string similar to Disabled Gold Deluxe.
         /// </summary>
         public static string DisableGoldDeluxe {
             get {

@@ -18,19 +18,17 @@
 
     public class SettingHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
-        private readonly LogFormatter logFormatter;
         private readonly TrackingValueFormatter trackingValueFormatter;
-        private readonly LogService logService;
         private readonly TransformService transformService;
 
         public SettingHandler(
             LogService logService,
-            TransformService transformService,
             LogFormatter logFormatter,
-            TrackingValueFormatter trackingValueFormatter)
+            IDateTime dateTimeWrapper,
+            TransformService transformService,
+            TrackingValueFormatter trackingValueFormatter) :
+             base(logService, logFormatter, dateTimeWrapper)
         {
-            this.logService = logService;
-            this.logFormatter = logFormatter;
             this.trackingValueFormatter = trackingValueFormatter;
             this.transformService = transformService;
         }
@@ -65,7 +63,7 @@
                 ActionTypeId = string.IsNullOrWhiteSpace(message.ActionTypeId) ? ActionType.All : Converter.ToInt(message.ActionTypeId)
             };
 
-            var pagingLogs = logService.GetPagingLogs(logsParam);
+            var pagingLogs = LogService.GetPagingLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
             viewModel.LogActionTypes = BuildLogActionTypeViewModels(message);
@@ -78,7 +76,7 @@
 
         private IEnumerable<LogActionTypeViewModel> BuildLogActionTypeViewModels(IndexQuery message)
         {
-            var logActionTypes = logService.GetLogActionTypes();
+            var logActionTypes = LogService.GetLogActionTypes();
 
             var logActionTypeViewModels = logActionTypes
                 .Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))
@@ -121,7 +119,7 @@
                 logItems.Add(new LogItemViewModel
                 {
                     ActionId = log.ActionId,
-                    ActionName = logService.GetLogActionName(log.ActionId, message.Language),
+                    ActionName = LogService.GetLogActionName(log.ActionId, message.Language),
 
                     ActionTypeId = log.ActionTypeId,
                     CustId = log.CustId,
@@ -132,7 +130,7 @@
                     UserId = log.UserId,
                     Username = log.Username,
                     TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
-                    IP = logFormatter.FormatIP(log.IP)
+                    IP = LogFormatter.FormatIP(log.IP)
                 });
             }
 

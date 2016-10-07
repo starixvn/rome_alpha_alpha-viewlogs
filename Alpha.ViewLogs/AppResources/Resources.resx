@@ -190,10 +190,10 @@
     <value>Disabled Virtual Sports</value>
   </data>
   <data name="DisableGoldDeluxe" xml:space="preserve">
-    <value>Disable Gold Deluxe</value>
+    <value>Disabled Gold Deluxe</value>
   </data>
   <data name="DisableColossusBets" xml:space="preserve">
-    <value>Disable Colossus Bets</value>
+    <value>Disabled Colossus Bets</value>
   </data>
   <data name="DisableCockfighting" xml:space="preserve">
     <value>Disabled Cockfighting</value>

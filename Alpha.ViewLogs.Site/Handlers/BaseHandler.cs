@@ -1,13 +1,31 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
     using System;
-    using Alpha.ViewLogs.Params;
     using Fanex.Common;
+    using Params;
     using Requests;
+    using Services;
     using ViewLogs.Constants;
+    using ViewLogs.Helpers;
 
     public class BaseHandler
     {
+        public BaseHandler(
+            LogService logService,
+            LogFormatter logFormatter,
+            IDateTime dateTimeWrapper)
+        {
+            LogFormatter = logFormatter;
+            LogService = logService;
+            DateTimeWrapper = dateTimeWrapper;
+        }
+
+        public LogFormatter LogFormatter { get; private set; }
+
+        public LogService LogService { get; private set; }
+
+        public IDateTime DateTimeWrapper { get; private set; }
+
         protected LogParam CreateLogParam(LogQuery logQuery)
         {
             var fromDate = GetFromDate(logQuery);
@@ -44,9 +62,9 @@
         {
             if (logQuery == null || string.IsNullOrWhiteSpace(logQuery.FromDate))
             {
-                return DateTime.Now.Day > 1
-                    ? DateTime.Now.AddDays(-1)
-                    : DateTime.Now;
+                return DateTimeWrapper.Now.Day > 1
+                    ? DateTimeWrapper.Now.AddDays(-1)
+                    : DateTimeWrapper.Now;
             }
 
             return Converter.ToDateTime(logQuery.FromDate);
@@ -55,7 +73,7 @@
         protected DateTime GetToDate(LogQuery logQuery)
         {
             return logQuery == null || string.IsNullOrWhiteSpace(logQuery.ToDate)
-                ? DateTime.Now
+                ? DateTimeWrapper.Now
                 : Converter.ToDateTime(logQuery.ToDate);
         }
     }

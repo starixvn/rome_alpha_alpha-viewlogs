@@ -157,9 +157,6 @@
   <data name="DisabledVirtualSports" xml:space="preserve">
     <value>가상스포츠 비활성화하기</value>
   </data>
-  <data name="DisableAllBet" xml:space="preserve">
-    <value>Disabled Allbet</value>
-  </data>
   <data name="Disabled" xml:space="preserve">
     <value>비활성화</value>
   </data>

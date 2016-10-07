@@ -2743,7 +2743,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Auto Master PT.
+        ///   Looks up a localized string similar to Disabled Auto Master PT.
         /// </summary>
         public static string disableAMPT {
             get {
@@ -2752,7 +2752,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Auto Master PT.
+        ///   Looks up a localized string similar to Disabled Auto Master PT.
         /// </summary>
         public static string disableautompt {
             get {
@@ -2779,7 +2779,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Colossus Bets.
+        ///   Looks up a localized string similar to Disabled Colossus Bets.
         /// </summary>
         public static string Disablecolossusbet {
             get {
@@ -2797,7 +2797,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Bingo.
+        ///   Looks up a localized string similar to Disabled Bingo.
         /// </summary>
         public static string disabledBG {
             get {
@@ -2869,7 +2869,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Downlines.
+        ///   Looks up a localized string similar to Disabled Downlines.
         /// </summary>
         public static string disabledownline {
             get {
@@ -2887,7 +2887,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Financial.
+        ///   Looks up a localized string similar to Disabled Financial.
         /// </summary>
         public static string disablefinancial {
             get {
@@ -2914,7 +2914,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Fun Poker Downlines.
+        ///   Looks up a localized string similar to Disabled Fun Poker Downlines.
         /// </summary>
         public static string DisableFunP2PDownline {
             get {
@@ -2923,7 +2923,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Gold Deluxe.
+        ///   Looks up a localized string similar to Disabled Gold Deluxe.
         /// </summary>
         public static string disableGoldDeluxe {
             get {
@@ -2941,7 +2941,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable HR Fixed Odds.
+        ///   Looks up a localized string similar to Disabled HR Fixed Odds.
         /// </summary>
         public static string disablehrfixedodds {
             get {
@@ -2995,7 +2995,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable Poker Downlines.
+        ///   Looks up a localized string similar to Disabled Poker Downlines.
         /// </summary>
         public static string DisableP2PDownline {
             get {

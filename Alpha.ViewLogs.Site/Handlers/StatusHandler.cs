@@ -13,19 +13,17 @@
 
     public class StatusHandler : BaseHandler, IRequestHandler<IndexQuery, LogViewModel>
     {
-        private readonly LogFormatter logFormatter;
         private readonly TrackingValueFormatter trackingValueFormatter;
-        private readonly LogService logService;
         private readonly TransformService transformService;
 
         public StatusHandler(
             LogService logService,
-            TransformService transformService,
             LogFormatter logFormatter,
-            TrackingValueFormatter trackingValueFormatter)
+            IDateTime dateTimeWrapper,
+            TransformService transformService,
+            TrackingValueFormatter trackingValueFormatter) :
+             base(logService, logFormatter, dateTimeWrapper)
         {
-            this.logService = logService;
-            this.logFormatter = logFormatter;
             this.trackingValueFormatter = trackingValueFormatter;
             this.transformService = transformService;
         }
@@ -33,7 +31,7 @@
         public LogViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
-            var pagingLogs = logService.GetPagingLogs(logsParam);
+            var pagingLogs = LogService.GetPagingLogs(logsParam);
 
             var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords);
             viewModel.ActionTypeId = message.ActionTypeId;
@@ -76,7 +74,7 @@
                     new LogItemViewModel
                     {
                         ActionId = log.ActionId,
-                        ActionName = logService.GetLogActionName(log.ActionId, message.Language),
+                        ActionName = LogService.GetLogActionName(log.ActionId, message.Language),
 
                         ActionTypeId = log.ActionTypeId,
                         CustId = log.CustId,
@@ -87,7 +85,7 @@
                         UserId = log.UserId,
                         Username = log.Username,
                         TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
-                        IP = logFormatter.FormatIP(log.IP)
+                        IP = LogFormatter.FormatIP(log.IP)
                     });
             }
 
