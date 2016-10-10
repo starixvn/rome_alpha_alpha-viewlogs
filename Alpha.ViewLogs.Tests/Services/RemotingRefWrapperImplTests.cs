@@ -49,7 +49,7 @@
 
             remotingRefWrapper = new RemotingRefWrapperImpl();
 
-            // Action
+            // Act 
             var actualBetTypeName = remotingRefWrapper.GetBetType(betTypeId, betId);
 
             // Assert
@@ -70,7 +70,7 @@
             remotingRefWrapper = new RemotingRefWrapperImpl();
             remotingRefWrapper.SetRemotingRefFunctions(getBetTypeNameWithResourceId);
 
-            // Action
+            // Act 
             var actualBetTypeName = remotingRefWrapper.GetBetType(betTypeId, betId);
 
             // Assert
@@ -91,7 +91,7 @@
             remotingRefWrapper = new RemotingRefWrapperImpl();
             remotingRefWrapper.SetRemotingRefFunctions(getBetTypeNameWithResourceId);
 
-            // Action
+            // Act 
             var actualBetTypeName = remotingRefWrapper.GetBetType(betTypeId, betId);
 
             // Assert
@@ -113,7 +113,7 @@
             Thread.CurrentThread.CurrentCulture = new CultureInfo(language);
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
 
-            // Action
+            // Act 
             var actualBetTypeName = remotingRefWrapper.GetBetType(betTypeId, betId);
 
             // Assert
@@ -129,7 +129,7 @@
             remotingRefWrapper = new RemotingRefWrapperImpl();
             remotingRefWrapper.SetRemotingRefFunctions(null, getBetTypeName);
 
-            // Action
+            // Act 
             var actualBetTypeName = remotingRefWrapper.GetBetTypeName(betTypeId);
 
             // Assert
@@ -149,7 +149,7 @@
             remotingRefWrapper = new RemotingRefWrapperImpl();
             remotingRefWrapper.SetRemotingRefFunctions(null, getBetTypeName);
 
-            // Action
+            // Act 
             var actualBetTypeName = remotingRefWrapper.GetBetTypeName(betTypeId);
 
             // Assert
@@ -165,7 +165,7 @@
             remotingRefWrapper = new RemotingRefWrapperImpl();
             remotingRefWrapper.SetRemotingRefFunctions(null, null, getSportNameWithDefaultValue);
 
-            // Action
+            // Act 
             var actualSportName = remotingRefWrapper.GetSportName(sportId);
 
             // Assert
@@ -185,7 +185,7 @@
             remotingRefWrapper = new RemotingRefWrapperImpl();
             remotingRefWrapper.SetRemotingRefFunctions(null, null, getSportNameWithDefaultValue);
 
-            // Action
+            // Act 
             var actualSportName = remotingRefWrapper.GetSportName(sportId);
 
             // Assert
@@ -205,7 +205,7 @@
             remotingRefWrapper = new RemotingRefWrapperImpl();
             remotingRefWrapper.SetRemotingRefFunctions(null, null, null, getResourceDataByRefIdAndResourceIdWithDefaultValue);
 
-            // Action
+            // Act 
             var actualProductName = remotingRefWrapper.GetProductName(productId);
 
             // Assert

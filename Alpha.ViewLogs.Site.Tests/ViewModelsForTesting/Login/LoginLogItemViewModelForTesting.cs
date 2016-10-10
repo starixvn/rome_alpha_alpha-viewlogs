@@ -1,37 +1,41 @@
 ﻿namespace Alpha.ViewLogs.Site.Tests.ViewModelsForTesting.Login
 {
     using System.Text;
+    using ViewModels;
     using ViewModels.Login;
 
     public class LoginLogItemViewModelForTesting : LoginLogItemViewModel
     {
-        public static LoginLogItemViewModelForTesting FromLoginLogItemViewModel(LoginLogItemViewModel logItemViewModel)
+        public static LoginLogItemViewModelForTesting FromLoginLogItemViewModel(LogItemViewModel logItemViewModel)
         {
             if (logItemViewModel == null)
             {
                 return null;
             }
 
+            var loginLogItemViewModel = (LoginLogItemViewModel)logItemViewModel;
+
             return new LoginLogItemViewModelForTesting
             {
-                ActionId = logItemViewModel.ActionId,
-                ActionName = logItemViewModel.ActionName,
-                ActionTypeId = logItemViewModel.ActionTypeId,
-                CustId = logItemViewModel.CustId,
-                CustName = logItemViewModel.CustName,
-                IsInternal = logItemViewModel.IsInternal,
-                LogDate = logItemViewModel.LogDate,
-                LogId = logItemViewModel.LogId,
-                SPName = logItemViewModel.SPName,
-                UserId = logItemViewModel.UserId,
-                Username = logItemViewModel.Username,
-                TrackingValue = logItemViewModel.TrackingValue,
-                TrackingValueOld = logItemViewModel.TrackingValueOld,
-                Details = logItemViewModel.Details,
-                IP = logItemViewModel.IP,
-                Domain = logItemViewModel.Domain,
-                Browser = logItemViewModel.Browser,
-                Country = logItemViewModel.Country
+                ActionId = loginLogItemViewModel.ActionId,
+                ActionName = loginLogItemViewModel.ActionName,
+                ActionTypeId = loginLogItemViewModel.ActionTypeId,
+                CustId = loginLogItemViewModel.CustId,
+                CustName = loginLogItemViewModel.CustName,
+                IsInternal = loginLogItemViewModel.IsInternal,
+                LogDate = loginLogItemViewModel.LogDate,
+                LogId = loginLogItemViewModel.LogId,
+                SPName = loginLogItemViewModel.SPName,
+                UserId = loginLogItemViewModel.UserId,
+                Username = loginLogItemViewModel.Username,
+                TrackingValue = loginLogItemViewModel.TrackingValue,
+                TrackingValueOld = loginLogItemViewModel.TrackingValueOld,
+                Details = loginLogItemViewModel.Details,
+                IP = loginLogItemViewModel.IP,
+
+                Domain = loginLogItemViewModel.Domain,
+                Browser = loginLogItemViewModel.Browser,
+                Country = loginLogItemViewModel.Country
             };
         }
 

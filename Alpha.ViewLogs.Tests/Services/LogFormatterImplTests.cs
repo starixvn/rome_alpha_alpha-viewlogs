@@ -63,7 +63,7 @@
         [TestCase("1.1.1.1")]
         public void FormatIP_AnyIP_CallsIPService(string ip)
         {
-            // Action
+            // Act 
             logFormatter.FormatIP(ip);
 
             // Assert
@@ -87,7 +87,7 @@
             var expectedIP = "ValidFormattedIP";
             ipService.FormatIP(ip).Returns(expectedIP);
 
-            // Action
+            // Act 
             var actualIP = logFormatter.FormatIP(ip);
 
             // Assert
@@ -107,7 +107,7 @@
         [TestCase("1.1.1.1")]
         public void FormatCountryCode_AnyIP_CallsIPService(string ip)
         {
-            // Action
+            // Act 
             logFormatter.FormatCountryCode(ip, ValidCountry);
 
             // Assert
@@ -132,7 +132,7 @@
             var expectedCountry = ValidCountry;
             ipService.FormatCountryCode(ip, ValidCountry).Returns(expectedCountry);
 
-            // Action
+            // Act 
             var actualCountry = logFormatter.FormatCountryCode(ip, inputCountry);
 
             // Assert
@@ -149,7 +149,7 @@
                 CustStatuses = sportBetTypeVisibilities
             });
 
-            // Action
+            // Act 
             var actualIsVisible = logFormatter.IsVisible(key);
 
             // Assert
@@ -161,7 +161,7 @@
         [TestCase(InvalidResourceKey, "")]
         public void GetLogResource_AnyResourceKey_ReturnsCorrectResource(string key, string expectedResource)
         {
-            // Action
+            // Act 
             var actualResource = logFormatter.GetLogResource(key);
 
             // Assert
@@ -179,7 +179,7 @@
             var expectedBetTypeName = "ValidBetTypeName";
             remotingRef.GetBetType(betType).Returns(expectedBetTypeName);
 
-            // Action
+            // Act 
             var actualBetTypeName = logFormatter.GetBetTypeName(betType);
 
             // Assert
@@ -193,7 +193,7 @@
             var expectedBetTypeName = "Baccarat, Roulette, Sic Bo, Dragon Tiger";
             var betType = BetTypeId.AllBetNormalGames;
 
-            // Action
+            // Act 
             var actualBetTypeName = logFormatter.GetBetTypeName(betType);
 
             // Assert
@@ -211,7 +211,7 @@
             var expectedSportTypeName = "ValidSportTypeName";
             remotingRef.GetSportName(sportType).Returns(expectedSportTypeName);
 
-            // Action
+            // Act 
             var actualSportTypeName = logFormatter.GetSportName(sportType);
 
             // Assert
@@ -229,7 +229,7 @@
             var expectedProductName = "ValidProductName";
             remotingRef.GetProductName(productId).Returns(expectedProductName);
 
-            // Action
+            // Act 
             var actualProductName = logFormatter.GetProductName(productId);
 
             // Assert
@@ -245,7 +245,7 @@
             // Arrange
             var expectedTransferCondition = string.Empty;
 
-            // Action
+            // Act 
             var actualTransferCondition = logFormatter.TransferConditionFromCode(dayCodesWithDiff);
 
             // Assert
@@ -259,7 +259,7 @@
         [TestCase("<div>abc</tag>")]
         public void TransferConditionFromCode_InvalidXMLFormatDayCodesWithDiff_ThrowsXmlException(string dayCodesWithDiff)
         {
-            // Action & Assert
+            // Act & Assert
             Assert.Throws<XmlException>(new TestDelegate(() => logFormatter.TransferConditionFromCode(dayCodesWithDiff)));
         }
 
@@ -270,7 +270,7 @@
             string dayCodesWithDiff,
             string expectedTransferCondition)
         {
-            // Action
+            // Act 
             var actualTransferCondition = logFormatter.TransferConditionFromCode(dayCodesWithDiff);
 
             // Assert
@@ -299,7 +299,7 @@
             // Arrange
             var expectedTransferCondition = "Weekly (" + selectedDays + ")";
 
-            // Action
+            // Act 
             var actualTransferCondition = logFormatter.TransferConditionFromCode(dayCodesWithDiff);
 
             // Assert
@@ -310,7 +310,7 @@
         [TestCase("<span name=\"newvalue\"></span>")]
         public void TransferConditionFromCode_OneNodeXMLWithoutTitleAttribute_ThrowsNullReferenceException(string dayCodesWithDiff)
         {
-            // Action & Assert
+            // Act & Assert
             Assert.Throws<NullReferenceException>(new TestDelegate(() => logFormatter.TransferConditionFromCode(dayCodesWithDiff)));
         }
 
@@ -321,7 +321,7 @@
         [TestCase("<span title=\"\">00000000</span>")]
         public void TransferConditionFromCode_OneNodeXMLHasTitleAttributeAndOneValueEmpty_ThrowsArgumentException(string dayCodesWithDiff)
         {
-            // Action & Assert
+            // Act & Assert
             Assert.Throws<ArgumentException>(new TestDelegate(() => logFormatter.TransferConditionFromCode(dayCodesWithDiff)));
         }
 
@@ -333,7 +333,7 @@
             string dayCodesWithDiff,
             string expectedTransferCondition)
         {
-            // Action
+            // Act 
             var actualTransferCondition = logFormatter.TransferConditionFromCode(dayCodesWithDiff);
 
             // Assert
@@ -351,7 +351,7 @@
         [TestCase("<span></span><span>(1</span>")]
         public void TransferConditionFromCode_TwoNodesXMLAndWrongOldValue_ThrowsArgumentOutOfRangeException(string dayCodesWithDiff)
         {
-            // Action & Assert
+            // Act & Assert
             Assert.Throws<ArgumentOutOfRangeException>(new TestDelegate(() => logFormatter.TransferConditionFromCode(dayCodesWithDiff)));
         }
 
@@ -360,7 +360,7 @@
         [TestCase("<span></span><span>(10000001)</span>")]
         public void TransferConditionFromCode_TwoNodesXMLWithEmptyNewValue_ThrowsArgumentException(string dayCodesWithDiff)
         {
-            // Action & Assert
+            // Act & Assert
             Assert.Throws<ArgumentException>(new TestDelegate(() => logFormatter.TransferConditionFromCode(dayCodesWithDiff)));
         }
 
@@ -379,7 +379,7 @@
         {
             // Arrange
 
-            // Action
+            // Act 
             var actualTransferCondition = logFormatter.TransferConditionFromCode(dayCodesWithDiff);
 
             // Assert
@@ -392,7 +392,7 @@
         [TestCase("  ")]
         public void FormatCodeSite_IsNullOrWhiteSpaceCode_ReturnsEmpty(string code)
         {
-            // Action
+            // Act 
             var actualCondition = logFormatter.FormatCodeSite(code);
 
             // Assert
@@ -403,7 +403,7 @@
         [TestCase("3")]
         public void FormatCodeSite_NotSupportedSite_ReturnsEmpty(string code)
         {
-            // Action
+            // Act 
             var actualCondition = logFormatter.FormatCodeSite(code);
 
             // Assert
@@ -421,7 +421,7 @@
                 TrackingValueTransformTemplatePath = string.Empty
             });
 
-            // Action
+            // Act 
             var actualCondition = logFormatter.FormatCodeSite(code);
 
             // Assert
@@ -437,7 +437,7 @@
             // Arrange
             var expectedCode = "0";
 
-            // Action
+            // Act 
             var actualCode = logFormatter.FormatErrCode(code);
 
             // Assert
@@ -452,7 +452,7 @@
             // Arrange
             var expectedCode = code;
 
-            // Action
+            // Act 
             var actualCode = logFormatter.FormatErrCode(code);
 
             // Assert
@@ -465,7 +465,7 @@
             // Arrange
             var message = "no information is available";
 
-            // Action
+            // Act 
             var actualMessage = logFormatter.FormatErrMsg(message);
 
             // Assert
@@ -483,7 +483,7 @@
             // Arrange
             var expectedMessage = message;
 
-            // Action
+            // Act 
             var actualMessage = logFormatter.FormatErrMsg(message);
 
             // Assert
@@ -496,7 +496,7 @@
         [TestCase("  ")]
         public void FormatMemberWinLimit_IsNullOrWhiteSpaceValue_ReturnsEmpty(string value)
         {
-            // Action
+            // Act 
             var actualMemberWinLimit = logFormatter.FormatMemberWinLimit(value);
 
             // Assert
@@ -520,7 +520,7 @@
             string value,
             string expectedMemberWinLimit)
         {
-            // Action
+            // Act 
             var actualMemberWinLimit = logFormatter.FormatMemberWinLimit(value);
 
             // Assert
@@ -534,7 +534,7 @@
             var unlimitValue = -1;
             var expectedValue = "Unlimited";
 
-            // Action
+            // Act 
             var actualValue = logFormatter.FormatUnlimited(unlimitValue);
 
             // Assert
@@ -549,7 +549,7 @@
             int limitValue,
             string expectedValue)
         {
-            // Action
+            // Act 
             var actualValue = logFormatter.FormatUnlimited(limitValue);
 
             // Assert
@@ -561,7 +561,7 @@
         [TestCase("-1", false)]
         public void IsVisibleKeno_AnyHideKenoValue_ReturnsCorrectVisible(string hideKeno, bool expectedVisible)
         {
-            // Action
+            // Act 
             var actualVisible = logFormatter.IsVisibleKeno(hideKeno);
 
             // Assert
@@ -583,7 +583,7 @@
             remotingRef.GetBetTypeName(disableBetType).Returns(kenoBetTypeName);
             var expectedDisabledKenoBetTypeName = "Disabled " + kenoBetTypeName;
 
-            // Action
+            // Act 
             var actualDisabledKenoBetTypeName = logFormatter.GetDisabledKenoBetTypeName(disableBetType);
 
             // Assert
@@ -601,7 +601,7 @@
                 IsShowMyanmarOdds = isShowMyanmarOdds
             });
 
-            // Action
+            // Act 
             var actualIsShowMyanmarOdds = logFormatter.IsShowMyanmarOdds();
 
             // Assert
@@ -615,7 +615,7 @@
         [TestCase(int.MinValue)]
         public void IsRNGCasino_NotRNGCasino_ReturnsFalse(int sportType)
         {
-            // Action
+            // Act 
             var actualIsRNGCasino = logFormatter.IsRNGCasino(sportType);
 
             // Assert
@@ -627,7 +627,7 @@
         [TestCase(SportId.RNGMobile)]
         public void IsRNGCasino_RNGCasino_ReturnsTrue(int sportType)
         {
-            // Action
+            // Act 
             var actualIsRNGCasino = logFormatter.IsRNGCasino(sportType);
 
             // Assert
@@ -641,7 +641,7 @@
         [TestCase(int.MinValue)]
         public void IsGoldDeluxe_NotGoldDeluxe_ReturnsFalse(int sportType)
         {
-            // Action
+            // Act 
             var actualIsGoldDeluxe = logFormatter.IsGoldDeluxe(sportType);
 
             // Assert
@@ -651,7 +651,7 @@
         [TestCase(SportId.GoldDeluxe)]
         public void IsGoldDeluxe_GoldDeluxe_ReturnsTrue(int sportType)
         {
-            // Action
+            // Act 
             var actualIsGoldDeluxe = logFormatter.IsGoldDeluxe(sportType);
 
             // Assert
@@ -664,7 +664,7 @@
         [TestCase("  ")]
         public void RenderCustStatus_IsNullOrWhiteSpaceName_ReturnsEmpty(string name)
         {
-            // Action
+            // Act 
             var actualCustStatus = logFormatter.RenderCustStatus(name, Arg.Any<string>());
 
             // Assert
@@ -691,14 +691,14 @@
 
             var expectedCustStatus = $"<tr><td colspan=\"3\" class=\"colW1\">Disabled {validBetTypeName}</td><td colspan=\"3\" class=\"colW2\">{statusValue}</td></tr>";
 
-            // Action
+            // Act 
             var actualCustStatus = logFormatter.RenderCustStatus(name, statusValue);
 
             // Assert
             Assert.AreEqual(expectedCustStatus, actualCustStatus);
         }
 
-        [TestCase("ValidStatus", true, "<tr><td colspan=\"3\" class=\"colW1\">validStatusName</td><td colspan=\"3\" class=\"colW2\">anyValue</td></tr>")]
+        [TestCase("ValidStatus", true, "<tr><td colspan=\"3\" class=\"colW1\">ValidStatusName</td><td colspan=\"3\" class=\"colW2\">anyValue</td></tr>")]
         [TestCase("ValidStatus", false, "")]
         public void RenderCustStatus_HasConfigResourcesByBetTypeCacheRefAndUseResourceFromCode_ReturnsCorrectStatus(
             string name,
@@ -724,14 +724,14 @@
                 CustStatuses = custStatuses
             });
 
-            // Action
+            // Act 
             var actualCustStatus = logFormatter.RenderCustStatus(name, statusValue);
 
             // Assert
             Assert.AreEqual(expectedCustStatus, actualCustStatus);
         }
 
-        [TestCase("ValidStatus", true, "<tr><td colspan=\"3\" class=\"colW1\">validStatusName</td><td colspan=\"3\" class=\"colW2\">anyValue</td></tr>")]
+        [TestCase("ValidStatus", true, "<tr><td colspan=\"3\" class=\"colW1\">ValidStatusName</td><td colspan=\"3\" class=\"colW2\">anyValue</td></tr>")]
         [TestCase("ValidStatus", false, "")]
         public void RenderCustStatus_NotConfigResourcesByBetTypeCacheRefAndUseResourceFromCode_ReturnsCorrectStatus(
             string name,
@@ -752,7 +752,7 @@
                 CustStatuses = custStatuses
             });
 
-            // Action
+            // Act 
             var actualCustStatus = logFormatter.RenderCustStatus(name, statusValue);
 
             // Assert

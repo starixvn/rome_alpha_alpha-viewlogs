@@ -15,7 +15,7 @@
             // Arrange
             var expectedValue = inputValue;
 
-            // Action
+            // Act 
             var actualValue = StringHelper.RemoveTrailingZeros(inputValue);
 
             // Assert
@@ -40,7 +40,7 @@
             // Arrange
             var expectedValue = inputValue;
 
-            // Action
+            // Act 
             var actualValue = StringHelper.RemoveTrailingZeros(inputValue);
 
             // Assert
@@ -65,7 +65,7 @@
         [TestCase("100", "100")] // not start with zeros, real part ends with zeros and not have decimal part
         public void RemoveTrailingZeros_NumberValue_ReturnsTrailingZerosValue(string inputValue, string expectedValue)
         {
-            // Action
+            // Act 
             var actualValue = StringHelper.RemoveTrailingZeros(inputValue);
 
             // Assert

@@ -55,7 +55,7 @@
             // Arrange
             var expectedIP = ip;
 
-            // Action
+            // Act 
             var actualIP = ipService.FormatIP(ip);
 
             // Assert
@@ -71,7 +71,7 @@
             // Arrange
             var expectedIP = $"<a class=\"iplink\" href=\"javascript:;\">{ip}</a>";
 
-            // Action
+            // Act 
             var actualIP = ipService.FormatIP(ip);
 
             // Assert
@@ -93,7 +93,7 @@
                 return true;
             });
 
-            // Action
+            // Act 
             var actualIP = ipService.FormatIP(ip);
 
             // Assert
@@ -110,7 +110,7 @@
             cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(false);
             dynamicRepository.Fetch<IPRange>(Arg.Any<GetIPVNCriteria>()).Returns(ipVNList);
 
-            // Action
+            // Act 
             var actualIP = ipService.FormatIP(ip);
 
             // Assert
@@ -126,7 +126,7 @@
             // Arrange
             var expectedValue = 0;
 
-            // Action
+            // Act 
             var actualValue = ipService.ConvertIPToNumber(ip);
 
             // Assert
@@ -138,7 +138,7 @@
         [TestCase("1.1.1.255", 16843263)]
         public void ConvertIPToNumber_ValidIP_ReturnsNumberOfIP(string ip, double expectedValue)
         {
-            // Action
+            // Act 
             var actualValue = ipService.ConvertIPToNumber(ip);
 
             // Assert
@@ -154,7 +154,7 @@
             // Arrange
             var expectedValue = false;
 
-            // Action
+            // Act 
             var isVNIP = ipService.IsVNIP(ip);
 
             // Assert
@@ -182,7 +182,7 @@
                 return true;
             });
 
-            // Action
+            // Act 
             var isVNIP = ipService.IsVNIP(ip);
 
             // Assert
@@ -205,7 +205,7 @@
                 return true;
             });
 
-            // Action
+            // Act 
             var isVNIP = ipService.IsVNIP(ip);
 
             // Assert
@@ -226,7 +226,7 @@
                 return true;
             });
 
-            // Action 
+            // Act 
             ipService.IsVNIP(ip);
 
             // Assert
@@ -244,7 +244,7 @@
             // Arrange
             var country = ValidCountry;
 
-            // Action
+            // Act 
             var actualCountry = ipService.FormatCountryCode(ip, country);
 
             // Assert
@@ -269,7 +269,7 @@
 
             userSession.IsAdminCanViewVNIP.Returns(false);
 
-            // Action
+            // Act 
             var actualCountry = ipService.FormatCountryCode(ip, country);
 
             // Assert
@@ -294,7 +294,7 @@
 
             userSession.IsAdminCanViewVNIP.Returns(true);
 
-            // Action
+            // Act 
             var actualCountry = ipService.FormatCountryCode(ip, country);
 
             // Assert
@@ -322,7 +322,7 @@
 
             userSession.IsAdminCanViewVNIP.Returns(canViewVNIP);
 
-            // Action
+            // Act 
             var actualCountry = ipService.FormatCountryCode(ip, country);
 
             // Assert

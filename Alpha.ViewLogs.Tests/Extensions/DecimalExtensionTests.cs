@@ -16,7 +16,7 @@
         {
             // Arrange
 
-            // Action
+            // Act 
             var actualValue = value.ToNumericString();
 
             // Assert

@@ -49,13 +49,15 @@
 
             SubstituteGetLogsFromDataAccess(logs);
 
-            var expectedPagingLogs = PagingLogsForTesting<Log>.FromPagingLogs(new PagingLogs<Log> { Logs = logs });
+            var expectedPagingLogs = new PagingLogs<Log> { Logs = logs };
 
-            // Action
-            var actualPagingLogs = PagingLogsForTesting<Log>.FromPagingLogs(LogService.GetPagingLogs(logParam));
+            // Act 
+            var actualPagingLogs = LogService.GetPagingLogs(logParam);
 
             // Assert
-            Assert.AreEqual(expectedPagingLogs, actualPagingLogs);
+            Assert.AreEqual(
+                PagingLogsForTesting<Log>.FromPagingLogs(expectedPagingLogs),
+                PagingLogsForTesting<Log>.FromPagingLogs(actualPagingLogs));
         }
 
         public virtual void CreateGetLogsCriteria_NullLogParam_ThrowsArgumentNullException()
@@ -63,7 +65,7 @@
             // Arrange
             SettingParam nullLogParam = null;
 
-            // Action & Assert
+            // Act & Assert
             Assert.Throws<ArgumentNullException>(new TestDelegate(() => LogService.CreateGetLogsCriteria(nullLogParam)));
         }
 
@@ -72,7 +74,7 @@
             // Arrange
             SettingParam nullLogParam = null;
 
-            // Action & Assert
+            // Act & Assert
             Assert.Throws<ArgumentNullException>(new TestDelegate(() => LogService.CreateGetTotalLogsCriteria(nullLogParam)));
         }
 

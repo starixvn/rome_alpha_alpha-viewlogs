@@ -30,13 +30,15 @@
         public void GetDownlineInfoByUsername_NullOrEmptyUsername_ReturnsDefaultCustomerInfo(string username)
         {
             // Arrange 
-            var expectedCustomerInfo = CustomerInfoForTesting.FromCustomerInfo(new CustomerInfo(0, false));
+            var expectedCustomerInfo = new CustomerInfo(0, false);
 
-            // Action 
-            var actualCustomerInfo = CustomerInfoForTesting.FromCustomerInfo(customerService.GetDownlineInfoByUsername(username, 0));
+            // Act 
+            var actualCustomerInfo = customerService.GetDownlineInfoByUsername(username, 0);
 
             // Assert
-            Assert.AreEqual(expectedCustomerInfo, actualCustomerInfo);
+            Assert.AreEqual(
+                CustomerInfoForTesting.FromCustomerInfo(expectedCustomerInfo),
+                CustomerInfoForTesting.FromCustomerInfo(actualCustomerInfo));
         }
 
         [Test]
@@ -49,7 +51,7 @@
                 UplineId = 0
             };
 
-            var expectedCustomerInfo = CustomerInfoForTesting.FromCustomerInfo(new CustomerInfo(ValidCustId, true));
+            var expectedCustomerInfo = new CustomerInfo(ValidCustId, true);
 
             dynamicRepository.When(d => d.Execute(Arg.Is<GetCustInfoByUsernameCommand>(x => x.Username == criteria.Username && x.CustId == criteria.CustId)))
                 .Do(c =>
@@ -59,11 +61,13 @@
                     custInfo.IsSubAcc = true;
                 });
 
-            // Action 
-            var actualCustomerInfo = CustomerInfoForTesting.FromCustomerInfo(customerService.GetDownlineInfoByUsername(ValidUsername, 0));
+            // Act 
+            var actualCustomerInfo = customerService.GetDownlineInfoByUsername(ValidUsername, 0);
 
             // Assert
-            Assert.AreEqual(expectedCustomerInfo, actualCustomerInfo);
+            Assert.AreEqual(
+                CustomerInfoForTesting.FromCustomerInfo(expectedCustomerInfo),
+                CustomerInfoForTesting.FromCustomerInfo(actualCustomerInfo));
         }
     }
 }

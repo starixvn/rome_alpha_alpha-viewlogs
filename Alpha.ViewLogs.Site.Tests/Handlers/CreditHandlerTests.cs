@@ -36,7 +36,7 @@
             // Arrange
             IndexQuery indexQuery = null;
 
-            // Action & Assert
+            // Act & Assert
             Assert.Throws<NullReferenceException>(new TestDelegate(() => creditHandler.Handle(indexQuery)));
         }
 
@@ -58,7 +58,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Action
+            // Act 
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -84,19 +84,19 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Action
+            // Act 
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
             LogService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.FromDate == yesterday && logParam.ToDate == toDate));
         }
 
-        [TestCase("2016-10-09", "2016-10-09")]
-        [TestCase("2016-10-08", "2016-10-09")]
-        [TestCase("2016-10-01", "2016-10-09")]
-        [TestCase("2016-10-31", "2016-10-09")]
-        [TestCase("2016-10-01", "2016-10-01")]
-        [TestCase("2016-10-31", "2016-10-31")]
+        [TestCase("2016-10-09", "2016-10-09")] // today-today
+        [TestCase("2016-10-08", "2016-10-09")] // yesterday-today
+        [TestCase("2016-10-01", "2016-10-09")] // beginOfMonth-today
+        [TestCase("2016-10-31", "2016-10-09")] // endOfMonth-today
+        [TestCase("2016-10-01", "2016-10-01")] // beginOfMonth-beginOfMonth
+        [TestCase("2016-10-31", "2016-10-31")] // endOfMonth-endOfMonth
         public void HandleIndexQuery_HasFromToDate_GetsPagingLogsWithFromAnToDateRange(string fromDateString, string toDateString)
         {
             // Arrange
@@ -117,7 +117,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Action
+            // Act 
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -145,7 +145,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Action
+            // Act 
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -175,7 +175,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Action
+            // Act 
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -204,18 +204,18 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Action
+            // Act 
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
             LogService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.PageIndex == expectedPageIndex));
         }
 
-        [TestCase("1/1/0001", "01/01/0001")]
-        [TestCase("1/1/2014", "01/01/2014")]
-        [TestCase("1/1/2015", "01/01/2015")]
-        [TestCase("10/1/2016", "10/01/2016")]
-        [TestCase("10/1/2017", "10/01/2017")]
+        [TestCase("1/1/0001", "01/01/0001")] // MinDateTime-MinDateTime
+        [TestCase("1/1/2014", "01/01/2014")] // LessThanMinSupportedDate-LessThanMinSupportedDate
+        [TestCase("1/1/2015", "01/01/2015")] // BeginOfSupportedDate-BeginOfSupportedDate
+        [TestCase("10/1/2016", "10/01/2016")] // today-today
+        [TestCase("10/1/2017", "10/01/2017")] // GreaterThanToday-GreaterThanToday
         public void HandleIndexQuery_HasLogsAndNotHideAnyLog_ReturnsLogViewModel(
             string fromDate,
             string toDate)
@@ -259,18 +259,20 @@
             var validLogItemViewModels = ValidLogItemViewModels();
             expectedLogViewModelForTesting.LogItems = new List<LogItemViewModel>() { validLogItemViewModels[0], validLogItemViewModels[1] };
 
-            // Action
-            var actualLogViewModel = LogViewModelForTesting.FromLogViewModel(creditHandler.Handle(indexQuery), logParam, pagingLogs.TotalRecords, MicroSites);
+            // Act 
+            var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
-            Assert.AreEqual(expectedLogViewModelForTesting, actualLogViewModel);
+            Assert.AreEqual(
+                expectedLogViewModelForTesting,
+                LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites));
         }
 
-        [TestCase("1/1/0001", "01/01/0001")]
-        [TestCase("1/1/2014", "01/01/2014")]
-        [TestCase("1/1/2015", "01/01/2015")]
-        [TestCase("10/1/2016", "10/01/2016")]
-        [TestCase("10/1/2017", "10/01/2017")]
+        [TestCase("1/1/0001", "01/01/0001")] // MinDateTime-MinDateTime
+        [TestCase("1/1/2014", "01/01/2014")] // LessThanMinSupportedDate-LessThanMinSupportedDate
+        [TestCase("1/1/2015", "01/01/2015")] // BeginOfSupportedDate-BeginOfSupportedDate
+        [TestCase("10/1/2016", "10/01/2016")] // today-today
+        [TestCase("10/1/2017", "10/01/2017")] // GreaterThanToday-GreaterThanToday
         public void HandleIndexQuery_HasLogsAndHideOneLog_ReturnsLogViewModel(
             string fromDate,
             string toDate)
@@ -314,11 +316,13 @@
             var validLogItemViewModels = ValidLogItemViewModels();
             expectedLogViewModelForTesting.LogItems = new List<LogItemViewModel>() { validLogItemViewModels[1] };
 
-            // Action
-            var actualLogViewModel = LogViewModelForTesting.FromLogViewModel(creditHandler.Handle(indexQuery), logParam, pagingLogs.TotalRecords, MicroSites);
+            // Act 
+            var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
-            Assert.AreEqual(expectedLogViewModelForTesting, actualLogViewModel);
+            Assert.AreEqual(
+                expectedLogViewModelForTesting,
+                LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites));
         }
 
         private List<LogItemViewModel> ValidLogItemViewModels()

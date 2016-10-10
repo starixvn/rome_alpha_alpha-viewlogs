@@ -43,7 +43,7 @@
             var inputDateTime = new DateTime(year, month, day, hour, minute, second);
             var expectedDateTime = new DateTime(year, month, day, 0, 0, 0);
 
-            // Action
+            // Act 
             var actualDateTime = DateTimeHelper.GetBeginningOfDate(inputDateTime);
 
             // Assert
@@ -67,7 +67,7 @@
             var inputDateTime = new DateTime(year, month, day, hour, minute, second);
             var expectedDateTime = new DateTime(year, month, day, 23, 59, 59);
 
-            // Action
+            // Act 
             var actualDateTime = DateTimeHelper.GetEndingOfDate(inputDateTime);
 
             // Assert
@@ -91,7 +91,7 @@
             // Arrange
             var inputDateTime = new DateTime(year, month, day, hour, minute, second);
 
-            // Action
+            // Act 
             var actualDateTime = DateTimeHelper.ToLongDateWithSlash(inputDateTime);
 
             // Assert
@@ -115,7 +115,7 @@
             // Arrange
             var inputDateTime = new DateTime(year, month, day, hour, minute, second);
 
-            // Action
+            // Act 
             var actualDateTime = DateTimeHelper.ToHtmlLongDateWithSlash(inputDateTime);
 
             // Assert
@@ -135,7 +135,7 @@
             Thread.CurrentThread.CurrentCulture = new CultureInfo(cultureName);
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
 
-            // Action
+            // Act 
             var actualDaysInWeek = DateTimeHelper.DaysInWeek();
 
             // Assert

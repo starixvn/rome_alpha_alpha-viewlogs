@@ -45,7 +45,7 @@
             // Arrange
             TransformParam transformParam = null;
 
-            // Action
+            // Act 
             var actualTrackingValue = transformService.TransformTrackingValue(Arg.Any<string>(), logActionId, transformParam);
 
             // Assert
@@ -60,7 +60,7 @@
             // Arrange
             TransformParam transformParam = new TransformParam();
 
-            // Action
+            // Act 
             var actualTrackingValue = transformService.TransformTrackingValue(Arg.Any<string>(), logActionId, transformParam);
 
             // Assert
@@ -73,7 +73,7 @@
             // Arrange
             TransformParam transformParam = new TransformParam();
 
-            // Action
+            // Act 
             var actualTrackingValue = transformService.TransformTrackingValue(Arg.Any<string>(), InvalidActionId, transformParam);
 
             // Assert
@@ -102,7 +102,7 @@
 
             cacheForTesting.TryGet($"Alpha.ViewLogs.TransformObject_{actionId}", out compiledTransformInCache).Returns(false);
 
-            // Action
+            // Act 
             var actualTrackingValue = transformService.TransformTrackingValue(trackingValue, actionId, transformParam);
 
             // Assert
@@ -128,7 +128,7 @@
 
             cacheForTesting.TryGet($"Alpha.ViewLogs.TransformObject_{actionId}", out compiledTransformInCache).Returns(false);
 
-            // Action & Assert
+            // Act & Assert
             Assert.Throws<XmlException>(new TestDelegate(() => transformService.TransformTrackingValue(trackingValue, actionId, transformParam)));
         }
 
@@ -150,7 +150,7 @@
 
             cacheForTesting.TryGet($"Alpha.ViewLogs.TransformObject_{actionId}", out compiledTransformInCache).Returns(false);
 
-            // Action
+            // Act 
             var actualTrackingValue = transformService.TransformTrackingValue(trackingValue, actionId, transformParam);
 
             // Assert
@@ -190,7 +190,7 @@
 
             cacheForTesting.TryGet($"Alpha.ViewLogs.TransformObject_{actionId}", out compiledTransformInCache).Returns(false);
 
-            // Action
+            // Act 
             var actualTrackingValue = transformService.TransformTrackingValue(trackingValue, actionId, transformParam);
 
             // Assert
@@ -227,7 +227,7 @@
                     return true;
                 });
 
-            // Action
+            // Act 
             var actualTrackingValue = transformService.TransformTrackingValue(trackingValue, actionId, transformParam);
 
             // Assert
