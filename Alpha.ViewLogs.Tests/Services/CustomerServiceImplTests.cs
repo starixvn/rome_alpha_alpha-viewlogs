@@ -11,7 +11,7 @@
     [TestFixture]
     public class CustomerServiceImplTests
     {
-        private const string ValidUsername = "validUsername";
+        private const string ValidUsername = "ValidUsername";
         private const int ValidCustId = 1;
 
         private IDynamicRepository dynamicRepository;

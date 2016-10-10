@@ -216,7 +216,7 @@
         [TestCase("1/1/2015", "01/01/2015")]
         [TestCase("10/1/2016", "10/01/2016")]
         [TestCase("10/1/2017", "10/01/2017")]
-        public void HandleIndexQuery_HasLogsAndNotHideAnyLog_GetsPagingLogsWithInputPageSize(
+        public void HandleIndexQuery_HasLogsAndNotHideAnyLog_ReturnsLogViewModel(
             string fromDate,
             string toDate)
         {
@@ -271,7 +271,7 @@
         [TestCase("1/1/2015", "01/01/2015")]
         [TestCase("10/1/2016", "10/01/2016")]
         [TestCase("10/1/2017", "10/01/2017")]
-        public void HandleIndexQuery_HasLogsAndHideOneLog_GetsPagingLogsWithInputPageSize(
+        public void HandleIndexQuery_HasLogsAndHideOneLog_ReturnsLogViewModel(
             string fromDate,
             string toDate)
         {

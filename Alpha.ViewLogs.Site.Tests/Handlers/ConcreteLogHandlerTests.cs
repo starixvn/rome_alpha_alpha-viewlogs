@@ -11,8 +11,8 @@
     public class ConcreteLogHandlerTests
     {
         protected const string InvalidPageIndex = "invalidPageIndex";
-        protected const string ValidLogActionName = "validLogActionName";
-        protected const string ValidIP = "validIP";
+        protected const string ValidLogActionName = "ValidLogActionName";
+        protected const string ValidIP = "ValidIP";
         protected const byte ValidRoleId = 4;
 
         protected LogService LogService { get; set; }

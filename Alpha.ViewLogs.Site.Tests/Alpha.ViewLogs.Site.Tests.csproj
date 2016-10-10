@@ -73,6 +73,7 @@
     <Compile Include="Handlers\SettingHandlerTests.cs" />
     <Compile Include="Handlers\StatusHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModelsForTesting\Login\LoginLogItemViewModelForTesting.cs" />
     <Compile Include="ViewModelsForTesting\LogItemViewModelForTesting.cs" />
     <Compile Include="ViewModelsForTesting\LogViewModelForTesting.cs" />
   </ItemGroup>

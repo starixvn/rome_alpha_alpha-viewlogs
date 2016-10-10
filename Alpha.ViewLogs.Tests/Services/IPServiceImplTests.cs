@@ -14,7 +14,7 @@
     public class IPServiceImplTests
     {
         private const string VietnamIPListCacheKey = "Alpha.ViewLogs.VietnamIPList";
-        private const string ValidCountry = "validCountry";
+        private const string ValidCountry = "ValidCountry";
 
         private IUserSession userSession;
         private IDynamicRepository dynamicRepository;

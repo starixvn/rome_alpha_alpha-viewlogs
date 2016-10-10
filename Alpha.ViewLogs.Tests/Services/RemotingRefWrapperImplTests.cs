@@ -10,9 +10,9 @@
     [TestFixture]
     public class RemotingRefWrapperImplTests
     {
-        private const string ValidBetTypeName = "validBetTypeName";
-        private const string ValidSportName = "validSportName";
-        private const string ValidProductName = "validProductName";
+        private const string ValidBetTypeName = "ValidBetTypeName";
+        private const string ValidSportName = "ValidSportName";
+        private const string ValidProductName = "ValidProductName";
         private const int ValidBetId = 12;
 
         private RemotingRefWrapperImpl remotingRefWrapper;

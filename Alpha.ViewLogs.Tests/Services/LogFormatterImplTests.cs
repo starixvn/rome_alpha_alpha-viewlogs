@@ -16,10 +16,10 @@
     [TestFixture]
     public class LogFormatterImplTests
     {
-        private const string ValidCountry = "validCountry";
+        private const string ValidCountry = "ValidCountry";
 
-        private const string ValidResourceKey = "validKey";
-        private const string LowerCaseValidResourceKey = "validkey";
+        private const string ValidResourceKey = "ValidKey";
+        private const string LowerCaseValidResourceKey = "Validkey";
         private const string InvalidResourceKey = "invalidKey";
 
         private IPService ipService;
@@ -41,12 +41,12 @@
             logFormatter.Init(null);
 
             sportBetTypeVisibilities = new Dictionary<string, bool>();
-            sportBetTypeVisibilities.Add("validKey", true);
+            sportBetTypeVisibilities.Add("ValidKey", true);
 
             var resourceManager = Substitute.For<ResourceManager>();
             logFormatter.ResourceManager = resourceManager;
 
-            resourceManager.GetString(Arg.Is<string>(s => string.Equals(s, ValidResourceKey, StringComparison.OrdinalIgnoreCase))).Returns("validResource");
+            resourceManager.GetString(Arg.Is<string>(s => string.Equals(s, ValidResourceKey, StringComparison.OrdinalIgnoreCase))).Returns("ValidResource");
             resourceManager.GetString(Arg.Is<string>(s => string.Equals(s, InvalidResourceKey, StringComparison.OrdinalIgnoreCase))).Returns((string)null);
         }
 
@@ -84,7 +84,7 @@
         public void FormatIP_AnyIP_ReturnsValueFromIPService(string ip)
         {
             // Arrange
-            var expectedIP = "validFormattedIP";
+            var expectedIP = "ValidFormattedIP";
             ipService.FormatIP(ip).Returns(expectedIP);
 
             // Action
@@ -139,7 +139,7 @@
             Assert.AreEqual(expectedCountry, actualCountry);
         }
 
-        [TestCase("validKey", true)]
+        [TestCase("ValidKey", true)]
         [TestCase("invalidKey", false)]
         public void IsVisible_AnyKey_ReturnsCorrectIsVisible(string key, bool expectedIsVisible)
         {
@@ -156,8 +156,8 @@
             Assert.AreEqual(expectedIsVisible, actualIsVisible);
         }
 
-        [TestCase(ValidResourceKey, "validResource")]
-        [TestCase(LowerCaseValidResourceKey, "validResource")]
+        [TestCase(ValidResourceKey, "ValidResource")]
+        [TestCase(LowerCaseValidResourceKey, "ValidResource")]
         [TestCase(InvalidResourceKey, "")]
         public void GetLogResource_AnyResourceKey_ReturnsCorrectResource(string key, string expectedResource)
         {
@@ -176,7 +176,7 @@
         public void GetBetTypeName_AnyBetType_ReturnsBetTypeNameFromCacheRef(int betType)
         {
             // Arrange
-            var expectedBetTypeName = "validBetTypeName";
+            var expectedBetTypeName = "ValidBetTypeName";
             remotingRef.GetBetType(betType).Returns(expectedBetTypeName);
 
             // Action
@@ -208,7 +208,7 @@
         public void GetSportName_AnySportType_ReturnsSportTypeNameFromCacheRef(int sportType)
         {
             // Arrange
-            var expectedSportTypeName = "validSportTypeName";
+            var expectedSportTypeName = "ValidSportTypeName";
             remotingRef.GetSportName(sportType).Returns(expectedSportTypeName);
 
             // Action
@@ -226,7 +226,7 @@
         public void GetProductName_AnyProductId_ReturnsProductNameFromCacheRef(int productId)
         {
             // Arrange
-            var expectedProductName = "validProductName";
+            var expectedProductName = "ValidProductName";
             remotingRef.GetProductName(productId).Returns(expectedProductName);
 
             // Action
@@ -476,8 +476,8 @@
         [TestCase("")]
         [TestCase(" ")]
         [TestCase("  ")]
-        [TestCase("validMessage")]
-        [TestCase("valid message with space")]
+        [TestCase("ValidMessage")]
+        [TestCase("Valid message with space")]
         public void FormatErrMsg_NotNoInfoMessage_ReturnsInputMessage(string message)
         {
             // Arrange
@@ -671,14 +671,14 @@
             Assert.IsEmpty(actualCustStatus);
         }
 
-        [TestCase("validStatus")]
+        [TestCase("ValidStatus")]
         public void RenderCustStatus_ResourcesByBetTypeCacheRef_ReturnsCorrectStatus(string name)
         {
             // Arrange
             var statusValue = "anyValue";
 
             var validBetType = 1;
-            var validBetTypeName = "validBetTypeName";
+            var validBetTypeName = "ValidBetTypeName";
             var resourcesByBetTypeCacheRef = new Dictionary<string, int>();
             resourcesByBetTypeCacheRef.Add(name.ToLower(), validBetType);
 
@@ -698,8 +698,8 @@
             Assert.AreEqual(expectedCustStatus, actualCustStatus);
         }
 
-        [TestCase("validStatus", true, "<tr><td colspan=\"3\" class=\"colW1\">validStatusName</td><td colspan=\"3\" class=\"colW2\">anyValue</td></tr>")]
-        [TestCase("validStatus", false, "")]
+        [TestCase("ValidStatus", true, "<tr><td colspan=\"3\" class=\"colW1\">validStatusName</td><td colspan=\"3\" class=\"colW2\">anyValue</td></tr>")]
+        [TestCase("ValidStatus", false, "")]
         public void RenderCustStatus_HasConfigResourcesByBetTypeCacheRefAndUseResourceFromCode_ReturnsCorrectStatus(
             string name,
             bool isVisible,
@@ -715,7 +715,7 @@
             var custStatuses = new Dictionary<string, bool>();
             custStatuses.Add(name.ToLower(), isVisible);
 
-            var validStatusName = "validStatusName";
+            var validStatusName = "ValidStatusName";
             logFormatter.ResourceManager.GetString(name).Returns(validStatusName);
 
             logFormatter.Init(new TransformParam
@@ -731,8 +731,8 @@
             Assert.AreEqual(expectedCustStatus, actualCustStatus);
         }
 
-        [TestCase("validStatus", true, "<tr><td colspan=\"3\" class=\"colW1\">validStatusName</td><td colspan=\"3\" class=\"colW2\">anyValue</td></tr>")]
-        [TestCase("validStatus", false, "")]
+        [TestCase("ValidStatus", true, "<tr><td colspan=\"3\" class=\"colW1\">validStatusName</td><td colspan=\"3\" class=\"colW2\">anyValue</td></tr>")]
+        [TestCase("ValidStatus", false, "")]
         public void RenderCustStatus_NotConfigResourcesByBetTypeCacheRefAndUseResourceFromCode_ReturnsCorrectStatus(
             string name,
             bool isVisible,
@@ -744,7 +744,7 @@
             var custStatuses = new Dictionary<string, bool>();
             custStatuses.Add(name.ToLower(), isVisible);
 
-            var validStatusName = "validStatusName";
+            var validStatusName = "ValidStatusName";
             logFormatter.ResourceManager.GetString(name).Returns(validStatusName);
 
             logFormatter.Init(new TransformParam
