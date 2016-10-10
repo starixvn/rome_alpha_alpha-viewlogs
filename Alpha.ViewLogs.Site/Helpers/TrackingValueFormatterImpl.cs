@@ -47,6 +47,11 @@
             XmlAttributeCollection oldAttributes,
             bool isShowOldValue)
         {
+            if (newAttributes == null)
+            {
+                return;
+            }
+
             var ignoreFormatAttributes = new string[] { "ip", "loginip", "stakelevel1" };
 
             foreach (XmlAttribute newAttribute in newAttributes)

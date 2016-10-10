@@ -1,8 +1,8 @@
 ﻿namespace Alpha.ViewLogs.Site.Tests.ViewModelsForTesting.Login
 {
     using System.Linq;
-    using Helpers;
     using Params;
+    using Site.Helpers;
     using ViewModels;
 
     public class LoginLogViewModelForTesting : LogViewModelForTesting

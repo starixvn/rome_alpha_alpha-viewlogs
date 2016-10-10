@@ -374,6 +374,7 @@
             indexQuery.Username = "Username";
             indexQuery.PreviousUsername = "PreviousUsername";
             indexQuery.RoleId = roleId;
+            indexQuery.IsAgentViewing = false;
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 

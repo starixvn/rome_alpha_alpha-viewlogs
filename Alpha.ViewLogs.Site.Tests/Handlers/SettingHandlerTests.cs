@@ -2,9 +2,12 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
+    using System.Globalization;
+    using System.Linq;
+    using System.Threading;
     using Constants;
     using Fanex.Common;
-    using Helpers;
     using Models;
     using NSubstitute;
     using NUnit.Framework;
@@ -12,12 +15,15 @@
     using Requests.Setting;
     using Services;
     using Site.Handlers;
+    using Site.Helpers;
     using ViewModels;
     using ViewModelsForTesting;
 
     [TestFixture]
     public class SettingHandlerTests : ConcreteLogHandlerTests
     {
+        protected const string ValidLogActionTypeName = "ValidLogActionTypeName";
+
         private TransformService transformService;
         private TrackingValueFormatter trackingValueFormatter;
         private SettingHandler settingHandler;
@@ -384,6 +390,82 @@
             Assert.AreEqual(
                 expectedLogViewModelForTesting,
                 LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites));
+        }
+
+        [TestCase(LanguageCode.English)]
+        [TestCase(LanguageCode.ChineseTraditional)]
+        [TestCase(LanguageCode.ChineseSimplified)]
+        [TestCase(LanguageCode.Japanese)]
+        [TestCase(LanguageCode.Thai)]
+        [TestCase(LanguageCode.Korean)]
+        [TestCase(LanguageCode.Vietnamese)]
+        [TestCase("")]
+        [SuppressMessage("StyleCop.CSharp.StylecopPlus.Rules", "SP2101:MethodMustNotContainMoreLinesThan", Justification = "Reviewed. Suppression is OK here.")]
+        public void HandleIndexQuery_HasTodayLogsByLanguage_ReturnsCorrectLogActionTypeViewModel(string language)
+        {
+            // Arrange
+            var today = "10/1/2016";
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(language);
+            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
+
+            CurrentUserSession.RoleId.Returns(ValidRoleId);
+            var indexQuery = new IndexQuery(
+                CurrentUserSession,
+                DateTimeWrapper,
+                true,
+                new Dictionary<int, bool>(),
+                CustStatuses,
+                ResourcesByBetTypeCacheRef,
+                false);
+
+            indexQuery.PageIndex = string.Empty;
+            indexQuery.PageSize = DefaultVariables.PageSize.ToString();
+            indexQuery.FromDate = today;
+            indexQuery.ToDate = today;
+            indexQuery.Language = language;
+
+            var pagingLogs = new PagingLogs<Log>
+            {
+                TotalRecords = 2,
+                Logs = new List<Log>
+                {
+                    new Log() { ActionId = 1, LogId = 1 }
+                }
+            };
+
+            var logParam = GetLogParam(indexQuery);
+
+            LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
+            LogService.GetLogActionTypes().Returns(new List<LogActionType>()
+            {
+                new LogActionType
+                {
+                    Id = 1,
+                    ChineseTraditionalName = ValidLogActionTypeName,
+                    ChineseSimplifiedName = ValidLogActionTypeName,
+                    EnglishName = ValidLogActionTypeName,
+                    VietnameseName = ValidLogActionTypeName,
+                    JapaneseName = ValidLogActionTypeName,
+                    KoreanName = ValidLogActionTypeName,
+                    ThaiName = ValidLogActionTypeName
+                },
+                null
+            });
+
+            var expectedLogActionTypeViewModels = new List<LogActionTypeViewModel>()
+            {
+                new LogActionTypeViewModel(-1, "All Types"),
+                new LogActionTypeViewModel(1, ValidLogActionTypeName),
+                new LogActionTypeViewModel(0, null),
+            };
+
+            // Act 
+            var actualLogActionTypes = settingHandler.Handle(indexQuery).LogActionTypes;
+
+            // Assert
+            Assert.AreEqual(
+                expectedLogActionTypeViewModels.Select(actionType => LogActionTypeViewModelForTesting.FromLogActionTypeViewModel(actionType)),
+                actualLogActionTypes.Select(actionType => LogActionTypeViewModelForTesting.FromLogActionTypeViewModel(actionType)));
         }
 
         private List<LogItemViewModel> ValidLogItemViewModels()

@@ -256,7 +256,7 @@
         [TestCase("<div>")]
         [TestCase("</div>")]
         [TestCase("<div></tag>")]
-        [TestCase("<div>abc</tag>")]
+        [TestCase("<div>content</tag>")]
         public void TransferConditionFromCode_InvalidXMLFormatDayCodesWithDiff_ThrowsXmlException(string dayCodesWithDiff)
         {
             // Act & Assert

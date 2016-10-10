@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using Fanex.Common;
-    using Helpers;
     using Models;
     using NSubstitute;
     using NUnit.Framework;
@@ -11,9 +10,7 @@
     using Requests.Credit;
     using Services;
     using Site.Handlers;
-    using Sunplus.Agent.Model.Entities;
     using ViewLogs.Constants;
-    using ViewLogs.Helpers;
     using ViewModels;
     using ViewModelsForTesting;
 

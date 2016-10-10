@@ -2,8 +2,8 @@
 {
     using System.Linq;
     using System.Text;
-    using Helpers;
     using Params;
+    using Site.Helpers;
     using ViewModels;
 
     public class LogViewModelForTesting : LogViewModel

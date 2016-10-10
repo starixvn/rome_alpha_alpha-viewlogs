@@ -68,12 +68,16 @@
   <ItemGroup>
     <Compile Include="Constants\ActionType.cs" />
     <Compile Include="Constants\DefaultVariables.cs" />
+    <Compile Include="Constants\LanguageCode.cs" />
     <Compile Include="Handlers\ConcreteLogHandlerTests.cs" />
     <Compile Include="Handlers\CreditHandlerTests.cs" />
     <Compile Include="Handlers\LoginHandlerTests.cs" />
     <Compile Include="Handlers\SettingHandlerTests.cs" />
     <Compile Include="Handlers\StatusHandlerTests.cs" />
+    <Compile Include="Helpers\AppPathHelperTests.cs" />
+    <Compile Include="Helpers\TrackingValueFormatterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModelsForTesting\LogActionTypeViewModelForTesting.cs" />
     <Compile Include="ViewModelsForTesting\Login\LoginLogItemViewModelForTesting.cs" />
     <Compile Include="ViewModelsForTesting\Login\LoginLogViewModelForTesting.cs" />
     <Compile Include="ViewModelsForTesting\LogItemViewModelForTesting.cs" />
@@ -83,9 +87,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Alpha.ViewLogs.Site\Alpha.ViewLogs.Site.csproj">
       <Project>{69690E23-A8B5-4D96-8EBE-907A9FC1CA3E}</Project>

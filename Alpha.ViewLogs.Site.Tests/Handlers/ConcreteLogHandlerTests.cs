@@ -5,6 +5,7 @@
     using Helpers;
     using NSubstitute;
     using Services;
+    using Site.Helpers;
     using Sunplus.Agent.Model.Entities;
     using ViewLogs.Helpers;
 

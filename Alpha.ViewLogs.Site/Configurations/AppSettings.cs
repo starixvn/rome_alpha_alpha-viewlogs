@@ -3,17 +3,14 @@
     using System.Collections.Generic;
     using System.Configuration;
     using System.Linq;
-    using AppResources;
 
     public static class AppSettings
     {
         private static readonly object LockObjectStatusMappings = new object();
         private static readonly object LockObjectResourcesByBetTypeCacheRef = new object();
-        private static readonly object LockObjectSites = new object();
 
         private static Dictionary<string, int> statusMappings;
         private static Dictionary<string, int> resourcesByBetTypeCacheRef;
-        private static IEnumerable<string> sites;
 
         private static IEnumerable<int> actionIdsRacing15131;
         private static IEnumerable<int> actionIdsRacing15141;
@@ -164,19 +161,6 @@
             }
         }
 
-        public static IEnumerable<string> Sites
-        {
-            get
-            {
-                if (sites == null)
-                {
-                    InitSites();
-                }
-
-                return sites;
-            }
-        }
-
         public static string StoreProcedurePath
         {
             get
@@ -257,25 +241,6 @@
                                 resourcesByBetTypeCacheRef.Add(keyValue[0].ToLower(), int.Parse(keyValue[1]));
                             }
                         });
-                }
-            }
-        }
-
-        private static void InitSites()
-        {
-            lock (LockObjectSites)
-            {
-                if (sites == null)
-                {
-                    sites = new List<string>();
-                    var sitesSetting = GetConfigValue("ViewLogs:Sites");
-
-                    if (string.IsNullOrWhiteSpace(sitesSetting))
-                    {
-                        return;
-                    }
-
-                    sites = sitesSetting.Split(',').ToList();
                 }
             }
         }
