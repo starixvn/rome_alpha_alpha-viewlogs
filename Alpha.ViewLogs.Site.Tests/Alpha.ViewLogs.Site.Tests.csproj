@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\ActionType.cs" />
     <Compile Include="Constants\DefaultVariables.cs" />
     <Compile Include="Handlers\ConcreteLogHandlerTests.cs" />
     <Compile Include="Handlers\CreditHandlerTests.cs" />
