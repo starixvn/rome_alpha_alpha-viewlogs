@@ -9,10 +9,10 @@
             IsManual = isManual;
         }
 
-        public long From { get; private set; }
+        public long From { get; }
 
-        public long To { get; private set; }
+        public long To { get; }
 
-        public bool IsManual { get; private set; }
+        public bool IsManual { get; }
     }
 }

@@ -1,12 +1,12 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
     using System.Collections.Generic;
-    using Criteria;
     using Fanex.Caching;
     using Fanex.Data.Repository;
     using NSubstitute;
     using NUnit.Framework;
     using Sunplus.Agent.Model.Entities;
+    using ViewLogs.Criteria;
     using ViewLogs.Models;
     using ViewLogs.Services.Impl;
 

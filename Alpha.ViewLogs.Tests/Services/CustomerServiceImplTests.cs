@@ -1,11 +1,11 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
-    using Criteria;
     using Fanex.Data.Repository;
-    using Models;
     using ModelsForTesting;
     using NSubstitute;
     using NUnit.Framework;
+    using ViewLogs.Criteria;
+    using ViewLogs.Models;
     using ViewLogs.Services.Impl;
 
     [TestFixture]

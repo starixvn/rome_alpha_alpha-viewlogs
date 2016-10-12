@@ -25,21 +25,21 @@
         }
 
         [SpParam(SqlParamName = "UserId")]
-        public int CustId { get; private set; }
+        public int CustId { get; }
 
         [SpParam(SqlParamName = "UserName")]
-        public string CustName { get; private set; }
+        public string CustName { get; }
 
-        public DateTime FromDate { get; private set; }
+        public DateTime FromDate { get; }
 
-        public DateTime ToDate { get; private set; }
+        public DateTime ToDate { get; }
 
         [SpParam(SqlParamName = "IsAdminAccess")]
-        public bool IsInternal { get; private set; }
+        public bool IsInternal { get; }
 
-        public int PageIndex { get; private set; }
+        public int PageIndex { get; }
 
-        public int PageSize { get; private set; }
+        public int PageSize { get; }
 
         public override string GetSettingKey()
         {

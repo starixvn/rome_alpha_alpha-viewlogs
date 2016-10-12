@@ -110,7 +110,7 @@
             }
         }
 
-        public bool IsShowMyanmarOdds { get; private set; }
+        public bool IsShowMyanmarOdds { get; }
 
         public DateTime MaxReportDate
         {

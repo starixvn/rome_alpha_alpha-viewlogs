@@ -1,9 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services.Logs
 {
     using System;
-    using Criteria.Setting;
     using Fanex.Data.Repository;
     using Params;
+    using ViewLogs.Criteria.Setting;
     using ViewLogs.DataAccesses;
     using ViewLogs.Services;
     using ViewLogs.Services.Impl;

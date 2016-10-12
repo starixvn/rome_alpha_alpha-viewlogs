@@ -19,14 +19,14 @@
         }
 
         [SpParam(SqlParamName = "UserId")]
-        public int CustId { get; private set; }
+        public int CustId { get; }
 
-        public DateTime FromDate { get; private set; }
+        public DateTime FromDate { get; }
 
-        public DateTime ToDate { get; private set; }
+        public DateTime ToDate { get; }
 
         [SpParam(SqlParamName = "IsAdminAccess")]
-        public bool IsInternal { get; private set; }
+        public bool IsInternal { get; }
 
         public override string GetSettingKey()
         {

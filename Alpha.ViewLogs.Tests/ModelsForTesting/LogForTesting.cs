@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Tests.ModelsForTesting
 {
     using System.Text;
-    using Models;
+    using ViewLogs.Models;
 
     public class LogForTesting : Log
     {

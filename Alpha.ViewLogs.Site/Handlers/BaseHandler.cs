@@ -20,11 +20,11 @@
             DateTimeWrapper = dateTimeWrapper;
         }
 
-        public LogFormatter LogFormatter { get; private set; }
+        public LogFormatter LogFormatter { get; }
 
-        public LogService LogService { get; private set; }
+        public LogService LogService { get; }
 
-        public IDateTime DateTimeWrapper { get; private set; }
+        public IDateTime DateTimeWrapper { get; }
 
         protected LogParam CreateLogParam(LogQuery logQuery)
         {

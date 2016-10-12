@@ -8,8 +8,8 @@
             IsSubAcc = isSubAcc;
         }
 
-        public int CustId { get; private set; }
+        public int CustId { get; }
 
-        public bool IsSubAcc { get; private set; }
+        public bool IsSubAcc { get; }
     }
 }

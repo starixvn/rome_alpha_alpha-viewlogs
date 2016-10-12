@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using Models;
+    using ViewLogs.Models;
 
     public class PagingLogsForTesting<LogType> : PagingLogs<LogType> where LogType : Log
     {

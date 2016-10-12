@@ -3,14 +3,13 @@
     using System;
     using System.Collections.Generic;
     using Constants;
-    using DataAccesses;
     using Fanex.Data.Repository;
-    using Models;
     using ModelsForTesting;
     using NSubstitute;
     using NUnit.Framework;
     using Params;
     using ViewLogs.DataAccesses;
+    using ViewLogs.Models;
     using ViewLogs.Services;
     using ViewLogs.Services.Impl;
 

@@ -2,16 +2,15 @@
 {
     using System.Collections.Generic;
     using Constants;
-    using Criteria;
-    using DataAccesses;
     using Fanex.Caching;
     using Fanex.Data.Repository;
-    using Models;
     using ModelsForTesting;
     using NSubstitute;
     using NUnit.Framework;
     using Params;
+    using ViewLogs.Criteria;
     using ViewLogs.DataAccesses;
+    using ViewLogs.Models;
     using ViewLogs.Services;
 
     [TestFixture]

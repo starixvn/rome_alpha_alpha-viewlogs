@@ -2,9 +2,9 @@
 {
     using System.Collections.Generic;
     using Fanex.Data.Repository;
-    using Models;
     using NSubstitute;
     using NUnit.Framework;
+    using ViewLogs.Models;
     using ViewLogs.Services.Impl.Logs;
 
     [TestFixture]
