@@ -2,9 +2,9 @@
 {
     using System;
     using Criteria.Setting;
-    using DataAccesses;
     using Fanex.Data.Repository;
     using Params;
+    using ViewLogs.DataAccesses;
     using ViewLogs.Services;
     using ViewLogs.Services.Impl;
 

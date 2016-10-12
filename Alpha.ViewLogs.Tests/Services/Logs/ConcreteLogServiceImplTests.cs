@@ -10,6 +10,7 @@
     using NSubstitute;
     using NUnit.Framework;
     using Params;
+    using ViewLogs.DataAccesses;
     using ViewLogs.Services;
     using ViewLogs.Services.Impl;
 
