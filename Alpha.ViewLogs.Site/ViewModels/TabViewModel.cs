@@ -2,19 +2,11 @@
 {
     public class TabViewModel
     {
-        private string _selectedTabName;
-
         public TabViewModel(string selectedTabName)
         {
-            _selectedTabName = selectedTabName;
+            SelectedTabName = selectedTabName;
         }
 
-        public string SelectedTabName
-        {
-            get
-            {
-                return _selectedTabName.ToLower();
-            }
-        }
+        public string SelectedTabName { get; }
     }
 }

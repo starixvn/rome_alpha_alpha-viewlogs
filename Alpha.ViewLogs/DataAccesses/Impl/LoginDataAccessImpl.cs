@@ -22,8 +22,8 @@
         public override IEnumerable<Log> GetLogs(ICriteria criteria)
         {
             var logs = new List<Log>();
-            if (criteria == null ||
-                !criteria.IsValid())
+            if (criteria == null
+                || !criteria.IsValid())
             {
                 return logs;
             }

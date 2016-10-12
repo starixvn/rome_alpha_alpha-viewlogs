@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using Criteria.Login;
     using DataAccesses;
-    using DataAccesses.Impl;
     using Fanex.Data.Repository;
     using Helpers;
     using Models;

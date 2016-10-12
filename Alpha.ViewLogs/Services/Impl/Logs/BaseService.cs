@@ -116,7 +116,8 @@
             }
 
             var downlineInfo = customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId);
-            //// If search username is not belong to searcher, then return
+
+            // If search username is not belong to searcher, then return
             if (downlineInfo.CustId == 0)
             {
                 return pagingLogs;

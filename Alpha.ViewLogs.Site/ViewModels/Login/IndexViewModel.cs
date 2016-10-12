@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels.Login
 {
-    using Alpha.ViewLogs.Params;
+    using Params;
 
     public class IndexViewModel : LogViewModel
     {

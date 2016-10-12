@@ -22,9 +22,9 @@
             Name = name;
         }
 
-        public int Id { get; set; }
+        public int Id { get; }
 
-        public string Name { get; set; }
+        public string Name { get; }
 
         private string GetName(LogActionType logActionType, string language)
         {

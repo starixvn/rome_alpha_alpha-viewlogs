@@ -30,9 +30,8 @@
             return new GetStatusLogsCriteria(
                 logParam.CustId,
                 logParam.Username,
-                //// Just get status from action id 1100 => 1199, because it uses same SP with customer setting log
-                ActionIdFrom,
-                ActionIdTo,
+                ActionIdFrom, // Just get status from action id 1100 , because it uses same SP with customer setting log
+                ActionIdTo, // Just get status to action id 1199, because it uses same SP with customer setting log
                 DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),
                 logParam.IsInternal,

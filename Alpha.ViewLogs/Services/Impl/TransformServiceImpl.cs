@@ -39,13 +39,13 @@
                 return string.Empty;
             }
 
-            //// Need be reviewed code here, AssignParams should not in formatter class
+            // Need be reviewed code here, AssignParams should not in formatter class
             logFormatter.Init(transformParam);
 
             var xsltArguments = new XsltArgumentList();
             xsltArguments.AddExtensionObject("urn:LogFormat", logFormatter);
 
-            //// Transform xml must be lower case
+            // Transform xml must be lower case
             using (MemoryStream stream = new MemoryStream(ASCIIEncoding.UTF8.GetBytes(trackingValue.ToLower())))
             {
                 var document = new XPathDocument(stream);
