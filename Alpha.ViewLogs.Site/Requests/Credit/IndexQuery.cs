@@ -1,7 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.Requests.Credit
 {
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using MediatR;
     using Sunplus.Agent.Model.Entities;
     using ViewLogs.Helpers;
@@ -9,7 +8,6 @@
 
     public class IndexQuery : LogQuery, IRequest<LogViewModel>
     {
-        [ExcludeFromCodeCoverage]
         public IndexQuery() : this(null, null, null)
         {
         }

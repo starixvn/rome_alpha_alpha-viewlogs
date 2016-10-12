@@ -79,7 +79,6 @@
     <Compile Include="Models\LogAction.cs" />
     <Compile Include="Models\LoginLog.cs" />
     <Compile Include="Models\PagingLogs.cs" />
-    <Compile Include="Models\SportDisplay.cs" />
     <Compile Include="Params\SettingParam.cs" />
     <Compile Include="Params\LogParam.cs" />
     <Compile Include="Params\TransformParam.cs" />
