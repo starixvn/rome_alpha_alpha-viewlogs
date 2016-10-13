@@ -44,7 +44,7 @@
 
         public override bool IsValid()
         {
-            return FromDate <= ToDate && CustId >= 0;
+            return FromDate <= ToDate && CustId > 0;
         }
     }
 }

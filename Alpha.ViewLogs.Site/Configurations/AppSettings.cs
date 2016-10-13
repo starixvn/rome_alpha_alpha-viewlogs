@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using System.Configuration;
     using System.Linq;
+    using Helpers;
 
     public static class AppSettings
     {
@@ -23,7 +24,7 @@
         {
             get
             {
-                return GetConfigValue("VirtualDirectory");
+                return AppPathHelper.GetAppPath(GetConfigValue("VirtualDirectory"), "~/");
             }
         }
 
