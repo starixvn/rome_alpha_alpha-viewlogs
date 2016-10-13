@@ -1,4 +1,5 @@
 ﻿@using Alpha.ViewLogs.Site.Helpers.StaticResources;
+@using Alpha.ViewLogs.Site.Configurations;
 @model LogViewModel
 <!DOCTYPE html>
 <html>
@@ -23,7 +24,7 @@
     <div class="shadow" id="shadow"></div>
     <div class="output" id="output"></div>
 
-    @Html.Hidden("indexPath", HttpContext.Current.Request.Url.AbsolutePath)
+    @Html.Hidden("indexPath", "/" + AppSettings.VirtualDirectory + ViewContext.RouteData.Values["controller"] + "/index")
     @Html.Hidden("usernameAutoSuggestionPath", Model.UsernameAutoSuggestionPath)
     @Html.Hidden("viewIPInfoPath", Model.ViewIPInfoPath)
 
