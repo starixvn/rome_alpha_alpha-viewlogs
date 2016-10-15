@@ -231,6 +231,9 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1158.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1159.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_392.xslt" />
     <Content Include="assets\bundles\credit.js" />
     <Content Include="assets\bundles\credit.min.js">
       <DependentUpon>credit.js</DependentUpon>
@@ -720,6 +723,7 @@
     </Content>
     <Content Include="Web.ConnectionStrings.napinternal.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.ConnectionStrings.pro.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
