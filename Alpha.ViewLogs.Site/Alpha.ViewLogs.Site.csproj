@@ -731,6 +731,12 @@
     <Content Include="Web.ConnectionStrings.sit.config">
       <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
     </Content>
+    <Content Include="Web.AppSettings.local2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.ConnectionStrings.local2.config">
+      <DependentUpon>Web.ConnectionStrings.config</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -744,6 +750,9 @@
     <Content Include="Web.napinternal.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
+    <None Include="Web.local2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
