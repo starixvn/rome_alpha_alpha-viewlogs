@@ -630,7 +630,9 @@
     <Content Include="Views\Shared\MonthNames.cshtml" />
     <Content Include="Views\Tab\Index.cshtml" />
     <Content Include="Views\Setting\Index.cshtml" />
-    <Content Include="Web.AppSettings.config" />
+    <Content Include="Web.AppSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Status\Index.cshtml" />
     <Content Include="Web.config">
@@ -742,7 +744,9 @@
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\SPNames\SIT\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Alpha.ViewLogs\Alpha.ViewLogs.csproj">
       <Project>{415fe6c8-c743-47c1-b520-bdbe3b1da2bf}</Project>
