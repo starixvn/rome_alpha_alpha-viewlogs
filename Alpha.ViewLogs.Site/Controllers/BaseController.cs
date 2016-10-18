@@ -21,7 +21,7 @@
 
         protected BaseController(IUserSession userSession, MicroSites microSites)
         {
-            this.UserSession = userSession;
+            UserSession = userSession;
             this.microSites = microSites;
         }
 
@@ -31,12 +31,10 @@
         {
             base.OnAuthentication(filterContext);
 
-            if (!filterContext.HttpContext.User.Identity.IsAuthenticated ||
-                UserSession.UserId <= 0)
+            if (!filterContext.HttpContext.User.Identity.IsAuthenticated
+                 || UserSession.UserId <= 0)
             {
-                var logInUrl = FormsAuthentication.LoginUrl;
-                Response.Redirect(logInUrl, true);
-                return;
+                UnAuthentication(filterContext);
             }
 
             if (UserSession.IsSubAcc && !UserSession.SubPageAccess.ViewLog)
@@ -79,6 +77,25 @@
             Thread.CurrentThread.CurrentCulture.NumberFormat = defaultCulture.NumberFormat;
 
             base.Initialize(requestContext);
+        }
+
+        private void UnAuthentication(AuthenticationContext filterContext)
+        {
+            var response = filterContext.HttpContext.Response;
+
+            if (filterContext.HttpContext.Request.IsAjaxRequest())
+            {
+                response.Clear();
+                response.Write("{ \"message\": \"You are not authorized on this function!\" }");
+                filterContext.Result = new HttpUnauthorizedResult();
+                filterContext.Result.ExecuteResult(filterContext.Controller.ControllerContext);
+                response.TrySkipIisCustomErrors = true;
+                response.End();
+            }
+            else
+            {
+                filterContext.Result = new RedirectResult(FormsAuthentication.LoginUrl);
+            }
         }
     }
 }
