@@ -225,6 +225,9 @@
     <Content Include="App_Data\SPNames\Pro\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Pro\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\Pro\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\SIT\DBAGE.bodb02.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\SIT\DBCust.IPDB.xml" />
+    <Content Include="App_Data\SPNames\SIT\DBLOG.bodb_CustomerLog.xml" />
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
@@ -744,9 +747,7 @@
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\SPNames\SIT\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Alpha.ViewLogs\Alpha.ViewLogs.csproj">
       <Project>{415fe6c8-c743-47c1-b520-bdbe3b1da2bf}</Project>
@@ -769,7 +770,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>64593</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
