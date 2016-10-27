@@ -59,6 +59,7 @@
                 ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
 
             var toDate = new DateTime(2016, 10, 1);
@@ -84,6 +85,7 @@
                 ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
 
             var toDate = new DateTime(2016, 10, 2);
@@ -110,6 +112,7 @@
                 ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
 
             var toDate = new DateTime(2016, 10, 2);
@@ -140,6 +143,7 @@
                 ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
             indexQuery.ActionTypeId = actionType.ToString();
 
@@ -177,6 +181,7 @@
                 ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
 
             indexQuery.FromDate = fromDateString;
@@ -206,6 +211,7 @@
                 ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
 
             indexQuery.PageSize = pageSize;
@@ -236,6 +242,7 @@
                 ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
 
             indexQuery.PageSize = pageSize;
@@ -265,6 +272,7 @@
                 ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
 
             indexQuery.PageIndex = pageIndex;
@@ -299,6 +307,7 @@
                 actionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
 
             indexQuery.PageIndex = string.Empty;
@@ -356,6 +365,7 @@
                 actionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
 
             indexQuery.PageIndex = string.Empty;
@@ -416,6 +426,7 @@
                 new Dictionary<int, bool>(),
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                ResourcesByProductCacheRef,
                 false);
 
             indexQuery.PageIndex = string.Empty;

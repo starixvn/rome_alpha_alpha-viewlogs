@@ -19,6 +19,7 @@
             Dictionary<int, bool> actionIdVisibilities = null,
             Dictionary<string, bool> sportBetTypeVisibilities = null,
             Dictionary<string, int> resourcesByBetTypeCacheRef = null,
+            Dictionary<string, int> resourcesByProudctCacheRef = null,
             bool? isShowMyanmarOdds = null) :
             base(
                 currentUserSession,
@@ -27,6 +28,7 @@
                 actionIdVisibilities,
                 sportBetTypeVisibilities,
                 resourcesByBetTypeCacheRef,
+                resourcesByProudctCacheRef,
                 isShowMyanmarOdds)
         {
         }
