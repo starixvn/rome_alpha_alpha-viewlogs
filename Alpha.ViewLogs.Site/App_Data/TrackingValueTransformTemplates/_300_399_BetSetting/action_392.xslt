@@ -26,34 +26,19 @@
         </td>
       </tr>
     </table>
-    <div class="headerSportTypeDetail">
-     <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
-    </div>
+    
     <xsl:for-each select="gamebetlimit">
+      <div class="headerSportTypeDetail">
+        <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" /> - <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />        
+      </div>
       <table  class="tblDesc">
         <tr>
           <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('Sport')" />          
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
-          </td>
-          
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('bettype')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
-          </td>       
-          
-          <td class="colW1">           
             <xsl:value-of select="xslLogFormat:GetLogResource('MinBet')" />
           </td>
           <td  class="colW2">
-            <xsl:value-of select="@minbet" />          
-          </td>                    
-        </tr>
-        <tr>
+            <xsl:value-of select="@minbet" />
+          </td>
           <td class="colW1">
               <xsl:value-of select="xslLogFormat:GetLogResource('MaxBet')" />          
           </td>
@@ -65,10 +50,6 @@
           </td>
           <td class="colW2">
             <xsl:value-of select="@maxpernumber" />          
-          </td>
-          <td class="colW1">
-          </td>
-          <td class="colW2">
           </td>
         </tr>
       </table>
