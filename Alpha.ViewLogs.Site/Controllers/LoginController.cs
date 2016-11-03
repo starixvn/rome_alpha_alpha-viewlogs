@@ -7,7 +7,7 @@
     using Requests.Login;
     using Sunplus.Agent.Model.Entities;
 
-    public class LoginController : BaseController
+    public class LoginController : ViewLogBaseController
     {
         private readonly IMediator mediator;
 

@@ -6,7 +6,7 @@
     using Requests.Credit;
     using Sunplus.Agent.Model.Entities;
 
-    public class CreditController : BaseController
+    public class CreditController : ViewLogBaseController
     {
         private readonly IMediator mediator;
 

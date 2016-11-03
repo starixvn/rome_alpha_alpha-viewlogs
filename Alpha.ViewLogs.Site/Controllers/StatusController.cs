@@ -6,7 +6,7 @@
     using Requests.Status;
     using Sunplus.Agent.Model.Entities;
 
-    public class StatusController : BaseController
+    public class StatusController : ViewLogBaseController
     {
         private const string TemplatePath = "~/App_Data/TrackingValueTransformTemplates";
         private readonly IMediator mediator;
