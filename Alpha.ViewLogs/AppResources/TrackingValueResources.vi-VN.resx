@@ -3561,4 +3561,7 @@
   <data name="isdisableddownline" xml:space="preserve">
     <value>Không cho phép thành viên cấp dưới</value>
   </data>
+  <data name="checkedotp" xml:space="preserve">
+    <value>Checked OTP</value>
+  </data>
 </root>

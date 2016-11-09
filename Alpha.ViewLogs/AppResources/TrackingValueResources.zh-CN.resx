@@ -3792,4 +3792,7 @@
   <data name="isdisableddownline" xml:space="preserve">
     <value>下线被禁用</value>
   </data>
+  <data name="checkedotp" xml:space="preserve">
+    <value>Checked OTP</value>
+  </data>
 </root>
