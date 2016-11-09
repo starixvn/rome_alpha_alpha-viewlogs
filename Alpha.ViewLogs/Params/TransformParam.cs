@@ -10,6 +10,8 @@
 
         public Dictionary<string, bool> CustStatuses { get; set; }
 
+        public Dictionary<string, int> ResourcesProductCacheRef { get; set; }
+
         public Dictionary<string, int> ResourcesByBetTypeCacheRef { get; set; }
 
         public bool IsShowMyanmarOdds { get; set; }

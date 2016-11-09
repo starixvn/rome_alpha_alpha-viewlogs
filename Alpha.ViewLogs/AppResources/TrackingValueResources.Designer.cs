@@ -6478,6 +6478,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Max Per Number.
+        /// </summary>
+        public static string MaxPerNumber {
+            get {
+                return ResourceManager.GetString("MaxPerNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Max PT.
         /// </summary>
         public static string maxPT {

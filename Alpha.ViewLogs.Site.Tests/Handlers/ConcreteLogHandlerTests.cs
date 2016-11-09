@@ -32,6 +32,8 @@
 
         protected Dictionary<string, int> ResourcesByBetTypeCacheRef { get; set; }
 
+        protected Dictionary<string, int> ResourcesByProductCacheRef { get; set; }
+
         public virtual void SetUp()
         {
             LogService = Substitute.For<LogService>();
@@ -50,6 +52,7 @@
             ActionIdVisibilities = new Dictionary<int, bool>();
             CustStatuses = new Dictionary<string, bool>();
             ResourcesByBetTypeCacheRef = new Dictionary<string, int>();
+            ResourcesByProductCacheRef = new Dictionary<string, int>();
 
             LogService.GetLogActionName(Arg.Any<int>(), Arg.Any<string>()).Returns(ValidLogActionName);
             LogFormatter.FormatIP(Arg.Any<string>()).Returns(ValidIP);

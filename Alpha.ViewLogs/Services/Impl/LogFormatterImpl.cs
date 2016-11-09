@@ -17,6 +17,7 @@
 
         private Dictionary<string, bool> custStatuses;
         private Dictionary<string, int> resourcesByBetTypeCacheRef;
+        private Dictionary<string, int> resourcesByProductCacheRef;
 
         private bool isShowMyanmarOdds;
 
@@ -43,6 +44,7 @@
 
             custStatuses = transformParam.CustStatuses;
             resourcesByBetTypeCacheRef = transformParam.ResourcesByBetTypeCacheRef;
+            resourcesByProductCacheRef = transformParam.ResourcesProductCacheRef;
 
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
         }
@@ -216,7 +218,14 @@
             var lowerCaseResourceName = name.ToLower();
 
             var resourceValue = string.Empty;
-            if (resourcesByBetTypeCacheRef != null && resourcesByBetTypeCacheRef.ContainsKey(lowerCaseResourceName))
+            if (custStatuses.ContainsKey(lowerCaseResourceName)
+                && custStatuses[lowerCaseResourceName]
+                && resourcesByProductCacheRef.ContainsKey(lowerCaseResourceName))
+            {
+                resourceValue = $"{TrackingValueResources.disabled} {GetProductName(resourcesByProductCacheRef[lowerCaseResourceName])}";
+            }
+            else if (resourcesByBetTypeCacheRef != null && 
+                resourcesByBetTypeCacheRef.ContainsKey(lowerCaseResourceName))
             {
                 resourceValue = $"{TrackingValueResources.disabled} {GetBetTypeName(resourcesByBetTypeCacheRef[lowerCaseResourceName])}";
             }

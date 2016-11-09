@@ -3414,4 +3414,7 @@
   <data name="subAccID" xml:space="preserve">
     <value>Sub Account ID</value>
   </data>
+  <data name="MaxPerNumber" xml:space="preserve">
+    <value>Max Per Number</value>
+  </data>
 </root>
