@@ -53,12 +53,24 @@
           <td class="colW2">
             <xsl:value-of select="@isdisabled" />
           </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('isdisableddownline')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@isdisableddownline" />
-          </td>
+          
+          <xsl:choose>
+            <xsl:when test="@isdisableddownline">
+              <td class="colW1">
+                <xsl:value-of select="xslLogFormat:GetLogResource('isdisableddownline')" />
+              </td>
+              <td class="colW2">
+                <xsl:value-of select="@isdisableddownline" />
+              </td>
+            </xsl:when>
+            <xsl:otherwise>
+              <td class="colW1">
+              </td>
+              <td class="colW2">
+              </td>
+            </xsl:otherwise>
+          </xsl:choose>
+          
           <td class="colW1">
           </td>
           <td class="colW2">

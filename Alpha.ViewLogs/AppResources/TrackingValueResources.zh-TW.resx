@@ -3757,7 +3757,7 @@
     <value>Player % Odds Discount</value>
   </data>
   <data name="isdisabled" xml:space="preserve">
-    <value>Is Disabled</value>
+    <value>已禁用</value>
   </data>
   <data name="IsLive" xml:space="preserve">
     <value>Is Live</value>
@@ -3788,5 +3788,8 @@
   </data>
   <data name="MaxPerNumber" xml:space="preserve">
     <value>最高數額</value>
+  </data>
+  <data name="isdisableddownline" xml:space="preserve">
+    <value>下線被禁用</value>
   </data>
 </root>
