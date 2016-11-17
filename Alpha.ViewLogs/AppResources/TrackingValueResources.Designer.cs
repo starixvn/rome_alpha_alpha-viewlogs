@@ -6352,6 +6352,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Soccer Parlay-Max Bet.
+        /// </summary>
+        public static string MaxBv1MP {
+            get {
+                return ResourceManager.GetString("MaxBv1MP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basketball-Max Bet.
         /// </summary>
         public static string maxbv2 {
@@ -7257,6 +7266,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string MinBv161 {
             get {
                 return ResourceManager.GetString("MinBv161", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Soccer Parlay-Min Bet.
+        /// </summary>
+        public static string MinBv1MP {
+            get {
+                return ResourceManager.GetString("MinBv1MP", resourceCulture);
             }
         }
         
@@ -8193,6 +8211,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string MPMv161 {
             get {
                 return ResourceManager.GetString("MPMv161", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Soccer Parlay-Max Per Match.
+        /// </summary>
+        public static string MPMv1MP {
+            get {
+                return ResourceManager.GetString("MPMv1MP", resourceCulture);
             }
         }
         
