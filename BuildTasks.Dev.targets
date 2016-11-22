@@ -4,6 +4,7 @@
          DefaultTargets="MyTargets"
          InitialTargets="MyTargets">
   <Target Name="MyTargets">
+	<Exec Command="_tools\Nuget\NuGet restore Alpha.ViewLogs.sln"/>
 	<MSBuild Projects="Alpha.ViewLogs/Alpha.ViewLogs.csproj" />
 	<MSBuild Projects="Alpha.ViewLogs.Site/Alpha.ViewLogs.Site.csproj" />
   </Target>
