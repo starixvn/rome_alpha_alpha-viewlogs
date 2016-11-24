@@ -2374,6 +2374,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Checked OTP.
+        /// </summary>
+        public static string checkedotp {
+            get {
+                return ResourceManager.GetString("checkedotp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Checked Security Code.
         /// </summary>
         public static string CheckedSecurityCode {

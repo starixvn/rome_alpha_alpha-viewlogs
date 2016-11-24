@@ -64,7 +64,7 @@
 
         private static IEnumerable<Assembly> GetAssemblies()
         {
-            yield return typeof(BaseController).Assembly;
+            yield return typeof(ViewLogBaseController).Assembly;
         }
 
         private static void RegisterCrossCuttingConcerns(Container container)

@@ -3792,4 +3792,7 @@
   <data name="isdisableddownline" xml:space="preserve">
     <value>ปิดการใช้งานดาวน์ไลน์แล้ว</value>
   </data>
+  <data name="checkedotp" xml:space="preserve">
+    <value>Checked OTP</value>
+  </data>
 </root>

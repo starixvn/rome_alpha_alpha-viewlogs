@@ -3837,4 +3837,7 @@
   <data name="MaxPerNumber" xml:space="preserve">
     <value>Max Per Number</value>
   </data>
+  <data name="checkedotp" xml:space="preserve">
+    <value>Checked OTP</value>
+  </data>
 </root>
