@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Net;
     using System.Text.RegularExpressions;
@@ -37,7 +38,7 @@
             Regex regex = new Regex(IPValidateRegex);
             if (!regex.IsMatch(ip, 0))
             {
-                return $"<a class=\"iplink\" href=\"javascript:;\">{ip}</a>";
+                return string.Format("<a class=\"iplink\" href=\"javascript:;\">{0}</a>", ip);
             }
 
             if (IsVNIP(ip)
@@ -46,7 +47,7 @@
                 return string.Empty;
             }
 
-            return $"<a class=\"iplink\" href=\"javascript:OpenIPInfo('{ip}');\">{ip}</a>";
+            return string.Format("<a class=\"iplink\" href=\"javascript:OpenIPInfo('{0}');\">{0}</a>", ip);
         }
 
         public string FormatCountryCode(string ip, string country)

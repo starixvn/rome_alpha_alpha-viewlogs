@@ -22,7 +22,7 @@
 
         private Cache cacheForTesting;
 
-        private List<IPRange> VNIPs;
+        private List<IPRange> vietNameseIps;
 
         [SetUp]
         public void SetUp()
@@ -35,7 +35,7 @@
 
             ipService = new IPServiceImpl(userSession, dynamicRepository);
 
-            VNIPs = new List<IPRange>()
+            vietNameseIps = new List<IPRange>()
             {
                 new IPRange(
                     16843008, // 1.1.1.0 = 256^3 + 256^2 + 256^1
@@ -69,7 +69,7 @@
         public void FormatIP_ValidIPButNotMatchRegex_ReturnsIPLinkWithoutOpenIPInfo(string ip)
         {
             // Arrange
-            var expectedIP = $"<a class=\"iplink\" href=\"javascript:;\">{ip}</a>";
+            var expectedIP = string.Format("<a class=\"iplink\" href=\"javascript:;\">{0}</a>", ip);
 
             // Act 
             var actualIP = ipService.FormatIP(ip);
@@ -88,7 +88,7 @@
             List<IPRange> ipVNList;
             cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
             {
-                x[1] = VNIPs;
+                x[1] = vietNameseIps;
 
                 return true;
             });
@@ -177,7 +177,7 @@
             List<IPRange> ipVNList;
             cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
             {
-                x[1] = VNIPs;
+                x[1] = vietNameseIps;
 
                 return true;
             });
@@ -200,7 +200,7 @@
             List<IPRange> ipVNList;
             cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
             {
-                x[1] = VNIPs;
+                x[1] = vietNameseIps;
 
                 return true;
             });
@@ -262,7 +262,7 @@
             List<IPRange> ipVNList;
             cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
             {
-                x[1] = VNIPs;
+                x[1] = vietNameseIps;
 
                 return true;
             });
@@ -287,7 +287,7 @@
             List<IPRange> ipVNList;
             cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
             {
-                x[1] = VNIPs;
+                x[1] = vietNameseIps;
 
                 return true;
             });
@@ -315,7 +315,7 @@
             List<IPRange> ipVNList;
             cacheForTesting.TryGet(VietnamIPListCacheKey, out ipVNList).Returns(x =>
             {
-                x[1] = VNIPs;
+                x[1] = vietNameseIps;
 
                 return true;
             });

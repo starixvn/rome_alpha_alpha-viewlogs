@@ -689,7 +689,8 @@
                 ResourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef
             });
 
-            var expectedCustStatus = $"<tr><td colspan=\"3\" class=\"colW1\">Disabled {validBetTypeName}</td><td colspan=\"3\" class=\"colW2\">{statusValue}</td></tr>";
+            var expectedCustStatus = "<tr><td colspan=\"3\" class=\"colW1\">Disabled " + validBetTypeName +
+                                        "</td><td colspan=\"3\" class=\"colW2\">" + statusValue + "</td></tr>";
 
             // Act 
             var actualCustStatus = logFormatter.RenderCustStatus(name, statusValue);

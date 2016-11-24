@@ -84,13 +84,12 @@
 
             if (!isShowOldValue)
             {
-                formattedValue = $"<span class=\"valuechanged\" title=\"{oldValue} --> {newValue}\">{newValue}</span>";
+                formattedValue = string.Format("<span class=\"valuechanged\" title=\"{0} --> {1}\">{1}</span>", oldValue, newValue);
             }
             else
             {
                 formattedValue =
-                    $"<span class=\"valuechanged\">{newValue}</span>" +
-                    $"<span class=\"valueold\">({oldValue})</span>";
+                    string.Format("<span class=\"valuechanged\">{0}</span><span class=\"valueold\">({1})</span>", newValue, oldValue);
             }
 
             return formattedValue;
