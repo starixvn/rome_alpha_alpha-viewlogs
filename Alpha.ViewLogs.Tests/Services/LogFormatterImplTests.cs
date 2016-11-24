@@ -686,6 +686,8 @@
 
             logFormatter.Init(new TransformParam
             {
+                CustStatuses = new Dictionary<string, bool>(),
+                ResourcesProductCacheRef = new Dictionary<string, int>(),
                 ResourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef
             });
 
@@ -722,6 +724,7 @@
             logFormatter.Init(new TransformParam
             {
                 ResourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef,
+                ResourcesProductCacheRef = new Dictionary<string, int>(),
                 CustStatuses = custStatuses
             });
 
@@ -750,7 +753,8 @@
 
             logFormatter.Init(new TransformParam
             {
-                CustStatuses = custStatuses
+                CustStatuses = custStatuses,
+                ResourcesProductCacheRef = new Dictionary<string, int>()
             });
 
             // Act 
