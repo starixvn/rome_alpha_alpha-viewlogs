@@ -3795,4 +3795,13 @@
   <data name="checkedotp" xml:space="preserve">
     <value>Checked OTP</value>
   </data>
+  <data name="MaxBv1MP" xml:space="preserve">
+    <value>足球混合過關-最高投注</value>
+  </data>
+  <data name="MinBv1MP" xml:space="preserve">
+    <value>足球混合過關-最低投注</value>
+  </data>
+  <data name="MPMv1MP" xml:space="preserve">
+    <value>足球混合過關-單場限額</value>
+  </data>
 </root>

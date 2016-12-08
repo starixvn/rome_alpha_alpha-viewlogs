@@ -20,6 +20,26 @@
           </td>
         </tr>
         <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MinBv1MP')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@minbv1mp" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MaxBv1MP')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@maxbv1mp" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPMv1MP')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mpmv1mp" />
+          </td>
+        </tr>
+        <tr>
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MinBv2')" /></td>
           <td class="colW2">
             <xsl:value-of select="@minbv2" />

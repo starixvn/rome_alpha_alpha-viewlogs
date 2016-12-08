@@ -3564,4 +3564,13 @@
   <data name="checkedotp" xml:space="preserve">
     <value>Checked OTP</value>
   </data>
+  <data name="MaxBv1MP" xml:space="preserve">
+    <value>Tiền cược lớn nhất cho Parlay Bóng Đá</value>
+  </data>
+  <data name="MinBv1MP" xml:space="preserve">
+    <value>Tiền cược nhỏ nhất cho Parlay Bóng Đá</value>
+  </data>
+  <data name="MPMv1MP" xml:space="preserve">
+    <value>Tiền cược lớn nhất cho mỗi lượt cược Parlay Bóng Đá</value>
+  </data>
 </root>
