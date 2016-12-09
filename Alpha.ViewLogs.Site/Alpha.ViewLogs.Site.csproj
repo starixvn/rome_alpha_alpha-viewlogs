@@ -246,6 +246,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1158.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1159.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_392.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_850_899_WinLossLimit\action_851.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_926.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_927.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_928.xslt" />
@@ -611,7 +614,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_800_849_Currency\action_803.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_800_849_Currency\action_804.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_800_849_Currency\action_805.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_850_899_WinLossLimit\action_850.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_850_899_WinLossLimit\action_850.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_900.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_901.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_902.xslt" />
