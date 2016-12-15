@@ -7,6 +7,7 @@
     using System.Web.Routing;
     using App_Start;
     using AppResources;
+    using Auth.Filters;
     using Configurations;
     using Fanex.Data;
     using ONEbook.UM.Filters;
@@ -38,6 +39,7 @@
             ShareSession.Init();
 
             GlobalFilters.Filters.Add(new CheckUMFilter());
+            GlobalFilters.Filters.Add(new CheckBelongingFilter());
 
             Logs.WriteInfo(Resources.AppStart_Message);
         }
