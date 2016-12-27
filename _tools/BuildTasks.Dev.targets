@@ -3,9 +3,12 @@
          xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
          DefaultTargets="MyTargets"
          InitialTargets="MyTargets">
+		 
   <Target Name="MyTargets">
-	<Exec Command="_tools\Nuget\NuGet restore Alpha.ViewLogs.sln"/>
-	<MSBuild Projects="Alpha.ViewLogs.sln" />
+	<Exec Command="Nuget\NuGet restore ..\Alpha.ViewLogs.sln"/>
+	
+	<MSBuild Projects="..\Alpha.ViewLogs.sln" 
+		Properties="RunNunitTests=true;TreatWarningsAsErrors=true;RunCodeAnalysis=true;StyleCopEnabled=true" />
   </Target>
   
 </Project>
