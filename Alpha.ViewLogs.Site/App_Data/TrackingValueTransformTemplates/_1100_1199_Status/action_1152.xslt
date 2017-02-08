@@ -28,19 +28,26 @@
     <xsl:for-each select="productstatus">
       <div class="headerSportTypeDetail">
         <xsl:choose>
-          <xsl:when test="@sporttype">
-            <xsl:choose>
-              <xsl:when test="@bettype">
-                <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" /> -
-                <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
-              </xsl:otherwise>
-            </xsl:choose>
+          <xsl:when test="@productid">
+            <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
+            <xsl:choose>
+              <xsl:when test="@sporttype">
+                <xsl:choose>
+                  <xsl:when test="@bettype">
+                    <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" /> -
+                    <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
+              </xsl:otherwise>
+            </xsl:choose>
           </xsl:otherwise>
         </xsl:choose>
       </div>
