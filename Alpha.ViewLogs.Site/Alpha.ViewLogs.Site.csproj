@@ -243,6 +243,7 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1161.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1158.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1159.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_392.xslt" />
