@@ -1055,7 +1055,7 @@
                                 </td>
                               <td class="colTitle"><xsl:value-of select="xslLogFormat:GetLogResource('a_v2mpt_20')" /></td>
                               <td class="colValue">
-                                <xsl:value-of select="@v2a_mpt_10" />
+                                <xsl:value-of select="@a_v2mpt_20" />
                               </td>
                             </tr>
                             <tr>
@@ -1069,7 +1069,7 @@
                                 <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
                               </td>
                               <td class="colValue">
-                                <xsl:value-of select="@v2a_mpt_9999" />
+                                <xsl:value-of select="@a_v2mpt_9999" />
                               </td>
                               <td class="colTitle"></td>
                               <td class="colValue"></td>

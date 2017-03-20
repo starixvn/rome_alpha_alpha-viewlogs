@@ -1004,13 +1004,10 @@
                       </td>
                     </tr>
 
-
-
-
                     <tr class="headerSportTypeDetail">
                       <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('basketball')" /></td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('minV2PT_1')" />
                       </td>
@@ -1030,7 +1027,7 @@
                         <xsl:value-of select="@minv2pt_3" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('minV2PT_7')" />
                       </td>
@@ -1050,15 +1047,19 @@
                         <xsl:value-of select="@minv2pt_20" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('minPT_10')" />
                       </td>
                       <td class="colW2">
                         <xsl:value-of select="@minv2pt_10" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2"></td>
+                      <td class="colW1">
+                        <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                      </td>
+                      <td class="colW2">
+                        <xsl:value-of select="@minv2pt_9999" />
+                      </td>
                       <td class="colW1"></td>
                       <td class="colW2"></td>
                     </tr>
