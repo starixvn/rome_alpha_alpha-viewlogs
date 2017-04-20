@@ -161,24 +161,24 @@
                     <xsl:value-of select="@v2spt_8" />
                   </td>
                   <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('v2spt_9')" />
-                  </td>
-                  <td class="colW2">
-                    <xsl:value-of select="@v2spt_9" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('v2spt_20')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@v2spt_20" />
                   </td>
+                </tr>
+                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('spt_10')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@v2spt_10" />
+                  </td>
+                  <td class="colW1">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colW2">
+                    <xsl:value-of select="@v2spt_9999" />
                   </td>
                   <td class="colW1"></td>
                   <td class="colW2"></td>
@@ -700,24 +700,24 @@
                     <xsl:value-of select="@a_v2spt_8" />
                   </td>
                   <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('a_v2spt_9')" />
-                  </td>
-                  <td class="colW2">
-                    <xsl:value-of select="@a_v2spt_9" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('a_v2spt_20')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@a_v2spt_20" />
                   </td>
+                </tr>
+                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('a_spt_10')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@a_v2spt_10" />
+                  </td>
+                  <td class="colW1">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colW2">
+                    <xsl:value-of select="@a_v2spt_9999" />
                   </td>
                   <td class="colW1"></td>
                   <td class="colW2"></td>
@@ -1237,24 +1237,24 @@
                     <xsl:value-of select="@v2mpt_8" />
                   </td>
                   <td class="colTitle">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('v2mpt_9')" />
-                  </td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v2mpt_9" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="colTitle">
                     <xsl:value-of select="xslLogFormat:GetLogResource('v2mpt_20')" />
                   </td>
                   <td class="colValue">
                     <xsl:value-of select="@v2mpt_20" />
                   </td>
+                </tr>
+                <tr>
                   <td class="colTitle">
                     <xsl:value-of select="xslLogFormat:GetLogResource('mpt_10')" />
                   </td>
                   <td class="colValue">
                     <xsl:value-of select="@v2mpt_10" />
+                  </td>
+                  <td class="colTitle">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colValue">
+                    <xsl:value-of select="@v2mpt_9999" />
                   </td>
                   <td class="colTitle"></td>
                   <td class="colValue"></td>

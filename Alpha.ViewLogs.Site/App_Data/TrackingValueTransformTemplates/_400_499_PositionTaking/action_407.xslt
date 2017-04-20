@@ -220,7 +220,7 @@
                         <xsl:value-of select="xslLogFormat:GetLogResource('Basketball')" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('v2mpt_1')" />
                       </td>
@@ -240,7 +240,7 @@
                         <xsl:value-of select="@v2mpt_3" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('v2mpt_7')" />
                       </td>
@@ -260,14 +260,19 @@
                         <xsl:value-of select="@v2mpt_20" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('mpt_10')" />
                       </td>
                       <td class="colW2">
                         <xsl:value-of select="@v2mpt_10" />
                       </td>
-                      <td class="colW1"></td><td class="colW2"></td>
+                      <td class="colW1">
+                        <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                      </td>
+                      <td class="colW2">
+                        <xsl:value-of select="@v2mpt_9999" />
+                      </td>
                       <td class="colW1"></td><td class="colW2"></td>
                     </tr>
 
@@ -777,8 +782,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@isa_v2mpt_mem_10" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2"></td>
+                      <td class="colW1">
+                        <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                      </td>
+                      <td class="colW2">
+                        <xsl:value-of select="@isa_v2mpt_mem_9999" />
+                      </td>
                       <td class="colW1"></td>
                       <td class="colW2"></td>
                     </tr>
@@ -1288,7 +1297,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@a_v2mpt_mem_10" />
                       </td>
-                      <td class="colW1"></td><td class="colW2"></td>
+                      <td class="colW1">
+                        <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                      </td>
+                      <td class="colW2">
+                        <xsl:value-of select="@a_v2mpt_mem_9999" />
+                      </td>
                       <td class="colW1"></td><td class="colW2"></td>
                     </tr>
 

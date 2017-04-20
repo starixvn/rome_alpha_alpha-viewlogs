@@ -480,7 +480,7 @@
               <xsl:value-of select="xslLogFormat:GetLogResource('basketball')" />
             </td>
           </tr>
-          <tr >
+          <tr>
             <td class="colTitle">
               <xsl:value-of select="xslLogFormat:GetLogResource('v2apt_1')" />
             </td>
@@ -500,7 +500,7 @@
               <xsl:value-of select="@v2apt_3" />
             </td>
           </tr>
-          <tr >
+          <tr>
             <td class="colTitle">
               <xsl:value-of select="xslLogFormat:GetLogResource('v2apt_7')" />
             </td>
@@ -520,15 +520,21 @@
               <xsl:value-of select="@v2apt_20" />
             </td>
           </tr>
-          <tr >
+          <tr>
             <td class="colTitle">
               <xsl:value-of select="xslLogFormat:GetLogResource('apt_10')" />
             </td>
             <td class="colValue">
               <xsl:value-of select="@v2apt_10" />
             </td>
-            <td class="colTitle"></td><td class="colValue"></td>
-            <td class="colTitle"></td><td class="colValue"></td>
+            <td class="colTitle">
+              <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+            </td>
+            <td class="colValue">
+              <xsl:value-of select="@v2apt_9999" />
+            </td>
+            <td class="colTitle"></td>
+            <td class="colValue"></td>
           </tr>  
           
           <tr class="headerSportTypeDetail">

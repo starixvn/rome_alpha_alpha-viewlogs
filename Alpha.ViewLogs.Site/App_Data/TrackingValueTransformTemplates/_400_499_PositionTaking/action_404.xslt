@@ -219,15 +219,13 @@
                       <td class="colW2">
                         <xsl:value-of select="@spt_9999" />
                       </td>
-
-
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
                         <xsl:value-of select="xslLogFormat:GetLogResource('Basketball')" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('v2spt_1')" />
                       </td>
@@ -248,7 +246,7 @@
                       </td>
 
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('v2spt_7')" />
                       </td>
@@ -275,7 +273,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@v2spt_10" />
                       </td>
-                      <td class="colW1"></td><td class="colW2"></td>
+                      <td class="colW1">
+                        <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                      </td>
+                      <td class="colW2">
+                        <xsl:value-of select="@v2spt_9999" />
+                      </td>
                       <td class="colW1"></td><td class="colW2"></td>
                     </tr>
                    
@@ -743,7 +746,7 @@
                         <xsl:value-of select="xslLogFormat:GetLogResource('Basketball')" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('a_v2spt_1')" />
                       </td>
@@ -763,7 +766,7 @@
                         <xsl:value-of select="@a_v2spt_3" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('a_v2spt_7')" />
                       </td>
@@ -783,14 +786,19 @@
                         <xsl:value-of select="@a_v2spt_20" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('a_spt_10')" />
                       </td>
                       <td class="colW2">
                         <xsl:value-of select="@a_v2spt_10" />
                       </td>
-                      <td class="colW1"></td><td class="colW2"></td>
+                      <td class="colW1">
+                        <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                      </td>
+                      <td class="colW2">
+                        <xsl:value-of select="@a_v2spt_9999" />
+                      </td>
                       <td class="colW1"></td><td class="colW2"></td>
                     </tr>
                    
@@ -1258,7 +1266,7 @@
                         <xsl:value-of select="xslLogFormat:GetLogResource('Basketball')" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('isa_v2spt_1')" />
                       </td>
@@ -1278,7 +1286,7 @@
                         <xsl:value-of select="@isa_v2spt_3" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('isa_v2spt_7')" />
                       </td>
@@ -1298,15 +1306,19 @@
                         <xsl:value-of select="@isa_v2spt_20" />
                       </td>
                     </tr>
-                    <tr >
+                    <tr>
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('isa_spt_10')" />
                       </td>
                       <td class="colW2">
                         <xsl:value-of select="@isa_v2spt_10" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2"></td>
+                      <td class="colW1">
+                        <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                      </td>
+                      <td class="colW2">
+                        <xsl:value-of select="@isa_v2spt_9999" />
+                      </td>
                       <td class="colW1"></td>
                       <td class="colW2"></td>
                     </tr>

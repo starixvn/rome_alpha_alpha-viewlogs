@@ -329,7 +329,12 @@
                   <td class="colW2">
                     <xsl:value-of select="@v2spt_10" />
                   </td>
-                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colW2">
+                    <xsl:value-of select="@v2spt_9999" />
+                  </td>
                   <td class="colW1"></td><td class="colW2"></td>
                 </tr>
               
@@ -845,8 +850,12 @@
                   <td class="colW2">
                     <xsl:value-of select="@a_v2spt_10" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
+                  <td class="colW1">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colW2">
+                    <xsl:value-of select="@a_v2spt_9999" />
+                  </td>
                   <td class="colW1"></td>
                   <td class="colW2"></td>
                 </tr>              
@@ -1377,8 +1386,12 @@
                   <td class="colW2">
                     <xsl:value-of select="@isa_v2spt_10" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
+                  <td class="colW1">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colW2">
+                    <xsl:value-of select="@isa_v2spt_9999" />
+                  </td>
                   <td class="colW1"></td>
                   <td class="colW2"></td>
                 </tr>           
@@ -1911,8 +1924,12 @@
                   <td class="colW2">
                     <xsl:value-of select="@v2mpt_10" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
+                  <td class="colW1">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colW2">
+                    <xsl:value-of select="@v2mpt_9999" />
+                  </td>
                   <td class="colW1"></td>
                   <td class="colW2"></td>
                 </tr>
