@@ -3849,4 +3849,10 @@
   <data name="MPMv1MP" xml:space="preserve">
     <value>Soccer Parlay-Max Per Match</value>
   </data>
+  <data name="Disable180_1201" xml:space="preserve">
+    <value>Disabled Virtual Sports</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
 </root>

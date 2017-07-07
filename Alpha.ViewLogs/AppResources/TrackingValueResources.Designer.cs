@@ -2725,6 +2725,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Disabled Virtual Sports.
+        /// </summary>
+        public static string Disable180_1201 {
+            get {
+                return ResourceManager.GetString("Disable180_1201", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disabled Cockfighting.
         /// </summary>
         public static string Disable206_1003 {
@@ -9102,6 +9111,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string statuslog {
             get {
                 return ResourceManager.GetString("statuslog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         
