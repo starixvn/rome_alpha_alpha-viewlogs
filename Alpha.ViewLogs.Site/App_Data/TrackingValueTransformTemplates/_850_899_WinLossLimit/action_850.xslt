@@ -40,6 +40,9 @@
               </xsl:otherwise>
             </xsl:choose>
           </xsl:when>
+          <xsl:when test="@productid">
+              <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
+          </xsl:when>
           <xsl:otherwise>
             <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
           </xsl:otherwise>
