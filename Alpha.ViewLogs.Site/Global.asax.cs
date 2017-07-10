@@ -33,7 +33,6 @@
                 .Use(new OldConnectionStringProvider())
                 .UseDefaultDbSettingProvider(
                     resourcePath: AppSettings.StoredProcedurePath,
-                    ignoreRedundantParameters: false,
                     enableWatching: true)
                 .Run();
 
