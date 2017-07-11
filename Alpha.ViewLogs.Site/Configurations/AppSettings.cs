@@ -162,11 +162,11 @@
             }
         }
 
-        public static string StoreProcedurePath
+        public static string StoredProcedurePath
         {
             get
             {
-                return GetConfigValue("StoreProcedurePath");
+                return GetConfigValue("StoredProcedurePath");
             }
         }
 
