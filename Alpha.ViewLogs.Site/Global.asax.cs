@@ -10,6 +10,7 @@
     using Auth.Filters;
     using Configurations;
     using Fanex.Data;
+    using Fanex.Data.OldConnectionStringProvider;
     using ONEbook.UM.Filters;
     using Sunplus.Agent.Utilities;
     using Web;
@@ -29,7 +30,7 @@
 
             DbSettingProviderManager
                 .StartNewSession()
-                .UseDefaultConnectionStringProvider()
+                .Use(new OldConnectionStringProvider())
                 .UseDefaultDbSettingProvider(
                     resourcePath: AppSettings.StoredProcedurePath,
                     ignoreRedundantParameters: false,
