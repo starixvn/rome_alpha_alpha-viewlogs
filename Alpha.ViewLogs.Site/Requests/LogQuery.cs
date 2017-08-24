@@ -5,6 +5,7 @@
     using System.Web;
     using Configurations;
     using Fanex.Common;
+    using Sunplus.Agent.Model.Definitions;
     using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Model.Entities.Permission;
     using ViewLogs.Helpers;
@@ -179,7 +180,7 @@
                 { "152_51", UserPermission.IsShowRacing_152_51 },
                 { "153_51", UserPermission.IsShowRacing_153_51 },
                 { "161_90", UserPermission.IsShowNumberGroup },
-                { "disablevirtualsports", UserPermission.IsShowVirtualSports },
+                { "disablevirtualsports", UserPermission.IsEnableProduct(ProductIdConstants.VirtualSports) },
                 { "disablegolddeluxe", UserPermission.IsShowGoldDeluxeSettingForCredit },
                 { "disablecolossusbet", UserPermission.IsShowColossusBets },
                 { "44", UserPermission.IsShowSportsbook2 },
