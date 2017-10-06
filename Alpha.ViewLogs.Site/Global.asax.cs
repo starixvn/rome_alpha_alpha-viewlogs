@@ -16,6 +16,7 @@
     using ONEbook.UM.Filters;
     using Sunplus.Agent.Model.Entities;
     using Web;
+    using Web.Filters;
 
     public class MvcApplication : HttpApplication
     {
@@ -41,6 +42,7 @@
 
             GlobalFilters.Filters.Add(new CheckUMFilter());
             GlobalFilters.Filters.Add(new CheckBelongingFilter());
+            GlobalFilters.Filters.Add(new NoCacheFilter());
 
             var loggingConfiguration = new LoggingConfiguration()
                 .UseGetDbExceptionInfo(DatabaseInfoGetters.GetDbExceptionInfo);
