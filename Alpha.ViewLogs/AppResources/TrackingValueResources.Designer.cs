@@ -3319,6 +3319,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hide Gold Deluxe.
+        /// </summary>
+        public static string hideGD {
+            get {
+                return ResourceManager.GetString("hideGD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to HR Fixed Odds.
         /// </summary>
         public static string hrfixedodds {

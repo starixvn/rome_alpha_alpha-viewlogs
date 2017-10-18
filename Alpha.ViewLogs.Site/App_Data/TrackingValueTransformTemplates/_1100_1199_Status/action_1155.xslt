@@ -17,13 +17,19 @@
           <xsl:value-of select="@applydownlines" />
         </td>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('hideGD')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@hidegd" />
+        </td>
+      </tr>
+      <tr>
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subAccName')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@subaccname" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
         </td>
@@ -36,21 +42,20 @@
         <td class="colW2">
           <xsl:value-of select="@errcode" />
         </td>
+      </tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('errMsg')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@errmsg" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
         <td class="colW1"></td><td class="colW2"></td>
       </tr>
     </table>
