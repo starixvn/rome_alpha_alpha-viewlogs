@@ -28,7 +28,7 @@
                 return logs;
             }
 
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = ObjectDbFactory.CreateInstance(criteria.GetSettingKey()))
             {
                 using (var reader = objectDb.ExecuteReader(criteria))
                 {
