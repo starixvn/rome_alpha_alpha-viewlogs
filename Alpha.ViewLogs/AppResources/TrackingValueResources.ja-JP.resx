@@ -3402,4 +3402,7 @@
   <data name="MPMv1MP" xml:space="preserve">
     <value>Soccer Parlay-Max Per Match</value>
   </data>
+  <data name="hideGD" xml:space="preserve">
+    <value>Hide Gold Deluxe</value>
+  </data>
 </root>

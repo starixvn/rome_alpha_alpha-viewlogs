@@ -3804,4 +3804,7 @@
   <data name="MPMv1MP" xml:space="preserve">
     <value>บอลชุดฟุตบอล-ค่าเดิมพันสูงสุดต่อคู่การแข่งขัน</value>
   </data>
+  <data name="hideGD" xml:space="preserve">
+    <value>Hide Gold Deluxe</value>
+  </data>
 </root>
