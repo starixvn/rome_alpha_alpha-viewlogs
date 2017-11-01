@@ -1,18 +1,20 @@
 ﻿namespace Alpha.ViewLogs.Site
 {
     using System;
-    using System.Reflection;
+    using System.Collections.Generic;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
     using App_Start;
-    using AppResources;
     using Auth.Filters;
     using Configurations;
     using Fanex.Data;
+    using Fanex.Data.CrossCutting.WrappingException;
     using Fanex.Data.OldConnectionStringProvider;
+    using Fanex.Logging.Extensions.Database;
+    using Fanex.Logging.Extensions.Web;
     using ONEbook.UM.Filters;
-    using Sunplus.Agent.Utilities;
+    using Sunplus.Agent.Model.Entities;
     using Web;
 
     public class MvcApplication : HttpApplication
@@ -31,9 +33,8 @@
             DbSettingProviderManager
                 .StartNewSession()
                 .Use(new OldConnectionStringProvider())
-                .UseDefaultDbSettingProvider(
-                    resourcePath: AppSettings.StoredProcedurePath,
-                    enableWatching: true)
+                .UseDefaultDbSettingProvider(resourcePath: AppSettings.StoredProcedurePath, enableWatching: true)
+                .Use((settingKey, commandTimeout) => new WrappingExceptionObjectDb(settingKey, commandTimeout))
                 .Run();
 
             ShareSession.Init();
@@ -41,56 +42,30 @@
             GlobalFilters.Filters.Add(new CheckUMFilter());
             GlobalFilters.Filters.Add(new CheckBelongingFilter());
 
-            Logs.WriteInfo(Resources.AppStart_Message);
+            var loggingConfiguration = new LoggingConfiguration()
+                .UseGetDbExceptionInfo(DatabaseInfoGetters.GetDbExceptionInfo);
+
+            ExceptionHandler.UseConfig(loggingConfiguration);
         }
 
         protected void Application_Error(object sender, EventArgs e)
         {
-            Exception ex = Server.GetLastError().GetBaseException();
-            var isIgnoreError = Request.IsLocal ||
-                ex is HttpException ||
-                ex.Message.Contains("Extend Token Error UserID");
-
-            if (!isIgnoreError)
-            {
-                Logs.FilterInfoWarnOrError(ex);
-            }
-        }
-
-        protected void Application_End()
-        {
-            HttpRuntime runtime = (HttpRuntime)typeof(HttpRuntime).InvokeMember(
-                "_theRuntime",
-                BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.GetField,
-                null,
-                null,
-                null);
-
-            if (runtime == null)
+            if (Request.IsLocal)
             {
                 return;
             }
 
-            string shutDownMessage = (string)runtime.GetType().InvokeMember(
-                "_shutDownMessage",
-                BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.GetField,
-                null,
-                runtime,
-                null);
+            Exception ex = Server.GetLastError();
+            var currentCustomer = UserSession.Current;
 
-            string shutDownStack = (string)runtime.GetType().InvokeMember(
-                "_shutDownStack",
-                BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.GetField,
-                null,
-                runtime,
-                null);
-
-            var logMessage = string.Format(
-                "\r\n\r\n_shutDownMessage={0}\r\n\r\n_shutDownStack={1}",
-                shutDownMessage,
-                shutDownStack);
-
-            Logs.WriteInfo(logMessage);
+            ExceptionHandler.Handle(ex,
+                new Dictionary<string, object>
+                {
+                    ["CustId"] = currentCustomer?.CustId,
+                    ["CustName"] = currentCustomer?.UserName,
+                    ["SubAccountName"] = currentCustomer?.SubUserName,
+                    ["AdminName"] = currentCustomer?.AdminName
+                });
         }
     }
 }
