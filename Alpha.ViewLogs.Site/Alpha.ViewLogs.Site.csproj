@@ -269,6 +269,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1158.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1159.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_250.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_395.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_392.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_850_899_WinLossLimit\action_851.xslt">
       <SubType>Designer</SubType>
