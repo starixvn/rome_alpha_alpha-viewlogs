@@ -48,6 +48,7 @@
     <Compile Include="Constants\BetTypeId.cs" />
     <Compile Include="Constants\DefaultVariables.cs" />
     <Compile Include="Constants\LanguageCode.cs" />
+    <Compile Include="Constants\LoginLogType.cs" />
     <Compile Include="Constants\PageAccessType.cs" />
     <Compile Include="Constants\ShortLanguageCode.cs" />
     <Compile Include="Constants\SportId.cs" />

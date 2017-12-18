@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using Constants;
     using Criteria.Login;
     using DataAccesses;
     using Fanex.Data.Repository;
@@ -38,7 +39,7 @@
                 logParam.Username,
                 DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),
-                logParam.IsInternal,
+                logParam.IsInternal ? LoginLogType.InternalAlpha : LoginLogType.Alpha,
                 logParam.PageIndex,
                 logParam.PageSize);
         }
@@ -52,9 +53,10 @@
 
             return new GetTotalLoginLogsCriteria(
                 logParam.CustId,
+                logParam.Username,
                 DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),
-                logParam.IsInternal);
+                logParam.IsInternal ? LoginLogType.InternalAlpha : LoginLogType.Alpha);
         }
     }
 }
