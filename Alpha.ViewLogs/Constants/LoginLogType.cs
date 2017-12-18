@@ -4,6 +4,5 @@
     {
         public const byte Alpha = 0;
         public const byte InternalAlpha = 1;
-        public const byte NAP = 2;
     }
 }
