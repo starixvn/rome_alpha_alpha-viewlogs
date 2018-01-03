@@ -8,25 +8,29 @@
     {
         public GetTotalLoginLogsCriteria(
             int custId,
+            string custName,
             DateTime fromDate,
             DateTime toDate,
-            bool isInternal)
+            byte logType)
         {
             CustId = custId;
+            CustName = custName;
             FromDate = fromDate;
             ToDate = toDate;
-            IsInternal = isInternal;
+            LogType = logType;
         }
 
         [SpParam(SqlParamName = "UserId")]
         public int CustId { get; }
 
+        [SpParam(SqlParamName = "UserName")]
+        public string CustName { get; }
+
         public DateTime FromDate { get; }
 
         public DateTime ToDate { get; }
 
-        [SpParam(SqlParamName = "IsAdminAccess")]
-        public bool IsInternal { get; }
+        public byte LogType { get; }
 
         public override string GetSettingKey()
         {

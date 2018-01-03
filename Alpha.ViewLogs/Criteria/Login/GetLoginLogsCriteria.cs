@@ -11,7 +11,7 @@
             string custName,
             DateTime fromDate,
             DateTime toDate,
-            bool isInternal,
+            byte logType,
             int pageIndex,
             int pageSize)
         {
@@ -19,7 +19,7 @@
             CustName = custName;
             FromDate = fromDate;
             ToDate = toDate;
-            IsInternal = isInternal;
+            LogType = logType;
             PageIndex = pageIndex;
             PageSize = pageSize;
         }
@@ -34,8 +34,7 @@
 
         public DateTime ToDate { get; }
 
-        [SpParam(SqlParamName = "IsAdminAccess")]
-        public bool IsInternal { get; }
+        public byte LogType { get; }
 
         public int PageIndex { get; }
 
