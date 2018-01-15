@@ -137,7 +137,7 @@
         {
             var standardizedAttributeValue = attrValue.ToUpper();
 
-            var pemissionAbbriations = PageAccessType.PemissionAbbriations;
+            var pemissionAbbriations = Permissions.PemissionAbbriations;
 
             foreach (var pemissionAbbriation in pemissionAbbriations)
             {
@@ -147,7 +147,7 @@
                 }
             }
 
-            var pageAccessTypeNames = PageAccessType.PageAccessTypeName;
+            var pageAccessTypeNames = Permissions.PageAccessTypeName;
 
             foreach (var pageAccessTypeName in pageAccessTypeNames)
             {

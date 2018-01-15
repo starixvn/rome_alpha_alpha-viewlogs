@@ -466,6 +466,78 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Member information: Full Control.
+        /// </summary>
+        public static string PageAccess_A {
+            get {
+                return ResourceManager.GetString("PageAccess_A", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Member information: Update.
+        /// </summary>
+        public static string PageAccess_B {
+            get {
+                return ResourceManager.GetString("PageAccess_B", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfer.
+        /// </summary>
+        public static string PageAccess_C {
+            get {
+                return ResourceManager.GetString("PageAccess_C", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bets &amp; Forecast.
+        /// </summary>
+        public static string PageAccess_D {
+            get {
+                return ResourceManager.GetString("PageAccess_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reports.
+        /// </summary>
+        public static string PageAccess_E {
+            get {
+                return ResourceManager.GetString("PageAccess_E", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Log.
+        /// </summary>
+        public static string PageAccess_G {
+            get {
+                return ResourceManager.GetString("PageAccess_G", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Member information: View.
+        /// </summary>
+        public static string PageAccess_H {
+            get {
+                return ResourceManager.GetString("PageAccess_H", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bet Lists.
+        /// </summary>
+        public static string PageAccess_L {
+            get {
+                return ResourceManager.GetString("PageAccess_L", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Displaying {from} to {to} of {total} items.
         /// </summary>
         public static string Pager_DisplayItems {

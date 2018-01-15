@@ -84,7 +84,7 @@
         [TestCase("<div permissionAttribute=\"[G]\"></div>", "<div permissionAttribute=\"[View Log]\"></div>")] // Single Permission
         [TestCase("<div permissionAttribute=\"[H]\"></div>", "<div permissionAttribute=\"[Member information: View]\"></div>")] // Single Permission
         [TestCase("<div permissionAttribute=\"[E]\"></div>", "<div permissionAttribute=\"[Reports]\"></div>")] // Single Permission
-        [TestCase("<div permissionAttribute=\"[D]\"></div>", "<div permissionAttribute=\"[Total Bets/Forecast]\"></div>")] // Single Permission
+        [TestCase("<div permissionAttribute=\"[D]\"></div>", "<div permissionAttribute=\"[Bets &amp;amp; Forecast]\"></div>")] // Single Permission
         [TestCase(
             "<div permissionAttribute=\"[A][H][B]\"></div>",
             "<div permissionAttribute=\"[Member information: Full Control][Member information: View][Member information: Update]\"></div>")] // Multi Permission
