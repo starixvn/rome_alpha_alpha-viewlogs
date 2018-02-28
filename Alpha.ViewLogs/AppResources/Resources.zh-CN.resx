@@ -271,4 +271,28 @@
   <data name="Setting" xml:space="preserve">
     <value>设定</value>
   </data>
+  <data name="PageAccess_A" xml:space="preserve">
+    <value>会员资讯: 完全控制</value>
+  </data>
+  <data name="PageAccess_B" xml:space="preserve">
+    <value>会员资讯: 更改</value>
+  </data>
+  <data name="PageAccess_C" xml:space="preserve">
+    <value>转账</value>
+  </data>
+  <data name="PageAccess_E" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="PageAccess_G" xml:space="preserve">
+    <value>察看日志</value>
+  </data>
+  <data name="PageAccess_H" xml:space="preserve">
+    <value>会员资讯: 游览</value>
+  </data>
+  <data name="PageAccess_L" xml:space="preserve">
+    <value>投注历史</value>
+  </data>
+  <data name="PageAccess_D" xml:space="preserve">
+    <value>投注 &amp; 预测</value>
+  </data>
 </root>

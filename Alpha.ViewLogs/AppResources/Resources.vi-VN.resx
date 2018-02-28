@@ -273,4 +273,28 @@
   <data name="Setting" xml:space="preserve">
     <value>Thiết lập</value>
   </data>
+  <data name="PageAccess_A" xml:space="preserve">
+    <value>Thông tin thành viên: Toàn quyền </value>
+  </data>
+  <data name="PageAccess_B" xml:space="preserve">
+    <value>Thông tin thành viên: Cập nhật</value>
+  </data>
+  <data name="PageAccess_C" xml:space="preserve">
+    <value>Chuyển khoản</value>
+  </data>
+  <data name="PageAccess_E" xml:space="preserve">
+    <value>Báo cáo</value>
+  </data>
+  <data name="PageAccess_G" xml:space="preserve">
+    <value>Nhật ký</value>
+  </data>
+  <data name="PageAccess_H" xml:space="preserve">
+    <value>Thông tin thành viên: Xem</value>
+  </data>
+  <data name="PageAccess_L" xml:space="preserve">
+    <value>Danh sách cược</value>
+  </data>
+  <data name="PageAccess_D" xml:space="preserve">
+    <value>Tổng Cược &amp; Dự Đoán</value>
+  </data>
 </root>

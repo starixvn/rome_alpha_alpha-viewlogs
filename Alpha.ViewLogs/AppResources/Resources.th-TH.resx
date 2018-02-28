@@ -271,4 +271,28 @@
   <data name="Setting" xml:space="preserve">
     <value>ตั้งค่า</value>
   </data>
+  <data name="PageAccess_A" xml:space="preserve">
+    <value>ข้อมูลสมาชิก: ควบคุมทั้งหมด</value>
+  </data>
+  <data name="PageAccess_B" xml:space="preserve">
+    <value>ข้อมูลสมาชิก: ล่าสุด</value>
+  </data>
+  <data name="PageAccess_C" xml:space="preserve">
+    <value>ตั้งค่าใหม่</value>
+  </data>
+  <data name="PageAccess_E" xml:space="preserve">
+    <value>รายงาน</value>
+  </data>
+  <data name="PageAccess_G" xml:space="preserve">
+    <value>ดูบันทึก</value>
+  </data>
+  <data name="PageAccess_H" xml:space="preserve">
+    <value>ข้อมูลสมาชิก: ดู</value>
+  </data>
+  <data name="PageAccess_L" xml:space="preserve">
+    <value>รายการวางเดิมพันที่เล่นไปแล้ว</value>
+  </data>
+  <data name="PageAccess_D" xml:space="preserve">
+    <value>ยอดการเล่นและคำนวณผล</value>
+  </data>
 </root>

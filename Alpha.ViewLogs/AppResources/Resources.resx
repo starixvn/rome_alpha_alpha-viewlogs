@@ -330,4 +330,28 @@
   <data name="AllTypes" xml:space="preserve">
     <value>All Types</value>
   </data>
+  <data name="PageAccess_A" xml:space="preserve">
+    <value>Member information: Full Control</value>
+  </data>
+  <data name="PageAccess_B" xml:space="preserve">
+    <value>Member information: Update</value>
+  </data>
+  <data name="PageAccess_C" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="PageAccess_E" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="PageAccess_G" xml:space="preserve">
+    <value>View Log</value>
+  </data>
+  <data name="PageAccess_H" xml:space="preserve">
+    <value>Member information: View</value>
+  </data>
+  <data name="PageAccess_L" xml:space="preserve">
+    <value>Bet Lists</value>
+  </data>
+  <data name="PageAccess_D" xml:space="preserve">
+    <value>Bets &amp; Forecast</value>
+  </data>
 </root>
