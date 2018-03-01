@@ -412,22 +412,6 @@
                 </tr>
 
                 <tr class="headerSportTypeDetail">
-                  <td colspan="6">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('hrfixedodds')" />
-                  </td>
-                </tr>
-                <tr >
-                  <td class="colTitle">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('v154apt_20')" />
-                  </td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v154apt_20" />
-                  </td>
-                  <td class="colTitle"></td><td class="colValue"></td>
-                  <td class="colTitle"></td><td class="colValue"></td>
-                </tr>
-                
-                <tr class="headerSportTypeDetail">
                   <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" /></td>
                 </tr>
                 <tr >

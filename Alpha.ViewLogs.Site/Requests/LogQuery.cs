@@ -145,12 +145,12 @@
         {
             var visibilities = new Dictionary<int, bool>();
 
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_31, UserPermission.IsShowRacing_151_31);
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_41, UserPermission.IsShowRacing_151_41);
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_51, UserPermission.IsShowRacing_151_51);
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_152_41, UserPermission.IsShowRacing_152_41);
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_152_51, UserPermission.IsShowRacing_152_51);
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_153_51, UserPermission.IsShowRacing_153_51);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_31, UserPermission.IsShowRacing);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_41, UserPermission.IsShowRacing);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_51, UserPermission.IsShowRacing);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_152_41, UserPermission.IsShowRacing);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_152_51, UserPermission.IsShowRacing);
+            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_153_51, UserPermission.IsShowRacing);
 
             return visibilities;
         }
@@ -173,12 +173,12 @@
         {
             var custStatusDict = new Dictionary<string, bool>
             {
-                { "151_31", UserPermission.IsShowRacing_151_31 },
-                { "151_41", UserPermission.IsShowRacing_151_41 },
-                { "151_51", UserPermission.IsShowRacing_151_51 },
-                { "152_41", UserPermission.IsShowRacing_152_41 },
-                { "152_51", UserPermission.IsShowRacing_152_51 },
-                { "153_51", UserPermission.IsShowRacing_153_51 },
+                { "151_31", UserPermission.IsShowRacing },
+                { "151_41", UserPermission.IsShowRacing},
+                { "151_51", UserPermission.IsShowRacing},
+                { "152_41", UserPermission.IsShowRacing},
+                { "152_51", UserPermission.IsShowRacing},
+                { "153_51", UserPermission.IsShowRacing},
                 { "161_90", UserPermission.IsShowNumberGroup },
                 { "disablevirtualsports", UserPermission.IsEnableProduct(ProductIdConstants.VirtualSports) },
                 { "disablegolddeluxe", UserPermission.IsShowGoldDeluxeSettingForCredit },

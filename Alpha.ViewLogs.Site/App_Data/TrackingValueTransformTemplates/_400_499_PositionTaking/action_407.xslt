@@ -464,23 +464,6 @@
 
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('hrfixedodds')" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v154mpt_20')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v154mpt_20" />
-                      </td>
-                      <td class="colW1"></td><td class="colW2"></td>
-                      <td class="colW1"></td><td class="colW2"></td>
-                    </tr>
-
-
-                    <tr class="headerSportTypeDetail">
-                      <td colspan="6">
                         <xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" />
                       </td>
                     </tr>
@@ -984,21 +967,6 @@
 
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('hrfixedodds')" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('isa_v154mpt_mem_20')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@isa_v154mpt_mem_20" />
-                      </td>
-                      <td class="colW1"></td><td class="colW2"></td>
-                      <td class="colW1"></td><td class="colW2"></td>
-                    </tr>
-                    <tr class="headerSportTypeDetail">
-                      <td colspan="6">
                         <xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" />
                       </td>
                     </tr>
@@ -1495,27 +1463,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@a_v11mpt_mem_10" />
                       </td>
-                    </tr>
-
-                    <tr class="headerSportTypeDetail">
-                      <td colspan="6">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('hrfixedodds')" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('a_v154mpt_mem_20')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@a_v154mpt_mem_20" />
-                      </td>
-                      <td class="colW1">
-
-                      </td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td><td class="colW2"></td>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">

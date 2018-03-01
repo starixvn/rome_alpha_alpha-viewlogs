@@ -137,17 +137,17 @@
                 </tr>
                 <tr>
                   <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('disablehorseracing')" />
+                    
                   </td>
                   <td class="colW2">
-                    <xsl:value-of select="@disablehorseracing" />
+                    
                   </td>
 
                   <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('disablefinancial')" />
+                    
                   </td>
                   <td class="colW2">
-                    <xsl:value-of select="@disablefinancial" />
+                    
                   </td>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('minb')" />
@@ -501,17 +501,17 @@
                 </tr>
                 <tr>
                   <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('disablehorseracing')" />
+                   
                   </td>
                   <td class="colW2">
-                    <xsl:value-of select="@disablehorseracing" />
+                    
                   </td>
 
                   <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('disablefinancial')" />
+                    
                   </td>
                   <td class="colW2">
-                    <xsl:value-of select="@disablefinancial" />
+                    
                   </td>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('minb')" />

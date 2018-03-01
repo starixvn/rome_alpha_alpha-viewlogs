@@ -26,12 +26,7 @@
       </tr>
       <xsl:if test="xslLogFormat:IsShowMyanmarOdds() = 'True'">
         <tr>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('playerdiscounthrfixedodds')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@playerdiscounthrfixedodds" />
-          </td>
+          
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('playerdiscountnumber')" />
           </td>
@@ -44,14 +39,15 @@
           <td class="colW2">
             <xsl:value-of select="@playerdiscountmyanmarodds" />
           </td>
-        </tr>
-        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
           </td>
+        </tr>
+        <tr>
+          
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
           </td>
@@ -64,31 +60,30 @@
           <td class="colW2">
             <xsl:value-of select="@language" />
           </td>
-        </tr>
-        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@errcode" />
           </td>
+        </tr>
+        <tr>
+          
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@errmsg" />
           </td>
-          <td class="colW1"></td><td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
         </tr>
       </xsl:if>
       <xsl:if test="xslLogFormat:IsShowMyanmarOdds() != 'True'">
         <tr>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('playerdiscounthrfixedodds')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@playerdiscounthrfixedodds" />
-          </td>
+         
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('playerdiscountnumber')" />
           </td>
@@ -101,15 +96,15 @@
           <td class="colW2">
             <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
           </td>
-
-        </tr>
-        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@subaccname" />
           </td>
+        </tr>
+        <tr>
+          
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
           </td>
@@ -122,17 +117,14 @@
           <td class="colW2">
             <xsl:value-of select="@errcode" />
           </td>
-        </tr>
-        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@errmsg" />
           </td>
-          <td class="colW1"></td><td class="colW2"></td>
-          <td class="colW1"></td><td class="colW2"></td>
         </tr>
+        
       </xsl:if>
     </table>
   </xsl:template>

@@ -9,10 +9,6 @@
         <xsl:if test="xslLogFormat:IsShowMyanmarOdds() != 'True'">
         <table class="tblDesc">
           <tr>
-            <!--<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('custid')" /></td>
-                        <td class="colW2">
-                            <xsl:value-of select="@custid" />
-                        </td>-->
             <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('fname')" /></td>
             <td class="colW2">
               <xsl:value-of select="@fname" />
@@ -225,14 +221,12 @@
               </tr>
               <tr>              
               
-                <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('disablehorseracing')" /></td>
+                <td class="colW1"></td>
                 <td class="colW2">
-                  <xsl:value-of select="@disablehorseracing" />
                 </td>
               
-                <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('disablefinancial')" /></td>
+                <td class="colW1"></td>
                 <td class="colW2">
-                  <xsl:value-of select="@disablefinancial" />
                 </td>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('disableautompt')" /></td>
                 <td class="colW2">
@@ -574,17 +568,17 @@
                 <tr>
 
                   <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('disablehorseracing')" />
+                    
                   </td>
                   <td class="colW2">
-                    <xsl:value-of select="@disablehorseracing" />
+                    
                   </td>
 
                   <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('disablefinancial')" />
+                    
                   </td>
                   <td class="colW2">
-                    <xsl:value-of select="@disablefinancial" />
+                    
                   </td>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('disableautompt')" />

@@ -351,37 +351,22 @@
                   <td class="colW2">
                     <xsl:value-of select="@mpmv99" />
                   </td>
-                </tr>
+                </tr>               
                 <tr>
-                  <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('disablehorseracing')" />
-                  </td>
-                  <td class="colW2">
-                    <xsl:value-of select="@disablehorseracing" />
-                  </td>
-
-                  <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('disablefinancial')" />
-                  </td>
-                  <td class="colW2">
-                    <xsl:value-of select="@disablefinancial" />
-                  </td>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@errmsg" />
                   </td>
-                </tr>
-                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@errcode" />
                   </td>
-                  <td class="colW1"></td><td class="colW2"></td>
-                  <td class="colW1"></td><td class="colW2"></td>
+                  <td class="colW1"></td>
+                  <td class="colW2"></td>
                 </tr>
               </xsl:when>
               <xsl:otherwise>
@@ -570,7 +555,7 @@
                   <td class="colW2">
                     <xsl:value-of select="@discountcs" />
                   </td>
-                </tr>
+                </tr>               
                 <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('DiscountMyanmarOdds')" />
@@ -578,10 +563,6 @@
                   <td class="colW2">
                     <xsl:value-of select="@discountmyanmarodds" />
                   </td>
-                  <td class="colW1"></td><td class="colW2"></td>
-                  <td class="colW1"></td><td class="colW2"></td>
-                </tr>
-                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('minb')" />
                   </td>
@@ -594,14 +575,15 @@
                   <td class="colW2">
                     <xsl:value-of select="@maxb" />
                   </td>
+                 
+                </tr>
+                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('mpm')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@mpm" />
                   </td>
-                </tr>
-                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('minbv2')" />
                   </td>
@@ -614,14 +596,15 @@
                   <td class="colW2">
                     <xsl:value-of select="@maxbv2" />
                   </td>
+                 
+                </tr>
+                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('mpmv2')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@mpmv2" />
                   </td>
-                </tr>
-                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('minbv3')" />
                   </td>
@@ -634,14 +617,15 @@
                   <td class="colW2">
                     <xsl:value-of select="@maxbv3" />
                   </td>
+                  
+                </tr>
+                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('mpmv3')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@mpmv3" />
                   </td>
-                </tr>
-                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('minbv5')" />
                   </td>
@@ -654,14 +638,15 @@
                   <td class="colW2">
                     <xsl:value-of select="@maxbv5" />
                   </td>
+                  
+                </tr>
+                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('mpmv5')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@mpmv5" />
                   </td>
-                </tr>
-                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('minbv8')" />
                   </td>
@@ -674,14 +659,15 @@
                   <td class="colW2">
                     <xsl:value-of select="@maxbv8" />
                   </td>
+                  
+                </tr>
+                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('mpmv8')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@mpmv8" />
                   </td>
-                </tr>
-                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('minbv10')" />
                   </td>
@@ -694,14 +680,15 @@
                   <td class="colW2">
                     <xsl:value-of select="@maxbv10" />
                   </td>
+                  
+                </tr>
+                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('mpmv10')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@mpmv10" />
                   </td>
-                </tr>
-                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('minbv11')" />
                   </td>
@@ -714,14 +701,15 @@
                   <td class="colW2">
                     <xsl:value-of select="@maxbv11" />
                   </td>
+                 
+                </tr>
+                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('mpmv11')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@mpmv11" />
                   </td>
-                </tr>
-                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('minbv99')" />
                   </td>
@@ -734,26 +722,14 @@
                   <td class="colW2">
                     <xsl:value-of select="@maxbv99" />
                   </td>
+                  
+                </tr>
+                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('mpmv99')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@mpmv99" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('disablehorseracing')" />
-                  </td>
-                  <td class="colW2">
-                    <xsl:value-of select="@disablehorseracing" />
-                  </td>
-
-                  <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('disablefinancial')" />
-                  </td>
-                  <td class="colW2">
-                    <xsl:value-of select="@disablefinancial" />
                   </td>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
@@ -761,17 +737,13 @@
                   <td class="colW2">
                     <xsl:value-of select="@errmsg" />
                   </td>
-                </tr>
-                <tr>
                   <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
                   </td>
                   <td class="colW2">
                     <xsl:value-of select="@errcode" />
                   </td>
-                  <td class="colW1"></td><td class="colW2"></td>
-                  <td class="colW1"></td><td class="colW2"></td>
-                </tr>
+                </tr>                
               </xsl:when>
               <xsl:otherwise>
                 <tr>
@@ -791,8 +763,6 @@
                 </tr>
               </xsl:otherwise>
             </xsl:choose>
-
-
           </table>
         </xsl:if>
       </xsl:when>

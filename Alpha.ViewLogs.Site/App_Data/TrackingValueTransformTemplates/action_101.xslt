@@ -335,18 +335,18 @@
                 <xsl:value-of select="@suspended" />
               </td>
               <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('disablehorseracing')" />
+                
               </td>
               <td class="colW2">
-                <xsl:value-of select="@disablehorseracing" />
+                
               </td>
             </tr>
             <tr>
               <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('disablefinancial')" />
+                
               </td>
               <td class="colW2">
-                <xsl:value-of select="@disablefinancial" />
+                
               </td>
 
               <td class="colW1">
@@ -702,28 +702,13 @@
                 <xsl:value-of select="@discount1x2" />
               </td>
               <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('disablehorseracing')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@disablehorseracing" />
-              </td>
-            </tr>
-            <tr>
-              <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('DiscountMyanmarOdds')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@discountmyanmarodds" />
               </td>
-              <td class="colW1">
-              </td>
-              <td class="colW2">
-              </td>
-              <td class="colW1">
-              </td>
-              <td class="colW2">
-              </td>
             </tr>
+            
             <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
@@ -744,13 +729,7 @@
                 <xsl:value-of select="@suspended" />
               </td>
             </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('disablefinancial')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@disablefinancial" />
-              </td>
+            <tr>              
 
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('disableautompt')" />
@@ -764,14 +743,15 @@
               <td class="colW2">
                 <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
               </td>
-            </tr>
-            <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('errcode')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@errcode" />
               </td>
+            </tr>
+            <tr>
+              
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('errmsg')" />
               </td>
@@ -783,6 +763,10 @@
               </td>
               <td class="colW2">
                 <xsl:value-of select="@best-odds" />
+              </td>
+              <td class="colW1">
+              </td>
+              <td class="colW2">
               </td>
             </tr>
 

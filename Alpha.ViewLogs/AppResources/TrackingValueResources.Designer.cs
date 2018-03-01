@@ -2779,15 +2779,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disabled Bingo.
-        /// </summary>
-        public static string DisableBingo {
-            get {
-                return ResourceManager.GetString("DisableBingo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Disabled Casino.
         /// </summary>
         public static string DisableCasino {
@@ -2811,15 +2802,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string disabled {
             get {
                 return ResourceManager.GetString("disabled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Disabled Bingo.
-        /// </summary>
-        public static string disabledBG {
-            get {
-                return ResourceManager.GetString("disabledBG", resourceCulture);
             }
         }
         
@@ -2851,29 +2833,11 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disabled Fun Poker.
-        /// </summary>
-        public static string DisabledFunP2P {
-            get {
-                return ResourceManager.GetString("DisabledFunP2P", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Disabled Racing&apos;s SA Tote.
         /// </summary>
         public static string disabledHR {
             get {
                 return ResourceManager.GetString("disabledHR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Disabled HR Fixed Odds.
-        /// </summary>
-        public static string disabledhrfixedodds {
-            get {
-                return ResourceManager.GetString("disabledhrfixedodds", resourceCulture);
             }
         }
         
@@ -2892,15 +2856,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string disabledownline {
             get {
                 return ResourceManager.GetString("disabledownline", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Disabled Poker.
-        /// </summary>
-        public static string DisabledP2P {
-            get {
-                return ResourceManager.GetString("DisabledP2P", resourceCulture);
             }
         }
         
@@ -2932,15 +2887,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disabled Fun Poker Downlines.
-        /// </summary>
-        public static string DisableFunP2PDownline {
-            get {
-                return ResourceManager.GetString("DisableFunP2PDownline", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Disabled Gold Deluxe.
         /// </summary>
         public static string disableGoldDeluxe {
@@ -2955,15 +2901,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string DisableHorseRacing {
             get {
                 return ResourceManager.GetString("DisableHorseRacing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Disabled HR Fixed Odds.
-        /// </summary>
-        public static string disablehrfixedodds {
-            get {
-                return ResourceManager.GetString("disablehrfixedodds", resourceCulture);
             }
         }
         
@@ -3013,15 +2950,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disabled Poker Downlines.
-        /// </summary>
-        public static string DisableP2PDownline {
-            get {
-                return ResourceManager.GetString("DisableP2PDownline", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Disabled Virtual Sports.
         /// </summary>
         public static string Disablevirtualsports {
@@ -3054,15 +2982,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string discountcs {
             get {
                 return ResourceManager.GetString("discountcs", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Discount HR Fixed Odds.
-        /// </summary>
-        public static string discounthrfixedodds {
-            get {
-                return ResourceManager.GetString("discounthrfixedodds", resourceCulture);
             }
         }
         
@@ -3324,15 +3243,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string hideGD {
             get {
                 return ResourceManager.GetString("hideGD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to HR Fixed Odds.
-        /// </summary>
-        public static string hrfixedodds {
-            get {
-                return ResourceManager.GetString("hrfixedodds", resourceCulture);
             }
         }
         
@@ -8710,15 +8620,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Player&apos;s HR Fixed Odds Discount.
-        /// </summary>
-        public static string playerdiscounthrfixedodds {
-            get {
-                return ResourceManager.GetString("playerdiscounthrfixedodds", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Player % Odds Discount.
         /// </summary>
         public static string PlayerDiscountMyanmarOdds {
@@ -9210,15 +9111,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string swimming {
             get {
                 return ResourceManager.GetString("swimming", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Synchronized Bingo.
-        /// </summary>
-        public static string syncBG {
-            get {
-                return ResourceManager.GetString("syncBG", resourceCulture);
             }
         }
         

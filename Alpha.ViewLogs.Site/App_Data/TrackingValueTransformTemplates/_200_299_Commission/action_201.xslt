@@ -53,18 +53,15 @@
             </tr>
             <tr>
               <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('discounthrfixedodds')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@discounthrfixedodds" />
-              </td>
-              <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@discountnumber" />
               </td>
-              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td>
+              <td class="colW2"></td>
+              <td class="colW1"></td>
+              <td class="colW2"></td>
             </tr>
           </table>
         </xsl:if>
@@ -98,17 +95,18 @@
                 <xsl:value-of select="@discountnumber" />
               </td>
               <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('discounthrfixedodds')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@discounthrfixedodds" />
-              </td>
-              <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('DiscountMyanmarOdds')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@discountmyanmarodds" />
               </td>
+              <td class="colW1">
+
+              </td>
+              <td class="colW2">
+
+              </td>
+
             </tr>
           </table>
         </xsl:if>
@@ -197,17 +195,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@spt_10" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                    </tr>
-                    <tr >
-
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('slivept_1')" />
                       </td>
@@ -220,15 +207,14 @@
                       <td class="colW2">
                         <xsl:value-of select="@slivept_3" />
                       </td>
-
+                    </tr>
+                    <tr >
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('slivept_7')" />
                       </td>
                       <td class="colW2">
                         <xsl:value-of select="@slivept_7" />
                       </td>
-                    </tr>
-                    <tr >
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('slivept_8')" />
                       </td>
@@ -236,15 +222,9 @@
                         <xsl:value-of select="@slivept_8" />
                       </td>
                       <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-
+                      <td class="colW2"></td>
                     </tr>
+
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
                         <xsl:value-of select="xslLogFormat:GetLogResource('Basketball')" />

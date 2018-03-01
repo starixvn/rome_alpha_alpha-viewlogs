@@ -2679,12 +2679,6 @@
   <data name="maxv99pt_9" xml:space="preserve">
     <value>PT lớn nhất cho thể loại Cá cược tổng hợp</value>
   </data>
-  <data name="disabledBG" xml:space="preserve">
-    <value>Không cho phép chơi Bingo</value>
-  </data>
-  <data name="syncBG" xml:space="preserve">
-    <value>Đồng bộ hóa Bingo</value>
-  </data>
   <data name="discountnumber" xml:space="preserve">
     <value>Chiết khấu cho Number Game</value>
   </data>
@@ -2990,9 +2984,6 @@
   </data>
   <data name="DisableCasino" xml:space="preserve">
     <value>Không cho phép chơi Casino</value>
-  </data>
-  <data name="DisableBingo" xml:space="preserve">
-    <value>Không cho phép chơi Bingo</value>
   </data>
   <data name="v151apt_41" xml:space="preserve">
     <value>Racing's UK/Irish Tote Win</value>
@@ -3396,18 +3387,6 @@
   <data name="roleId" xml:space="preserve">
     <value>Phân Quyền</value>
   </data>
-  <data name="DisabledP2P" xml:space="preserve">
-    <value>Không cho phép chơi Poker</value>
-  </data>
-  <data name="DisabledFunP2P" xml:space="preserve">
-    <value>Không cho phép chơi Fun Poker</value>
-  </data>
-  <data name="DisableP2PDownline" xml:space="preserve">
-    <value>Không cho phép cấp dưới chơi Poker</value>
-  </data>
-  <data name="DisableFunP2PDownline" xml:space="preserve">
-    <value>Không cho phép cấp dưới chơi Fun Poker</value>
-  </data>
   <data name="MaxTransfer" xml:space="preserve">
     <value>Số tiền chuyển khoản tối đa</value>
   </data>
@@ -3450,12 +3429,6 @@
   <data name="newPT" xml:space="preserve">
     <value>New PT</value>
   </data>
-  <data name="discounthrfixedodds" xml:space="preserve">
-    <value>Discount HR Fixed Odds</value>
-  </data>
-  <data name="playerdiscounthrfixedodds" xml:space="preserve">
-    <value>Player's HR Fixed Odds Discount</value>
-  </data>
   <data name="MaxBv154" xml:space="preserve">
     <value>HR Fix Odds - Tiền cược lớn nhất</value>
   </data>
@@ -3464,9 +3437,6 @@
   </data>
   <data name="MPMv154" xml:space="preserve">
     <value>HR Fix Odds - Tiền cược lớn nhất cho mỗi cuộc đua</value>
-  </data>
-  <data name="hrfixedodds" xml:space="preserve">
-    <value>Đua ngựa tỷ lệ cố định</value>
   </data>
   <data name="Updptv154" xml:space="preserve">
     <value>Update Position Taking HR Fixed Odds</value>

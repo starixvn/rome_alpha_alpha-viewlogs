@@ -2892,12 +2892,6 @@
   <data name="maxv99pt_9" xml:space="preserve">
     <value>Max Mix Parlay</value>
   </data>
-  <data name="disabledBG" xml:space="preserve">
-    <value>Disabled Bingo</value>
-  </data>
-  <data name="syncBG" xml:space="preserve">
-    <value>Synchronized Bingo</value>
-  </data>
   <data name="discountnumber" xml:space="preserve">
     <value>Discount Number Game</value>
   </data>
@@ -3203,9 +3197,6 @@
   </data>
   <data name="DisableCasino" xml:space="preserve">
     <value>Disabled Casino</value>
-  </data>
-  <data name="DisableBingo" xml:space="preserve">
-    <value>Disabled Bingo</value>
   </data>
   <data name="v151apt_41" xml:space="preserve">
     <value>Racing's UK/Irish Tote Win</value>
@@ -3618,18 +3609,6 @@
   <data name="roleId" xml:space="preserve">
     <value>Role ID</value>
   </data>
-  <data name="DisabledP2P" xml:space="preserve">
-    <value>Disabled Poker</value>
-  </data>
-  <data name="DisabledFunP2P" xml:space="preserve">
-    <value>Disabled Fun Poker</value>
-  </data>
-  <data name="DisableP2PDownline" xml:space="preserve">
-    <value>Disabled Poker Downlines</value>
-  </data>
-  <data name="DisableFunP2PDownline" xml:space="preserve">
-    <value>Disabled Fun Poker Downlines</value>
-  </data>
   <data name="MaxTransfer" xml:space="preserve">
     <value>Max Transfer</value>
   </data>
@@ -3672,12 +3651,6 @@
   <data name="newPT" xml:space="preserve">
     <value>New PT</value>
   </data>
-  <data name="discounthrfixedodds" xml:space="preserve">
-    <value>Discount HR Fixed Odds</value>
-  </data>
-  <data name="playerdiscounthrfixedodds" xml:space="preserve">
-    <value>Player's HR Fixed Odds Discount</value>
-  </data>
   <data name="MaxBv154" xml:space="preserve">
     <value>HR Fixed Odds-Max Bet</value>
   </data>
@@ -3686,9 +3659,6 @@
   </data>
   <data name="MPMv154" xml:space="preserve">
     <value>HR Fixed Odds-Max Per Match</value>
-  </data>
-  <data name="hrfixedodds" xml:space="preserve">
-    <value>HR Fixed Odds</value>
   </data>
   <data name="v154apt_20" xml:space="preserve">
     <value>Moneyline</value>
@@ -3714,9 +3684,6 @@
   <data name="v154mpt_20" xml:space="preserve">
     <value>Moneyline</value>
   </data>
-  <data name="disablehrfixedodds" xml:space="preserve">
-    <value>Disabled HR Fixed Odds</value>
-  </data>
   <data name="maxv154pt_20" xml:space="preserve">
     <value>Max Moneyline</value>
   </data>
@@ -3725,9 +3692,6 @@
   </data>
   <data name="UMMBv154" xml:space="preserve">
     <value>Update Min-Max Bet HR Fixed Odds</value>
-  </data>
-  <data name="disabledhrfixedodds" xml:space="preserve">
-    <value>Disabled HR Fixed Odds</value>
   </data>
   <data name="isDefault" xml:space="preserve">
     <value>Is Default</value>
