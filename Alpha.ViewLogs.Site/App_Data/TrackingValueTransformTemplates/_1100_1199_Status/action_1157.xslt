@@ -5,7 +5,7 @@
     <table class="tblDesc">
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('disableColossusBets')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('disabled')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@disable" />

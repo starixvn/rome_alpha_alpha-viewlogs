@@ -8,8 +8,7 @@
         public GetStatusLogsCriteria(
             int custId,
             string custName,
-            int lowerActionId,
-            int upperActionId,
+            int actionTypeId,
             DateTime fromDate,
             DateTime toDate,
             bool isInternal,
@@ -18,8 +17,7 @@
         {
             CustId = custId;
             CustName = custName;
-            LowerActionId = lowerActionId;
-            UpperActionId = upperActionId;
+            ActionTypeId = actionTypeId;
 
             FromDate = fromDate;
             ToDate = toDate;
@@ -32,9 +30,7 @@
 
         public string CustName { get; set; }
 
-        public int LowerActionId { get; set; }
-
-        public int UpperActionId { get; set; }
+        public int ActionTypeId { get; set; }
 
         public DateTime FromDate { get; set; }
 

@@ -3822,4 +3822,19 @@
   <data name="hideGD" xml:space="preserve">
     <value>Hide Gold Deluxe</value>
   </data>
+  <data name="isDisabledAllAgents" xml:space="preserve">
+    <value>Is Disabled - All Agents</value>
+  </data>
+  <data name="isDisabledAllMasters" xml:space="preserve">
+    <value>Is Disabled - All Masters</value>
+  </data>
+  <data name="isDisabledAllMembers" xml:space="preserve">
+    <value>Is Disabled - All Members</value>
+  </data>
+  <data name="updateAllAgents" xml:space="preserve">
+    <value>Update All Agents</value>
+  </data>
+  <data name="updateAllMasters" xml:space="preserve">
+    <value>Update All Masters</value>
+  </data>
 </root>

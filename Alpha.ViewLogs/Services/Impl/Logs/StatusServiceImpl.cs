@@ -9,8 +9,7 @@
 
     public class StatusServiceImpl : BaseService, LogService
     {
-        private const int ActionIdFrom = 1100;
-        private const int ActionIdTo = 1199;
+        private const int ActionTypeId = 5;
 
         public StatusServiceImpl(
             IDynamicRepository dynamicRepository,
@@ -32,8 +31,7 @@
             return new GetStatusLogsCriteria(
                 logParam.CustId,
                 logParam.Username,
-                ActionIdFrom, // Just get status from action id 1100 , because it uses same SP with customer setting log
-                ActionIdTo, // Just get status to action id 1199, because it uses same SP with customer setting log
+                ActionTypeId,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
                 logParam.IsInternal,
@@ -52,9 +50,7 @@
 
             return new GetTotalStatusLogsCriteria(
                 logParam.CustId,
-                //// Just get status from action id 1100 => 1199, because it uses same SP with customer setting log
-                ActionIdFrom,
-                ActionIdTo,
+                ActionTypeId,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
                 logParam.IsInternal);
