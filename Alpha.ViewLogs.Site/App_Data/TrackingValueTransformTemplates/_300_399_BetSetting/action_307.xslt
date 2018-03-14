@@ -300,23 +300,12 @@
           <xsl:value-of select="@ummbv99mp" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('UMMBv154')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@ummbv154" />
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('UMMBv161')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@ummbv161" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
-        <td class="colW1"></td><td class="colW2"></td>
-
-      </tr>
+      </tr>      
 
       <tr>
         <td class="colW1">
@@ -358,11 +347,7 @@
   </xsl:template>
   <xsl:template match="acc_customerupdagent_minmaxbethr">
     <table class="tblDesc">
-      <tr>
-        <!--<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('custid')" /></td>
-                <td class="colW2">
-                    <xsl:value-of select="@custid" />
-                </td>-->
+      <tr>       
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('minb')" />
         </td>
@@ -403,38 +388,9 @@
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
       </tr>
-      <!--<tr>
-                -->
-      <!--<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('userid')" /></td>
-                <td class="colW2">
-                    <xsl:value-of select="@userid" />
-                </td>-->
-      <!--
-                <xsl:choose>
-                    <xsl:when test="$IsInternal = 0">
-                        <td class="colW1"></td>
-                        <td class="colW2">
-
-                        </td>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('userID')" /></td>
-                        <td class="colW2">
-
-                            <xsl:value-of select="@userid" />
-                        </td>
-
-                    </xsl:otherwise>
-                </xsl:choose>
-                <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('language')" /></td>
-                <td class="colW2">
-                    <xsl:value-of select="@language" />
-                </td>
-                <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('ip')" /></td>
-                <td class="colW2">
-                    <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
-                </td>
-            </tr>-->
+      
+      
+      
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
