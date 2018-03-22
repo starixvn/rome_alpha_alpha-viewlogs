@@ -7,18 +7,11 @@
     <table class="tblDesc">
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('disabledHR')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disablehorseracing" />
-        </td>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('isUpdateDownline')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@disabledownline" />
         </td>
-
 
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
@@ -26,15 +19,15 @@
         <td class="colW2">
           <xsl:value-of select="@language" />
         </td>
-      </tr>
-
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('errCode')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@errcode" />
         </td>
+      </tr>
+
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('errMsg')" />
         </td>
@@ -48,16 +41,12 @@
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@subaccname" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
-        <td class="colW1"></td><td class="colW2"></td>
       </tr>
     </table>
   </xsl:template>

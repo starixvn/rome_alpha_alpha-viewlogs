@@ -351,27 +351,12 @@
                   <xsl:value-of select="@suspended" />
                 </td>
                 <td class="colW1">
-                  <xsl:value-of select="xslLogFormat:GetLogResource('disablehorseracing')" />
-                </td>
-                <td class="colW2">
-                  <xsl:value-of select="@disablehorseracing" />
-                </td>
-              </tr>
-              <tr>
-                <td class="colW1">
-                  <xsl:value-of select="xslLogFormat:GetLogResource('disablefinancial')" />
-                </td>
-                <td class="colW2">
-                  <xsl:value-of select="@disablefinancial" />
-                </td>
-                <td class="colW1">
                   <xsl:value-of select="xslLogFormat:GetLogResource('disableoutright')" />
                 </td>
                 <td class="colW2">
                   <xsl:value-of select="@disableoutright" />
                 </td>
-                <td class="colW1"></td><td class="colW2"></td>
-              </tr>
+              </tr>             
 
             </xsl:when>
           </xsl:choose>

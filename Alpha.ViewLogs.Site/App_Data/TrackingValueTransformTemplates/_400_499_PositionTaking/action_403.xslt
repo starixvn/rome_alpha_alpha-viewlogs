@@ -283,20 +283,6 @@
               <xsl:value-of select="@suspended" />
             </td>
             <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('DisableHorseRacing')" />
-            </td>
-            <td class="colW2">
-              <xsl:value-of select="@disablehorseracing" />
-            </td>
-            <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('DisableFinancial')" />
-            </td>
-            <td class="colW2">
-              <xsl:value-of select="@disablefinancial" />
-            </td>
-          </tr>
-          <tr>
-            <td class="colW1">
               <xsl:value-of select="xslLogFormat:GetLogResource('answer')" />
             </td>
             <td class="colW2">
@@ -308,15 +294,15 @@
             <td class="colW2">
               <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
             </td>
+          </tr>
 
+          <tr>
             <td class="colW1">
               <xsl:value-of select="xslLogFormat:GetLogResource('success')" />
             </td>
             <td class="colW2">
               <xsl:value-of select="@success" />
             </td>
-          </tr>
-          <tr>
             <td class="colW1">
               <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
             </td>
@@ -330,14 +316,16 @@
               <xsl:value-of select="@subaccname" />
             </td>
 
+            
+          </tr>
+          <tr>
             <td class="colW1">
               <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
             </td>
             <td class="colW2">
               <xsl:value-of select="@errcode" />
             </td>
-          </tr>
-          <tr>
+            
             <td class="colW1">
               <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
             </td>
@@ -346,8 +334,8 @@
             </td>
             <xsl:choose>
               <xsl:when test="$IsInternal = 0">
-                <td class="colW1"></td><td class="colW2"></td>
-                <td class="colW1"></td><td class="colW2"></td>
+                <td class="colW1"></td>
+                <td class="colW2"></td>
               </xsl:when>
               <xsl:otherwise>
                 <td class="colW1">
@@ -356,12 +344,31 @@
                 <td class="colW2">
                   <xsl:value-of select="@creator" />
                 </td>
+               
+              </xsl:otherwise>
+            </xsl:choose>
+          </tr>
+          <tr>
+            <xsl:choose>
+              <xsl:when test="$IsInternal = 0">
+                <td class="colW1"></td>
+                <td class="colW2"></td>
+                <td class="colW1"></td>
+                <td class="colW2"></td>
+                <td class="colW1"></td>
+                <td class="colW2"></td>
+              </xsl:when>
+              <xsl:otherwise>
                 <td class="colW1">
                   <xsl:value-of select="xslLogFormat:GetLogResource('recommend')" />
                 </td>
                 <td class="colW2">
                   <xsl:value-of select="@recommend" />
                 </td>
+                <td class="colW1"></td>
+                <td class="colW2"></td>
+                <td class="colW1"></td>
+                <td class="colW2"></td>
               </xsl:otherwise>
             </xsl:choose>
           </tr>
@@ -725,23 +732,7 @@
             <td class="colValue">
               <xsl:value-of select="@v11apt_10" />
             </td>
-          </tr>
-
-          <tr class="headerSportTypeDetail">
-            <td colspan="6">
-              <xsl:value-of select="xslLogFormat:GetLogResource('hrfixedodds')" />
-            </td>
-          </tr>
-          <tr >
-            <td class="colTitle">
-              <xsl:value-of select="xslLogFormat:GetLogResource('v154apt_20')" />
-            </td>
-            <td class="colValue">
-              <xsl:value-of select="@v154apt_20" />
-            </td>
-            <td class="colTitle"></td><td class="colValue"></td>
-            <td class="colTitle"></td><td class="colValue"></td>
-          </tr>
+          </tr>          
 
           <tr class="headerSportTypeDetail">
             <td colspan="6">

@@ -2886,9 +2886,6 @@
   <data name="maxv99pt_9" xml:space="preserve">
     <value>สูงสุด บอลชุด</value>
   </data>
-  <data name="syncBG" xml:space="preserve">
-    <value>Synchronized Bingo</value>
-  </data>
   <data name="discountnumber" xml:space="preserve">
     <value>Discount Number Game</value>
   </data>
@@ -3600,18 +3597,6 @@
   <data name="roleId" xml:space="preserve">
     <value>โรล ID</value>
   </data>
-  <data name="DisabledP2P" xml:space="preserve">
-    <value>ปิดการใช้งาน Poker</value>
-  </data>
-  <data name="DisabledFunP2P" xml:space="preserve">
-    <value>ปิดการใช้งาน เดโม่ Poker</value>
-  </data>
-  <data name="DisableP2PDownline" xml:space="preserve">
-    <value>ปิดการใช้งาน Poker กับดาวน์ไลน์ต่างๆ</value>
-  </data>
-  <data name="DisableFunP2PDownline" xml:space="preserve">
-    <value>ปิดการใช้งานเดโม่ Poker กับดาวน์ไลน์ต่างๆ</value>
-  </data>
   <data name="MaxTransfer" xml:space="preserve">
     <value>โอนเงินสูงสุด</value>
   </data>
@@ -3654,12 +3639,6 @@
   <data name="newPT" xml:space="preserve">
     <value>New PT</value>
   </data>
-  <data name="discounthrfixedodds" xml:space="preserve">
-    <value>Discount HR Fixed Odds</value>
-  </data>
-  <data name="playerdiscounthrfixedodds" xml:space="preserve">
-    <value>Player's HR Fixed Odds Discount</value>
-  </data>
   <data name="MaxBv154" xml:space="preserve">
     <value>HR ราคาคงที่สูงสุดต่อตั๋ว</value>
   </data>
@@ -3668,9 +3647,6 @@
   </data>
   <data name="MPMv154" xml:space="preserve">
     <value>HR ราคาคงที่สูงสุดต่อคู่</value>
-  </data>
-  <data name="hrfixedodds" xml:space="preserve">
-    <value>HR ราคาคงที่</value>
   </data>
   <data name="v154apt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>

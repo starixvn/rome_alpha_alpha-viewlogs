@@ -58,12 +58,7 @@
 
         </tr>
         <tr>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('playerdiscounthrfixedodds')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@playerdiscounthrfixedodds" />
-          </td>
+
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
           </td>
@@ -76,17 +71,18 @@
           <td class="colW2">
             <xsl:value-of select="@playerdiscountnumber" />
           </td>
+          <td class="colW1">
 
+          </td>
+          <td class="colW2">
+
+          </td>
         </tr>
       </table>
     </xsl:if>
     <xsl:if test="xslLogFormat:IsShowMyanmarOdds() = 'True'">
       <table class="tblDesc">
         <tr>
-          <!--<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('custid')" /></td>
-                <td class="colW2">
-                    <xsl:value-of select="@custid" />
-                </td>-->
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('discount')" />
           </td>
@@ -135,12 +131,7 @@
 
         </tr>
         <tr>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('playerdiscounthrfixedodds')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@playerdiscounthrfixedodds" />
-          </td>
+
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
           </td>
@@ -153,7 +144,12 @@
           <td class="colW2">
             <xsl:value-of select="@playerdiscountnumber" />
           </td>
+          <td class="colW1">
 
+          </td>
+          <td class="colW2">
+
+          </td>
         </tr>
         <tr>
           <td class="colW1">
@@ -162,8 +158,10 @@
           <td class="colW2">
             <xsl:value-of select="@playerdiscountmyanmarodds" />
           </td>
-          <td class="colW1"></td><td class="colW2"></td>
-          <td class="colW1"></td><td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
         </tr>
       </table>
     </xsl:if>
@@ -173,10 +171,6 @@
     <xsl:if test="xslLogFormat:IsShowMyanmarOdds() != 'True'">
       <table class="tblDesc">
         <tr>
-          <!--<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('custid')" /></td>
-                <td class="colW2">
-                    <xsl:value-of select="@custid" />
-                </td>-->
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('playerdiscount')" />
           </td>
@@ -242,10 +236,6 @@
     <xsl:if test="xslLogFormat:IsShowMyanmarOdds() = 'True'">
       <table class="tblDesc">
         <tr>
-          <!--<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('custid')" /></td>
-                <td class="colW2">
-                    <xsl:value-of select="@custid" />
-                </td>-->
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('playerdiscount')" />
           </td>

@@ -2886,9 +2886,6 @@
   <data name="maxv99pt_9" xml:space="preserve">
     <value>混合过关最高投注</value>
   </data>
-  <data name="syncBG" xml:space="preserve">
-    <value>Synchronized Bingo</value>
-  </data>
   <data name="discountnumber" xml:space="preserve">
     <value>Discount Number Game</value>
   </data>
@@ -3600,18 +3597,6 @@
   <data name="roleId" xml:space="preserve">
     <value>角色号</value>
   </data>
-  <data name="DisabledP2P" xml:space="preserve">
-    <value>禁用扑克</value>
-  </data>
-  <data name="DisabledFunP2P" xml:space="preserve">
-    <value>禁用游戏币的扑克</value>
-  </data>
-  <data name="DisableP2PDownline" xml:space="preserve">
-    <value>禁用下线的扑克</value>
-  </data>
-  <data name="DisableFunP2PDownline" xml:space="preserve">
-    <value>禁用下线的游戏币扑克</value>
-  </data>
   <data name="MaxTransfer" xml:space="preserve">
     <value>最高调动额</value>
   </data>
@@ -3654,12 +3639,6 @@
   <data name="newPT" xml:space="preserve">
     <value>New PT</value>
   </data>
-  <data name="discounthrfixedodds" xml:space="preserve">
-    <value>Discount HR Fixed Odds</value>
-  </data>
-  <data name="playerdiscounthrfixedodds" xml:space="preserve">
-    <value>Player's HR Fixed Odds Discount</value>
-  </data>
   <data name="MaxBv154" xml:space="preserve">
     <value>固定赔率赛马游戏 - 最高投注</value>
   </data>
@@ -3668,9 +3647,6 @@
   </data>
   <data name="MPMv154" xml:space="preserve">
     <value>固定赔率赛马游戏 - 单场限额</value>
-  </data>
-  <data name="hrfixedodds" xml:space="preserve">
-    <value>固定赔率赛马</value>
   </data>
   <data name="a_v154mpt_20" xml:space="preserve">
     <value>独赢</value>

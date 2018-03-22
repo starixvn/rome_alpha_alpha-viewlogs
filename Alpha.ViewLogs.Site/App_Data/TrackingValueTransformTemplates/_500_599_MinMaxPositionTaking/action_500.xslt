@@ -284,28 +284,7 @@
             </td>
             <td class="colW1"></td><td class="colW2"></td>
           </tr>
-
-          <tr class="headerSportTypeDetail">
-            <td colspan="6">
-              <xsl:value-of select="xslLogFormat:GetLogResource('hrfixedodds')" />
-            </td>
-          </tr>
-          <tr>
-            <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('minv154pt_20')" />
-            </td>
-            <td class="colW2">
-              <xsl:value-of select="@minv154pt_20" />
-            </td>
-            <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('maxv154pt_20')" />
-            </td>
-            <td class="colW2">
-              <xsl:value-of select="@maxv154pt_20" />
-            </td>
-            <td class="colW1"></td><td class="colW2"></td>
-
-          </tr>        
+       
           
           <tr class="headerSportTypeDetail">
             <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" /></td>
@@ -708,29 +687,6 @@
               <xsl:value-of select="@minv11pt_10" />
             </td>
             </tr>
-
-          <tr class="headerSportTypeDetail">
-            <td colspan="6">
-              <xsl:value-of select="xslLogFormat:GetLogResource('hrfixedodds')" />
-            </td>
-          </tr>
-          <tr>
-            <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('minv154pt_20')" />
-            </td>
-            <td class="colW2">
-              <xsl:value-of select="@minv154pt_20" />
-            </td>
-            <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('maxv154pt_20')" />
-            </td>
-            <td class="colW2">
-              <xsl:value-of select="@maxv154pt_20" />
-            </td>
-            <td class="colW1"></td><td class="colW2"></td>
-
-          </tr>
-          
 
           <tr class="headerSportTypeDetail">
             <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" /></td>
@@ -1246,31 +1202,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@minv11pt_10" />
                       </td>
-                    </tr>
-
-                    <tr class="headerSportTypeDetail">
-                      <td colspan="6">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('hrfixedodds')" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('minv154pt_20')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@minv154pt_20" />
-                      </td>
-                      <td class="colW1">
-
-                      </td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1">
-                      </td>
-                      <td class="colW2">
-                      </td>
-
                     </tr>
                     
                     <tr class="headerSportTypeDetail">

@@ -47,12 +47,7 @@
         </tr>
 
         <tr>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('discounthrfixedodds')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@discounthrfixedodds" />
-          </td>
+
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
           </td>
@@ -66,15 +61,15 @@
           <td class="colW2">
             <xsl:value-of select="@subaccname" />
           </td>
-
-        </tr>
-        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@language" />
           </td>
+        </tr>
+        <tr>
+
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
           </td>
@@ -87,17 +82,13 @@
           <td class="colW2">
             <xsl:value-of select="@errcode" />
           </td>
-        </tr>
-        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@errmsg" />
           </td>
-          <td class="colW1"></td><td class="colW2"></td>
-          <td class="colW1"></td><td class="colW2"></td>
-        </tr>
+        </tr>        
       </table>
     </xsl:if>
     <xsl:if test="xslLogFormat:IsShowMyanmarOdds() = 'True'">
@@ -123,12 +114,7 @@
           </td>
         </tr>
         <tr>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('discounthrfixedodds')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@discounthrfixedodds" />
-          </td>
+
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
           </td>
@@ -141,14 +127,15 @@
           <td class="colW2">
             <xsl:value-of select="@discountmyanmarodds" />
           </td>
-        </tr>
-        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@subaccname" />
-          </td>
+          </td>          
+        </tr>
+        <tr>
+          
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
           </td>
@@ -161,19 +148,24 @@
           <td class="colW2">
             <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
           </td>
-        </tr>
-        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@errcode" />
           </td>
+        </tr>
+        <tr>
+          
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@errmsg" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
           </td>
           <td class="colW1">
           </td>

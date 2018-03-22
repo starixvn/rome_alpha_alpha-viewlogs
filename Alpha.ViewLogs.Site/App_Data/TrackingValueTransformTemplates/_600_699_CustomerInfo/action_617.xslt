@@ -89,9 +89,11 @@
           <xsl:value-of select="@errmsg" />
         </td>
 
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('DisableHorseRacing')" /></td>
+        <td class="colW1">
+          
+        </td>
         <td class="colW2">
-          <xsl:value-of select="@disablehorseracing" />
+          
         </td>
       </tr>
      
@@ -120,18 +122,7 @@
             </td>
           </tr>
         </xsl:otherwise>
-      </xsl:choose>
-
-      <tr>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('disablefinancial')" /></td>
-        <td class="colW2">
-          <xsl:value-of select="@disablefinancial" />
-        </td>
-        <td class="colW1"></td><td class="colW2"></td>
-        <td class="colW1"></td><td class="colW2"></td>
-      </tr>
-
-
+      </xsl:choose>    
     </table>
 
   </xsl:template>

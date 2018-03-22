@@ -51,19 +51,21 @@
               </td>
             </tr>
             <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('discounthrfixedodds')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@discounthrfixedodds" />
-              </td>
+
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@discountnumber" />
               </td>
-              <td class="colW1"></td><td class="colW2"></td>
+              <td class="colW1"></td>
+              <td class="colW2"></td>
+              <td class="colW1">
+
+              </td>
+              <td class="colW2">
+
+              </td>
             </tr>
           </table>
         </xsl:if>
@@ -91,12 +93,6 @@
             </tr>
             <tr>
               <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('discounthrfixedodds')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@discounthrfixedodds" />
-              </td>
-              <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
               </td>
               <td class="colW2">
@@ -108,6 +104,13 @@
               <td class="colW2">
                 <xsl:value-of select="@discountmyanmarodds" />
               </td>
+              <td class="colW1">
+
+              </td>
+              <td class="colW2">
+
+              </td>
+
             </tr>
           </table>
         </xsl:if>
@@ -1744,18 +1747,20 @@
         </tr>
         <tr>
           <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('discounthrfixedodds')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@discounthrfixedodds" />
-          </td>
-          <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@discountnumber" />
           </td>
-          <td class="colW1"></td><td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
+          <td class="colW1">
+
+          </td>
+          <td class="colW2">
+
+          </td>
+
         </tr>
         <tr>
           <td class="colW1">
@@ -1792,7 +1797,8 @@
           <td class="colW2">
             <xsl:value-of select="@errmsg" />
           </td>
-          <td class="colW1"></td><td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
         </tr>
       </table>
     </xsl:if>
@@ -1820,12 +1826,6 @@
         </tr>
         <tr>
           <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('discounthrfixedodds')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@discounthrfixedodds" />
-          </td>
-          <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
           </td>
           <td class="colW2">
@@ -1837,6 +1837,13 @@
           <td class="colW2">
             <xsl:value-of select="@discountmyanmarodds" />
           </td>
+          <td class="colW1">
+
+          </td>
+          <td class="colW2">
+
+          </td>
+
         </tr>
         <tr>
           <td class="colW1">
@@ -1873,7 +1880,8 @@
           <td class="colW2">
             <xsl:value-of select="@errmsg" />
           </td>
-          <td class="colW1"></td><td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
         </tr>
       </table>
     </xsl:if>

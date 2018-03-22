@@ -98,7 +98,6 @@
       </tr>
 
       <tr>
-
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('suspendedMultiple')" />
         </td>
@@ -106,61 +105,31 @@
           <xsl:value-of select="@suspendedmultiple" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('disabledfi')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disabledfi" />
-        </td>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-      </tr>
-
-      <tr>
-        <!--<td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('userID')" />
-                </td>
-                <td class="colW2">
-                    <xsl:value-of select="@userid" />
-                </td>-->
-        <!--<xsl:choose>
-                    <xsl:when test="$IsInternal = 0">
-                        <td class="colW1"></td>
-                        <td class="colW2">
-
-                        </td>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('userID')" /></td>
-                        <td class="colW2">
-
-                            <xsl:value-of select="@userid" />
-                        </td>
-
-                    </xsl:otherwise>
-                </xsl:choose>-->
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@language" />
         </td>
+      </tr>
+
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subAccName')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@subaccname" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
       </tr>
-
-
-
-
-
     </table>
   </xsl:template>
 </xsl:stylesheet>

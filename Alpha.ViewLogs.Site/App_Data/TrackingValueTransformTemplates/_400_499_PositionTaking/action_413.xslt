@@ -67,20 +67,15 @@
 								  <xsl:value-of select="@updptv11" />
 							  </td>
                 <td class="colW1">
-                  <xsl:value-of select="xslLogFormat:GetLogResource('Updptv154')" />
-                </td>
-                <td class="colW2">
-                  <xsl:value-of select="@updptv154" />
-                </td>							 
-						  </tr>
-						  <tr >
-                <td class="colW1">
                   <xsl:value-of select="xslLogFormat:GetLogResource('Updptv161')" />
                 </td>
                 <td class="colW2">
                   <xsl:value-of select="@updptv161" />
                 </td>
-							  <td class="colW1">
+              </tr>
+              <tr >
+
+                <td class="colW1">
 								  <xsl:value-of select="xslLogFormat:GetLogResource('Updptv99')" />
 							  </td>
 							  <td class="colW2">
@@ -92,32 +87,38 @@
 							  <td class="colW2">
 								  <xsl:value-of select="@updptv99mp" />
 							  </td>
-							  
-
-						  </tr>
-						  <tr >
-                <td class="colW1">
+							  <td class="colW1">
                   <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
                 </td>
                 <td class="colW2">
                   <xsl:value-of select="@subaccname" />
                 </td>
+
+						  </tr>
+						  <tr >
+                
 							  <td class="colW1">
 								  <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
 							  </td>
 							  <td class="colW2">
 								  <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
 							  </td>
-                <td class="colW1"></td><td class="colW2"></td>
+                <td class="colW1">
+                  <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
+                </td>
+                <td class="colW2">
+                  <xsl:value-of select="@language" />
+                </td>
+                <td class="colW1">
+                  <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
+                </td>
+                <td class="colW2">
+                  <xsl:value-of select="@errcode" />
+                </td>
 						  </tr>
 
 						  <tr >
-							  <td class="colW1">
-								  <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
-							  </td>
-							  <td class="colW2">
-								  <xsl:value-of select="@language" />
-							  </td>
+							  
 							  <td class="colW1">
 								  <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
 							  </td>
@@ -130,6 +131,9 @@
 							  <td class="colW2">
 								  <xsl:value-of select="@errmsg" />
 							  </td>
+
+                <td class="colW1"></td>
+                <td class="colW2"></td>
 						  </tr>
 					  </table>
 				  </div>
@@ -411,22 +415,6 @@
                   <td class="colValue"></td>
                 </tr>
 
-                <tr class="headerSportTypeDetail">
-                  <td colspan="6">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('hrfixedodds')" />
-                  </td>
-                </tr>
-                <tr >
-                  <td class="colTitle">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('v154apt_20')" />
-                  </td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v154apt_20" />
-                  </td>
-                  <td class="colTitle"></td><td class="colValue"></td>
-                  <td class="colTitle"></td><td class="colValue"></td>
-                </tr>
-                
                 <tr class="headerSportTypeDetail">
                   <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" /></td>
                 </tr>

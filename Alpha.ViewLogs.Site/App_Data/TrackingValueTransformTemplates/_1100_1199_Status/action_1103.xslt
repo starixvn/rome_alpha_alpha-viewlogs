@@ -24,47 +24,7 @@
         <td class="colW2">
           <xsl:value-of select="@doublecommlosing" />
         </td>
-      </tr>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('DisableHorseRacing')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disablehorseracing" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('DisableOT')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disableot" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('Disable151_51')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disable151_51" />
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('Disable152_41')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disable152_41" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('Disable152_51')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disable152_51" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('Disable153_51')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disable153_51" />
-        </td>
-      </tr>
+      </tr>   
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('DisableOutright')" />
@@ -73,37 +33,18 @@
           <xsl:value-of select="@disableoutright" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('disableLiveCS')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disable162_1101" />
-        </td>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('DisableCasino')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@disablecasino" />
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('DisableBingo')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disablebingo" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('disablehrfixedodds')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disablehrfixedodds" />
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('DisabledESports')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@disableesports" />
-        </td>
+        </td>             
+        
       </tr>
       <tr>
         <td class="colW1">
@@ -121,7 +62,6 @@
         <td class="colW2">
         </td>
       </tr>
-
       <xsl:if test="xslLogFormat:IsVisibleKeno(@hidekeno) = 'True'">
         <tr >
           <td class="colW1">

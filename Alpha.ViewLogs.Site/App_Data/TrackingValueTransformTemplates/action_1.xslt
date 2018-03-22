@@ -6,9 +6,7 @@
     <table width="100%" class="tblDesc">
       <tr>
         <td>
-          <b>
-            <xsl:value-of select="xslLogFormat:GetLogResource('disabledfi')" />: <xsl:value-of select="@DisableFinancial" />
-            &#160;
+          <b>           
             <xsl:value-of select="xslLogFormat:GetLogResource('disabledownline')" />: <xsl:value-of select="@DisableDownline" />
             &#160;
             <xsl:value-of select="xslLogFormat:GetLogResource('subaccount')" />: <xsl:value-of select="@SubAccName" />
