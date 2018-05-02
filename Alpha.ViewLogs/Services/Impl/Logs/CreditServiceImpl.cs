@@ -24,11 +24,13 @@
                 throw new ArgumentNullException("logParam");
             }
 
+            var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
+
             return new GetCreditLogsCriteria(
                 logParam.CustId,
                 logParam.Username,
-                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                DateTimeHelper.GetBeginningOfDate(fromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
                 logParam.IsInternal,
                 logParam.PageIndex,
                 logParam.PageSize);
@@ -41,9 +43,11 @@
                 throw new ArgumentNullException("logParam");
             }
 
+            var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
+
             return new GetTotalCreditLogsCriteria(
                 logParam.CustId,
-                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
+                DateTimeHelper.GetBeginningOfDate(fromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),
                 logParam.IsInternal);
         }

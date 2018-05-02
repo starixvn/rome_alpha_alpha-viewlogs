@@ -34,11 +34,13 @@
                 throw new ArgumentNullException("logParam");
             }
 
+            var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
+
             return new GetLoginLogsCriteria(
                 logParam.CustId,
                 logParam.Username,
-                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                DateTimeHelper.GetBeginningOfDate(fromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
                 logParam.IsInternal ? LoginLogType.InternalAlpha : LoginLogType.Alpha,
                 logParam.PageIndex,
                 logParam.PageSize);
@@ -51,11 +53,13 @@
                 throw new ArgumentNullException("logParam");
             }
 
+            var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
+
             return new GetTotalLoginLogsCriteria(
                 logParam.CustId,
                 logParam.Username,
-                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                DateTimeHelper.GetBeginningOfDate(fromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
                 logParam.IsInternal ? LoginLogType.InternalAlpha : LoginLogType.Alpha);
         }
     }

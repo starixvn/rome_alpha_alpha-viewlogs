@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Web;
     using Configurations;
+    using Constants;
     using Fanex.Common;
     using Sunplus.Agent.Model.Definitions;
     using Sunplus.Agent.Model.Entities;
@@ -18,6 +19,8 @@
         private readonly DateTime maxReportDate;
 
         private readonly DateTime minReportDate;
+
+        private readonly DateTime limitedDateToShowInfo;
 
         private readonly Dictionary<int, bool> actionIdVisibilities;
 
@@ -53,6 +56,8 @@
             // Limit time range for view log in 2 years (start from beginning of last year)
             maxReportDate = dateTimeWrap.Now;
             minReportDate = new DateTime(dateTimeWrap.Now.AddYears(-1).Year, 1, 1);
+
+            limitedDateToShowInfo = currentUserSession.GetProperty<DateTime>(SessionKey.CustomerDateLimit);
 
             RoleId = currentUserSession.RoleId;
             HasViewLogPermission = currentUserSession.SubPageAccess != null && currentUserSession.SubPageAccess.ViewLog;
@@ -140,6 +145,8 @@
                 return minReportDate;
             }
         }
+
+        public DateTime LimitedDateForShowInfo => limitedDateToShowInfo;
 
         private Dictionary<int, bool> GetActionIdVisibilities()
         {

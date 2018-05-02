@@ -27,13 +27,15 @@
                 throw new ArgumentNullException("logParam");
             }
 
+            var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
+
             return new GetStatusLogsCriteria(
                 logParam.CustId,
                 logParam.Username,
                 ActionIdFrom, // Just get status from action id 1100 , because it uses same SP with customer setting log
                 ActionIdTo, // Just get status to action id 1199, because it uses same SP with customer setting log
-                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                DateTimeHelper.GetBeginningOfDate(fromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
                 logParam.IsInternal,
                 logParam.PageIndex,
                 logParam.PageSize);
@@ -46,13 +48,15 @@
                 throw new ArgumentNullException("logParam");
             }
 
+            var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
+
             return new GetTotalStatusLogsCriteria(
                 logParam.CustId,
                 //// Just get status from action id 1100 => 1199, because it uses same SP with customer setting log
                 ActionIdFrom,
                 ActionIdTo,
-                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                DateTimeHelper.GetBeginningOfDate(fromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
                 logParam.IsInternal);
         }
     }
