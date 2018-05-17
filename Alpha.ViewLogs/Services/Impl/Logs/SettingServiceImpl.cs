@@ -25,11 +25,13 @@
                 throw new ArgumentNullException("logParam");
             }
 
+            var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
+
             return new GetSettingLogsCriteria(
                 logParam.CustId,
                 logParam.Username,
                 ((SettingParam)logParam).ActionTypeId,
-                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
+                DateTimeHelper.GetBeginningOfDate(fromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),
                 logParam.IsInternal,
                 logParam.PageIndex,
@@ -43,11 +45,13 @@
                 throw new ArgumentNullException("logParam");
             }
 
+            var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
+
             return new GetTotalSettingLogsCriteria(
                 logParam.CustId,
                 ((SettingParam)logParam).ActionTypeId,
-                DateTimeHelper.GetBeginningOfDate(logParam.FromDate),
-                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
+                DateTimeHelper.GetBeginningOfDate(fromDate),
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
                 logParam.IsInternal);
         }
     }

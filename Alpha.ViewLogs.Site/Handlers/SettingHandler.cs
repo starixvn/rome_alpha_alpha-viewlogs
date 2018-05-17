@@ -60,7 +60,8 @@
                 MaxReportDate = message.MaxReportDate,
                 MinReportDate = message.MinReportDate,
                 IsShowOldValue = message.IsShowOldValue,
-                ActionTypeId = string.IsNullOrWhiteSpace(message.ActionTypeId) ? ActionType.All : Converter.ToInt(message.ActionTypeId)
+                ActionTypeId = string.IsNullOrWhiteSpace(message.ActionTypeId) ? ActionType.All : Converter.ToInt(message.ActionTypeId),
+                LimitedDateToShowInfo = message.LimitedDateForShowInfo
             };
 
             var pagingLogs = LogService.GetPagingLogs(logsParam);

@@ -54,7 +54,8 @@
 
                 MaxReportDate = logQuery.MaxReportDate,
                 MinReportDate = logQuery.MinReportDate,
-                IsShowOldValue = logQuery.IsShowOldValue
+                IsShowOldValue = logQuery.IsShowOldValue,
+                LimitedDateToShowInfo = logQuery.LimitedDateForShowInfo
             };
         }
 

@@ -36,5 +36,7 @@
         public DateTime MaxReportDate { get; set; }
 
         public DateTime MinReportDate { get; set; }
+
+        public DateTime LimitedDateToShowInfo { get; set; }
     }
 }

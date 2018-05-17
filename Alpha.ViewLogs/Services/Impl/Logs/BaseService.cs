@@ -131,6 +131,9 @@
             return pagingLogs;
         }
 
+        protected DateTime GetGreaterDate(DateTime fromDate, DateTime limitedDate)
+            => fromDate < limitedDate ? limitedDate : fromDate;
+
         protected virtual IEnumerable<Log> GetLogs(LogParam logParam)
         {
             var criteria = CreateGetLogsCriteria(logParam);
