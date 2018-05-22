@@ -45,3 +45,7 @@ bundles
 *.js.map
 */assets/scripts/**/*.js
 */bundles/**/*.js
+/.vs/Alpha.ViewLogs/v15/Server/sqlite3/db.lock
+/.vs/Alpha.ViewLogs/v15/Server/sqlite3/storage.ide
+/.vs/Alpha.ViewLogs/v15/Server/sqlite3/storage.ide-shm
+/.vs/Alpha.ViewLogs/v15/Server/sqlite3/storage.ide-wal
