@@ -36,7 +36,7 @@
                     {
                         logs.Add(new LoginLog
                         {
-                            LogId = Converter.ToInt(reader["LogID"]),
+                            LogId = Converter.To<long>(reader["LogID"]),
                             UserId = Converter.ToInt(reader["UserID"]),
                             Username = Converter.ToString2(reader["Username"]),
                             Details = Converter.ToString2(reader["Doing"]),
