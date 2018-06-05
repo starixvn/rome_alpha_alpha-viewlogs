@@ -9,6 +9,7 @@
     using Constants;
     using Helpers;
     using Params;
+    using Sunplus.Agent.Model.Definitions;
 
     public class LogFormatterImpl : LogFormatter
     {
@@ -20,6 +21,7 @@
         private Dictionary<string, int> resourcesByProductCacheRef;
 
         private bool isShowMyanmarOdds;
+        private bool isShowPokerGames;
 
         public LogFormatterImpl(
             ViewLogIPService ipService,
@@ -47,6 +49,7 @@
             resourcesByProductCacheRef = transformParam.ResourcesProductCacheRef;
 
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
+            isShowPokerGames = transformParam.IsShowPokerGames;
         }
 
         public string FormatIP(string ip)
@@ -98,7 +101,7 @@
             }
 
             var codes = XElement.Parse("<root>" + dayCodesWithDiff + "</root>").Elements().ToList();
-            var nodeCount = codes.Count();
+            var nodeCount = codes.Count;
 
             var newValue = string.Empty;
             var oldValue = string.Empty;
@@ -195,6 +198,11 @@
             return isShowMyanmarOdds;
         }
 
+        public bool IsShowPokerGames()
+        {
+            return isShowPokerGames;
+        }
+
         public bool IsRNGCasino(int sportType)
         {
             return sportType == SportId.RNGGame ||
@@ -224,7 +232,7 @@
             {
                 resourceValue = $"{TrackingValueResources.disabled} {GetProductName(resourcesByProductCacheRef[lowerCaseResourceName])}";
             }
-            else if (resourcesByBetTypeCacheRef != null && 
+            else if (resourcesByBetTypeCacheRef != null &&
                 resourcesByBetTypeCacheRef.ContainsKey(lowerCaseResourceName))
             {
                 resourceValue = $"{TrackingValueResources.disabled} {GetBetTypeName(resourcesByBetTypeCacheRef[lowerCaseResourceName])}";
@@ -236,6 +244,27 @@
             }
 
             return string.IsNullOrEmpty(resourceValue) ? string.Empty : string.Format(statusHtmlFormat, resourceValue, value);
+        }
+
+        public string GetDisabledPokerGames()
+        {
+            return string.Format("{0} {1}", Resources.Disabled, remotingRef.GetProductName(ProductIdConstants.PokerGames));
+        }
+
+        public string GetDisabledPokerGamesValue(
+            string disableValue1,
+            string disableValue2,
+            string disableValue3,
+            string disableValue4)
+        {
+            var disableValues = new[] { disableValue1, disableValue2, disableValue3, disableValue4 };
+
+            return GetDisabledPokerGamesValue(disableValues);
+        }
+
+        private string GetDisabledPokerGamesValue(params string[] disableValues)
+        {
+            return disableValues.Any(disableValue => disableValue == "0") ? "0" : "1";
         }
 
         private string CovertCodeCondition(string dayCodes)

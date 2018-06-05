@@ -188,6 +188,16 @@
 			<xsl:for-each select="@*">
 				<xsl:value-of select="xslLogFormat:RenderCustStatus(name(), .)"/>
 			</xsl:for-each>
+      <xsl:if test="xslLogFormat:IsShowPokerGames() = 'True'">
+        <tr>
+          <td colspan="3" class="colW1">
+            <xsl:value-of select="xslLogFormat:GetDisabledPokerGames()" />
+          </td>
+          <td colspan="3" class="colW2">
+            <xsl:value-of select="xslLogFormat:GetDisabledPokerGamesValue(@disable163_1401, @disable163_1402, @disable163_1403, @disable163_1404)" />
+          </td>
+        </tr>
+      </xsl:if>
 		</table>
 	</xsl:template>
 </xsl:stylesheet>

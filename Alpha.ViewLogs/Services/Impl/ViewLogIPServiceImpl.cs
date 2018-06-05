@@ -50,7 +50,7 @@
             return isShowIP ? country : string.Empty;
         }                
 
-        private bool IsValidIP(string ipAddress)
+        private static bool IsValidIP(string ipAddress)
         {
             IPAddress ip;
             return !string.IsNullOrWhiteSpace(ipAddress)

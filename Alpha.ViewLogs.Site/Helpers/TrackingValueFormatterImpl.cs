@@ -52,7 +52,7 @@
                 return;
             }
 
-            var ignoreFormatAttributes = new string[] { "ip", "loginip", "stakelevel1" };
+            var ignoreFormatAttributes = new[] { "ip", "loginip", "stakelevel1" };
 
             foreach (XmlAttribute newAttribute in newAttributes)
             {
@@ -80,17 +80,9 @@
 
         private static string FormatValue(string newValue, string oldValue, bool isShowOldValue)
         {
-            string formattedValue = string.Empty;
-
-            if (!isShowOldValue)
-            {
-                formattedValue = string.Format("<span class=\"valuechanged\" title=\"{0} --> {1}\">{1}</span>", oldValue, newValue);
-            }
-            else
-            {
-                formattedValue =
-                    string.Format("<span class=\"valuechanged\">{0}</span><span class=\"valueold\">({1})</span>", newValue, oldValue);
-            }
+            string formattedValue = isShowOldValue
+                ? string.Format("<span class=\"valuechanged\">{0}</span><span class=\"valueold\">({1})</span>", newValue, oldValue)
+                : string.Format("<span class=\"valuechanged\" title=\"{0} --> {1}\">{1}</span>", oldValue, newValue);
 
             return formattedValue;
         }

@@ -6,7 +6,7 @@
 
     public class CustomerServiceImpl : CustomerService
     {
-        private IDynamicRepository dynamicRepository;
+        private readonly IDynamicRepository dynamicRepository;
 
         public CustomerServiceImpl(IDynamicRepository dynamicRepository)
         {

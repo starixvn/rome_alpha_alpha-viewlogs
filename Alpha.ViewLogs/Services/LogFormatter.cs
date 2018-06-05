@@ -32,6 +32,8 @@
 
         bool IsShowMyanmarOdds();
 
+        bool IsShowPokerGames();
+
         bool IsVisibleKeno(string hideKeno);
 
         string GetDisabledKenoBetTypeName(string disableBetType);
@@ -41,5 +43,13 @@
         bool IsGoldDeluxe(int sportType);
 
         string RenderCustStatus(string name, string value);
+
+        string GetDisabledPokerGames();
+
+        string GetDisabledPokerGamesValue(
+            string disableValue1,
+            string disableValue2,
+            string disableValue3,
+            string disableValue4);
     }
 }

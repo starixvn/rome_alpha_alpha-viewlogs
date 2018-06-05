@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
     using System;
+    using Criteria;
     using Criteria.Status;
     using DataAccesses;
     using Fanex.Data.Repository;
@@ -33,7 +34,7 @@
                 logParam.Username,
                 ActionTypeId,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
-                DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
                 logParam.IsInternal,
                 logParam.PageIndex,
                 logParam.PageSize);
@@ -48,11 +49,11 @@
 
             var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
 
-            return new GetTotalStatusLogsCriteria(
+            return new GetTotalSettingOrStatusLogsCriteria(
                 logParam.CustId,
                 ActionTypeId,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
-                DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
                 logParam.IsInternal);
         }
     }
