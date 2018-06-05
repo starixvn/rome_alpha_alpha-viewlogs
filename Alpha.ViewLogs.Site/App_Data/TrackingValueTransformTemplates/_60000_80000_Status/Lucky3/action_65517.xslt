@@ -25,7 +25,7 @@
       <div class="headerSportTypeDetail">
         <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
       </div>
-      <table  class="tblDesc">
+      <table class="tblDesc">
         <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('isdisabled')" />

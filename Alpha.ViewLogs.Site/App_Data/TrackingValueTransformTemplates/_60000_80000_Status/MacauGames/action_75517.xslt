@@ -23,7 +23,7 @@
     
     <xsl:for-each select="productstatus">
       <div class="headerSportTypeDetail">
-        <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+        <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
       </div>
       <table  class="tblDesc">
         <tr>
