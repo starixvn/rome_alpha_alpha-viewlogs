@@ -3634,7 +3634,7 @@
     <value>ปิดกีฬาอนิเมชั่น</value>
   </data>
   <data name="updateAllMembers" xml:space="preserve">
-    <value>Update All Members</value>
+    <value>อัพเดตสมาชิกทั้งหมด</value>
   </data>
   <data name="newPT" xml:space="preserve">
     <value>New PT</value>
@@ -3782,5 +3782,20 @@
   </data>
   <data name="hideGD" xml:space="preserve">
     <value>Hide Gold Deluxe</value>
+  </data>
+  <data name="isDisabledAllAgents" xml:space="preserve">
+    <value>คือ ปิดใช้งาน - เอเย่นต์ทั้งหมด</value>
+  </data>
+  <data name="isDisabledAllMasters" xml:space="preserve">
+    <value>คือ ปิดใช้งาน - มาสเตอร์ ทั้งหมด</value>
+  </data>
+  <data name="isDisabledAllMembers" xml:space="preserve">
+    <value>คือ ปิดใช้งาน - สมาชิกทั้งหมด</value>
+  </data>
+  <data name="updateAllAgents" xml:space="preserve">
+    <value>อัพเดตเอเย่นต์งหมด</value>
+  </data>
+  <data name="updateAllMasters" xml:space="preserve">
+    <value>อัพเดตมาสเตอร์ทั้งหมด</value>
   </data>
 </root>
