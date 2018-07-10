@@ -407,6 +407,13 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65009.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65011.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_60005.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70013.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75018.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75017.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75019.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70014.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70017.xslt" />
