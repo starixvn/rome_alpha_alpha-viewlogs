@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Services
 {
-    public interface IPService
+    public interface ViewLogIPService
     {
         string FormatIP(string ip);
 

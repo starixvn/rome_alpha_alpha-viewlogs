@@ -60,7 +60,7 @@
         private XslCompiledTransform GetCompiledTransformTemplate(int actionId, string trackingValueTransformTemplatePath)
         {
             var cacheKey = string.Format(TransformObjectCacheKey, actionId);
-            var cachedCompiledTransform = CacheService.Get<XslCompiledTransform>(cacheKey);
+            var cachedCompiledTransform = ConfiguredCacheService.Get<XslCompiledTransform>(cacheKey);
 
             if (cachedCompiledTransform != null)
             {
@@ -81,7 +81,7 @@
                 return null;
             }
 
-            CacheService.Set(cacheKey, compiledTransform, DefaultVariables.CacheItemOptions);
+            ConfiguredCacheService.Set(cacheKey, compiledTransform, DefaultVariables.CacheItemOptions);
 
             return compiledTransform;
         }

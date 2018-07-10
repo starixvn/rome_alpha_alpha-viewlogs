@@ -22,7 +22,7 @@
         private const string LowerCaseValidResourceKey = "Validkey";
         private const string InvalidResourceKey = "invalidKey";
 
-        private IPService ipService;
+        private ViewLogIPService ipService;
         private RemotingRefWrapper remotingRef;
         private LogFormatterImpl logFormatter;
 
@@ -34,7 +34,7 @@
             Thread.CurrentThread.CurrentCulture = new CultureInfo(LanguageCode.English);
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
 
-            ipService = Substitute.For<IPService>();
+            ipService = Substitute.For<ViewLogIPService>();
             remotingRef = Substitute.For<RemotingRefWrapper>();
 
             logFormatter = new LogFormatterImpl(ipService, remotingRef);
