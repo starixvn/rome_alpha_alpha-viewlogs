@@ -55,7 +55,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Alpha.Utilities.IP, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Alpha.Utilities.IP.1.0.0.1-LowIPPerformance-01\lib\net40\Alpha.Utilities.IP.dll</HintPath>
+      <HintPath>..\packages\Alpha.Utilities.IP.1.0.0.1\lib\net40\Alpha.Utilities.IP.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">

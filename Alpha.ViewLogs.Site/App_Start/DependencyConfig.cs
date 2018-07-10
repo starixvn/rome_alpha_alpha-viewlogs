@@ -19,6 +19,7 @@
     using SimpleInjector.Integration.Web.Mvc;
     using Sunplus.Agent.Model.Base;
     using Sunplus.Agent.Model.Entities;
+    using Utilities.IP;
     using ViewLogs.Helpers;
     using ViewLogs.Helpers.Impl;
 
@@ -88,6 +89,7 @@
             container.Register<TrackingValueFormatter, TrackingValueFormatterImpl>(Lifestyle.Transient);
 
             container.Register<ViewLogIPService, ViewLogIPServiceImpl>(Lifestyle.Transient);
+            container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);
             container.Register<RemotingRefWrapper, RemotingRefWrapperImpl>(Lifestyle.Transient);
 
             container.RegisterConditional<LogService, SettingServiceImpl>(
