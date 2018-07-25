@@ -4,7 +4,6 @@
     <Setting Key="GetIPVN" SpName="GetIPVN" DbName="DBCust.IPDB.BODBDownlineNet" Plain="0">
       <Mapping DataField="ipfrom" ObjectProperty="From" />
       <Mapping DataField="ipto" ObjectProperty="To" />
-      <Mapping DataField="isManual" ObjectProperty="IsManual" />
     </Setting>
   </Function>
 </Functions>

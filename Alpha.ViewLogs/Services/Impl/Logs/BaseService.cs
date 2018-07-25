@@ -70,7 +70,7 @@
 
         public IEnumerable<LogActionType> GetLogActionTypes()
         {
-            var logActionTypes = CacheService.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
+            var logActionTypes = ConfiguredCacheService.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
 
             if (logActionTypes != null
                 && logActionTypes.Any())
@@ -80,14 +80,14 @@
 
             logActionTypes = dynamicRepository.Fetch<LogActionType>(new GetAllLogActionTypeCriteria());
 
-            CacheService.Set(LogActionTypesCacheKey, logActionTypes, new CacheItemOptions { SlidingExpiration = TimeSpan.FromHours(OneHour) });
+            ConfiguredCacheService.Set(LogActionTypesCacheKey, logActionTypes, new CacheItemOptions { SlidingExpiration = TimeSpan.FromHours(OneHour) });
 
             return logActionTypes;
         }
 
         public LogAction GetLogAction(int actionId)
         {
-            var logActionDictionary = CacheService.Get<Dictionary<int, LogAction>>(LogActionCacheKey);
+            var logActionDictionary = ConfiguredCacheService.Get<Dictionary<int, LogAction>>(LogActionCacheKey);
 
             if (logActionDictionary == null
                 || !logActionDictionary.Any())
@@ -96,7 +96,7 @@
                     .Fetch<LogAction>(new GetLogActionsCriteria())
                     .ToDictionary(logAction => logAction.Id);
 
-                CacheService.Set(LogActionCacheKey, logActionDictionary, DefaultVariables.CacheItemOptions);
+                ConfiguredCacheService.Set(LogActionCacheKey, logActionDictionary, DefaultVariables.CacheItemOptions);
             }
 
             return logActionDictionary.ContainsKey(actionId) ?

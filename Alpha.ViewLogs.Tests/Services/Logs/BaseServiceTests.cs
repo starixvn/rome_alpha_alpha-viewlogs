@@ -31,7 +31,7 @@
         public void SetUp()
         {
             cacheForTesting = Substitute.For<Cache>();
-            CacheService.SwitchCacheStorage(cacheForTesting);
+            ConfiguredCacheService.SwitchCacheStorage(cacheForTesting);
 
             dynamicRepository = Substitute.For<IDynamicRepository>();
             customerService = Substitute.For<CustomerService>();

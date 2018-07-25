@@ -58,7 +58,6 @@
     <Compile Include="Criteria\GetAllLogActionTypeCriteria.cs" />
     <Compile Include="Criteria\Setting\GetSettingLogsCriteria.cs" />
     <Compile Include="Criteria\Setting\GetTotalSettingLogsCriteria.cs" />
-    <Compile Include="Criteria\GetIPVNCriteria.cs" />
     <Compile Include="Criteria\GetLogActionsCriteria.cs" />
     <Compile Include="Criteria\Login\GetLoginLogsCriteria.cs" />
     <Compile Include="Criteria\Login\GetTotalLoginLogsCriteria.cs" />
@@ -78,7 +77,6 @@
     <Compile Include="Models\Enumerations\Enumeration.cs" />
     <Compile Include="Models\Enumerations\UserLevel.cs" />
     <Compile Include="Models\LogActionType.cs" />
-    <Compile Include="Models\IPRange.cs" />
     <Compile Include="Models\LogAction.cs" />
     <Compile Include="Models\LoginLog.cs" />
     <Compile Include="Models\PagingLogs.cs" />
@@ -93,12 +91,12 @@
     <Compile Include="Services\Impl\CustomerServiceImpl.cs" />
     <Compile Include="Services\Impl\Logs\CreditServiceImpl.cs" />
     <Compile Include="Services\Impl\Logs\SettingServiceImpl.cs" />
-    <Compile Include="Services\Impl\IPServiceImpl.cs" />
+    <Compile Include="Services\Impl\ViewLogIPServiceImpl.cs" />
     <Compile Include="Services\Impl\Logs\LoginServiceImpl.cs" />
     <Compile Include="Services\Impl\Logs\StatusServiceImpl.cs" />
     <Compile Include="Services\Impl\TransformServiceImpl.cs" />
     <Compile Include="Services\Impl\LogFormatterImpl.cs" />
-    <Compile Include="Services\IPService.cs" />
+    <Compile Include="Services\ViewLogIPService.cs" />
     <Compile Include="Services\RemotingRefWrapper.cs" />
     <Compile Include="Services\TransformService.cs" />
     <Compile Include="Services\LogFormatter.cs" />
@@ -111,12 +109,16 @@
       <HintPath>..\packages\Alpha.SubAccount.1.0.0\lib\net40\Alpha.SubAccount.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Alpha.Utilities.IP, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alpha.Utilities.IP.1.0.0.1\lib\net40\Alpha.Utilities.IP.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Caching, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Caching.2.0.0\lib\net461\Fanex.Caching.dll</HintPath>
+    <Reference Include="Fanex.Caching, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Caching.2.1.0\lib\net461\Fanex.Caching.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Common, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">

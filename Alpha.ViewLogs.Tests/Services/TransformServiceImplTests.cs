@@ -28,7 +28,7 @@
         public void SetUp()
         {
             cacheForTesting = Substitute.For<Cache>();
-            CacheService.SwitchCacheStorage(cacheForTesting);
+            ConfiguredCacheService.SwitchCacheStorage(cacheForTesting);
 
             Thread.CurrentThread.CurrentCulture = new CultureInfo(LanguageCode.English);
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;

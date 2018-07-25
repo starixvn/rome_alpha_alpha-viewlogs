@@ -12,8 +12,8 @@
 
     public class LogFormatterImpl : LogFormatter
     {
-        private IPService ipService;
-        private RemotingRefWrapper remotingRef;
+        private readonly ViewLogIPService ipService;
+        private readonly RemotingRefWrapper remotingRef;
 
         private Dictionary<string, bool> custStatuses;
         private Dictionary<string, int> resourcesByBetTypeCacheRef;
@@ -22,7 +22,7 @@
         private bool isShowMyanmarOdds;
 
         public LogFormatterImpl(
-            IPService ipService,
+            ViewLogIPService ipService,
             RemotingRefWrapper remotingRef)
         {
             this.ipService = ipService;
