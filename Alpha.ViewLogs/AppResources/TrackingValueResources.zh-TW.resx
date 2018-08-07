@@ -3634,7 +3634,7 @@
     <value>禁用虚拟运动</value>
   </data>
   <data name="updateAllMembers" xml:space="preserve">
-    <value>Update All Members</value>
+    <value>更新全部會員</value>
   </data>
   <data name="newPT" xml:space="preserve">
     <value>New PT</value>
@@ -3782,5 +3782,20 @@
   </data>
   <data name="hideGD" xml:space="preserve">
     <value>Hide Gold Deluxe</value>
+  </data>
+  <data name="isDisabledAllAgents" xml:space="preserve">
+    <value>被禁用 - 全部代理</value>
+  </data>
+  <data name="isDisabledAllMasters" xml:space="preserve">
+    <value>被禁用 - 全部總代理</value>
+  </data>
+  <data name="isDisabledAllMembers" xml:space="preserve">
+    <value>被禁用 - 全部會員</value>
+  </data>
+  <data name="updateAllAgents" xml:space="preserve">
+    <value>更新全部代理</value>
+  </data>
+  <data name="updateAllMasters" xml:space="preserve">
+    <value>更新全部總代理</value>
   </data>
 </root>

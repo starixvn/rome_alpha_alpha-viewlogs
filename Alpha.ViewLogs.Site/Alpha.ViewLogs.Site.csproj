@@ -283,6 +283,582 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_250.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_395.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_392.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70510.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70511.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75514.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75513.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75512.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70509.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_65506.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_60503.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70507.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_65505.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_60502.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_65504.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70506.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75510.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70508.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75509.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75508.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75511.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_65507.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75515.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75554.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75553.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70540.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75552.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70539.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65526.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_60513.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70538.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65525.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70537.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65524.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_60512.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70536.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70541.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65527.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75555.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75548.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75549.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75550.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75551.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_60004.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65009.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65011.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_60005.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70013.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75018.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75017.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75019.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70014.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70017.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75023.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70015.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65010.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70016.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75022.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75021.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75020.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65013.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70020.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75027.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70019.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75026.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75025.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_60006.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70018.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65012.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75024.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75028.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75029.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70021.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75030.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70022.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65014.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75031.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70023.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65015.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_60007.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_65514.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70521.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75528.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70522.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75529.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75530.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_60507.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70520.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_65513.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70519.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_65512.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_60506.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70518.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70523.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_65515.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75531.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75524.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75525.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75526.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75527.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_65001.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70001.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75001.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_60000.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_65000.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75000.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70000.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75004.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75005.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75006.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70004.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_65002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75007.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70005.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_65003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_60001.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_65005.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75011.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70007.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75010.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75009.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_60002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_65004.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70006.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75012.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75013.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70009.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75014.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70010.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75015.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70011.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_65007.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_65006.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_60003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_65522.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70533.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75544.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70534.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75545.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75546.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_60511.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70532.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_65521.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70531.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_65520.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_60510.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70530.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70535.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_65523.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75547.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75540.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75541.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75542.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75543.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65518.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70527.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75536.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70528.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75537.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75538.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_60509.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70529.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65519.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75539.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70526.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65517.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70525.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65516.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_60508.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70524.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75532.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75533.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75534.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75535.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_65508.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_60504.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_65510.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70515.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75520.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70516.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75521.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75522.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_60505.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70512.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70517.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_65511.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75523.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75516.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70514.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_65509.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70513.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75517.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75518.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75519.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70545.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75560.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70546.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75561.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75562.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_65530.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_60515.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70547.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_65531.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75563.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75556.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75557.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70544.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75558.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75559.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70543.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70542.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_65528.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_60514.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_65529.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_75035.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_75034.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_75033.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_70026.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_70025.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_65017.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_75032.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_70024.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_65016.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_60008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70012.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75016.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65502.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70503.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75504.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70504.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75505.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75506.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_60501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70502.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65500.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_60500.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70500.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75503.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75502.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75500.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70505.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65503.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75507.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_850_899_WinLossLimit\action_851.xslt">
       <SubType>Designer</SubType>
     </Content>

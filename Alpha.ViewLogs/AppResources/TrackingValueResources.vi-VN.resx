@@ -3424,7 +3424,7 @@
     <value>Không cho phép chơi Virtual Sports</value>
   </data>
   <data name="updateAllMembers" xml:space="preserve">
-    <value>Update All Members</value>
+    <value>Cập nhật tất cả Người chơi</value>
   </data>
   <data name="newPT" xml:space="preserve">
     <value>New PT</value>
@@ -3545,5 +3545,20 @@
   </data>
   <data name="hideGD" xml:space="preserve">
     <value>Hide Gold Deluxe</value>
+  </data>
+  <data name="isDisabledAllAgents" xml:space="preserve">
+    <value>Bị vô hiệu - tất cả Agent</value>
+  </data>
+  <data name="isDisabledAllMasters" xml:space="preserve">
+    <value>Bị vô hiệu - tất cả Master</value>
+  </data>
+  <data name="isDisabledAllMembers" xml:space="preserve">
+    <value>Bị vô hiệu - tất cả Người chơi</value>
+  </data>
+  <data name="updateAllAgents" xml:space="preserve">
+    <value>Cập nhật tất cả Agent</value>
+  </data>
+  <data name="updateAllMasters" xml:space="preserve">
+    <value>Cập nhật tất cả Master</value>
   </data>
 </root>

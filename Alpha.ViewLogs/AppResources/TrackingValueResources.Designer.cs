@@ -5767,6 +5767,33 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is Disabled - All Agents.
+        /// </summary>
+        public static string isDisabledAllAgents {
+            get {
+                return ResourceManager.GetString("isDisabledAllAgents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is Disabled - All Masters.
+        /// </summary>
+        public static string isDisabledAllMasters {
+            get {
+                return ResourceManager.GetString("isDisabledAllMasters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is Disabled - All Members.
+        /// </summary>
+        public static string isDisabledAllMembers {
+            get {
+                return ResourceManager.GetString("isDisabledAllMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is Disabled Downline.
         /// </summary>
         public static string isdisableddownline {
@@ -9372,6 +9399,24 @@ namespace Alpha.ViewLogs.AppResources {
         public static string Updallmembers {
             get {
                 return ResourceManager.GetString("Updallmembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update All Agents.
+        /// </summary>
+        public static string updateAllAgents {
+            get {
+                return ResourceManager.GetString("updateAllAgents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update All Masters.
+        /// </summary>
+        public static string updateAllMasters {
+            get {
+                return ResourceManager.GetString("updateAllMasters", resourceCulture);
             }
         }
         
