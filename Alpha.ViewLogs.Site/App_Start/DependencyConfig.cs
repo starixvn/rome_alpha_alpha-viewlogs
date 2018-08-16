@@ -8,6 +8,7 @@
     using DataAccesses;
     using DataAccesses.Impl;
     using Fanex.Data.Repository;
+    using Fanex.RemotingRef;
     using Handlers;
     using Helpers;
     using MediatR;
@@ -90,7 +91,8 @@
 
             container.Register<ViewLogIPService, ViewLogIPServiceImpl>(Lifestyle.Transient);
             container.Register<IPService, IPServiceImpl>(Lifestyle.Transient);
-            container.Register<RemotingRefWrapper, RemotingRefWrapperImpl>(Lifestyle.Transient);
+            container.RegisterSingleton<IRemotingRefService, RemotingRefService>();
+            container.RegisterSingleton<RemotingRefWrapper, RemotingRefWrapperImpl>();
 
             container.RegisterConditional<LogService, SettingServiceImpl>(
                 Lifestyle.Transient,

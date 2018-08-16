@@ -13,6 +13,7 @@
     using Fanex.Data.OldConnectionStringProvider;
     using Fanex.Logging.Extensions.Database;
     using Fanex.Logging.Extensions.Web;
+    using Fanex.RemotingRef;
     using ONEbook.UM.Filters;
     using Sunplus.Agent.Model.Entities;
     using Web;
@@ -48,6 +49,10 @@
                 .UseGetDbExceptionInfo(DatabaseInfoGetters.GetDbExceptionInfo);
 
             ExceptionHandler.UseConfig(loggingConfiguration);
+
+            RefDataTypeContainer
+                .ConnectTo(new Uri(AppSettings.RemoteRefURL))
+                .FromApplication("Alpha.ViewLogs.Site");
         }
 
         protected void Application_Error(object sender, EventArgs e)

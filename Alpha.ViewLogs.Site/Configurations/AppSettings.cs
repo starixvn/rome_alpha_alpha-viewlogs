@@ -170,6 +170,8 @@
             }
         }
 
+        public static string RemoteRefURL => GetConfigValue("RemoteRefURL");
+
         public static string GetConfigValue(string configName)
         {
             return ConfigurationManager.AppSettings[configName];
