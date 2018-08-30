@@ -10,7 +10,7 @@
 
         public static string[] DaysInWeek()
         {
-            return new string[]
+            return new[]
             {
                 Resources.Sun,
                 Resources.Mon,

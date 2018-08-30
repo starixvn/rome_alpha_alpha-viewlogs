@@ -3,6 +3,7 @@
     using System;
     using Fanex.Data.Repository;
     using Params;
+    using ViewLogs.Criteria;
     using ViewLogs.Criteria.Setting;
     using ViewLogs.DataAccesses;
     using ViewLogs.Services;
@@ -25,7 +26,7 @@
 
         internal override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
-            return new GetTotalSettingLogsCriteria(0, 0, DateTime.Now, DateTime.Now, false);
+            return new GetTotalSettingOrStatusLogsCriteria(0, 0, DateTime.Now, DateTime.Now, false);
         }
     }
 }

@@ -7,7 +7,7 @@
 
     public static class Permissions
     {
-        private static readonly IDictionary<string, string> PemissionAbbs = new Dictionary<string, string>()
+        private static readonly IDictionary<string, string> PemissionAbbs = new Dictionary<string, string>
         {
             [PageAccessType.CreateAccount + PageAccessType.UpdateAccount + PageAccessType.ViewMemberInfo] = PageAccessType.CreateAccount,
             [PageAccessType.CreateAccount + PageAccessType.UpdateAccount] = PageAccessType.CreateAccount,

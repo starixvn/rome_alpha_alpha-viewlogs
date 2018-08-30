@@ -11,7 +11,6 @@
     public class TransformServiceImpl : TransformService
     {
         private const string TransformObjectCacheKey = "Alpha.ViewLogs.TransformObject_{0}";
-        private const int OneHour = 1;
 
         private readonly LogFormatter logFormatter;
 

@@ -6,7 +6,7 @@
 
     public class LogDataAccessImpl : LogDataAccess
     {
-        private IDynamicRepository dynamicRepository;
+        private readonly IDynamicRepository dynamicRepository;
 
         public LogDataAccessImpl(IDynamicRepository dynamicRepository)
         {

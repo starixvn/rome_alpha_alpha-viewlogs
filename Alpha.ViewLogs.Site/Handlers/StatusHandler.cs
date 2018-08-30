@@ -53,7 +53,8 @@
                 CustStatuses = message.SportBetTypeVisibilities,
                 ResourcesByBetTypeCacheRef = message.ResourcesByBetTypeCacheRef,
                 ResourcesProductCacheRef = message.ResourcesByProductCacheRef,
-                IsShowMyanmarOdds = message.IsShowMyanmarOdds
+                IsShowMyanmarOdds = message.IsShowMyanmarOdds,
+                IsShowPokerGames = message.IsShowPokerGames
             };
 
             var logItems = new List<LogItemViewModel>();

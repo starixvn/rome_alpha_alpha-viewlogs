@@ -42,7 +42,8 @@
             Dictionary<string, bool> custStatuses = null,
             Dictionary<string, int> resourcesByBetTypeCacheRef = null,
             Dictionary<string, int> resourceByProductCacheRef = null,
-            bool? isShowMyanmarOdds = null)
+            bool? isShowMyanmarOdds = null,
+            bool? isShowPokerGames = null)
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
             dateTimeWrap = dateTimeWrap ?? new DateTimeWrap();
@@ -65,6 +66,7 @@
             IsInternal = false;
             UplineId = currentUserSession.CustId;
             IsShowMyanmarOdds = isShowMyanmarOdds ?? UserPermission.IsShowMyanmarOdds;
+            IsShowPokerGames = isShowPokerGames ?? UserPermission.HasPermissionOnProduct(ProductIdConstants.PokerGames);
             PreviousUsername = Username;
         }
 
@@ -129,6 +131,8 @@
         }
 
         public bool IsShowMyanmarOdds { get; }
+
+        public bool IsShowPokerGames { get; }
 
         public DateTime MaxReportDate
         {

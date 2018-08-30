@@ -1,11 +1,11 @@
-﻿namespace Alpha.ViewLogs.Criteria.Status
+﻿namespace Alpha.ViewLogs.Criteria
 {
     using System;
     using Fanex.Data.Repository;
 
-    public class GetTotalStatusLogsCriteria : CriteriaBase
+    public class GetTotalSettingOrStatusLogsCriteria : CriteriaBase
     {
-        public GetTotalStatusLogsCriteria(
+        public GetTotalSettingOrStatusLogsCriteria(
             int custId,
             int actionTypeId,
             DateTime fromDate,
@@ -14,7 +14,6 @@
         {
             CustId = custId;
             ActionTypeId = actionTypeId;
-
             FromDate = fromDate;
             ToDate = toDate;
             IsInternal = isInternal;

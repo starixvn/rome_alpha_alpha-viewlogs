@@ -20,7 +20,8 @@
             Dictionary<string, bool> sportBetTypeVisibilities = null,
             Dictionary<string, int> resourcesByBetTypeCacheRef = null,
             Dictionary<string, int> resourcesByProductCacheRef = null,
-            bool? isShowMyanmarOdds = null) :
+            bool? isShowMyanmarOdds = null,
+            bool? isShowPokerGames = null) :
             base(
                 currentUserSession,
                 dateTimeWrap,
@@ -29,7 +30,8 @@
                 sportBetTypeVisibilities,
                 resourcesByBetTypeCacheRef,
                 resourcesByProductCacheRef,
-                isShowMyanmarOdds)
+                isShowMyanmarOdds,
+                isShowPokerGames)
         {
         }
 

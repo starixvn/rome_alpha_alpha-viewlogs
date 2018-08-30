@@ -9,7 +9,7 @@
 
     public class LogViewModel
     {
-        private MicroSites microSites;
+        private readonly MicroSites microSites;
 
         public LogViewModel(
             LogParam logParam,

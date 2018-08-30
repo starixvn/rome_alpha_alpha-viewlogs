@@ -2,6 +2,7 @@
 {
     using System;
     using System.Runtime.CompilerServices;
+    using Criteria;
     using Criteria.Setting;
     using DataAccesses;
     using Fanex.Data.Repository;
@@ -47,11 +48,11 @@
 
             var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
 
-            return new GetTotalSettingLogsCriteria(
+            return new GetTotalSettingOrStatusLogsCriteria(
                 logParam.CustId,
                 ((SettingParam)logParam).ActionTypeId,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
-                DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
                 logParam.IsInternal);
         }
     }
