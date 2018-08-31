@@ -1128,7 +1128,9 @@
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1101.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1102.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1103.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1103.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1104.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1105.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1106.xslt" />

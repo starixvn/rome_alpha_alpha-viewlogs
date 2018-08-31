@@ -255,9 +255,10 @@
             string disableValue1,
             string disableValue2,
             string disableValue3,
-            string disableValue4)
+            string disableValue4,
+            string disableValue5)
         {
-            var disableValues = new[] { disableValue1, disableValue2, disableValue3, disableValue4 };
+            var disableValues = new[] { disableValue1, disableValue2, disableValue3, disableValue4, disableValue5 };
 
             return GetDisabledPokerGamesValue(disableValues);
         }

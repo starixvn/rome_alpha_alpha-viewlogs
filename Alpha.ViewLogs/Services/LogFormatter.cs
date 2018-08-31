@@ -50,6 +50,7 @@
             string disableValue1,
             string disableValue2,
             string disableValue3,
-            string disableValue4);
+            string disableValue4,
+            string disableValue5);
     }
 }
