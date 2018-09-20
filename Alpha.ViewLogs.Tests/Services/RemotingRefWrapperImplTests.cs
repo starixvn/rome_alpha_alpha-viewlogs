@@ -1,26 +1,20 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
-    using System;
     using System.Globalization;
     using System.Threading;
     using Constants;
+    using Fanex.RemotingRef;
+    using NSubstitute;
     using NUnit.Framework;
     using ViewLogs.Services.Impl;
 
     [TestFixture]
     public class RemotingRefWrapperImplTests
     {
-        private const string ValidBetTypeName = "ValidBetTypeName";
-        private const string ValidSportName = "ValidSportName";
-        private const string ValidProductName = "ValidProductName";
-        private const int ValidBetId = 12;
+        private const string DefaultLanguage = "en-US";
 
+        private IRemotingRefService remotingRefService;
         private RemotingRefWrapperImpl remotingRefWrapper;
-
-        private Func<string, string, string, string, string> getBetTypeNameWithResourceId;
-        private Func<string, string, string> getBetTypeName;
-        private Func<string, string, string, string> getSportNameWithDefaultValue;
-        private Func<string, string, string, string, string> getResourceDataByRefIdAndResourceIdWithDefaultValue;
 
         [SetUp]
         public void SetUp()
@@ -28,188 +22,170 @@
             Thread.CurrentThread.CurrentCulture = new CultureInfo(LanguageCode.English);
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
 
-            getBetTypeNameWithResourceId = (typeId, language, defaultValue, resourceId) => { return ValidBetTypeName; };
-
-            getBetTypeName = (typeId, language) => { return ValidBetTypeName; };
-
-            getSportNameWithDefaultValue = (sportType, language, defaultValue) => { return ValidSportName; };
-
-            getResourceDataByRefIdAndResourceIdWithDefaultValue = (refId, resourceId, language, defaultValue) => { return ValidProductName; };
-        }
-
-        [TestCase(null)]
-        [TestCase(1)]
-        [TestCase(ValidBetId)]
-        [TestCase(int.MaxValue)]
-        [TestCase(int.MinValue)]
-        public void GetBetType_NullBetTypeId_ReturnsEmpty(object betId)
-        {
-            // Arrange
-            object betTypeId = null;
-
-            remotingRefWrapper = new RemotingRefWrapperImpl();
-
-            // Act 
-            var actualBetTypeName = remotingRefWrapper.GetBetType(betTypeId, betId);
-
-            // Assert
-            Assert.IsEmpty(actualBetTypeName);
-        }
-
-        [TestCase(0)]
-        [TestCase(1)]
-        [TestCase(-1)]
-        [TestCase(int.MaxValue)]
-        [TestCase(int.MinValue)]
-        public void GetBetType_NotNullBetTypeIdAndNullBetId_ReturnsNameFromRemotingRef(object betTypeId)
-        {
-            // Arrange
-            object betId = null;
-            var expectedBetTypeName = ValidBetTypeName;
-
-            remotingRefWrapper = new RemotingRefWrapperImpl();
-            remotingRefWrapper.SetRemotingRefFunctions(getBetTypeNameWithResourceId);
-
-            // Act 
-            var actualBetTypeName = remotingRefWrapper.GetBetType(betTypeId, betId);
-
-            // Assert
-            Assert.AreEqual(expectedBetTypeName, actualBetTypeName);
-        }
-
-        [TestCase(null)]
-        [TestCase(1)]
-        [TestCase(ValidBetId)]
-        [TestCase(int.MaxValue)]
-        [TestCase(int.MinValue)]
-        public void GetBetType_NotNullBetTypeIdAndBetId_ReturnsNameFromRemotingRef(object betId)
-        {
-            // Arrange
-            object betTypeId = 0;
-            var expectedBetTypeName = ValidBetTypeName;
-
-            remotingRefWrapper = new RemotingRefWrapperImpl();
-            remotingRefWrapper.SetRemotingRefFunctions(getBetTypeNameWithResourceId);
-
-            // Act 
-            var actualBetTypeName = remotingRefWrapper.GetBetType(betTypeId, betId);
-
-            // Assert
-            Assert.AreEqual(expectedBetTypeName, actualBetTypeName);
-        }
-
-        [TestCase(LanguageCode.English)]
-        [TestCase("")]
-        public void GetBetType_NotNullBetTypeIdAndBetIdByLanguage_ReturnsNameFromRemotingRef(string language)
-        {
-            // Arrange
-            object betTypeId = 0;
-            object betId = ValidBetId;
-            var expectedBetTypeName = ValidBetTypeName;
-
-            remotingRefWrapper = new RemotingRefWrapperImpl();
-            remotingRefWrapper.SetRemotingRefFunctions(getBetTypeNameWithResourceId);
-
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(language);
-            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
-
-            // Act 
-            var actualBetTypeName = remotingRefWrapper.GetBetType(betTypeId, betId);
-
-            // Assert
-            Assert.AreEqual(expectedBetTypeName, actualBetTypeName);
+            remotingRefService = Substitute.For<IRemotingRefService>();
+            remotingRefWrapper = new RemotingRefWrapperImpl(remotingRefService);
         }
 
         [Test]
-        public void GetBetTypeName_NullBetType_ReturnsEmpty()
+        public void GetBetType_ValidBetTypeId_ReturnsCorrectBetTypeName()
         {
             // Arrange
-            object betTypeId = null;
+            var expectedResult = "VIP Baccarat";
 
-            remotingRefWrapper = new RemotingRefWrapperImpl();
-            remotingRefWrapper.SetRemotingRefFunctions(null, getBetTypeName);
+            remotingRefService
+                .GetBetTypeName("2402", "en-US", string.Empty, string.Empty)
+                .Returns(expectedResult);
 
-            // Act 
-            var actualBetTypeName = remotingRefWrapper.GetBetTypeName(betTypeId);
-
-            // Assert
-            Assert.IsEmpty(actualBetTypeName);
-        }
-
-        [TestCase(0)]
-        [TestCase(1)]
-        [TestCase(-1)]
-        [TestCase(int.MaxValue)]
-        [TestCase(int.MinValue)]
-        public void GetBetTypeName_NotNullBetType_ReturnsNameFromRemotingRef(object betTypeId)
-        {
-            // Arrange
-            var expectedBetTypeName = ValidBetTypeName;
-
-            remotingRefWrapper = new RemotingRefWrapperImpl();
-            remotingRefWrapper.SetRemotingRefFunctions(null, getBetTypeName);
-
-            // Act 
-            var actualBetTypeName = remotingRefWrapper.GetBetTypeName(betTypeId);
+            // Act
+            var actualResult = remotingRefWrapper.GetBetType(2402, null);
 
             // Assert
-            Assert.AreEqual(expectedBetTypeName, actualBetTypeName);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
-        public void GetSportName_NullSport_ReturnsEmpty()
+        public void GetBetType_NullBetTypeId_ReturnsCorrectBetTypeName()
         {
             // Arrange
-            object sportId = null;
+            var expectedResult = string.Empty;
 
-            remotingRefWrapper = new RemotingRefWrapperImpl();
-            remotingRefWrapper.SetRemotingRefFunctions(null, null, getSportNameWithDefaultValue);
-
-            // Act 
-            var actualSportName = remotingRefWrapper.GetSportName(sportId);
+            // Act
+            var actualResult = remotingRefWrapper.GetBetType(null, null);
 
             // Assert
-            Assert.IsEmpty(actualSportName);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [TestCase(0)]
-        [TestCase(1)]
-        [TestCase(-1)]
-        [TestCase(int.MaxValue)]
-        [TestCase(int.MinValue)]
-        public void GetSportName_NotNullSport_ReturnsNameFromRemotingRef(object sportId)
+        [Test]
+        public void GetBetType_ValidBetId_ReturnsCorrectBetTypeName()
         {
             // Arrange
-            var expectedSportName = ValidSportName;
+            var expectedResult = "VIP Baccarat";
 
-            remotingRefWrapper = new RemotingRefWrapperImpl();
-            remotingRefWrapper.SetRemotingRefFunctions(null, null, getSportNameWithDefaultValue);
+            remotingRefService
+                .GetBetTypeName("2402", "en-US", string.Empty, "12")
+                .Returns(expectedResult);
 
-            // Act 
-            var actualSportName = remotingRefWrapper.GetSportName(sportId);
+            // Act
+            var actualResult = remotingRefWrapper.GetBetType(2402, "112");
 
             // Assert
-            Assert.AreEqual(expectedSportName, actualSportName);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [TestCase(0)]
-        [TestCase(1)]
-        [TestCase(-1)]
-        [TestCase(int.MaxValue)]
-        [TestCase(int.MinValue)]
-        public void GetSportName_NotNullSport_ReturnsNameFromRemotingRef(int productId)
+        [Test]
+        public void GetBetTypeName_ValidBetTypeId_ReturnsCorrectBetTypeName()
         {
             // Arrange
-            var expectedProductName = ValidProductName;
+            var expectedResult = "VIP Baccarat";
 
-            remotingRefWrapper = new RemotingRefWrapperImpl();
-            remotingRefWrapper.SetRemotingRefFunctions(null, null, null, getResourceDataByRefIdAndResourceIdWithDefaultValue);
+            remotingRefService
+                .GetBetTypeName("2402", "en-US")
+                .Returns(expectedResult);
 
-            // Act 
-            var actualProductName = remotingRefWrapper.GetProductName(productId);
+            // Act
+            var actualResult = remotingRefWrapper.GetBetTypeName(2402);
 
             // Assert
-            Assert.AreEqual(expectedProductName, actualProductName);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void GetBetTypeName_NullBetTypeId_ReturnsEmptyString()
+        {
+            // Arrange
+            var expectedResult = string.Empty;
+
+            // Act
+            var actualResult = remotingRefWrapper.GetBetTypeName(null);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void GetSportName_ValidSportTypeId_ReturnsCorrectSportName()
+        {
+            // Arrange
+            var expectedResult = "Virtual Sports";
+
+            remotingRefService
+                .GetSportName("5", DefaultLanguage, string.Empty)
+                .Returns(expectedResult);
+
+            // Act
+            var actualResult = remotingRefWrapper.GetSportName(5);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestCase(int.MinValue)]
+        [TestCase(-1)]
+        [TestCase(0)]
+        public void GetSportName_InvalidSportTypeId_ReturnsEmptyString(object sportId)
+        {
+            // Arrange
+            var expectedResult = string.Empty;
+
+            remotingRefService
+                .GetSportName(sportId.ToString(), DefaultLanguage, string.Empty)
+                .Returns(expectedResult);
+
+            // Act
+            var actualResult = remotingRefWrapper.GetSportName(sportId);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void GetSportName_NullSportTypeId_ReturnsEmptyString()
+        {
+            // Arrange
+            var expectedResult = string.Empty;
+
+            // Act
+            var actualResult = remotingRefWrapper.GetSportName(null);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void GetProductName_ValidProductId_ReturnsCorrectProductName()
+        {
+            // Arrange
+            var expectedResult = "Bullfighting";
+
+            remotingRefService
+                .GetResourceDataByRefIdAndResourceId("Product", "30", DefaultLanguage, string.Empty)
+                .Returns(expectedResult);
+
+            // Act
+            var actualResult = remotingRefWrapper.GetProductName(30);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestCase(int.MinValue)]
+        [TestCase(-1)]
+        [TestCase(0)]
+        public void GetProductName_InvalidProductId_ReturnsEmptyString(int productId)
+        {
+            // Arrange
+            var expectedResult = string.Empty;
+
+            remotingRefService
+                .GetResourceDataByRefIdAndResourceId("Product", productId.ToString(), DefaultLanguage, string.Empty)
+                .Returns(expectedResult);
+
+            // Act
+            var actualResult = remotingRefWrapper.GetProductName(productId);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
