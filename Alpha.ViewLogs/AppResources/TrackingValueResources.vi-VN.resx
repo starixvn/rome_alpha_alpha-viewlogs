@@ -3561,4 +3561,28 @@
   <data name="updateAllMasters" xml:space="preserve">
     <value>Cập nhật tất cả Master</value>
   </data>
+  <data name="Outstanding" xml:space="preserve">
+    <value>Tiền chưa xử lý</value>
+  </data>
+  <data name="TodayWinLoss" xml:space="preserve">
+    <value>Thắng thua trong ngày</value>
+  </data>
+  <data name="BalanceInfo" xml:space="preserve">
+    <value>Tài Khoản</value>
+  </data>
+  <data name="YesterdayWinLoss" xml:space="preserve">
+    <value>Thắng thua hôm qua</value>
+  </data>
+  <data name="PersonalMessage" xml:space="preserve">
+    <value>Tin nhắn cá nhân</value>
+  </data>
+  <data name="SpecialAnnouncement" xml:space="preserve">
+    <value>Thông báo đăc biệt</value>
+  </data>
+  <data name="NormalAnnouncement" xml:space="preserve">
+    <value>Thông báo chung</value>
+  </data>
+  <data name="SystemAnnouncement" xml:space="preserve">
+    <value>Thông báo hệ thống</value>
+  </data>
 </root>

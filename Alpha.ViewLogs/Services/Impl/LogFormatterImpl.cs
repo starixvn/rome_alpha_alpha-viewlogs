@@ -300,5 +300,14 @@
 
             return Resources.Weekly + " (" + string.Join(" - ", selectedDays) + ")";
         }
+
+        public string FormatLanguage(string value)
+            => value.Replace(LanguageCode.English.ToLowerInvariant(), GetLogResource(LanguageCode.English))
+                    .Replace(LanguageCode.ChineseSimplified.ToLowerInvariant(), GetLogResource(LanguageCode.ChineseSimplified))
+                    .Replace(LanguageCode.ChineseTraditional.ToLowerInvariant(), GetLogResource(LanguageCode.ChineseTraditional))
+                    .Replace(LanguageCode.Japanese.ToLowerInvariant(), GetLogResource(LanguageCode.Japanese))
+                    .Replace(LanguageCode.Korean.ToLowerInvariant(), GetLogResource(LanguageCode.Korean))
+                    .Replace(LanguageCode.Thai.ToLowerInvariant(), GetLogResource(LanguageCode.Thai))
+                    .Replace(LanguageCode.Vietnamese.ToLowerInvariant(), GetLogResource(LanguageCode.Vietnamese));
     }
 }

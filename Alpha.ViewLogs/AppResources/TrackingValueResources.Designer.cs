@@ -2311,6 +2311,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Balance Info.
+        /// </summary>
+        public static string BalanceInfo {
+            get {
+                return ResourceManager.GetString("BalanceInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Baseball.
         /// </summary>
         public static string Baseball {
@@ -3036,6 +3045,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string email {
             get {
                 return ResourceManager.GetString("email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        public static string en_US {
+            get {
+                return ResourceManager.GetString("en-US", resourceCulture);
             }
         }
         
@@ -5911,6 +5929,24 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Japanese.
+        /// </summary>
+        public static string ja_JP {
+            get {
+                return ResourceManager.GetString("ja-JP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Korean.
+        /// </summary>
+        public static string ko_KR {
+            get {
+                return ResourceManager.GetString("ko-KR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Language.
         /// </summary>
         public static string lang {
@@ -6042,6 +6078,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string lblUpdatePT {
             get {
                 return ResourceManager.GetString("lblUpdatePT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Letstalk ID.
+        /// </summary>
+        public static string LetstalkId {
+            get {
+                return ResourceManager.GetString("LetstalkId", resourceCulture);
             }
         }
         
@@ -8485,6 +8530,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Normal Announcement.
+        /// </summary>
+        public static string NormalAnnouncement {
+            get {
+                return ResourceManager.GetString("NormalAnnouncement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Number Game.
         /// </summary>
         public static string NumberGame {
@@ -8584,6 +8638,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Outstanding.
+        /// </summary>
+        public static string Outstanding {
+            get {
+                return ResourceManager.GetString("Outstanding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Page Access.
         /// </summary>
         public static string pageAccess {
@@ -8598,6 +8661,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Personal Message.
+        /// </summary>
+        public static string PersonalMessage {
+            get {
+                return ResourceManager.GetString("PersonalMessage", resourceCulture);
             }
         }
         
@@ -8917,6 +8989,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Special Announcement.
+        /// </summary>
+        public static string SpecialAnnouncement {
+            get {
+                return ResourceManager.GetString("SpecialAnnouncement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sport.
         /// </summary>
         public static string Sport {
@@ -9160,11 +9241,29 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to System Announcement.
+        /// </summary>
+        public static string SystemAnnouncement {
+            get {
+                return ResourceManager.GetString("SystemAnnouncement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tennis.
         /// </summary>
         public static string Tennis {
             get {
                 return ResourceManager.GetString("Tennis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thai.
+        /// </summary>
+        public static string th_TH {
+            get {
+                return ResourceManager.GetString("th-TH", resourceCulture);
             }
         }
         
@@ -9183,6 +9282,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string To {
             get {
                 return ResourceManager.GetString("To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Today Win Loss.
+        /// </summary>
+        public static string TodayWinLoss {
+            get {
+                return ResourceManager.GetString("TodayWinLoss", resourceCulture);
             }
         }
         
@@ -11185,6 +11293,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vietnamese.
+        /// </summary>
+        public static string vi_VN {
+            get {
+                return ResourceManager.GetString("vi-VN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View by.
         /// </summary>
         public static string viewby {
@@ -11217,6 +11334,33 @@ namespace Alpha.ViewLogs.AppResources {
         public static string WriteLog {
             get {
                 return ResourceManager.GetString("WriteLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yesterday Win Loss.
+        /// </summary>
+        public static string YesterdayWinLoss {
+            get {
+                return ResourceManager.GetString("YesterdayWinLoss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Simplified Chinese .
+        /// </summary>
+        public static string zh_CN {
+            get {
+                return ResourceManager.GetString("zh-CN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Traditional Chinese.
+        /// </summary>
+        public static string zh_TW {
+            get {
+                return ResourceManager.GetString("zh-TW", resourceCulture);
             }
         }
     }

@@ -30,6 +30,8 @@
 
         string FormatUnlimited(int unlimited);
 
+        string FormatLanguage(string value);
+
         bool IsShowMyanmarOdds();
 
         bool IsShowPokerGames();

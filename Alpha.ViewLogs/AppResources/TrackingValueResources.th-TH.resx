@@ -3798,4 +3798,28 @@
   <data name="updateAllMasters" xml:space="preserve">
     <value>อัพเดตมาสเตอร์ทั้งหมด</value>
   </data>
+  <data name="Outstanding" xml:space="preserve">
+    <value>การเดิมพันที่ยังไม่สิ้นสุด</value>
+  </data>
+  <data name="TodayWinLoss" xml:space="preserve">
+    <value>ยอดได้เสียวันนี้</value>
+  </data>
+  <data name="BalanceInfo" xml:space="preserve">
+    <value>ข้อมูลยอดเงินคงเหลือ</value>
+  </data>
+  <data name="YesterdayWinLoss" xml:space="preserve">
+    <value>ยอดได้เสียเมื่อวาน</value>
+  </data>
+  <data name="PersonalMessage" xml:space="preserve">
+    <value>ข้อความส่วนตัว</value>
+  </data>
+  <data name="SpecialAnnouncement" xml:space="preserve">
+    <value>ข้อความ เฉพาะ</value>
+  </data>
+  <data name="NormalAnnouncement" xml:space="preserve">
+    <value>ประกาศธรรมดา</value>
+  </data>
+  <data name="SystemAnnouncement" xml:space="preserve">
+    <value>ประกาศระบบ</value>
+  </data>
 </root>
