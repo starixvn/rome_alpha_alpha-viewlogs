@@ -3837,4 +3837,52 @@
   <data name="updateAllMasters" xml:space="preserve">
     <value>Update All Masters</value>
   </data>
+  <data name="LetstalkId" xml:space="preserve">
+    <value>Letstalk ID</value>
+  </data>
+  <data name="Outstanding" xml:space="preserve">
+    <value>Outstanding</value>
+  </data>
+  <data name="TodayWinLoss" xml:space="preserve">
+    <value>Today Win Loss</value>
+  </data>
+  <data name="BalanceInfo" xml:space="preserve">
+    <value>Balance Info</value>
+  </data>
+  <data name="YesterdayWinLoss" xml:space="preserve">
+    <value>Yesterday Win Loss</value>
+  </data>
+  <data name="PersonalMessage" xml:space="preserve">
+    <value>Personal Message</value>
+  </data>
+  <data name="SpecialAnnouncement" xml:space="preserve">
+    <value>Special Announcement</value>
+  </data>
+  <data name="NormalAnnouncement" xml:space="preserve">
+    <value>Normal Announcement</value>
+  </data>
+  <data name="SystemAnnouncement" xml:space="preserve">
+    <value>System Announcement</value>
+  </data>
+  <data name="en-US" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="zh-TW" xml:space="preserve">
+    <value>Traditional Chinese</value>
+  </data>
+  <data name="zh-CN" xml:space="preserve">
+    <value>Simplified Chinese </value>
+  </data>
+  <data name="ja-JP" xml:space="preserve">
+    <value>Japanese</value>
+  </data>
+  <data name="th-TH" xml:space="preserve">
+    <value>Thai</value>
+  </data>
+  <data name="ko-KR" xml:space="preserve">
+    <value>Korean</value>
+  </data>
+  <data name="vi-VN" xml:space="preserve">
+    <value>Vietnamese</value>
+  </data>
 </root>

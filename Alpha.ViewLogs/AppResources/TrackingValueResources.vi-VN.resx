@@ -3561,4 +3561,49 @@
   <data name="updateAllMasters" xml:space="preserve">
     <value>Cập nhật tất cả Master</value>
   </data>
+  <data name="Outstanding" xml:space="preserve">
+    <value>Tiền chưa xử lý</value>
+  </data>
+  <data name="TodayWinLoss" xml:space="preserve">
+    <value>Thắng thua trong ngày</value>
+  </data>
+  <data name="BalanceInfo" xml:space="preserve">
+    <value>Tài Khoản</value>
+  </data>
+  <data name="YesterdayWinLoss" xml:space="preserve">
+    <value>Thắng thua hôm qua</value>
+  </data>
+  <data name="PersonalMessage" xml:space="preserve">
+    <value>Tin nhắn cá nhân</value>
+  </data>
+  <data name="SpecialAnnouncement" xml:space="preserve">
+    <value>Thông báo đăc biệt</value>
+  </data>
+  <data name="NormalAnnouncement" xml:space="preserve">
+    <value>Thông báo chung</value>
+  </data>
+  <data name="SystemAnnouncement" xml:space="preserve">
+    <value>Thông báo hệ thống</value>
+  </data>
+  <data name="en-US" xml:space="preserve">
+    <value>Tiếng Anh</value>
+  </data>
+  <data name="zh-TW" xml:space="preserve">
+    <value>Tiếng Trung Phồn Thể</value>
+  </data>
+  <data name="zh-CN" xml:space="preserve">
+    <value>Tiếng Trung Giản Thể</value>
+  </data>
+  <data name="th-TH" xml:space="preserve">
+    <value>Tiếng Thái</value>
+  </data>
+  <data name="vi-VN" xml:space="preserve">
+    <value>Tiếng Việt</value>
+  </data>
+  <data name="ja-JP" xml:space="preserve">
+    <value>Tiếng Nhật</value>
+  </data>
+  <data name="ko-KR" xml:space="preserve">
+    <value>Tiếng Hàn</value>
+  </data>
 </root>

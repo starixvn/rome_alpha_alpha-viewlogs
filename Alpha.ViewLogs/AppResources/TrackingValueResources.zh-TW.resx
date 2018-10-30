@@ -3798,4 +3798,49 @@
   <data name="updateAllMasters" xml:space="preserve">
     <value>更新全部總代理</value>
   </data>
+  <data name="Outstanding" xml:space="preserve">
+    <value>未完成交易</value>
+  </data>
+  <data name="TodayWinLoss" xml:space="preserve">
+    <value>今日輸贏</value>
+  </data>
+  <data name="BalanceInfo" xml:space="preserve">
+    <value>餘額資料</value>
+  </data>
+  <data name="YesterdayWinLoss" xml:space="preserve">
+    <value>昨日輸贏</value>
+  </data>
+  <data name="PersonalMessage" xml:space="preserve">
+    <value>個人訊息</value>
+  </data>
+  <data name="SpecialAnnouncement" xml:space="preserve">
+    <value>特殊公告</value>
+  </data>
+  <data name="NormalAnnouncement" xml:space="preserve">
+    <value>一般公告</value>
+  </data>
+  <data name="SystemAnnouncement" xml:space="preserve">
+    <value>系統公告</value>
+  </data>
+  <data name="en-US" xml:space="preserve">
+    <value>英語</value>
+  </data>
+  <data name="zh-TW" xml:space="preserve">
+    <value>繁體中文</value>
+  </data>
+  <data name="zh-CN" xml:space="preserve">
+    <value>簡體中文</value>
+  </data>
+  <data name="th-TH" xml:space="preserve">
+    <value>泰國</value>
+  </data>
+  <data name="vi-VN" xml:space="preserve">
+    <value>越南</value>
+  </data>
+  <data name="ja-JP" xml:space="preserve">
+    <value>日本</value>
+  </data>
+  <data name="ko-KR" xml:space="preserve">
+    <value>朝鮮的</value>
+  </data>
 </root>

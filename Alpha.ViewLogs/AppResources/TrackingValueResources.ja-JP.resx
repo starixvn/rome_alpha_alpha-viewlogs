@@ -3393,4 +3393,7 @@
   <data name="hideGD" xml:space="preserve">
     <value>Hide Gold Deluxe</value>
   </data>
+  <data name="Outstanding" xml:space="preserve">
+    <value>未払い</value>
+  </data>
 </root>
