@@ -3822,4 +3822,25 @@
   <data name="SystemAnnouncement" xml:space="preserve">
     <value>系统公告</value>
   </data>
+  <data name="en-US" xml:space="preserve">
+    <value>英语</value>
+  </data>
+  <data name="zh-TW" xml:space="preserve">
+    <value>繁体中文</value>
+  </data>
+  <data name="zh-CN" xml:space="preserve">
+    <value>简体中文</value>
+  </data>
+  <data name="th-TH" xml:space="preserve">
+    <value>泰国</value>
+  </data>
+  <data name="vi-VN" xml:space="preserve">
+    <value>越南</value>
+  </data>
+  <data name="ja-JP" xml:space="preserve">
+    <value>日本</value>
+  </data>
+  <data name="ko-KR" xml:space="preserve">
+    <value>朝鮮的</value>
+  </data>
 </root>

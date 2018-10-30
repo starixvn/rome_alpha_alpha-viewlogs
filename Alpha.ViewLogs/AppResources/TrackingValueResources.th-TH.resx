@@ -3822,4 +3822,25 @@
   <data name="SystemAnnouncement" xml:space="preserve">
     <value>ประกาศระบบ</value>
   </data>
+  <data name="en-US" xml:space="preserve">
+    <value>อังกฤษ</value>
+  </data>
+  <data name="zh-TW" xml:space="preserve">
+    <value>จีนดั้งเดิม</value>
+  </data>
+  <data name="zh-CN" xml:space="preserve">
+    <value>จีนตัวย่อ</value>
+  </data>
+  <data name="th-TH" xml:space="preserve">
+    <value>ไทย</value>
+  </data>
+  <data name="vi-VN" xml:space="preserve">
+    <value>เวียตนาม</value>
+  </data>
+  <data name="ja-JP" xml:space="preserve">
+    <value>ประเทศญี่ปุ่น</value>
+  </data>
+  <data name="ko-KR" xml:space="preserve">
+    <value>เกาหลี</value>
+  </data>
 </root>
