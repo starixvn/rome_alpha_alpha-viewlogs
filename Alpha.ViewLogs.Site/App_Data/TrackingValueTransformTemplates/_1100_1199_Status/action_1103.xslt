@@ -42,7 +42,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('DisabledESports')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@disableesports" />
+          <xsl:value-of select="@disable43_1" />
         </td>
 
       </tr>
