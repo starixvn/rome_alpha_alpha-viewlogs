@@ -3885,4 +3885,7 @@
   <data name="vi-VN" xml:space="preserve">
     <value>Vietnamese</value>
   </data>
+  <data name="period" xml:space="preserve">
+    <value>Period</value>
+  </data>
 </root>

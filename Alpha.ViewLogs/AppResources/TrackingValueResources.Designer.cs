@@ -8665,6 +8665,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Period.
+        /// </summary>
+        public static string period {
+            get {
+                return ResourceManager.GetString("period", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Personal Message.
         /// </summary>
         public static string PersonalMessage {
