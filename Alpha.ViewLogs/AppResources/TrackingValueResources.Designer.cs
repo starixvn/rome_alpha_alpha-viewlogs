@@ -3094,6 +3094,24 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 15 days.
+        /// </summary>
+        public static string FifteenDays {
+            get {
+                return ResourceManager.GetString("FifteenDays", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15 minutes.
+        /// </summary>
+        public static string FifteenMinutes {
+            get {
+                return ResourceManager.GetString("FifteenMinutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to File Name.
         /// </summary>
         public static string FileName {
@@ -8611,6 +8629,24 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1 day.
+        /// </summary>
+        public static string OneDay {
+            get {
+                return ResourceManager.GetString("OneDay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 hour.
+        /// </summary>
+        public static string OneHour {
+            get {
+                return ResourceManager.GetString("OneHour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SA Tote Place Comm.
         /// </summary>
         public static string othercomm {
@@ -8890,6 +8926,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 7 days.
+        /// </summary>
+        public static string SevenDays {
+            get {
+                return ResourceManager.GetString("SevenDays", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show old values.
         /// </summary>
         public static string showOldValue {
@@ -8940,6 +8985,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string sitename {
             get {
                 return ResourceManager.GetString("sitename", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 6 hours.
+        /// </summary>
+        public static string SixHours {
+            get {
+                return ResourceManager.GetString("SixHours", resourceCulture);
             }
         }
         
@@ -9277,6 +9331,42 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 30 days.
+        /// </summary>
+        public static string ThirtyDays {
+            get {
+                return ResourceManager.GetString("ThirtyDays", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 30 minutes.
+        /// </summary>
+        public static string ThirtyMinutes {
+            get {
+                return ResourceManager.GetString("ThirtyMinutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3 days.
+        /// </summary>
+        public static string ThreeDays {
+            get {
+                return ResourceManager.GetString("ThreeDays", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3 hours.
+        /// </summary>
+        public static string ThreeHours {
+            get {
+                return ResourceManager.GetString("ThreeHours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to [Thurs].
         /// </summary>
         public static string thurs {
@@ -9354,6 +9444,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string tue {
             get {
                 return ResourceManager.GetString("tue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 12 hours.
+        /// </summary>
+        public static string TwelveHours {
+            get {
+                return ResourceManager.GetString("TwelveHours", resourceCulture);
             }
         }
         

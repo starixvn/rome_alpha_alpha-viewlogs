@@ -54,5 +54,7 @@
             string disableValue3,
             string disableValue4,
             string disableValue5);
+
+        string FormatChatbotSelfDestructionPeriod(string value);
     }
 }

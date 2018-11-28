@@ -309,5 +309,18 @@
                     .Replace(LanguageCode.Korean.ToLowerInvariant(), GetLogResource(LanguageCode.Korean))
                     .Replace(LanguageCode.Thai.ToLowerInvariant(), GetLogResource(LanguageCode.Thai))
                     .Replace(LanguageCode.Vietnamese.ToLowerInvariant(), GetLogResource(LanguageCode.Vietnamese));
+
+        public string FormatChatbotSelfDestructionPeriod(string value)
+            => value.Replace(SelfdestructionPeriod.FifteenMinutes.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.FifteenMinutes)))
+                    .Replace(SelfdestructionPeriod.ThirtyMinutes.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.ThirtyMinutes)))
+                    .Replace(SelfdestructionPeriod.OneHour.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.OneHour)))
+                    .Replace(SelfdestructionPeriod.ThreeHours.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.ThreeHours)))
+                    .Replace(SelfdestructionPeriod.SixHours.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.SixHours)))
+                    .Replace(SelfdestructionPeriod.TwelveHours.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.TwelveHours)))
+                    .Replace(SelfdestructionPeriod.OneDay.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.OneDay)))
+                    .Replace(SelfdestructionPeriod.ThreeDays.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.ThreeDays)))
+                    .Replace(SelfdestructionPeriod.SevenDays.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.SevenDays)))
+                    .Replace(SelfdestructionPeriod.FifteenDays.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.FifteenDays)))
+                    .Replace(SelfdestructionPeriod.ThirtyDays.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.ThirtyDays)));
     }
 }

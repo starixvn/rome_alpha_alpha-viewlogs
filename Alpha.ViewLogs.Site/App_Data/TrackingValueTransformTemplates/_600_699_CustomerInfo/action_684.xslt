@@ -10,7 +10,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('period')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@period" />
+          <xsl:value-of select="xslLogFormat:FormatChatbotSelfDestructionPeriod(@period)" />
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
