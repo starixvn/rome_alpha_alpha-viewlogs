@@ -3843,4 +3843,7 @@
   <data name="ko-KR" xml:space="preserve">
     <value>朝鮮的</value>
   </data>
+  <data name="period" xml:space="preserve">
+    <value>期限</value>
+  </data>
 </root>

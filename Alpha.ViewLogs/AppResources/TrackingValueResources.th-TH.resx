@@ -3843,4 +3843,7 @@
   <data name="ko-KR" xml:space="preserve">
     <value>เกาหลี</value>
   </data>
+  <data name="period" xml:space="preserve">
+    <value>ระยะเวลา</value>
+  </data>
 </root>

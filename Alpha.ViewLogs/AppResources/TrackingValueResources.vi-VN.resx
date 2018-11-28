@@ -3606,4 +3606,7 @@
   <data name="ko-KR" xml:space="preserve">
     <value>Tiếng Hàn</value>
   </data>
+  <data name="period" xml:space="preserve">
+    <value>Thời gian</value>
+  </data>
 </root>
