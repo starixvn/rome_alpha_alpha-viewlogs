@@ -56,5 +56,7 @@
             string disableValue5);
 
         string FormatChatbotSelfDestructionPeriod(string value);
+
+        string GetPlatformOfSearchAndCopyFunction(string value);
     }
 }

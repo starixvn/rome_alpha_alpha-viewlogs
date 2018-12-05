@@ -9313,6 +9313,24 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Web.
+        /// </summary>
+        public static string SystemId_2 {
+            get {
+                return ResourceManager.GetString("SystemId_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chatbot.
+        /// </summary>
+        public static string SystemId_8 {
+            get {
+                return ResourceManager.GetString("SystemId_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tennis.
         /// </summary>
         public static string Tennis {
