@@ -3879,4 +3879,7 @@
   <data name="ThirtyDays" xml:space="preserve">
     <value>三十天</value>
   </data>
+  <data name="CopyCustomer" xml:space="preserve">
+    <value>從現有的賬號復制新的會員。</value>
+  </data>
 </root>

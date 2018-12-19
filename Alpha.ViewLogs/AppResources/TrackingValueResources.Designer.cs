@@ -2464,6 +2464,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create new member from existing account.
+        /// </summary>
+        public static string CopyCustomer {
+            get {
+                return ResourceManager.GetString("CopyCustomer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy From.
         /// </summary>
         public static string copyFrom {

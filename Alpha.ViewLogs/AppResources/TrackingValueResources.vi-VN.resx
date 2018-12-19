@@ -3642,4 +3642,7 @@
   <data name="ThirtyDays" xml:space="preserve">
     <value>30 ngày</value>
   </data>
+  <data name="CopyCustomer" xml:space="preserve">
+    <value>Tạo mới tài khoản Member dựa trên thiết lập của tài khoản có sẵn.</value>
+  </data>
 </root>

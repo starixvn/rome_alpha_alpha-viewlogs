@@ -3879,4 +3879,7 @@
   <data name="ThirtyDays" xml:space="preserve">
     <value>三十天</value>
   </data>
+  <data name="CopyCustomer" xml:space="preserve">
+    <value>从现有的账号复制新的会员。</value>
+  </data>
 </root>

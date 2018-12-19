@@ -3879,4 +3879,7 @@
   <data name="ThirtyDays" xml:space="preserve">
     <value>30 วัน</value>
   </data>
+  <data name="CopyCustomer" xml:space="preserve">
+    <value>สร้างสมาชิกใหม่จากบัญชีที่มีอยู่</value>
+  </data>
 </root>
