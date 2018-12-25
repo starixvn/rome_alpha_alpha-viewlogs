@@ -59,10 +59,26 @@
           <xsl:value-of select="@function8" />
         </td>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('CopyCustomer')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@function9" />
+        </td>
+      </tr>
+      <tr>
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
+        </td>
+        <td class="colW1">
+        </td>
+        <td class="colW2">
+        </td>
+        <td class="colW1">
+        </td>
+        <td class="colW2">
         </td>
       </tr>
     </table>

@@ -83,7 +83,12 @@
 			<td class="colW2">
 				<xsl:value-of select="xslLogFormat:FormatErrMsg(@errmsg)" />
 			</td>
-      <td class="colW1"></td><td class="colW2"></td>
+      <td class="colW1">
+        <xsl:value-of select="xslLogFormat:GetLogResource('Platform')" />
+      </td>
+      <td class="colW2">
+        <xsl:value-of select="xslLogFormat:GetPlatformOfSearchAndCopyFunction(@systemid)" />
+      </td>
 		</tr>
     </table>
   </xsl:template>

@@ -2464,6 +2464,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create new member from existing account.
+        /// </summary>
+        public static string CopyCustomer {
+            get {
+                return ResourceManager.GetString("CopyCustomer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy From.
         /// </summary>
         public static string copyFrom {
@@ -9309,6 +9318,24 @@ namespace Alpha.ViewLogs.AppResources {
         public static string SystemAnnouncement {
             get {
                 return ResourceManager.GetString("SystemAnnouncement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Web.
+        /// </summary>
+        public static string SystemId_2 {
+            get {
+                return ResourceManager.GetString("SystemId_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chatbot.
+        /// </summary>
+        public static string SystemId_8 {
+            get {
+                return ResourceManager.GetString("SystemId_8", resourceCulture);
             }
         }
         

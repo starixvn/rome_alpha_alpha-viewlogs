@@ -322,5 +322,10 @@
                     .Replace(SelfdestructionPeriod.SevenDays.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.SevenDays)))
                     .Replace(SelfdestructionPeriod.FifteenDays.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.FifteenDays)))
                     .Replace(SelfdestructionPeriod.ThirtyDays.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.ThirtyDays)));
+
+        public string GetPlatformOfSearchAndCopyFunction(string value)
+            => string.IsNullOrWhiteSpace(value)
+            ? string.Empty
+            : GetLogResource($"SystemId_{value}");
     }
 }

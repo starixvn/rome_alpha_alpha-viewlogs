@@ -3921,4 +3921,13 @@
   <data name="ThirtyDays" xml:space="preserve">
     <value>30 days</value>
   </data>
+  <data name="SystemId_2" xml:space="preserve">
+    <value>Web</value>
+  </data>
+  <data name="SystemId_8" xml:space="preserve">
+    <value>Chatbot</value>
+  </data>
+  <data name="CopyCustomer" xml:space="preserve">
+    <value>Create new member from existing account</value>
+  </data>
 </root>
