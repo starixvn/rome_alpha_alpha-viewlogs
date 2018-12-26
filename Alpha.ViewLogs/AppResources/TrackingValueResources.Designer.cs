@@ -9601,6 +9601,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update Min-Max Bet Happy 5.
+        /// </summary>
+        public static string UMMBv164 {
+            get {
+                return ResourceManager.GetString("UMMBv164", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update Min-Max Bet Basketball.
         /// </summary>
         public static string ummbv2 {

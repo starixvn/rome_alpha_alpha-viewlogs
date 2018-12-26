@@ -3654,4 +3654,7 @@
   <data name="MinBv164" xml:space="preserve">
     <value>Tiền cược nhỏ nhất cho Happy 5</value>
   </data>
+  <data name="UMMBv164" xml:space="preserve">
+    <value>Cập nhật tiền cược nhỏ nhất / lớn nhất của Happy 5</value>
+  </data>
 </root>

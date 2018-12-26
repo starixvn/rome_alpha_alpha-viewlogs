@@ -3939,4 +3939,7 @@
   <data name="MPMv164" xml:space="preserve">
     <value>Happy 5 - Max Per Match</value>
   </data>
+  <data name="UMMBv164" xml:space="preserve">
+    <value>Update Min-Max Bet Happy 5</value>
+  </data>
 </root>

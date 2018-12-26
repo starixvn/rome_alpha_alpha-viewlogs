@@ -256,10 +256,10 @@
           <xsl:value-of select="@maxbv164" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('MPBv164')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('MPMv164')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@mpbv164" />
+          <xsl:value-of select="@mpmv164" />
         </td>
       </tr>
       <tr>
