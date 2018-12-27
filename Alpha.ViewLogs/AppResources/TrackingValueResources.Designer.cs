@@ -6379,6 +6379,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Happy 5 - Max Bet.
+        /// </summary>
+        public static string MaxBv164 {
+            get {
+                return ResourceManager.GetString("MaxBv164", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Soccer Parlay-Max Bet.
         /// </summary>
         public static string MaxBv1MP {
@@ -7293,6 +7302,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string MinBv161 {
             get {
                 return ResourceManager.GetString("MinBv161", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Happy 5 - Min Bet.
+        /// </summary>
+        public static string MinBv164 {
+            get {
+                return ResourceManager.GetString("MinBv164", resourceCulture);
             }
         }
         
@@ -8238,6 +8256,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string MPMv161 {
             get {
                 return ResourceManager.GetString("MPMv161", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Happy 5 - Max Per Match.
+        /// </summary>
+        public static string MPMv164 {
+            get {
+                return ResourceManager.GetString("MPMv164", resourceCulture);
             }
         }
         
@@ -9570,6 +9597,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string UMMBv161 {
             get {
                 return ResourceManager.GetString("UMMBv161", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Min-Max Bet Happy 5.
+        /// </summary>
+        public static string UMMBv164 {
+            get {
+                return ResourceManager.GetString("UMMBv164", resourceCulture);
             }
         }
         
