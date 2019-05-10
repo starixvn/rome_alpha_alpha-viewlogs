@@ -60,9 +60,7 @@
         }
 
         public string FormatNickName(string nickname)
-        {
-            return isHideNickName ? "": nickname;
-        }
+            => isHideNickName ? string.Empty : nickname;
 
         public string FormatCountryCode(string ip, string country)
         {

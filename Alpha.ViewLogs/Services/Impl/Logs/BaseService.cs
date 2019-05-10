@@ -131,7 +131,7 @@
 
             pagingLogs.Logs = GetLogs(logParam);
             pagingLogs.TotalRecords = GetTotalLogs(logParam);
-            pagingLogs.IsHideNickName = IsHideNickName(downlineInfo.IsSubAcc, downlineInfo.RoleId, downlineInfo.CustId );
+            pagingLogs.IsHideNickName = IsHideNickName(downlineInfo.IsSubAcc, downlineInfo.RoleId, downlineInfo.CustId);
             return pagingLogs;
         }
 
@@ -152,8 +152,7 @@
             return LogDataAccess.GetTotalRecordsOfLogs(criteria);
         }
 
-        private bool IsHideNickName(bool isSubAccount, int roleId, int custId) {
-            return ((session.RoleId - roleId) != 1) || (session.IsSubAcc && !isSubAccount && session.CustId==custId);
-        }      
+        private bool IsHideNickName(bool isSubAccount, int roleId, int custId)
+            => session.RoleId - roleId != 1 || (session.IsSubAcc && !isSubAccount && session.CustId == custId);
     }
 }
