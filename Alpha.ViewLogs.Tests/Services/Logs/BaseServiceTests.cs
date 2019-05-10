@@ -166,7 +166,7 @@
         {
             // Arrange
             LogParam logParam = new LogParam();
-            var downlineInfo = new CustomerInfo(0, false);
+            var downlineInfo = new CustomerInfo(0, false, 4);
             customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(downlineInfo);
 
             // Act 
@@ -182,7 +182,7 @@
             // Arrange
             LogParam logParam = new LogParam();
 
-            var invalidDownlineInfo = new CustomerInfo(0, false);
+            var invalidDownlineInfo = new CustomerInfo(0, false, 4);
 
             customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(invalidDownlineInfo);
 
@@ -206,7 +206,7 @@
                 Language = LanguageCode.English
             };
 
-            var validDownlineInfo = new CustomerInfo(1, false);
+            var validDownlineInfo = new CustomerInfo(1, false, 4);
 
             customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(validDownlineInfo);
 
