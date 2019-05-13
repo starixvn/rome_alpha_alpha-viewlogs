@@ -153,7 +153,12 @@
         }
 
         private bool IsHideNickName(bool isSubAccount, int roleId, int custId)
-            => session.RoleId - roleId != 1 && session.RoleId != roleId 
-            || (session.IsSubAcc && !isSubAccount && session.CustId == custId);
+            => IsIndirect(roleId) || IsSubAccViewMainAcc(isSubAccount, custId);
+
+        private bool IsIndirect (int roleId)
+            => session.RoleId - roleId != 1 && session.RoleId != roleId;
+
+        private bool IsSubAccViewMainAcc (bool isSubAccount, int custId)
+            => session.IsSubAcc && !isSubAccount && session.CustId == custId;
     }
 }
