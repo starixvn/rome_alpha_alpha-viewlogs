@@ -38,7 +38,7 @@
                 Language = LanguageCode.English
             };
 
-            var validDownlineInfo = new CustomerInfo(1, false);
+            var validDownlineInfo = new CustomerInfo(1, false, 4);
 
             CustomerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(validDownlineInfo);
 

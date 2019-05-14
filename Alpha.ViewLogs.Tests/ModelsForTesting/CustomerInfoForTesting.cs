@@ -5,8 +5,8 @@
 
     public class CustomerInfoForTesting : CustomerInfo
     {
-        public CustomerInfoForTesting(int custId, bool isSubAcc) :
-            base(custId, isSubAcc)
+        public CustomerInfoForTesting(int custId, bool isSubAcc,int roleId) :
+            base(custId, isSubAcc, roleId)
         {
         }
 
@@ -17,7 +17,7 @@
                 return null;
             }
 
-            return new CustomerInfoForTesting(customerInfo.CustId, customerInfo.IsSubAcc);
+            return new CustomerInfoForTesting(customerInfo.CustId, customerInfo.IsSubAcc, customerInfo.RoleId);
         }
 
         public override bool Equals(object obj)

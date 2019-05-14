@@ -101,7 +101,8 @@
                 ResourcesByBetTypeCacheRef = message.ResourcesByBetTypeCacheRef,
                 ResourcesProductCacheRef = message.ResourcesByProductCacheRef,
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds,
-                IsShowPokerGames = message.IsShowPokerGames
+                IsShowPokerGames = message.IsShowPokerGames,
+                IsHideNickName = pagingLogs.IsHideNickName
             };
 
             var logItems = new List<LogItemViewModel>();

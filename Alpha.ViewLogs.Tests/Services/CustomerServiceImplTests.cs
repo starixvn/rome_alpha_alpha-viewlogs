@@ -30,7 +30,7 @@
         public void GetDownlineInfoByUsername_NullOrEmptyUsername_ReturnsDefaultCustomerInfo(string username)
         {
             // Arrange 
-            var expectedCustomerInfo = new CustomerInfo(0, false);
+            var expectedCustomerInfo = new CustomerInfo(0, false, 4);
 
             // Act 
             var actualCustomerInfo = customerService.GetDownlineInfoByUsername(username, 0);
@@ -51,7 +51,7 @@
                 UplineId = 0
             };
 
-            var expectedCustomerInfo = new CustomerInfo(ValidCustId, true);
+            var expectedCustomerInfo = new CustomerInfo(ValidCustId, true, 4);
 
             dynamicRepository.When(d => d.Execute(Arg.Is<GetCustInfoByUsernameCommand>(x => x.Username == criteria.Username && x.CustId == criteria.CustId)))
                 .Do(c =>

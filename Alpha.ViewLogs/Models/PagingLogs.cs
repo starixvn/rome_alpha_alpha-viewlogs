@@ -13,5 +13,7 @@
         public IEnumerable<LogType> Logs { get; set; }
 
         public int TotalRecords { get; set; }
+
+        public bool IsHideNickName { get; set; }
     }
 }

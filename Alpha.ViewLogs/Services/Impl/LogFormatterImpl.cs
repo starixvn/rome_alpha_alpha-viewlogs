@@ -22,6 +22,7 @@
 
         private bool isShowMyanmarOdds;
         private bool isShowPokerGames;
+        private bool isHideNickName;
 
         public LogFormatterImpl(
             ViewLogIPService ipService,
@@ -50,12 +51,16 @@
 
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
             isShowPokerGames = transformParam.IsShowPokerGames;
+            isHideNickName = transformParam.IsHideNickName;
         }
 
         public string FormatIP(string ip)
         {
             return ipService.FormatIP(ip);
         }
+
+        public string FormatNickName(string nickname)
+            => isHideNickName ? string.Empty : nickname;
 
         public string FormatCountryCode(string ip, string country)
         {

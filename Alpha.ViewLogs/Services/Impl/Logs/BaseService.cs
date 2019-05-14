@@ -10,6 +10,8 @@
     using Fanex.Data.Repository;
     using Models;
     using Params;
+    using Sunplus.Agent.Model.Entities;
+    using Sunplus.Agent.Model.Base;
 
     public abstract class BaseService
     {
@@ -20,12 +22,14 @@
         private readonly IDynamicRepository dynamicRepository;
         private readonly CustomerService customerService;
         private readonly LogDataAccess logDataAccess;
+        private readonly IUserSession session;
 
-        protected BaseService(IDynamicRepository dynamicRepository, CustomerService customerService, LogDataAccess logDataAccess)
+        protected BaseService(IDynamicRepository dynamicRepository, CustomerService customerService, LogDataAccess logDataAccess, IUserSession session = null)
         {
             this.dynamicRepository = dynamicRepository;
             this.customerService = customerService;
             this.logDataAccess = logDataAccess;
+            this.session = session ?? new UserSessionExt();
         }
 
         protected LogDataAccess LogDataAccess
@@ -127,7 +131,7 @@
 
             pagingLogs.Logs = GetLogs(logParam);
             pagingLogs.TotalRecords = GetTotalLogs(logParam);
-
+            pagingLogs.IsHideNickName = IsHideNickName(downlineInfo.IsSubAcc, downlineInfo.RoleId, downlineInfo.CustId);
             return pagingLogs;
         }
 
@@ -147,5 +151,14 @@
 
             return LogDataAccess.GetTotalRecordsOfLogs(criteria);
         }
+
+        private bool IsHideNickName(bool isSubAccount, int roleId, int custId)
+            => IsIndirect(roleId) || IsSubAccViewMainAcc(isSubAccount, custId);
+
+        private bool IsIndirect (int roleId)
+            => session.RoleId - roleId != 1 && session.RoleId != roleId;
+
+        private bool IsSubAccViewMainAcc (bool isSubAccount, int custId)
+            => session.IsSubAcc && !isSubAccount && session.CustId == custId;
     }
 }
