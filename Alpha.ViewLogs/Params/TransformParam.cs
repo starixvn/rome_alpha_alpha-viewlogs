@@ -17,7 +17,5 @@
         public bool IsShowMyanmarOdds { get; set; }
 
         public bool IsShowPokerGames { get; set; }
-
-        public bool IsHideNickName { get; set; }
     }
 }

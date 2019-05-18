@@ -4,7 +4,7 @@
 
     public interface LogFormatter
     {
-        void Init(TransformParam transformParam);
+        void Init(TransformParam transformParam, bool isHideNickname = false);
 
         string FormatIP(string ip);
 
@@ -58,5 +58,7 @@
         string FormatChatbotSelfDestructionPeriod(string value);
 
         string GetPlatformOfSearchAndCopyFunction(string value);
+
+        string FormatNickName(string nickname);
     }
 }

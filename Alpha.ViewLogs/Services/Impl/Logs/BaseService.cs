@@ -12,6 +12,7 @@
     using Params;
     using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Model.Base;
+    using System.Text.RegularExpressions;
 
     public abstract class BaseService
     {
@@ -131,7 +132,13 @@
 
             pagingLogs.Logs = GetLogs(logParam);
             pagingLogs.TotalRecords = GetTotalLogs(logParam);
-            pagingLogs.IsHideNickName = IsHideNickName(downlineInfo.IsSubAcc, downlineInfo.RoleId, downlineInfo.CustId);
+
+            foreach (var log in pagingLogs.Logs)
+            {
+                var isHideNickname = IsHideNickName(IsSubAccFromLog(log), downlineInfo.RoleId, downlineInfo.CustId);
+                log.IsHideNickname = isHideNickname;
+            }
+            
             return pagingLogs;
         }
 
@@ -141,7 +148,6 @@
         protected virtual IEnumerable<Log> GetLogs(LogParam logParam)
         {
             var criteria = CreateGetLogsCriteria(logParam);
-
             return dynamicRepository.Fetch<Log>(criteria);
         }
 
@@ -153,12 +159,22 @@
         }
 
         private bool IsHideNickName(bool isSubAccount, int roleId, int custId)
-            => IsIndirect(roleId) || IsSubAccViewMainAcc(isSubAccount, custId);
+            => IsIndirect(roleId) || IsSubAccViewMainAcc(isSubAccount, custId) || IsDirectUplineViewSubAcc(isSubAccount, roleId);
 
         private bool IsIndirect (int roleId)
             => session.RoleId - roleId != 1 && session.RoleId != roleId;
 
+        private bool IsDirectUplineViewSubAcc(bool isSubAccount, int roleId)
+            => session.RoleId - roleId == 1 && isSubAccount;
+
         private bool IsSubAccViewMainAcc (bool isSubAccount, int custId)
-            => session.IsSubAcc && !isSubAccount && session.CustId == custId;
+            => session.IsSubAcc && session.CustId == custId && !isSubAccount;
+
+        private static bool IsSubAccFromLog(Log log)
+            => NicknameActionIds.Any(actionId => actionId == log.ActionId) 
+                && new Regex($"(?:SubAccName=)(?<paramValue>[^&|^\\s]+)").IsMatch(log.TrackingValue);
+
+        private static IEnumerable<int> NicknameActionIds
+            => new List<int> { 621, 688};
     }
 }
