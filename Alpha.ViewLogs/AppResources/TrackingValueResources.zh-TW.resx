@@ -241,7 +241,7 @@
     <value>姓</value>
   </data>
   <data name="discount1x2" xml:space="preserve">
-    <value>折扣 1x2</value>
+    <value>折扣 独赢盘</value>
   </data>
   <data name="DepositUserName" xml:space="preserve">
     <value>現金用戶名稱</value>
@@ -802,7 +802,7 @@
     <value>大小盤</value>
   </data>
   <data name="playerdiscount1x2" xml:space="preserve">
-    <value>玩家的1x2折扣</value>
+    <value>玩家的獨贏折扣</value>
   </data>
   <data name="v99apt_1" xml:space="preserve">
     <value>亞洲盤</value>
@@ -1363,7 +1363,7 @@
     <value>最低波膽</value>
   </data>
   <data name="minpt_5" xml:space="preserve">
-    <value>最低 1x2</value>
+    <value>最低獨贏盤</value>
   </data>
   <data name="minpt_6" xml:space="preserve">
     <value>最低總入球</value>
@@ -1570,7 +1570,7 @@
     <value>最高波膽</value>
   </data>
   <data name="maxpt_5" xml:space="preserve">
-    <value>最高 1x2</value>
+    <value>最低獨贏盤</value>
   </data>
   <data name="maxbv10" xml:space="preserve">
     <value>高爾夫球-最高投注</value>

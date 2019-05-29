@@ -1363,7 +1363,7 @@
     <value>ทายผลสกอร์ ต่ำสุด </value>
   </data>
   <data name="minpt_5" xml:space="preserve">
-    <value>1x2 ต่ำสุด </value>
+    <value>1X2 ต่ำสุด </value>
   </data>
   <data name="minpt_6" xml:space="preserve">
     <value>ประตูทั้งหมด ต่ำสุด </value>
@@ -1570,7 +1570,7 @@
     <value>ทายผลสกอร์ สูงสุด </value>
   </data>
   <data name="maxpt_5" xml:space="preserve">
-    <value>1x2 สูงสุด </value>
+    <value>1X2 สูงสุด </value>
   </data>
   <data name="maxbv10" xml:space="preserve">
     <value>กอล์ฟ - เดิมพันสูงสุด</value>

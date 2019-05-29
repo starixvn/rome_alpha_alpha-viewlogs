@@ -2986,7 +2986,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Discount 1x2.
+        ///   Looks up a localized string similar to Discount 1X2.
         /// </summary>
         public static string discount1x2 {
             get {
@@ -3751,7 +3751,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FT.1x2.
+        ///   Looks up a localized string similar to FT.1X2.
         /// </summary>
         public static string isa_smpt_5 {
             get {
@@ -6595,7 +6595,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max FT.1x2.
+        ///   Looks up a localized string similar to Max FT.1X2.
         /// </summary>
         public static string maxpt_5 {
             get {
@@ -8782,7 +8782,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Player&apos;s 1x2 Discount.
+        ///   Looks up a localized string similar to Player&apos;s 1X2 Discount.
         /// </summary>
         public static string playerdiscount1x2 {
             get {
