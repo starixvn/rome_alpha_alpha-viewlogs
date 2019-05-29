@@ -130,7 +130,7 @@
     <value>大小盤</value>
   </data>
   <data name="v10mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v201mpt_2" xml:space="preserve">
     <value>单双</value>
@@ -145,7 +145,7 @@
     <value>大小盤</value>
   </data>
   <data name="v3apt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="updptv5" xml:space="preserve">
     <value>更新網球占成</value>
@@ -169,7 +169,7 @@
     <value>會員名稱</value>
   </data>
   <data name="isa_v3spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v3smpt_1" xml:space="preserve">
     <value>亞洲盤</value>
@@ -214,7 +214,7 @@
     <value>亞洲盤</value>
   </data>
   <data name="a_v3spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v10mpt_2" xml:space="preserve">
     <value>单双</value>
@@ -235,7 +235,7 @@
     <value>大小盤</value>
   </data>
   <data name="isa_v10mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="lastname" xml:space="preserve">
     <value>姓</value>
@@ -256,7 +256,7 @@
     <value>折扣</value>
   </data>
   <data name="isa_v2spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="TotalUser" xml:space="preserve">
     <value>總用戶</value>
@@ -307,7 +307,7 @@
     <value>總進球</value>
   </data>
   <data name="isa_mpt_5" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>全場 獨贏盤</value>
   </data>
   <data name="isa_mpt_4" xml:space="preserve">
     <value>波膽</value>
@@ -346,7 +346,7 @@
     <value>单双</value>
   </data>
   <data name="isa_spt_5" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>全場 獨贏盤</value>
   </data>
   <data name="isa_spt_4" xml:space="preserve">
     <value>波膽</value>
@@ -364,13 +364,13 @@
     <value>參考代碼2</value>
   </data>
   <data name="a_v8mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v11spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v3mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="newMasterId" xml:space="preserve">
     <value>新總代編號</value>
@@ -382,7 +382,7 @@
     <value>會員簡別號碼</value>
   </data>
   <data name="v3spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v11apt_1" xml:space="preserve">
     <value>亞洲盤</value>
@@ -403,10 +403,10 @@
     <value>亞洲盤</value>
   </data>
   <data name="a_v3mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v99spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v10apt_1" xml:space="preserve">
     <value>亞洲盤</value>
@@ -457,10 +457,10 @@
     <value>IsGroupHeadline</value>
   </data>
   <data name="isa_v11smpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v10mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="minlivept_3" xml:space="preserve">
     <value>最低現場大小</value>
@@ -598,7 +598,7 @@
     <value>優勝冠軍</value>
   </data>
   <data name="isa_v3smpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v201smpt_3" xml:space="preserve">
     <value>大小盤</value>
@@ -682,10 +682,10 @@
     <value>創作者</value>
   </data>
   <data name="v99spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v99smpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v201mpt_mem_2" xml:space="preserve">
     <value>单双</value>
@@ -727,7 +727,7 @@
     <value>總進球</value>
   </data>
   <data name="a_spt_5" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>全場 獨贏盤</value>
   </data>
   <data name="a_spt_4" xml:space="preserve">
     <value>波膽</value>
@@ -745,7 +745,7 @@
     <value>上半場大小盤</value>
   </data>
   <data name="a_mpt_5" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>全場 獨贏盤</value>
   </data>
   <data name="a_mpt_4" xml:space="preserve">
     <value>波膽</value>
@@ -769,7 +769,7 @@
     <value>手機</value>
   </data>
   <data name="v11spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="Checker" xml:space="preserve">
     <value>Checker</value>
@@ -778,10 +778,10 @@
     <value>優勝冠軍</value>
   </data>
   <data name="a_v10spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v5spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v99spt_3" xml:space="preserve">
     <value>大小盤</value>
@@ -868,7 +868,7 @@
     <value>上半場亞洲盤</value>
   </data>
   <data name="v8mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="minV151PT_31" xml:space="preserve">
     <value>最低南非彩池獨贏</value>
@@ -937,7 +937,7 @@
     <value>disableFinancialWC</value>
   </data>
   <data name="isa_v2smpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isinternal0" xml:space="preserve">
     <value>isinternal0</value>
@@ -952,7 +952,7 @@
     <value>地址</value>
   </data>
   <data name="v8apt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="alivept_8" xml:space="preserve">
     <value>現場上半場大小</value>
@@ -988,7 +988,7 @@
     <value>最高讓球</value>
   </data>
   <data name="v99apt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v99mpt_1" xml:space="preserve">
     <value>亞洲盤</value>
@@ -1018,7 +1018,7 @@
     <value>總進球</value>
   </data>
   <data name="apt_5" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>全場 獨贏盤</value>
   </data>
   <data name="apt_4" xml:space="preserve">
     <value>波膽</value>
@@ -1057,7 +1057,7 @@
     <value>總進球</value>
   </data>
   <data name="mpt_5" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>全場 獨贏盤</value>
   </data>
   <data name="mpt_4" xml:space="preserve">
     <value>波膽</value>
@@ -1120,7 +1120,7 @@
     <value>上半場大小盤</value>
   </data>
   <data name="spt_5" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>全場 獨贏盤</value>
   </data>
   <data name="spt_4" xml:space="preserve">
     <value>波膽</value>
@@ -1165,7 +1165,7 @@
     <value>更新其他占成</value>
   </data>
   <data name="v11apt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v99smpt_2" xml:space="preserve">
     <value>单双</value>
@@ -1177,7 +1177,7 @@
     <value>亞洲盤</value>
   </data>
   <data name="isa_v99spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_mpt_10" xml:space="preserve">
     <value>優勝冠軍</value>
@@ -1198,19 +1198,19 @@
     <value>亞洲盤</value>
   </data>
   <data name="isa_v11spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="MatchLimit" xml:space="preserve">
     <value>Match Limit</value>
   </data>
   <data name="a_v5mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="creditProblem" xml:space="preserve">
     <value>額度問題</value>
   </data>
   <data name="isa_v5mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="MaxBv151" xml:space="preserve">
     <value>南非賽馬-最高投注</value>
@@ -1273,13 +1273,13 @@
     <value>大小盤</value>
   </data>
   <data name="isa_v8mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_spt_10" xml:space="preserve">
     <value>優勝冠軍</value>
   </data>
   <data name="v99mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v201discount" xml:space="preserve">
     <value>折扣</value>
@@ -1288,7 +1288,7 @@
     <value>波膽</value>
   </data>
   <data name="isa_smpt_5" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>全場 獨贏盤</value>
   </data>
   <data name="isa_smpt_6" xml:space="preserve">
     <value>總進球</value>
@@ -1321,7 +1321,7 @@
     <value>最低亞洲盤</value>
   </data>
   <data name="v5apt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v5spt_2" xml:space="preserve">
     <value>单双</value>
@@ -1342,13 +1342,13 @@
     <value>大小盤</value>
   </data>
   <data name="v11mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v8spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v2apt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="minbv99" xml:space="preserve">
     <value>其他-最低投注</value>
@@ -1405,7 +1405,7 @@
     <value>多重關閉</value>
   </data>
   <data name="v5mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v2mpt_3" xml:space="preserve">
     <value>大小盤</value>
@@ -1456,7 +1456,7 @@
     <value>現場上半場大小</value>
   </data>
   <data name="v10spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="OldAgentId" xml:space="preserve">
     <value>新代理代編號</value>
@@ -1465,7 +1465,7 @@
     <value>新超級總代名稱</value>
   </data>
   <data name="isa_v99mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="transID" xml:space="preserve">
     <value>交易編號</value>
@@ -1528,10 +1528,10 @@
     <value>大小盤</value>
   </data>
   <data name="v5spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v11mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="maxv5pt_20" xml:space="preserve">
     <value>最高讓球</value>
@@ -1642,7 +1642,7 @@
     <value>舊超級總代編號</value>
   </data>
   <data name="v2mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="DepositUserID" xml:space="preserve">
     <value>現金用戶簡別</value>
@@ -1666,10 +1666,10 @@
     <value>最高單雙</value>
   </data>
   <data name="isa_v5smpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v2spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="addNew" xml:space="preserve">
     <value>添加新</value>
@@ -1681,7 +1681,7 @@
     <value>優勝冠軍</value>
   </data>
   <data name="a_v2mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="CreditGrade" xml:space="preserve">
     <value>CreditGrade</value>
@@ -1768,7 +1768,7 @@
     <value>最低讓球</value>
   </data>
   <data name="isa_v10spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isUpdateDownline" xml:space="preserve">
     <value>是更新下線</value>
@@ -1792,7 +1792,7 @@
     <value>信用額度</value>
   </data>
   <data name="isa_v8smpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="maxv99pt_1" xml:space="preserve">
     <value>最高亞洲盤</value>
@@ -1804,10 +1804,10 @@
     <value>最高大小</value>
   </data>
   <data name="v2spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v10smpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="newspt" xml:space="preserve">
     <value>新超級總代占成</value>
@@ -1816,10 +1816,10 @@
     <value>新總代占成</value>
   </data>
   <data name="v10apt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v11mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v2apt_9" xml:space="preserve">
     <value>混合過關</value>
@@ -1861,7 +1861,7 @@
     <value>語言</value>
   </data>
   <data name="isa_v8spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v8smpt_3" xml:space="preserve">
     <value>大小盤</value>
@@ -1957,7 +1957,7 @@
     <value>更新最低-最高棒球投注</value>
   </data>
   <data name="a_v99mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="ukcomm" xml:space="preserve">
     <value>ukcomm</value>
@@ -2032,10 +2032,10 @@
     <value>郵政</value>
   </data>
   <data name="isa_v2mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v3mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v8mpt_1" xml:space="preserve">
     <value>亞洲盤</value>
@@ -2143,7 +2143,7 @@
     <value>備註</value>
   </data>
   <data name="a_v8spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="status" xml:space="preserve">
     <value>狀態</value>
@@ -2323,7 +2323,7 @@
     <value>波膽</value>
   </data>
   <data name="a_mpt_mem_5" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>全場 獨贏盤</value>
   </data>
   <data name="a_mpt_mem_6" xml:space="preserve">
     <value>總進球</value>
@@ -2344,7 +2344,7 @@
     <value>单双</value>
   </data>
   <data name="a_v10mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v10mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2353,7 +2353,7 @@
     <value>亞洲盤</value>
   </data>
   <data name="a_v11mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v2mpt_mem_1" xml:space="preserve">
     <value>亞洲盤</value>
@@ -2362,7 +2362,7 @@
     <value>单双</value>
   </data>
   <data name="a_v2mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v2mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2383,7 +2383,7 @@
     <value>单双</value>
   </data>
   <data name="a_v3mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v3mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2395,7 +2395,7 @@
     <value>单双</value>
   </data>
   <data name="a_v5mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v5mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2404,7 +2404,7 @@
     <value>亞洲盤</value>
   </data>
   <data name="a_v8mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v8mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2416,7 +2416,7 @@
     <value>单双</value>
   </data>
   <data name="a_v99mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v99mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2449,7 +2449,7 @@
     <value>波膽</value>
   </data>
   <data name="isa_mpt_mem_5" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>全場 獨贏盤</value>
   </data>
   <data name="isa_mpt_mem_6" xml:space="preserve">
     <value>總進球</value>
@@ -2470,7 +2470,7 @@
     <value>单双</value>
   </data>
   <data name="isa_v10mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v10mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2479,7 +2479,7 @@
     <value>亞洲盤</value>
   </data>
   <data name="isa_v11mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v2mpt_mem_1" xml:space="preserve">
     <value>亞洲盤</value>
@@ -2488,7 +2488,7 @@
     <value>单双</value>
   </data>
   <data name="isa_v2mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v2mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2509,7 +2509,7 @@
     <value>单双</value>
   </data>
   <data name="isa_v3mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v3mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2521,7 +2521,7 @@
     <value>单双</value>
   </data>
   <data name="isa_v5mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v5mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2530,7 +2530,7 @@
     <value>亞洲盤</value>
   </data>
   <data name="isa_v8mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v8mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -2542,7 +2542,7 @@
     <value>单双</value>
   </data>
   <data name="isa_v99mpt_mem_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v99mpt_mem_3" xml:space="preserve">
     <value>大小盤</value>
@@ -3649,16 +3649,16 @@
     <value>固定賠率賽馬遊戲 - 單場限額</value>
   </data>
   <data name="a_v154mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="a_v154spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v154mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="isa_v154spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="Updptv154" xml:space="preserve">
     <value>Update Position Taking HR Fixed Odds</value>
@@ -3751,16 +3751,16 @@
     <value>Maximum Loss</value>
   </data>
   <data name="isa_v5spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v154apt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v154spt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="v154mpt_20" xml:space="preserve">
-    <value>獨贏</value>
+    <value>勝負盤</value>
   </data>
   <data name="MaxPerNumber" xml:space="preserve">
     <value>最高數額</value>
