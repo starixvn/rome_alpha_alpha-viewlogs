@@ -3,17 +3,23 @@
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
 
-  <xsl:template match="/">
+  <xsl:template match="age_loginverifydownline">
     <table class="tblDesc">
       <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('subAccName')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@subaccount" />
+        </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
-        <td class="colW1"></td><td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
       </tr>
 
     </table>
