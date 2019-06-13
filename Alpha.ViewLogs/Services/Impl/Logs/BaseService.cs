@@ -12,6 +12,7 @@
     using Params;
     using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Model.Base;
+    using System.Text.RegularExpressions;
 
     public abstract class BaseService
     {
@@ -131,7 +132,13 @@
 
             pagingLogs.Logs = GetLogs(logParam);
             pagingLogs.TotalRecords = GetTotalLogs(logParam);
-            pagingLogs.IsHideNickName = IsHideNickName(downlineInfo.IsSubAcc, downlineInfo.RoleId, downlineInfo.CustId);
+
+            foreach (var log in pagingLogs.Logs)
+            {
+                var isHideNickname = IsHideNickName(IsSubAccFromLog(log), downlineInfo.RoleId, downlineInfo.CustId, SubAccNameFromLog(log));
+                log.IsHideNickname = isHideNickname;
+            }
+            
             return pagingLogs;
         }
 
@@ -141,7 +148,6 @@
         protected virtual IEnumerable<Log> GetLogs(LogParam logParam)
         {
             var criteria = CreateGetLogsCriteria(logParam);
-
             return dynamicRepository.Fetch<Log>(criteria);
         }
 
@@ -152,13 +158,45 @@
             return LogDataAccess.GetTotalRecordsOfLogs(criteria);
         }
 
-        private bool IsHideNickName(bool isSubAccount, int roleId, int custId)
-            => IsIndirect(roleId) || IsSubAccViewMainAcc(isSubAccount, custId);
+        private bool IsHideNickName(bool isSubAccount, int roleId, int custId, string subUsername)
+            => IsIndirect(roleId) 
+                || IsSubAccViewMainAcc(isSubAccount, custId) 
+                || IsDirectUplineViewSubAcc(isSubAccount, roleId)
+                || IsSubAccViewOtherSubAcc(isSubAccount, subUsername);
 
         private bool IsIndirect (int roleId)
             => session.RoleId - roleId != 1 && session.RoleId != roleId;
 
+        private bool IsDirectUplineViewSubAcc(bool isSubAccount, int roleId)
+            => session.RoleId - roleId == 1 && isSubAccount;
+
         private bool IsSubAccViewMainAcc (bool isSubAccount, int custId)
-            => session.IsSubAcc && !isSubAccount && session.CustId == custId;
+            => session.IsSubAcc && session.CustId == custId && !isSubAccount;
+
+        private bool IsSubAccViewOtherSubAcc(bool isSubAccount, string subUsername)
+            => session.IsSubAcc && isSubAccount && !session.SubUserName.Equals(subUsername, StringComparison.OrdinalIgnoreCase);
+
+        private static bool IsSubAccFromLog(Log log)
+            => Enum.GetValues(typeof(NicknameActions)).Cast<int>().Any(actionId => actionId == log.ActionId) 
+                && (new Regex($"(?:SubAccName=)(?<paramValue>[^&|^\\s]+)").IsMatch(log.TrackingValue)
+                    || new Regex($"(?:SubAccount=)(?<paramValue>[^&|^\\s]+)").IsMatch(log.TrackingValue));
+
+        private static string SubAccNameFromLog(Log log)
+        {
+            var subAccName = new Regex("(?:SubAccName=)(?<paramValue>[^&|^\\s]+)").Match(log.TrackingValue ?? string.Empty).Groups[1].Value;
+
+            subAccName = !string.IsNullOrWhiteSpace(subAccName) ? subAccName
+                : new Regex("(?:SubAccount=)(?<paramValue>[^&|^\\s]+)").Match(log.TrackingValue ?? string.Empty).Groups[1].Value;
+
+            subAccName = !string.IsNullOrWhiteSpace(subAccName) ? subAccName : string.Empty;
+
+            return subAccName.Replace("\"", string.Empty);
+        }
+
+        private enum NicknameActions
+        {
+            CreateMainAccNickname = 621,
+            CreateSubAccNickname = 688,
+        }
     }
 }

@@ -9,21 +9,19 @@
               <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('subAccName')" /></td>
               <td class="colW2">
                   <xsl:value-of select="@subaccname" />
-              </td>
-              <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('addNew')" /></td>
-              <td class="colW2">
-                  <xsl:value-of select="@addnew" />
               </td>              
               <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('loginIP')" /></td>
               <td class="colW2">
                 <xsl:value-of select="xslLogFormat:FormatIP(@loginip)" />
               </td>
+              <td class="colW1">
+                <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
+              </td>
+              <td class="colW2">
+                <xsl:value-of select="@language" />
+              </td>
             </tr>
             <tr>
-              <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('language')" /></td>
-              <td class="colW2">
-                  <xsl:value-of select="@language" />
-              </td>
               <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('errCode')" /></td>
               <td class="colW2">
                 <xsl:value-of select="@errcode" />
@@ -32,6 +30,8 @@
               <td class="colW2" >
                 <xsl:value-of select="@errmsg" />
               </td>
+              <td class="colW1"></td>
+              <td class="colW2"></td>
             </tr>
             <tr>
               <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('updPageAccess')" /></td>

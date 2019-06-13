@@ -22,7 +22,7 @@
 
         private bool isShowMyanmarOdds;
         private bool isShowPokerGames;
-        private bool isHideNickName;
+        private bool isHideNickname;
 
         public LogFormatterImpl(
             ViewLogIPService ipService,
@@ -38,7 +38,7 @@
         /// Need be reviewed code here, AssignParams should not in formatter class
         /// </summary>
         /// <param name="transformParam"></param>
-        public void Init(TransformParam transformParam)
+        public void Init(TransformParam transformParam, bool isHideNickname = false)
         {
             if (transformParam == null)
             {
@@ -51,17 +51,14 @@
 
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
             isShowPokerGames = transformParam.IsShowPokerGames;
-            isHideNickName = transformParam.IsHideNickName;
+            this.isHideNickname = isHideNickname;
         }
 
         public string FormatIP(string ip)
         {
             return ipService.FormatIP(ip);
         }
-
-        public string FormatNickName(string nickname)
-            => isHideNickName ? string.Empty : nickname;
-
+        
         public string FormatCountryCode(string ip, string country)
         {
             return ipService.FormatCountryCode(ip, country);
@@ -332,5 +329,8 @@
             => string.IsNullOrWhiteSpace(value)
             ? string.Empty
             : GetLogResource($"SystemId_{value}");
+
+        public string FormatNickName(string nickname)
+            => isHideNickname ? string.Empty : nickname;
     }
 }
