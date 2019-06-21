@@ -10,7 +10,7 @@
     <div role="tabpanel" class="tab-pane active" id="@ViewContext.RouteData.Values["controller"].ToString().ToLower()">
         <div class="filter">
             <form class="form-inline" role="form">
-                <div class="form-group  @(Model.IsAgent? "hide":string.Empty)">
+                <div class="form-group">
                     <input type="text" id="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
                            value="@(string.IsNullOrWhiteSpace(Model.Username) ? string.Empty : Model.Username)"
                            autocomplete="off" />
