@@ -27,6 +27,7 @@
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -308,6 +309,12 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_75036.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_75037.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_75038.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_70027.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_70028.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_65018.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1161.xslt">
       <SubType>Designer</SubType>
     </Content>
