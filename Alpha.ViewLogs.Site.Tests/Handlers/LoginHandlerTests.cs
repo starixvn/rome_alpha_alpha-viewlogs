@@ -364,7 +364,7 @@
                 LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites));
         }
 
-        [TestCase(2, "PreviousUsername")]
+        [TestCase(2, "Username")]
         [TestCase(1, "Username")]
         [TestCase(3, "Username")]
         [TestCase(4, "Username")]

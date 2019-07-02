@@ -22,8 +22,10 @@
         public ActionResult Index(IndexQuery indexQuery)
         {
             indexQuery.IsAgentViewing = UserSession.RoleId == UserLevel.Agent.Value;
-            indexQuery.PreviousUsername = indexQuery.Username;
-            indexQuery.Username = indexQuery.IsAgentViewing ? UserSession.UserName : indexQuery.Username;
+            indexQuery.PreviousUsername = UserSession.UserName;
+            indexQuery.Username = indexQuery.IsAgentViewing && string.IsNullOrWhiteSpace(indexQuery.Username)
+                ? UserSession.UserName
+                : indexQuery.Username;
             indexQuery.IsInternal = UserSession.IsInternal;
 
             var viewModel = mediator.Send(indexQuery);

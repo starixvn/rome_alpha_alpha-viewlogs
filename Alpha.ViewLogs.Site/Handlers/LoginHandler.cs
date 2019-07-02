@@ -3,7 +3,6 @@
     using System.Collections.Generic;
     using MediatR;
     using Models;
-    using Models.Enumerations;
     using Requests.Login;
     using Services;
     using ViewLogs.Helpers;
@@ -28,8 +27,10 @@
 
             viewModel.PreviousUsername = message.PreviousUsername;
             viewModel.ActionTypeId = message.ActionTypeId;
-            viewModel.IsAgent = viewModel.RoleId == UserLevel.Agent.Value;
-            viewModel.Username = viewModel.IsAgent ? viewModel.PreviousUsername : viewModel.Username;
+            viewModel.IsAgent = message.IsAgentViewing;
+            viewModel.Username = message.IsAgentViewing && message.PreviousUsername.Equals(message.Username)
+                ? string.Empty
+                : message.Username;
 
             return viewModel;
         }
