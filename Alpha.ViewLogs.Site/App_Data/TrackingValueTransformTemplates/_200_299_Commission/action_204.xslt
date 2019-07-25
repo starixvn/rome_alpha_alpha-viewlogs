@@ -47,15 +47,7 @@
             <xsl:value-of select="@discount1x2" />
           </td>
         </tr>
-
-        <tr>
-
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@discountnumber" />
-          </td>
+        <tr>         
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
           </td>
@@ -67,6 +59,10 @@
           </td>
           <td class="colW2">
             <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
           </td>
         </tr>
         <tr>
@@ -83,10 +79,8 @@
             <xsl:value-of select="@errmsg" />
           </td>
           <td class="colW1">
-
           </td>
           <td class="colW2">
-
           </td>
         </tr>
       </table>
@@ -115,12 +109,9 @@
         </tr>
 
         <tr>
-
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
+          <td class="colW1">          
           </td>
-          <td class="colW2">
-            <xsl:value-of select="@discountnumber" />
+          <td class="colW2">          
           </td>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('DiscountMyanmarOdds')" />
@@ -134,9 +125,12 @@
           <td class="colW2">
             <xsl:value-of select="@language" />
           </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
         </tr>
         <tr>
-
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
           </td>
