@@ -49,20 +49,7 @@
               <td class="colW2">
                 <xsl:value-of select="@discount1x2" />
               </td>
-
-            </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@discountnumber" />
-              </td>
-              <td class="colW1"></td>
-              <td class="colW2"></td>
-              <td class="colW1"></td>
-              <td class="colW2"></td>
-            </tr>
+            </tr>          
           </table>
         </xsl:if>
         <xsl:if test="xslLogFormat:IsShowMyanmarOdds() = 'True'">
