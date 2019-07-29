@@ -88,24 +88,17 @@
               </td>
             </tr>
             <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@discountnumber" />
-              </td>
+              
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('DiscountMyanmarOdds')" />
               </td>
               <td class="colW2">
                 <xsl:value-of select="@discountmyanmarodds" />
               </td>
-              <td class="colW1">
-
-              </td>
-              <td class="colW2">
-
-              </td>
+              <td class="colW1"></td>
+              <td class="colW2"></td>
+              <td class="colW1"></td>
+              <td class="colW2"></td>
 
             </tr>
           </table>
