@@ -30,5 +30,6 @@
 
     @RenderSection("Scripts", required: false)
     @Alpha.Web.Helpers.GoogleAnalyticHepler.Render()
+    @Html.Raw(Alpha.Logging.LogManagerAdapter.RenderJavascriptLogger())
 </body>
 </html>

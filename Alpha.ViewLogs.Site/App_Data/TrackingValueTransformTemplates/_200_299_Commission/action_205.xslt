@@ -45,15 +45,7 @@
             <xsl:value-of select="@discount1x2" />
           </td>
         </tr>
-        <tr>
-          
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@discountnumber" />
-          </td>
-
+        <tr> 
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
           </td>
@@ -65,6 +57,10 @@
           </td>
           <td class="colW2">
             <xsl:value-of select="@language" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
           </td>
         </tr>
         <tr>
@@ -112,13 +108,6 @@
           </td>
         </tr>
         <tr>
-          
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('discountnumber')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@discountnumber" />
-          </td>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('DiscountMyanmarOdds')" />
           </td>
@@ -130,6 +119,10 @@
           </td>
           <td class="colW2">
             <xsl:value-of select="@language" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
           </td>
         </tr>
         <tr>
