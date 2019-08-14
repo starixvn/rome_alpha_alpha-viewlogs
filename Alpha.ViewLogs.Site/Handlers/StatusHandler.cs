@@ -95,7 +95,7 @@
                 }
                 catch (Exception ex)
                 {
-                    //ExceptionHandler.Handle(ex);
+                    ExceptionHandler.Handle(ex);
                 }
             }
 
