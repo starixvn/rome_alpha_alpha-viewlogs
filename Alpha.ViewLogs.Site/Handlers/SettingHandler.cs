@@ -1,10 +1,12 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web;
     using AppResources;
     using Fanex.Common;
+    using Fanex.Logging.Extensions.Web;
     using Helpers;
     using MediatR;
     using Models;
@@ -115,25 +117,32 @@
                     continue;
                 }
 
-                var formattedTrackingValue = trackingValueFormatter.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
-                var htmlTrackingValue = transformService.TransformTrackingValue(formattedTrackingValue, log.ActionId, transformParam, log.IsHideNickname);
-
-                logItems.Add(new LogItemViewModel
+                try
                 {
-                    ActionId = log.ActionId,
-                    ActionName = LogService.GetLogActionName(log.ActionId, message.Language),
+                    var formattedTrackingValue = trackingValueFormatter.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
+                    var htmlTrackingValue = transformService.TransformTrackingValue(formattedTrackingValue, log.ActionId, transformParam, log.IsHideNickname);
 
-                    ActionTypeId = log.ActionTypeId,
-                    CustId = log.CustId,
-                    CustName = log.CustName,
-                    LogDate = DateTimeHelper.ToLongDateWithSlash(log.LogDate),
-                    LogId = log.LogId,
-                    SPName = log.StoreProcedureName,
-                    UserId = log.UserId,
-                    Username = log.Username,
-                    TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
-                    IP = LogFormatter.FormatIP(log.IP)
-                });
+                    logItems.Add(new LogItemViewModel
+                    {
+                        ActionId = log.ActionId,
+                        ActionName = LogService.GetLogActionName(log.ActionId, message.Language),
+
+                        ActionTypeId = log.ActionTypeId,
+                        CustId = log.CustId,
+                        CustName = log.CustName,
+                        LogDate = DateTimeHelper.ToLongDateWithSlash(log.LogDate),
+                        LogId = log.LogId,
+                        SPName = log.StoreProcedureName,
+                        UserId = log.UserId,
+                        Username = log.Username,
+                        TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
+                        IP = LogFormatter.FormatIP(log.IP)
+                    });
+                }
+                catch (Exception ex)
+                {
+                    ExceptionHandler.Handle(ex);
+                }
             }
 
             viewModel.LogItems = logItems;
