@@ -3,6 +3,7 @@
     using System;
     using Fanex.Data.Repository;
     using Params;
+    using Sunplus.Agent.Model.Entities;
     using ViewLogs.Criteria;
     using ViewLogs.Criteria.Setting;
     using ViewLogs.DataAccesses;
@@ -14,8 +15,9 @@
         public BaseServiceForTesting(
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
-            LogDataAccess logDataAccess) :
-            base(dynamicRepository, customerService, logDataAccess)
+            LogDataAccess logDataAccess,
+            IUserSession session) :
+            base(dynamicRepository, customerService, logDataAccess, session)
         {
         }
 

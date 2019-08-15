@@ -25,12 +25,12 @@
         private readonly LogDataAccess logDataAccess;
         private readonly IUserSession session;
 
-        protected BaseService(IDynamicRepository dynamicRepository, CustomerService customerService, LogDataAccess logDataAccess, IUserSession session = null)
+        protected BaseService(IDynamicRepository dynamicRepository, CustomerService customerService, LogDataAccess logDataAccess, IUserSession session)
         {
             this.dynamicRepository = dynamicRepository;
             this.customerService = customerService;
             this.logDataAccess = logDataAccess;
-            this.session = session ?? new UserSessionExt();
+            this.session = session;
         }
 
         protected LogDataAccess LogDataAccess

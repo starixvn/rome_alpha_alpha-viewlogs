@@ -8,6 +8,7 @@
     using NSubstitute;
     using NUnit.Framework;
     using Params;
+    using Sunplus.Agent.Model.Entities;
     using ViewLogs.Criteria;
     using ViewLogs.DataAccesses;
     using ViewLogs.Models;
@@ -26,6 +27,7 @@
         private LogDataAccess logDataAccess;
 
         private Cache cacheForTesting;
+        private IUserSession session;
 
         [SetUp]
         public void SetUp()
@@ -36,8 +38,9 @@
             dynamicRepository = Substitute.For<IDynamicRepository>();
             customerService = Substitute.For<CustomerService>();
             logDataAccess = Substitute.For<LogDataAccess>();
+            session = Substitute.For<IUserSession>();
 
-            baseService = new BaseServiceForTesting(dynamicRepository, customerService, logDataAccess);
+            baseService = new BaseServiceForTesting(dynamicRepository, customerService, logDataAccess, session);
         }
 
         [Test]
