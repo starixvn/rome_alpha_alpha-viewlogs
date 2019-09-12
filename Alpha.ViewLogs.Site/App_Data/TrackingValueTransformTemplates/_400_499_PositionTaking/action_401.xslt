@@ -417,8 +417,12 @@
                   <td class="colW2">
                     <xsl:value-of select="@v99spt_10" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
+                  <td class="colW1">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colW2">
+                    <xsl:value-of select="@v99spt_9999" />
+                  </td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">
@@ -933,8 +937,12 @@
                   <td class="colW2">
                     <xsl:value-of select="@a_v99spt_10" />
                   </td>
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
+                  <td class="colW1">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colW2">
+                    <xsl:value-of select="@a_v99spt_9999" />
+                  </td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">
@@ -1448,8 +1456,12 @@
                   <td class="colValue">
                     <xsl:value-of select="@v99mpt_10" />
                   </td>
-                  <td class="colTitle"></td>
-                  <td class="colValue"></td>
+                  <td class="colTitle">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colValue">
+                    <xsl:value-of select="@v99mpt_9999" />
+                  </td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">

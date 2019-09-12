@@ -620,8 +620,12 @@
                   <td class="colValue">
                     <xsl:value-of select="@v99apt_10" />
                   </td>
-                  <td class="colTitle"></td>
-                  <td class="colValue"></td>
+                  <td class="colTitle">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colValue">
+                    <xsl:value-of select="@v99apt_9999" />
+                  </td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">
@@ -1129,8 +1133,12 @@
                   <td class="colValue">
                     <xsl:value-of select="@v99mpt_10" />
                   </td>
-                  <td class="colTitle"></td>
-                  <td class="colValue"></td>
+                  <td class="colTitle">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colValue">
+                    <xsl:value-of select="@v99mpt_9999" />
+                  </td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">
@@ -1639,8 +1647,12 @@
                   <td class="colValue">
                     <xsl:value-of select="@a_v99mpt_10" />
                   </td>
-                  <td class="colTitle"></td>
-                  <td class="colValue"></td>
+                  <td class="colTitle">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colValue">
+                    <xsl:value-of select="@a_v99mpt_9999" />
+                  </td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">
@@ -2079,8 +2091,12 @@
                   <td class="colValue">
                     <xsl:value-of select="@isa_v99mpt_10" />
                   </td>
-                  <td class="colTitle"></td>
-                  <td class="colValue"></td>
+                  <td class="colTitle">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colValue">
+                    <xsl:value-of select="@isa_v99mpt_9999" />
+                  </td>
                 </tr>
 
                 <tr class="headerSportTypeDetail">
