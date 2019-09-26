@@ -292,7 +292,7 @@
     <value>Toàn trận - 1X2</value>
   </data>
   <data name="isa_mpt_4" xml:space="preserve">
-    <value>Tỷ số chính xác</value>
+    <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="isa_mpt_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -331,7 +331,7 @@
     <value>Toàn trận - 1X2</value>
   </data>
   <data name="isa_spt_4" xml:space="preserve">
-    <value>Tỷ số chính xác</value>
+    <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="isa_spt_7" xml:space="preserve">
     <value>Hiệp 1 -  Handicap</value>
@@ -679,7 +679,7 @@
     <value>Toàn trận - 1X2</value>
   </data>
   <data name="a_spt_4" xml:space="preserve">
-    <value>Tỷ số chính xác</value>
+    <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="a_spt_9" xml:space="preserve">
     <value>Cá cược tổng hợp</value>
@@ -697,7 +697,7 @@
     <value>Toàn trận - 1X2</value>
   </data>
   <data name="a_mpt_4" xml:space="preserve">
-    <value>Tỷ số chính xác</value>
+    <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="a_mpt_7" xml:space="preserve">
     <value>Hiệp 1 - Handicap</value>
@@ -949,7 +949,7 @@
     <value>Toàn trận - 1X2</value>
   </data>
   <data name="apt_4" xml:space="preserve">
-    <value>Tỷ số chính xác</value>
+    <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="apt_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -988,7 +988,7 @@
     <value>Toàn trận - 1X2</value>
   </data>
   <data name="mpt_4" xml:space="preserve">
-    <value>Tỷ số chính xác</value>
+    <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="mpt_9" xml:space="preserve">
     <value>Cá cược tổng hợp</value>
@@ -1051,7 +1051,7 @@
     <value>Toàn trận - 1X2</value>
   </data>
   <data name="spt_4" xml:space="preserve">
-    <value>Tỷ số chính xác</value>
+    <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="spt_7" xml:space="preserve">
     <value>Hiệp 1 -  Handicap</value>
@@ -1192,7 +1192,7 @@
     <value>Chiết khấu</value>
   </data>
   <data name="isa_smpt_4" xml:space="preserve">
-    <value>Tỷ số chính xác</value>
+    <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="isa_smpt_5" xml:space="preserve">
     <value>Toàn trận - 1X2</value>
@@ -2152,7 +2152,7 @@
     <value>Over/Under</value>
   </data>
   <data name="a_mpt_mem_4" xml:space="preserve">
-    <value>Tỷ số chính xác</value>
+    <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="a_mpt_mem_5" xml:space="preserve">
     <value>Toàn trận - 1X2</value>
@@ -2257,7 +2257,7 @@
     <value>Over/Under</value>
   </data>
   <data name="isa_mpt_mem_4" xml:space="preserve">
-    <value>Tỷ số chính xác</value>
+    <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="isa_mpt_mem_5" xml:space="preserve">
     <value>Toàn trận - 1X2</value>

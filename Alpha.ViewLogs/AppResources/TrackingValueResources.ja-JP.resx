@@ -280,7 +280,7 @@
     <value>FT.1X2</value>
   </data>
   <data name="isa_mpt_4" xml:space="preserve">
-    <value>Correct Score</value>
+    <value>正しいスコア</value>
   </data>
   <data name="isa_mpt_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -319,7 +319,7 @@
     <value>FT.1X2</value>
   </data>
   <data name="isa_spt_4" xml:space="preserve">
-    <value>Correct Score</value>
+    <value>正しいスコア</value>
   </data>
   <data name="isa_spt_7" xml:space="preserve">
     <value>1st Handicap</value>
@@ -661,7 +661,7 @@
     <value>FT.1X2</value>
   </data>
   <data name="a_spt_4" xml:space="preserve">
-    <value>Correct Score</value>
+    <value>正しいスコア</value>
   </data>
   <data name="a_spt_9" xml:space="preserve">
     <value>Mix Parlay</value>
@@ -679,7 +679,7 @@
     <value>FT.1X2</value>
   </data>
   <data name="a_mpt_4" xml:space="preserve">
-    <value>Correct Score</value>
+    <value>正しいスコア</value>
   </data>
   <data name="a_mpt_7" xml:space="preserve">
     <value>1st Handicap</value>
@@ -925,7 +925,7 @@
     <value>FT.1X2</value>
   </data>
   <data name="apt_4" xml:space="preserve">
-    <value>Correct Score</value>
+    <value>正しいスコア</value>
   </data>
   <data name="apt_3" xml:space="preserve">
     <value>Over/Under</value>
@@ -964,7 +964,7 @@
     <value>FT.1X2</value>
   </data>
   <data name="mpt_4" xml:space="preserve">
-    <value>Correct Score</value>
+    <value>正しいスコア</value>
   </data>
   <data name="mpt_9" xml:space="preserve">
     <value>Mix Parlay</value>
@@ -1027,7 +1027,7 @@
     <value>FT.1X2</value>
   </data>
   <data name="spt_4" xml:space="preserve">
-    <value>Correct Score</value>
+    <value>正しいスコア</value>
   </data>
   <data name="spt_7" xml:space="preserve">
     <value>1st Handicap</value>
@@ -1165,7 +1165,7 @@
     <value>Discount</value>
   </data>
   <data name="isa_smpt_4" xml:space="preserve">
-    <value>Correct Score</value>
+    <value>正しいスコア</value>
   </data>
   <data name="isa_smpt_5" xml:space="preserve">
     <value>FT.1x2</value>
@@ -2059,7 +2059,7 @@
     <value>Over/Under</value>
   </data>
   <data name="a_mpt_mem_4" xml:space="preserve">
-    <value>Correct Score</value>
+    <value>正しいスコア</value>
   </data>
   <data name="a_mpt_mem_5" xml:space="preserve">
     <value>FT.1X2</value>
@@ -2164,7 +2164,7 @@
     <value>Over/Under</value>
   </data>
   <data name="isa_mpt_mem_4" xml:space="preserve">
-    <value>Correct Score</value>
+    <value>正しいスコア</value>
   </data>
   <data name="isa_mpt_mem_5" xml:space="preserve">
     <value>FT.1X2</value>
