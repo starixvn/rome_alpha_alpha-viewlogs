@@ -19,9 +19,6 @@
         private Dictionary<string, bool> custStatuses;
         private Dictionary<string, int> resourcesByBetTypeCacheRef;
         private Dictionary<string, int> resourcesByProductCacheRef;
-
-        private bool isShowMyanmarOdds;
-        private bool isShowPokerGames;
         private bool isHideNickname;
 
         public LogFormatterImpl(
@@ -48,9 +45,7 @@
             custStatuses = transformParam.CustStatuses;
             resourcesByBetTypeCacheRef = transformParam.ResourcesByBetTypeCacheRef;
             resourcesByProductCacheRef = transformParam.ResourcesProductCacheRef;
-
-            isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
-            isShowPokerGames = transformParam.IsShowPokerGames;
+            
             this.isHideNickname = isHideNickname;
         }
 
@@ -194,17 +189,7 @@
         {
             return string.Format("{0} {1}", Resources.Disabled, remotingRef.GetBetTypeName(disableBetType));
         }
-
-        public bool IsShowMyanmarOdds()
-        {
-            return isShowMyanmarOdds;
-        }
-
-        public bool IsShowPokerGames()
-        {
-            return isShowPokerGames;
-        }
-
+        
         public bool IsRNGCasino(int sportType)
         {
             return sportType == SportId.RNGGame ||
@@ -246,28 +231,6 @@
             }
 
             return string.IsNullOrEmpty(resourceValue) ? string.Empty : string.Format(statusHtmlFormat, resourceValue, value);
-        }
-
-        public string GetDisabledPokerGames()
-        {
-            return string.Format("{0} {1}", Resources.Disabled, remotingRef.GetProductName(ProductIdConstants.PokerGames));
-        }
-
-        public string GetDisabledPokerGamesValue(
-            string disableValue1,
-            string disableValue2,
-            string disableValue3,
-            string disableValue4,
-            string disableValue5)
-        {
-            var disableValues = new[] { disableValue1, disableValue2, disableValue3, disableValue4, disableValue5 };
-
-            return GetDisabledPokerGamesValue(disableValues);
-        }
-
-        private string GetDisabledPokerGamesValue(params string[] disableValues)
-        {
-            return disableValues.Any(disableValue => disableValue == "0") ? "0" : "1";
         }
 
         private string CovertCodeCondition(string dayCodes)

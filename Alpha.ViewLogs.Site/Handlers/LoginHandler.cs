@@ -44,12 +44,6 @@
 
             foreach (LoginLog log in pagingLogs.Logs)
             {
-                if (message.ActionIdVisibilities.ContainsKey(log.ActionId) && !message.ActionIdVisibilities[log.ActionId])
-                {
-                    viewModel.TotalRecords -= 1;
-                    continue;
-                }
-
                 logItems.Add(new LoginLogItemViewModel
                 {
                     ActionId = log.ActionId,

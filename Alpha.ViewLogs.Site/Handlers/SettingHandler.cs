@@ -57,7 +57,6 @@
 
                 Language = message.Language,
                 HasViewLogPermission = message.HasViewLogPermission,
-                ActionIdVisibilities = message.ActionIdVisibilities,
 
                 MaxReportDate = message.MaxReportDate,
                 MinReportDate = message.MinReportDate,
@@ -101,22 +100,13 @@
                 TrackingValueTransformTemplatePath = message.TrackingValueTransformTemplatePath,
                 CustStatuses = message.SportBetTypeVisibilities,
                 ResourcesByBetTypeCacheRef = message.ResourcesByBetTypeCacheRef,
-                ResourcesProductCacheRef = message.ResourcesByProductCacheRef,
-                IsShowMyanmarOdds = message.IsShowMyanmarOdds,
-                IsShowPokerGames = message.IsShowPokerGames
+                ResourcesProductCacheRef = message.ResourcesByProductCacheRef
             };
 
             var logItems = new List<LogItemViewModel>();
 
             foreach (var log in pagingLogs.Logs)
             {
-                if (message.ActionIdVisibilities.ContainsKey(log.ActionId)
-                    && !message.ActionIdVisibilities[log.ActionId])
-                {
-                    viewModel.TotalRecords -= 1;
-                    continue;
-                }
-
                 try
                 {
                     var formattedTrackingValue = trackingValueFormatter.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);

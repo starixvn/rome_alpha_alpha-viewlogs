@@ -26,8 +26,6 @@
 
         protected MicroSites MicroSites { get; set; }
 
-        protected Dictionary<int, bool> ActionIdVisibilities { get; set; }
-
         protected Dictionary<string, bool> CustStatuses { get; set; }
 
         protected Dictionary<string, int> ResourcesByBetTypeCacheRef { get; set; }
@@ -49,7 +47,6 @@
             MicroSites.OldMainPath(Arg.Any<string>()).Returns(string.Empty);
             MicroSites.ViewLogsPath(Arg.Any<string>()).Returns(string.Empty);
 
-            ActionIdVisibilities = new Dictionary<int, bool>();
             CustStatuses = new Dictionary<string, bool>();
             ResourcesByBetTypeCacheRef = new Dictionary<string, int>();
             ResourcesByProductCacheRef = new Dictionary<string, int>();

@@ -590,24 +590,6 @@
             Assert.AreEqual(expectedDisabledKenoBetTypeName, actualDisabledKenoBetTypeName);
         }
 
-        [TestCase(true)]
-        [TestCase(false)]
-        public void IsShowMyanmarOdds_NoInput_Returns(bool isShowMyanmarOdds)
-        {
-            // Arrange
-            var expectedIsShowMyanmarOdds = isShowMyanmarOdds;
-            logFormatter.Init(new TransformParam
-            {
-                IsShowMyanmarOdds = isShowMyanmarOdds
-            });
-
-            // Act 
-            var actualIsShowMyanmarOdds = logFormatter.IsShowMyanmarOdds();
-
-            // Assert
-            Assert.AreEqual(expectedIsShowMyanmarOdds, actualIsShowMyanmarOdds);
-        }
-
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(-1)]

@@ -13,9 +13,5 @@
         public Dictionary<string, int> ResourcesProductCacheRef { get; set; }
 
         public Dictionary<string, int> ResourcesByBetTypeCacheRef { get; set; }
-
-        public bool IsShowMyanmarOdds { get; set; }
-
-        public bool IsShowPokerGames { get; set; }
     }
 }
