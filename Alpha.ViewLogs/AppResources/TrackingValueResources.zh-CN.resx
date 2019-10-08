@@ -3891,4 +3891,7 @@
   <data name="MinBv164" xml:space="preserve">
     <value>快乐5-最低投注</value>
   </data>
+  <data name="AllbetNormalGames" xml:space="preserve">
+    <value>百家乐，轮盘，骰宝，龙虎, 炸金花, 牛牛</value>
+  </data>
 </root>
