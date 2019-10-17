@@ -3796,7 +3796,7 @@
     <value>Moneyline</value>
   </data>
   <data name="AllbetNormalGames" xml:space="preserve">
-    <value>Baccarat, Roulette, Sic Bo, Dragon Tiger</value>
+    <value>Baccarat, Roulette, Sic Bo, Dragon Tiger, Win 3 Cards, Bull Bull</value>
   </data>
   <data name="MaxPerNumber" xml:space="preserve">
     <value>Max Per Number</value>
