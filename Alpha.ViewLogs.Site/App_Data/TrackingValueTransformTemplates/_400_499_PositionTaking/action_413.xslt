@@ -497,8 +497,12 @@
                   <td class="colValue">
                     <xsl:value-of select="@v99apt_10" />
                   </td>
-                  <td class="colTitle"></td>
-                  <td class="colValue"></td>
+                  <td class="colTitle">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                  </td>
+                  <td class="colValue">
+                    <xsl:value-of select="@v99apt_9999" />
+                  </td>
                 </tr>
                 
                 <tr class="headerSportTypeDetail">

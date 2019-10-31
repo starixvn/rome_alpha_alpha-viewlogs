@@ -1311,8 +1311,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@minv99pt_10" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2"></td>
+                      <td class="colW1">
+                        <xsl:value-of select="xslLogFormat:GetLogResource('others')" />
+                      </td>
+                      <td class="colW2">
+                        <xsl:value-of select="@minv99pt_9999" />
+                      </td>
                     </tr>
 
                     <tr class="headerSportTypeDetail">
