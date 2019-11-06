@@ -352,27 +352,6 @@
 
             <tr>
               <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('minbv154')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@minbv154" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('maxbv154')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@maxbv154" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('mpmv154')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@mpmv99" />
-              </td>
-            </tr>
-
-            <tr>
-              <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
               </td>
               <td class="colW2">

@@ -465,9 +465,6 @@
   <data name="maxv8pt_3" xml:space="preserve">
     <value>Max OU</value>
   </data>
-  <data name="UMMBv151" xml:space="preserve">
-    <value>Update Min-Max Bet Horse Racing SA Tote</value>
-  </data>
   <data name="UMMBv201" xml:space="preserve">
     <value>Update Min-Max Bet Finance</value>
   </data>
@@ -528,9 +525,6 @@
   <data name="transferoption" xml:space="preserve">
     <value>Transfer Option</value>
   </data>
-  <data name="MPMv151" xml:space="preserve">
-    <value>SA Horse Racing-Max Per Match</value>
-  </data>
   <data name="MPMv201" xml:space="preserve">
     <value>Finance-Max Per Match</value>
   </data>
@@ -560,9 +554,6 @@
   </data>
   <data name="NewAgentId" xml:space="preserve">
     <value>New Agent ID</value>
-  </data>
-  <data name="MinBv151" xml:space="preserve">
-    <value>SA Horse Racing-Min Bet</value>
   </data>
   <data name="MinBv201" xml:space="preserve">
     <value>Finance-Min Bet</value>
@@ -789,18 +780,6 @@
   <data name="a_v2mpt_7" xml:space="preserve">
     <value>1st Handicap</value>
   </data>
-  <data name="minV151PT_31" xml:space="preserve">
-    <value>Min Racing's SA Tote Win</value>
-  </data>
-  <data name="minV151PT_32" xml:space="preserve">
-    <value>Min Racing's SA Tote Place</value>
-  </data>
-  <data name="minV151PT_42" xml:space="preserve">
-    <value>Min Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="minV151PT_41" xml:space="preserve">
-    <value>Min Racing's UK/Irish Tote Win</value>
-  </data>
   <data name="a_v3spt_2" xml:space="preserve">
     <value>Odd/Even</value>
   </data>
@@ -1002,9 +981,6 @@
   <data name="mpm" xml:space="preserve">
     <value>Soccer-Max Per Match</value>
   </data>
-  <data name="hrmpm" xml:space="preserve">
-    <value>SA Horse Racing-Max Per Match</value>
-  </data>
   <data name="iam" xml:space="preserve">
     <value>Is Master Auto Position Taking on Agent</value>
   </data>
@@ -1100,9 +1076,6 @@
   </data>
   <data name="creditProblem" xml:space="preserve">
     <value>Credit Problem</value>
-  </data>
-  <data name="MaxBv151" xml:space="preserve">
-    <value>SA Horse Racing-Max Bet</value>
   </data>
   <data name="MaxBv201" xml:space="preserve">
     <value>Finance-Max Bet</value>
@@ -1662,12 +1635,6 @@
   <data name="toName" xml:space="preserve">
     <value>To name</value>
   </data>
-  <data name="v151IBCpt_41" xml:space="preserve">
-    <value>UK Tote</value>
-  </data>
-  <data name="v151IBCpt_31" xml:space="preserve">
-    <value>SA Tote</value>
-  </data>
   <data name="v3apt_2" xml:space="preserve">
     <value>Odd/Even</value>
   </data>
@@ -1812,18 +1779,6 @@
   <data name="v8spt_1" xml:space="preserve">
     <value>Handicap</value>
   </data>
-  <data name="maxV151PT_32" xml:space="preserve">
-    <value>Max Racing's SA Tote Place</value>
-  </data>
-  <data name="maxV151PT_31" xml:space="preserve">
-    <value>Max Racing's SA Tote Win</value>
-  </data>
-  <data name="maxV151PT_41" xml:space="preserve">
-    <value>Max Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="maxV151PT_42" xml:space="preserve">
-    <value>Max Racing's UK/Irish Tote Place</value>
-  </data>
   <data name="toTrans" xml:space="preserve">
     <value>ToTrans</value>
   </data>
@@ -1845,14 +1800,8 @@
   <data name="minb" xml:space="preserve">
     <value>Soccer-Min Bet</value>
   </data>
-  <data name="MinBHR" xml:space="preserve">
-    <value>SA Horse Racing-Min Bet</value>
-  </data>
   <data name="maxb" xml:space="preserve">
     <value>Soccer-Max Bet</value>
-  </data>
-  <data name="maxbHR" xml:space="preserve">
-    <value>SA Horse Racing-Max Bet</value>
   </data>
   <data name="city" xml:space="preserve">
     <value>City</value>
@@ -2250,18 +2199,6 @@
   <data name="AgentPT" xml:space="preserve">
     <value>Agent Position Taking</value>
   </data>
-  <data name="MinBv151OT" xml:space="preserve">
-    <value>UK Horse Racing-Min Bet</value>
-  </data>
-  <data name="MaxBv151OT" xml:space="preserve">
-    <value>UK Horse Racing-Max Bet</value>
-  </data>
-  <data name="MPMv151OT" xml:space="preserve">
-    <value>UK Horse Racing-Max Per Match</value>
-  </data>
-  <data name="UMMBv151OT" xml:space="preserve">
-    <value>Update Min-Max Bet Horse Racing UK Tote</value>
-  </data>
   <data name="login_message_log" xml:space="preserve">
     <value>The member Login Log is not available.</value>
   </data>
@@ -2577,504 +2514,6 @@
   <data name="maxv99pt_9" xml:space="preserve">
     <value>Max Mix Parlay</value>
   </data>
-  <data name="v152discount_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Comm</value>
-  </data>
-  <data name="v152discount_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Comm</value>
-  </data>
-  <data name="v153discount_51" xml:space="preserve">
-    <value>Harness's Aust Tote Comm</value>
-  </data>
-  <data name="v151discount_31" xml:space="preserve">
-    <value>Racing's SA Tote Comm</value>
-  </data>
-  <data name="v151discount_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Comm</value>
-  </data>
-  <data name="v151discount_51" xml:space="preserve">
-    <value>Racing's Aust Tote Comm</value>
-  </data>
-  <data name="IsCopyPreset_41" xml:space="preserve">
-    <value>Is Copy Preset Racing's UK/Irish Tote</value>
-  </data>
-  <data name="IsCopyPreset_31" xml:space="preserve">
-    <value>Is Copy Preset Racing's SA Tote</value>
-  </data>
-  <data name="IsCopyPreset_51" xml:space="preserve">
-    <value>Is Copy Preset Racing's Aust Tote</value>
-  </data>
-  <data name="IsCopyPreset152_41" xml:space="preserve">
-    <value>Is Copy Preset Greyhound's UK/Irish Tote</value>
-  </data>
-  <data name="IsCopyPreset152_51" xml:space="preserve">
-    <value>Is Copy Preset Greyhound's Aust Tote</value>
-  </data>
-  <data name="IsCopyPreset153_51" xml:space="preserve">
-    <value>Is Copy Preset Harness's Aust Tote</value>
-  </data>
-  <data name="a_v151spt_32" xml:space="preserve">
-    <value>Racing's SA Tote Place</value>
-  </data>
-  <data name="a_v151spt_31" xml:space="preserve">
-    <value>Racing's SA Tote Win</value>
-  </data>
-  <data name="a_v151spt_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="a_v151spt_42" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="a_v151spt_51" xml:space="preserve">
-    <value>Racing's Aust Tote Win</value>
-  </data>
-  <data name="a_v151spt_52" xml:space="preserve">
-    <value>Racing's Aust Tote Place</value>
-  </data>
-  <data name="a_v152spt_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Win</value>
-  </data>
-  <data name="a_v152spt_42" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Place</value>
-  </data>
-  <data name="a_v152spt_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="a_v152spt_52" xml:space="preserve">
-    <value>Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="a_v153spt_51" xml:space="preserve">
-    <value>Harness's Aust Tote Win</value>
-  </data>
-  <data name="a_v153spt_52" xml:space="preserve">
-    <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="isa_v151smpt_31" xml:space="preserve">
-    <value>Racing's SA Tote Win</value>
-  </data>
-  <data name="isa_v151smpt_32" xml:space="preserve">
-    <value>Racing's SA Tote Place</value>
-  </data>
-  <data name="isa_v151smpt_42" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="isa_v151smpt_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="isa_v151smpt_52" xml:space="preserve">
-    <value>Racing's Aust Tote Place</value>
-  </data>
-  <data name="isa_v151smpt_51" xml:space="preserve">
-    <value>Racing's Aust Tote Win</value>
-  </data>
-  <data name="isa_v152smpt_42" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Place</value>
-  </data>
-  <data name="isa_v152smpt_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Win</value>
-  </data>
-  <data name="isa_v152smpt_52" xml:space="preserve">
-    <value>Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="isa_v152smpt_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="isa_v153smpt_52" xml:space="preserve">
-    <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="isa_v153smpt_51" xml:space="preserve">
-    <value>Harness's Aust Tote Win</value>
-  </data>
-  <data name="v151spt_42" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="v151spt_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="v151spt_31" xml:space="preserve">
-    <value>Racing's SA Tote Win</value>
-  </data>
-  <data name="v151spt_32" xml:space="preserve">
-    <value>Racing's SA Tote Place</value>
-  </data>
-  <data name="v151spt_52" xml:space="preserve">
-    <value>Racing's Aust Tote Place</value>
-  </data>
-  <data name="v151spt_51" xml:space="preserve">
-    <value>Racing's Aust Tote Win</value>
-  </data>
-  <data name="v152spt_42" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Place</value>
-  </data>
-  <data name="v152spt_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Win</value>
-  </data>
-  <data name="v152spt_52" xml:space="preserve">
-    <value>Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="v152spt_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="v153spt_52" xml:space="preserve">
-    <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="v153spt_51" xml:space="preserve">
-    <value>Harness's Aust Tote Win</value>
-  </data>
-  <data name="v151mpt_32" xml:space="preserve">
-    <value>Racing's SA Tote Place</value>
-  </data>
-  <data name="v151mpt_31" xml:space="preserve">
-    <value>Racing's SA Tote Win</value>
-  </data>
-  <data name="v151mpt_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="v151mpt_42" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="v151mpt_51" xml:space="preserve">
-    <value>Racing's Aust Tote Win</value>
-  </data>
-  <data name="v151mpt_52" xml:space="preserve">
-    <value>Racing's Aust Tote Place</value>
-  </data>
-  <data name="v152mpt_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Win</value>
-  </data>
-  <data name="v152mpt_42" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Place</value>
-  </data>
-  <data name="v152mpt_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="v152mpt_52" xml:space="preserve">
-    <value>Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="v153mpt_51" xml:space="preserve">
-    <value>Harness's Aust Tote Win</value>
-  </data>
-  <data name="v153mpt_52" xml:space="preserve">
-    <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="MinBv153_51" xml:space="preserve">
-    <value>Harness's Aust Tote - Min Bet</value>
-  </data>
-  <data name="MaxBv153_51" xml:space="preserve">
-    <value>Harness's Aust Tote - Max Bet</value>
-  </data>
-  <data name="MPMv153_51" xml:space="preserve">
-    <value>Harness's Aust Tote - Max Per Match</value>
-  </data>
-  <data name="MinBv152_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote - Min Bet</value>
-  </data>
-  <data name="MaxBv152_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote - Max Bet</value>
-  </data>
-  <data name="MPMv152_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote - Max Per Match</value>
-  </data>
-  <data name="MinBv152_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote - Min Bet</value>
-  </data>
-  <data name="MaxBv152_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote - Max Bet</value>
-  </data>
-  <data name="MPMv152_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote - Max Per Match</value>
-  </data>
-  <data name="MinBv151_51" xml:space="preserve">
-    <value>Racing's Aust Tote - Min Bet</value>
-  </data>
-  <data name="MaxBv151_51" xml:space="preserve">
-    <value>Racing's Aust Tote - Max Bet</value>
-  </data>
-  <data name="MPMv151_51" xml:space="preserve">
-    <value>Racing's Aust Tote - Max Per Match</value>
-  </data>
-  <data name="MinBv151_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote - Min Bet</value>
-  </data>
-  <data name="MaxBv151_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote - Max Bet</value>
-  </data>
-  <data name="MPMv151_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote - Max Per Match</value>
-  </data>
-  <data name="MinBv151_31" xml:space="preserve">
-    <value>Racing's SA Tote - Min Bet</value>
-  </data>
-  <data name="MaxBv151_31" xml:space="preserve">
-    <value>Racing's SA Tote - Max Bet</value>
-  </data>
-  <data name="MPMv151_31" xml:space="preserve">
-    <value>Racing's SA Tote - Max Per Match</value>
-  </data>
-  <data name="isa_v151spt_31" xml:space="preserve">
-    <value>Racing's SA Tote Win</value>
-  </data>
-  <data name="isa_v151spt_32" xml:space="preserve">
-    <value>Racing's SA Tote Place</value>
-  </data>
-  <data name="isa_v151spt_42" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="isa_v151spt_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="isa_v151spt_52" xml:space="preserve">
-    <value>Racing's Aust Tote Place</value>
-  </data>
-  <data name="isa_v151spt_51" xml:space="preserve">
-    <value>Racing's Aust Tote Win</value>
-  </data>
-  <data name="isa_v152spt_42" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Place</value>
-  </data>
-  <data name="isa_v152spt_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Win</value>
-  </data>
-  <data name="isa_v152spt_52" xml:space="preserve">
-    <value>Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="isa_v152spt_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="isa_v153spt_52" xml:space="preserve">
-    <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="isa_v153spt_51" xml:space="preserve">
-    <value>Harness's Aust Tote Win</value>
-  </data>
-  <data name="v151apt_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="v151apt_42" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="v151apt_32" xml:space="preserve">
-    <value>Racing's SA Tote Place</value>
-  </data>
-  <data name="v151apt_31" xml:space="preserve">
-    <value>Racing's SA Tote Win</value>
-  </data>
-  <data name="v151apt_51" xml:space="preserve">
-    <value>Racing's Aust Tote Win</value>
-  </data>
-  <data name="v151apt_52" xml:space="preserve">
-    <value>Racing's Aust Tote Place</value>
-  </data>
-  <data name="v152apt_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Win</value>
-  </data>
-  <data name="v152apt_42" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Place</value>
-  </data>
-  <data name="v152apt_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="v152apt_52" xml:space="preserve">
-    <value>Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="v153apt_51" xml:space="preserve">
-    <value>Harness's Aust Tote Win</value>
-  </data>
-  <data name="v153apt_52" xml:space="preserve">
-    <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="minV151PT_52" xml:space="preserve">
-    <value>Min Racing's Aust Tote Place</value>
-  </data>
-  <data name="minV151PT_51" xml:space="preserve">
-    <value>Min Racing's Aust Tote Win</value>
-  </data>
-  <data name="minV152PT_42" xml:space="preserve">
-    <value>Min Harness's UK/Irish Tote Place</value>
-  </data>
-  <data name="minV152PT_41" xml:space="preserve">
-    <value>Min Harness UK/Irish Tote Win</value>
-  </data>
-  <data name="minV152PT_52" xml:space="preserve">
-    <value>Min Harness's Aust Tote Place</value>
-  </data>
-  <data name="minV152PT_51" xml:space="preserve">
-    <value>Min Harness Aust Tote Win</value>
-  </data>
-  <data name="minV153PT_52" xml:space="preserve">
-    <value>Min Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="minV153PT_51" xml:space="preserve">
-    <value>Min Greyhound Aust Tote Win</value>
-  </data>
-  <data name="maxV151PT_51" xml:space="preserve">
-    <value>Max Racing's Aust Tote Win</value>
-  </data>
-  <data name="maxV151PT_52" xml:space="preserve">
-    <value>Max Racing's Aust Tote Place</value>
-  </data>
-  <data name="maxV152PT_41" xml:space="preserve">
-    <value>Max Harness's UK/Irish Tote Win</value>
-  </data>
-  <data name="maxV152PT_42" xml:space="preserve">
-    <value>Max Harness's UK/Irish Tote Place</value>
-  </data>
-  <data name="maxV152PT_51" xml:space="preserve">
-    <value>Max Harness's Aust Tote Win</value>
-  </data>
-  <data name="maxV152PT_52" xml:space="preserve">
-    <value>Max Harness's Aust Tote Place</value>
-  </data>
-  <data name="maxV153PT_51" xml:space="preserve">
-    <value>Max Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="maxV153PT_52" xml:space="preserve">
-    <value>Max Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="isa_v151mpt_32" xml:space="preserve">
-    <value>Racing's SA Tote Place</value>
-  </data>
-  <data name="isa_v151mpt_31" xml:space="preserve">
-    <value>Racing's SA Tote Win</value>
-  </data>
-  <data name="isa_v151mpt_51" xml:space="preserve">
-    <value>Racing's Aust Tote Win</value>
-  </data>
-  <data name="isa_v151mpt_52" xml:space="preserve">
-    <value>Racing's Aust Tote Place</value>
-  </data>
-  <data name="isa_v151mpt_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="isa_v151mpt_42" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="isa_v152mpt_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="isa_v152mpt_52" xml:space="preserve">
-    <value>Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="isa_v152mpt_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Win</value>
-  </data>
-  <data name="isa_v152mpt_42" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Place</value>
-  </data>
-  <data name="isa_v153mpt_51" xml:space="preserve">
-    <value>Harness's Aust Tote Win</value>
-  </data>
-  <data name="isa_v153mpt_52" xml:space="preserve">
-    <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="a_v151mpt_mem_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="a_v151mpt_mem_42" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="a_v151mpt_mem_51" xml:space="preserve">
-    <value>Racing's Aust Tote Win</value>
-  </data>
-  <data name="a_v151mpt_mem_52" xml:space="preserve">
-    <value>Racing's Aust Tote Place</value>
-  </data>
-  <data name="a_v151mpt_mem_32" xml:space="preserve">
-    <value>Racing's SA Tote Place</value>
-  </data>
-  <data name="a_v151mpt_mem_31" xml:space="preserve">
-    <value>Racing's SA Tote Win</value>
-  </data>
-  <data name="a_v152mpt_mem_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Win</value>
-  </data>
-  <data name="a_v152mpt_mem_42" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Place</value>
-  </data>
-  <data name="a_v152mpt_mem_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="a_v152mpt_mem_52" xml:space="preserve">
-    <value>Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="a_v153mpt_mem_51" xml:space="preserve">
-    <value>Harness's Aust Tote Win</value>
-  </data>
-  <data name="a_v153mpt_mem_52" xml:space="preserve">
-    <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="isa_v151mpt_mem_42" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="isa_v151mpt_mem_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="isa_v151mpt_mem_52" xml:space="preserve">
-    <value>Racing's Aust Tote Place</value>
-  </data>
-  <data name="isa_v151mpt_mem_51" xml:space="preserve">
-    <value>Racing's Aust Tote Win</value>
-  </data>
-  <data name="isa_v151mpt_mem_31" xml:space="preserve">
-    <value>Racing's SA Tote Win</value>
-  </data>
-  <data name="isa_v151mpt_mem_32" xml:space="preserve">
-    <value>Racing's SA Tote Place</value>
-  </data>
-  <data name="isa_v152mpt_mem_42" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Place</value>
-  </data>
-  <data name="isa_v152mpt_mem_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Win</value>
-  </data>
-  <data name="isa_v152mpt_mem_52" xml:space="preserve">
-    <value>Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="isa_v152mpt_mem_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="isa_v153mpt_mem_52" xml:space="preserve">
-    <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="isa_v153mpt_mem_51" xml:space="preserve">
-    <value>Harness's Aust Tote Win</value>
-  </data>
-  <data name="a_v151mpt_31" xml:space="preserve">
-    <value>Racing's SA Tote Win</value>
-  </data>
-  <data name="a_v151mpt_32" xml:space="preserve">
-    <value>Racing's SA Tote Place</value>
-  </data>
-  <data name="a_v151mpt_42" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Place</value>
-  </data>
-  <data name="a_v151mpt_41" xml:space="preserve">
-    <value>Racing's UK/Irish Tote Win</value>
-  </data>
-  <data name="a_v151mpt_52" xml:space="preserve">
-    <value>Racing's Aust Tote Place</value>
-  </data>
-  <data name="a_v151mpt_51" xml:space="preserve">
-    <value>Racing's Aust Tote Win</value>
-  </data>
-  <data name="a_v152mpt_42" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Place</value>
-  </data>
-  <data name="a_v152mpt_41" xml:space="preserve">
-    <value>Greyhound's UK/Irish Tote Win</value>
-  </data>
-  <data name="a_v152mpt_52" xml:space="preserve">
-    <value>Greyhound's Aust Tote Place</value>
-  </data>
-  <data name="a_v152mpt_51" xml:space="preserve">
-    <value>Greyhound's Aust Tote Win</value>
-  </data>
-  <data name="a_v153mpt_52" xml:space="preserve">
-    <value>Harness's Aust Tote Place</value>
-  </data>
-  <data name="a_v153mpt_51" xml:space="preserve">
-    <value>Harness's Aust Tote Win</value>
-  </data>
   <data name="showOldValue" xml:space="preserve">
     <value>Show old values</value>
   </data>
@@ -3272,21 +2711,6 @@
   </data>
   <data name="newPT" xml:space="preserve">
     <value>New PT</value>
-  </data>
-  <data name="MaxBv154" xml:space="preserve">
-    <value>HR Fixed Odds-Max Bet</value>
-  </data>
-  <data name="MinBv154" xml:space="preserve">
-    <value>HR Fixed Odds-Min Bet</value>
-  </data>
-  <data name="MPMv154" xml:space="preserve">
-    <value>HR Fixed Odds-Max Per Match</value>
-  </data>
-  <data name="Updptv154" xml:space="preserve">
-    <value>Update Position Taking HR Fixed Odds</value>
-  </data>
-  <data name="UMMBv154" xml:space="preserve">
-    <value>Update Min-Max Bet HR Fixed Odds</value>
   </data>
   <data name="MaximumWin" xml:space="preserve">
     <value>Maximum Win</value>

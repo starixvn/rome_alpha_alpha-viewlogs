@@ -13,13 +13,6 @@
         private static Dictionary<string, int> statusMappings;
         private static Dictionary<string, int> resourcesByBetTypeCacheRef;
 
-        private static IEnumerable<int> actionIdsRacing15131;
-        private static IEnumerable<int> actionIdsRacing15141;
-        private static IEnumerable<int> actionIdsRacing15151;
-        private static IEnumerable<int> actionIdsRacing15241;
-        private static IEnumerable<int> actionIdsRacing15251;
-        private static IEnumerable<int> actionIdsRacing15351;
-
         public static string VirtualDirectory
         {
             get
@@ -41,84 +34,6 @@
             get
             {
                 return GetConfigValue("AccessDeniedPage");
-            }
-        }
-
-        public static IEnumerable<int> ActionIds_Racing_151_31
-        {
-            get
-            {
-                if (actionIdsRacing15131 == null)
-                {
-                    actionIdsRacing15131 = ParseActionIds(GetConfigValue("ActionIds_Racing_151_31"));
-                }
-
-                return actionIdsRacing15131;
-            }
-        }
-
-        public static IEnumerable<int> ActionIds_Racing_151_41
-        {
-            get
-            {
-                if (actionIdsRacing15141 == null)
-                {
-                    actionIdsRacing15141 = ParseActionIds(GetConfigValue("ActionIds_Racing_151_41"));
-                }
-
-                return actionIdsRacing15141;
-            }
-        }
-
-        public static IEnumerable<int> ActionIds_Racing_151_51
-        {
-            get
-            {
-                if (actionIdsRacing15151 == null)
-                {
-                    actionIdsRacing15151 = ParseActionIds(GetConfigValue("ActionIds_Racing_151_51"));
-                }
-
-                return actionIdsRacing15151;
-            }
-        }
-
-        public static IEnumerable<int> ActionIds_Racing_152_41
-        {
-            get
-            {
-                if (actionIdsRacing15241 == null)
-                {
-                    actionIdsRacing15241 = ParseActionIds(GetConfigValue("ActionIds_Racing_152_41"));
-                }
-
-                return actionIdsRacing15241;
-            }
-        }
-
-        public static IEnumerable<int> ActionIds_Racing_152_51
-        {
-            get
-            {
-                if (actionIdsRacing15251 == null)
-                {
-                    actionIdsRacing15251 = ParseActionIds(GetConfigValue("ActionIds_Racing_152_51"));
-                }
-
-                return actionIdsRacing15251;
-            }
-        }
-
-        public static IEnumerable<int> ActionIds_Racing_153_51
-        {
-            get
-            {
-                if (actionIdsRacing15351 == null)
-                {
-                    actionIdsRacing15351 = ParseActionIds(GetConfigValue("ActionIds_Racing_153_51"));
-                }
-
-                return actionIdsRacing15351;
             }
         }
 
