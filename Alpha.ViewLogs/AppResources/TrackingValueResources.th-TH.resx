@@ -2787,9 +2787,6 @@
   <data name="Updptv161" xml:space="preserve">
     <value>อัพเดท แบ่งสู้ เกมหมายเลข</value>
   </data>
-  <data name="playerdiscountnumber" xml:space="preserve">
-    <value>Player's Number Game Discount</value>
-  </data>
   <data name="minv161pt_81" xml:space="preserve">
     <value>เดิมพันขั้นต่ำ ลูกแรก/ลูกสุดถ้าย เล็ก/ใหญ่</value>
   </data>
@@ -2885,9 +2882,6 @@
   </data>
   <data name="maxv99pt_9" xml:space="preserve">
     <value>สูงสุด บอลชุด</value>
-  </data>
-  <data name="discountnumber" xml:space="preserve">
-    <value>Discount Number Game</value>
   </data>
   <data name="v152discount_41" xml:space="preserve">
     <value>อัตราคอมมิชชั่นของการแข่งขันสุนัข Greyhound ของสนาม UK/Irish โต๊ด</value>
@@ -3612,14 +3606,8 @@
   <data name="copyFrom" xml:space="preserve">
     <value>Copy From</value>
   </data>
-  <data name="disableLiveCS" xml:space="preserve">
-    <value>ปิดการใช้งานคาซิโน เกมสด</value>
-  </data>
   <data name="isSearchAndCopy" xml:space="preserve">
     <value>ค้นหาและคัดลอก</value>
-  </data>
-  <data name="syncLiveCS" xml:space="preserve">
-    <value>Synchronized Live Casino</value>
   </data>
   <data name="isAgentAutoPT" xml:space="preserve">
     <value>อัตราแบ่งสู้อัตโนมัติ ของเอเจนต์ คือ ?</value>
@@ -3722,12 +3710,6 @@
   </data>
   <data name="v204discountvalue_commission" xml:space="preserve">
     <value>Commission</value>
-  </data>
-  <data name="DiscountMyanmarOdds" xml:space="preserve">
-    <value>Discount % Odds</value>
-  </data>
-  <data name="PlayerDiscountMyanmarOdds" xml:space="preserve">
-    <value>Player % Odds Discount</value>
   </data>
   <data name="isdisabled" xml:space="preserve">
     <value>ปิดการใช้งานแล้ว</value>

@@ -2131,7 +2131,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Baccarat, Roulette, Sic Bo, Dragon Tiger.
+        ///   Looks up a localized string similar to Baccarat, Roulette, Sic Bo, Dragon Tiger, Win 3 Cards, Bull Bull.
         /// </summary>
         public static string AllbetNormalGames {
             get {
@@ -2752,15 +2752,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disabled Cockfighting.
-        /// </summary>
-        public static string Disable206_1003 {
-            get {
-                return ResourceManager.GetString("Disable206_1003", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Disabled Macau Games.
         /// </summary>
         public static string Disable212_4001 {
@@ -2802,15 +2793,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string DisableCasino {
             get {
                 return ResourceManager.GetString("DisableCasino", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Disabled Colossus Bets.
-        /// </summary>
-        public static string Disablecolossusbet {
-            get {
-                return ResourceManager.GetString("Disablecolossusbet", resourceCulture);
             }
         }
         
@@ -2923,15 +2905,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disabled Live Casino.
-        /// </summary>
-        public static string disableLiveCS {
-            get {
-                return ResourceManager.GetString("disableLiveCS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Disabled Number Game.
         /// </summary>
         public static string DisableNumber {
@@ -3000,24 +2973,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string discountcs {
             get {
                 return ResourceManager.GetString("discountcs", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Discount % Odds.
-        /// </summary>
-        public static string DiscountMyanmarOdds {
-            get {
-                return ResourceManager.GetString("DiscountMyanmarOdds", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Discount Number Game.
-        /// </summary>
-        public static string discountnumber {
-            get {
-                return ResourceManager.GetString("discountnumber", resourceCulture);
             }
         }
         
@@ -8800,24 +8755,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Player % Odds Discount.
-        /// </summary>
-        public static string PlayerDiscountMyanmarOdds {
-            get {
-                return ResourceManager.GetString("PlayerDiscountMyanmarOdds", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Player&apos;s Number Game Discount.
-        /// </summary>
-        public static string playerdiscountnumber {
-            get {
-                return ResourceManager.GetString("playerdiscountnumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Please input username to search.
         /// </summary>
         public static string PlsInputUsername {
@@ -9327,15 +9264,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string syncCS {
             get {
                 return ResourceManager.GetString("syncCS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Synchronized Live Casino.
-        /// </summary>
-        public static string syncLiveCS {
-            get {
-                return ResourceManager.GetString("syncLiveCS", resourceCulture);
             }
         }
         

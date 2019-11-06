@@ -2577,9 +2577,6 @@
   <data name="Updptv161" xml:space="preserve">
     <value>Cập nhật giá trị PT của Number Game</value>
   </data>
-  <data name="playerdiscountnumber" xml:space="preserve">
-    <value>Chiết khấu cho người chơi Number Game</value>
-  </data>
   <data name="minv161pt_81" xml:space="preserve">
     <value>PT nhỏ nhất cho  Banh đầu/Banh cuối - Over/Under</value>
   </data>
@@ -2678,9 +2675,6 @@
   </data>
   <data name="maxv99pt_9" xml:space="preserve">
     <value>PT lớn nhất cho thể loại Cá cược tổng hợp</value>
-  </data>
-  <data name="discountnumber" xml:space="preserve">
-    <value>Chiết khấu cho Number Game</value>
   </data>
   <data name="v152discount_41" xml:space="preserve">
     <value>Hoa hồng dành cho Greyhound's UK/Irish Tote</value>
@@ -3402,14 +3396,8 @@
   <data name="copyFrom" xml:space="preserve">
     <value>Sao chép từ</value>
   </data>
-  <data name="disableLiveCS" xml:space="preserve">
-    <value>Không cho phép chơi Live Casino</value>
-  </data>
   <data name="isSearchAndCopy" xml:space="preserve">
     <value>Tìm và sao chép</value>
-  </data>
-  <data name="syncLiveCS" xml:space="preserve">
-    <value>Đồng bộ hóa Live Casino</value>
   </data>
   <data name="isAgentAutoPT" xml:space="preserve">
     <value>Tự động PT của Agent</value>
@@ -3494,12 +3482,6 @@
   </data>
   <data name="v204discountvalue_commission" xml:space="preserve">
     <value>Commission</value>
-  </data>
-  <data name="DiscountMyanmarOdds" xml:space="preserve">
-    <value>Discount % Odds</value>
-  </data>
-  <data name="PlayerDiscountMyanmarOdds" xml:space="preserve">
-    <value>Player % Odds Discount</value>
   </data>
   <data name="isdisabled" xml:space="preserve">
     <value>Không cho phép</value>

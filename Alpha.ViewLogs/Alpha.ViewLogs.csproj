@@ -270,6 +270,7 @@
     <EmbeddedResource Include="AppResources\TrackingValueResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>TrackingValueResources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="AppResources\TrackingValueResources.th-TH.resx">
       <SubType>Designer</SubType>
@@ -277,8 +278,12 @@
     <EmbeddedResource Include="AppResources\TrackingValueResources.vi-VN.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\TrackingValueResources.zh-CN.resx" />
-    <EmbeddedResource Include="AppResources\TrackingValueResources.zh-TW.resx" />
+    <EmbeddedResource Include="AppResources\TrackingValueResources.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppResources\TrackingValueResources.zh-TW.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\SonarAnalyzer.CSharp.6.7.1.4347\analyzers\Google.Protobuf.dll" />

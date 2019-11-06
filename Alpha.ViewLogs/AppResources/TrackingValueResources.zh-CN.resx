@@ -2787,9 +2787,6 @@
   <data name="Updptv161" xml:space="preserve">
     <value>更新百练赛占成数</value>
   </data>
-  <data name="playerdiscountnumber" xml:space="preserve">
-    <value>Player's Number Game Discount</value>
-  </data>
   <data name="minv161pt_81" xml:space="preserve">
     <value>第一球/最后一球大小最低投注</value>
   </data>
@@ -2885,9 +2882,6 @@
   </data>
   <data name="maxv99pt_9" xml:space="preserve">
     <value>混合过关最高投注</value>
-  </data>
-  <data name="discountnumber" xml:space="preserve">
-    <value>Discount Number Game</value>
   </data>
   <data name="v152discount_41" xml:space="preserve">
     <value>英国/爱尔兰赛狗彩池佣金</value>
@@ -3612,14 +3606,8 @@
   <data name="copyFrom" xml:space="preserve">
     <value>Copy From</value>
   </data>
-  <data name="disableLiveCS" xml:space="preserve">
-    <value>禁止娱乐厅</value>
-  </data>
   <data name="isSearchAndCopy" xml:space="preserve">
     <value>搜索与复制</value>
-  </data>
-  <data name="syncLiveCS" xml:space="preserve">
-    <value>Synchronized Live Casino</value>
   </data>
   <data name="isAgentAutoPT" xml:space="preserve">
     <value>代理自动占成否</value>
@@ -3725,12 +3713,6 @@
   </data>
   <data name="v204discountvalue_commission" xml:space="preserve">
     <value>Commission</value>
-  </data>
-  <data name="DiscountMyanmarOdds" xml:space="preserve">
-    <value>Discount % Odds</value>
-  </data>
-  <data name="PlayerDiscountMyanmarOdds" xml:space="preserve">
-    <value>Player % Odds Discount</value>
   </data>
   <data name="isdisabled" xml:space="preserve">
     <value>已禁用</value>
