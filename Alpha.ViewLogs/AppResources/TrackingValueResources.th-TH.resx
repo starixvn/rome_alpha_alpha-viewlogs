@@ -123,26 +123,8 @@
   <data name="syncCS" xml:space="preserve">
     <value>พร้อมกันกับคาสิโน</value>
   </data>
-  <data name="v201apt_2" xml:space="preserve">
-    <value>คี่ / คู่</value>
-  </data>
-  <data name="v201apt_3" xml:space="preserve">
-    <value>มากกว่า  น้อยกว่า</value>
-  </data>
   <data name="v10mpt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
-  </data>
-  <data name="v201mpt_2" xml:space="preserve">
-    <value>คี่ / คู่</value>
-  </data>
-  <data name="v201mpt_3" xml:space="preserve">
-    <value>มากกว่า  น้อยกว่า</value>
-  </data>
-  <data name="v201spt_2" xml:space="preserve">
-    <value>คี่ / คู่</value>
-  </data>
-  <data name="v201spt_3" xml:space="preserve">
-    <value>มากกว่า  น้อยกว่า</value>
   </data>
   <data name="v3apt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
@@ -245,12 +227,6 @@
   </data>
   <data name="DepositUserName" xml:space="preserve">
     <value>ชื่อผู้ฝากเงิน</value>
-  </data>
-  <data name="maxV201PT_3" xml:space="preserve">
-    <value>สูงต่ำ สูงสุด </value>
-  </data>
-  <data name="maxV201PT_2" xml:space="preserve">
-    <value>คู่คี่ สูงสุด</value>
   </data>
   <data name="discount" xml:space="preserve">
     <value>ส่วนลด</value>
@@ -417,12 +393,6 @@
   <data name="v10apt_3" xml:space="preserve">
     <value>มากกว่า  น้อยกว่า</value>
   </data>
-  <data name="minV201PT_3" xml:space="preserve">
-    <value>สูงต่ำ ต่ำสุด </value>
-  </data>
-  <data name="minV201PT_2" xml:space="preserve">
-    <value>คู่คี่ ต่ำสุด </value>
-  </data>
   <data name="firstname" xml:space="preserve">
     <value>ชื่อ</value>
   </data>
@@ -519,9 +489,6 @@
   <data name="maxv8pt_3" xml:space="preserve">
     <value>สูงต่ำ สูงสุด </value>
   </data>
-  <data name="UMMBv201" xml:space="preserve">
-    <value>อัพเดทเดิมพัน ต่ำสุด/สูงสุดของไฟแนนซ์</value>
-  </data>
   <data name="enableDownline" xml:space="preserve">
     <value>Enable Downline</value>
   </data>
@@ -585,20 +552,11 @@
   <data name="transferoption" xml:space="preserve">
     <value>ตัวเลือกการโอนเงิน</value>
   </data>
-  <data name="MPMv201" xml:space="preserve">
-    <value>ไฟแนนซ์ - สูงสุดต่อคู่</value>
-  </data>
   <data name="a_spt_10" xml:space="preserve">
     <value>การทายผู้ที่จะได้เข้ารอบหรือผู้ที่จะได้แชมป์</value>
   </data>
   <data name="isa_v3smpt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
-  </data>
-  <data name="isa_v201smpt_3" xml:space="preserve">
-    <value>มากกว่า  น้อยกว่า</value>
-  </data>
-  <data name="isa_v201smpt_2" xml:space="preserve">
-    <value>คี่ / คู่</value>
   </data>
   <data name="AccountRemarkDate" xml:space="preserve">
     <value>Account Remark Date</value>
@@ -617,9 +575,6 @@
   </data>
   <data name="NewAgentId" xml:space="preserve">
     <value>ไอดีของเอเย่นใหม่</value>
-  </data>
-  <data name="MinBv201" xml:space="preserve">
-    <value>ไฟแนนซ์ - เดิมพันขั้นต่ำ</value>
   </data>
   <data name="returnErrCode" xml:space="preserve">
     <value>คืนรหัสข้อผิดพลาด</value>
@@ -641,18 +596,6 @@
   </data>
   <data name="OddsType" xml:space="preserve">
     <value>ประเภทราคา</value>
-  </data>
-  <data name="a_v201spt_2" xml:space="preserve">
-    <value>คี่ / คู่</value>
-  </data>
-  <data name="a_v201spt_3" xml:space="preserve">
-    <value>มากกว่า  น้อยกว่า</value>
-  </data>
-  <data name="a_v201mpt_2" xml:space="preserve">
-    <value>คี่ / คู่</value>
-  </data>
-  <data name="a_v201mpt_3" xml:space="preserve">
-    <value>มากกว่า  น้อยกว่า</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>รหัสผ่าน</value>
@@ -677,12 +620,6 @@
   </data>
   <data name="isa_v99smpt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
-  </data>
-  <data name="a_v201mpt_mem_2" xml:space="preserve">
-    <value>คี่ / คู่</value>
-  </data>
-  <data name="a_v201mpt_mem_3" xml:space="preserve">
-    <value>มากกว่า  น้อยกว่า</value>
   </data>
   <data name="minpt_10" xml:space="preserve">
     <value>เอาท์ไรท์ ต่ำสุด </value>
@@ -1188,9 +1125,6 @@
   <data name="isa_v5mpt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
   </data>
-  <data name="MaxBv201" xml:space="preserve">
-    <value>ไฟแนนซ์ - เดิมพันสูงสุด</value>
-  </data>
   <data name="NewAgentName" xml:space="preserve">
     <value>ชื่อเอเย่นใหม่</value>
   </data>
@@ -1250,9 +1184,6 @@
   </data>
   <data name="v99mpt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
-  </data>
-  <data name="v201discount" xml:space="preserve">
-    <value>ส่วนลด</value>
   </data>
   <data name="isa_smpt_4" xml:space="preserve">
     <value>คะแนนที่ถูกต้อง</value>
@@ -1476,12 +1407,6 @@
   <data name="a_v99spt_2" xml:space="preserve">
     <value>คี่ / คู่</value>
   </data>
-  <data name="isa_v201mpt_2" xml:space="preserve">
-    <value>คี่ / คู่</value>
-  </data>
-  <data name="isa_v201mpt_3" xml:space="preserve">
-    <value>มากกว่า  น้อยกว่า</value>
-  </data>
   <data name="UpdMaxPos" xml:space="preserve">
     <value>อัพเดทแบ่งสู้สูงสุด</value>
   </data>
@@ -1490,12 +1415,6 @@
   </data>
   <data name="pageAccess" xml:space="preserve">
     <value>เข้าที่หน้า</value>
-  </data>
-  <data name="isa_v201spt_2" xml:space="preserve">
-    <value>คี่ / คู่</value>
-  </data>
-  <data name="isa_v201spt_3" xml:space="preserve">
-    <value>มากกว่า  น้อยกว่า</value>
   </data>
   <data name="v5spt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
@@ -2028,12 +1947,6 @@
   <data name="toTrans" xml:space="preserve">
     <value>ธุรกรรม</value>
   </data>
-  <data name="isa_v201mpt_mem_2" xml:space="preserve">
-    <value>คี่ / คู่</value>
-  </data>
-  <data name="isa_v201mpt_mem_3" xml:space="preserve">
-    <value>มากกว่า  น้อยกว่า</value>
-  </data>
   <data name="minv2pt_20" xml:space="preserve">
     <value>มันนี่ไลน์ ต่ำสุด </value>
   </data>
@@ -2078,9 +1991,6 @@
   </data>
   <data name="Size" xml:space="preserve">
     <value>ขนาด</value>
-  </data>
-  <data name="disabledfi" xml:space="preserve">
-    <value>ปิดการใช้งาน ไฟแนนซ์</value>
   </data>
   <data name="disabledCS" xml:space="preserve">
     <value>ปิดการใช้งานคาสิโน</value>

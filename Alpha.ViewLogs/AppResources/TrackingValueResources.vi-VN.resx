@@ -123,24 +123,6 @@
   <data name="syncCS" xml:space="preserve">
     <value>Đồng bộ hóa Casino</value>
   </data>
-  <data name="v201apt_2" xml:space="preserve">
-    <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="v201apt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
-  <data name="v201mpt_2" xml:space="preserve">
-    <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="v201mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
-  <data name="v201spt_2" xml:space="preserve">
-    <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="v201spt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
   <data name="updptv5" xml:space="preserve">
     <value>Cập nhật giá trị PT của Quấn Vợt</value>
   </data>
@@ -230,12 +212,6 @@
   </data>
   <data name="DepositUserName" xml:space="preserve">
     <value>Tên người gửi tiền</value>
-  </data>
-  <data name="maxV201PT_3" xml:space="preserve">
-    <value>PT lớn nhất cho OU</value>
-  </data>
-  <data name="maxV201PT_2" xml:space="preserve">
-    <value>PT lớn nhất cho OE</value>
   </data>
   <data name="discount" xml:space="preserve">
     <value>Chiết khấu</value>
@@ -381,12 +357,6 @@
   <data name="v10apt_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
-  <data name="minV201PT_3" xml:space="preserve">
-    <value>PT nhỏ nhất cho OU</value>
-  </data>
-  <data name="minV201PT_2" xml:space="preserve">
-    <value> PT nhỏ nhất cho OE</value>
-  </data>
   <data name="firstname" xml:space="preserve">
     <value>Tên</value>
   </data>
@@ -477,9 +447,6 @@
   <data name="maxv8pt_3" xml:space="preserve">
     <value>PT lớn nhất cho OU</value>
   </data>
-  <data name="UMMBv201" xml:space="preserve">
-    <value>Cập nhật tiền cược nhỏ nhất / lớn nhất của Finance</value>
-  </data>
   <data name="enableDownline" xml:space="preserve">
     <value>Áp dụng cho những thành viên cấp dưới</value>
   </data>
@@ -543,17 +510,8 @@
   <data name="transferoption" xml:space="preserve">
     <value>Lựa chọn giao dịch</value>
   </data>
-  <data name="MPMv201" xml:space="preserve">
-    <value>Tiền cược lớn nhất của mỗi trận đấu  cho Finance</value>
-  </data>
   <data name="a_spt_10" xml:space="preserve">
     <value>Cược Thắng</value>
-  </data>
-  <data name="isa_v201smpt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
-  <data name="isa_v201smpt_2" xml:space="preserve">
-    <value>Lẻ/Chẵn</value>
   </data>
   <data name="AccountRemarkDate" xml:space="preserve">
     <value>Account Remark Date</value>
@@ -572,9 +530,6 @@
   </data>
   <data name="NewAgentId" xml:space="preserve">
     <value>ID của Agent mới</value>
-  </data>
-  <data name="MinBv201" xml:space="preserve">
-    <value>Tiền cược nhỏ nhất  cho Finance</value>
   </data>
   <data name="returnErrCode" xml:space="preserve">
     <value>Mã lỗi trả về</value>
@@ -597,18 +552,6 @@
   <data name="OddsType" xml:space="preserve">
     <value>Odds Type</value>
   </data>
-  <data name="a_v201spt_2" xml:space="preserve">
-    <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="a_v201spt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
-  <data name="a_v201mpt_2" xml:space="preserve">
-    <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="a_v201mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
   <data name="Password" xml:space="preserve">
     <value>Mật Khẩu</value>
   </data>
@@ -626,12 +569,6 @@
   </data>
   <data name="creator" xml:space="preserve">
     <value>Người tạo</value>
-  </data>
-  <data name="a_v201mpt_mem_2" xml:space="preserve">
-    <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="a_v201mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
   </data>
   <data name="minpt_10" xml:space="preserve">
     <value>PT nhỏ nhất cho Cược thắng</value>
@@ -1101,9 +1038,6 @@
   <data name="creditProblem" xml:space="preserve">
     <value>Credit Problem</value>
   </data>
-  <data name="MaxBv201" xml:space="preserve">
-    <value>Tiền cược lớn nhất   cho Finance</value>
-  </data>
   <data name="NewAgentName" xml:space="preserve">
     <value>Tên của Agent mới</value>
   </data>
@@ -1157,9 +1091,6 @@
   </data>
   <data name="isa_spt_10" xml:space="preserve">
     <value>Cược Thắng</value>
-  </data>
-  <data name="v201discount" xml:space="preserve">
-    <value>Chiết khấu</value>
   </data>
   <data name="isa_smpt_4" xml:space="preserve">
     <value>Tỷ Số Chính Xác</value>
@@ -1362,12 +1293,6 @@
   <data name="a_v99spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
-  <data name="isa_v201mpt_2" xml:space="preserve">
-    <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="isa_v201mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
   <data name="UpdMaxPos" xml:space="preserve">
     <value>Cập nhật giá trị PT lớn nhất</value>
   </data>
@@ -1376,12 +1301,6 @@
   </data>
   <data name="pageAccess" xml:space="preserve">
     <value>Quyền truy cập</value>
-  </data>
-  <data name="isa_v201spt_2" xml:space="preserve">
-    <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="isa_v201spt_3" xml:space="preserve">
-    <value>Over/Under</value>
   </data>
   <data name="maxv5pt_20" xml:space="preserve">
     <value>PT lớn nhất cho Moneyline</value>
@@ -1866,12 +1785,6 @@
   <data name="toTrans" xml:space="preserve">
     <value>ToTrans</value>
   </data>
-  <data name="isa_v201mpt_mem_2" xml:space="preserve">
-    <value>Lẻ/Chẵn</value>
-  </data>
-  <data name="isa_v201mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
   <data name="minv2pt_20" xml:space="preserve">
     <value>PT nhỏ nhất cho Moneyline</value>
   </data>
@@ -1916,9 +1829,6 @@
   </data>
   <data name="Size" xml:space="preserve">
     <value>Kích thước</value>
-  </data>
-  <data name="disabledfi" xml:space="preserve">
-    <value>Không cho phép chơi Finance</value>
   </data>
   <data name="disabledCS" xml:space="preserve">
     <value>Không cho phép chơi Casino</value>

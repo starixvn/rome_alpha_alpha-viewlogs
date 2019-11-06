@@ -947,7 +947,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_205.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_206.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_207.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_208.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_213.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_216.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_237.xslt" />
@@ -964,7 +963,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_305.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_306.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_307.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_308.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_313.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_315.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_355.xslt" />
@@ -1000,17 +998,11 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_402.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_403.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_404.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_405.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_407.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_408.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_410.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_411.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_412.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_413.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_414.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_415.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_416.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_417.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_422.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_430.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_431.xslt" />
@@ -1039,7 +1031,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_461.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_462.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_500.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_501.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_504.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_506.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_507.xslt" />
@@ -1115,7 +1106,6 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_101.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_102.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_3.xslt" />

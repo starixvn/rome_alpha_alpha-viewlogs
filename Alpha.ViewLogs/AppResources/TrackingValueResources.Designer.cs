@@ -925,60 +925,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Odd/Even.
-        /// </summary>
-        public static string a_v201mpt_2 {
-            get {
-                return ResourceManager.GetString("a_v201mpt_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Over/Under.
-        /// </summary>
-        public static string a_v201mpt_3 {
-            get {
-                return ResourceManager.GetString("a_v201mpt_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Odd/Even.
-        /// </summary>
-        public static string a_v201mpt_mem_2 {
-            get {
-                return ResourceManager.GetString("a_v201mpt_mem_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Over/Under.
-        /// </summary>
-        public static string a_v201mpt_mem_3 {
-            get {
-                return ResourceManager.GetString("a_v201mpt_mem_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Odd/Even.
-        /// </summary>
-        public static string a_v201spt_2 {
-            get {
-                return ResourceManager.GetString("a_v201spt_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Over/Under.
-        /// </summary>
-        public static string a_v201spt_3 {
-            get {
-                return ResourceManager.GetString("a_v201spt_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Handicap.
         /// </summary>
         public static string a_v2mpt_1 {
@@ -2388,15 +2334,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string DisabledESports {
             get {
                 return ResourceManager.GetString("DisabledESports", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Disabled Finance.
-        /// </summary>
-        public static string disabledfi {
-            get {
-                return ResourceManager.GetString("disabledfi", resourceCulture);
             }
         }
         
@@ -3850,78 +3787,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Odd/Even.
-        /// </summary>
-        public static string isa_v201mpt_2 {
-            get {
-                return ResourceManager.GetString("isa_v201mpt_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Over/Under.
-        /// </summary>
-        public static string isa_v201mpt_3 {
-            get {
-                return ResourceManager.GetString("isa_v201mpt_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Odd/Even.
-        /// </summary>
-        public static string isa_v201mpt_mem_2 {
-            get {
-                return ResourceManager.GetString("isa_v201mpt_mem_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Over/Under.
-        /// </summary>
-        public static string isa_v201mpt_mem_3 {
-            get {
-                return ResourceManager.GetString("isa_v201mpt_mem_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Odd/Even.
-        /// </summary>
-        public static string isa_v201smpt_2 {
-            get {
-                return ResourceManager.GetString("isa_v201smpt_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Over/Under.
-        /// </summary>
-        public static string isa_v201smpt_3 {
-            get {
-                return ResourceManager.GetString("isa_v201smpt_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Odd/Even.
-        /// </summary>
-        public static string isa_v201spt_2 {
-            get {
-                return ResourceManager.GetString("isa_v201spt_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Over/Under.
-        /// </summary>
-        public static string isa_v201spt_3 {
-            get {
-                return ResourceManager.GetString("isa_v201spt_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Handicap.
         /// </summary>
         public static string isa_v2mpt_1 {
@@ -5290,15 +5155,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Finance-Max Bet.
-        /// </summary>
-        public static string MaxBv201 {
-            get {
-                return ResourceManager.GetString("MaxBv201", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Football-Max Bet.
         /// </summary>
         public static string maxbv3 {
@@ -5704,24 +5560,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max OE.
-        /// </summary>
-        public static string maxV201PT_2 {
-            get {
-                return ResourceManager.GetString("maxV201PT_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Max OU.
-        /// </summary>
-        public static string maxV201PT_3 {
-            get {
-                return ResourceManager.GetString("maxV201PT_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Max Hdp.
         /// </summary>
         public static string maxv2pt_1 {
@@ -6006,15 +5844,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string minbv2 {
             get {
                 return ResourceManager.GetString("minbv2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Finance-Min Bet.
-        /// </summary>
-        public static string MinBv201 {
-            get {
-                return ResourceManager.GetString("MinBv201", resourceCulture);
             }
         }
         
@@ -6375,24 +6204,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string minv161pt_88 {
             get {
                 return ResourceManager.GetString("minv161pt_88", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Min OE.
-        /// </summary>
-        public static string minV201PT_2 {
-            get {
-                return ResourceManager.GetString("minV201PT_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Min OU.
-        /// </summary>
-        public static string minV201PT_3 {
-            get {
-                return ResourceManager.GetString("minV201PT_3", resourceCulture);
             }
         }
         
@@ -6762,15 +6573,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string mpmv2 {
             get {
                 return ResourceManager.GetString("mpmv2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Finance-Max Per Match.
-        /// </summary>
-        public static string MPMv201 {
-            get {
-                return ResourceManager.GetString("MPMv201", resourceCulture);
             }
         }
         
@@ -8044,15 +7846,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update Min-Max Bet Finance.
-        /// </summary>
-        public static string UMMBv201 {
-            get {
-                return ResourceManager.GetString("UMMBv201", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Update Min-Max Bet Football.
         /// </summary>
         public static string ummbv3 {
@@ -8733,69 +8526,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string v162discount_1101 {
             get {
                 return ResourceManager.GetString("v162discount_1101", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Odd/Even.
-        /// </summary>
-        public static string v201apt_2 {
-            get {
-                return ResourceManager.GetString("v201apt_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Over/Under.
-        /// </summary>
-        public static string v201apt_3 {
-            get {
-                return ResourceManager.GetString("v201apt_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Discount.
-        /// </summary>
-        public static string v201discount {
-            get {
-                return ResourceManager.GetString("v201discount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Odd/Even.
-        /// </summary>
-        public static string v201mpt_2 {
-            get {
-                return ResourceManager.GetString("v201mpt_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Over/Under.
-        /// </summary>
-        public static string v201mpt_3 {
-            get {
-                return ResourceManager.GetString("v201mpt_3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Odd/Even.
-        /// </summary>
-        public static string v201spt_2 {
-            get {
-                return ResourceManager.GetString("v201spt_2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Over/Under.
-        /// </summary>
-        public static string v201spt_3 {
-            get {
-                return ResourceManager.GetString("v201spt_3", resourceCulture);
             }
         }
         

@@ -123,26 +123,8 @@
   <data name="syncCS" xml:space="preserve">
     <value>Is Casino-synchronized</value>
   </data>
-  <data name="v201apt_2" xml:space="preserve">
-    <value>Odd/Even</value>
-  </data>
-  <data name="v201apt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
   <data name="v10mpt_20" xml:space="preserve">
     <value>Moneyline</value>
-  </data>
-  <data name="v201mpt_2" xml:space="preserve">
-    <value>Odd/Even</value>
-  </data>
-  <data name="v201mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
-  <data name="v201spt_2" xml:space="preserve">
-    <value>Odd/Even</value>
-  </data>
-  <data name="v201spt_3" xml:space="preserve">
-    <value>Over/Under</value>
   </data>
   <data name="v3apt_20" xml:space="preserve">
     <value>Moneyline</value>
@@ -245,12 +227,6 @@
   </data>
   <data name="DepositUserName" xml:space="preserve">
     <value>Deposit Username</value>
-  </data>
-  <data name="maxV201PT_3" xml:space="preserve">
-    <value>Max OU</value>
-  </data>
-  <data name="maxV201PT_2" xml:space="preserve">
-    <value>Max OE</value>
   </data>
   <data name="discount" xml:space="preserve">
     <value>Discount</value>
@@ -417,12 +393,6 @@
   <data name="v10apt_3" xml:space="preserve">
     <value>Over/Under</value>
   </data>
-  <data name="minV201PT_3" xml:space="preserve">
-    <value>Min OU</value>
-  </data>
-  <data name="minV201PT_2" xml:space="preserve">
-    <value>Min OE</value>
-  </data>
   <data name="firstname" xml:space="preserve">
     <value>First Name</value>
   </data>
@@ -519,9 +489,6 @@
   <data name="maxv8pt_3" xml:space="preserve">
     <value>Max OU</value>
   </data>
-  <data name="UMMBv201" xml:space="preserve">
-    <value>Update Min-Max Bet Finance</value>
-  </data>
   <data name="enableDownline" xml:space="preserve">
     <value>Apply For Downline</value>
   </data>
@@ -585,20 +552,11 @@
   <data name="transferoption" xml:space="preserve">
     <value>Transfer Option</value>
   </data>
-  <data name="MPMv201" xml:space="preserve">
-    <value>Finance-Max Per Match</value>
-  </data>
   <data name="a_spt_10" xml:space="preserve">
     <value>Outright</value>
   </data>
   <data name="isa_v3smpt_20" xml:space="preserve">
     <value>Moneyline</value>
-  </data>
-  <data name="isa_v201smpt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
-  <data name="isa_v201smpt_2" xml:space="preserve">
-    <value>Odd/Even</value>
   </data>
   <data name="AccountRemarkDate" xml:space="preserve">
     <value>Account Remark Date</value>
@@ -617,9 +575,6 @@
   </data>
   <data name="NewAgentId" xml:space="preserve">
     <value>New Agent ID</value>
-  </data>
-  <data name="MinBv201" xml:space="preserve">
-    <value>Finance-Min Bet</value>
   </data>
   <data name="returnErrCode" xml:space="preserve">
     <value>Return error code</value>
@@ -641,18 +596,6 @@
   </data>
   <data name="OddsType" xml:space="preserve">
     <value>Odds Type</value>
-  </data>
-  <data name="a_v201spt_2" xml:space="preserve">
-    <value>Odd/Even</value>
-  </data>
-  <data name="a_v201spt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
-  <data name="a_v201mpt_2" xml:space="preserve">
-    <value>Odd/Even</value>
-  </data>
-  <data name="a_v201mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
@@ -677,12 +620,6 @@
   </data>
   <data name="isa_v99smpt_20" xml:space="preserve">
     <value>Moneyline</value>
-  </data>
-  <data name="a_v201mpt_mem_2" xml:space="preserve">
-    <value>Odd/Even</value>
-  </data>
-  <data name="a_v201mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
   </data>
   <data name="minpt_10" xml:space="preserve">
     <value>Min Outright</value>
@@ -1188,9 +1125,6 @@
   <data name="isa_v5mpt_20" xml:space="preserve">
     <value>Moneyline</value>
   </data>
-  <data name="MaxBv201" xml:space="preserve">
-    <value>Finance-Max Bet</value>
-  </data>
   <data name="NewAgentName" xml:space="preserve">
     <value>New Agent name</value>
   </data>
@@ -1250,9 +1184,6 @@
   </data>
   <data name="v99mpt_20" xml:space="preserve">
     <value>Moneyline</value>
-  </data>
-  <data name="v201discount" xml:space="preserve">
-    <value>Discount</value>
   </data>
   <data name="isa_smpt_4" xml:space="preserve">
     <value>Correct Score</value>
@@ -1482,12 +1413,6 @@
   <data name="a_v99spt_2" xml:space="preserve">
     <value>Odd/Even</value>
   </data>
-  <data name="isa_v201mpt_2" xml:space="preserve">
-    <value>Odd/Even</value>
-  </data>
-  <data name="isa_v201mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
   <data name="UpdMaxPos" xml:space="preserve">
     <value>Update Max PT</value>
   </data>
@@ -1496,12 +1421,6 @@
   </data>
   <data name="pageAccess" xml:space="preserve">
     <value>Page Access</value>
-  </data>
-  <data name="isa_v201spt_2" xml:space="preserve">
-    <value>Odd/Even</value>
-  </data>
-  <data name="isa_v201spt_3" xml:space="preserve">
-    <value>Over/Under</value>
   </data>
   <data name="v5spt_20" xml:space="preserve">
     <value>Moneyline</value>
@@ -2034,12 +1953,6 @@
   <data name="toTrans" xml:space="preserve">
     <value>ToTrans</value>
   </data>
-  <data name="isa_v201mpt_mem_2" xml:space="preserve">
-    <value>Odd/Even</value>
-  </data>
-  <data name="isa_v201mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
-  </data>
   <data name="minv2pt_20" xml:space="preserve">
     <value>Min Moneyline</value>
   </data>
@@ -2084,9 +1997,6 @@
   </data>
   <data name="Size" xml:space="preserve">
     <value>Size</value>
-  </data>
-  <data name="disabledfi" xml:space="preserve">
-    <value>Disabled Finance</value>
   </data>
   <data name="disabledCS" xml:space="preserve">
     <value>DisabledCS</value>
