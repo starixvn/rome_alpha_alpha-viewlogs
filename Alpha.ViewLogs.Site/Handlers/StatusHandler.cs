@@ -66,23 +66,26 @@
                     var formattedTrackingValue = trackingValueFormatter.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
                     var htmlTrackingValue = transformService.TransformTrackingValue(formattedTrackingValue, log.ActionId, transformParam);
 
-                    logItems.Add(
-                        new LogItemViewModel
-                        {
-                            ActionId = log.ActionId,
-                            ActionName = LogService.GetLogActionName(log.ActionId, message.Language),
+                    if (htmlTrackingValue != null)
+                    {
+                        logItems.Add(
+                            new LogItemViewModel
+                            {
+                                ActionId = log.ActionId,
+                                ActionName = LogService.GetLogActionName(log.ActionId, message.Language),
 
-                            ActionTypeId = log.ActionTypeId,
-                            CustId = log.CustId,
-                            CustName = log.CustName,
-                            LogDate = DateTimeHelper.ToLongDateWithSlash(log.LogDate),
-                            LogId = log.LogId,
-                            SPName = log.StoreProcedureName,
-                            UserId = log.UserId,
-                            Username = log.Username,
-                            TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
-                            IP = LogFormatter.FormatIP(log.IP)
-                        });
+                                ActionTypeId = log.ActionTypeId,
+                                CustId = log.CustId,
+                                CustName = log.CustName,
+                                LogDate = DateTimeHelper.ToLongDateWithSlash(log.LogDate),
+                                LogId = log.LogId,
+                                SPName = log.StoreProcedureName,
+                                UserId = log.UserId,
+                                Username = log.Username,
+                                TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
+                                IP = LogFormatter.FormatIP(log.IP)
+                            });
+                    }
                 }
                 catch (Exception ex)
                 {

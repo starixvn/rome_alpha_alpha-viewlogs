@@ -36,7 +36,7 @@
 
             if (compiledTransform == null)
             {
-                return string.Empty;
+                return null;
             }
 
             // Need be reviewed code here, AssignParams should not in formatter class
