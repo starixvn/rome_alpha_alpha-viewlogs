@@ -212,12 +212,12 @@
       <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.3.1.3\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.4.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.4.1\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.4.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.4.4\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.2.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.2.3\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.2.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.2.8\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Utilities, Version=3.0.0.4, Culture=neutral, processorArchitecture=MSIL">
@@ -405,66 +405,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75515.xslt">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75554.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75553.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70540.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75552.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70539.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65526.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_60513.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70538.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65525.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70537.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65524.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_60512.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70536.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70541.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65527.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75555.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75548.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75549.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75550.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75551.xslt">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_60004.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65009.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65011.xslt" />
@@ -488,26 +428,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75022.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75021.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75020.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65013.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70020.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75027.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70019.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75026.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75025.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_60006.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70018.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65012.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75024.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75028.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75029.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70021.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75030.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70022.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65014.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75031.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70023.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65015.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_60007.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_65514.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -668,66 +588,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75543.xslt">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65518.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70527.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75536.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70528.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75537.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75538.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_60509.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70529.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65519.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75539.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70526.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65517.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70525.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65516.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_60508.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70524.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75532.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75533.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75534.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75535.xslt">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_65508.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -863,66 +723,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75016.xslt">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_60516.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_60517.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65532.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65533.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65534.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65535.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70548.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70549.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70550.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70551.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70552.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70553.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75564.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75565.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75566.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75567.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75568.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75569.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75570.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75571.xslt">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65502.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -942,66 +742,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_60501.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_60516.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_60517.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65532.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65533.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65534.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65535.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70548.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70549.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70550.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70551.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70552.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70553.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75564.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75565.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75566.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75567.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75568.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75569.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75570.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75571.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65502.xslt">
@@ -1170,15 +910,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1118.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1119.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1120.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1125.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1126.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1127.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1128.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1129.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1130.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1133.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1134.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1135.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1136.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1138.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1139.xslt" />
@@ -1191,7 +923,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1152.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1153.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1155.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1157.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1200.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1201.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1202.xslt" />
@@ -1216,26 +947,13 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_205.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_206.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_207.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_208.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_209.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_210.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_211.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_212.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_213.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_216.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_224.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_225.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_226.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_227.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_237.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_238.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_239.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_240.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_241.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_243.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_244.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_246.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_247.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_248.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_300.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_301.xslt" />
@@ -1245,42 +963,8 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_305.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_306.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_307.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_308.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_309.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_310.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_311.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_312.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_313.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_314.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_315.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_316.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_317.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_318.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_319.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_321.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_322.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_323.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_324.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_325.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_326.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_327.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_328.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_329.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_330.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_331.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_332.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_333.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_334.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_335.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_336.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_337.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_338.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_339.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_340.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_341.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_342.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_343.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_344.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_355.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_356.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_357.xslt" />
@@ -1301,7 +985,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_372.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_373.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_374.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_375.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_379.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_380.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_381.xslt" />
@@ -1315,30 +998,12 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_402.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_403.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_404.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_405.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_406.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_407.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_408.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_409.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_410.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_411.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_412.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_413.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_414.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_415.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_416.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_417.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_418.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_419.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_420.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_421.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_422.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_424.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_425.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_426.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_427.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_428.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_429.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_430.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_431.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_432.xslt" />
@@ -1366,9 +1031,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_461.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_462.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_500.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_501.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_502.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_503.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_504.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_506.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_507.xslt" />
@@ -1444,7 +1106,6 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_101.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_102.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_3.xslt" />

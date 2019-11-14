@@ -31,8 +31,6 @@
 
         public bool IsShowOldValue { get; set; }
 
-        public Dictionary<int, bool> ActionIdVisibilities { get; set; }
-
         public DateTime MaxReportDate { get; set; }
 
         public DateTime MinReportDate { get; set; }

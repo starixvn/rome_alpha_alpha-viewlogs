@@ -170,18 +170,6 @@
                   <xsl:value-of select="@playerdiscount1x2" />
                 </td>
               </tr>
-              <xsl:if test="xslLogFormat:IsShowMyanmarOdds() = 'True'">
-                <tr>
-                  <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('PlayerDiscountMyanmarOdds')" />
-                  </td>
-                  <td class="colW2">
-                    <xsl:value-of select="@playerdiscountmyanmarodds" />
-                  </td>
-                  <td class="colW1"></td><td class="colW2"></td>
-                  <td class="colW1"></td><td class="colW2"></td>
-                </tr>
-              </xsl:if>
               <tr>
                 <td class="colW1">
                   <xsl:value-of select="xslLogFormat:GetLogResource('minb')" />

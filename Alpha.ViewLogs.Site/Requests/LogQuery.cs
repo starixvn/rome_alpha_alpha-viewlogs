@@ -22,8 +22,6 @@
 
         private readonly DateTime limitedDateToShowInfo;
 
-        private readonly Dictionary<int, bool> actionIdVisibilities;
-
         private readonly Dictionary<string, bool> custStatuses;
 
         private readonly Dictionary<string, int> resourcesByBetTypeCacheRef;
@@ -38,18 +36,14 @@
             IUserSession currentUserSession,
             IDateTime dateTimeWrap,
             bool? isShowOldValue,
-            Dictionary<int, bool> actionIdVisibilities = null,
             Dictionary<string, bool> custStatuses = null,
             Dictionary<string, int> resourcesByBetTypeCacheRef = null,
-            Dictionary<string, int> resourceByProductCacheRef = null,
-            bool? isShowMyanmarOdds = null,
-            bool? isShowPokerGames = null)
+            Dictionary<string, int> resourceByProductCacheRef = null)
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
             dateTimeWrap = dateTimeWrap ?? new DateTimeWrap();
 
             IsShowOldValue = isShowOldValue ?? GetShowOldValueFromCookie();
-            this.actionIdVisibilities = actionIdVisibilities;
             this.custStatuses = custStatuses;
             this.resourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef;
             this.resourceByProductCacheRef = resourceByProductCacheRef;
@@ -65,8 +59,6 @@
             Language = currentUserSession.Language;
             IsInternal = false;
             UplineId = currentUserSession.CustId;
-            IsShowMyanmarOdds = isShowMyanmarOdds ?? UserPermission.IsShowMyanmarOdds;
-            IsShowPokerGames = isShowPokerGames ?? UserPermission.HasPermissionOnProduct(ProductIdConstants.PokerGames);
             PreviousUsername = Username;
         }
 
@@ -98,14 +90,6 @@
 
         public string PageSize { get; set; }
 
-        public Dictionary<int, bool> ActionIdVisibilities
-        {
-            get
-            {
-                return actionIdVisibilities ?? GetActionIdVisibilities();
-            }
-        }
-
         public Dictionary<string, bool> SportBetTypeVisibilities
         {
             get
@@ -130,10 +114,6 @@
             }
         }
 
-        public bool IsShowMyanmarOdds { get; }
-
-        public bool IsShowPokerGames { get; }
-
         public DateTime MaxReportDate
         {
             get
@@ -152,49 +132,14 @@
 
         public DateTime LimitedDateForShowInfo => limitedDateToShowInfo;
 
-        private Dictionary<int, bool> GetActionIdVisibilities()
-        {
-            var visibilities = new Dictionary<int, bool>();
-
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_31, UserPermission.IsShowRacing);
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_41, UserPermission.IsShowRacing);
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_151_51, UserPermission.IsShowRacing);
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_152_41, UserPermission.IsShowRacing);
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_152_51, UserPermission.IsShowRacing);
-            AddActionVisibilities(visibilities, AppSettings.ActionIds_Racing_153_51, UserPermission.IsShowRacing);
-
-            return visibilities;
-        }
-
-        private void AddActionVisibilities(
-            Dictionary<int, bool> actionVisibilities,
-            IEnumerable<int> actionIds,
-            bool visibility)
-        {
-            foreach (var actionId in actionIds)
-            {
-                if (!actionVisibilities.ContainsKey(actionId))
-                {
-                    actionVisibilities.Add(actionId, visibility);
-                }
-            }
-        }
-
         private Dictionary<string, bool> GetCustStatuses()
         {
             var custStatusDict = new Dictionary<string, bool>
             {
-                { "151_31", UserPermission.IsShowRacing },
-                { "151_41", UserPermission.IsShowRacing},
-                { "151_51", UserPermission.IsShowRacing},
-                { "152_41", UserPermission.IsShowRacing},
-                { "152_51", UserPermission.IsShowRacing},
-                { "153_51", UserPermission.IsShowRacing},
                 { "161_90", UserPermission.IsShowNumberGroup },
                 { "disablevirtualsports", UserPermission.IsEnableProduct(ProductIdConstants.VirtualSports) },
                 { "disablegolddeluxe", UserPermission.IsShowGoldDeluxeSettingForCredit },
-                { "disablecolossusbet", UserPermission.IsShowColossusBets },
-                { "44", UserPermission.IsShowSportsbook2 },
+                { "44", UserPermission.IsShowSportsbook2 }
             };
 
             foreach (var statusMapping in AppSettings.StatusMappings)

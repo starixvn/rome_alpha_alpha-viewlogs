@@ -187,24 +187,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disabled Cockfighting.
-        /// </summary>
-        public static string DisableCockfighting {
-            get {
-                return ResourceManager.GetString("DisableCockfighting", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Disabled Colossus Bets.
-        /// </summary>
-        public static string DisableColossusBets {
-            get {
-                return ResourceManager.GetString("DisableColossusBets", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Disabled.
         /// </summary>
         public static string Disabled {

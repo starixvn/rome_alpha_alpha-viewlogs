@@ -50,7 +50,6 @@
 
                 Language = logQuery.Language,
                 HasViewLogPermission = logQuery.HasViewLogPermission,
-                ActionIdVisibilities = logQuery.ActionIdVisibilities,
 
                 MaxReportDate = logQuery.MaxReportDate,
                 MinReportDate = logQuery.MinReportDate,

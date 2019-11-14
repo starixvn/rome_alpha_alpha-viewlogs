@@ -190,7 +190,7 @@
         public void GetBetTypeName_AllBetNormalGamesBetType_ReturnsBetTypeNameFromResource()
         {
             // Arrange
-            var expectedBetTypeName = "Baccarat, Roulette, Sic Bo, Dragon Tiger";
+            var expectedBetTypeName = "Baccarat, Roulette, Sic Bo, Dragon Tiger, Win 3 Cards, Bull Bull";
             var betType = BetTypeId.AllBetNormalGames;
 
             // Act 
@@ -588,24 +588,6 @@
 
             // Assert
             Assert.AreEqual(expectedDisabledKenoBetTypeName, actualDisabledKenoBetTypeName);
-        }
-
-        [TestCase(true)]
-        [TestCase(false)]
-        public void IsShowMyanmarOdds_NoInput_Returns(bool isShowMyanmarOdds)
-        {
-            // Arrange
-            var expectedIsShowMyanmarOdds = isShowMyanmarOdds;
-            logFormatter.Init(new TransformParam
-            {
-                IsShowMyanmarOdds = isShowMyanmarOdds
-            });
-
-            // Act 
-            var actualIsShowMyanmarOdds = logFormatter.IsShowMyanmarOdds();
-
-            // Assert
-            Assert.AreEqual(expectedIsShowMyanmarOdds, actualIsShowMyanmarOdds);
         }
 
         [TestCase(0)]

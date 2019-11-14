@@ -16,20 +16,16 @@
             IUserSession currentUserSession,
             IDateTime dateTimeWrap,
             bool? isShowOldValue,
-            Dictionary<int, bool> actionIdVisibilities = null,
             Dictionary<string, bool> sportBetTypeVisibilities = null,
             Dictionary<string, int> resourcesByBetTypeCacheRef = null,
-            Dictionary<string, int> resourcesByProudctCacheRef = null,
-            bool? isShowMyanmarOdds = null) :
+            Dictionary<string, int> resourcesByProudctCacheRef = null) :
             base(
                 currentUserSession,
                 dateTimeWrap,
                 isShowOldValue,
-                actionIdVisibilities,
                 sportBetTypeVisibilities,
                 resourcesByBetTypeCacheRef,
-                resourcesByProudctCacheRef,
-                isShowMyanmarOdds)
+                resourcesByProudctCacheRef)
         {
         }
     }

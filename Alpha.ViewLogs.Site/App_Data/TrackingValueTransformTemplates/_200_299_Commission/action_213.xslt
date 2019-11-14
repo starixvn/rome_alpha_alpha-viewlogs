@@ -24,85 +24,6 @@
           <xsl:value-of select="@playerdiscount1x2" />
         </td>
       </tr>
-      <xsl:if test="xslLogFormat:IsShowMyanmarOdds() = 'True'">
-        <tr>
-          
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('playerdiscountnumber')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@playerdiscountnumber" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('PlayerDiscountMyanmarOdds')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@playerdiscountmyanmarodds" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
-          </td>
-        </tr>
-        <tr>
-          
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@subaccname" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@language" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@errcode" />
-          </td>
-        </tr>
-        <tr>
-          
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@errmsg" />
-          </td>
-          <td class="colW1"></td>
-          <td class="colW2"></td>
-          <td class="colW1"></td>
-          <td class="colW2"></td>
-        </tr>
-      </xsl:if>
-      <xsl:if test="xslLogFormat:IsShowMyanmarOdds() != 'True'">
-        <tr>
-         
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('playerdiscountnumber')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@playerdiscountnumber" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@subaccname" />
-          </td>
-        </tr>
         <tr>
           
           <td class="colW1">
@@ -125,7 +46,6 @@
           </td>
         </tr>
         
-      </xsl:if>
     </table>
   </xsl:template>
 

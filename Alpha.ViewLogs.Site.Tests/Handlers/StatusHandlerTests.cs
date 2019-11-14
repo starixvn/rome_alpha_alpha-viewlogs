@@ -51,11 +51,9 @@
                 CurrentUserSession,
                 DateTimeWrapper,
                 true,
-                ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                ResourcesByProductCacheRef,
-                false);
+                ResourcesByProductCacheRef);
 
             var toDate = new DateTime(2016, 10, 1);
             DateTimeWrapper.Now.Returns(toDate);
@@ -77,11 +75,9 @@
                 CurrentUserSession,
                 DateTimeWrapper,
                 true,
-                ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                ResourcesByProductCacheRef,
-                false);
+                ResourcesByProductCacheRef);
 
             var toDate = new DateTime(2016, 10, 2);
             var yesterday = new DateTime(2016, 10, 1);
@@ -112,11 +108,9 @@
                 CurrentUserSession,
                 DateTimeWrapper,
                 true,
-                ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                ResourcesByProductCacheRef,
-                false);
+                ResourcesByProductCacheRef);
 
             indexQuery.FromDate = fromDateString;
             indexQuery.ToDate = toDateString;
@@ -142,11 +136,9 @@
                 CurrentUserSession,
                 DateTimeWrapper,
                 true,
-                ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                ResourcesByProductCacheRef,
-                false);
+                ResourcesByProductCacheRef);
 
             indexQuery.PageSize = pageSize;
 
@@ -173,11 +165,9 @@
                 CurrentUserSession,
                 DateTimeWrapper,
                 true,
-                ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                ResourcesByProductCacheRef,
-                false);
+                ResourcesByProductCacheRef);
 
             indexQuery.PageSize = pageSize;
 
@@ -203,11 +193,9 @@
                 CurrentUserSession,
                 DateTimeWrapper,
                 true,
-                ActionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                ResourcesByProductCacheRef,
-                false);
+                ResourcesByProductCacheRef);
 
             indexQuery.PageIndex = pageIndex;
 
@@ -230,19 +218,15 @@
             string toDate)
         {
             // Arrange
-            var actionIdVisibilities = new Dictionary<int, bool>();
-            actionIdVisibilities.Add(1, true);
 
             CurrentUserSession.RoleId.Returns(ValidRoleId);
             var indexQuery = new IndexQuery(
                 CurrentUserSession,
                 DateTimeWrapper,
                 true,
-                actionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                ResourcesByProductCacheRef,
-                false);
+                ResourcesByProductCacheRef);
 
             indexQuery.PageIndex = string.Empty;
             indexQuery.PageSize = DefaultVariables.PageSize.ToString();
@@ -288,19 +272,15 @@
             string toDate)
         {
             // Arrange
-            var actionIdVisibilities = new Dictionary<int, bool>();
-            actionIdVisibilities.Add(1, false);
 
             CurrentUserSession.RoleId.Returns(ValidRoleId);
             var indexQuery = new IndexQuery(
                 CurrentUserSession,
                 DateTimeWrapper,
                 true,
-                actionIdVisibilities,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                ResourcesByProductCacheRef,
-                false);
+                ResourcesByProductCacheRef);
 
             indexQuery.PageIndex = string.Empty;
             indexQuery.PageSize = DefaultVariables.PageSize.ToString();
@@ -309,10 +289,9 @@
 
             var pagingLogs = new PagingLogs<Log>
             {
-                TotalRecords = 2,
+                TotalRecords = 1,
                 Logs = new List<Log>
                 {
-                    new Log() { ActionId = 1, LogId = 1 },
                     new Log() { ActionId = 2, LogId = 2 }
                 }
             };
