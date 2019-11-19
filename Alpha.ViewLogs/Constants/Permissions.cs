@@ -7,6 +7,8 @@
 
     public static class Permissions
     {
+        private const int ExcludeBracketIndex = 2;
+
         private static readonly IDictionary<string, string> PemissionAbbs = new Dictionary<string, string>
         {
             [PageAccessType.CreateAccount + PageAccessType.UpdateAccount + PageAccessType.ViewMemberInfo] = PageAccessType.CreateAccount,
@@ -41,7 +43,7 @@
 
         private static string GetShortPermissionKey(string key)
         {
-            return key.Substring(1, key.Length - 2);
+            return key.Substring(1, key.Length - ExcludeBracketIndex);
         }
     }
 }

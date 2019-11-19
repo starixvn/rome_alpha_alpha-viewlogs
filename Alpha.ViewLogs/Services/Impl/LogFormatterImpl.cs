@@ -21,6 +21,8 @@
         private Dictionary<string, int> resourcesByProductCacheRef;
         private bool isHideNickname;
 
+        private const int SevenDaysIndex = 8;
+
         public LogFormatterImpl(
             ViewLogIPService ipService,
             RemotingRefWrapper remotingRef)
@@ -103,7 +105,7 @@
             var newValue = string.Empty;
             var oldValue = string.Empty;
 
-            var nodeCountIncaseOfHavingNewOldDivs = 2;
+            const int nodeCountIncaseOfHavingNewOldDivs = 2;
 
             if (nodeCount >= nodeCountIncaseOfHavingNewOldDivs)
             {
@@ -111,14 +113,14 @@
 
                 // remove char ( at the beginning of oldValue
                 // 7 days => 7 characters
-                oldValue = codes.Last().Value.Substring(1, 8);
+                oldValue = codes.Last().Value.Substring(1, SevenDaysIndex);
 
                 dayCodesWithDiff = dayCodesWithDiff.Replace(newValue, CovertCodeCondition(newValue))
                                                    .Replace(oldValue, CovertCodeCondition(oldValue));
                 return dayCodesWithDiff;
             }
 
-            var nodeCountIncaseOfUnchangeValuesOrNotShowOldValues = 1;
+            const int nodeCountIncaseOfUnchangeValuesOrNotShowOldValues = 1;
 
             if (nodeCount == nodeCountIncaseOfUnchangeValuesOrNotShowOldValues)
             {
@@ -209,7 +211,7 @@
                 return string.Empty;
             }
 
-            string statusHtmlFormat = "<tr><td colspan=\"3\" class=\"colW1\">{0}</td><td colspan=\"3\" class=\"colW2\">{1}</td></tr>";
+            const string statusHtmlFormat = "<tr><td colspan=\"3\" class=\"colW1\">{0}</td><td colspan=\"3\" class=\"colW2\">{1}</td></tr>";
             var lowerCaseResourceName = name.ToLower();
 
             var resourceValue = string.Empty;
@@ -238,7 +240,7 @@
             char[] codes = dayCodes.Trim().ToCharArray();
             string condition = string.Empty;
 
-            var indicatorOfWeekly = 7;
+            const int indicatorOfWeekly = 7;
 
             if (!codes.Any()
                 || codes.Length < indicatorOfWeekly)

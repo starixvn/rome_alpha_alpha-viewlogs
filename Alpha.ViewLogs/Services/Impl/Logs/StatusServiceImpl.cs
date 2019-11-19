@@ -26,7 +26,7 @@
         {
             if (logParam == null)
             {
-                throw new ArgumentNullException("logParam");
+                throw new ArgumentNullException(nameof(logParam));
             }
 
             var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
@@ -46,7 +46,7 @@
         {
             if (logParam == null)
             {
-                throw new ArgumentNullException("logParam");
+                throw new ArgumentNullException(nameof(logParam));
             }
 
             var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);

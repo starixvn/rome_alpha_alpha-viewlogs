@@ -877,10 +877,18 @@
     <Content Include="Web.uat2.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-    <TypeScriptCompile Include="assets\scripts\credit\index-controller.ts" />
-    <TypeScriptCompile Include="assets\scripts\credit\index-view.ts" />
-    <TypeScriptCompile Include="assets\scripts\login\index-controller.ts" />
-    <TypeScriptCompile Include="assets\scripts\login\index-view.ts" />
+    <TypeScriptCompile Include="assets\scripts\credit\index-controller.ts">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="assets\scripts\credit\index-view.ts">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="assets\scripts\login\index-controller.ts">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="assets\scripts\login\index-view.ts">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </TypeScriptCompile>
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1000.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1001.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1002.xslt" />
@@ -1124,12 +1132,24 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <TypeScriptCompile Include="assets\scripts\core.ts" />
-    <TypeScriptCompile Include="assets\scripts\setting\index-controller.ts" />
-    <TypeScriptCompile Include="assets\scripts\setting\index-view.ts" />
-    <TypeScriptCompile Include="assets\scripts\status\index-controller.ts" />
-    <TypeScriptCompile Include="assets\scripts\status\index-view.ts" />
-    <TypeScriptCompile Include="assets\scripts\tab\index.ts" />
+    <TypeScriptCompile Include="assets\scripts\core.ts">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="assets\scripts\setting\index-controller.ts">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="assets\scripts\setting\index-view.ts">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="assets\scripts\status\index-controller.ts">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="assets\scripts\status\index-view.ts">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="assets\scripts\tab\index.ts">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\DependencyConfig.cs" />
