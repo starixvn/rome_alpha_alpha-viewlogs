@@ -106,7 +106,7 @@
             var actualTrackingValue = transformService.TransformTrackingValue(trackingValue, actionId, transformParam);
 
             // Assert
-            Assert.IsEmpty(actualTrackingValue);
+            Assert.IsNull(actualTrackingValue);
         }
 
         [TestCase("a", @"\TestData\TrackingValueTransformTemplates", 1)]
