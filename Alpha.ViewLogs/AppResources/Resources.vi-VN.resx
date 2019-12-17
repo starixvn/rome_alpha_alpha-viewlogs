@@ -262,13 +262,13 @@
     <value>Domain</value>
   </data>
   <data name="Browser" xml:space="preserve">
-    <value>Browser</value>
+    <value>Trình duyệt</value>
   </data>
   <data name="Country" xml:space="preserve">
     <value>Quốc gia</value>
   </data>
   <data name="By" xml:space="preserve">
-    <value>by</value>
+    <value>bởi</value>
   </data>
   <data name="Setting" xml:space="preserve">
     <value>Thiết lập</value>
@@ -296,5 +296,8 @@
   </data>
   <data name="PageAccess_D" xml:space="preserve">
     <value>Tổng Cược &amp; Dự Đoán</value>
+  </data>
+  <data name="AllTypes" xml:space="preserve">
+    <value>Tất cả</value>
   </data>
 </root>

@@ -438,7 +438,7 @@
 
             var expectedLogActionTypeViewModels = new List<LogActionTypeViewModel>()
             {
-                new LogActionTypeViewModel(-1, "All Types"),
+                new LogActionTypeViewModel(-1, language == LanguageCode.Vietnamese ? "Tất cả" : "All Types"),
                 new LogActionTypeViewModel(1, ValidLogActionTypeName),
                 new LogActionTypeViewModel(0, null),
             };

@@ -148,7 +148,7 @@
     <value>Cược Chấp</value>
   </data>
   <data name="isa_v3smpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v3smpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -190,7 +190,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v10mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v10mpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -202,7 +202,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v10spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="lastname" xml:space="preserve">
     <value>Họ</value>
@@ -229,37 +229,37 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v2smpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v2smpt_7" xml:space="preserve">
-    <value>Hiệp 1 - Handicap</value>
+    <value>Hiệp 1 - Cược Chấp</value>
   </data>
   <data name="isa_v2smpt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="isa_v2smpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="AccountRemark" xml:space="preserve">
     <value>Account Remark</value>
   </data>
   <data name="disableautompt" xml:space="preserve">
-    <value>Không cho phép Auto PT đối với Master</value>
+    <value>Không cho phép PT tự động đối với Master</value>
   </data>
   <data name="isa_smlivept_3" xml:space="preserve">
-    <value>Trực tiếp - OU</value>
+    <value>Trực tiếp - Tài/Xỉu</value>
   </data>
   <data name="isa_smlivept_1" xml:space="preserve">
-    <value>Trực tiếp - Hdp</value>
+    <value>Trực tiếp - Cược Chấp</value>
   </data>
   <data name="isa_smlivept_7" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - Hdp </value>
+    <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="isa_smlivept_8" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - Hdp </value>
+    <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="isa_mpt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="isa_mpt_6" xml:space="preserve">
     <value>Tổng số bàn thắng</value>
@@ -271,7 +271,7 @@
     <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="isa_mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -280,25 +280,25 @@
     <value>Cược Chấp</value>
   </data>
   <data name="isa_mpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="isa_mpt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="newMasterName" xml:space="preserve">
     <value>Tên của Master mới</value>
   </data>
   <data name="isa_spt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="isa_spt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="isa_spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="isa_spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -310,7 +310,7 @@
     <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="isa_spt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="isa_spt_6" xml:space="preserve">
     <value>Tổng số bàn thắng</value>
@@ -343,7 +343,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="v10spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v10spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -355,7 +355,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="v10apt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="firstname" xml:space="preserve">
     <value>Tên</value>
@@ -367,7 +367,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="v10mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="maxv12pt_21" xml:space="preserve">
     <value>maxv12pt_21</value>
@@ -376,49 +376,49 @@
     <value>Bàn thắng kế tiếp</value>
   </data>
   <data name="a_mlivept_8" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - OU</value>
+    <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="a_mlivept_3" xml:space="preserve">
-    <value>Trực tiếp - OU</value>
+    <value>Trực tiếp - Tài/Xỉu</value>
   </data>
   <data name="a_mlivept_1" xml:space="preserve">
-    <value>Trực tiếp - Hdp</value>
+    <value>Trực tiếp - Cược Chấp</value>
   </data>
   <data name="a_mlivept_7" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - Hdp </value>
+    <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="IsGroupHeadline" xml:space="preserve">
     <value>Nhóm trên cùng</value>
   </data>
   <data name="minlivept_3" xml:space="preserve">
-    <value>PT nhỏ nhất cho OU trực tiếp</value>
+    <value>PT nhỏ nhất cho Tài/Xỉu trực tiếp</value>
   </data>
   <data name="minlivept_1" xml:space="preserve">
-    <value>PT nhỏ nhất cho Hdp trực tiếp</value>
+    <value>PT nhỏ nhất cho Cược Chấp trực tiếp</value>
   </data>
   <data name="minlivept_7" xml:space="preserve">
-    <value>PT nhỏ nhất  cho trực tiếp hiệp 1 - Hdp</value>
+    <value>PT nhỏ nhất  cho trực tiếp hiệp 1 - Cược Chấp</value>
   </data>
   <data name="minlivept_8" xml:space="preserve">
-    <value>PT nhỏ nhất cho trực tiếp hiệp 1- OU</value>
+    <value>PT nhỏ nhất cho trực tiếp hiệp 1- Tài/Xỉu</value>
   </data>
   <data name="agentName" xml:space="preserve">
     <value>Tên của Agent</value>
   </data>
   <data name="maxv5pt_1" xml:space="preserve">
-    <value>PT lớn nhất cho Hdp</value>
+    <value>PT lớn nhất cho Cược Chấp</value>
   </data>
   <data name="maxv5pt_3" xml:space="preserve">
-    <value>PT lớn nhất cho OU</value>
+    <value>PT lớn nhất cho Tài/Xỉu</value>
   </data>
   <data name="maxv5pt_2" xml:space="preserve">
     <value>PT lớn nhất cho OE</value>
   </data>
   <data name="maxv2pt_8" xml:space="preserve">
-    <value>PT lớn nhất cho hiệp 1 - OU</value>
+    <value>PT lớn nhất cho hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="maxv2pt_9" xml:space="preserve">
-    <value>PT lớn nhất cho thể loại Cá cược tổng hợp</value>
+    <value>PT lớn nhất cho thể loại Cược tổng hợp</value>
   </data>
   <data name="maxv2pt_7" xml:space="preserve">
     <value>PT lớn nhất cho hiệp 1 - hdp</value>
@@ -427,25 +427,25 @@
     <value>PT lớn nhất cho OE</value>
   </data>
   <data name="maxv2pt_3" xml:space="preserve">
-    <value>PT lớn nhất cho OU</value>
+    <value>PT lớn nhất cho Tài/Xỉu</value>
   </data>
   <data name="maxv2pt_1" xml:space="preserve">
-    <value>PT lớn nhất cho Hdp</value>
+    <value>PT lớn nhất cho Cược Chấp</value>
   </data>
   <data name="maxv3pt_3" xml:space="preserve">
-    <value>PT lớn nhất cho OU</value>
+    <value>PT lớn nhất cho Tài/Xỉu</value>
   </data>
   <data name="maxv3pt_2" xml:space="preserve">
     <value>PT lớn nhất cho OE</value>
   </data>
   <data name="maxv3pt_1" xml:space="preserve">
-    <value>PT lớn nhất cho Hdp</value>
+    <value>PT lớn nhất cho Cược Chấp</value>
   </data>
   <data name="maxv8pt_1" xml:space="preserve">
-    <value>PT lớn nhất cho Hdp</value>
+    <value>PT lớn nhất cho Cược Chấp</value>
   </data>
   <data name="maxv8pt_3" xml:space="preserve">
-    <value>PT lớn nhất cho OU</value>
+    <value>PT lớn nhất cho Tài/Xỉu</value>
   </data>
   <data name="enableDownline" xml:space="preserve">
     <value>Áp dụng cho những thành viên cấp dưới</value>
@@ -466,7 +466,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v10spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v10spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -484,22 +484,22 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v10mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="disablefinancial_wc" xml:space="preserve">
     <value>disablefinancial_wc</value>
   </data>
   <data name="isa_mlivept_1" xml:space="preserve">
-    <value>Trực tiếp - Hdp</value>
+    <value>Trực tiếp - Cược Chấp</value>
   </data>
   <data name="isa_mlivept_3" xml:space="preserve">
-    <value>Trực tiếp - OU</value>
+    <value>Trực tiếp - Tài/Xỉu</value>
   </data>
   <data name="isa_mlivept_7" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - Hdp </value>
+    <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="isa_mlivept_8" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - OU</value>
+    <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="suspended" xml:space="preserve">
     <value>Bị đình chỉ</value>
@@ -577,19 +577,19 @@
     <value>Cược Chấp</value>
   </data>
   <data name="a_v8spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="loginIP" xml:space="preserve">
     <value>IP đăng nhập</value>
   </data>
   <data name="a_v8mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v8mpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="a_spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -598,7 +598,7 @@
     <value>Cược Chấp</value>
   </data>
   <data name="a_spt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="a_spt_6" xml:space="preserve">
     <value>Tổng số bàn thắng</value>
@@ -610,16 +610,16 @@
     <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="a_spt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="a_spt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="a_mpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="a_mpt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="a_mpt_5" xml:space="preserve">
     <value>Toàn trận - 1X2</value>
@@ -628,7 +628,7 @@
     <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="a_mpt_7" xml:space="preserve">
-    <value>Hiệp 1 - Handicap</value>
+    <value>Hiệp 1 - Cược Chấp</value>
   </data>
   <data name="a_mpt_6" xml:space="preserve">
     <value>Tổng số bàn thắng</value>
@@ -637,7 +637,7 @@
     <value>Cược Chấp</value>
   </data>
   <data name="a_mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -652,7 +652,7 @@
     <value>Cược Thắng</value>
   </data>
   <data name="v99spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v99spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -667,7 +667,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v5spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="playerdiscount1x2" xml:space="preserve">
     <value>Chiết khấu cho người chơi khi đặt  cược 1x2</value>
@@ -676,7 +676,7 @@
     <value>Cược Chấp</value>
   </data>
   <data name="v99apt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v99apt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -685,7 +685,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v5mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v5mpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -694,16 +694,16 @@
     <value>Cược Chấp</value>
   </data>
   <data name="v99mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v99mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v2spt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="a_v2spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v2spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -712,34 +712,34 @@
     <value>Cược Chấp</value>
   </data>
   <data name="a_v2spt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="a_v2spt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="a_v2mpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="a_v2mpt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="a_v2mpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="a_v2mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v2mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v2mpt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="a_v3spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v3spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v3spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -754,7 +754,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v3mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="important" xml:space="preserve">
     <value>Quan trọng</value>
@@ -778,10 +778,10 @@
     <value>PT của Agent</value>
   </data>
   <data name="au" xml:space="preserve">
-    <value>Auto PT của Super</value>
+    <value>PT tự động của Super</value>
   </data>
   <data name="ia" xml:space="preserve">
-    <value>Super lấy Auto PT trên Member</value>
+    <value>Super lấy PT tự động trên Member</value>
   </data>
   <data name="IP" xml:space="preserve">
     <value>IP</value>
@@ -802,16 +802,16 @@
     <value>Địa chỉ</value>
   </data>
   <data name="alivept_8" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - OU</value>
+    <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="alivept_1" xml:space="preserve">
-    <value>Trực tiếp - Hdp</value>
+    <value>Trực tiếp - Cược Chấp</value>
   </data>
   <data name="alivept_3" xml:space="preserve">
-    <value>Trực tiếp - OU</value>
+    <value>Trực tiếp - Tài/Xỉu</value>
   </data>
   <data name="alivept_7" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - Hdp </value>
+    <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="srecommend" xml:space="preserve">
     <value>ID của Super Agent</value>
@@ -823,7 +823,7 @@
     <value>Mã lỗi</value>
   </data>
   <data name="isa_v99spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v99spt_2" xml:space="preserve">
     <value>Lẻ /Chẵn</value>
@@ -838,7 +838,7 @@
     <value>Cược Chấp</value>
   </data>
   <data name="isa_v99mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v99mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -850,13 +850,13 @@
     <value>Email</value>
   </data>
   <data name="apt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="apt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="apt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="apt_6" xml:space="preserve">
     <value>Tổng số bàn thắng</value>
@@ -868,7 +868,7 @@
     <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="apt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="apt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -886,7 +886,7 @@
     <value>MagID</value>
   </data>
   <data name="mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -895,7 +895,7 @@
     <value>Cược Chấp</value>
   </data>
   <data name="mpt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="mpt_6" xml:space="preserve">
     <value>Tổng số bàn thắng</value>
@@ -907,10 +907,10 @@
     <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="mpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="mpt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="mpmv3" xml:space="preserve">
     <value>Tiền cược lớn nhất cho mỗi trận Bóng Bầu Dục Mỹ</value>
@@ -934,7 +934,7 @@
     <value>Điện thoại</value>
   </data>
   <data name="aum" xml:space="preserve">
-    <value>Auto PT của Master</value>
+    <value>PT tự động của Master</value>
   </data>
   <data name="fax" xml:space="preserve">
     <value>fax</value>
@@ -943,7 +943,7 @@
     <value>Tiền cược lớn nhất cho mỗi trận đấu Bóng Đá</value>
   </data>
   <data name="iam" xml:space="preserve">
-    <value>Master lấy Auto PT trên Agent</value>
+    <value>Master lấy PT tự động trên Agent</value>
   </data>
   <data name="New" xml:space="preserve">
     <value>Mới</value>
@@ -955,10 +955,10 @@
     <value>Tiểu bang</value>
   </data>
   <data name="spt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="spt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="spt_5" xml:space="preserve">
     <value>Toàn trận - 1X2</value>
@@ -967,7 +967,7 @@
     <value>Tỷ Số Chính Xác</value>
   </data>
   <data name="spt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="spt_6" xml:space="preserve">
     <value>Tổng số bàn thắng</value>
@@ -976,7 +976,7 @@
     <value>Cược Chấp</value>
   </data>
   <data name="spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -1009,7 +1009,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v99smpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v99smpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -1021,7 +1021,7 @@
     <value>ID của Agent</value>
   </data>
   <data name="isa_v5smpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v5smpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -1045,37 +1045,37 @@
     <value>Chỉ bị khóa</value>
   </data>
   <data name="maxlivept_8" xml:space="preserve">
-    <value>PT lớn nhất cho trực tiếp hiệp 1 - OU</value>
+    <value>PT lớn nhất cho trực tiếp hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="maxlivept_7" xml:space="preserve">
     <value>PT lớn nhất cho trực tiếp hiệp 1 - hdp</value>
   </data>
   <data name="maxlivept_1" xml:space="preserve">
-    <value>PT lớn nhất cho  Live - Hdp</value>
+    <value>PT lớn nhất cho  Live - Cược Chấp</value>
   </data>
   <data name="maxlivept_3" xml:space="preserve">
-    <value>PT lớn nhất cho Live - OU</value>
+    <value>PT lớn nhất cho Live - Tài/Xỉu</value>
   </data>
   <data name="CustName" xml:space="preserve">
     <value>Tên thành viên</value>
   </data>
   <data name="minV8PT_1" xml:space="preserve">
-    <value>PT nhỏ nhất cho Hdp</value>
+    <value>PT nhỏ nhất cho Cược Chấp</value>
   </data>
   <data name="minV5PT_1" xml:space="preserve">
-    <value>PT nhỏ nhất cho Hdp</value>
+    <value>PT nhỏ nhất cho Cược Chấp</value>
   </data>
   <data name="minV3PT_1" xml:space="preserve">
-    <value>PT nhỏ nhất cho Hdp</value>
+    <value>PT nhỏ nhất cho Cược Chấp</value>
   </data>
   <data name="minV2PT_1" xml:space="preserve">
-    <value>PT nhỏ nhất cho Hdp</value>
+    <value>PT nhỏ nhất cho Cược Chấp</value>
   </data>
   <data name="isa_v3mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v3mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v3mpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -1087,7 +1087,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v3spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_spt_10" xml:space="preserve">
     <value>Cược Thắng</value>
@@ -1102,7 +1102,7 @@
     <value>Tổng số bàn thắng</value>
   </data>
   <data name="isa_smpt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="isa_smpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -1111,13 +1111,13 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_smpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_smpt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="isa_smpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="playerdiscountcs" xml:space="preserve">
     <value>Chiết khấu khác cho người chơi</value>
@@ -1126,13 +1126,13 @@
     <value>Không cho phép chơi Cược  Thắng</value>
   </data>
   <data name="minV99PT_1" xml:space="preserve">
-    <value>PT nhỏ nhất cho Hdp</value>
+    <value>PT nhỏ nhất cho Cược Chấp</value>
   </data>
   <data name="isa_v5spt_2" xml:space="preserve">
     <value>Lẻ/Chẳn</value>
   </data>
   <data name="isa_v5spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v5spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -1144,7 +1144,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v5mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="minbv99" xml:space="preserve">
     <value>Tiền cược nhỏ nhất cho các môn thể thao khác</value>
@@ -1165,43 +1165,43 @@
     <value>PT nhỏ nhất  cho Total Goal</value>
   </data>
   <data name="minpt_7" xml:space="preserve">
-    <value>PT nhỏ nhất cho hiệp 1 - Hdp</value>
+    <value>PT nhỏ nhất cho hiệp 1 - Cược Chấp</value>
   </data>
   <data name="minpt_1" xml:space="preserve">
-    <value>PT nhỏ nhất cho Hdp</value>
+    <value>PT nhỏ nhất cho Cược Chấp</value>
   </data>
   <data name="minpt_2" xml:space="preserve">
     <value>PT nhỏ nhất cho OE</value>
   </data>
   <data name="minpt_3" xml:space="preserve">
-    <value>PT nhỏ nhất cho OU</value>
+    <value>PT nhỏ nhất cho Tài/Xỉu</value>
   </data>
   <data name="minpt_8" xml:space="preserve">
-    <value>PT nhỏ nhất cho hiệp 1 - OU</value>
+    <value>PT nhỏ nhất cho hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="minpt_9" xml:space="preserve">
-    <value>PT nhỏ nhất cho thể loại Cá cược tổng hợp</value>
+    <value>PT nhỏ nhất cho thể loại Cược tổng hợp</value>
   </data>
   <data name="recommend" xml:space="preserve">
     <value>Gợi ý</value>
   </data>
   <data name="slivept_8" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - OU</value>
+    <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="slivept_3" xml:space="preserve">
-    <value>Trực tiếp - OU</value>
+    <value>Trực tiếp - Tài/Xỉu</value>
   </data>
   <data name="slivept_1" xml:space="preserve">
-    <value>Trực tiếp - Hdp</value>
+    <value>Trực tiếp - Cược Chấp</value>
   </data>
   <data name="slivept_7" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - Hdp </value>
+    <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="closedMultiple" xml:space="preserve">
     <value>Bị khóa đồng loạt</value>
   </data>
   <data name="isa_v2mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v2mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -1210,43 +1210,43 @@
     <value>Cược Chấp</value>
   </data>
   <data name="isa_v2mpt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="isa_v2mpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="isa_v2mpt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="isa_v2spt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="isa_v2spt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="isa_v2spt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="isa_v2spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="isa_v2spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v2spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="mlivept_7" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - OU</value>
+    <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="mlivept_1" xml:space="preserve">
-    <value>Trực tiếp - Hdp</value>
+    <value>Trực tiếp - Cược Chấp</value>
   </data>
   <data name="mlivept_3" xml:space="preserve">
-    <value>Trực tiếp - OU</value>
+    <value>Trực tiếp - Tài/Xỉu</value>
   </data>
   <data name="mlivept_8" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - OU</value>
+    <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="OldAgentId" xml:space="preserve">
     <value>ID cũ của Agent</value>
@@ -1264,13 +1264,13 @@
     <value>Cập nhật tất cả các thành viên</value>
   </data>
   <data name="minV10PT_1" xml:space="preserve">
-    <value>PT nhỏ nhất cho Hdp</value>
+    <value>PT nhỏ nhất cho Cược Chấp</value>
   </data>
   <data name="minV11PT_1" xml:space="preserve">
-    <value>PT nhỏ nhất cho Hdp</value>
+    <value>PT nhỏ nhất cho Cược Chấp</value>
   </data>
   <data name="a_v99mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v99mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -1288,7 +1288,7 @@
     <value>Cược Chấp</value>
   </data>
   <data name="a_v99spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v99spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -1309,25 +1309,25 @@
     <value>Cược Chấp</value>
   </data>
   <data name="isa_v8mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="updPageAccess" xml:space="preserve">
     <value>Cập nhật quyền truy cập</value>
   </data>
   <data name="maxpt_8" xml:space="preserve">
-    <value>PT lớn nhất cho hiệp 1 - OU</value>
+    <value>PT lớn nhất cho hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="maxpt_9" xml:space="preserve">
-    <value>PT lớn nhất cho thể loại Cá cược tổng hợp</value>
+    <value>PT lớn nhất cho thể loại Cược tổng hợp</value>
   </data>
   <data name="maxpt_2" xml:space="preserve">
     <value>PT lớn nhất cho OE</value>
   </data>
   <data name="maxpt_3" xml:space="preserve">
-    <value>PT lớn nhất cho OU</value>
+    <value>PT lớn nhất cho Tài/Xỉu</value>
   </data>
   <data name="maxpt_1" xml:space="preserve">
-    <value>PT lớn nhất cho  Hdp</value>
+    <value>PT lớn nhất cho  Cược Chấp</value>
   </data>
   <data name="maxpt_6" xml:space="preserve">
     <value>PT lớn nhất cho Total Goal</value>
@@ -1357,7 +1357,7 @@
     <value>ID của trận đấu</value>
   </data>
   <data name="isa_v8spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v8spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -1378,16 +1378,16 @@
     <value>Dung lượng tập tin</value>
   </data>
   <data name="a_slivept_7" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - Hdp </value>
+    <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="a_slivept_1" xml:space="preserve">
-    <value>Trực tiếp - Hdp</value>
+    <value>Trực tiếp - Cược Chấp</value>
   </data>
   <data name="a_slivept_3" xml:space="preserve">
-    <value>Trực tiếp - OU</value>
+    <value>Trực tiếp - Tài/Xỉu</value>
   </data>
   <data name="a_slivept_8" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - OU</value>
+    <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="newSuperId" xml:space="preserve">
     <value>ID của Super mới</value>
@@ -1420,13 +1420,13 @@
     <value>PT lớn nhất cho Moneyline</value>
   </data>
   <data name="maxv11pt_1" xml:space="preserve">
-    <value>PT lớn nhất cho Hdp</value>
+    <value>PT lớn nhất cho Cược Chấp</value>
   </data>
   <data name="maxv10pt_1" xml:space="preserve">
-    <value>PT lớn nhất cho Hdp</value>
+    <value>PT lớn nhất cho Cược Chấp</value>
   </data>
   <data name="maxv10pt_3" xml:space="preserve">
-    <value>PT lớn nhất cho OU</value>
+    <value>PT lớn nhất cho Tài/Xỉu</value>
   </data>
   <data name="maxv10pt_2" xml:space="preserve">
     <value>PT lớn nhất cho OE</value>
@@ -1444,7 +1444,7 @@
     <value>Thứ hạng Danh Vọng</value>
   </data>
   <data name="disableAMPT" xml:space="preserve">
-    <value>Không cho phép Auto PT đối với Master</value>
+    <value>Không cho phép PT tự động đối với Master</value>
   </data>
   <data name="gender" xml:space="preserve">
     <value>Giới tính</value>
@@ -1483,7 +1483,7 @@
     <value>PT nhỏ nhất cho  OE</value>
   </data>
   <data name="minv99pt_3" xml:space="preserve">
-    <value>PT nhỏ nhất cho  OU</value>
+    <value>PT nhỏ nhất cho  Tài/Xỉu</value>
   </data>
   <data name="maxbv5" xml:space="preserve">
     <value>Tiền cược lớn nhất cho Quần Vợt</value>
@@ -1498,7 +1498,7 @@
     <value>Tiền cược lớn nhất cho Bóng Chày</value>
   </data>
   <data name="isa_v10smpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v10smpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -1531,28 +1531,28 @@
     <value>Bị khóa</value>
   </data>
   <data name="isa_slivept_8" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - OU</value>
+    <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="isa_slivept_7" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - Hdp </value>
+    <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="isa_slivept_3" xml:space="preserve">
-    <value>Trực tiếp - OU</value>
+    <value>Trực tiếp - Tài/Xỉu</value>
   </data>
   <data name="isa_slivept_1" xml:space="preserve">
-    <value>Trực tiếp - Hdp</value>
+    <value>Trực tiếp - Cược Chấp</value>
   </data>
   <data name="credit" xml:space="preserve">
     <value>Hạn mức tín dụng</value>
   </data>
   <data name="maxv99pt_1" xml:space="preserve">
-    <value>PT lớn nhất cho Hdp</value>
+    <value>PT lớn nhất cho Cược Chấp</value>
   </data>
   <data name="maxv99pt_2" xml:space="preserve">
     <value>PT lớn nhất cho OE</value>
   </data>
   <data name="maxv99pt_3" xml:space="preserve">
-    <value>PT lớn nhất cho OU</value>
+    <value>PT lớn nhất cho Tài/Xỉu</value>
   </data>
   <data name="newspt" xml:space="preserve">
     <value>PT của Super mới</value>
@@ -1561,13 +1561,13 @@
     <value>PT của Master mới </value>
   </data>
   <data name="v2apt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="v2apt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="v2apt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v2apt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -1576,13 +1576,13 @@
     <value>Cược Chấp</value>
   </data>
   <data name="v2apt_7" xml:space="preserve">
-    <value>Hiệp 1 -  Handicap</value>
+    <value>Hiệp 1 -  Cược Chấp</value>
   </data>
   <data name="v2mpt_7" xml:space="preserve">
-    <value>Hiệp 1 - Handicap</value>
+    <value>Hiệp 1 - Cược Chấp</value>
   </data>
   <data name="v2mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v2mpt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
@@ -1591,37 +1591,37 @@
     <value>Cược Chấp</value>
   </data>
   <data name="v2mpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="v2mpt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="language" xml:space="preserve">
     <value>Ngôn ngữ</value>
   </data>
   <data name="isa_v8smpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v8smpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="v2spt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="v2spt_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="v2spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="v2spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v2spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="v2spt_7" xml:space="preserve">
-    <value>Hiệp 1 - Handicap</value>
+    <value>Hiệp 1 - Cược Chấp</value>
   </data>
   <data name="toName" xml:space="preserve">
     <value>đến</value>
@@ -1633,7 +1633,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="v3apt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v3apt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -1645,7 +1645,7 @@
     <value>PT lớn nhất cho Moneyline</value>
   </data>
   <data name="minv10pt_3" xml:space="preserve">
-    <value>PT nhỏ nhất cho  OU</value>
+    <value>PT nhỏ nhất cho  Tài/Xỉu</value>
   </data>
   <data name="minv10pt_2" xml:space="preserve">
     <value>PT nhỏ nhất cho  OE</value>
@@ -1657,7 +1657,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="v3mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v3mpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -1669,7 +1669,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="v3spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="ugroup" xml:space="preserve">
     <value>Cập nhật theo nhóm</value>
@@ -1699,7 +1699,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="v5apt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v5mpt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -1708,28 +1708,28 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="v5mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v5spt_2" xml:space="preserve">
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="v5spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v5spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="minv8pt_3" xml:space="preserve">
-    <value>PT nhỏ nhất cho  OU</value>
+    <value>PT nhỏ nhất cho  Tài/Xỉu</value>
   </data>
   <data name="minv3pt_3" xml:space="preserve">
-    <value>PT nhỏ nhất cho  OU</value>
+    <value>PT nhỏ nhất cho  Tài/Xỉu</value>
   </data>
   <data name="minv3pt_2" xml:space="preserve">
     <value>PT nhỏ nhất cho  OE</value>
   </data>
   <data name="minv5pt_3" xml:space="preserve">
-    <value>PT nhỏ nhất cho  OU</value>
+    <value>PT nhỏ nhất cho  Tài/Xỉu</value>
   </data>
   <data name="minv5pt_2" xml:space="preserve">
     <value>PT nhỏ nhất cho  OE</value>
@@ -1738,16 +1738,16 @@
     <value>PT nhỏ nhất cho OE</value>
   </data>
   <data name="minv2pt_3" xml:space="preserve">
-    <value>PT nhỏ nhất cho OU</value>
+    <value>PT nhỏ nhất cho Tài/Xỉu</value>
   </data>
   <data name="minv2pt_7" xml:space="preserve">
-    <value>PT nhỏ nhất cho hiệp 1 - Hdp</value>
+    <value>PT nhỏ nhất cho hiệp 1 - Cược Chấp</value>
   </data>
   <data name="minv2pt_8" xml:space="preserve">
-    <value>Min 1st OU</value>
+    <value>Min 1st Tài/Xỉu</value>
   </data>
   <data name="minv2pt_9" xml:space="preserve">
-    <value>PT nhỏ nhất của Cá Cược Tổng Hợp</value>
+    <value>PT nhỏ nhất của Cược tổng hợp</value>
   </data>
   <data name="success" xml:space="preserve">
     <value>Thành công</value>
@@ -1762,19 +1762,19 @@
     <value>Cược Chấp</value>
   </data>
   <data name="v8mpt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v8apt_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="v8apt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="updatemultiple" xml:space="preserve">
     <value>Cập nhật đồng loạt</value>
   </data>
   <data name="v8spt_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v8spt_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -1792,7 +1792,7 @@
     <value>Bị đình chỉ đồng loạt</value>
   </data>
   <data name="aume" xml:space="preserve">
-    <value>Auto PT của Master</value>
+    <value>PT tự động của Master</value>
   </data>
   <data name="lang" xml:space="preserve">
     <value>Ngôn ngữ</value>
@@ -1807,10 +1807,10 @@
     <value>Thành phố</value>
   </data>
   <data name="iame" xml:space="preserve">
-    <value>Master lấy Auto PT trên Member</value>
+    <value>Master lấy PT tự động trên Member</value>
   </data>
   <data name="isau" xml:space="preserve">
-    <value>Super lấy Auto PT trên Master</value>
+    <value>Super lấy PT tự động trên Master</value>
   </data>
   <data name="ummb" xml:space="preserve">
     <value>Cập nhật tiền cược nhỏ nhất / lớn nhất của Bóng Đá</value>
@@ -1984,16 +1984,16 @@
     <value>Swimming</value>
   </data>
   <data name="a_mlivept_mem_1" xml:space="preserve">
-    <value>Trực tiếp - Hdp</value>
+    <value>Trực tiếp - Cược Chấp</value>
   </data>
   <data name="a_mlivept_mem_3" xml:space="preserve">
-    <value>Trực tiếp - OU</value>
+    <value>Trực tiếp - Tài/Xỉu</value>
   </data>
   <data name="a_mlivept_mem_7" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - Hdp </value>
+    <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="a_mlivept_mem_8" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - OU</value>
+    <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="a_mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2005,7 +2005,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_mpt_mem_4" xml:space="preserve">
     <value>Tỷ Số Chính Xác</value>
@@ -2017,13 +2017,13 @@
     <value>Tổng số bàn thắng</value>
   </data>
   <data name="a_mpt_mem_7" xml:space="preserve">
-    <value>Hiệp 1 - Handicap</value>
+    <value>Hiệp 1 - Cược Chấp</value>
   </data>
   <data name="a_mpt_mem_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="a_mpt_mem_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="a_v10mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2032,7 +2032,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v10mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v11mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2044,16 +2044,16 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v2mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v2mpt_mem_7" xml:space="preserve">
-    <value>Hiệp 1 - Handicap</value>
+    <value>Hiệp 1 - Cược Chấp</value>
   </data>
   <data name="a_v2mpt_mem_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="a_v2mpt_mem_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="a_v3mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2062,7 +2062,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v3mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v5mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2071,13 +2071,13 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v5mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v8mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="a_v8mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v99mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2086,19 +2086,19 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="a_v99mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_mlivept_mem_1" xml:space="preserve">
-    <value>Trực tiếp - Hdp</value>
+    <value>Trực tiếp - Cược Chấp</value>
   </data>
   <data name="isa_mlivept_mem_3" xml:space="preserve">
-    <value>Trực tiếp - OU</value>
+    <value>Trực tiếp - Tài/Xỉu</value>
   </data>
   <data name="isa_mlivept_mem_7" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - Hdp </value>
+    <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="isa_mlivept_mem_8" xml:space="preserve">
-    <value>Trực tiếp - Hiệp 1 - OU</value>
+    <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="isa_mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2110,7 +2110,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_mpt_mem_4" xml:space="preserve">
     <value>Tỷ Số Chính Xác</value>
@@ -2122,13 +2122,13 @@
     <value>Tổng số bàn thắng</value>
   </data>
   <data name="isa_mpt_mem_7" xml:space="preserve">
-    <value>Hiệp 1 - Handicap</value>
+    <value>Hiệp 1 - Cược Chấp</value>
   </data>
   <data name="isa_mpt_mem_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="isa_mpt_mem_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="isa_v10mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2137,7 +2137,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v10mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v11mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2149,16 +2149,16 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v2mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v2mpt_mem_7" xml:space="preserve">
-    <value>Hiệp 1 - Handicap</value>
+    <value>Hiệp 1 - Cược Chấp</value>
   </data>
   <data name="isa_v2mpt_mem_8" xml:space="preserve">
-    <value>Hiệp 1 - Over/Under</value>
+    <value>Hiệp 1 - Tài/Xỉu</value>
   </data>
   <data name="isa_v2mpt_mem_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="isa_v3mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2167,7 +2167,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v3mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v5mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2176,13 +2176,13 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v5mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v8mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="isa_v8mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v99mpt_mem_1" xml:space="preserve">
     <value>Cược Chấp</value>
@@ -2191,7 +2191,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="isa_v99mpt_mem_3" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="AccName" xml:space="preserve">
     <value>Tên tài khoản</value>
@@ -2212,109 +2212,109 @@
     <value>Môi trường</value>
   </data>
   <data name="Browser" xml:space="preserve">
-    <value>Browser</value>
+    <value>Trình duyệt</value>
   </data>
   <data name="NumberGame" xml:space="preserve">
     <value>Number Game</value>
   </data>
   <data name="v161spt_81" xml:space="preserve">
-    <value>Banh đầu/ Banh cuối - Over/Under</value>
+    <value>Banh đầu/ Banh cuối - Tài/Xỉu</value>
   </data>
   <data name="v161spt_83" xml:space="preserve">
     <value>Banh đầu/ Banh cuối - Lẻ/Chẵn</value>
   </data>
   <data name="v161spt_85" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v161spt_86" xml:space="preserve">
-    <value>FT.Odd/Even</value>
+    <value>Tổng 3 banh Lẻ/Chẵn</value>
   </data>
   <data name="v161slivept_85" xml:space="preserve">
-    <value>Banh kế tiếp - Over/Under</value>
+    <value>Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="v161slivept_86" xml:space="preserve">
     <value>Banh kế tiếp - Lẻ/Chẳn</value>
   </data>
   <data name="v161slivept_87" xml:space="preserve">
-    <value>Banh kế tiếp - High/Low</value>
+    <value>Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="mixsports" xml:space="preserve">
     <value>Mix Sports Parlay</value>
   </data>
   <data name="v99spt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="a_v161spt_81" xml:space="preserve">
-    <value>Banh đầu/ Banh cuối - Over/Under</value>
+    <value>Banh đầu/ Banh cuối - Tài/Xỉu</value>
   </data>
   <data name="a_v161spt_83" xml:space="preserve">
     <value>Banh đầu/ Banh cuối - Lẻ/Chẵn</value>
   </data>
   <data name="a_v161spt_85" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v161spt_86" xml:space="preserve">
-    <value>FT.Odd/Even</value>
+    <value>Tổng 3 banh Lẻ/Chẵn</value>
   </data>
   <data name="a_v161slivept_85" xml:space="preserve">
-    <value>Banh kế tiếp - Over/Under</value>
+    <value>Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="a_v161slivept_86" xml:space="preserve">
     <value>Banh kế tiếp - Lẻ/Chẳn</value>
   </data>
   <data name="a_v161slivept_87" xml:space="preserve">
-    <value>Banh kế tiếp - High/Low</value>
+    <value>Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="a_v99spt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="isa_v161spt_81" xml:space="preserve">
-    <value>Banh đầu/ Banh cuối - Over/Under</value>
+    <value>Banh đầu/ Banh cuối - Tài/Xỉu</value>
   </data>
   <data name="isa_v161spt_83" xml:space="preserve">
     <value>Banh đầu/ Banh cuối - Lẻ/Chẵn</value>
   </data>
   <data name="isa_v161spt_85" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v161spt_86" xml:space="preserve">
-    <value>FT.Odd/Even</value>
+    <value>Tổng 3 banh Lẻ/Chẵn</value>
   </data>
   <data name="isa_v161slivept_85" xml:space="preserve">
-    <value>Banh kế tiếp - Over/Under</value>
+    <value>Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="isa_v161slivept_86" xml:space="preserve">
     <value>Banh kế tiếp - Lẻ/Chẳn</value>
   </data>
   <data name="isa_v161slivept_87" xml:space="preserve">
-    <value>Banh kế tiếp - High/Low</value>
+    <value>Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="isa_v99spt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="v161mpt_81" xml:space="preserve">
-    <value>Banh đầu/ Banh cuối - Over/Under</value>
+    <value>Banh đầu/ Banh cuối - Tài/Xỉu</value>
   </data>
   <data name="v161mpt_83" xml:space="preserve">
     <value>Banh đầu/ Banh cuối - Lẻ/Chẵn</value>
   </data>
   <data name="v161mpt_85" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v161mpt_86" xml:space="preserve">
-    <value>FT.Odd/Even</value>
+    <value>Tổng 3 banh Lẻ/Chẵn</value>
   </data>
   <data name="v161mlivept_85" xml:space="preserve">
-    <value>Banh kế tiếp - Over/Under</value>
+    <value>Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="v161mlivept_86" xml:space="preserve">
     <value>Banh kế tiếp - Lẻ/Chẳn</value>
   </data>
   <data name="v161mlivept_87" xml:space="preserve">
-    <value>Banh kế tiếp - High/Low</value>
+    <value>Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="v99mpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="MinBv99MP" xml:space="preserve">
     <value>Tiền cược nhỏ nhất cho Mix Sports Parlay</value>
@@ -2344,76 +2344,76 @@
     <value>Cập nhật tiền cược nhỏ nhất / lớn nhất của Number Game</value>
   </data>
   <data name="v161apt_81" xml:space="preserve">
-    <value>Banh đầu/ Banh cuối - Over/Under</value>
+    <value>Banh đầu/ Banh cuối - Tài/Xỉu</value>
   </data>
   <data name="v161apt_83" xml:space="preserve">
     <value>Banh đầu/ Banh cuối - Lẻ/Chẵn</value>
   </data>
   <data name="v161apt_85" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="v161apt_86" xml:space="preserve">
-    <value>FT.Odd/Even</value>
+    <value>Tổng 3 banh Lẻ/Chẵn</value>
   </data>
   <data name="v161alivept_85" xml:space="preserve">
-    <value>Banh kế tiếp - Over/Under</value>
+    <value>Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="v161alivept_86" xml:space="preserve">
     <value>Banh kế tiếp - Lẻ/Chẳn</value>
   </data>
   <data name="v161alivept_87" xml:space="preserve">
-    <value>Banh kế tiếp - High/Low</value>
+    <value>Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="v99apt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="a_v161mpt_81" xml:space="preserve">
-    <value>Banh đầu/ Banh cuối - Over/Under</value>
+    <value>Banh đầu/ Banh cuối - Tài/Xỉu</value>
   </data>
   <data name="a_v161mpt_83" xml:space="preserve">
     <value>Banh đầu/ Banh cuối - Lẻ/Chẵn</value>
   </data>
   <data name="a_v161mpt_85" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v161mpt_86" xml:space="preserve">
-    <value>FT.Odd/Even</value>
+    <value>Tổng 3 banh Lẻ/Chẵn</value>
   </data>
   <data name="a_v161mlivept_85" xml:space="preserve">
-    <value>Banh kế tiếp - Over/Under</value>
+    <value>Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="a_v161mlivept_86" xml:space="preserve">
     <value>Banh kế tiếp - Lẻ/Chẳn</value>
   </data>
   <data name="a_v161mlivept_87" xml:space="preserve">
-    <value>Banh kế tiếp - High/Low</value>
+    <value>Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="a_v99mpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="isa_v161mpt_81" xml:space="preserve">
-    <value>Banh đầu/ Banh cuối - Over/Under</value>
+    <value>Banh đầu/ Banh cuối - Tài/Xỉu</value>
   </data>
   <data name="isa_v161mpt_83" xml:space="preserve">
     <value>Banh đầu/ Banh cuối - Lẻ/Chẵn</value>
   </data>
   <data name="isa_v161mpt_85" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v161mpt_86" xml:space="preserve">
-    <value>FT.Odd/Even</value>
+    <value>Tổng 3 banh Lẻ/Chẵn</value>
   </data>
   <data name="isa_v161mlivept_85" xml:space="preserve">
-    <value>Banh kế tiếp - Over/Under</value>
+    <value>Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="isa_v161mlivept_86" xml:space="preserve">
     <value>Banh kế tiếp - Lẻ/Chẳn</value>
   </data>
   <data name="isa_v161mlivept_87" xml:space="preserve">
-    <value>Banh kế tiếp - High/Low</value>
+    <value>Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="isa_v99mpt_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="Updptv99MP" xml:space="preserve">
     <value>Cập nhật giá trị PT của Mix Sports Parlay</value>
@@ -2422,103 +2422,103 @@
     <value>Cập nhật giá trị PT của Number Game</value>
   </data>
   <data name="minv161pt_81" xml:space="preserve">
-    <value>PT nhỏ nhất cho  Banh đầu/Banh cuối - Over/Under</value>
+    <value>PT nhỏ nhất cho  Banh đầu/cuối - Tài/Xỉu</value>
   </data>
   <data name="minv161pt_83" xml:space="preserve">
-    <value>PT nhỏ nhất cho  Banh đầu/Banh cuối - Lẻ/Chẵn</value>
+    <value>PT nhỏ nhất cho  Banh đầu/cuối - Lẻ/Chẵn</value>
   </data>
   <data name="minv161pt_85" xml:space="preserve">
-    <value>PT nhỏ nhất cho  Over / Under</value>
+    <value>PT nhỏ nhất cho  Tài/Xỉu</value>
   </data>
   <data name="minv161pt_86" xml:space="preserve">
-    <value>PT nhỏ nhất cho FT.Odd/Even</value>
+    <value>PT nhỏ nhất cho Tổng 3 banh Lẻ/Chẵn</value>
   </data>
   <data name="minv161livept_85" xml:space="preserve">
-    <value>PT nhỏ nhất  cho Banh kế tiếp - Over/Under</value>
+    <value>PT nhỏ nhất  cho Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="minv161livept_86" xml:space="preserve">
     <value>PT nhỏ nhất cho Banh kế tiếp - Lẻ/Chẵn</value>
   </data>
   <data name="minv161livept_87" xml:space="preserve">
-    <value>PT nhỏ nhất cho Banh kế tiếp - Hight/Low</value>
+    <value>PT nhỏ nhất cho Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="maxv161pt_81" xml:space="preserve">
-    <value>PT lớn nhất cho Banh đầu/Banh cuối - Over/Under</value>
+    <value>PT lớn nhất cho Banh đầu/cuối - Tài/Xỉu</value>
   </data>
   <data name="maxv161pt_83" xml:space="preserve">
-    <value>PT lớn nhất cho  Banh đầu/Banh cuối - Lẻ/Chẵn</value>
+    <value>PT lớn nhất cho  Banh đầu/cuối - Lẻ/Chẵn</value>
   </data>
   <data name="maxv161pt_85" xml:space="preserve">
-    <value>PT lớn nhất cho  Over / Under</value>
+    <value>PT lớn nhất cho  Tài/Xỉu</value>
   </data>
   <data name="maxv161pt_86" xml:space="preserve">
-    <value>PT lớn nhất cho FT.Odd/Event</value>
+    <value>PT lớn nhất cho Tổng 3 banh Lẻ/Chẵnt</value>
   </data>
   <data name="maxv161livept_85" xml:space="preserve">
-    <value>PT lớn nhất cho Banh kế tiếp - Over/Under</value>
+    <value>PT lớn nhất cho Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="maxv161livept_86" xml:space="preserve">
     <value>PT lớn nhất cho Banh kế tiếp - Lẻ/Chẳn</value>
   </data>
   <data name="maxv161livept_87" xml:space="preserve">
-    <value>PT lớn nhất cho Banh kế tiếp - Hight/Low</value>
+    <value>PT lớn nhất cho Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="DisableNumber" xml:space="preserve">
     <value>Không cho phép chơi Number Game</value>
   </data>
   <data name="isa_v161mpt_mem_81" xml:space="preserve">
-    <value>Banh đầu/ Banh cuối - Over/Under</value>
+    <value>Banh đầu/ Banh cuối - Tài/Xỉu</value>
   </data>
   <data name="isa_v161mpt_mem_83" xml:space="preserve">
     <value>Banh đầu/ Banh cuối - Lẻ/Chẵn</value>
   </data>
   <data name="isa_v161mpt_mem_85" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="isa_v161mpt_mem_86" xml:space="preserve">
-    <value>FT.Odd/Even</value>
+    <value>Tổng 3 banh Lẻ/Chẵn</value>
   </data>
   <data name="isa_v161mlivept_mem_85" xml:space="preserve">
-    <value>Banh kế tiếp - Over/Under</value>
+    <value>Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="isa_v161mlivept_mem_86" xml:space="preserve">
     <value>Banh kế tiếp - Lẻ/Chẳn</value>
   </data>
   <data name="isa_v161mlivept_mem_87" xml:space="preserve">
-    <value>Banh kế tiếp - High/Low</value>
+    <value>Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="isa_v99mpt_mem_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="a_v161mpt_mem_81" xml:space="preserve">
-    <value>Banh đầu/ Banh cuối - Over/Under</value>
+    <value>Banh đầu/ Banh cuối - Tài/Xỉu</value>
   </data>
   <data name="a_v161mpt_mem_83" xml:space="preserve">
     <value>Banh đầu/ Banh cuối - Lẻ/Chẵn</value>
   </data>
   <data name="a_v161mpt_mem_85" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="a_v161mpt_mem_86" xml:space="preserve">
-    <value>FT.Odd/Even</value>
+    <value>Tổng 3 banh Lẻ/Chẵn</value>
   </data>
   <data name="a_v161mlivept_mem_85" xml:space="preserve">
-    <value>Banh kế tiếp - Over/Under</value>
+    <value>Banh kế tiếp - Tài/Xỉu</value>
   </data>
   <data name="a_v161mlivept_mem_86" xml:space="preserve">
     <value>Banh kế tiếp - Lẻ/Chẳn</value>
   </data>
   <data name="a_v161mlivept_mem_87" xml:space="preserve">
-    <value>Banh kế tiếp - High/Low</value>
+    <value>Banh kế tiếp - Cao/Thấp</value>
   </data>
   <data name="a_v99mpt_mem_9" xml:space="preserve">
-    <value>Cá cược tổng hợp</value>
+    <value>Cược tổng hợp</value>
   </data>
   <data name="minv99pt_9" xml:space="preserve">
-    <value>PT nhỏ nhất cho Cá Cược Tổng Hợp</value>
+    <value>PT nhỏ nhất cho Cược tổng hợp</value>
   </data>
   <data name="maxv99pt_9" xml:space="preserve">
-    <value>PT lớn nhất cho thể loại Cá cược tổng hợp</value>
+    <value>PT lớn nhất cho thể loại Cược tổng hợp</value>
   </data>
   <data name="DisableCasino" xml:space="preserve">
     <value>Không cho phép chơi Casino</value>
@@ -2533,100 +2533,100 @@
     <value>Biệt danh</value>
   </data>
   <data name="v161spt_88" xml:space="preserve">
-    <value>Warrior</value>
+    <value>Chiến Binh</value>
   </data>
   <data name="v161slivept_89" xml:space="preserve">
-    <value>Next Combo - Trực tuyến</value>
+    <value>Combo kế tiếp - Trực tiếp</value>
   </data>
   <data name="v161slivept_90" xml:space="preserve">
-    <value>Number Wheel - Trực tuyến</value>
+    <value>Number Wheel - Trực tiếp</value>
   </data>
   <data name="a_v161spt_88" xml:space="preserve">
-    <value>Warrior</value>
+    <value>Chiến Binh</value>
   </data>
   <data name="a_v161slivept_89" xml:space="preserve">
-    <value>Next Combo - Trực tuyến</value>
+    <value>Combo kế tiếp - Trực tiếp</value>
   </data>
   <data name="a_v161slivept_90" xml:space="preserve">
-    <value>Number Wheel - Trực tuyến</value>
+    <value>Number Wheel - Trực tiếp</value>
   </data>
   <data name="isa_v161spt_88" xml:space="preserve">
-    <value>Warrior</value>
+    <value>Chiến Binh</value>
   </data>
   <data name="isa_v161slivept_89" xml:space="preserve">
-    <value>Next Combo - Trực tuyến</value>
+    <value>Combo kế tiếp - Trực tiếp</value>
   </data>
   <data name="isa_v161slivept_90" xml:space="preserve">
-    <value>Number Wheel - Trực tuyến</value>
+    <value>Number Wheel - Trực tiếp</value>
   </data>
   <data name="v161mpt_88" xml:space="preserve">
-    <value>Warrior</value>
+    <value>Chiến Binh</value>
   </data>
   <data name="v161mlivept_89" xml:space="preserve">
-    <value>Next Combo - Trực tuyến</value>
+    <value>Combo kế tiếp - Trực tiếp</value>
   </data>
   <data name="v161mlivept_90" xml:space="preserve">
-    <value>Number Wheel - Trực tuyến</value>
+    <value>Number Wheel - Trực tiếp</value>
   </data>
   <data name="isa_v161mpt_mem_88" xml:space="preserve">
-    <value>Warrior</value>
+    <value>Chiến Binh</value>
   </data>
   <data name="isa_v161mlivept_mem_89" xml:space="preserve">
-    <value>Next Combo - Trực tuyến</value>
+    <value>Combo kế tiếp - Trực tiếp</value>
   </data>
   <data name="isa_v161mlivept_mem_90" xml:space="preserve">
-    <value>Number Wheel - Trực tuyến</value>
+    <value>Number Wheel - Trực tiếp</value>
   </data>
   <data name="a_v161mpt_mem_88" xml:space="preserve">
-    <value>Warrior</value>
+    <value>Chiến Binh</value>
   </data>
   <data name="a_v161mlivept_mem_89" xml:space="preserve">
-    <value>Next Combo - Trực tuyến</value>
+    <value>Combo kế tiếp - Trực tiếp</value>
   </data>
   <data name="a_v161mlivept_mem_90" xml:space="preserve">
-    <value>Number Wheel - Trực tuyến</value>
+    <value>Number Wheel - Trực tiếp</value>
   </data>
   <data name="v161apt_88" xml:space="preserve">
-    <value>Warrior</value>
+    <value>Chiến Binh</value>
   </data>
   <data name="v161alivept_89" xml:space="preserve">
-    <value>Next Combo - Trực tuyến</value>
+    <value>Combo kế tiếp - Trực tiếp</value>
   </data>
   <data name="v161alivept_90" xml:space="preserve">
-    <value>Number Wheel - Trực tuyến</value>
+    <value>Number Wheel - Trực tiếp</value>
   </data>
   <data name="a_v161mpt_88" xml:space="preserve">
-    <value>Warrior</value>
+    <value>Chiến Binh</value>
   </data>
   <data name="a_v161mlivept_89" xml:space="preserve">
-    <value>Next Combo - Trực tuyến</value>
+    <value>Combo kế tiếp - Trực tiếp</value>
   </data>
   <data name="a_v161mlivept_90" xml:space="preserve">
-    <value>Number Wheel - Trực tuyến</value>
+    <value>Number Wheel - Trực tiếp</value>
   </data>
   <data name="isa_v161mpt_88" xml:space="preserve">
-    <value>Warrior</value>
+    <value>Chiến Binh</value>
   </data>
   <data name="isa_v161mlivept_89" xml:space="preserve">
-    <value>Next Combo - Trực tuyến</value>
+    <value>Combo kế tiếp - Trực tiếp</value>
   </data>
   <data name="isa_v161mlivept_90" xml:space="preserve">
-    <value>Number Wheel - Trực tuyến</value>
+    <value>Number Wheel - Trực tiếp</value>
   </data>
   <data name="minv161pt_88" xml:space="preserve">
-    <value>PT nhỏ nhất cho Warrior</value>
+    <value>PT nhỏ nhất cho Chiến Binh</value>
   </data>
   <data name="minv161livept_89" xml:space="preserve">
-    <value>PT nhỏ nhất cho  Next Combo</value>
+    <value>PT nhỏ nhất cho  Combo kế tiếp</value>
   </data>
   <data name="minv161livept_90" xml:space="preserve">
     <value>PT nhỏ nhất cho Number Wheel</value>
   </data>
   <data name="maxv161pt_88" xml:space="preserve">
-    <value>PT lớn nhất cho Warrior</value>
+    <value>PT lớn nhất cho Chiến Binh</value>
   </data>
   <data name="maxv161livept_89" xml:space="preserve">
-    <value>PT lớn nhất cho Next Combo</value>
+    <value>PT lớn nhất cho Combo kế tiếp</value>
   </data>
   <data name="maxv161livept_90" xml:space="preserve">
     <value>PT lớn nhất cho Number Wheel</value>
@@ -2647,13 +2647,13 @@
     <value>PT lớn nhất</value>
   </data>
   <data name="isMasterAutoPT" xml:space="preserve">
-    <value>Cho phép Master lấy Auto PT</value>
+    <value>Cho phép Master lấy PT tự động</value>
   </data>
   <data name="isSuperAutoPT" xml:space="preserve">
-    <value>Cho phép Super lấy Auto PT</value>
+    <value>Cho phép Super lấy PT tự động</value>
   </data>
   <data name="lblAutoPTSuper" xml:space="preserve">
-    <value>Auto PT của Super</value>
+    <value>PT tự động của Super</value>
   </data>
   <data name="lblMaxPTMaster" xml:space="preserve">
     <value>PT lớn nhất của Master</value>
@@ -2668,7 +2668,7 @@
     <value>PT lớn nhất của Agent</value>
   </data>
   <data name="masterAutoPT" xml:space="preserve">
-    <value>Auto PT của Master</value>
+    <value>PT tự động của Master</value>
   </data>
   <data name="addFrom" xml:space="preserve">
     <value>Thiết lập từ</value>
@@ -2725,7 +2725,7 @@
     <value>Cập nhật tất cả Người chơi</value>
   </data>
   <data name="newPT" xml:space="preserve">
-    <value>New PT</value>
+    <value>PT mới</value>
   </data>
   <data name="MaximumWin" xml:space="preserve">
     <value>Tiền thắng cược tối đa</value>
