@@ -33,6 +33,7 @@
             return new GetSettingLogsCriteria(
                 logParam.CustId,
                 logParam.Username,
+                logParam.ActorId,
                 ((SettingParam)logParam).ActionTypeId,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),
@@ -52,6 +53,7 @@
 
             return new GetTotalSettingOrStatusLogsCriteria(
                 logParam.CustId,
+                logParam.ActorId,
                 ((SettingParam)logParam).ActionTypeId,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),

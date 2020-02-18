@@ -11,6 +11,8 @@
 
         public int SubAccId { get; set; }
 
+        public int ActorId { get; set; }
+
         public byte RoleId { get; set; }
 
         public DateTime FromDate { get; set; }

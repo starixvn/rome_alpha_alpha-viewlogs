@@ -2718,4 +2718,7 @@
   <data name="Outstanding" xml:space="preserve">
     <value>未払い</value>
   </data>
+  <data name="IsAllAffectedDownlines" xml:space="preserve">
+    <value>Is All Affected Downlines</value>
+  </data>
 </root>

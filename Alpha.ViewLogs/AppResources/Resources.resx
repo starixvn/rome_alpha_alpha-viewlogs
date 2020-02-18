@@ -348,4 +348,7 @@
   <data name="PageAccess_D" xml:space="preserve">
     <value>Bets &amp; Forecast</value>
   </data>
+  <data name="ProblemAccount" xml:space="preserve">
+    <value>Problem Account</value>
+  </data>
 </root>
