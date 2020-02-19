@@ -22,6 +22,7 @@
     {
         private readonly TrackingValueFormatter trackingValueFormatter;
         private readonly TransformService transformService;
+        private const int ProblemAccountActionTypeId = 6;
 
         public SettingHandler(
             LogService logService,
@@ -69,7 +70,7 @@
             var pagingLogs = LogService.GetPagingLogs(logsParam);
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
-            viewModel.LogActionTypes = BuildLogActionTypeViewModels(message);
+            viewModel.LogActionTypes = message.RoleId == 4 ? BuildLogActionTypeViewModels(message) : BuildLogActionTypeViewModels(message).Where(x => x.Id != ProblemAccountActionTypeId);
             viewModel.ActionTypeId = message.ActionTypeId;
 
             TransformLogs(pagingLogs, message, viewModel);
