@@ -315,7 +315,4 @@
   <data name="PageAccess_D" xml:space="preserve">
     <value>ยอดการเล่นและคำนวณผล</value>
   </data>
-  <data name="ProblemAccount" xml:space="preserve">
-    <value>Problem Account</value>
-  </data>
 </root>

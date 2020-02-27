@@ -320,7 +320,4 @@
   <data name="AllTypes" xml:space="preserve">
     <value>Tất cả</value>
   </data>
-  <data name="ProblemAccount" xml:space="preserve">
-    <value>Problem Account</value>
-  </data>
 </root>
