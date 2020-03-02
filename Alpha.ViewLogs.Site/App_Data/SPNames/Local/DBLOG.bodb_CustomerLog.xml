@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Functions SiteId="105" SiteName="View Logs">
   <Function Name="View Logs">
-    <Setting Key="Acc_UserLog_RunSPSel" SpName="Acc_UserLog_RunSPSel_xtest" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet">
+    <Setting Key="Acc_UserLog_RunSPSel" SpName="Acc_UserLog_RunSPSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet">
       <Mapping DataField="LogID" ObjectProperty="LogId" />
       <Mapping DataField="UserID" ObjectProperty="UserId" />
       <Mapping DataField="Username" ObjectProperty="Username" />
@@ -46,10 +46,10 @@
       <Mapping DataField="Browser" ObjectProperty="Browser" />
       <Mapping DataField="Domain" ObjectProperty="Domain" />
     </Setting>
-    <Setting Key="Acc_UserLog_RunSPSelTotalRecords" SpName="Acc_UserLog_RunSPSelTotalRecords_xtest" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="Acc_UserLog_RunSPSelTotalRecords" SpName="Acc_UserLog_RunSPSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
     <Setting Key="Acc_UserLog_CreditSelTotalRecords" SpName="Acc_UserLog_CreditSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
     <Setting Key="Acc_UserLog_LoginSelTotalRecords" SpName="Acc_UserLog_LoginSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
-    <Setting Key="Acc_UserLog_LogActionTypeSel" SpName="Acc_UserLog_LogActionTypeSel_xtest" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0">
+    <Setting Key="Acc_UserLog_LogActionTypeSel" SpName="Acc_UserLog_LogActionTypeSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0">
       <Mapping DataField="ActionTypeID" ObjectProperty="Id" />
       <Mapping DataField="ActionTypeNameEN" ObjectProperty="EnglishName" />
       <Mapping DataField="ActionTypeNameCH" ObjectProperty="ChineseTraditionalName" />
