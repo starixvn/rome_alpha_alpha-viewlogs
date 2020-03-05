@@ -3183,4 +3183,7 @@
   <data name="UMMBv164" xml:space="preserve">
     <value>Update Min-Max Bet Happy 5</value>
   </data>
+  <data name="IsAllAffectedDownlines" xml:space="preserve">
+    <value>Is All Affected Downlines</value>
+  </data>
 </root>

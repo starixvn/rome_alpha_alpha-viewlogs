@@ -3147,4 +3147,7 @@
   <data name="AllbetNormalGames" xml:space="preserve">
     <value>百家樂，輪盤，骰寶，龍虎, 炸金花, 牛牛</value>
   </data>
+  <data name="IsAllAffectedDownlines" xml:space="preserve">
+    <value>是否影響所有下線</value>
+  </data>
 </root>

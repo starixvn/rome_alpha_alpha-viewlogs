@@ -2928,4 +2928,7 @@
   <data name="UMMBv164" xml:space="preserve">
     <value>Cập nhật tiền cược nhỏ nhất / lớn nhất của Happy 5</value>
   </data>
+  <data name="IsAllAffectedDownlines" xml:space="preserve">
+    <value>Ảnh hưởng tất cả cấp dưới</value>
+  </data>
 </root>

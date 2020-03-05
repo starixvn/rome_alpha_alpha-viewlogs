@@ -2745,4 +2745,7 @@
   <data name="NormalAnnouncement" xml:space="preserve">
     <value>일반 공지 사항</value>
   </data>
+  <data name="IsAllAffectedDownlines" xml:space="preserve">
+    <value>Is All Affected Downlines</value>
+  </data>
 </root>

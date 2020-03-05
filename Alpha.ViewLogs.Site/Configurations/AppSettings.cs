@@ -92,17 +92,6 @@
             return ConfigurationManager.AppSettings[configName];
         }
 
-        private static IEnumerable<int> ParseActionIds(string actionIdsString)
-        {
-            if (string.IsNullOrWhiteSpace(actionIdsString))
-            {
-                return Enumerable.Empty<int>();
-            }
-
-            return actionIdsString.Split(',')
-                .Select(t => int.Parse(t));
-        }
-
         private static void InitStatusMappings()
         {
             lock (LockObjectStatusMappings)

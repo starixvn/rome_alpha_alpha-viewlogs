@@ -23,12 +23,12 @@
 
         internal override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
-            return new GetSettingLogsCriteria(0, string.Empty, 0, DateTime.Now, DateTime.Now, false, 0, 0);
+            return new GetSettingLogsCriteria(0, string.Empty, 0, 0, DateTime.Now, DateTime.Now, false, 0, 0);
         }
 
         internal override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
-            return new GetTotalSettingOrStatusLogsCriteria(0, 0, DateTime.Now, DateTime.Now, false);
+            return new GetTotalSettingOrStatusLogsCriteria(0, 0, 0, DateTime.Now, DateTime.Now, false);
         }
     }
 }
