@@ -848,6 +848,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_681.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_680.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_679.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_700_749_Transfer\action_706.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_850_899_WinLossLimit\action_851.xslt">
       <SubType>Designer</SubType>
     </Content>
