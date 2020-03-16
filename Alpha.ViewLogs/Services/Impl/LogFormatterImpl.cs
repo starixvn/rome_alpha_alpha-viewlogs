@@ -84,6 +84,11 @@
                 return TrackingValueResources.AllbetNormalGames;
             }
 
+            if (betType == BetTypeId.SaGaming)
+            {
+                return TrackingValueResources.SAGaming;
+            }
+
             return remotingRef.GetBetType(betType);
         }
 
