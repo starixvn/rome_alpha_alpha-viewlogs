@@ -3,7 +3,7 @@
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
 
-  <xsl:template match="Acc_CustomerUpdAllDayBalTransfer">
+  <xsl:template match="acc_customerupdalldaybaltransfer">
     <table class="tblDesc">
       <tr>
         <td class="colW1">
@@ -12,7 +12,7 @@
         <td class="colW2"  >
           <xsl:value-of select="@custid" />
         </td>
-        
+
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('IsAllDayBalTransfer')" />
         </td>
@@ -21,20 +21,13 @@
         </td>
 
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('userID')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@userid" />
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@language" />
         </td>
-
+      </tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
         </td>
@@ -47,17 +40,14 @@
         <td class="colW2">
           <xsl:value-of select="@ErrMsg" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
-        <td class="colW1"></td><td class="colW2"></td>
       </tr>
+
     </table>
 
 
