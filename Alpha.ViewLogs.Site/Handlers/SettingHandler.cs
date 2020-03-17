@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Web;
-    using Alpha.ViewLogs.Models.Enumerations;
     using AppResources;
     using Fanex.Common;
     using Fanex.Logging.Extensions.Web;
@@ -23,7 +22,6 @@
     {
         private readonly TrackingValueFormatter trackingValueFormatter;
         private readonly TransformService transformService;
-        private const int ProblemAccountActionTypeId = 6;
 
         public SettingHandler(
             LogService logService,
@@ -72,9 +70,7 @@
 
             var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords)
             {
-                LogActionTypes = message.RoleId == UserLevel.Super.Value ?
-                BuildLogActionTypeViewModels(message) :
-                BuildLogActionTypeViewModels(message).Where(x => x.Id != ProblemAccountActionTypeId),
+                LogActionTypes = BuildLogActionTypeViewModels(message),
                 ActionTypeId = message.ActionTypeId
             };
 
