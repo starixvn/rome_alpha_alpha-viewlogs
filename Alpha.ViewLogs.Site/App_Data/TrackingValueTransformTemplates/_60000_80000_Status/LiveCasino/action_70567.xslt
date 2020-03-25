@@ -23,7 +23,7 @@
     
     <xsl:for-each select="productstatus">
       <div class="headerSportTypeDetail">
-        <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
+        <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
       </div>
       <table  class="tblDesc">
         <tr>

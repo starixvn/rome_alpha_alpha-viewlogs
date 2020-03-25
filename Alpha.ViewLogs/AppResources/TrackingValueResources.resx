@@ -3037,7 +3037,7 @@
     <value>Moneyline</value>
   </data>
   <data name="AllbetNormalGames" xml:space="preserve">
-    <value>Allbet</value>
+    <value>Baccarat, Roulette, Sic Bo, Dragon Tiger, Win 3 Cards, Bull Bull</value>
   </data>
   <data name="MaxPerNumber" xml:space="preserve">
     <value>Max Per Number</value>
@@ -3185,9 +3185,6 @@
   </data>
   <data name="IsAllAffectedDownlines" xml:space="preserve">
     <value>Is All Affected Downlines</value>
-  </data>
-  <data name="SAGaming" xml:space="preserve">
-    <value>SA Gaming</value>
   </data>
   <data name="IsAllDayBalTransfer" xml:space="preserve">
     <value>Is All Day Bal Transfer</value>

@@ -2931,10 +2931,4 @@
   <data name="IsAllAffectedDownlines" xml:space="preserve">
     <value>Ảnh hưởng tất cả cấp dưới</value>
   </data>
-  <data name="SAGaming" xml:space="preserve">
-    <value>SA Gaming</value>
-  </data>
-  <data name="AllbetNormalGames" xml:space="preserve">
-    <value>Allbet</value>
-  </data>
 </root>

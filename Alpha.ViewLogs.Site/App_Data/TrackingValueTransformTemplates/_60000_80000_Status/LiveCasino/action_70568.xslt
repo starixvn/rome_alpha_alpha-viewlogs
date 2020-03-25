@@ -23,7 +23,7 @@
     
     <xsl:for-each select="productstatus">
       <div class="headerSportTypeDetail">
-        <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
+        <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
       </div>
       <table  class="tblDesc">
         <tr>
@@ -34,49 +34,17 @@
             <xsl:value-of select="@isdisabled" />
           </td>
           <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('updateAllMasters')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@updateallmasters" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('isDisabledAllMasters')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@disableallmasters" />
-          </td>
-        </tr>
-        <tr>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('updateAllAgents')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@updateallagents" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('isDisabledAllAgents')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@disableallagents" />
-          </td>
-          <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('updateAllMembers')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@updateallmembers" />
           </td>
-        </tr>
-        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('isDisabledAllMembers')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@disableallmembers" />
           </td>
-          <td class="colW1"></td>
-          <td class="colW2"></td>
-          <td class="colW1"></td>
-          <td class="colW2"></td>
         </tr>
       </table>
     </xsl:for-each>        
