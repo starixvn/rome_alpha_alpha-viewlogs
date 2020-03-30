@@ -4,7 +4,7 @@
   <xsl:output method="html" indent="no" />
 
   <xsl:template match="acc_custsetting_stakelevelupd">
-    <table class="tblDesc-ex">
+    <table class="tblDesc">
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
@@ -30,7 +30,7 @@
       <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
     </div>
     <xsl:for-each select="stakelevel">
-      <table  class="tblDesc-ex">
+      <table  class="tblDesc">
         <tr>
           <xsl:choose>
             <xsl:when test="@bettype">
@@ -51,10 +51,14 @@
           <td class="colW2">
             <xsl:value-of select="@stakelevellist" />
           </td>
-          <td class="colW1"></td>
-          <td class="colW2"></td>
-          <td class="colW1"></td>
-          <td class="colW2"></td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td  class="colW2">
+          </td>
         </tr>
       </table>
     </xsl:for-each>

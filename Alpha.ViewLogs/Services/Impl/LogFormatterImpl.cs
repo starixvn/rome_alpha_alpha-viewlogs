@@ -47,7 +47,7 @@
             custStatuses = transformParam.CustStatuses;
             resourcesByBetTypeCacheRef = transformParam.ResourcesByBetTypeCacheRef;
             resourcesByProductCacheRef = transformParam.ResourcesProductCacheRef;
-            
+
             this.isHideNickname = isHideNickname;
         }
 
@@ -55,7 +55,7 @@
         {
             return ipService.FormatIP(ip);
         }
-        
+
         public string FormatCountryCode(string ip, string country)
         {
             return ipService.FormatCountryCode(ip, country);
@@ -191,7 +191,7 @@
         {
             return string.Format("{0} {1}", Resources.Disabled, remotingRef.GetBetTypeName(disableBetType));
         }
-        
+
         public bool IsRNGCasino(int sportType)
         {
             return sportType == SportId.RNGGame ||
