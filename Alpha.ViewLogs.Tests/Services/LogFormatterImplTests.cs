@@ -190,7 +190,7 @@
         public void GetBetTypeName_AllBetNormalGamesBetType_ReturnsBetTypeNameFromResource()
         {
             // Arrange
-            var expectedBetTypeName = "Allbet";
+            var expectedBetTypeName = "Baccarat, Roulette, Sic Bo, Dragon Tiger, Win 3 Cards, Bull Bull";
             var betType = BetTypeId.AllBetNormalGames;
 
             // Act 
