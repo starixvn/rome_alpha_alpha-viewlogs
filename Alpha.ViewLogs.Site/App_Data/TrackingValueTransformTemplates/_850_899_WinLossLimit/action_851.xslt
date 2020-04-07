@@ -28,9 +28,16 @@
     </table>
     <xsl:for-each select="losslimit">
       <div class="headerSportTypeDetail">
-          <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
+        <xsl:choose>
+          <xsl:when test="@productid">
+            <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+          </xsl:otherwise>
+        </xsl:choose>
       </div>
-      <table  class="tblDesc-ex">
+      <table class="tblDesc-ex">
         <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('MaximumLoss')" />
@@ -44,7 +51,7 @@
           <td class="colW2">
             <xsl:value-of select="@isautoreset" />
           </td>
-         <td class="colW1">
+          <td class="colW1">
           </td>
           <td class="colW2">
           </td>
