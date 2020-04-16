@@ -345,6 +345,26 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_31620_31622_ProblemAccount\action_31620.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_31620_31622_ProblemAccount\action_31621.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_31620_31622_ProblemAccount\action_31622.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_60526.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_60527.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_65552.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_65553.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_65554.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_65555.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_70578.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_70579.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_70580.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_70581.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_70582.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_70583.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75604.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75605.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75606.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75607.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75608.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75609.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75610.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75611.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Sabaclub\action_60524.xslt">
       <SubType>Designer</SubType>
     </Content>
