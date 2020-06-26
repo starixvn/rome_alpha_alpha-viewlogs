@@ -40,7 +40,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="AppResources\TrackingValueResources.Designer.cs">
+    <Compile Include="AppResources\TrackingValueResources1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TrackingValueResources.resx</DependentUpon>
