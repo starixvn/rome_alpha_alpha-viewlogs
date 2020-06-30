@@ -677,6 +677,26 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_65007.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_65006.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_60003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_60528.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_60529.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_65556.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_65557.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_65558.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_65559.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_70584.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_70585.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_70586.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_70587.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_70588.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_70589.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75612.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75613.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75614.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75615.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75616.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75617.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75618.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75619.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames\action_60521.xslt">
       <SubType>Designer</SubType>
     </Content>
