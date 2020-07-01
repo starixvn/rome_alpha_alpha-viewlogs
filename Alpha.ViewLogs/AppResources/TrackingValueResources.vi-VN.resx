@@ -2931,4 +2931,13 @@
   <data name="IsAllAffectedDownlines" xml:space="preserve">
     <value>Ảnh hưởng tất cả cấp dưới</value>
   </data>
+  <data name="Account" xml:space="preserve">
+    <value>Tài Khoản</value>
+  </data>
+  <data name="DownlineSubAcc" xml:space="preserve">
+    <value>Tài Khoản Phụ Cấp Dưới</value>
+  </data>
+  <data name="UplineSubAcc" xml:space="preserve">
+    <value>Tài Khoản Phụ Cấp Trên</value>
+  </data>
 </root>

@@ -3147,4 +3147,13 @@
   <data name="IsAllAffectedDownlines" xml:space="preserve">
     <value>เลือกดูทั้งดาวน์ไลน์</value>
   </data>
+  <data name="Account" xml:space="preserve">
+    <value>บัญชี</value>
+  </data>
+  <data name="DownlineSubAcc" xml:space="preserve">
+    <value>บัญชีย่อยดาวน์ไลน์</value>
+  </data>
+  <data name="UplineSubAcc" xml:space="preserve">
+    <value>บัญชีย่อยอัพไลน์</value>
+  </data>
 </root>

@@ -3150,4 +3150,13 @@
   <data name="IsAllAffectedDownlines" xml:space="preserve">
     <value>是否影響所有下線</value>
   </data>
+  <data name="Account" xml:space="preserve">
+    <value>帳戶</value>
+  </data>
+  <data name="DownlineSubAcc" xml:space="preserve">
+    <value>下線次要帳戶</value>
+  </data>
+  <data name="UplineSubAcc" xml:space="preserve">
+    <value>上線次要帳戶</value>
+  </data>
 </root>
