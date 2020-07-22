@@ -354,6 +354,8 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_31620_31622_ProblemAccount\action_31620.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_31620_31622_ProblemAccount\action_31621.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_31620_31622_ProblemAccount\action_31622.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_510.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_509.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_60526.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_60527.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_65552.xslt" />
