@@ -24,26 +24,34 @@
             <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
           </td>
         </tr>
-        <tr>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('Sport')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('IsLive')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@islive" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('lblMinPTMaster')" />
-          </td>
-          <td  class="colW2">
-            <xsl:value-of select="@masterminpt" />
-          </td>
-        </tr>
+        <xsl:for-each select="pt">
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('Sport')" />
+              <xsl:if test="@bettype">
+                - <xsl:value-of select="xslLogFormat:GetLogResource('bettype')" />
+              </xsl:if>
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+              <xsl:if test="@bettype">
+                - <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
+              </xsl:if>
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('IsLive')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@islive" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('lblMinPTMaster')" />
+            </td>
+            <td  class="colW2">
+              <xsl:value-of select="@masterminpt" />
+            </td>
+          </tr>
+        </xsl:for-each>
       </table>
     </xsl:template>
 </xsl:stylesheet>

@@ -24,28 +24,34 @@
             <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
           </td>
         </tr>
-        <tr>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('Sport')" /> - 
-            <xsl:value-of select="xslLogFormat:GetLogResource('bettype')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" /> - 
-            <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('IsLive')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@islive" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetLogResource('MinPTAgent')" />
-          </td>
-          <td  class="colW2">
-            <xsl:value-of select="@agentminpt" />
-          </td>
-        </tr>
+        <xsl:for-each select="pt">
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('Sport')" />
+              <xsl:if test="@bettype">
+                - <xsl:value-of select="xslLogFormat:GetLogResource('bettype')" />
+              </xsl:if>
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+              <xsl:if test="@bettype">
+                - <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
+              </xsl:if>
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('IsLive')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@islive" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('MinPTAgent')" />
+            </td>
+            <td  class="colW2">
+              <xsl:value-of select="@agentminpt" />
+            </td>
+          </tr>
+        </xsl:for-each>
       </table>
     </xsl:template>
 </xsl:stylesheet>
