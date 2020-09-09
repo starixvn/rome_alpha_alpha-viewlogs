@@ -54,71 +54,19 @@
           <xsl:value-of select="@disablenumber" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1501')" />
+          
         </td>
         <td class="colW2">
-          <xsl:value-of select="@disable202_1501" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1503')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disable202_1503" />
+          
         </td>
       </tr>
       <xsl:if test="xslLogFormat:IsVisibleKeno(@hidekeno) = 'True'">
         <tr >
           <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1504')" />
+            <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1501')" />
           </td>
           <td class="colW2">
-            <xsl:value-of select="@disable202_1504" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1505')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@disable202_1505" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1507')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@disable202_1507" />
-          </td>
-        </tr>
-        <tr >
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1508')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@disable202_1508" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1509')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@disable202_1509" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1511')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@disable202_1511" />
-          </td>
-        </tr>
-        <tr >
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1513')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@disable202_1513" />
-          </td>
-          <td class="colW1">
-            <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1514')" />
-          </td>
-          <td class="colW2">
-            <xsl:value-of select="@disable202_1514" />
+            <xsl:value-of select="@disable202_1501" />
           </td>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1515')" />
@@ -126,14 +74,14 @@
           <td class="colW2">
             <xsl:value-of select="@disable202_1515" />
           </td>
-        </tr>
-        <tr >
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1516')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@disable202_1516" />
           </td>
+        </tr>
+        <tr >
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1517')" />
           </td>
@@ -146,14 +94,14 @@
           <td class="colW2">
             <xsl:value-of select="@disable202_1519" />
           </td>
-        </tr>
-        <tr >
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1520')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@disable202_1520" />
           </td>
+        </tr>
+        <tr >
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1521')" />
           </td>
@@ -166,14 +114,14 @@
           <td class="colW2">
             <xsl:value-of select="@disable202_1522" />
           </td>
-        </tr>
-        <tr >
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1524')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@disable202_1524" />
           </td>
+        </tr>
+        <tr >
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1525')" />
           </td>
@@ -186,14 +134,14 @@
           <td class="colW2">
             <xsl:value-of select="@disable202_1526" />
           </td>
-        </tr>
-        <tr >
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1527')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@disable202_1527" />
           </td>
+        </tr>
+        <tr >
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1528')" />
           </td>
@@ -205,6 +153,12 @@
           </td>
           <td class="colW2">
             <xsl:value-of select="@disable202_1529" />
+          </td>
+          <td class="colW1">
+            
+          </td>
+          <td class="colW2">
+            
           </td>
         </tr>
       </xsl:if>
