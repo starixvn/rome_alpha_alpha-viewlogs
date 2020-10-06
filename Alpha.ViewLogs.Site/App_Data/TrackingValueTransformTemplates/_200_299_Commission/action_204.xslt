@@ -3,6 +3,7 @@
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
   <xsl:template match="acc_customerupdsuper_commission">
+    <xsl:if test="xslLogFormat:IsShowMyanmarOdds() != 'True'">
       <table class="tblDesc">
         <tr>
           <td class="colW1">
@@ -46,7 +47,7 @@
             <xsl:value-of select="@discount1x2" />
           </td>
         </tr>
-        <tr>         
+        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
           </td>
@@ -83,6 +84,74 @@
           </td>
         </tr>
       </table>
+    </xsl:if>
+    <xsl:if test="xslLogFormat:IsShowMyanmarOdds() = 'True'">
+      <table class="tblDesc">
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('groupa')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@groupa" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('discount1x2')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@discount1x2" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('discountcs')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@discountcs" />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('DiscountMyanmarOdds')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@discountmyanmarodds" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@language" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
+          </td>
+          <td class="colTitle">
+            <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
+          </td>
+          <td class="colValue">
+            <xsl:value-of select="@errcode" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@errmsg" />
+          </td>
+        </tr>
+      </table>
+    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>

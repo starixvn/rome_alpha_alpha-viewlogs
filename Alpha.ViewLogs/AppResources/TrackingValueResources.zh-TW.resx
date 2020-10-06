@@ -3159,4 +3159,10 @@
   <data name="UplineSubAcc" xml:space="preserve">
     <value>上線次要帳戶</value>
   </data>
+  <data name="DiscountMyanmarOdds" xml:space="preserve">
+    <value>緬甸盤折扣</value>
+  </data>
+  <data name="PlayerDiscountMyanmarOdds" xml:space="preserve">
+    <value>玩家的緬甸盤折扣</value>
+  </data>
 </root>

@@ -20,7 +20,7 @@
         private Dictionary<string, int> resourcesByBetTypeCacheRef;
         private Dictionary<string, int> resourcesByProductCacheRef;
         private bool isHideNickname;
-
+        private bool isShowMyanmarOdds;
         private const int SevenDaysIndex = 8;
 
         public LogFormatterImpl(
@@ -47,7 +47,7 @@
             custStatuses = transformParam.CustStatuses;
             resourcesByBetTypeCacheRef = transformParam.ResourcesByBetTypeCacheRef;
             resourcesByProductCacheRef = transformParam.ResourcesProductCacheRef;
-
+            isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
             this.isHideNickname = isHideNickname;
         }
 
@@ -190,6 +190,11 @@
         public string GetDisabledKenoBetTypeName(string disableBetType)
         {
             return string.Format("{0} {1}", Resources.Disabled, remotingRef.GetBetTypeName(disableBetType));
+        }
+
+        public bool IsShowMyanmarOdds()
+        {
+            return isShowMyanmarOdds;
         }
 
         public bool IsRNGCasino(int sportType)

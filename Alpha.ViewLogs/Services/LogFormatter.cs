@@ -32,6 +32,8 @@
 
         string FormatLanguage(string value);
 
+        bool IsShowMyanmarOdds();
+
         bool IsVisibleKeno(string hideKeno);
 
         string GetDisabledKenoBetTypeName(string disableBetType);

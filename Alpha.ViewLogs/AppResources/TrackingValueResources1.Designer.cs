@@ -2455,6 +2455,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Myanmar Odds Discount.
+        /// </summary>
+        public static string DiscountMyanmarOdds {
+            get {
+                return ResourceManager.GetString("DiscountMyanmarOdds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Domain.
         /// </summary>
         public static string Domain {
@@ -7113,6 +7122,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string playerdiscountcs {
             get {
                 return ResourceManager.GetString("playerdiscountcs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player&apos;s Myanmar Odds Discount.
+        /// </summary>
+        public static string PlayerDiscountMyanmarOdds {
+            get {
+                return ResourceManager.GetString("PlayerDiscountMyanmarOdds", resourceCulture);
             }
         }
         
