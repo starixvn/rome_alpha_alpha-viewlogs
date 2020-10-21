@@ -58,6 +58,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
 
             var toDate = new DateTime(2016, 10, 1);
@@ -82,6 +83,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
 
             var toDate = new DateTime(2016, 10, 2);
@@ -107,6 +109,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
 
             var toDate = new DateTime(2016, 10, 2);
@@ -136,6 +139,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
             indexQuery.ActionTypeId = actionType.ToString();
 
@@ -172,6 +176,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
 
             indexQuery.FromDate = fromDateString;
@@ -200,6 +205,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
 
             indexQuery.PageSize = pageSize;
@@ -229,6 +235,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
 
             indexQuery.PageSize = pageSize;
@@ -257,6 +264,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
 
             indexQuery.PageIndex = pageIndex;
@@ -288,6 +296,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
 
             indexQuery.PageIndex = string.Empty;
@@ -342,6 +351,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
 
             indexQuery.PageIndex = string.Empty;
@@ -400,6 +410,7 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
+                false,
                 ResourcesByProductCacheRef);
 
             indexQuery.PageIndex = string.Empty;

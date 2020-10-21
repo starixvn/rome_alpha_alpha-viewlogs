@@ -3198,4 +3198,10 @@
   <data name="UplineSubAcc" xml:space="preserve">
     <value>Upline Sub Acc</value>
   </data>
+  <data name="DiscountMyanmarOdds" xml:space="preserve">
+    <value>Myanmar Odds Discount</value>
+  </data>
+  <data name="PlayerDiscountMyanmarOdds" xml:space="preserve">
+    <value>Player's Myanmar Odds Discount</value>
+  </data>
 </root>

@@ -3,6 +3,7 @@
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
   <xsl:template match="acc_customerinsmember_com">
+    <xsl:if test="xslLogFormat:IsShowMyanmarOdds() != 'True'">
       <table class="tblDesc">
         <tr>
           <td class="colW1">
@@ -44,8 +45,45 @@
           <td class="colW2">
             <xsl:value-of select="@discount1x2" />
           </td>
-        </tr>     
+        </tr>
       </table>
+    </xsl:if>
+    <xsl:if test="xslLogFormat:IsShowMyanmarOdds() = 'True'">
+      <table class="tblDesc">
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('groupa')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@groupa" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('discount1x2')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@discount1x2" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('discountcs')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@discountcs" />
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('DiscountMyanmarOdds')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@discountmyanmarodds" />
+          </td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
+          <td class="colW1"></td>
+          <td class="colW2"></td>
+        </tr>
+      </table>
+    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>

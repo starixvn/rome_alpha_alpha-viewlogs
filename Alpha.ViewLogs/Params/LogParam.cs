@@ -1,7 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Params
 {
     using System;
-    using System.Collections.Generic;
 
     public class LogParam
     {

@@ -22,6 +22,8 @@
 
         private readonly DateTime limitedDateToShowInfo;
 
+        private readonly Dictionary<int, bool> actionIdVisibilities;
+
         private readonly Dictionary<string, bool> custStatuses;
 
         private readonly Dictionary<string, int> resourcesByBetTypeCacheRef;
@@ -38,6 +40,7 @@
             bool? isShowOldValue,
             Dictionary<string, bool> custStatuses = null,
             Dictionary<string, int> resourcesByBetTypeCacheRef = null,
+            bool? isShowMyanmarOdds = null,
             Dictionary<string, int> resourceByProductCacheRef = null)
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
@@ -56,6 +59,7 @@
 
             RoleId = currentUserSession.RoleId;
             ActorId = currentUserSession.CustId;
+            IsShowMyanmarOdds = isShowMyanmarOdds ?? UserPermission.IsShowMyanmarOdds;
             HasViewLogPermission = currentUserSession.SubPageAccess != null && currentUserSession.SubPageAccess.ViewLog;
             Language = currentUserSession.Language;
             IsInternal = false;
@@ -133,7 +137,30 @@
             }
         }
 
+        public bool IsShowMyanmarOdds { get; }
+
         public DateTime LimitedDateForShowInfo => limitedDateToShowInfo;
+
+        private Dictionary<int, bool> GetActionIdVisibilities()
+        {
+            var visibilities = new Dictionary<int, bool>();
+
+            return visibilities;
+        }
+
+        private void AddActionVisibilities(
+            Dictionary<int, bool> actionVisibilities,
+            IEnumerable<int> actionIds,
+            bool visibility)
+        {
+            foreach (var actionId in actionIds)
+            {
+                if (!actionVisibilities.ContainsKey(actionId))
+                {
+                    actionVisibilities.Add(actionId, visibility);
+                }
+            }
+        }
 
         private Dictionary<string, bool> GetCustStatuses()
         {
