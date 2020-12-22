@@ -22,8 +22,6 @@
 
         private readonly DateTime limitedDateToShowInfo;
 
-        private readonly Dictionary<int, bool> actionIdVisibilities;
-
         private readonly Dictionary<string, bool> custStatuses;
 
         private readonly Dictionary<string, int> resourcesByBetTypeCacheRef;
@@ -140,27 +138,6 @@
         public bool IsShowMyanmarOdds { get; }
 
         public DateTime LimitedDateForShowInfo => limitedDateToShowInfo;
-
-        private Dictionary<int, bool> GetActionIdVisibilities()
-        {
-            var visibilities = new Dictionary<int, bool>();
-
-            return visibilities;
-        }
-
-        private void AddActionVisibilities(
-            Dictionary<int, bool> actionVisibilities,
-            IEnumerable<int> actionIds,
-            bool visibility)
-        {
-            foreach (var actionId in actionIds)
-            {
-                if (!actionVisibilities.ContainsKey(actionId))
-                {
-                    actionVisibilities.Add(actionId, visibility);
-                }
-            }
-        }
 
         private Dictionary<string, bool> GetCustStatuses()
         {
