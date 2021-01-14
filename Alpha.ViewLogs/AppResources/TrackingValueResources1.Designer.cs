@@ -1978,6 +1978,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ref. No..
+        /// </summary>
+        public static string BonusRefNo {
+            get {
+                return ResourceManager.GetString("BonusRefNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browser.
         /// </summary>
         public static string Browser {
@@ -7059,6 +7068,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment Date.
+        /// </summary>
+        public static string PaymentDate {
+            get {
+                return ResourceManager.GetString("PaymentDate", resourceCulture);
             }
         }
         
