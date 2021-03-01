@@ -544,7 +544,7 @@
     <value>เกมสดครึ่งแรก สูงต่ำ</value>
   </data>
   <data name="suspended" xml:space="preserve">
-    <value>การแข่งขันถูกระงับ</value>
+    <value>ถูกระงับ</value>
   </data>
   <data name="maxcredit" xml:space="preserve">
     <value>เครดิตสูงสุด</value>
