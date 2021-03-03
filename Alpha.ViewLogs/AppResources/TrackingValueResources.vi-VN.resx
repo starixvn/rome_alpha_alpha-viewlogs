@@ -2940,4 +2940,10 @@
   <data name="UplineSubAcc" xml:space="preserve">
     <value>Tài Khoản Phụ Cấp Trên</value>
   </data>
+  <data name="BonusRefNo" xml:space="preserve">
+    <value>Ref. No.</value>
+  </data>
+  <data name="PaymentDate" xml:space="preserve">
+    <value>Payment Date</value>
+  </data>
 </root>

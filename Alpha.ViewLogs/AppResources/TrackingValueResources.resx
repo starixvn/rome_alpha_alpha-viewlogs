@@ -3204,4 +3204,10 @@
   <data name="PlayerDiscountMyanmarOdds" xml:space="preserve">
     <value>Player's Myanmar Odds Discount</value>
   </data>
+  <data name="BonusRefNo" xml:space="preserve">
+    <value>Ref. No.</value>
+  </data>
+  <data name="PaymentDate" xml:space="preserve">
+    <value>Payment Date</value>
+  </data>
 </root>
