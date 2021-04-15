@@ -336,6 +336,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\IndirectLoginAccount\action_95021.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\IndirectLoginAccount\action_95020.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\IndirectLoginAccount\action_95019.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1182.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_75036.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_75037.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_75038.xslt" />
