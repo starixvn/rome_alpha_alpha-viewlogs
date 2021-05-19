@@ -376,6 +376,66 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75609.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75610.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_75611.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_60530.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_60531.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_65560.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_65561.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_65562.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_65563.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_70590.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_70591.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_70592.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_70593.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_70594.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_70595.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_75620.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_75621.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_75622.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_75623.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_75624.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_75625.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_75626.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_75627.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Sabaclub\action_60524.xslt">
       <SubType>Designer</SubType>
     </Content>
