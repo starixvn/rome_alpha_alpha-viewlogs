@@ -3163,6 +3163,6 @@
     <value>Payment Date</value>
   </data>
   <data name="Locked" xml:space="preserve">
-    <value>Locked</value>
+    <value>ถูกล็อก</value>
   </data>
 </root>
