@@ -336,6 +336,12 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\IndirectLoginAccount\action_95021.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\IndirectLoginAccount\action_95020.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\IndirectLoginAccount\action_95019.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_65020.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_70029.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_70030.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_75039.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_75040.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_75041.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1182.xslt">
       <SubType>Designer</SubType>
     </Content>
