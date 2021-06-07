@@ -3174,4 +3174,34 @@
   <data name="Locked" xml:space="preserve">
     <value>已锁定</value>
   </data>
+  <data name="SoccerSMP" xml:space="preserve">
+		<value>足球 (SMP)</value>
+	</data>
+  <data name="Soccer2" xml:space="preserve">
+		<value>足球 (2)</value>
+	</data>
+  <data name="Soccer35" xml:space="preserve">
+		<value>足球 (3-5)</value>
+	</data>
+  <data name="Soccer6pSP" xml:space="preserve">
+		<value>足球 (6+)</value>
+	</data>
+  <data name="MixSportsSMP" xml:space="preserve">
+		<value>混合体育 (SMP)</value>
+	</data>
+  <data name="MixSport2" xml:space="preserve">
+		<value>混合体育 (2)</value>
+	</data>
+  <data name="MixSports35" xml:space="preserve">
+		<value>混合体育 (3-5)</value>
+	</data>
+  <data name="MixSports6pSP" xml:space="preserve">
+		<value>混合体育 (6+)</value>
+	</data>
+  <data name="UpdateParlayMaxPayout" xml:space="preserve">
+		<value>更新串关最高派彩</value>
+	</data>
+  <data name="UpdateParlayMaxPayoutIndirectly" xml:space="preserve">
+		<value>更新串关非间接最高派彩</value>
+	</data>
 </root>

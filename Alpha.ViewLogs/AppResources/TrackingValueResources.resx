@@ -3213,4 +3213,34 @@
   <data name="Locked" xml:space="preserve">
     <value>Locked</value>
   </data>
+  <data name="SoccerSMP" xml:space="preserve">
+		<value>Soccer (SMP)</value>
+	</data>
+  <data name="Soccer2" xml:space="preserve">
+		<value>Soccer (2)</value>
+	</data>
+  <data name="Soccer35" xml:space="preserve">
+		<value>Soccer (3-5)</value>
+	</data>
+  <data name="Soccer6pSP" xml:space="preserve">
+		<value>Soccer (6+)</value>
+	</data>
+  <data name="MixSportsSMP" xml:space="preserve">
+		<value>Mixed Sports (SMP)</value>
+	</data>
+  <data name="MixSport2" xml:space="preserve">
+		<value>Mix Sports (2)</value>
+	</data>
+  <data name="MixSports35" xml:space="preserve">
+		<value>Mix Sports (3-5)</value>
+	</data>
+  <data name="MixSports6pSP" xml:space="preserve">
+		<value>Mix Sports (6+)</value>
+	</data>
+  <data name="UpdateParlayMaxPayout" xml:space="preserve">
+		<value>Update Parlay Max Payout</value>
+	</data>
+  <data name="UpdateParlayMaxPayoutIndirectly" xml:space="preserve">
+		<value>Update Parlay Max Payout Indirectly</value>
+	</data>
 </root>
