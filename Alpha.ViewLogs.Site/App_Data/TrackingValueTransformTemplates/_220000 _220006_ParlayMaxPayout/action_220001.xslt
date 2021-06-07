@@ -16,20 +16,26 @@
           <xsl:value-of select="@custid" />
         </td>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('SourceAccount')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@sourceaccount" />
+        </td>
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('SoccerSMP')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@soccersinglematchparlay" />
         </td>
+      </tr>
+
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('Soccer2')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@soccercombo2" />
         </td>
-      </tr>
-
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('Soccer35')" />
         </td>
@@ -42,14 +48,14 @@
         <td class="colW2">
           <xsl:value-of select="@soccercomboover6" />
         </td>
+      </tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MixSportsSMP')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@mixsportssinglematchparlay" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MixSport2')" />
         </td>
@@ -62,14 +68,14 @@
         <td class="colW2">
           <xsl:value-of select="@mixsportscombo35" />
         </td>
+      </tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MixSports6pSP')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@mixsportscomboover6" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
         </td>
@@ -82,10 +88,16 @@
         <td class="colW2">
           <xsl:value-of select="@errmsg" />
         </td>
+      </tr>
+      <tr>
         <td class="colW1">IP</td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
       </tr>
     </table>
   </xsl:template>

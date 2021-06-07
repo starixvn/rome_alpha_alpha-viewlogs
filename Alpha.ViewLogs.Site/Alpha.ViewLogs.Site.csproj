@@ -326,10 +326,22 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_220003.xslt">
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220001.xslt">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_220002.xslt">
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220004.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220006.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220005.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220003.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220002.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\IndirectLoginAccount\action_946.xslt">

@@ -7504,6 +7504,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Source Account.
+        /// </summary>
+        public static string SourceAccount {
+            get {
+                return ResourceManager.GetString("SourceAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Special Announcement.
         /// </summary>
         public static string SpecialAnnouncement {

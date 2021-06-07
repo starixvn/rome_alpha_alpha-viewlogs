@@ -11,8 +11,12 @@
         private static readonly Dictionary<int, Func<string, string>> funcDictionary
             = new Dictionary<int, Func<string, string>>
             {
+                [220001] = TransformParlayMaxPayoutTrackingValue,
                 [220002] = TransformParlayMaxPayoutTrackingValue,
-                [220003] = TransformParlayMaxPayoutTrackingValue
+                [220003] = TransformParlayMaxPayoutTrackingValue,
+                [220004] = TransformParlayMaxPayoutTrackingValue,
+                [220005] = TransformParlayMaxPayoutTrackingValue,
+                [220006] = TransformParlayMaxPayoutTrackingValue
             };
 
         public static string TransformToStandardTrackingValue(int actionId, string trackingValue)
