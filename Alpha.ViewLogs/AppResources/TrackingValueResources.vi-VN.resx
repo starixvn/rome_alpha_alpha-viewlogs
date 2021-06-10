@@ -2947,6 +2947,6 @@
     <value>Payment Date</value>
   </data>
   <data name="Locked" xml:space="preserve">
-    <value>Locked</value>
+    <value>Đã Khoá</value>
   </data>
 </root>
