@@ -11,6 +11,7 @@
         private static readonly Dictionary<int, Func<string, string>> funcDictionary
             = new Dictionary<int, Func<string, string>>
             {
+                [220000] = TransformParlayMaxPayoutTrackingValue,
                 [220001] = TransformParlayMaxPayoutTrackingValue,
                 [220002] = TransformParlayMaxPayoutTrackingValue,
                 [220003] = TransformParlayMaxPayoutTrackingValue,

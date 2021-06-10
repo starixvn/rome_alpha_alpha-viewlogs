@@ -332,6 +332,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220004.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220000.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220006.xslt">
       <SubType>Designer</SubType>
     </Content>
