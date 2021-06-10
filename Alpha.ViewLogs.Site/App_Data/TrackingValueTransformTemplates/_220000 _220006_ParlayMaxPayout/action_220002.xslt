@@ -76,7 +76,9 @@
         <td class="colW2">
           <xsl:value-of select="@errmsg" />
         </td>
-        <td class="colW1">IP</td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
+        </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>

@@ -6505,7 +6505,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mix Sports (6+).
+        ///   Looks up a localized string similar to Mix Sports (6+) &amp; SP.
         /// </summary>
         public static string MixSports6pSP {
             get {
@@ -7486,7 +7486,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Soccer (6+).
+        ///   Looks up a localized string similar to Soccer (6+) &amp; SP.
         /// </summary>
         public static string Soccer6pSP {
             get {

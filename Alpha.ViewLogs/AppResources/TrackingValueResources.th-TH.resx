@@ -3175,7 +3175,7 @@
 		<value>ฟุตบอล (3-5)</value>
 	</data>
   <data name="Soccer6pSP" xml:space="preserve">
-		<value>ฟุตบอล (6+)</value>
+		<value>ฟุตบอล (6+) และ ระบบพาร์เลย์</value>
 	</data>
   <data name="MixSportsSMP" xml:space="preserve">
 		<value>กีฬาบอลชุด (SMP)</value>
@@ -3187,7 +3187,7 @@
 		<value>กีฬาบอลชุด (3-5)</value>
 	</data>
   <data name="MixSports6pSP" xml:space="preserve">
-		<value>กีฬาบอลชุด (6+)</value>
+		<value>กีฬาบอลชุด (6+) และ ระบบพาร์เลย์</value>
 	</data>
   <data name="UpdateParlayMaxPayout" xml:space="preserve">
 		<value>อัปเดตการจ่ายเงินสูงสุดของพาร์เลย์</value>

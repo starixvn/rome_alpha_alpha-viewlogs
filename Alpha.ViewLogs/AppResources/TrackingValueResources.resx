@@ -3226,7 +3226,7 @@
 		<value>Soccer (3-5)</value>
 	</data>
   <data name="Soccer6pSP" xml:space="preserve">
-		<value>Soccer (6+)</value>
+		<value>Soccer (6+) &amp; SP</value>
 	</data>
   <data name="MixSportsSMP" xml:space="preserve">
 		<value>Mixed Sports (SMP)</value>
@@ -3238,7 +3238,7 @@
 		<value>Mix Sports (3-5)</value>
 	</data>
   <data name="MixSports6pSP" xml:space="preserve">
-		<value>Mix Sports (6+)</value>
+		<value>Mix Sports (6+) &amp; SP</value>
 	</data>
   <data name="UpdateParlayMaxPayout" xml:space="preserve">
 		<value>Update Parlay Max Payout</value>

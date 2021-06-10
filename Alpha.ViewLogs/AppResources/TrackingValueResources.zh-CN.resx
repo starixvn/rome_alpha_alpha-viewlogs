@@ -3184,7 +3184,7 @@
 		<value>足球 (3-5)</value>
 	</data>
   <data name="Soccer6pSP" xml:space="preserve">
-		<value>足球 (6+)</value>
+		<value>足球 (6+) &amp; 系统串关</value>
 	</data>
   <data name="MixSportsSMP" xml:space="preserve">
 		<value>混合体育 (SMP)</value>
@@ -3196,7 +3196,7 @@
 		<value>混合体育 (3-5)</value>
 	</data>
   <data name="MixSports6pSP" xml:space="preserve">
-		<value>混合体育 (6+)</value>
+		<value>混合体育 (6+) &amp; 系统串关</value>
 	</data>
   <data name="UpdateParlayMaxPayout" xml:space="preserve">
 		<value>更新串关最高派彩</value>
