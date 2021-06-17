@@ -10,11 +10,19 @@
     <table class="tblDesc">
       <tr>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@subaccname" />
+        </td>
+
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('SourceAccount')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@sourceaccount" />
         </td>
+
         <xsl:choose>
           <xsl:when test="@soccersinglematchparlay">
             <td class="colW1">
@@ -33,7 +41,9 @@
             </td>
           </xsl:otherwise>
         </xsl:choose>
+      </tr>
 
+      <tr>
         <xsl:choose>
           <xsl:when test="@soccercombo2">
             <td class="colW1">
@@ -52,9 +62,7 @@
             </td>
           </xsl:otherwise>
         </xsl:choose>
-      </tr>
 
-      <tr>
         <xsl:choose>
           <xsl:when test="@soccercombo35">
             <td class="colW1">
@@ -92,7 +100,9 @@
             </td>
           </xsl:otherwise>
         </xsl:choose>
+      </tr>
 
+      <tr>
         <xsl:choose>
           <xsl:when test="not(@soccersinglematchparlay) or not(@mixsportssinglematchparlay)">
             <td class="colW1">
@@ -111,9 +121,7 @@
             </td>
           </xsl:otherwise>
         </xsl:choose>
-      </tr>
 
-      <tr>
         <xsl:choose>
           <xsl:when test="not(@soccercombo2) or not(@mixsportscombo2)">
             <td class="colW1">
@@ -151,43 +159,47 @@
             </td>
           </xsl:otherwise>
         </xsl:choose>
-
-        <xsl:choose>
-          <xsl:when test="not(@soccercomboover6) or not(@mixsportscomboover6)">
-            <td class="colW1"></td>
-            <td class="colW2"></td>
-          </xsl:when>
-          <xsl:otherwise>
-            <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('MixSports6pSP')" />
-            </td>
-            <td class="colW2">
-              <xsl:value-of select="@mixsportscomboover6" />
-            </td>
-          </xsl:otherwise>
-        </xsl:choose>
       </tr>
 
       <xsl:if test="@soccersinglematchparlay and @mixsportssinglematchparlay">
         <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MixSports6pSP')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mixsportscomboover6" />
+          </td>
+
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@errcode" />
           </td>
+
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="@errmsg" />
           </td>
+        </tr>
+      </xsl:if>
+
+      <xsl:if test="@soccersinglematchparlay and @mixsportssinglematchparlay">
+        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
           </td>
           <td class="colW2">
             <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
           </td>
+
+          <td class="colW1"></td>
+          <td class="colW2"></td>
+
+          <td class="colW1"></td>
+          <td class="colW2"></td>
         </tr>
       </xsl:if>
     </table>
