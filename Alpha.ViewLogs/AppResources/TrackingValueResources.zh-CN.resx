@@ -3174,6 +3174,9 @@
   <data name="Locked" xml:space="preserve">
     <value>已锁定</value>
   </data>
+  <data name="SourceAccount" xml:space="preserve">
+    <value>账号来源</value>
+  </data>
   <data name="SoccerSMP" xml:space="preserve">
 		<value>足球 (SMP)</value>
 	</data>
