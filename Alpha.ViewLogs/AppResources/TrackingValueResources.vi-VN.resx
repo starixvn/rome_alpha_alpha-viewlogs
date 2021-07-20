@@ -1042,7 +1042,7 @@
     <value>Tên của Agent mới</value>
   </data>
   <data name="closedOnly" xml:space="preserve">
-    <value>Chỉ bị khóa</value>
+    <value>Chỉ bị đóng</value>
   </data>
   <data name="maxlivept_8" xml:space="preserve">
     <value>PT lớn nhất cho trực tiếp hiệp 1 - Tài/Xỉu</value>
@@ -1198,7 +1198,7 @@
     <value>Trực tiếp - Hiệp 1 - Cược Chấp </value>
   </data>
   <data name="closedMultiple" xml:space="preserve">
-    <value>Bị khóa đồng loạt</value>
+    <value>Bị đóng đồng loạt</value>
   </data>
   <data name="isa_v2mpt_3" xml:space="preserve">
     <value>Tài/Xỉu</value>
@@ -1528,7 +1528,7 @@
     <value>Cập nhật người chơi cấp dưới</value>
   </data>
   <data name="closed" xml:space="preserve">
-    <value>Bị khóa</value>
+    <value>Bị đóng</value>
   </data>
   <data name="isa_slivept_8" xml:space="preserve">
     <value>Trực tiếp - Hiệp 1 - Tài/Xỉu</value>
