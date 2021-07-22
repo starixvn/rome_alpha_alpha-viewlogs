@@ -3171,4 +3171,7 @@
   <data name="PaymentDate" xml:space="preserve">
     <value>Payment Date</value>
   </data>
+  <data name="Locked" xml:space="preserve">
+    <value>已锁定</value>
+  </data>
 </root>

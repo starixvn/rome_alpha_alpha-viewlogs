@@ -19,25 +19,21 @@
           <xsl:value-of select="@checkedotp"/>
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('FunctionName')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@functionname" />
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
+      </tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@language)" />
         </td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
         <td class="colW1"></td>
         <td class="colW2"></td>
       </tr>
