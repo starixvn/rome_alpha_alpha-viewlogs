@@ -2,5 +2,9 @@
   {
     "outputFile": "assets/styles/viewlog.css",
     "inputFile": "assets/styles/viewlog.scss"
+  },
+  {
+    "outputFile": "assets/styles/viewlog-dark.css",
+    "inputFile": "assets/styles/viewlog-dark.scss"
   }
 ]

@@ -9,14 +9,11 @@
 
     public class LoginController : ViewLogBaseController
     {
-        private readonly IMediator mediator;
-
         public LoginController(
             IUserSession userSession,
             IMediator mediator,
-            MicroSites microSites) : base(userSession, microSites)
+            MicroSites microSites) : base(userSession, mediator, microSites)
         {
-            this.mediator = mediator;
         }
 
         public ActionResult Index(IndexQuery indexQuery)
@@ -28,9 +25,7 @@
                 : indexQuery.Username;
             indexQuery.IsInternal = UserSession.IsInternal;
 
-            var viewModel = mediator.Send(indexQuery);
-
-            return View(viewModel);
+            return View(indexQuery);
         }
     }
 }
