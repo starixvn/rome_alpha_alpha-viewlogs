@@ -17,18 +17,15 @@
         protected ViewLogBaseController(
             IUserSession userSession,
             IMediator mediator,
-            MicroSites microSites)
+            MicroSites microSites) : base(userSession)
         {
-            UserSession = userSession;
             this.mediator = mediator;
             this.microSites = microSites;
         }
 
-        public IUserSession UserSession { get; set; }
-
         protected ActionResult View<TResponse>(IRequest<TResponse> message)
         {
-            AssignDarkModeViewData(UserSession);
+            AssignDarkModeViewData();
             return View(mediator.Send(message));
         }
 
@@ -36,7 +33,7 @@
         {
             base.OnAuthorization(filterContext);
 
-            if (UserSession.IsSubAcc && !UserSession.SubPageAccess.ViewLog)
+            if (userSession.IsSubAcc && !userSession.SubPageAccess.ViewLog)
             {
                 Response.Redirect(microSites.OldMainPath(AppSettings.AccessDeniedPage));
             }

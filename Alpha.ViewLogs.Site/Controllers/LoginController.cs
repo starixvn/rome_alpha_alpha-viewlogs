@@ -18,12 +18,12 @@
 
         public ActionResult Index(IndexQuery indexQuery)
         {
-            indexQuery.IsAgentViewing = UserSession.RoleId == UserLevel.Agent.Value;
-            indexQuery.PreviousUsername = UserSession.UserName;
+            indexQuery.IsAgentViewing = userSession.RoleId == UserLevel.Agent.Value;
+            indexQuery.PreviousUsername = userSession.UserName;
             indexQuery.Username = indexQuery.IsAgentViewing && string.IsNullOrWhiteSpace(indexQuery.Username)
-                ? UserSession.UserName
+                ? userSession.UserName
                 : indexQuery.Username;
-            indexQuery.IsInternal = UserSession.IsInternal;
+            indexQuery.IsInternal = userSession.IsInternal;
 
             return View(indexQuery);
         }
