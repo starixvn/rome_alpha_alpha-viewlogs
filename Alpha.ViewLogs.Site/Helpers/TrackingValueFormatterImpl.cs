@@ -1,10 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Site.Helpers
 {
+    using Alpha.ViewLogs.Models;
     using System;
     using System.Linq;
     using System.Web;
     using System.Xml;
-    using Alpha.ViewLogs.Models;
     using ViewLogs.Constants;
     using ViewLogs.Helpers;
 
@@ -18,8 +18,8 @@
                 return string.Empty;
             }
 
-            var trackingValue = StandardizeTrackingValue(log.TrackingValue);
-            var trackingValueOld = StandardizeTrackingValue(log.TrackingValueOld);
+            var trackingValue = StandardizeTrackingValue(log.ActionId, log.TrackingValue);
+            var trackingValueOld = StandardizeTrackingValue(log.ActionId, log.TrackingValueOld);
 
             var trackingValueDoc = new XmlDocument();
             trackingValueDoc.InnerXml = trackingValue;
@@ -87,9 +87,9 @@
             return formattedValue;
         }
 
-        private static string StandardizeTrackingValue(string trackingValue)
+        private static string StandardizeTrackingValue(int actionId, string trackingValue)
         {
-            var result = trackingValue;
+            var result = TrackingValueTransformer.TransformToStandardTrackingValue(actionId, trackingValue);
 
             if (!string.IsNullOrWhiteSpace(result))
             {

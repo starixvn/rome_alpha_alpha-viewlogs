@@ -2949,4 +2949,37 @@
   <data name="Locked" xml:space="preserve">
     <value>Đã Khoá</value>
   </data>
+  <data name="Soccer2" xml:space="preserve">
+    <value>Bóng Đá (2)</value>
+  </data>
+  <data name="Soccer35" xml:space="preserve">
+    <value>Bóng Đá (3-5)</value>
+  </data>
+  <data name="Soccer6pSP" xml:space="preserve">
+    <value>Bóng Đá (6+) &amp; SP</value>
+  </data>
+  <data name="SourceAccount" xml:space="preserve">
+    <value>Tài Khoản Nguồn</value>
+  </data>
+  <data name="SoccerSMP" xml:space="preserve">
+    <value>Bóng Đá (SMP)</value>
+  </data>
+  <data name="MixSport2" xml:space="preserve">
+    <value>Thể Thao Tổng Hợp (2)</value>
+  </data>
+  <data name="MixSports35" xml:space="preserve">
+    <value>Thể Thao Tổng Hợp (3-5)</value>
+  </data>
+  <data name="MixSports6pSP" xml:space="preserve">
+    <value>Thể Thao Tổng Hợp (6+) &amp; SP</value>
+  </data>
+  <data name="MixSportsSMP" xml:space="preserve">
+    <value>Thể Thao Tổng Hợp (SMP)</value>
+  </data>
+  <data name="UpdateParlayMaxPayout" xml:space="preserve">
+    <value>Cập Nhật Thanh Toán Tối Đa Cho Cược Xiên</value>
+  </data>
+  <data name="UpdateParlayMaxPayoutIndirectly" xml:space="preserve">
+    <value>Cập Nhật Gián Tiếp Thanh Toán Tối Đa Cho Cược Xiên</value>
+  </data>
 </root>

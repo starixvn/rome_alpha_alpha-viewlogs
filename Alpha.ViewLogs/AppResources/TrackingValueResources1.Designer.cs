@@ -6478,11 +6478,47 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mix Sports (2).
+        /// </summary>
+        public static string MixSport2 {
+            get {
+                return ResourceManager.GetString("MixSport2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mix Sports Parlay.
         /// </summary>
         public static string mixsports {
             get {
                 return ResourceManager.GetString("mixsports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mix Sports (3-5).
+        /// </summary>
+        public static string MixSports35 {
+            get {
+                return ResourceManager.GetString("MixSports35", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mix Sports (6+) &amp; SP.
+        /// </summary>
+        public static string MixSports6pSP {
+            get {
+                return ResourceManager.GetString("MixSports6pSP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mixed Sports (SMP).
+        /// </summary>
+        public static string MixSportsSMP {
+            get {
+                return ResourceManager.GetString("MixSportsSMP", resourceCulture);
             }
         }
         
@@ -7432,6 +7468,51 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Soccer (2).
+        /// </summary>
+        public static string Soccer2 {
+            get {
+                return ResourceManager.GetString("Soccer2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Soccer (3-5).
+        /// </summary>
+        public static string Soccer35 {
+            get {
+                return ResourceManager.GetString("Soccer35", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Soccer (6+) &amp; SP.
+        /// </summary>
+        public static string Soccer6pSP {
+            get {
+                return ResourceManager.GetString("Soccer6pSP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Soccer (SMP).
+        /// </summary>
+        public static string SoccerSMP {
+            get {
+                return ResourceManager.GetString("SoccerSMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source Account.
+        /// </summary>
+        public static string SourceAccount {
+            get {
+                return ResourceManager.GetString("SourceAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Special Announcement.
         /// </summary>
         public static string SpecialAnnouncement {
@@ -8013,6 +8094,24 @@ namespace Alpha.ViewLogs.AppResources {
         public static string updatemultiple {
             get {
                 return ResourceManager.GetString("updatemultiple", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Parlay Max Payout.
+        /// </summary>
+        public static string UpdateParlayMaxPayout {
+            get {
+                return ResourceManager.GetString("UpdateParlayMaxPayout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Parlay Max Payout Indirectly.
+        /// </summary>
+        public static string UpdateParlayMaxPayoutIndirectly {
+            get {
+                return ResourceManager.GetString("UpdateParlayMaxPayoutIndirectly", resourceCulture);
             }
         }
         

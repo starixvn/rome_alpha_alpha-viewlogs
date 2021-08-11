@@ -326,6 +326,27 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220001.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220004.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220000.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220006.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220005.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220003.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220002.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\IndirectLoginAccount\action_946.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -1462,6 +1483,7 @@
     <Compile Include="Helpers\TrackingValueFormatter.cs" />
     <Compile Include="Helpers\TrackingValueFormatterImpl.cs" />
     <Compile Include="Helpers\StaticResources\BaseStaticResources.cs" />
+    <Compile Include="Helpers\TrackingValueTransformer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\LogQuery.cs" />
     <Compile Include="Requests\Credit\IndexQuery.cs" />
