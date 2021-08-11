@@ -6730,6 +6730,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Max Payout Per Match.
+        /// </summary>
+        public static string MPPM {
+            get {
+                return ResourceManager.GetString("MPPM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Handicap.
         /// </summary>
         public static string mpt_1 {
