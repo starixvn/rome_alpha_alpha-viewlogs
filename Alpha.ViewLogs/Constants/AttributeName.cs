@@ -18,5 +18,14 @@
             BetType,
             SportType
         };
+
+        public static Dictionary<string, string> ShortenedAttributes => new Dictionary<string, string>
+        {
+            [MinBet] = "minb",
+            [MaxBet] = "maxb",
+            [MaxPerMatch] = "mpm",
+            [MaxPayoutPerMatch] = "mppm",
+            [MaxPerNumber] = "mpb"
+        };
     }
 }

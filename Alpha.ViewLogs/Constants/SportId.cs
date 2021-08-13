@@ -8,7 +8,7 @@
         public const int RNGMiniGame = 209;
         public const int RNGMobile = 210;
 
-        public const int MixSportsParlay = 99;
-        public const int SoccerParlay = 1;
+        public const int MixSports = 99;
+        public const int Soccer = 1;
     }
 }
