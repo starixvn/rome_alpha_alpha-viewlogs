@@ -2982,4 +2982,10 @@
   <data name="UpdateParlayMaxPayoutIndirectly" xml:space="preserve">
     <value>Cập Nhật Gián Tiếp Thanh Toán Tối Đa Cho Cược Xiên</value>
   </data>
+  <data name="BetLists" xml:space="preserve">
+    <value>Danh sách cược</value>
+  </data>
+  <data name="Statement" xml:space="preserve">
+    <value>Sao kê</value>
+  </data>
 </root>

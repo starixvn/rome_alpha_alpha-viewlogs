@@ -1951,6 +1951,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet Lists.
+        /// </summary>
+        public static string BetLists {
+            get {
+                return ResourceManager.GetString("BetLists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bet Type.
         /// </summary>
         public static string bettype {
@@ -7635,6 +7644,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string state {
             get {
                 return ResourceManager.GetString("state", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Statement.
+        /// </summary>
+        public static string Statement {
+            get {
+                return ResourceManager.GetString("Statement", resourceCulture);
             }
         }
         
