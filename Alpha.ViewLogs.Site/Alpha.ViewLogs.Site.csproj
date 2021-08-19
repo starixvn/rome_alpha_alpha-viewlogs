@@ -50,8 +50,8 @@
     <CodeAnalysisRuleSet>Alpha.ViewLogs.Site.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Alpha.Auth, Version=3.0.2.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Alpha.Auth.3.0.2.6\lib\net461\Alpha.Auth.dll</HintPath>
+    <Reference Include="Alpha.Auth, Version=3.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alpha.Auth.3.0.3-pc01\lib\net461\Alpha.Auth.dll</HintPath>
     </Reference>
     <Reference Include="Alpha.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Alpha.Logging.1.0.1\lib\net461\Alpha.Logging.dll</HintPath>
@@ -63,8 +63,8 @@
     <Reference Include="Alpha.Utilities.IP, Version=1.0.3.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Alpha.Utilities.IP.1.0.3.1\lib\net461\Alpha.Utilities.IP.dll</HintPath>
     </Reference>
-    <Reference Include="Alpha.Web, Version=1.0.7.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Alpha.Web.1.0.7.2\lib\net461\Alpha.Web.dll</HintPath>
+    <Reference Include="Alpha.Web, Version=1.0.8.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alpha.Web.1.0.8.7-pc06\lib\net461\Alpha.Web.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
@@ -218,8 +218,8 @@
       <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.3.1.3\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.5.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.5.3\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.5.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.5.8-pc03\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.3.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.3.3\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
@@ -345,6 +345,12 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1184.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1183.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220001.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -1214,6 +1220,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_948.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_953.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_952.xslt">
       <SubType>Designer</SubType>
     </Content>

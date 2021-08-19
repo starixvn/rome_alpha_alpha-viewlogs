@@ -3246,6 +3246,9 @@
   <data name="UpdateParlayMaxPayoutIndirectly" xml:space="preserve">
     <value>Update Parlay Max Payout Indirectly</value>
   </data>
+  <data name="protected" xml:space="preserve">
+    <value>Protected</value>
+     </data>
   <data name="BetLists" xml:space="preserve">
     <value>Bet Lists</value>
   </data>
