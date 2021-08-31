@@ -6,6 +6,12 @@
     <table class="tblDesc-ex">
       <tr>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('SourceAccount')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@sourceaccount" />
+        </td>
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subAccName')" />
         </td>
         <td class="colW2">
@@ -17,12 +23,18 @@
         <td  class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
+      </tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
         </td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
       </tr>
     </table>
     <xsl:for-each select="betlimit">

@@ -37,6 +37,12 @@
       </tr>
       <tr>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('SourceAccount')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@sourceaccount" />
+        </td>
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
         </td>
         <td class="colW2">
@@ -48,8 +54,6 @@
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <td class="colW1"></td>
-        <td class="colW2"></td>
       </tr>
       <tr>
         <td class="colW1">

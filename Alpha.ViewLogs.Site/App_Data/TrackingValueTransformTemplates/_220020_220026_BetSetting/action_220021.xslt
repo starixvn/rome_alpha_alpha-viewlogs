@@ -473,6 +473,12 @@
       </tr>
       <tr>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('SourceAccount')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@sourceaccount" />
+        </td>
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
         </td>
         <td class="colW2">
@@ -483,10 +489,6 @@
         </td>
         <td class="colW2">
           <xsl:value-of select="@language" />
-        </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
         </td>
       </tr>
       <tr>
