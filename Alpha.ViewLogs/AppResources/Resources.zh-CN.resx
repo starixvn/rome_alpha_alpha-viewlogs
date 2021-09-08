@@ -315,4 +315,7 @@
   <data name="PageAccess_D" xml:space="preserve">
     <value>投注 &amp; 预测</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>编号.</value>
+  </data>
 </root>

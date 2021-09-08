@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
     using System;
+    using Alpha.ViewLogs.Models;
     using Criteria.Credit;
     using DataAccesses;
     using Fanex.Data.Repository;
@@ -19,6 +20,26 @@
         {
         }
 
+        public override PagingLogs<Log> GetPagingLogs(LogParam logParam)
+        {
+            var pagingLogs = new PagingLogs<Log>();
+            if (logParam == null)
+            {
+                return pagingLogs;
+            }
+
+            pagingLogs.Logs = GetLogs(logParam);
+            pagingLogs.TotalRecords = GetTotalLogs(logParam);
+
+            foreach (var log in pagingLogs.Logs)
+            {
+                var isHideNickname = IsHideNickName(IsSubAccFromLog(log), log.RoleId, log.CustId, SubAccNameFromLog(log));
+                log.IsHideNickname = isHideNickname;
+            }
+
+            return pagingLogs;
+        }
+
         internal override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
             if (logParam == null)
@@ -29,11 +50,11 @@
             var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
 
             return new GetCreditLogsCriteria(
-                logParam.CustId,
+                logParam.ActorId,
+                logParam.RoleId,
                 logParam.Username,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),                
-                logParam.IsInternal,
                 logParam.PageIndex,
                 logParam.PageSize);
         }
@@ -48,10 +69,11 @@
             var fromDate = GetGreaterDate(logParam.FromDate, logParam.LimitedDateToShowInfo);
 
             return new GetTotalCreditLogsCriteria(
-                logParam.CustId,
+                logParam.ActorId,
+                logParam.RoleId,
+                logParam.Username,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
-                DateTimeHelper.GetEndingOfDate(logParam.ToDate),
-                logParam.IsInternal);
+                DateTimeHelper.GetEndingOfDate(logParam.ToDate));
         }
     }
 }

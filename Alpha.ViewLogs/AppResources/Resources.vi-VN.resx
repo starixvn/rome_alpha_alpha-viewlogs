@@ -320,4 +320,7 @@
   <data name="AllTypes" xml:space="preserve">
     <value>Tất cả</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
 </root>

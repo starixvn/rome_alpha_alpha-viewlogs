@@ -112,7 +112,7 @@
                 };
         }
 
-        public PagingLogs<Log> GetPagingLogs(LogParam logParam)
+        public virtual PagingLogs<Log> GetPagingLogs(LogParam logParam)
         {
             var pagingLogs = new PagingLogs<Log>();
             if (logParam == null)
@@ -151,14 +151,14 @@
             return dynamicRepository.Fetch<Log>(criteria);
         }
 
-        private int GetTotalLogs(LogParam logParam)
+        protected int GetTotalLogs(LogParam logParam)
         {
             var criteria = CreateGetTotalLogsCriteria(logParam);
 
             return LogDataAccess.GetTotalRecordsOfLogs(criteria);
         }
 
-        private bool IsHideNickName(bool isSubAccount, int roleId, int custId, string subUsername)
+        protected bool IsHideNickName(bool isSubAccount, int roleId, int custId, string subUsername)
             => IsIndirect(roleId) 
                 || IsSubAccViewMainAcc(isSubAccount, custId) 
                 || IsDirectUplineViewSubAcc(isSubAccount, roleId)
@@ -176,12 +176,12 @@
         private bool IsSubAccViewOtherSubAcc(bool isSubAccount, string subUsername)
             => session.IsSubAcc && isSubAccount && !session.SubUserName.Equals(subUsername, StringComparison.OrdinalIgnoreCase);
 
-        private static bool IsSubAccFromLog(Log log)
+        protected static bool IsSubAccFromLog(Log log)
             => Enum.GetValues(typeof(NicknameActions)).Cast<int>().Any(actionId => actionId == log.ActionId) 
                 && (new Regex($"(?:SubAccName=)(?<paramValue>[^&|^\\s]+)").IsMatch(log.TrackingValue)
                     || new Regex($"(?:SubAccount=)(?<paramValue>[^&|^\\s]+)").IsMatch(log.TrackingValue));
 
-        private static string SubAccNameFromLog(Log log)
+        protected static string SubAccNameFromLog(Log log)
         {
             var subAccName = new Regex("(?:SubAccName=)(?<paramValue>[^&|^\\s]+)").Match(log.TrackingValue ?? string.Empty).Groups[1].Value;
 

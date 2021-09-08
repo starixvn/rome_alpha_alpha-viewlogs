@@ -27,6 +27,8 @@
             <table id="DataLog" class="width-100per tblRpt tblRpt-bordered">
                 <thead>
                     <tr class="RptHeader">
+                        <th>@Resources.No</th>
+                        <th>@Resources.Username</th>
                         <th>@Resources.Action</th>
                         <th>@Resources.Details</th>
                         <th>@Resources.IP</th>
@@ -36,13 +38,24 @@
                 <tbody>
                     @if (Model.HasLogs)
                     {
+                        var index = 1;
                         foreach (var logItem in Model.LogItems)
                         {
                             <tr>
+                                <td align="center">
+                                    @(Model.FirstRowNumber + index++)
+                                </td>
+                                <td align="left">
+                                    @logItem.CustName
+                                </td>
                                 <td class="col-action">
                                     <span class="action-name">@Html.Raw(logItem.ActionName)</span>
                                     <br />
-                                    <span class="username">@Html.Raw(Resources.By + " " + logItem.Username)</span>
+                                    @if (LogViewModel.ShowEditedBy(logItem.ActionId))
+                                    {
+                                        <span class="username">@Html.Raw(Resources.By + " " + logItem.Username)</span>
+                                    }
+
                                     <span class="log-date">@Html.Raw(logItem.LogDate)</span>
                                     <br />
                                     <span class="logid">#@logItem.LogId</span>

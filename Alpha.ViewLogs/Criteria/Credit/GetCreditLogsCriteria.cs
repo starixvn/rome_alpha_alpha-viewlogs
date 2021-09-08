@@ -6,24 +6,26 @@
     public class GetCreditLogsCriteria : CriteriaBase
     {
         public GetCreditLogsCriteria(
-            int custId,
+            int userId,
+            int userRoleId,
             string custName,
             DateTime fromDate,
             DateTime toDate,
-            bool isInternal,
             int pageIndex,
             int pageSize)
         {
-            CustId = custId;
-            CustName = custName;
+            UserId = userId;
+            UserRoleId = userRoleId;
+            CustName = custName ?? string.Empty;
             FromDate = fromDate;
             ToDate = toDate;
-            IsInternal = isInternal;
             PageSize = pageSize;
             PageIndex = pageIndex;
         }
 
-        public int CustId { get; }
+        public int UserId { get; }
+
+        public int UserRoleId { get; }
 
         public string CustName { get; }
 
@@ -31,20 +33,18 @@
 
         public DateTime ToDate { get; }
 
-        public bool IsInternal { get; }
-
         public int PageIndex { get; }
 
         public int PageSize { get; }
 
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_CreditSel";
+            return "Age_UserLog_CreditSel";
         }
 
         public override bool IsValid()
         {
-            return FromDate <= ToDate && CustId > 0;
+            return FromDate <= ToDate && UserId > 0 && UserRoleId > 0;
         }
     }
 }

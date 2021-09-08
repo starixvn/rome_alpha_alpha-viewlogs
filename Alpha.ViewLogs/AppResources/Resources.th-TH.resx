@@ -315,4 +315,7 @@
   <data name="PageAccess_D" xml:space="preserve">
     <value>ยอดการเล่นและคำนวณผล</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>เลขที่.</value>
+  </data>
 </root>
