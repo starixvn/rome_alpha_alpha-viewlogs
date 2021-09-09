@@ -55,7 +55,7 @@
             <xsl:value-of select="@mpmv1mp" />
           </td>
         </tr>
-        <!--<tr>
+        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv1MP')" />
           </td>
@@ -70,7 +70,7 @@
           </td>
           <td class="colW2">
           </td>
-        </tr>-->
+        </tr>
         <tr>
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MinBv2')" /></td>
           <td class="colW2">

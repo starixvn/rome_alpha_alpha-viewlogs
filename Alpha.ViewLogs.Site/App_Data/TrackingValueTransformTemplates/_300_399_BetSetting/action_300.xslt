@@ -6,10 +6,6 @@
   <xsl:template match="acc_customerinsmember_com">
     <table class="tblDesc">
       <tr>
-        <!--<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('custid')" /></td>
-                <td class="colW2">
-                    <xsl:value-of select="@custid" />
-                </td>-->
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MinB')" />
         </td>
@@ -66,7 +62,7 @@
           <xsl:value-of select="@mpmv1mp" />
         </td>
       </tr>
-      <!--<tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv1MP')" />
         </td>
@@ -81,7 +77,7 @@
         </td>
         <td class="colW2">
         </td>
-      </tr>-->
+      </tr>
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MinBv2')" />
