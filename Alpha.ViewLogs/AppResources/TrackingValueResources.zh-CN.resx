@@ -3246,4 +3246,28 @@
   <data name="MPPMv99MP" xml:space="preserve">
     <value>混合体育过关-单场最高派彩</value>
   </data>
+  <data name="MaxBv1Saba" xml:space="preserve">
+    <value>Saba Soccer-最高投注</value>
+  </data>
+  <data name="MinBv1Saba" xml:space="preserve">
+    <value>Saba Soccer-最低投注</value>
+  </data>
+  <data name="MPMv1Saba" xml:space="preserve">
+    <value>Saba Soccer-最高单场</value>
+  </data>
+  <data name="MPPMv1Saba" xml:space="preserve">
+    <value>Saba Soccer-Max Payout Per Match</value>
+  </data>
+  <data name="MaxBv2Saba" xml:space="preserve">
+    <value>Saba Basketball-最高投注</value>
+  </data>
+  <data name="MinBv2Saba" xml:space="preserve">
+    <value>Saba Basketball-最低投注</value>
+  </data>
+  <data name="MPMv2Saba" xml:space="preserve">
+    <value>Saba Basketball-最高单场</value>
+  </data>
+  <data name="MPPMv2Saba" xml:space="preserve">
+    <value>Saba Basketball-Max Payout Per Match</value>
+  </data>
 </root>

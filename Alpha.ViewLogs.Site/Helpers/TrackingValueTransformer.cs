@@ -82,6 +82,16 @@
                 return string.Concat(shortenedAttributeName, "v", sportType, "mp");
             }
 
+            if (sportType == SportId.SabaBasketball)
+            {
+                return string.Concat(shortenedAttributeName, "v2saba");
+            }
+
+            if (sportType == SportId.SabaSoccer)
+            {
+                return string.Concat(shortenedAttributeName, "v1saba");
+            }
+
             if (sportType != SportId.Soccer)
             {
                 return string.Concat(shortenedAttributeName, "v", sportType);
