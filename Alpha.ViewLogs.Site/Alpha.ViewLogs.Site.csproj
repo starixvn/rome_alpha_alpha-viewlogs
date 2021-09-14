@@ -326,9 +326,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_Data\SPNames\Internal\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\Internal\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Internal\DBLOG.bodb_CustomerLog.xml" />
