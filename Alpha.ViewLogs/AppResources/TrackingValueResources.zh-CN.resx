@@ -3214,33 +3214,33 @@
     <value>账目</value>
   </data>
   <data name="MPPM" xml:space="preserve">
-    <value>足球-Max Payout Per Match</value>
+    <value>足球-单场最高派彩</value>
   </data>
   <data name="MPPMv1MP" xml:space="preserve">
-    <value>足球混合过关-Max Payout Per Match</value>
+    <value>足球混合过关-单场最高派彩</value>
   </data>
   <data name="MPPMv2" xml:space="preserve">
-    <value>篮球-Max Payout Per Match</value>
+    <value>篮球-单场最高派彩</value>
   </data>
   <data name="MPPMv3" xml:space="preserve">
-    <value>美式足球-Max Payout Per Match</value>
+    <value>美式足球-单场最高派彩</value>
   </data>
   <data name="MPPMv5" xml:space="preserve">
-    <value>网球-Max Payout Per Match</value>
+    <value>网球-单场最高派彩</value>
   </data>
   <data name="MPPMv8" xml:space="preserve">
-    <value>棒球-Max Payout Per Match</value>
+    <value>棒球-单场最高派彩</value>
   </data>
   <data name="MPPMv10" xml:space="preserve">
-    <value>高尔夫-Max Payout Per Match</value>
+    <value>高尔夫-单场最高派彩</value>
   </data>
   <data name="MPPMv11" xml:space="preserve">
-    <value>赛车-Max Payout Per Match</value>
+    <value>赛车-单场最高派彩</value>
   </data>
   <data name="MPPMv99" xml:space="preserve">
-    <value>其他-Max Payout Per Match</value>
+    <value>其他-单场最高派彩</value>
   </data>
   <data name="MPPMv99MP" xml:space="preserve">
-    <value>混合体育过关-Max Payout Per Match</value>
+    <value>混合体育过关-单场最高派彩</value>
   </data>
 </root>

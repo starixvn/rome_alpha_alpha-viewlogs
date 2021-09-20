@@ -3205,33 +3205,33 @@
     <value>บัญชี</value>
   </data>
   <data name="MPPM" xml:space="preserve">
-    <value>ซ๊อกเกอร์ - Max Payout Per Match</value>
+    <value>ซ๊อกเกอร์ - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
   <data name="MPPMv1MP" xml:space="preserve">
-    <value>บอลชุดฟุตบอล - Max Payout Per Match</value>
+    <value>บอลชุดฟุตบอล - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
   <data name="MPPMv2" xml:space="preserve">
-    <value>บาสเกตบอล - Max Payout Per Match</value>
+    <value>บาสเกตบอล - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
   <data name="MPPMv3" xml:space="preserve">
-    <value>ฟุตบอล - Max Payout Per Match</value>
+    <value>ฟุตบอล - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
   <data name="MPPMv5" xml:space="preserve">
-    <value>เทนนิส - Max Payout Per Match</value>
+    <value>เทนนิส - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
   <data name="MPPMv8" xml:space="preserve">
-    <value>เบสบอล - Max Payout Per Match</value>
+    <value>เบสบอล - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
   <data name="MPPMv10" xml:space="preserve">
-    <value>กอล์ฟ - Max Payout Per Match</value>
+    <value>กอล์ฟ - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
   <data name="MPPMv11" xml:space="preserve">
-    <value>มอเตอร์สปอร์ต - Max Payout Per Match</value>
+    <value>มอเตอร์สปอร์ต - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
   <data name="MPPMv99" xml:space="preserve">
-    <value>กีฬาอื่นๆ - Max Payout Per Match</value>
+    <value>กีฬาอื่นๆ - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
   <data name="MPPMv99MP" xml:space="preserve">
-    <value>กีฬาบอลชุด - Max Payout Per Match</value>
+    <value>กีฬาบอลชุด - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
 </root>
