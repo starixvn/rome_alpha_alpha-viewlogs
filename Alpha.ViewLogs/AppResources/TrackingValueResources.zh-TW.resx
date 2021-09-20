@@ -3178,33 +3178,39 @@
     <value>賬號來源</value>
   </data>
   <data name="SoccerSMP" xml:space="preserve">
-		<value>足球 (SMP)</value>
-	</data>
+    <value>足球 (SMP)</value>
+  </data>
   <data name="Soccer2" xml:space="preserve">
-		<value>足球 (2)</value>
-	</data>
+    <value>足球 (2)</value>
+  </data>
   <data name="Soccer35" xml:space="preserve">
-		<value>足球 (3-5)</value>
-	</data>
+    <value>足球 (3-5)</value>
+  </data>
   <data name="Soccer6pSP" xml:space="preserve">
-		<value>足球 (6+) &amp; 系統串關</value>
-	</data>
+    <value>足球 (6+) &amp; 系統串關</value>
+  </data>
   <data name="MixSportsSMP" xml:space="preserve">
-		<value>混合體育 (SMP)</value>
-	</data>
+    <value>混合體育 (SMP)</value>
+  </data>
   <data name="MixSport2" xml:space="preserve">
-		<value>混合體育(2)</value>
-	</data>
+    <value>混合體育(2)</value>
+  </data>
   <data name="MixSports35" xml:space="preserve">
-		<value>混合體育 (3-5)</value>
-	</data>
+    <value>混合體育 (3-5)</value>
+  </data>
   <data name="MixSports6pSP" xml:space="preserve">
-		<value>混合體育 (6+) &amp; 系統串關</value>
-	</data>
+    <value>混合體育 (6+) &amp; 系統串關</value>
+  </data>
   <data name="UpdateParlayMaxPayout" xml:space="preserve">
-		<value>更新串關最高派彩</value>
-	</data>
+    <value>更新串關最高派彩</value>
+  </data>
   <data name="UpdateParlayMaxPayoutIndirectly" xml:space="preserve">
-		<value>更新串關非間接最高派彩</value>
-	</data>
+    <value>更新串關非間接最高派彩</value>
+  </data>
+  <data name="BetLists" xml:space="preserve">
+    <value>投注历史</value>
+  </data>
+  <data name="Statement" xml:space="preserve">
+    <value>帳目</value>
+  </data>
 </root>
