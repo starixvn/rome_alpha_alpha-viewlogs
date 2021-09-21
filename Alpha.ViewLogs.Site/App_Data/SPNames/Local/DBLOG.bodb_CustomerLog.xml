@@ -59,7 +59,7 @@
       <Mapping DataField="ActionTypeNameTH" ObjectProperty="ThaiName" />
       <Mapping DataField="ActionTypeNameKO" ObjectProperty="KoreanName" />
     </Setting>
-    <Setting Key="Acc_UserLog_LogActionSel" SpName="Acc_UserLog_LogActionSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0">
+    <Setting Key="Acc_UserLog_LogActionSel" SpName="Acc_UserLog_LogActionSel_UAT2" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0">
       <Mapping DataField="ActionID" ObjectProperty="Id" />
       <Mapping DataField="ActionTypeID" ObjectProperty="ActionTypeId" />
       <Mapping DataField="ActionNameEN" ObjectProperty="EnglishName" />
