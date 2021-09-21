@@ -416,7 +416,7 @@
             </tr>
           <tr>
             <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('MPPM')" />
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv2')" />
             </td>
             <td class="colW2">
               <xsl:value-of select="@mppmv2" />
@@ -447,7 +447,7 @@
             </tr>
           <tr>
             <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('MPPM')" />
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv3')" />
             </td>
             <td class="colW2">
               <xsl:value-of select="@mppmv3" />
@@ -478,7 +478,7 @@
             </tr>
           <tr>
             <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('MPPM')" />
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv5')" />
             </td>
             <td class="colW2">
               <xsl:value-of select="@mppmv5" />
@@ -509,7 +509,7 @@
             </tr>
           <tr>
             <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('MPPM')" />
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv8')" />
             </td>
             <td class="colW2">
               <xsl:value-of select="@mppmv8" />
@@ -540,7 +540,7 @@
             </tr>
           <tr>
             <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('MPPM')" />
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv10')" />
             </td>
             <td class="colW2">
               <xsl:value-of select="@mppmv10" />
@@ -571,7 +571,7 @@
             </tr>
           <tr>
             <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('MPPM')" />
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv11')" />
             </td>
             <td class="colW2">
               <xsl:value-of select="@mppmv11" />
@@ -602,7 +602,7 @@
             </tr>
           <tr>
             <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetLogResource('MPPM')" />
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv99')" />
             </td>
             <td class="colW2">
               <xsl:value-of select="@mppmv99" />
