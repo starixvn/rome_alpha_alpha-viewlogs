@@ -2988,4 +2988,34 @@
   <data name="Statement" xml:space="preserve">
     <value>Sao kê</value>
   </data>
+  <data name="MPPM" xml:space="preserve">
+    <value>Bóng Đá-Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
+  <data name="MPPMv1MP" xml:space="preserve">
+    <value>Parlay Bóng Đá-Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
+  <data name="MPPMv2" xml:space="preserve">
+    <value>Bóng Rổ-Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
+  <data name="MPPMv3" xml:space="preserve">
+    <value>Bóng Bầu Dục Mỹ-Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
+  <data name="MPPMv5" xml:space="preserve">
+    <value>Quần Vợt-Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
+  <data name="MPPMv8" xml:space="preserve">
+    <value>Bóng Chày-Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
+  <data name="MPPMv10" xml:space="preserve">
+    <value>Đánh Golf-Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
+  <data name="MPPMv11" xml:space="preserve">
+    <value>Đua xe Môtô-Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
+  <data name="MPPMv99" xml:space="preserve">
+    <value>Môn Thể Thao khác-Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
+  <data name="MPPMv99MP" xml:space="preserve">
+    <value>Mix Sports Parlay-Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
 </root>

@@ -3213,4 +3213,34 @@
   <data name="Statement" xml:space="preserve">
     <value>帳目</value>
   </data>
+  <data name="MPPM" xml:space="preserve">
+    <value>足球-單場最高派彩</value>
+  </data>
+  <data name="MPPMv1MP" xml:space="preserve">
+    <value>足球混合過關-單場最高派彩</value>
+  </data>
+  <data name="MPPMv2" xml:space="preserve">
+    <value>籃球-單場最高派彩</value>
+  </data>
+  <data name="MPPMv3" xml:space="preserve">
+    <value>美式足球-單場最高派彩</value>
+  </data>
+  <data name="MPPMv5" xml:space="preserve">
+    <value>網球-單場最高派彩</value>
+  </data>
+  <data name="MPPMv8" xml:space="preserve">
+    <value>棒球-單場最高派彩</value>
+  </data>
+  <data name="MPPMv10" xml:space="preserve">
+    <value>高爾夫-單場最高派彩</value>
+  </data>
+  <data name="MPPMv11" xml:space="preserve">
+    <value>賽車-單場最高派彩</value>
+  </data>
+  <data name="MPPMv99" xml:space="preserve">
+    <value>其他-單場最高派彩</value>
+  </data>
+  <data name="MPPMv99MP" xml:space="preserve">
+    <value>混合體育過關-單場最高派彩</value>
+  </data>
 </root>

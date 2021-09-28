@@ -3,7 +3,7 @@
   <xsl:param name="IsInternal" select="1"></xsl:param>
   <xsl:output method="html" indent="no" />
 
-  <xsl:template match="acc_custsetting_gamebetlimitupd">
+  <xsl:template match="r">
     <table class="tblDesc">
       <tr>
         <td class="colW1">

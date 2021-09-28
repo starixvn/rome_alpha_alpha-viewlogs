@@ -21,6 +21,22 @@
         </tr>
         <tr>
           <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPM')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppm" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('MinBv1MP')" />
           </td>
           <td class="colW2">
@@ -39,6 +55,22 @@
             <xsl:value-of select="@mpmv1mp" />
           </td>
         </tr>
+        <!--<tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv1MP')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv1mp" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+        </tr>-->
         <tr>
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MinBv2')" /></td>
           <td class="colW2">
@@ -51,6 +83,22 @@
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MPMv2')" /></td>
           <td class="colW2">
             <xsl:value-of select="@mpmv2" />
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv2')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv2" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
           </td>
         </tr>
         <tr>
@@ -68,6 +116,22 @@
           </td>
         </tr>
         <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv3')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv3" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+        </tr>
+        <tr>
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MinBv5')" /></td>
           <td class="colW2">
             <xsl:value-of select="@minbv5" />
@@ -79,6 +143,22 @@
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MPMv5')" /></td>
           <td class="colW2">
             <xsl:value-of select="@mpmv5" />
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv5')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv5" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
           </td>
         </tr>
         <tr>
@@ -96,6 +176,22 @@
           </td>
         </tr>
         <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv8')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv8" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+        </tr>
+        <tr>
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MinBv10')" /></td>
           <td class="colW2">
             <xsl:value-of select="@minbv10" />
@@ -107,6 +203,22 @@
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MPMv10')" /></td>
           <td class="colW2">
             <xsl:value-of select="@mpmv10" />
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv10')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv10" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
           </td>
         </tr>
         <tr>
@@ -124,6 +236,22 @@
           </td>
         </tr>
         <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv11')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv11" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+        </tr>
+        <tr>
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MinBv99')" /></td>
           <td class="colW2">
             <xsl:value-of select="@minbv99" />
@@ -135,6 +263,22 @@
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MPMv99')" /></td>
           <td class="colW2">
             <xsl:value-of select="@mpmv99" />
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv99')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv99" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
           </td>
         </tr>
         <tr>
@@ -150,8 +294,24 @@
           <td class="colW2">
             <xsl:value-of select="@mpmv99mp" />
           </td>
-        </tr>      
-        
+        </tr>
+        <!--<tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv99MP')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv99mp" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+        </tr>-->
+
         <tr>
           <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('MinBv161')" /></td>
           <td class="colW2">
@@ -223,7 +383,23 @@
                     <xsl:value-of select="@mpm" />
                 </td>
             </tr>
-            <tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPM')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mppm" />
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+          </tr>
+          <tr>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('minbv2')" /></td>
                 <td class="colW2">
                     <xsl:value-of select="@minbv2" />
@@ -238,7 +414,23 @@
                     <xsl:value-of select="@mpmv2" />
                 </td>
             </tr>
-            <tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv2')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mppmv2" />
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+          </tr>
+          <tr>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('minbv3')" /></td>
                 <td class="colW2">
                     <xsl:value-of select="@minbv3" />
@@ -253,7 +445,23 @@
                     <xsl:value-of select="@mpmv3" />
                 </td>
             </tr>
-            <tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv3')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mppmv3" />
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+          </tr>
+          <tr>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('minbv5')" /></td>
                 <td class="colW2">
                     <xsl:value-of select="@minbv5" />
@@ -268,7 +476,23 @@
                     <xsl:value-of select="@mpmv5" />
                 </td>
             </tr>
-            <tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv5')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mppmv5" />
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+          </tr>
+          <tr>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('minbv8')" /></td>
                 <td class="colW2">
                     <xsl:value-of select="@minbv8" />
@@ -283,7 +507,23 @@
                     <xsl:value-of select="@mpmv8" />
                 </td>
             </tr>
-            <tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv8')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mppmv8" />
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+          </tr>
+          <tr>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('minbv10')" /></td>
                 <td class="colW2">
                     <xsl:value-of select="@minbv10" />
@@ -298,7 +538,23 @@
                     <xsl:value-of select="@mpmv10" />
                 </td>
             </tr>
-            <tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv10')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mppmv10" />
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+          </tr>
+          <tr>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('minbv11')" /></td>
                 <td class="colW2">
                     <xsl:value-of select="@minbv11" />
@@ -313,7 +569,23 @@
                     <xsl:value-of select="@mpmv11" />
                 </td>
             </tr>
-            <tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv11')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mppmv11" />
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+          </tr>
+          <tr>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('minbv99')" /></td>
                 <td class="colW2">
                     <xsl:value-of select="@minbv99" />
@@ -328,7 +600,23 @@
                     <xsl:value-of select="@mpmv99" />
                 </td>
             </tr>
-            <tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv99')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mppmv99" />
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+            <td class="colW1">
+            </td>
+            <td class="colW2">
+            </td>
+          </tr>
+          <tr>
                 <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('updmultiple')" /></td>
                 <td class="colW2">
                     <xsl:value-of select="@updmultiple" />

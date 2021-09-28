@@ -6730,6 +6730,96 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Soccer-Max Payout Per Match.
+        /// </summary>
+        public static string MPPM {
+            get {
+                return ResourceManager.GetString("MPPM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Golf-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv10 {
+            get {
+                return ResourceManager.GetString("MPPMv10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Motorsports-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv11 {
+            get {
+                return ResourceManager.GetString("MPPMv11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Soccer Parlay-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv1MP {
+            get {
+                return ResourceManager.GetString("MPPMv1MP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basketball-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv2 {
+            get {
+                return ResourceManager.GetString("MPPMv2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Football-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv3 {
+            get {
+                return ResourceManager.GetString("MPPMv3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tennis-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv5 {
+            get {
+                return ResourceManager.GetString("MPPMv5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Baseball-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv8 {
+            get {
+                return ResourceManager.GetString("MPPMv8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OtherSports-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv99 {
+            get {
+                return ResourceManager.GetString("MPPMv99", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mix Sports Parlay-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv99MP {
+            get {
+                return ResourceManager.GetString("MPPMv99MP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Handicap.
         /// </summary>
         public static string mpt_1 {
