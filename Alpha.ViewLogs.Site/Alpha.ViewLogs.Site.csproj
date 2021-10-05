@@ -415,6 +415,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_220020_220026_BetSetting\action_220026.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_220020_220026_BetSetting\action_220021.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_220020_220026_BetSetting\action_220020.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220027_220029_BetSetting\action_220029.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220027_220029_BetSetting\action_220028.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220027_220029_BetSetting\action_220027.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_399.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_395.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_392.xslt" />
