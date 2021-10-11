@@ -9,23 +9,28 @@
 
     public class LoginController : ViewLogBaseController
     {
+        private readonly IMediator mediator;
+
         public LoginController(
             IUserSession userSession,
             IMediator mediator,
-            MicroSites microSites) : base(userSession, mediator, microSites)
+            MicroSites microSites) : base(userSession, microSites)
         {
+            this.mediator = mediator;
         }
 
         public ActionResult Index(IndexQuery indexQuery)
         {
-            indexQuery.IsAgentViewing = userSession.RoleId == UserLevel.Agent.Value;
-            indexQuery.PreviousUsername = userSession.UserName;
+            indexQuery.IsAgentViewing = UserSession.RoleId == UserLevel.Agent.Value;
+            indexQuery.PreviousUsername = UserSession.UserName;
             indexQuery.Username = indexQuery.IsAgentViewing && string.IsNullOrWhiteSpace(indexQuery.Username)
-                ? userSession.UserName
+                ? UserSession.UserName
                 : indexQuery.Username;
-            indexQuery.IsInternal = userSession.IsInternal;
+            indexQuery.IsInternal = UserSession.IsInternal;
 
-            return View(indexQuery);
+            var viewModel = mediator.Send(indexQuery);
+
+            return View(viewModel);
         }
     }
 }

@@ -9,19 +9,23 @@
     public class SettingController : ViewLogBaseController
     {
         private const string TemplatePath = "~/App_Data/TrackingValueTransformTemplates";
+        private readonly IMediator mediator;
 
         public SettingController(
             IUserSession userSession,
             IMediator mediator,
-            MicroSites microSites) : base(userSession, mediator, microSites)
+            MicroSites microSites) : base(userSession, microSites)
         {
+            this.mediator = mediator;
         }
 
         public ActionResult Index(IndexQuery indexQuery)
         {
             indexQuery.TrackingValueTransformTemplatePath = HttpContext.Server.MapPath(TemplatePath);
 
-            return View(indexQuery);
+            var viewModel = mediator.Send(indexQuery);
+
+            return View(viewModel);
         }
     }
 }

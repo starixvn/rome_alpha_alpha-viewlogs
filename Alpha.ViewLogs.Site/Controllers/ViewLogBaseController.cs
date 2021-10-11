@@ -4,7 +4,6 @@
     using System.Web.SessionState;
     using Configurations;
     using Helpers;
-    using MediatR;
     using Sunplus.Agent.Model.Entities;
     using Web;
 
@@ -12,28 +11,20 @@
     public abstract class ViewLogBaseController : BaseController
     {
         private readonly MicroSites microSites;
-        private readonly IMediator mediator;
 
-        protected ViewLogBaseController(
-            IUserSession userSession,
-            IMediator mediator,
-            MicroSites microSites) : base(userSession)
+        protected ViewLogBaseController(IUserSession userSession, MicroSites microSites)
         {
-            this.mediator = mediator;
+            UserSession = userSession;
             this.microSites = microSites;
         }
 
-        protected ActionResult View<TResponse>(IRequest<TResponse> message)
-        {
-            AssignDarkModeViewData();
-            return View(mediator.Send(message));
-        }
+        public IUserSession UserSession { get; set; }
 
         protected override void OnAuthorization(AuthorizationContext filterContext)
         {
             base.OnAuthorization(filterContext);
 
-            if (userSession.IsSubAcc && !userSession.SubPageAccess.ViewLog)
+            if (UserSession.IsSubAcc && !UserSession.SubPageAccess.ViewLog)
             {
                 Response.Redirect(microSites.OldMainPath(AppSettings.AccessDeniedPage));
             }

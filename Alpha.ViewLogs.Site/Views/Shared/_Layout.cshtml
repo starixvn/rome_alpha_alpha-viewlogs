@@ -1,7 +1,6 @@
 ﻿@using Alpha.ViewLogs.Site.Helpers.StaticResources;
 @using Alpha.ViewLogs.Site.Configurations;
 @model LogViewModel
-﻿@{ var darkModeName = ViewData["DarkModeName"]; }
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +8,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 
-    @AssetStyles.Render($"/bundles/site-viewlogs/viewlogs-{Model.UserLevel}{darkModeName}")
-    <link rel="stylesheet" href="@ViewLogsStyles.GetAbsolutePath($"~/assets/bundles/default{darkModeName}")" />
+    @AssetStyles.Render($"/bundles/site-viewlogs/viewlogs-{Model.UserLevel}")
+    <link rel="stylesheet" href="@ViewLogsStyles.GetAbsolutePath($"~/assets/bundles/default")" />
     @RenderSection("Styles", required: false)
 </head>
 <body>
