@@ -6,33 +6,37 @@
     public class GetTotalCreditLogsCriteria : CriteriaBase
     {
         public GetTotalCreditLogsCriteria(
-            int custId,
+            int userId,
+            int userRoleId,
+            string custName,
             DateTime fromDate,
-            DateTime toDate,
-            bool isInternal)
+            DateTime toDate)
         {
-            CustId = custId;
+            UserId = userId;
+            UserRoleId = userRoleId;
+            CustName = custName ?? string.Empty;
             FromDate = fromDate;
             ToDate = toDate;
-            IsInternal = isInternal;
         }
 
-        public int CustId { get; }
+        public string CustName { get; }
+
+        public int UserId { get; }
+
+        public int UserRoleId { get; }
 
         public DateTime FromDate { get; }
 
         public DateTime ToDate { get; }
 
-        public bool IsInternal { get; }
-
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_CreditSelTotalRecords";
+            return "Age_UserLog_CreditSelTotalRecords";
         }
 
         public override bool IsValid()
         {
-            return FromDate <= ToDate && CustId > 0;
+            return FromDate <= ToDate && UserId > 0;
         }
     }
 }

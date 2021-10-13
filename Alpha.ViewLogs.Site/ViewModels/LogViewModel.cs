@@ -10,6 +10,7 @@
     public class LogViewModel
     {
         private readonly MicroSites microSites;
+        private static readonly List<int> ActionIdByAdmin = new List<int> { 1221 };
 
         public LogViewModel(
             LogParam logParam,
@@ -101,6 +102,9 @@
             }
         }
 
+        public static bool ShowEditedBy(int actionId)
+            => !ActionIdByAdmin.Contains(actionId);
+
         public bool ShowOldValue { get; set; }
 
         public int TotalRecords { get; set; }
@@ -122,5 +126,7 @@
         public string MaxReportDate { get; set; }
 
         public string Username { get; set; }
+
+        public int FirstRowNumber => PageIndex * PageSize;
     }
 }

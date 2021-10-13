@@ -16,7 +16,7 @@
       <Mapping DataField="CustName" ObjectProperty="CustName" />
       <Mapping DataField="ActionName" ObjectProperty="ActionName" />
     </Setting>
-    <Setting Key="Acc_UserLog_CreditSel" SpName="Acc_UserLog_CreditSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNetView" >
+    <Setting Key="Age_UserLog_CreditSel" SpName="Age_UserLog_CreditSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNetView" >
       <Mapping DataField="LogID" ObjectProperty="LogId" />
       <Mapping DataField="UserID" ObjectProperty="UserId" />
       <Mapping DataField="CustID" ObjectProperty="CustId" />
@@ -48,7 +48,7 @@
       <Mapping DataField="Domain" ObjectProperty="Domain" />
     </Setting>
     <Setting Key="Acc_UserLog_RunSPSelTotalRecords" SpName="Acc_UserLog_RunSPSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNetView" />
-    <Setting Key="Acc_UserLog_CreditSelTotalRecords" SpName="Acc_UserLog_CreditSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNetView" />
+    <Setting Key="Age_UserLog_CreditSelTotalRecords" SpName="Age_UserLog_CreditSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNetView" />
     <Setting Key="Acc_UserLog_LoginSelTotalRecords" SpName="Acc_UserLog_LoginSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNetView" />
 
     <Setting Key="Acc_UserLog_LogActionTypeSel" SpName="Acc_UserLog_LogActionTypeSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNetView" Plain="0">

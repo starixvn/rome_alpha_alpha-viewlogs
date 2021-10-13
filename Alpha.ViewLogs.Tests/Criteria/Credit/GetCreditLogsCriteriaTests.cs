@@ -13,13 +13,13 @@
             // Arrange
             var getCreditLogsCriteria = new GetCreditLogsCriteria(
                 1,
+                2,
                 "CustName",
                 DateTime.Now,
                 DateTime.Now,
-                true,
                 1,
                 1);
-            var expectedSettingKey = "Acc_UserLog_CreditSel";
+            var expectedSettingKey = "Age_UserLog_CreditSel";
 
             // Act
             var actualSettingKey = getCreditLogsCriteria.GetSettingKey();
@@ -29,15 +29,35 @@
         }
 
         [Test]
-        public void IsValid_InvalidCustId_ReturnsFalse()
+        public void IsValid_InvalidUserRoleId_ReturnsFalse()
         {
             // Arrange
             var getCreditLogsCriteria = new GetCreditLogsCriteria(
+                1,
                 0,
                 string.Empty,
                 DateTime.Now,
                 DateTime.Now,
-                false,
+                0,
+                0);
+
+            // Act
+            var actualIsValid = getCreditLogsCriteria.IsValid();
+
+            // Assert
+            Assert.IsFalse(actualIsValid);
+        }
+
+        [Test]
+        public void IsValid_InvalidUserId_ReturnsFalse()
+        {
+            // Arrange
+            var getCreditLogsCriteria = new GetCreditLogsCriteria(
+                0,
+                1,
+                string.Empty,
+                DateTime.Now,
+                DateTime.Now,
                 0,
                 0);
 
@@ -54,10 +74,10 @@
             // Arrange
             var getCreditLogsCriteria = new GetCreditLogsCriteria(
                 1,
+                2,
                 string.Empty,
                 DateTime.Now.AddDays(1),
                 DateTime.Now,
-                false,
                 0,
                 0);
 
@@ -74,10 +94,10 @@
             // Arrange
             var getCreditLogsCriteria = new GetCreditLogsCriteria(
                 1,
+                2,
                 "CustName",
                 DateTime.Now,
-                DateTime.Now,                
-                true,
+                DateTime.Now, 
                 1,
                 1);
 
