@@ -106,6 +106,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Protected.
+        /// </summary>
+        public static string _protected {
+            get {
+                return ResourceManager.GetString("protected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Agent.
         /// </summary>
         public static string a {

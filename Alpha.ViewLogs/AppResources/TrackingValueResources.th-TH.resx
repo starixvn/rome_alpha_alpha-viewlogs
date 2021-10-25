@@ -3198,6 +3198,9 @@
   <data name="UpdateParlayMaxPayoutIndirectly" xml:space="preserve">
     <value>อัปเดตการจ่ายเงินสูงสุดของพาร์เลย์โดยทางอ้อม</value>
   </data>
+  <data name="protected" xml:space="preserve">
+    <value>ได้รับการป้องกัน</value>
+  </data>
   <data name="BetLists" xml:space="preserve">
     <value>รายการวางเดิมพันที่เล่นไปแล้ว</value>
   </data>
