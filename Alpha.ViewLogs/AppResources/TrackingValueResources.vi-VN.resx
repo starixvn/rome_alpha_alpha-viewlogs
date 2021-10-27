@@ -1972,7 +1972,7 @@
     <value>Cược lớn nhất</value>
   </data>
   <data name="MaxPerMatch" xml:space="preserve">
-    <value>Cược tối đa cho 1 trận </value>
+    <value>Cược Tối Đa Cho 1 Trận </value>
   </data>
   <data name="BonusCode" xml:space="preserve">
     <value>Mã thưởng</value>
@@ -3022,27 +3022,27 @@
     <value>Mix Sports Parlay-Thanh Toán Tối Đa Mỗi Trận</value>
   </data>
   <data name="MaxBv1Saba" xml:space="preserve">
-    <value>Saba Soccer-Max Bet</value>
+    <value>Bóng Đá Saba-Cược Lớn Nhất</value>
   </data>
   <data name="MinBv1Saba" xml:space="preserve">
-    <value>Saba Soccer-Min Bet</value>
+    <value>Bóng Đá Saba-Cược Nhỏ Nhất</value>
   </data>
   <data name="MPMv1Saba" xml:space="preserve">
-    <value>Saba Soccer-Max Per Match</value>
+    <value>Bóng Đá Saba-Cược Tối Đa Cho 1 Trận</value>
   </data>
   <data name="MPPMv1Saba" xml:space="preserve">
-    <value>Saba Soccer-Max Payout Per Match</value>
+    <value>Bóng Đá Saba-Thanh Toán Tối Đa Mỗi Trận</value>
   </data>
   <data name="MaxBv2Saba" xml:space="preserve">
-    <value>Saba Basketball-Max Bet</value>
+    <value>Bóng Rổ Saba-Cược Lớn Nhất</value>
   </data>
   <data name="MinBv2Saba" xml:space="preserve">
-    <value>Saba Basketball-Min Bet</value>
+    <value>Bóng Rổ Saba-Cược Nhỏ Nhất</value>
   </data>
   <data name="MPMv2Saba" xml:space="preserve">
-    <value>Saba Basketball-Max Per Match</value>
+    <value>Bóng Rổ Saba-Cược Tối Đa Cho 1 Trận</value>
   </data>
   <data name="MPPMv2Saba" xml:space="preserve">
-    <value>Saba Basketball-Max Payout Per Match</value>
+    <value>Bóng Rổ Saba-Thanh Toán Tối Đa Mỗi Trận</value>
   </data>
 </root>
