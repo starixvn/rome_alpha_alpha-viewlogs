@@ -44,6 +44,45 @@
           </td>
         </tr>
       </xsl:if>
+      <xsl:if test="@minbv1saba or @maxbv1saba or @mpmv1saba or @mppmv1saba">
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MinBv1Saba')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@minbv1saba" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MaxBv1Saba')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@maxbv1saba" />
+          </td>
+
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPMv1Saba')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mpmv1saba" />
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv1Saba')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv1saba" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+        </tr>
+      </xsl:if>
       <xsl:if test="@minbv1mp or @maxbv1mp or @mpmv1mp or @mppmv1mp">
         <tr>
           <td class="colW1">
@@ -65,7 +104,7 @@
             <xsl:value-of select="@mpmv1mp" />
           </td>
         </tr>
-        <!--<tr>
+        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv1MP')" />
           </td>
@@ -80,7 +119,7 @@
           </td>
           <td class="colW2">
           </td>
-        </tr>-->
+        </tr>
       </xsl:if>
       <xsl:if test="@minbv2 or @maxbv2 or @mpmv2 or @mppmv2">
         <tr>
@@ -119,6 +158,45 @@
             <td class="colW2">
             </td>
           </tr>
+        </tr>
+      </xsl:if>
+      <xsl:if test="@minbv2saba or @maxbv2saba or @mpmv2saba or @mppmv2saba">
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MinBv2Saba')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@minbv2saba" />
+          </td>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MaxBv2Saba')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@maxbv2saba" />
+          </td>
+
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPMv2Saba')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mpmv2saba" />
+          </td>
+        </tr>
+        <tr>
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv2Saba')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@mppmv2saba" />
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
+          <td class="colW1">
+          </td>
+          <td class="colW2">
+          </td>
         </tr>
       </xsl:if>
       <xsl:if test="@minbv3 or @maxbv3 or @mpmv3 or @mppmv3">
@@ -377,7 +455,7 @@
             <xsl:value-of select="@mpmv99mp" />
           </td>
         </tr>
-        <!--<tr>
+        <tr>
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv99MP')" />
           </td>
@@ -392,7 +470,7 @@
           </td>
           <td class="colW2">
           </td>
-        </tr>-->
+        </tr>
       </xsl:if>
       <xsl:if test="@minbv161 or @maxbv161 or @mpmv161 or @mpbv161">
         <tr>

@@ -5227,11 +5227,29 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Saba Soccer-Max Bet.
+        /// </summary>
+        public static string MaxBv1Saba {
+            get {
+                return ResourceManager.GetString("MaxBv1Saba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basketball-Max Bet.
         /// </summary>
         public static string maxbv2 {
             get {
                 return ResourceManager.GetString("maxbv2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saba Basketball-Max Bet.
+        /// </summary>
+        public static string MaxBv2Saba {
+            get {
+                return ResourceManager.GetString("MaxBv2Saba", resourceCulture);
             }
         }
         
@@ -5920,11 +5938,29 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Saba Soccer-Min Bet.
+        /// </summary>
+        public static string MinBv1Saba {
+            get {
+                return ResourceManager.GetString("MinBv1Saba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basketball-Min Bet.
         /// </summary>
         public static string minbv2 {
             get {
                 return ResourceManager.GetString("minbv2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saba Basketball-Min Bet.
+        /// </summary>
+        public static string MinBv2Saba {
+            get {
+                return ResourceManager.GetString("MinBv2Saba", resourceCulture);
             }
         }
         
@@ -6685,11 +6721,29 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Saba Soccer-Max Per Match.
+        /// </summary>
+        public static string MPMv1Saba {
+            get {
+                return ResourceManager.GetString("MPMv1Saba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basketball-Max Per Match.
         /// </summary>
         public static string mpmv2 {
             get {
                 return ResourceManager.GetString("mpmv2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saba Basketball-Max Per Match.
+        /// </summary>
+        public static string MPMv2Saba {
+            get {
+                return ResourceManager.GetString("MPMv2Saba", resourceCulture);
             }
         }
         
@@ -6775,11 +6829,29 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Saba Soccer-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv1Saba {
+            get {
+                return ResourceManager.GetString("MPPMv1Saba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basketball-Max Payout Per Match.
         /// </summary>
         public static string MPPMv2 {
             get {
                 return ResourceManager.GetString("MPPMv2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saba Basketball-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv2Saba {
+            get {
+                return ResourceManager.GetString("MPPMv2Saba", resourceCulture);
             }
         }
         

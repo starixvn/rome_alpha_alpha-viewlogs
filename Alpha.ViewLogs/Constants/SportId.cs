@@ -10,5 +10,8 @@
 
         public const int MixSports = 99;
         public const int Soccer = 1;
+
+        public const int SabaBasketball = 9902;
+        public const int SabaSoccer = 9901;
     }
 }

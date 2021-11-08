@@ -3237,4 +3237,28 @@
   <data name="MPPMv99MP" xml:space="preserve">
     <value>กีฬาบอลชุด - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
+  <data name="MaxBv1Saba" xml:space="preserve">
+    <value>ฟุตบอล Saba - เดิมพันสูงสุด</value>
+  </data>
+  <data name="MinBv1Saba" xml:space="preserve">
+    <value>ฟุตบอล Saba - เดิมพันขั้นต่ำ</value>
+  </data>
+  <data name="MPMv1Saba" xml:space="preserve">
+    <value>ฟุตบอล Saba - สูงสุดต่อคู่</value>
+  </data>
+  <data name="MPPMv1Saba" xml:space="preserve">
+    <value>ฟุตบอล Saba - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
+  </data>
+  <data name="MaxBv2Saba" xml:space="preserve">
+    <value>บาสเกตบอล Saba - เดิมพันสูงสุด</value>
+  </data>
+  <data name="MinBv2Saba" xml:space="preserve">
+    <value>บาสเกตบอล Saba - เดิมพันขั้นต่ำ</value>
+  </data>
+  <data name="MPMv2Saba" xml:space="preserve">
+    <value>บาสเกตบอล Saba - สูงสุดต่อคู่</value>
+  </data>
+  <data name="MPPMv2Saba" xml:space="preserve">
+    <value>บาสเกตบอล Saba - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
+  </data>
 </root>

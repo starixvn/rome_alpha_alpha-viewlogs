@@ -6,10 +6,6 @@
   <xsl:template match="acc_customerinsmember_com">
     <table class="tblDesc">
       <tr>
-        <!--<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('custid')" /></td>
-                <td class="colW2">
-                    <xsl:value-of select="@custid" />
-                </td>-->
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MinB')" />
         </td>
@@ -48,6 +44,43 @@
       </tr>
       <tr>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MinBv1Saba')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@minbv1saba" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MaxBv1Saba')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@maxbv1saba" />
+        </td>
+
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MPMv1Saba')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@mpmv1saba" />
+        </td>
+      </tr>
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv1Saba')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@mppmv1saba" />
+        </td>
+        <td class="colW1">
+        </td>
+        <td class="colW2">
+        </td>
+        <td class="colW1">
+        </td>
+        <td class="colW2">
+        </td>
+      </tr>
+      <tr>
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MinBv1MP')" />
         </td>
         <td class="colW2">
@@ -66,7 +99,7 @@
           <xsl:value-of select="@mpmv1mp" />
         </td>
       </tr>
-      <!--<tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv1MP')" />
         </td>
@@ -81,7 +114,7 @@
         </td>
         <td class="colW2">
         </td>
-      </tr>-->
+      </tr>
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MinBv2')" />
@@ -118,6 +151,43 @@
           <td class="colW2">
           </td>
         </tr>
+      </tr>
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MinBv2Saba')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@minbv2saba" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MaxBv2Saba')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@maxbv2saba" />
+        </td>
+
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MPMv2Saba')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@mpmv2saba" />
+        </td>
+      </tr>
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv2Saba')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@mppmv2saba" />
+        </td>
+        <td class="colW1">
+        </td>
+        <td class="colW2">
+        </td>
+        <td class="colW1">
+        </td>
+        <td class="colW2">
+        </td>
       </tr>
       <tr>
         <td class="colW1">

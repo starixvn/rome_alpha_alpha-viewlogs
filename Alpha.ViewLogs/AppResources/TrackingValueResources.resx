@@ -3285,4 +3285,28 @@
   <data name="MPPMv99MP" xml:space="preserve">
     <value>Mix Sports Parlay-Max Payout Per Match</value>
   </data>
+  <data name="MaxBv1Saba" xml:space="preserve">
+    <value>Saba Soccer-Max Bet</value>
+  </data>
+  <data name="MinBv1Saba" xml:space="preserve">
+    <value>Saba Soccer-Min Bet</value>
+  </data>
+  <data name="MPMv1Saba" xml:space="preserve">
+    <value>Saba Soccer-Max Per Match</value>
+  </data>
+  <data name="MPPMv1Saba" xml:space="preserve">
+    <value>Saba Soccer-Max Payout Per Match</value>
+  </data>
+  <data name="MaxBv2Saba" xml:space="preserve">
+    <value>Saba Basketball-Max Bet</value>
+  </data>
+  <data name="MinBv2Saba" xml:space="preserve">
+    <value>Saba Basketball-Min Bet</value>
+  </data>
+  <data name="MPMv2Saba" xml:space="preserve">
+    <value>Saba Basketball-Max Per Match</value>
+  </data>
+  <data name="MPPMv2Saba" xml:space="preserve">
+    <value>Saba Basketball-Max Payout Per Match</value>
+  </data>
 </root>
