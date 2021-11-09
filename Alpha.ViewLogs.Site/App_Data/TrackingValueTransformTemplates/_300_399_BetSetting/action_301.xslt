@@ -425,7 +425,7 @@
           <xsl:value-of select="@mpm99mp" />
         </td>
       </tr>
-      <!--<tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('MPPMv99MP')" />
         </td>
@@ -440,7 +440,7 @@
         </td>
         <td class="colW2">
         </td>
-      </tr>-->
+      </tr>
 
       <tr>
         <td class="colW1">
