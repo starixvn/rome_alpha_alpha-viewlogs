@@ -5,6 +5,7 @@
     using Criteria;
     using Criteria.Setting;
     using DataAccesses;
+    using Fanex.Caching;
     using Fanex.Data.Repository;
     using Helpers;
     using Params;
@@ -16,8 +17,9 @@
              IDynamicRepository dynamicRepository,
              CustomerService customerService,
              LogDataAccess baseDataAccess,
-             IUserSession session) :
-            base(dynamicRepository, customerService, baseDataAccess, session)
+             IUserSession session,
+             ICacheService cacheService) :
+            base(dynamicRepository, customerService, baseDataAccess, session, cacheService)
         {
         }
 

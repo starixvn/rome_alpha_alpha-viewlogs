@@ -5,6 +5,7 @@
     using Constants;
     using Criteria.Login;
     using DataAccesses;
+    using Fanex.Caching;
     using Fanex.Data.Repository;
     using Helpers;
     using Models;
@@ -17,8 +18,9 @@
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
             LogDataAccess logDataAccess,
-            IUserSession session) :
-            base(dynamicRepository, customerService, logDataAccess, session)
+            IUserSession session,
+            ICacheService cacheService) :
+            base(dynamicRepository, customerService, logDataAccess, session, cacheService)
         {
         }
 

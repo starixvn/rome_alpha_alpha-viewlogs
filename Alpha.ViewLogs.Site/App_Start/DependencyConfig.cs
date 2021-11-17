@@ -7,6 +7,8 @@
     using Controllers;
     using DataAccesses;
     using DataAccesses.Impl;
+    using Fanex.Caching;
+    using Fanex.Caching.Memory;
     using Fanex.Data.Repository;
     using Fanex.RemotingRef;
     using Handlers;
@@ -100,6 +102,9 @@
             container.RegisterConditional<LogService, StatusServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(StatusHandler));
             container.RegisterConditional<LogService, CreditServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(CreditHandler));
             container.RegisterConditional<LogService, LoginServiceImpl>(Lifestyle.Transient, c => c.Consumer.ImplementationType == typeof(LoginHandler));
+
+            container.RegisterSingleton<ICache>(() => new MemoryCache(new MemoryCacheOptions()));
+            container.RegisterSingleton<ICacheService, CacheService>();
         }
 
         private static void RegisterDataAccesses(Container container)
