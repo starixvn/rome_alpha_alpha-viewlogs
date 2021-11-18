@@ -26,34 +26,30 @@
         private CustomerService customerService;
         private LogDataAccess logDataAccess;
 
-        private Cache cacheForTesting;
+        private ICacheService cacheForTesting;
         private IUserSession session;
 
         [SetUp]
         public void SetUp()
         {
-            cacheForTesting = Substitute.For<Cache>();
-            ConfiguredCacheService.SwitchCacheStorage(cacheForTesting);
+            cacheForTesting = Substitute.For<ICacheService>();
 
             dynamicRepository = Substitute.For<IDynamicRepository>();
             customerService = Substitute.For<CustomerService>();
             logDataAccess = Substitute.For<LogDataAccess>();
             session = Substitute.For<IUserSession>();
 
-            baseService = new BaseServiceForTesting(dynamicRepository, customerService, logDataAccess, session);
+            baseService = new BaseServiceForTesting(dynamicRepository, customerService, logDataAccess, session, cacheForTesting);
         }
 
         [Test]
         public void GetLogActionTypes_NoCondition_CallCacheToGetData()
         {
-            // Arrange
-            IEnumerable<LogActionType> cacheData;
-
             // Act 
             baseService.GetLogActionTypes();
 
             // Assert
-            cacheForTesting.Received().TryGet(LogActionTypesCacheKey, out cacheData);
+            cacheForTesting.Received().Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
         }
 
         [Test]
@@ -62,17 +58,9 @@
             // Arrange
             var expectedLogActionTypes = new List<LogActionType>()
             {
-                new LogActionType { Id = 1 }
             };
 
-            List<LogActionType> logActionTypesInCache;
-
-            cacheForTesting.TryGet(LogActionTypesCacheKey, out logActionTypesInCache).Returns(x =>
-            {
-                x[1] = expectedLogActionTypes;
-
-                return true;
-            });
+            cacheForTesting.Get<List<LogActionType>>(LogActionTypesCacheKey).Returns(expectedLogActionTypes);
 
             // Act 
             var actualLogActionTypes = baseService.GetLogActionTypes();
@@ -243,14 +231,7 @@
             };
 
             var expectedAction = expectedActionDictionary[actionId];
-
-            Dictionary<int, LogAction> logActionInCache;
-            cacheForTesting.TryGet(LogActionCacheKey, out logActionInCache).Returns(x =>
-            {
-                x[1] = expectedActionDictionary;
-
-                return true;
-            });
+            cacheForTesting.Get<Dictionary<int, LogAction>>(LogActionCacheKey).Returns(expectedActionDictionary);
 
             // Act 
             var actualLogAction = baseService.GetLogAction(actionId);
@@ -274,13 +255,7 @@
 
             var expectedAction = new LogAction() { Id = actionId, EnglishName = expectedActionName };
 
-            Dictionary<int, LogAction> logActionInCache;
-            cacheForTesting.TryGet(LogActionCacheKey, out logActionInCache).Returns(x =>
-            {
-                x[1] = expectedActionDictionary;
-
-                return true;
-            });
+            cacheForTesting.Get<Dictionary<int, LogAction>>(LogActionCacheKey).Returns(expectedActionDictionary);
 
             // Act 
             var actualLogAction = baseService.GetLogAction(actionId);
@@ -302,8 +277,9 @@
                 EnglishName = expectedActionName
             };
 
-            Dictionary<int, LogAction> logActionInCache;
-            cacheForTesting.TryGet(LogActionCacheKey, out logActionInCache).Returns(false);
+            Dictionary<int, LogAction> logActionInCache = new Dictionary<int, LogAction>();
+            logActionInCache.Add(actionId, expectedAction);
+            cacheForTesting.Get<Dictionary<int, LogAction>>(LogActionCacheKey).Returns(logActionInCache);
 
             // Act 
             var actualLogAction = baseService.GetLogAction(actionId);
@@ -356,13 +332,7 @@
                 { 1, logAction }
             };
 
-            Dictionary<int, LogAction> logActionInCache;
-            cacheForTesting.TryGet(LogActionCacheKey, out logActionInCache).Returns(x =>
-            {
-                x[1] = expectedActionDictionary;
-
-                return true;
-            });
+            cacheForTesting.Get<Dictionary<int, LogAction>>(LogActionCacheKey).Returns(expectedActionDictionary);
 
             // Act 
             var actualLogActionName = baseService.GetLogActionName(actionId, language);

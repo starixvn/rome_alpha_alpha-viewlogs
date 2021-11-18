@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services.Logs
 {
     using System;
+    using Fanex.Caching;
     using Fanex.Data.Repository;
     using Params;
     using Sunplus.Agent.Model.Entities;
@@ -16,8 +17,9 @@
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
             LogDataAccess logDataAccess,
-            IUserSession session) :
-            base(dynamicRepository, customerService, logDataAccess, session)
+            IUserSession session,
+            ICacheService cacheService) :
+            base(dynamicRepository, customerService, logDataAccess, session, cacheService)
         {
         }
 

@@ -22,13 +22,12 @@
 
         private LogFormatter logFormatter;
         private TransformServiceImpl transformService;
-        private Cache cacheForTesting;
+        private ICacheService cacheForTesting;
 
         [SetUp]
         public void SetUp()
         {
-            cacheForTesting = Substitute.For<Cache>();
-            ConfiguredCacheService.SwitchCacheStorage(cacheForTesting);
+            cacheForTesting = Substitute.For<ICacheService>();
 
             Thread.CurrentThread.CurrentCulture = new CultureInfo(LanguageCode.English);
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;

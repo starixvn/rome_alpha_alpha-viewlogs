@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using Constants;
+    using Fanex.Caching;
     using Fanex.Data.Repository;
     using ModelsForTesting;
     using NSubstitute;
@@ -26,12 +27,15 @@
 
         protected IUserSession Session { get; set; }
 
+        protected ICacheService CacheService { get; set; }
+
         public virtual void SetUp()
         {
             DynamicRepository = Substitute.For<IDynamicRepository>();
             CustomerService = Substitute.For<CustomerService>();
             BaseDataAccess = Substitute.For<LogDataAccess>();
             Session = Substitute.For<IUserSession>();
+            CacheService = Substitute.For<ICacheService>();
         }
 
         public virtual void GetPagingLogs_ValidDownline_ReturnsDataFromDataAccess()

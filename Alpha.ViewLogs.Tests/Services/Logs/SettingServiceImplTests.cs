@@ -11,7 +11,7 @@
         {
             base.SetUp();
 
-            LogService = new SettingServiceImpl(DynamicRepository, CustomerService, BaseDataAccess, Session);
+            LogService = new SettingServiceImpl(DynamicRepository, CustomerService, BaseDataAccess, Session, CacheService);
         }
 
         [Test]

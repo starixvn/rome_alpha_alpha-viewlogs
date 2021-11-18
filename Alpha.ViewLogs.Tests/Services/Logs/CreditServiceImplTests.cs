@@ -10,7 +10,7 @@
         {
             base.SetUp();
 
-            LogService = new CreditServiceImpl(DynamicRepository, CustomerService, BaseDataAccess, Session);
+            LogService = new CreditServiceImpl(DynamicRepository, CustomerService, BaseDataAccess, Session, CacheService);
         }
 
         [Test]
