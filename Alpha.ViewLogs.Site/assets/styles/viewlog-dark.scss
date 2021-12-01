@@ -1,6 +1,6 @@
 ﻿@import "_mixins.scss";
 
-$sporttype-detail-bg: #d3d6db;
+$sporttype-detail-bg: #2C2D2E;
 $height-td: 28px;
 $component-color-bg: #2B2B2B;
 $component-color: #e7e7e7;
@@ -174,12 +174,16 @@ $border-table-color: #3E3F41;
     }
 
     .valuechanged {
-        color: #16c763;
+        color: #1eb51e;
         padding-bottom: 0;
     }
 
     .valueold {
         padding-top: 0;
+    }
+
+    .iplink {
+        color: #41A4FF;
     }
 }
 
@@ -214,17 +218,17 @@ $border-table-color: #3E3F41;
 
 .action-name {
     font-weight: bold;
-    color: #b25900;
+    color: #B26C00;
 }
 
 .username, .log-date {
     font-style: italic;
-    color: #666;
+    color: #B7B7B7;
 }
 
 .logid {
     font-style: italic;
-    color: #404040;
+    color: #8A8A8A;
 }
 
 .tblRpt .tblDesc-ex .tblDesc-1 .tblDesc-2 tbody tr:first-child:nth-last-child(1) td,
