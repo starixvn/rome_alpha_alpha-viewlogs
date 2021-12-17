@@ -3,12 +3,15 @@
     using System.Linq;
     using System.Web;
     using System.Web.Optimization;
-    using Configurations;
     using Sunplus.Agent.Model.Entities;
 
     public class AssetStyles : BaseStaticResources
     {
         public static IHtmlString Render(params string[] paths)
-            => Styles.Render(paths.Select(path => $"{AppSettings.AssetAppPath}{path}{UserSession.Current.DarkModeName}{MinText}.css?v={StaticResourcesVersion}").ToArray());
+        {
+            var currentUserSession = UserSession.Current;
+
+            return Styles.Render(paths.Select(path => $"{currentUserSession.AssetAppPath}{path}{currentUserSession.DarkModeName}{MinText}.css?v={StaticResourcesVersion}").ToArray());
+        }
     }
 }

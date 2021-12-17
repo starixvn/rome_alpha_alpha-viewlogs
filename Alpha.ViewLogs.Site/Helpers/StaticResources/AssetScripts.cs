@@ -2,13 +2,12 @@
 {
     using System.Linq;
     using System.Web;
-    using Configurations;
+    using System.Web.Optimization;
+    using Sunplus.Agent.Model.Entities;
 
     public class AssetScripts : BaseStaticResources
     {
         public static IHtmlString Render(params string[] paths)
-        {
-            return System.Web.Optimization.Scripts.Render(paths.Select(path => $"{AppSettings.AssetAppPath}{path}{MinText}.js?v={StaticResourcesVersion}").ToArray());
-        }
+            => Scripts.Render(paths.Select(path => $"{UserSession.Current.AssetAppPath}{path}{MinText}.js?v={StaticResourcesVersion}").ToArray());
     }
 }
