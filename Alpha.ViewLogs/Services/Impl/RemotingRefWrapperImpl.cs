@@ -38,7 +38,11 @@
         {
             return sportId == null ?
                 string.Empty :
-                remotingRefService.GetSportName(sportId.ToString(), LanguageCode, string.Empty);
+                remotingRefService.GetSportName(sportId.ToString(), LanguageCode, null) ?? remotingRefService.GetResourceDataByRefIdAndResourceId(
+                "DummySport",
+                sportId.ToString(),
+                LanguageCode,
+                string.Empty);
         }
 
         public string GetProductName(int productId)
