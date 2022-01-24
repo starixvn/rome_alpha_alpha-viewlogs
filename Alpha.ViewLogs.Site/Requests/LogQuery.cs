@@ -28,10 +28,13 @@
 
         private readonly Dictionary<string, int> resourceByProductCacheRef;
 
+        private readonly Dictionary<string, int> resourcesBySportTypeCacheRef;
+
         public LogQuery() : this(null, null, null)
         {
         }
 
+#pragma warning disable S107 // Methods should not have too many parameters
         public LogQuery(
             IUserSession currentUserSession,
             IDateTime dateTimeWrap,
@@ -39,7 +42,9 @@
             Dictionary<string, bool> custStatuses = null,
             Dictionary<string, int> resourcesByBetTypeCacheRef = null,
             bool? isShowMyanmarOdds = null,
-            Dictionary<string, int> resourceByProductCacheRef = null)
+            Dictionary<string, int> resourceByProductCacheRef = null,
+            Dictionary<string, int> resourcesBySportTypeCacheRef = null)
+#pragma warning restore S107 // Methods should not have too many parameters
         {
             currentUserSession = currentUserSession ?? UserSession.Current;
             dateTimeWrap = dateTimeWrap ?? new DateTimeWrap();
@@ -48,6 +53,7 @@
             this.custStatuses = custStatuses;
             this.resourcesByBetTypeCacheRef = resourcesByBetTypeCacheRef;
             this.resourceByProductCacheRef = resourceByProductCacheRef;
+            this.resourcesBySportTypeCacheRef = resourcesBySportTypeCacheRef;
 
             // Limit time range for view log in 2 years (start from beginning of last year)
             maxReportDate = dateTimeWrap.Now;
@@ -116,6 +122,14 @@
             get
             {
                 return resourcesByBetTypeCacheRef ?? AppSettings.ResourcesByBetTypeCacheRef;
+            }
+        }
+
+        public Dictionary<string, int> ResourcesBySportTypeCacheRef
+        {
+            get
+            {
+                return resourcesBySportTypeCacheRef ?? AppSettings.ResourcesBySportTypeCacheRef;
             }
         }
 

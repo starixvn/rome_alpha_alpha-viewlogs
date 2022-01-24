@@ -3248,7 +3248,7 @@
   </data>
   <data name="protected" xml:space="preserve">
     <value>Protected</value>
-     </data>
+  </data>
   <data name="BetLists" xml:space="preserve">
     <value>Bet Lists</value>
   </data>
@@ -3308,5 +3308,8 @@
   </data>
   <data name="MPPMv2Saba" xml:space="preserve">
     <value>Saba Basketball-Max Payout Per Match</value>
+  </data>
+  <data name="Disable9904_4001" xml:space="preserve">
+    <value>Disabled Jackpot</value>
   </data>
 </root>

@@ -105,6 +105,7 @@
                 ResourcesByBetTypeCacheRef = message.ResourcesByBetTypeCacheRef,
                 ResourcesProductCacheRef = message.ResourcesByProductCacheRef,
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds,
+                ResourcesBySportTypeCacheRef = message.ResourcesBySportTypeCacheRef
             };
 
             var logItems = new List<LogItemViewModel>();

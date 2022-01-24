@@ -2320,6 +2320,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Disabled Jackpot.
+        /// </summary>
+        public static string Disable9904_4001 {
+            get {
+                return ResourceManager.GetString("Disable9904_4001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disabled Auto Master PT.
         /// </summary>
         public static string disableAMPT {
