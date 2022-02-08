@@ -455,6 +455,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Cashout\action_75642.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Cashout\action_75639.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Cashout\action_75638.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\headerDetailBuilder.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_60526.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_60527.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\RNGLottery\action_65552.xslt" />
