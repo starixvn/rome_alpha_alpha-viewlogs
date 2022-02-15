@@ -47,12 +47,6 @@
       </tr>
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('DisableCasino')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disablecasino" />
-        </td>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('DisableOutright')" />
         </td>
         <td class="colW2">
@@ -63,6 +57,12 @@
         </td>
         <td class="colW2">
           
+        </td>
+        <td class="colW1">
+
+        </td>
+        <td class="colW2">
+
         </td>
       </tr>
       <xsl:if test="xslLogFormat:IsVisibleKeno(@hidekeno) = 'True'">
