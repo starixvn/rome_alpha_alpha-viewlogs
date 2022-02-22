@@ -17,8 +17,9 @@
         private readonly RemotingRefWrapper remotingRef;
 
         private Dictionary<string, bool> custStatuses;
-        private Dictionary<string, int> resourcesByBetTypeCacheRef;
         private Dictionary<string, int> resourcesByProductCacheRef;
+        private Dictionary<string, int> resourcesBySportTypeCacheRef;
+        private Dictionary<string, int> resourcesByBetTypeCacheRef;
         private bool isHideNickname;
         private bool isShowMyanmarOdds;
         private const int SevenDaysIndex = 8;
@@ -45,8 +46,9 @@
             }
 
             custStatuses = transformParam.CustStatuses;
-            resourcesByBetTypeCacheRef = transformParam.ResourcesByBetTypeCacheRef;
             resourcesByProductCacheRef = transformParam.ResourcesProductCacheRef;
+            resourcesByBetTypeCacheRef = transformParam.ResourcesByBetTypeCacheRef;
+            resourcesBySportTypeCacheRef = transformParam.ResourcesBySportTypeCacheRef;
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
             this.isHideNickname = isHideNickname;
         }
@@ -225,6 +227,11 @@
                 && resourcesByProductCacheRef.ContainsKey(lowerCaseResourceName))
             {
                 resourceValue = $"{TrackingValueResources.disabled} {GetProductName(resourcesByProductCacheRef[lowerCaseResourceName])}";
+            }
+            else if (resourcesBySportTypeCacheRef != null &&
+                resourcesBySportTypeCacheRef.ContainsKey(lowerCaseResourceName))
+            {
+                resourceValue = $"{TrackingValueResources.disabled} {GetSportName(resourcesBySportTypeCacheRef[lowerCaseResourceName])}";
             }
             else if (resourcesByBetTypeCacheRef != null &&
                 resourcesByBetTypeCacheRef.ContainsKey(lowerCaseResourceName))

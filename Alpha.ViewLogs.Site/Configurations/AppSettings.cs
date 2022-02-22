@@ -9,9 +9,11 @@
     {
         private static readonly object LockObjectStatusMappings = new object();
         private static readonly object LockObjectResourcesByBetTypeCacheRef = new object();
+        private static readonly object LockObjectResourcesBySportTypeCacheRef = new object();
 
         private static Dictionary<string, int> statusMappings;
         private static Dictionary<string, int> resourcesByBetTypeCacheRef;
+        private static Dictionary<string, int> resourcesBySportTypeCacheRef;
 
         public static string VirtualDirectory
         {
@@ -74,6 +76,22 @@
                 }
 
                 return resourcesByBetTypeCacheRef;
+            }
+        }
+
+        /// <summary>
+        /// Key: statusName. Value: betTypeId
+        /// </summary>
+        public static Dictionary<string, int> ResourcesBySportTypeCacheRef
+        {
+            get
+            {
+                if (resourcesBySportTypeCacheRef == null)
+                {
+                    InitResourcesBySportTypeCacheRef();
+                }
+
+                return resourcesBySportTypeCacheRef;
             }
         }
 
@@ -146,6 +164,36 @@
                             if (keyValue.Length > 1)
                             {
                                 resourcesByBetTypeCacheRef.Add(keyValue[0].ToLower(), int.Parse(keyValue[1]));
+                            }
+                        });
+                }
+            }
+        }
+
+        private static void InitResourcesBySportTypeCacheRef()
+        {
+            lock (LockObjectResourcesBySportTypeCacheRef)
+            {
+                if (resourcesBySportTypeCacheRef == null)
+                {
+                    resourcesBySportTypeCacheRef = new Dictionary<string, int>();
+                    var resourcesBySportTypeCacheRefSetting = GetConfigValue("ViewLogs:ResourcesBySportTypeCacheRef");
+
+                    if (string.IsNullOrWhiteSpace(resourcesBySportTypeCacheRefSetting))
+                    {
+                        return;
+                    }
+
+                    resourcesBySportTypeCacheRefSetting.Split(',')
+                        .ToList()
+                        .ForEach((combinedValue) =>
+                        {
+                            //// format: statusName:productId
+                            var keyValue = combinedValue.Split(':');
+
+                            if (keyValue.Length > 1)
+                            {
+                                resourcesBySportTypeCacheRef.Add(keyValue[0].ToLower(), int.Parse(keyValue[1]));
                             }
                         });
                 }

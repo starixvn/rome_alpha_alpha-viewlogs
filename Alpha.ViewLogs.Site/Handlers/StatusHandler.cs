@@ -55,7 +55,8 @@
                 CustStatuses = message.SportBetTypeVisibilities,
                 ResourcesByBetTypeCacheRef = message.ResourcesByBetTypeCacheRef,
                 IsShowMyanmarOdds = message.IsShowMyanmarOdds,
-                ResourcesProductCacheRef = message.ResourcesByProductCacheRef
+                ResourcesProductCacheRef = message.ResourcesByProductCacheRef,
+                ResourcesBySportTypeCacheRef = message.ResourcesBySportTypeCacheRef
             };
 
             var logItems = new List<LogItemViewModel>();
