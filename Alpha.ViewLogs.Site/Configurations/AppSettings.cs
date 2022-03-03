@@ -39,14 +39,6 @@
             }
         }
 
-        public static string AssetAppPath
-        {
-            get
-            {
-                return GetConfigValue("AssetAppPath");
-            }
-        }
-
         /// <summary>
         /// Key: statusName. Value: productId
         /// </summary>

@@ -9,9 +9,7 @@
     <title>@ViewBag.Title</title>
 
     @AssetStyles.Render($"/bundles/site-viewlogs/viewlogs-{Model.UserLevel}")
-
-    <link rel="stylesheet" href="@ViewLogsStyles.GetAbsolutePath("~/assets/bundles/default")" />
-
+    <link rel="stylesheet" href="@ViewLogsStyles.GetAbsolutePath($"~/assets/bundles/default")" />
     @RenderSection("Styles", required: false)
 </head>
 <body>

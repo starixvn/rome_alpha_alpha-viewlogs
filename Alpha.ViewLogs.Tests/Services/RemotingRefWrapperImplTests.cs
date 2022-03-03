@@ -110,7 +110,7 @@
             var expectedResult = "Virtual Sports";
 
             remotingRefService
-                .GetSportName("5", DefaultLanguage, string.Empty)
+                .GetSportName("5", DefaultLanguage, null)
                 .Returns(expectedResult);
 
             // Act

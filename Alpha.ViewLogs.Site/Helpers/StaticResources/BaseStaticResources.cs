@@ -4,6 +4,8 @@
     using System.Diagnostics;
     using System.Reflection;
     using System.Web.Configuration;
+    using Sunplus.Agent.Model.Entities;
+    using Web.Configurations;
 
     public class BaseStaticResources
     {
@@ -34,6 +36,13 @@
             FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
 
             return versionInfo.FileVersion;
+        }
+
+        protected static string GetDarkModeName()
+        {
+            var currentUserSession = UserSession.Current;
+
+            return AppSettings.IsOfferDarkMode ? currentUserSession.DarkModeName : string.Empty;
         }
     }
 }

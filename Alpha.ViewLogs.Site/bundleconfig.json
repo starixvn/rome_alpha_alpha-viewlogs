@@ -44,5 +44,12 @@
       "assets/scripts/tab/index.js",
       "assets/scripts/login/index-controller.js"
     ]
+  },
+  /************************** Dark Mode ************************/
+  {
+    "outputFileName": "assets/bundles/default-dark.css",
+    "inputFiles": [
+      "assets/styles/viewlog-dark.css"
+    ]
   }
 ]
