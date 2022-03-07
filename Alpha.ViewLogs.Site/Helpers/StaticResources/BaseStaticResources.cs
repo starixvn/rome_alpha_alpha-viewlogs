@@ -38,11 +38,18 @@
             return versionInfo.FileVersion;
         }
 
-        protected static string GetDarkModeName()
-        {
-            var currentUserSession = UserSession.Current;
+        protected static string GetDarkModeName(IUserSession userSession = null)
+            => AppSettings.IsOfferDarkMode
+            ? (userSession ?? UserSession.Current).DarkModeName
+            : string.Empty;
 
-            return AppSettings.IsOfferDarkMode ? currentUserSession.DarkModeName : string.Empty;
+        protected static string GetAssetAppPath(IUserSession userSession = null)
+        {
+            var assetAppPath = (userSession ?? UserSession.Current).AssetAppPath;
+
+            return string.IsNullOrWhiteSpace(assetAppPath)
+                ? AppSettings.AssetAppPath
+                : assetAppPath;
         }
     }
 }
