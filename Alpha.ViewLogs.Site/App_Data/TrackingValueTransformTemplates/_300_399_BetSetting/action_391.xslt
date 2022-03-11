@@ -4,6 +4,7 @@
   <xsl:output method="html" indent="no" />
 
   <xsl:template match="acc_custsetting_stakelevelupd">
+    <xsl:param name="productname" select="xslLogFormat:GetProductName(@productid)"></xsl:param>
     <table class="tblDesc">
       <tr>
         <td class="colW1">
@@ -26,10 +27,19 @@
         </td>
       </tr>
     </table>
-    <div class="headerSportTypeDetail">
-      <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
-    </div>
     <xsl:for-each select="stakelevel">
+      <xsl:choose>
+        <xsl:when test="@bettype">
+          <div class="headerSportTypeDetail">
+            <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+          </div>
+        </xsl:when>
+        <xsl:otherwise>
+          <div class="headerSportTypeDetail">
+            <xsl:value-of select = "$productname" />
+          </div>
+        </xsl:otherwise>
+      </xsl:choose>
       <table  class="tblDesc">
         <tr>
           <xsl:choose>
