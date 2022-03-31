@@ -921,6 +921,36 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75617.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75618.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaVirtualSports\action_75619.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames-FGG\action_60539.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames-FGG\action_65579.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames-FGG\action_65578.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames-FGG\action_70621.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames-FGG\action_70622.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames-FGG\action_70623.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames-FGG\action_75656.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames-FGG\action_75657.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames-FGG\action_75658.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames-FGG\action_75659.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualGames\action_60521.xslt">
       <SubType>Designer</SubType>
     </Content>
