@@ -3270,4 +3270,25 @@
   <data name="MPPMv2Saba" xml:space="preserve">
     <value>沙巴篮球-单场最高派彩</value>
   </data>
+  <data name="BotName" xml:space="preserve">
+    <value>Bot Name</value>
+  </data>
+  <data name="ChatId" xml:space="preserve">
+    <value>Chat ID</value>
+  </data>
+  <data name="AbnormalLoginAlert" xml:space="preserve">
+    <value>Abnormal Login Alert</value>
+  </data>
+  <data name="ChangePasswordAlert" xml:space="preserve">
+    <value>Change Password Alert</value>
+  </data>
+  <data name="ChangeSecurityCodeAlert" xml:space="preserve">
+    <value>Change Security Code Alert</value>
+  </data>
+  <data name="MemberWinLossLimit" xml:space="preserve">
+    <value>Member Win Loss Limit</value>
+  </data>
+  <data name="ProblemAccount" xml:space="preserve">
+    <value>Problem Account</value>
+  </data>
 </root>

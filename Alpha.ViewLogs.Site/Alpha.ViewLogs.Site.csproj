@@ -348,6 +348,21 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95067.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95069.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95064.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95065.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95066.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1184.xslt">
       <SubType>Designer</SubType>
     </Content>
