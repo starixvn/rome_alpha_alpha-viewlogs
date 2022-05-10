@@ -538,6 +538,26 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bitcoin\action_75635.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_75651.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_75650.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_70617.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_75649.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_70616.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_65575.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_75648.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_70615.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_65574.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_60537.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_75647.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_75646.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_70614.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_75645.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_70613.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_65573.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_70612.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_75644.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_65572.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\SabaCasino\action_60536.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VGaming\action_60530.xslt">
       <SubType>Designer</SubType>
     </Content>

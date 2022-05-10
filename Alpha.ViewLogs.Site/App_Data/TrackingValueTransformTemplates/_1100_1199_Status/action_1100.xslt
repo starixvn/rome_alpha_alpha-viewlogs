@@ -19,26 +19,10 @@
           <xsl:value-of select="@disablenumber" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('disableCasino')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disablecasino" />
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('isinternal')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@isinternal" />
-        </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
-        </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
         </td>
       </tr>
 

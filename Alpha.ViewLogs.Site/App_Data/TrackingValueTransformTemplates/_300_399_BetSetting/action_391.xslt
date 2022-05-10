@@ -53,6 +53,11 @@
                 <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
               </td>
             </xsl:when>
+            <xsl:when test="@productid">
+              <td class="colW1">
+                <xsl:value-of select="$productname" />
+              </td>
+            </xsl:when>
             <xsl:otherwise>
               <td class="colW1">
               </td>
