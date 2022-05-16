@@ -11,8 +11,10 @@
     @AssetStyles.Render($"/bundles/site-viewlogs/viewlogs-{Model.UserLevel}")
     <link rel="stylesheet" href="@ViewLogsStyles.GetAbsolutePath($"~/assets/bundles/default")" />
     @RenderSection("Styles", required: false)
+    @Alpha.Web.Helpers.GoogleAnalyticHepler.GtagScript()
 </head>
 <body>
+    @Alpha.Web.Helpers.GoogleAnalyticHepler.GtagNoScript()
     <div class="container-fluid page-viewlog">
         @Html.Action("Index", "Tab", new { tabName = ViewContext.RouteData.Values["controller"], area = "" })
         @RenderBody()
@@ -27,7 +29,6 @@
     @Html.Hidden("viewIPInfoPath", Model.ViewIPInfoPath)
 
     @RenderSection("Scripts", required: false)
-    @Alpha.Web.Helpers.GoogleAnalyticHepler.Render()
     @Html.Raw(Alpha.Logging.LogManagerAdapter.RenderJavascriptLogger())
 </body>
 </html>
