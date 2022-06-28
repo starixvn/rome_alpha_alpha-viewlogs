@@ -3046,24 +3046,24 @@
     <value>Bóng Rổ Saba-Thanh Toán Tối Đa Mỗi Trận</value>
   </data>
   <data name="BotName" xml:space="preserve">
-    <value>Bot Name</value>
+    <value>Tên bot</value>
   </data>
   <data name="ChatId" xml:space="preserve">
-    <value>Chat ID</value>
+    <value>ID trò chuyện</value>
   </data>
   <data name="AbnormalLoginAlert" xml:space="preserve">
-    <value>Abnormal Login Alert</value>
+    <value>Thông Báo Đăng Nhập Bất Thường</value>
   </data>
   <data name="ChangePasswordAlert" xml:space="preserve">
-    <value>Change Password Alert</value>
+    <value>Thông Báo Đổi Mật Khẩu</value>
   </data>
   <data name="ChangeSecurityCodeAlert" xml:space="preserve">
-    <value>Change Security Code Alert</value>
+    <value>Thông Báo Đổi Mã Bảo Mật</value>
   </data>
   <data name="MemberWinLossLimit" xml:space="preserve">
-    <value>Member Win Loss Limit</value>
+    <value>Giới Hạn Thắng Thua của Member</value>
   </data>
   <data name="ProblemAccount" xml:space="preserve">
-    <value>Problem Account</value>
+    <value>Tài Khoản Có Vấn Đề</value>
   </data>
 </root>

@@ -3262,24 +3262,24 @@
     <value>บาสเกตบอล Saba - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
   <data name="BotName" xml:space="preserve">
-    <value>Bot Name</value>
+    <value>ชื่อ Bot</value>
   </data>
   <data name="ChatId" xml:space="preserve">
-    <value>Chat ID</value>
+    <value>บัญชีสนทนา</value>
   </data>
   <data name="AbnormalLoginAlert" xml:space="preserve">
-    <value>Abnormal Login Alert</value>
+    <value>แจ้งเตือนการเข้าสู่ระบบผิดปกติ</value>
   </data>
   <data name="ChangePasswordAlert" xml:space="preserve">
-    <value>Change Password Alert</value>
+    <value>แจ้งเตือนเปลี่ยนรหัสผ่าน</value>
   </data>
   <data name="ChangeSecurityCodeAlert" xml:space="preserve">
-    <value>Change Security Code Alert</value>
+    <value>แจ้งเตือนเปลี่ยนรหัสความปลอดภัย</value>
   </data>
   <data name="MemberWinLossLimit" xml:space="preserve">
-    <value>Member Win Loss Limit</value>
+    <value>จำกัดยอดชนะ/แพ้ของสมาชิก</value>
   </data>
   <data name="ProblemAccount" xml:space="preserve">
-    <value>Problem Account</value>
+    <value>บัญชีที่มีปัญหา</value>
   </data>
 </root>
