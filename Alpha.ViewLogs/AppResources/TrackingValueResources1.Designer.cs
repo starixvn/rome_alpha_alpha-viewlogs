@@ -19,7 +19,7 @@ namespace Alpha.ViewLogs.AppResources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class TrackingValueResources {
@@ -1555,6 +1555,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Abnormal Login Alert.
+        /// </summary>
+        public static string AbnormalLoginAlert {
+            get {
+                return ResourceManager.GetString("AbnormalLoginAlert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Account Name.
         /// </summary>
         public static string AccName {
@@ -2005,6 +2014,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bot Name.
+        /// </summary>
+        public static string BotName {
+            get {
+                return ResourceManager.GetString("BotName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browser.
         /// </summary>
         public static string Browser {
@@ -2019,6 +2037,33 @@ namespace Alpha.ViewLogs.AppResources {
         public static string casinoNo {
             get {
                 return ResourceManager.GetString("casinoNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Password Alert.
+        /// </summary>
+        public static string ChangePasswordAlert {
+            get {
+                return ResourceManager.GetString("ChangePasswordAlert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Security Code Alert.
+        /// </summary>
+        public static string ChangeSecurityCodeAlert {
+            get {
+                return ResourceManager.GetString("ChangeSecurityCodeAlert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chat ID.
+        /// </summary>
+        public static string ChatId {
+            get {
+                return ResourceManager.GetString("ChatId", resourceCulture);
             }
         }
         
@@ -5884,6 +5929,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Member Win Loss Limit.
+        /// </summary>
+        public static string MemberWinLossLimit {
+            get {
+                return ResourceManager.GetString("MemberWinLossLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Soccer-Min Bet.
         /// </summary>
         public static string minb {
@@ -7419,6 +7473,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string privateGames {
             get {
                 return ResourceManager.GetString("privateGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Problem Account.
+        /// </summary>
+        public static string ProblemAccount {
+            get {
+                return ResourceManager.GetString("ProblemAccount", resourceCulture);
             }
         }
         

@@ -3261,4 +3261,25 @@
   <data name="MPPMv2Saba" xml:space="preserve">
     <value>บาสเกตบอล Saba - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
+  <data name="BotName" xml:space="preserve">
+    <value>ชื่อ Bot</value>
+  </data>
+  <data name="ChatId" xml:space="preserve">
+    <value>บัญชีสนทนา</value>
+  </data>
+  <data name="AbnormalLoginAlert" xml:space="preserve">
+    <value>แจ้งเตือนการเข้าสู่ระบบผิดปกติ</value>
+  </data>
+  <data name="ChangePasswordAlert" xml:space="preserve">
+    <value>แจ้งเตือนเปลี่ยนรหัสผ่าน</value>
+  </data>
+  <data name="ChangeSecurityCodeAlert" xml:space="preserve">
+    <value>แจ้งเตือนเปลี่ยนรหัสความปลอดภัย</value>
+  </data>
+  <data name="MemberWinLossLimit" xml:space="preserve">
+    <value>จำกัดยอดชนะ/แพ้ของสมาชิก</value>
+  </data>
+  <data name="ProblemAccount" xml:space="preserve">
+    <value>บัญชีที่มีปัญหา</value>
+  </data>
 </root>

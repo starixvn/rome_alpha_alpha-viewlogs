@@ -3270,4 +3270,25 @@
   <data name="MPPMv2Saba" xml:space="preserve">
     <value>沙巴籃球-單場最高派彩</value>
   </data>
+  <data name="BotName" xml:space="preserve">
+    <value>Bot 名稱</value>
+  </data>
+  <data name="ChatId" xml:space="preserve">
+    <value>聊天 ID</value>
+  </data>
+  <data name="AbnormalLoginAlert" xml:space="preserve">
+    <value>警惕登入不正常</value>
+  </data>
+  <data name="ChangePasswordAlert" xml:space="preserve">
+    <value>警惕更換密碼</value>
+  </data>
+  <data name="ChangeSecurityCodeAlert" xml:space="preserve">
+    <value>警惕更換保安碼</value>
+  </data>
+  <data name="MemberWinLossLimit" xml:space="preserve">
+    <value>會員輸贏限額</value>
+  </data>
+  <data name="ProblemAccount" xml:space="preserve">
+    <value>問題賬號</value>
+  </data>
 </root>

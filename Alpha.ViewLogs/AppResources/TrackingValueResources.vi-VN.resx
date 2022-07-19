@@ -3045,4 +3045,25 @@
   <data name="MPPMv2Saba" xml:space="preserve">
     <value>Bóng Rổ Saba-Thanh Toán Tối Đa Mỗi Trận</value>
   </data>
+  <data name="BotName" xml:space="preserve">
+    <value>Tên bot</value>
+  </data>
+  <data name="ChatId" xml:space="preserve">
+    <value>ID trò chuyện</value>
+  </data>
+  <data name="AbnormalLoginAlert" xml:space="preserve">
+    <value>Thông Báo Đăng Nhập Bất Thường</value>
+  </data>
+  <data name="ChangePasswordAlert" xml:space="preserve">
+    <value>Thông Báo Đổi Mật Khẩu</value>
+  </data>
+  <data name="ChangeSecurityCodeAlert" xml:space="preserve">
+    <value>Thông Báo Đổi Mã Bảo Mật</value>
+  </data>
+  <data name="MemberWinLossLimit" xml:space="preserve">
+    <value>Giới Hạn Thắng Thua của Member</value>
+  </data>
+  <data name="ProblemAccount" xml:space="preserve">
+    <value>Tài Khoản Có Vấn Đề</value>
+  </data>
 </root>
