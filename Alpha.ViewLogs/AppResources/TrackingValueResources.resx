@@ -3333,4 +3333,10 @@
   <data name="ProblemAccount" xml:space="preserve">
     <value>Problem Account</value>
   </data>
+  <data name="WinningThreshold" xml:space="preserve">
+    <value>Winning Threshold</value>
+  </data>
+  <data name="LosingThreshold" xml:space="preserve">
+    <value>Losing Threshold</value>
+  </data>
 </root>

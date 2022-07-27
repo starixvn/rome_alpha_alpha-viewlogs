@@ -5155,6 +5155,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Losing Threshold.
+        /// </summary>
+        public static string LosingThreshold {
+            get {
+                return ResourceManager.GetString("LosingThreshold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Master Position Taking.
         /// </summary>
         public static string m {
@@ -9669,6 +9678,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string wed {
             get {
                 return ResourceManager.GetString("wed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Winning Threshold.
+        /// </summary>
+        public static string WinningThreshold {
+            get {
+                return ResourceManager.GetString("WinningThreshold", resourceCulture);
             }
         }
         

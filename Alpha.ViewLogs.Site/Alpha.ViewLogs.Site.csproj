@@ -363,6 +363,15 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95066.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\MyMonitorAccounts\action_31804.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\MyMonitorAccounts\action_31803.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\MyMonitorAccounts\action_31801.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1184.xslt">
       <SubType>Designer</SubType>
     </Content>
