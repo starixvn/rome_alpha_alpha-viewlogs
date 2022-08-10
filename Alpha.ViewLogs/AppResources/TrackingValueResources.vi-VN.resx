@@ -3067,9 +3067,9 @@
     <value>Tài Khoản Có Vấn Đề</value>
   </data>
   <data name="WinningThreshold" xml:space="preserve">
-    <value>Winning Threshold</value>
+    <value>Giới Hạn Thắng</value>
   </data>
   <data name="LosingThreshold" xml:space="preserve">
-    <value>Losing Threshold</value>
+    <value>Giới Hạn Thua</value>
   </data>
 </root>
