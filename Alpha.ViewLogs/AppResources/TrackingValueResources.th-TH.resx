@@ -3283,9 +3283,9 @@
     <value>บัญชีที่มีปัญหา</value>
   </data>
   <data name="WinningThreshold" xml:space="preserve">
-    <value>Winning Threshold</value>
+    <value>เกณฑ์การชนะ</value>
   </data>
   <data name="LosingThreshold" xml:space="preserve">
-    <value>Losing Threshold</value>
+    <value>เกณฑ์การแพ้</value>
   </data>
 </root>

@@ -186,7 +186,7 @@
 
         public string FormatUnlimitedNew(string unlimited)
         {
-            return string.Equals(unlimited, "unlimited", StringComparison.OrdinalIgnoreCase) ? Resources.Unlimited : unlimited;
+            return unlimited.Replace("unlimited", Resources.Unlimited);
         }
 
         public bool IsVisibleKeno(string hideKeno)

@@ -3292,9 +3292,9 @@
     <value>问题账号</value>
   </data>
   <data name="WinningThreshold" xml:space="preserve">
-    <value>Winning Threshold</value>
+    <value>赢限額</value>
   </data>
   <data name="LosingThreshold" xml:space="preserve">
-    <value>Losing Threshold</value>
+    <value>输限額</value>
   </data>
 </root>
