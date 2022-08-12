@@ -363,6 +363,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95066.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31802.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31804.xslt">
       <SubType>Designer</SubType>
     </Content>
