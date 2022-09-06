@@ -7072,6 +7072,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My Watchlist.
+        /// </summary>
+        public static string MyWatchlist {
+            get {
+                return ResourceManager.GetString("MyWatchlist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
         public static string New {
@@ -9696,6 +9705,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string WriteLog {
             get {
                 return ResourceManager.GetString("WriteLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrong Password Alert.
+        /// </summary>
+        public static string WrongPasswordAlert {
+            get {
+                return ResourceManager.GetString("WrongPasswordAlert", resourceCulture);
             }
         }
         

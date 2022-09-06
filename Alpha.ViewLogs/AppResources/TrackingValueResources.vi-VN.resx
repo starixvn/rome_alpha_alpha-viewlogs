@@ -3072,4 +3072,10 @@
   <data name="LosingThreshold" xml:space="preserve">
     <value>Giới Hạn Thua</value>
   </data>
+  <data name="WrongPasswordAlert" xml:space="preserve">
+    <value>Thông báo sai mật khẩu</value>
+  </data>
+  <data name="MyWatchlist" xml:space="preserve">
+    <value>Danh Sách Theo Dõi</value>
+  </data>
 </root>

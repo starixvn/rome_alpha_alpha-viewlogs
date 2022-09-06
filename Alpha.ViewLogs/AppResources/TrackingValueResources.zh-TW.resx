@@ -3297,4 +3297,10 @@
   <data name="LosingThreshold" xml:space="preserve">
     <value>輸限額</value>
   </data>
+  <data name="WrongPasswordAlert" xml:space="preserve">
+    <value>密碼錯誤提示</value>
+  </data>
+  <data name="MyWatchlist" xml:space="preserve">
+    <value>我的監控列表</value>
+  </data>
 </root>
