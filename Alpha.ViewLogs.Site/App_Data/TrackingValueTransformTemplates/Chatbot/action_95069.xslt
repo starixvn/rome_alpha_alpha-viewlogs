@@ -6,6 +6,30 @@
     <table class="tblDesc">
       <tr>
         <xsl:choose>
+		    <xsl:when test="@wrongpasswordalert">
+			    <td class="colW1">
+				    <xsl:value-of select="xslLogFormat:GetLogResource('WrongPasswordAlert')" />
+			    </td>
+			    <td class="colW2">
+				    <xsl:value-of select="@wrongpasswordalert" />
+			    </td>
+		    </xsl:when>
+			<xsl:when test="@systemannouncement">
+				<td class="colW1">
+					<xsl:value-of select="xslLogFormat:GetLogResource('SystemAnnouncement')" />
+				</td>
+				<td class="colW2">
+					<xsl:value-of select="@systemannouncement" />
+				</td>
+			</xsl:when>
+			<xsl:when test="@mywatchlist">
+				<td class="colW1">
+					<xsl:value-of select="xslLogFormat:GetLogResource('MyWatchlist')" />
+				</td>
+				<td class="colW2">
+					<xsl:value-of select="@mywatchlist" />
+				</td>
+			</xsl:when>
           <xsl:when test="@abnormalloginalert">
             <td class="colW1">
               <xsl:value-of select="xslLogFormat:GetLogResource('AbnormalLoginAlert')" />

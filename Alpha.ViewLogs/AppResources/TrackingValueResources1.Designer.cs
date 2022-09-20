@@ -5155,6 +5155,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Losing Threshold.
+        /// </summary>
+        public static string LosingThreshold {
+            get {
+                return ResourceManager.GetString("LosingThreshold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Master Position Taking.
         /// </summary>
         public static string m {
@@ -7059,6 +7068,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string mrecommend {
             get {
                 return ResourceManager.GetString("mrecommend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Watchlist.
+        /// </summary>
+        public static string MyWatchlist {
+            get {
+                return ResourceManager.GetString("MyWatchlist", resourceCulture);
             }
         }
         
@@ -9673,11 +9691,29 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Winning Threshold.
+        /// </summary>
+        public static string WinningThreshold {
+            get {
+                return ResourceManager.GetString("WinningThreshold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Write Log.
         /// </summary>
         public static string WriteLog {
             get {
                 return ResourceManager.GetString("WriteLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrong Password Alert.
+        /// </summary>
+        public static string WrongPasswordAlert {
+            get {
+                return ResourceManager.GetString("WrongPasswordAlert", resourceCulture);
             }
         }
         

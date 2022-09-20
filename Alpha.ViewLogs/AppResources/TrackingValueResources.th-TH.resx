@@ -3282,4 +3282,16 @@
   <data name="ProblemAccount" xml:space="preserve">
     <value>บัญชีที่มีปัญหา</value>
   </data>
+  <data name="WinningThreshold" xml:space="preserve">
+    <value>เกณฑ์การชนะ</value>
+  </data>
+  <data name="LosingThreshold" xml:space="preserve">
+    <value>เกณฑ์การแพ้</value>
+  </data>
+  <data name="WrongPasswordAlert" xml:space="preserve">
+    <value>แจ้งเตือนรหัสผ่านผิด</value>
+  </data>
+  <data name="MyWatchlist" xml:space="preserve">
+    <value>รายการเฝ้าดูของฉัน</value>
+  </data>
 </root>

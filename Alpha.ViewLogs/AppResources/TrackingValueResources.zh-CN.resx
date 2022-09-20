@@ -3291,4 +3291,16 @@
   <data name="ProblemAccount" xml:space="preserve">
     <value>问题账号</value>
   </data>
+  <data name="WinningThreshold" xml:space="preserve">
+    <value>赢限額</value>
+  </data>
+  <data name="LosingThreshold" xml:space="preserve">
+    <value>输限額</value>
+  </data>
+  <data name="WrongPasswordAlert" xml:space="preserve">
+    <value>密码错误提示</value>
+  </data>
+  <data name="MyWatchlist" xml:space="preserve">
+    <value>我的监控列表</value>
+  </data>
 </root>

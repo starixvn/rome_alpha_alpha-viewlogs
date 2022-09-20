@@ -184,6 +184,11 @@
             return unlimited == -1 ? Resources.Unlimited : unlimited.ToString();
         }
 
+        public string FormatUnlimitedNew(string unlimited)
+        {
+            return unlimited.Replace("unlimited", Resources.Unlimited);
+        }
+
         public bool IsVisibleKeno(string hideKeno)
         {
             return hideKeno == "0";
