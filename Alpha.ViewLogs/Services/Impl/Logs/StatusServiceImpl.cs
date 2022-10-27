@@ -1,6 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Alpha.ViewLogs.Models;
     using Criteria;
     using Criteria.Status;
     using DataAccesses;

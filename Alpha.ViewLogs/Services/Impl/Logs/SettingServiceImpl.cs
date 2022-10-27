@@ -1,7 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Runtime.CompilerServices;
+    using Alpha.ViewLogs.Models;
     using Criteria;
     using Criteria.Setting;
     using DataAccesses;
@@ -22,6 +25,14 @@
             base(dynamicRepository, customerService, baseDataAccess, session, cacheService)
         {
         }
+
+        protected override IEnumerable<Log> GetLogs(LogParam logParam)
+        {
+            var logs = base.GetLogs(logParam);
+
+            return logs.Where(i => !IsBetLimitOfRNGSlot(i));
+        }
+
 
         internal override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
@@ -61,5 +72,9 @@
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),
                 logParam.IsInternal);
         }
+
+        static private bool IsBetLimitOfRNGSlot(Log log)
+            => log.ActionId == 391 && 
+            (log.TrackingValue.Contains("ProductID=\"53\"") || log.TrackingValue.Contains("ProductID=\"22\""));
     }
 }
