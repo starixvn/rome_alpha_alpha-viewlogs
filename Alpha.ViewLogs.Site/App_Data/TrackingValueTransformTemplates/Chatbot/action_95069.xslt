@@ -86,6 +86,14 @@
               <xsl:value-of select="@yesterdaywinloss" />
             </td>
           </xsl:when>
+		    <xsl:when test="@otp">
+			    <td class="colW1">
+				    <xsl:value-of select="xslLogFormat:GetLogResource('OTP')" />
+			    </td>
+			    <td class="colW2">
+				    <xsl:value-of select="@otp" />
+			    </td>
+		    </xsl:when>
           <xsl:otherwise>
             <td class="colW1"></td>
             <td class="colW2"></td>

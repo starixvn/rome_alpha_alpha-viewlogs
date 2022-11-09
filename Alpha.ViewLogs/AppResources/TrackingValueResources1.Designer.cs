@@ -7351,6 +7351,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to OTP.
+        /// </summary>
+        public static string OTP {
+            get {
+                return ResourceManager.GetString("OTP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Outstanding.
         /// </summary>
         public static string Outstanding {

@@ -3345,4 +3345,7 @@
   <data name="MyWatchlist" xml:space="preserve">
     <value>My Watchlist</value>
   </data>
+  <data name="OTP" xml:space="preserve">
+    <value>OTP</value>
+  </data>
 </root>
