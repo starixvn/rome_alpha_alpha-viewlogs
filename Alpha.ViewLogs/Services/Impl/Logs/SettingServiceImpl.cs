@@ -75,6 +75,6 @@
 
         static private bool IsBetLimitOfRNGSlot(Log log)
             => log.ActionId == 391 && 
-            (log.TrackingValue.Contains("ProductID=\"53\"") || log.TrackingValue.Contains("ProductID=\"22\""));
+            (log.TrackingValue.Contains("ProductID=\"18\"") || log.TrackingValue.Contains("ProductID=\"22\""));
     }
 }
