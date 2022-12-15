@@ -3078,4 +3078,7 @@
   <data name="MyWatchlist" xml:space="preserve">
     <value>Danh Sách Theo Dõi</value>
   </data>
+  <data name="OTP" xml:space="preserve">
+    <value>OTP (Mã xác thực)</value>
+  </data>
 </root>

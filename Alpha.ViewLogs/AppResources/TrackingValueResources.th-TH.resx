@@ -3294,4 +3294,7 @@
   <data name="MyWatchlist" xml:space="preserve">
     <value>รายการเฝ้าดูของฉัน</value>
   </data>
+  <data name="OTP" xml:space="preserve">
+    <value>OTP (รหัสผ่านใช้ครั้งเดียว)</value>
+  </data>
 </root>

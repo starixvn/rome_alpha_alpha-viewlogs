@@ -3346,6 +3346,6 @@
     <value>My Watchlist</value>
   </data>
   <data name="OTP" xml:space="preserve">
-    <value>OTP</value>
+    <value>OTP (One Time Password)</value>
   </data>
 </root>
