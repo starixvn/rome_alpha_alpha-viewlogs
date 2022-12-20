@@ -3303,4 +3303,7 @@
   <data name="MyWatchlist" xml:space="preserve">
     <value>我的监控列表</value>
   </data>
+  <data name="OTP" xml:space="preserve">
+    <value>OTP（一次性密码）</value>
+  </data>
 </root>
