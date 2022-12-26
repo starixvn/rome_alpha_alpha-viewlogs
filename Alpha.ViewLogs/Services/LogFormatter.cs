@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Services
 {
     using Alpha.ViewLogs.Params;
+    using System;
 
     public interface LogFormatter
     {
@@ -53,5 +54,9 @@
         string GetPlatformOfSearchAndCopyFunction(string value);
 
         string FormatNickName(string nickname);
+
+        string FormatApiKeyScopes(string scopes);
+
+        string FormatDate(string date);
     }
 }

@@ -1789,6 +1789,33 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to API Key Name.
+        /// </summary>
+        public static string APIKeyName {
+            get {
+                return ResourceManager.GetString("APIKeyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Win Loss Detail Report.
+        /// </summary>
+        public static string APIKeyScope_1 {
+            get {
+                return ResourceManager.GetString("APIKeyScope_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Outstanding Report.
+        /// </summary>
+        public static string APIKeyScope_2 {
+            get {
+                return ResourceManager.GetString("APIKeyScope_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apply downlines.
         /// </summary>
         public static string Apply_downlines {
@@ -2622,6 +2649,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string ErrMsg {
             get {
                 return ResourceManager.GetString("ErrMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expiration Date.
+        /// </summary>
+        public static string ExpirationDate {
+            get {
+                return ResourceManager.GetString("ExpirationDate", resourceCulture);
             }
         }
         
@@ -7081,6 +7117,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Never.
+        /// </summary>
+        public static string Never {
+            get {
+                return ResourceManager.GetString("Never", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
         public static string New {
@@ -7608,6 +7653,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string sat {
             get {
                 return ResourceManager.GetString("sat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scopes.
+        /// </summary>
+        public static string Scopes {
+            get {
+                return ResourceManager.GetString("Scopes", resourceCulture);
             }
         }
         

@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Resources;
+    using System.Text;
     using System.Xml.Linq;
     using AppResources;
     using Constants;
@@ -332,5 +333,27 @@
 
         public string FormatNickName(string nickname)
             => isHideNickname ? string.Empty : nickname;
+
+        public string FormatApiKeyScopes(string scopes)
+        {
+            var scopeArr = scopes.Split(';');
+            var result = new StringBuilder();
+            foreach (var scope in scopeArr)
+            {
+                result.Append(TrackingValueResources.ResourceManager.GetString("APIKeyScope_" + scope)).Append(", ");
+            }
+
+            return result.ToString().Remove(result.Length - 2, 2);
+        }
+
+        public string FormatDate(string date)
+        {
+            if (date.Equals("NULL", StringComparison.OrdinalIgnoreCase))
+            {
+                return TrackingValueResources.ResourceManager.GetString("Never");
+            }
+
+            return DateTimeHelper.ToLongDateWithSlash(DateTime.Parse(date));
+        }
     }
 }
