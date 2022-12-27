@@ -159,7 +159,6 @@
             {
                 { "161_90", UserPermission.IsShowNumberGroup },
                 { "disablevirtualsports", UserPermission.IsEnableProduct(ProductIdConstants.VirtualSports) },
-                { "disablegolddeluxe", UserPermission.IsShowGoldDeluxeSettingForCredit },
                 { "44", UserPermission.IsShowSportsbook2 }
             };
 
