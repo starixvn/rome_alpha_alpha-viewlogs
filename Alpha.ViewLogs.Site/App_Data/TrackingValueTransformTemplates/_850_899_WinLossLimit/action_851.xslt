@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslLogFormat="urn:LogFormat">
+  <xsl:include href="../headerDetailBuilder.xslt"/>
   <xsl:param name="IsInternal" select="1"></xsl:param>
   <xsl:output method="html" indent="no" />
 
@@ -28,14 +29,7 @@
     </table>
     <xsl:for-each select="losslimit">
       <div class="headerSportTypeDetail">
-        <xsl:choose>
-          <xsl:when test="@productid">
-            <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
-          </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="buildDetailHeader" />
       </div>
       <table class="tblDesc-ex">
         <tr>
