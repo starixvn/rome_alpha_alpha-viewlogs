@@ -366,6 +366,15 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31802.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31808.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31810.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31809.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31804.xslt">
       <SubType>Designer</SubType>
     </Content>
