@@ -16,6 +16,8 @@
 
     public class SettingServiceImpl : BaseService, LogService
     {
+        private const int RNGSlotBetLimitActionId = 391;
+
         public SettingServiceImpl(
              IDynamicRepository dynamicRepository,
              CustomerService customerService,
@@ -74,7 +76,7 @@
         }
 
         static private bool IsBetLimitOfRNGSlot(Log log)
-            => log.ActionId == 391 && 
+            => log.ActionId == RNGSlotBetLimitActionId && 
             (log.TrackingValue.Contains("ProductID=\"18\"") || log.TrackingValue.Contains("ProductID=\"22\""));
     }
 }
