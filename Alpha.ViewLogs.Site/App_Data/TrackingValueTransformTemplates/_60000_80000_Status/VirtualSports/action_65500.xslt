@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslLogFormat="urn:LogFormat">
+  <xsl:include href="../../headerDetailBuilder.xslt"/>
   <xsl:output method="html" indent="no" />
   <xsl:template match="acc_admin_disablenewproductstatusupd">
     <table class="tblDesc">
@@ -23,7 +24,7 @@
     
     <xsl:for-each select="productstatus">
       <div class="headerSportTypeDetail">
-        <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
+        <xsl:call-template name="buildDetailHeader" />
       </div>
       <table  class="tblDesc">
         <tr>

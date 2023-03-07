@@ -1250,9 +1250,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75506.xslt">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_60501.xslt">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65502.xslt">
       <SubType>Designer</SubType>
     </Content>
