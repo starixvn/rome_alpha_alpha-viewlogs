@@ -34,6 +34,8 @@
 
         string FormatLanguage(string value);
 
+        string FormatLanguageKey(string value);
+
         bool IsShowMyanmarOdds();
 
         bool IsVisibleKeno(string hideKeno);

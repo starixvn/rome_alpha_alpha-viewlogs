@@ -296,6 +296,22 @@
                     .Replace(LanguageCode.Thai.ToLowerInvariant(), GetLogResource(LanguageCode.Thai))
                     .Replace(LanguageCode.Vietnamese.ToLowerInvariant(), GetLogResource(LanguageCode.Vietnamese));
 
+        public string FormatLanguageKey(string value)
+            => value.Replace($">{DBLanguageKey.English.ToLowerInvariant()}<", $">{GetLogResource(LanguageCode.English)}<")
+                    .Replace($"({DBLanguageKey.English.ToLowerInvariant()})", $"({GetLogResource(LanguageCode.English)})")
+                    .Replace($">{DBLanguageKey.ChineseSimplified.ToLowerInvariant()}<", $">{GetLogResource(LanguageCode.ChineseSimplified)}<")
+                    .Replace($"({DBLanguageKey.ChineseSimplified.ToLowerInvariant()})", $"({GetLogResource(LanguageCode.ChineseSimplified)})")
+                    .Replace($">{DBLanguageKey.ChineseTraditional.ToLowerInvariant()}<", $">{GetLogResource(LanguageCode.ChineseTraditional)}<")
+                    .Replace($"({DBLanguageKey.ChineseTraditional.ToLowerInvariant()})", $"({GetLogResource(LanguageCode.ChineseTraditional)})")
+                    .Replace($">{DBLanguageKey.Japanese.ToLowerInvariant()}<", $">{GetLogResource(LanguageCode.Japanese)}<")
+                    .Replace($"({DBLanguageKey.Japanese.ToLowerInvariant()})", $"({GetLogResource(LanguageCode.Japanese)})")
+                    .Replace($">{DBLanguageKey.Thai.ToLowerInvariant()}<", $">{GetLogResource(LanguageCode.Thai)}<")
+                    .Replace($"({DBLanguageKey.Thai.ToLowerInvariant()})", $"({GetLogResource(LanguageCode.Thai)})")
+                    .Replace($">{DBLanguageKey.Korean.ToLowerInvariant()}<", $">{GetLogResource(LanguageCode.Korean)}<")
+                    .Replace($"({DBLanguageKey.Korean.ToLowerInvariant()})", $"({GetLogResource(LanguageCode.Korean)})")
+                    .Replace($">{DBLanguageKey.Vietnamese.ToLowerInvariant()}<", $">{GetLogResource(LanguageCode.Vietnamese)}<")
+                    .Replace($"({DBLanguageKey.Vietnamese.ToLowerInvariant()})", $"({GetLogResource(LanguageCode.Vietnamese)})");
+
         public string FormatChatbotSelfDestructionPeriod(string value)
             => value.Replace(SelfdestructionPeriod.FifteenMinutes.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.FifteenMinutes)))
                     .Replace(SelfdestructionPeriod.ThirtyMinutes.ToLowerInvariant(), GetLogResource(nameof(SelfdestructionPeriod.ThirtyMinutes)))
