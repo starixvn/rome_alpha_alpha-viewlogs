@@ -462,79 +462,80 @@
                       </td>
                     </tr>
 
-                    <tr class="headerSportTypeDetail">
-                      <td colspan="6">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" />
-                      </td>
-                    </tr>
-                    <tr >
+                    <xsl:if test="@v161mpt_81">
+                      <tr class="headerSportTypeDetail">
+                        <td colspan="6">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" />
+                        </td>
+                      </tr>
+                      <tr >
 
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_81')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mpt_81" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_83')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mpt_83" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_88')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mpt_88" />
-                      </td>
-                    </tr>
-                    <tr >
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_81')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mpt_81" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_83')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mpt_83" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_88')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mpt_88" />
+                        </td>
+                      </tr>
+                      <tr >
 
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mpt_86" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_85')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mlivept_85" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mlivept_86" />
-                      </td>
-                    </tr>
-                    <tr >
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mpt_86" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_85')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mlivept_85" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mlivept_86" />
+                        </td>
+                      </tr>
+                      <tr >
 
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_87')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mlivept_87" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_89')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mlivept_89" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_90')" />
-                        </xsl:if>
-                      </td>
-                      <td class="colW2">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="@v161mlivept_90" />
-                        </xsl:if>
-                      </td>
-                    </tr>
-
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_87')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mlivept_87" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_89')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mlivept_89" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_90')" />
+                          </xsl:if>
+                        </td>
+                        <td class="colW2">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="@v161mlivept_90" />
+                          </xsl:if>
+                        </td>
+                      </tr>
+                    </xsl:if>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
                         <xsl:value-of select="xslLogFormat:GetLogResource('OtherSports')" />
@@ -970,76 +971,77 @@
                       </td>
                     </tr>
 
-                    <tr class="headerSportTypeDetail">
-                      <td colspan="6">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mpt_mem_81')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@isa_v161mpt_mem_81" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mpt_mem_83')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@isa_v161mpt_mem_83" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mpt_mem_88')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@isa_v161mpt_mem_88" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mpt_mem_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@isa_v161mpt_mem_86" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mlivept_mem_85')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@isa_v161mlivept_mem_85" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mlivept_mem_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@isa_v161mlivept_mem_86" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mlivept_mem_87')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@isa_v161mlivept_mem_87" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mlivept_mem_89')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@isa_v161mlivept_mem_89" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mlivept_mem_90')" />
-                        </xsl:if>
-                      </td>
-                      <td class="colW2">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="@isa_v161mlivept_mem_90" />
-                        </xsl:if>
-                      </td>
-                    </tr>
-
+                    <xsl:if test="@isa_v161mpt_mem_81">
+                      <tr class="headerSportTypeDetail">
+                        <td colspan="6">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mpt_mem_81')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@isa_v161mpt_mem_81" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mpt_mem_83')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@isa_v161mpt_mem_83" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mpt_mem_88')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@isa_v161mpt_mem_88" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mpt_mem_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@isa_v161mpt_mem_86" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mlivept_mem_85')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@isa_v161mlivept_mem_85" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mlivept_mem_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@isa_v161mlivept_mem_86" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mlivept_mem_87')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@isa_v161mlivept_mem_87" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mlivept_mem_89')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@isa_v161mlivept_mem_89" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="xslLogFormat:GetLogResource('isa_v161mlivept_mem_90')" />
+                          </xsl:if>
+                        </td>
+                        <td class="colW2">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="@isa_v161mlivept_mem_90" />
+                          </xsl:if>
+                        </td>
+                      </tr>
+                    </xsl:if>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
                         <xsl:value-of select="xslLogFormat:GetLogResource('othersports')" />
@@ -1474,76 +1476,78 @@
                         <xsl:value-of select="@a_v11mpt_mem_10" />
                       </td>
                     </tr>
-                    <tr class="headerSportTypeDetail">
-                      <td colspan="6">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mpt_mem_81')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@a_v161mpt_mem_81" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mpt_mem_83')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@a_v161mpt_mem_83" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mpt_mem_88')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@a_v161mpt_mem_88" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mpt_mem_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@a_v161mpt_mem_86" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mlivept_mem_85')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@a_v161mlivept_mem_85" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mlivept_mem_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@a_v161mlivept_mem_86" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mlivept_mem_87')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@a_v161mlivept_mem_87" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mlivept_mem_89')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@a_v161mlivept_mem_89" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mlivept_mem_90')" />
-                        </xsl:if>
-                      </td>
-                      <td class="colW2">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="@a_v161mlivept_mem_90" />
-                        </xsl:if>
-                      </td>
-                    </tr>
 
+                    <xsl:if test="@a_v161mpt_mem_81">
+                      <tr class="headerSportTypeDetail">
+                        <td colspan="6">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mpt_mem_81')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@a_v161mpt_mem_81" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mpt_mem_83')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@a_v161mpt_mem_83" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mpt_mem_88')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@a_v161mpt_mem_88" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mpt_mem_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@a_v161mpt_mem_86" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mlivept_mem_85')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@a_v161mlivept_mem_85" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mlivept_mem_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@a_v161mlivept_mem_86" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mlivept_mem_87')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@a_v161mlivept_mem_87" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mlivept_mem_89')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@a_v161mlivept_mem_89" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="xslLogFormat:GetLogResource('a_v161mlivept_mem_90')" />
+                          </xsl:if>
+                        </td>
+                        <td class="colW2">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="@a_v161mlivept_mem_90" />
+                          </xsl:if>
+                        </td>
+                      </tr>
+                    </xsl:if>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
                         <xsl:value-of select="xslLogFormat:GetLogResource('othersports')" />

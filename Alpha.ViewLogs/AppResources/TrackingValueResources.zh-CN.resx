@@ -3324,4 +3324,7 @@
   <data name="Never" xml:space="preserve">
     <value>绝不</value>
   </data>
+  <data name="MaxPerBall" xml:space="preserve">
+    <value>单粒球最高投注</value>
+  </data>
 </root>

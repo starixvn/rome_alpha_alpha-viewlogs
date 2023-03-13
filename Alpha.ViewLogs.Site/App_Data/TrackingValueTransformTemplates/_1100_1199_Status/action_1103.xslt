@@ -38,14 +38,16 @@
         <td class="colW2">
           <xsl:value-of select="@disable43_1" />
         </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('DisableNumber')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@disablenumber" />
-        </td>
+        <xsl:if test="@disablenumber">
+          <td class="colW1">
+            <xsl:value-of select="xslLogFormat:GetLogResource('DisableNumber')" />
+          </td>
+          <td class="colW2">
+            <xsl:value-of select="@disablenumber" />
+          </td>
+        </xsl:if>
       </tr>
-      <xsl:if test="xslLogFormat:IsVisibleKeno(@hidekeno) = 'True'">
+      <xsl:if test="hidekeno and xslLogFormat:IsVisibleKeno(@hidekeno) = 'True'">
         <tr >
           <td class="colW1">
             <xsl:value-of select="xslLogFormat:GetDisabledKenoBetTypeName('1501')" />

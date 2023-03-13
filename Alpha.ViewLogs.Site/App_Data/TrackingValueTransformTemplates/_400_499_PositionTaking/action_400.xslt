@@ -6,383 +6,383 @@
   <xsl:template match="acc_customerinsmember_com">
     <xsl:choose>
       <xsl:when test="@custid">
-          <table class="tblDesc">
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('username')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@username" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('fname')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@fname" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('lname')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@lname" />
-              </td>
-            </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('address')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@address" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('postal')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@postal" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('city')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@city" />
-              </td>
-            </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('state')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@state" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('country')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@country" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('phone')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@phone" />
-              </td>
-            </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('mphone')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@mphone" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('email')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@email" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('fax')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@fax" />
-              </td>
-            </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('refcode1')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@refcode1" />
-              </td>
-              <xsl:choose>
-                <xsl:when test="$IsInternal = 0">
-                  <td class="colW1"></td>
-                  <td class="colW2"></td>
-                </xsl:when>
-                <xsl:otherwise>
-                  <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('creator')" />
-                  </td>
-                  <td class="colW2">
+        <table class="tblDesc">
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('username')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@username" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('fname')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@fname" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('lname')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@lname" />
+            </td>
+          </tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('address')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@address" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('postal')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@postal" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('city')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@city" />
+            </td>
+          </tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('state')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@state" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('country')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@country" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('phone')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@phone" />
+            </td>
+          </tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('mphone')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mphone" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('email')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@email" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('fax')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@fax" />
+            </td>
+          </tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('refcode1')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@refcode1" />
+            </td>
+            <xsl:choose>
+              <xsl:when test="$IsInternal = 0">
+                <td class="colW1"></td>
+                <td class="colW2"></td>
+              </xsl:when>
+              <xsl:otherwise>
+                <td class="colW1">
+                  <xsl:value-of select="xslLogFormat:GetLogResource('creator')" />
+                </td>
+                <td class="colW2">
 
-                    <xsl:value-of select="@creator" />
-                  </td>
+                  <xsl:value-of select="@creator" />
+                </td>
 
-                </xsl:otherwise>
-              </xsl:choose>
+              </xsl:otherwise>
+            </xsl:choose>
 
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('site')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@site" />
-              </td>
-            </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('currency')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@currency" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('credit')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@credit" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('groupa')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@groupa" />
-              </td>
-            </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('groupb')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@groupb" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('groupc')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@groupc" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('groupd')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@groupd" />
-              </td>
-            </tr>
-            <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('site')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@site" />
+            </td>
+          </tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('currency')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@currency" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('credit')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@credit" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('groupa')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@groupa" />
+            </td>
+          </tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('groupb')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@groupb" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('groupc')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@groupc" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('groupd')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@groupd" />
+            </td>
+          </tr>
+          <tr>
 
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('discountcs')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@discountcs" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('discount1x2')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@discount1x2" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('isinternal')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@isinternal" />
-              </td>
-            </tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('discountcs')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@discountcs" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('discount1x2')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@discount1x2" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('isinternal')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@isinternal" />
+            </td>
+          </tr>
 
-            <tr>
+          <tr>
 
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('minb')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@minb" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('maxb')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@maxb" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('mpm')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@mpm" />
-              </td>
-            </tr>
-            <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('minb')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@minb" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('maxb')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@maxb" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('mpm')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mpm" />
+            </td>
+          </tr>
+          <tr>
 
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('minbv2')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@minbv2" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('maxbv2')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@maxbv2" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('mpmv2')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@mpmv2" />
-              </td>
-            </tr>
-            <tr>
-
-
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('minbv3')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@minbv3" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('maxbv3')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@maxbv3" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('mpmv3')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@mpmv3" />
-              </td>
-            </tr>
-            <tr>
-
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('minbv5')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@minbv5" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('maxbv5')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@maxbv5" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('mpmv5')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@mpmv5" />
-              </td>
-            </tr>
-            <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('minbv2')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@minbv2" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('maxbv2')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@maxbv2" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('mpmv2')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mpmv2" />
+            </td>
+          </tr>
+          <tr>
 
 
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('minbv8')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@minbv8" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('maxbv8')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@maxbv8" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('mpmv8')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@mpmv8" />
-              </td>
-            </tr>
-            <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('minbv3')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@minbv3" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('maxbv3')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@maxbv3" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('mpmv3')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mpmv3" />
+            </td>
+          </tr>
+          <tr>
+
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('minbv5')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@minbv5" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('maxbv5')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@maxbv5" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('mpmv5')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mpmv5" />
+            </td>
+          </tr>
+          <tr>
 
 
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('minbv10')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@minbv10" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('maxbv10')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@maxbv10" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('mpmv10')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@mpmv10" />
-              </td>
-            </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('minbv11')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@minbv11" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('maxbv11')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@maxbv11" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('mpmv11')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@mpmv11" />
-              </td>
-            </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('minbv99')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@minbv99" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('maxbv99')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@maxbv99" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('mpmv99')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@mpmv99" />
-              </td>
-            </tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('minbv8')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@minbv8" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('maxbv8')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@maxbv8" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('mpmv8')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mpmv8" />
+            </td>
+          </tr>
+          <tr>
 
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@language" />
-              </td>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('errcode')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@errcode" />
-              </td>
-            </tr>
-            <tr>
-              <td class="colW1">
-                <xsl:value-of select="xslLogFormat:GetLogResource('errmsg')" />
-              </td>
-              <td class="colW2">
-                <xsl:value-of select="@errmsg" />
-              </td>
-              <td class="colW1"></td>
-              <td class="colW2"></td>
-              <td class="colW1"></td>
-              <td class="colW2"></td>
-            </tr>
-          </table>
+
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('minbv10')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@minbv10" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('maxbv10')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@maxbv10" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('mpmv10')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mpmv10" />
+            </td>
+          </tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('minbv11')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@minbv11" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('maxbv11')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@maxbv11" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('mpmv11')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mpmv11" />
+            </td>
+          </tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('minbv99')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@minbv99" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('maxbv99')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@maxbv99" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('mpmv99')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@mpmv99" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@language" />
+            </td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('errcode')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@errcode" />
+            </td>
+          </tr>
+          <tr>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('errmsg')" />
+            </td>
+            <td class="colW2">
+              <xsl:value-of select="@errmsg" />
+            </td>
+            <td class="colW1"></td>
+            <td class="colW2"></td>
+            <td class="colW1"></td>
+            <td class="colW2"></td>
+          </tr>
+        </table>
 
 
       </xsl:when>
@@ -792,78 +792,80 @@
                       </td>
                     </tr>
 
-                    <tr class="headerSportTypeDetail">
-                      <td colspan="6">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('NumberGame')" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161spt_81')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161spt_81" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161spt_83')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161spt_83" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161spt_88')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161spt_88" />
-                      </td>
+                    <xsl:if test="@v161spt_81">
+                      <tr class="headerSportTypeDetail">
+                        <td colspan="6">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('NumberGame')" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161spt_81')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161spt_81" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161spt_83')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161spt_83" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161spt_88')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161spt_88" />
+                        </td>
 
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161spt_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161spt_86" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161slivept_85')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161slivept_85" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161slivept_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161slivept_86" />
-                      </td>
+                      </tr>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161spt_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161spt_86" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161slivept_85')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161slivept_85" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161slivept_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161slivept_86" />
+                        </td>
 
-                    </tr>
-                    <tr>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161slivept_87')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161slivept_87" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161slivept_89')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161slivept_89" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="xslLogFormat:GetLogResource('v161slivept_90')" />
-                        </xsl:if>
-                      </td>
-                      <td class="colW2">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="@v161slivept_90" />
-                        </xsl:if>
-                      </td>
+                      </tr>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161slivept_87')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161slivept_87" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161slivept_89')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161slivept_89" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="xslLogFormat:GetLogResource('v161slivept_90')" />
+                          </xsl:if>
+                        </td>
+                        <td class="colW2">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="@v161slivept_90" />
+                          </xsl:if>
+                        </td>
 
-                    </tr>
+                      </tr>
+                    </xsl:if>
                   </table>
                 </div>
               </td>
@@ -1259,79 +1261,80 @@
                       </td>
                     </tr>
 
-                    <tr class="headerSportTypeDetail">
-                      <td colspan="6">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('NumberGame')" />
-                      </td>
-                    </tr>
-                    <tr >
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_81')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mpt_81" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_83')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mpt_83" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_88')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mpt_88" />
-                      </td>
+                    <xsl:if test="@v161mpt_81">
+                      <tr class="headerSportTypeDetail">
+                        <td colspan="6">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('NumberGame')" />
+                        </td>
+                      </tr>
+                      <tr >
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_81')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mpt_81" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_83')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mpt_83" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_88')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mpt_88" />
+                        </td>
 
-                    </tr>
-                    <tr >
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mpt_86" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_85')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mlivept_85" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mlivept_86" />
-                      </td>
+                      </tr>
+                      <tr >
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mpt_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mpt_86" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_85')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mlivept_85" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mlivept_86" />
+                        </td>
 
-                    </tr>
-                    <tr >
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_87')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mlivept_87" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_89')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161mlivept_89" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_90')" />
-                        </xsl:if>
-                      </td>
-                      <td class="colW2">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="@v161mlivept_90" />
-                        </xsl:if>
-                      </td>
+                      </tr>
+                      <tr >
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_87')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mlivept_87" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_89')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161mlivept_89" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="xslLogFormat:GetLogResource('v161mlivept_90')" />
+                          </xsl:if>
+                        </td>
+                        <td class="colW2">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="@v161mlivept_90" />
+                          </xsl:if>
+                        </td>
 
-                    </tr>
-
+                      </tr>
+                    </xsl:if>
                   </table>
                 </div>
               </td>
@@ -1730,78 +1733,80 @@
                       </td>
                     </tr>
 
-                    <tr class="headerSportTypeDetail">
-                      <td colspan="6">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('NumberGame')" />
-                      </td>
-                    </tr>
-                    <tr >
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_81')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161apt_81" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_83')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161apt_83" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_88')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161apt_88" />
-                      </td>
+                    <xsl:if test="@v161apt_81">
+                      <tr class="headerSportTypeDetail">
+                        <td colspan="6">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('NumberGame')" />
+                        </td>
+                      </tr>
+                      <tr >
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_81')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161apt_81" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_83')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161apt_83" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_88')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161apt_88" />
+                        </td>
 
-                    </tr>
-                    <tr >
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161apt_86" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_85')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161alivept_85" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_86')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161alivept_86" />
-                      </td>
+                      </tr>
+                      <tr >
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161apt_86" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_85')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161alivept_85" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_86')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161alivept_86" />
+                        </td>
 
-                    </tr>
-                    <tr >
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_87')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161alivept_87" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_89')" />
-                      </td>
-                      <td class="colW2">
-                        <xsl:value-of select="@v161alivept_89" />
-                      </td>
-                      <td class="colW1">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_90')" />
-                        </xsl:if>
-                      </td>
-                      <td class="colW2">
-                        <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                          <xsl:value-of select="@v161alivept_90" />
-                        </xsl:if>
-                      </td>
+                      </tr>
+                      <tr >
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_87')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161alivept_87" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_89')" />
+                        </td>
+                        <td class="colW2">
+                          <xsl:value-of select="@v161alivept_89" />
+                        </td>
+                        <td class="colW1">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_90')" />
+                          </xsl:if>
+                        </td>
+                        <td class="colW2">
+                          <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                            <xsl:value-of select="@v161alivept_90" />
+                          </xsl:if>
+                        </td>
 
-                    </tr>
+                      </tr>
+                    </xsl:if>
                   </table>
                 </div>
               </td>

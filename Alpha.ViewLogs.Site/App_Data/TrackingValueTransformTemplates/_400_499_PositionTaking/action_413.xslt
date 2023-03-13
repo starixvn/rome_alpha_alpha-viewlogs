@@ -66,12 +66,14 @@
 							  <td class="colW2">
 								  <xsl:value-of select="@updptv11" />
 							  </td>
-                <td class="colW1">
-                  <xsl:value-of select="xslLogFormat:GetLogResource('Updptv161')" />
-                </td>
-                <td class="colW2">
-                  <xsl:value-of select="@updptv161" />
-                </td>
+                <xsl:if test="@updptv161">
+                  <td class="colW1">
+                    <xsl:value-of select="xslLogFormat:GetLogResource('Updptv161')" />
+                  </td>
+                  <td class="colW2">
+                    <xsl:value-of select="@updptv161" />
+                  </td>
+                </xsl:if>
               </tr>
               <tr >
 
@@ -414,60 +416,77 @@
                   <td class="colTitle"></td>
                   <td class="colValue"></td>
                 </tr>
-
-                <tr class="headerSportTypeDetail">
-                  <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" /></td>
-                </tr>
-                <tr >
-                  <td class="colTitle"><xsl:value-of select="xslLogFormat:GetLogResource('v161apt_81')" /></td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v161apt_81" />
-                  </td>
-                  <td class="colTitle"><xsl:value-of select="xslLogFormat:GetLogResource('v161apt_83')" /></td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v161apt_83" />
-                  </td>
-                  <td class="colTitle"><xsl:value-of select="xslLogFormat:GetLogResource('v161apt_88')" /></td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v161apt_88" />
-                  </td>
-                </tr>
-                <tr >
-                  <td class="colTitle"><xsl:value-of select="xslLogFormat:GetLogResource('v161apt_86')" /></td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v161apt_86" />
-                  </td>
-                  <td class="colTitle"><xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_85')" /></td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v161alivept_85" />
-                  </td>
-                  <td class="colTitle"><xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_86')" /></td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v161alivept_86" />
-                  </td>
-                </tr>
-                <tr >
-                  <td class="colTitle"><xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_87')" /></td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v161alivept_87" />
-                  </td>
-                  <td class="colTitle">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_89')" />
-                  </td>
-                  <td class="colValue">
-                    <xsl:value-of select="@v161alivept_89" />
-                  </td>
-                  <td class="colTitle">
-                    <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                      <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_90')" />
-                    </xsl:if>
-                  </td>
-                  <td class="colValue">
-                    <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
-                      <xsl:value-of select="@v161alivept_90" />
-                    </xsl:if>
-                  </td>
-                </tr>
+                <xsl:if test="@v161apt_81">
+                  <tr class="headerSportTypeDetail">
+                    <td colspan="6">
+                      <xsl:value-of select="xslLogFormat:GetLogResource('numbergame')" />
+                    </td>
+                  </tr>
+                  <tr >
+                    <td class="colTitle">
+                      <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_81')" />
+                    </td>
+                    <td class="colValue">
+                      <xsl:value-of select="@v161apt_81" />
+                    </td>
+                    <td class="colTitle">
+                      <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_83')" />
+                    </td>
+                    <td class="colValue">
+                      <xsl:value-of select="@v161apt_83" />
+                    </td>
+                    <td class="colTitle">
+                      <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_88')" />
+                    </td>
+                    <td class="colValue">
+                      <xsl:value-of select="@v161apt_88" />
+                    </td>
+                  </tr>
+                  <tr >
+                    <td class="colTitle">
+                      <xsl:value-of select="xslLogFormat:GetLogResource('v161apt_86')" />
+                    </td>
+                    <td class="colValue">
+                      <xsl:value-of select="@v161apt_86" />
+                    </td>
+                    <td class="colTitle">
+                      <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_85')" />
+                    </td>
+                    <td class="colValue">
+                      <xsl:value-of select="@v161alivept_85" />
+                    </td>
+                    <td class="colTitle">
+                      <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_86')" />
+                    </td>
+                    <td class="colValue">
+                      <xsl:value-of select="@v161alivept_86" />
+                    </td>
+                  </tr>
+                  <tr >
+                    <td class="colTitle">
+                      <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_87')" />
+                    </td>
+                    <td class="colValue">
+                      <xsl:value-of select="@v161alivept_87" />
+                    </td>
+                    <td class="colTitle">
+                      <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_89')" />
+                    </td>
+                    <td class="colValue">
+                      <xsl:value-of select="@v161alivept_89" />
+                    </td>
+                    <td class="colTitle">
+                      <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                        <xsl:value-of select="xslLogFormat:GetLogResource('v161alivept_90')" />
+                      </xsl:if>
+                    </td>
+                    <td class="colValue">
+                      <xsl:if test="xslLogFormat:IsVisible('161_90') = 'True'">
+                        <xsl:value-of select="@v161alivept_90" />
+                      </xsl:if>
+                    </td>
+                  </tr>
+                </xsl:if>
                 <tr class="headerSportTypeDetail">
                   <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('othersports')" /></td>
                 </tr>
