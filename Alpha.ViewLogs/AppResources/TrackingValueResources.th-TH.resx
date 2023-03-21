@@ -3298,13 +3298,13 @@
     <value>OTP (รหัสผ่านใช้ครั้งเดียว)</value>
   </data>
   <data name="APIKeyName" xml:space="preserve">
-    <value>API Key Name</value>
+    <value>ชื่อ API Key</value>
   </data>
   <data name="ExpirationDate" xml:space="preserve">
     <value>วันที่หมดอายุ</value>
   </data>
   <data name="Scopes" xml:space="preserve">
-    <value>Scopes</value>
+    <value>ระดับการเข้าถึง</value>
   </data>
   <data name="APIKeyScope_1" xml:space="preserve">
     <value>รายงานรายละเอียด ชนะ แพ้ </value>
@@ -3313,6 +3313,6 @@
     <value>รายงานการเดิมพันที่ยังไม่สิ้นสุด</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>ไม่เคย</value>
+    <value>ไม่มีกำหนด</value>
   </data>
 </root>
