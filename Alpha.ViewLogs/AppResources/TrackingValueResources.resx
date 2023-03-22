@@ -2676,7 +2676,7 @@
   <data name="maxv161livept_87" xml:space="preserve">
     <value>Max Live Next High/Low</value>
   </data>
-  <data name="DisableNumber" xml:space="preserve">
+  <data name="Disable161_81" xml:space="preserve">
     <value>Disabled Number Game</value>
   </data>
   <data name="isa_v161mpt_mem_81" xml:space="preserve">
@@ -3368,5 +3368,8 @@
   </data>
   <data name="MaxPerBall" xml:space="preserve">
     <value>Max Per Ball</value>
+  </data>
+  <data name="DisableNumber" xml:space="preserve">
+    <value>Disabled Number Game</value>
   </data>
 </root>

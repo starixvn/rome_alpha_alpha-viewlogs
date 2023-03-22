@@ -2365,6 +2365,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Disabled Number Game.
+        /// </summary>
+        public static string Disable161_81 {
+            get {
+                return ResourceManager.GetString("Disable161_81", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disabled Virtual Sports.
         /// </summary>
         public static string Disable180_1201 {
