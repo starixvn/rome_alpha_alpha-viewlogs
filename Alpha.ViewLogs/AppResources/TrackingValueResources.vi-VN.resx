@@ -3081,4 +3081,22 @@
   <data name="OTP" xml:space="preserve">
     <value>OTP (Mã xác thực)</value>
   </data>
+  <data name="APIKeyName" xml:space="preserve">
+    <value>Tên Khóa API</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>Ngày hết hạn</value>
+  </data>
+  <data name="Scopes" xml:space="preserve">
+    <value>Phạm vi</value>
+  </data>
+  <data name="APIKeyScope_1" xml:space="preserve">
+    <value>Báo Cáo Chi Tiết Thắng Thua</value>
+  </data>
+  <data name="APIKeyScope_2" xml:space="preserve">
+    <value>Báo Cáo Tiền Chưa Xử Lý</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Không bao giờ</value>
+  </data>
 </root>

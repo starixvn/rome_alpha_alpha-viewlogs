@@ -3348,4 +3348,22 @@
   <data name="OTP" xml:space="preserve">
     <value>OTP (One Time Password)</value>
   </data>
+  <data name="APIKeyName" xml:space="preserve">
+    <value>API Key Name</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>Expiration Date</value>
+  </data>
+  <data name="Scopes" xml:space="preserve">
+    <value>Scopes</value>
+  </data>
+  <data name="APIKeyScope_1" xml:space="preserve">
+    <value>Win Loss Detail Report</value>
+  </data>
+  <data name="APIKeyScope_2" xml:space="preserve">
+    <value>Outstanding Report</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Never</value>
+  </data>
 </root>

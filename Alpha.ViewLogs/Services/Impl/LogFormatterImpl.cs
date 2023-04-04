@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Resources;
+    using System.Text;
     using System.Xml.Linq;
     using AppResources;
     using Constants;
@@ -332,5 +333,65 @@
 
         public string FormatNickName(string nickname)
             => isHideNickname ? string.Empty : nickname;
+
+        public string FormatApiKeyScopes(string scopes)
+        {
+            //<span class="valuechanged">2</span><span class="valueold">(1;2)</span>
+            var node = XElement.Parse("<root>" + scopes + "</root>").Elements().ToList();
+            var nodeCount = node.Count;
+            const int nodeCountInCaseOfHavingOldValue = 2;
+            if(nodeCount == nodeCountInCaseOfHavingOldValue)
+            {
+                var newValue = node.First().Value;
+                var oldValue = node.Last().Value;
+                node.First().Value = ConvertApiKeyScopes(newValue);
+                node.Last().Value = $"({ConvertApiKeyScopes(oldValue.Substring(1, oldValue.Length - 2))})";
+
+                return $"{node.First()}{node.Last()}";
+            }
+
+            return ConvertApiKeyScopes(scopes);
+        }
+
+        private static string ConvertApiKeyScopes(string scopes)
+        {
+            var scopeArr = scopes.Split(';');
+            var result = new StringBuilder();
+            foreach (var scope in scopeArr)
+            {
+                result.Append(TrackingValueResources.ResourceManager.GetString("APIKeyScope_" + scope)).Append(", ");
+            }
+
+            return result.ToString().Remove(result.Length - 2, 2);
+        }
+
+        public string FormatDate(string date)
+        {
+            //<span class=\"valuechanged\">feb  9 2023 12:00am</span><span class=\"valueold\">(null)</span>
+            var node = XElement.Parse("<root>" + date + "</root>").Elements().ToList();
+            var nodeCount = node.Count;
+            const int nodeCountInCaseOfHavingOldValue = 2;
+            if (nodeCount == nodeCountInCaseOfHavingOldValue)
+            {
+                var newValue = node.First().Value;
+                var oldValue = node.Last().Value;
+                node.First().Value = ConvertApiKeyDate(newValue);
+                node.Last().Value = $"({ConvertApiKeyDate(oldValue.Substring(1, oldValue.Length - 2))})";
+
+                return $"{node.First()}{node.Last()}";
+            }
+
+            return ConvertApiKeyDate(date);
+        }
+
+        private static string ConvertApiKeyDate(string date)
+        {
+            if (date.Equals("NULL", StringComparison.OrdinalIgnoreCase))
+            {
+                return TrackingValueResources.ResourceManager.GetString("Never");
+            }
+
+            return DateTimeHelper.ToLongDateWithSlash(DateTime.Parse(date));
+        }
     }
 }
