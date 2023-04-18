@@ -1319,6 +1319,16 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75507.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_95084.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_95083.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_95082.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_95081.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_95080.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_95079.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_697.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_699.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_95085.xslt" />
