@@ -39,10 +39,14 @@
           <xsl:value-of select="@disable43_1" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('DisableNumber')" />
+          <xsl:if test="@disablenumber">
+            <xsl:value-of select="xslLogFormat:GetLogResource('DisableNumber')" />
+          </xsl:if>
         </td>
         <td class="colW2">
-          <xsl:value-of select="@disablenumber" />
+          <xsl:if test="@disablenumber">
+            <xsl:value-of select="@disablenumber" />
+          </xsl:if>
         </td>
       </tr>
       <xsl:if test="xslLogFormat:IsVisibleKeno(@hidekeno) = 'True'">
@@ -158,7 +162,7 @@
 
           </td>
           <td class="colW2">
-            
+
           </td>
           <td class="colW1">
           </td>
@@ -167,9 +171,21 @@
         </tr>
 
       </xsl:if>
-      <xsl:for-each select="@*">
-        <xsl:value-of select="xslLogFormat:RenderCustStatus(name(), .)"/>
-      </xsl:for-each>
+
+      <xsl:choose>
+        <xsl:when test="@disablenumber">
+          <!-- Old log before migrate Number Game & RNG Keno to DCS-->
+          <xsl:for-each select="@*[name() != 'disable202_1501']">
+            <xsl:value-of select="xslLogFormat:RenderCustStatus(name(), .)"/>
+          </xsl:for-each>
+        </xsl:when>
+        <xsl:otherwise>
+          <!-- New log -->
+          <xsl:for-each select="@*">
+            <xsl:value-of select="xslLogFormat:RenderCustStatus(name(), .)"/>
+          </xsl:for-each>
+        </xsl:otherwise>
+      </xsl:choose>
     </table>
   </xsl:template>
 </xsl:stylesheet>

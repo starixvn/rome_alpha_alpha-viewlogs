@@ -157,7 +157,6 @@
         {
             var custStatusDict = new Dictionary<string, bool>
             {
-                { "161_90", UserPermission.IsShowNumberGroup },
                 { "disablevirtualsports", UserPermission.IsEnableProduct(ProductIdConstants.VirtualSports) },
                 { "44", UserPermission.IsShowSportsbook2 }
             };

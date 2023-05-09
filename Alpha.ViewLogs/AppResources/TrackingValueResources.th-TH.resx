@@ -3315,4 +3315,7 @@
   <data name="Never" xml:space="preserve">
     <value>ไม่มีกำหนด</value>
   </data>
+  <data name="MaxPerBall" xml:space="preserve">
+    <value> เดิมพันสูงสุดต่อบอล </value>
+  </data>
 </root>

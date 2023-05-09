@@ -2463,7 +2463,7 @@
   <data name="maxv161livept_87" xml:space="preserve">
     <value>PT lớn nhất cho Banh kế tiếp - Cao/Thấp</value>
   </data>
-  <data name="DisableNumber" xml:space="preserve">
+  <data name="Disable161_81" xml:space="preserve">
     <value>Không cho phép chơi Number Game</value>
   </data>
   <data name="isa_v161mpt_mem_81" xml:space="preserve">
@@ -3098,5 +3098,11 @@
   </data>
   <data name="Never" xml:space="preserve">
     <value>Không bao giờ</value>
+  </data>
+  <data name="MaxPerBall" xml:space="preserve">
+    <value>Cược tối đa cho 1 lượt banh</value>
+  </data>
+  <data name="DisableNumber" xml:space="preserve">
+    <value>Không cho phép chơi Number Game</value>
   </data>
 </root>

@@ -218,11 +218,11 @@
       <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.3.1.3\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.6.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.6.5\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.7.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.7.1\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.3.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.3.3\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.3.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.3.7\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Utilities, Version=3.0.0.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Utilities.3.0.0.4\lib\net40\Sunplus.Agent.Utilities.dll</HintPath>
@@ -349,14 +349,14 @@
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
     <Content Include="App_Data\TrackingValueTransformTemplates\ApiKey\action_6102.xslt">
-			<SubType>Designer</SubType>
-		</Content>
-		<Content Include="App_Data\TrackingValueTransformTemplates\ApiKey\action_6101.xslt">
-			<SubType>Designer</SubType>
-		</Content>
-		<Content Include="App_Data\TrackingValueTransformTemplates\ApiKey\action_6100.xslt">
-			<SubType>Designer</SubType>
-		</Content>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\ApiKey\action_6101.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\ApiKey\action_6100.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95067.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -472,6 +472,12 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_220027_220029_BetSetting\action_220029.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_220027_220029_BetSetting\action_220028.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_220027_220029_BetSetting\action_220027.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220031_220034_BetSetting_Settingtype23\action_220032.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220031_220034_BetSetting_Settingtype23\action_220033.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220031_220034_BetSetting_Settingtype23\action_220034.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_220031_220034_BetSetting_Settingtype23\action_220031.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_399.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_395.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_392.xslt" />
