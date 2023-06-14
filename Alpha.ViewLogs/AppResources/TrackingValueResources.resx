@@ -3378,4 +3378,13 @@
   <data name="AutoTransfer" xml:space="preserve">
     <value>Auto Transfer</value>
   </data>
+  <data name="TemplateName" xml:space="preserve">
+    <value>Template Name</value>
+  </data>
+  <data name="SuperPT" xml:space="preserve">
+    <value>Super PT</value>
+  </data>
+  <data name="SelectedByDefault" xml:space="preserve">
+    <value>Selected By Default</value>
+  </data>
 </root>

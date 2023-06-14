@@ -9,5 +9,7 @@
         string GetSportName(object sportId);
 
         string GetProductName(int productId);
+
+        string GetSubProductGroupName(int subGroupId);
     }
 }

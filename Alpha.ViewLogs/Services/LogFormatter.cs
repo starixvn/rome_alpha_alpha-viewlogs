@@ -58,5 +58,7 @@
         string FormatApiKeyScopes(string scopes);
 
         string FormatDate(string date);
+
+        string GetSubProductGroupName(int subGroupId);
     }
 }

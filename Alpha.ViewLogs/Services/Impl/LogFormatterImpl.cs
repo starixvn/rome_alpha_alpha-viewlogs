@@ -10,7 +10,6 @@
     using Constants;
     using Helpers;
     using Params;
-    using Sunplus.Agent.Model.Definitions;
 
     public class LogFormatterImpl : LogFormatter
     {
@@ -392,6 +391,11 @@
             }
 
             return DateTimeHelper.ToLongDateWithSlash(DateTime.Parse(date));
+        }
+
+        public string GetSubProductGroupName(int subGroupId)
+        {
+            return remotingRef.GetSubProductGroupName(subGroupId);
         }
     }
 }

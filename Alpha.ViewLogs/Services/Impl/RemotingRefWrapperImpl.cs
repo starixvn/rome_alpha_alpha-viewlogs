@@ -54,6 +54,11 @@
                 string.Empty);
         }
 
+        public string GetSubProductGroupName(int subGroupId)
+        {
+            return remotingRefService.GetResourceDataByRefIdAndResourceId("SubGroup", subGroupId.ToString(), LanguageCode, string.Empty);
+        }
+
         private static string LanguageCode
             => Thread.CurrentThread.CurrentCulture.Name;
     }

@@ -397,6 +397,15 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31801.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_475.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_477.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_476.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1184.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -1679,7 +1688,9 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_101.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\action_101.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\action_102.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_3.xslt" />
     <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />

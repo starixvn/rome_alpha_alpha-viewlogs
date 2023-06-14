@@ -7702,6 +7702,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Selected By Default.
+        /// </summary>
+        public static string SelectedByDefault {
+            get {
+                return ResourceManager.GetString("SelectedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 7 days.
         /// </summary>
         public static string SevenDays {
@@ -8089,6 +8098,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Super PT.
+        /// </summary>
+        public static string SuperPT {
+            get {
+                return ResourceManager.GetString("SuperPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Suspended.
         /// </summary>
         public static string suspended {
@@ -8157,6 +8175,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string SystemId_8 {
             get {
                 return ResourceManager.GetString("SystemId_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Template Name.
+        /// </summary>
+        public static string TemplateName {
+            get {
+                return ResourceManager.GetString("TemplateName", resourceCulture);
             }
         }
         
