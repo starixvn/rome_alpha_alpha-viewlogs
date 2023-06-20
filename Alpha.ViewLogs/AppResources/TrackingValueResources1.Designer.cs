@@ -1771,6 +1771,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow Auto PT.
+        /// </summary>
+        public static string AllowAutoPT {
+            get {
+                return ResourceManager.GetString("AllowAutoPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Allow Update PT.
         /// </summary>
         public static string allowupdpt {
@@ -2014,6 +2023,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet Setting.
+        /// </summary>
+        public static string BetSetting {
+            get {
+                return ResourceManager.GetString("BetSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bet Type.
         /// </summary>
         public static string bettype {
@@ -2172,6 +2190,42 @@ namespace Alpha.ViewLogs.AppResources {
         public static string closedOnly {
             get {
                 return ResourceManager.GetString("closedOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combo 2.
+        /// </summary>
+        public static string Combo2 {
+            get {
+                return ResourceManager.GetString("Combo2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combo 3-5.
+        /// </summary>
+        public static string Combo35 {
+            get {
+                return ResourceManager.GetString("Combo35", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combo 6+ &amp; System Parlay.
+        /// </summary>
+        public static string ComboOver6 {
+            get {
+                return ResourceManager.GetString("ComboOver6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commision.
+        /// </summary>
+        public static string Commision {
+            get {
+                return ResourceManager.GetString("Commision", resourceCulture);
             }
         }
         
@@ -4813,6 +4867,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is Auto.
+        /// </summary>
+        public static string IsAuto {
+            get {
+                return ResourceManager.GetString("IsAuto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is Default.
         /// </summary>
         public static string isDefault {
@@ -5133,6 +5196,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string LetstalkId {
             get {
                 return ResourceManager.GetString("LetstalkId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Live.
+        /// </summary>
+        public static string Live {
+            get {
+                return ResourceManager.GetString("Live", resourceCulture);
             }
         }
         
@@ -5475,6 +5547,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string maxlivept_8 {
             get {
                 return ResourceManager.GetString("maxlivept_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max Payout Per Match.
+        /// </summary>
+        public static string MaxPayoutPerMatch {
+            get {
+                return ResourceManager.GetString("MaxPayoutPerMatch", resourceCulture);
             }
         }
         
@@ -7450,6 +7531,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parlay Max Payout.
+        /// </summary>
+        public static string ParlayMaxPayout {
+            get {
+                return ResourceManager.GetString("ParlayMaxPayout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Password {
@@ -7545,6 +7635,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string PlsInputUsername {
             get {
                 return ResourceManager.GetString("PlsInputUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position Taking (%) Template.
+        /// </summary>
+        public static string PositionTakingTemplate {
+            get {
+                return ResourceManager.GetString("PositionTakingTemplate", resourceCulture);
             }
         }
         
@@ -7734,6 +7833,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string sicbo {
             get {
                 return ResourceManager.GetString("sicbo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Single Match Parlay.
+        /// </summary>
+        public static string SingleMatchParlay {
+            get {
+                return ResourceManager.GetString("SingleMatchParlay", resourceCulture);
             }
         }
         

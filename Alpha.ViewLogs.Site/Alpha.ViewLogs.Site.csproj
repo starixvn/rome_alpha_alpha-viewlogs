@@ -376,6 +376,12 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95066.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_95090.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_95088.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31802.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -1550,7 +1556,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_207.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_213.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_216.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_237.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_237.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_238.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_239.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_240.xslt" />

@@ -60,5 +60,11 @@
         string FormatDate(string date);
 
         string GetSubProductGroupName(int subGroupId);
+
+        string GetProductGroupName(int productGroupId);
+
+        string GetSportbookSMACommissionName(int sportType, int betType);
+
+        string GetBetSettingName(int productGroupId, int groupType, int sportType, int betType);
     }
 }

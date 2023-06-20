@@ -339,7 +339,7 @@
             var node = XElement.Parse("<root>" + scopes + "</root>").Elements().ToList();
             var nodeCount = node.Count;
             const int nodeCountInCaseOfHavingOldValue = 2;
-            if(nodeCount == nodeCountInCaseOfHavingOldValue)
+            if (nodeCount == nodeCountInCaseOfHavingOldValue)
             {
                 var newValue = node.First().Value;
                 var oldValue = node.Last().Value;
@@ -396,6 +396,21 @@
         public string GetSubProductGroupName(int subGroupId)
         {
             return remotingRef.GetSubProductGroupName(subGroupId);
+        }
+
+        public string GetProductGroupName(int productGroupId)
+        {
+            return remotingRef.GetProductGroupName(productGroupId);
+        }
+
+        public string GetSportbookSMACommissionName(int sportType, int betType)
+        {
+            return remotingRef.GetSportbookSMACommissionName(sportType, betType);
+        }
+
+        public string GetBetSettingName(int productGroupId, int groupType, int sportType, int betType)
+        {
+            return remotingRef.GetBetSettingName(productGroupId, groupType, sportType, betType);
         }
     }
 }

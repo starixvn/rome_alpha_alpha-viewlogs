@@ -36,10 +36,26 @@
             {
                 var newNodes = trackingValueDoc.DocumentElement.ChildNodes[i];
                 var oldNodes = trackingValueOldDoc.DocumentElement.ChildNodes[i];
-                FormatDiffAttributes(newNodes.Attributes, oldNodes.Attributes, isShowOldValue);
+                FormatChildNode(newNodes, oldNodes, isShowOldValue);
             }
 
             return trackingValueDoc.InnerXml;
+        }
+
+        private void FormatChildNode(XmlNode newNode, XmlNode oldNode, Boolean isShowOldValue)
+        {
+            FormatDiffAttributes(newNode.Attributes, oldNode.Attributes, isShowOldValue);
+
+            var childNodeCount = newNode.ChildNodes.Count;
+            if(childNodeCount == 0)
+            {
+                return;
+            }
+
+            for(int i = 0; i < childNodeCount; i++)
+            {
+                FormatChildNode(newNode.ChildNodes[i], oldNode.ChildNodes[i], isShowOldValue);
+            }
         }
 
         private static void FormatDiffAttributes(

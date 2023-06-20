@@ -59,6 +59,21 @@
             return remotingRefService.GetResourceDataByRefIdAndResourceId("SubGroup", subGroupId.ToString(), LanguageCode, string.Empty);
         }
 
+        public string GetProductGroupName(int productGroupId)
+        {
+            return remotingRefService.GetResourceDataByRefIdAndResourceId("ProductGroup", productGroupId.ToString(), LanguageCode, string.Empty);
+        }
+
+        public string GetSportbookSMACommissionName(int sportType, int betType)
+        {
+            return remotingRefService.GetResourceDataByRefIdAndResourceId("SB_Comm_SMA", $"1_150_{sportType}_{betType}", LanguageCode, string.Empty);
+        }
+
+        public string GetBetSettingName(int productGroupId, int groupType, int sportType, int betType)
+        {
+            return remotingRefService.GetResourceDataByRefIdAndResourceId("G_GT_Sport_Bettype", $"{productGroupId}_{groupType}_{sportType}_{betType}", LanguageCode, string.Empty);
+        }
+
         private static string LanguageCode
             => Thread.CurrentThread.CurrentCulture.Name;
     }
