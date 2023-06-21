@@ -72,30 +72,30 @@
           <xsl:value-of select="@language" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('suspended')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@suspended" />
-        </td>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@subaccname" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
+      </tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('site')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@site" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('suspended')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@suspended" />
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('errcode')" />
