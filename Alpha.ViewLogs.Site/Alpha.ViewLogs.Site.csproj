@@ -376,6 +376,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95066.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_1197.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_95090.xslt">
       <SubType>Designer</SubType>
     </Content>

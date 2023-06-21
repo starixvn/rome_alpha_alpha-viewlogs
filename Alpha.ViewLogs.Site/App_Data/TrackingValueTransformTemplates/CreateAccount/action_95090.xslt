@@ -52,25 +52,19 @@
           <xsl:value-of select="@credit"/>
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('AllowAutoPT')"/>
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@fname"/>
-        </td>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('PositionTakingTemplate')"/>
         </td>
         <td class="colW2">
           <xsl:value-of select="@templatename"/>
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('transferoption')" />
         </td>
         <td class="colW2" >
           <xsl:value-of select="xslLogFormat:TransferConditionFromCode(@transferoption)" />
         </td>
+      </tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
         </td>
@@ -83,14 +77,14 @@
         <td class="colW2">
           <xsl:value-of select="@suspended" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@subaccname" />
         </td>
+      </tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
@@ -103,19 +97,23 @@
         <td class="colW2">
           <xsl:value-of select="@site" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('errcode')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@errcode" />
         </td>
+      </tr>
+      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('errmsg')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@errmsg" />
+        </td>
+        <td class="colW1">
+        </td>
+        <td class="colW2">
         </td>
         <td class="colW1">
         </td>
