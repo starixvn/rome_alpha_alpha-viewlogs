@@ -15,6 +15,9 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('SelectedByDefault')" />
         </td>
         <td rowspan="2">
+          <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
+        </td>
+        <td rowspan="2">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
       </tr>
@@ -36,6 +39,9 @@
         </xsl:for-each>
         <td class="colW2">
           <xsl:value-of select="@isdefault" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@subaccname" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
