@@ -8,7 +8,15 @@ body {
 $sporttype-detail-bg: #d3d6db;
 $header-group-bg: #b25900;
 $height-td: 28px;
-
+// new style 
+$bg-main: #fff;
+$border-main: #d1d1d1;
+$bg-header-tbl1: #BCCBDC;
+$bg-header-tbl2: #CFDAE5;
+$bg-header-tbl3: #DFE6ED;
+$bg-header-tbl4: #EDF2F7;
+$border-table: #a4a4a4;
+$color-header-table: #444;
 .page-viewlog {
     padding: 0;
 }
@@ -31,7 +39,7 @@ $height-td: 28px;
         vertical-align: middle;
 
         #txt-username {
-            width: 200px;
+            
         }
 
         .monpickr-wrap-parent {
@@ -63,7 +71,109 @@ $height-td: 28px;
 .tblRpt .tblDesc tbody tr td {
     white-space: initial;
 }
+.tb-ver2 {
+    .form-inline {
+        input[type='text'], select {
+            border-radius: 3px !important;
+            border: 1px solid #d1d1d1;
+            box-shadow: none;
+            height: 32px !important;
 
+            &:not(.daypickr-selected-day) {
+                width: 200px;
+            }
+        }
+    }
+
+    .btn-submit {
+        box-shadow: none;
+        border-radius: 3px;
+        margin: 0;
+        padding: 0 16px;
+        background-color: #0b599c;
+        height: 32px !important;
+
+        &:hover, &:focus {
+            background-color: #0a5494;
+        }
+    }
+
+    .monpickr-super-wrapper .monpickr-label {
+        margin: 10px 12px 3px 12px;
+    }
+
+    #content {
+        padding: 15px 11px;
+        border-radius: 3px;
+        background: $bg-main;
+        border: 1px solid $border-main;
+    }
+
+    .tblRpt {
+        th, td {
+            height: 32px;
+        }
+
+        .RptHeader {
+            th, td {
+                height: 32px;
+                border-color: $border-table;
+                background-color: $bg-header-tbl1;
+                color: $color-header-table;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .daypickr-wrap-parent .ui-widget-header .ui-icon {
+        background: none !important;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 4px 4px 0 4px;
+            border-color: #333333 transparent transparent transparent;
+            top: 8px;
+            right: 3px;
+        }
+    }
+
+    .monpickr-wrap-parent {
+        .monpickr-wrap {
+            .monpickr {
+                .next, .prev {
+                    .ui-icon-circle-triangle-e, .ui-icon-circle-triangle-w {
+                        background: none !important;
+                        position: relative;
+                        top: 2px;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 4px 4px 4px 0;
+                            border-color: transparent #333333 transparent transparent;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+
+                    .ui-icon-circle-triangle-e {
+                        transform: rotate(180deg);
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
 .tblRpt {
     background: #fff;
 
@@ -81,13 +191,14 @@ $height-td: 28px;
     }
 
     &.tblRpt-bordered > tbody > tr > td {
-        border-bottom: 1px solid #666;
+        border-color: $border-table;
+        border-bottom: 1px solid $border-table;
     }
 }
 
 .tblRpt .tblDesc tr:last-child .tblDesc > tbody > tr > td,
 .tblRpt .tblDesc-ex tr:last-child .tblDesc-ex > tbody > tr > td {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $border-table;
 }
 
 .tblRpt .tblDesc, .tbl-sub-details, .tblRpt .tblDesc-ex {
@@ -95,8 +206,8 @@ $height-td: 28px;
 
     > tbody > tr > td {
         padding: 0 8px;
-        border-bottom: 1px solid #ddd;
-        border-right: 1px solid #ddd;
+        border-bottom: 1px solid $border-table;
+        border-right: 1px solid $border-table;
 
         &:last-child {
             border-right: none;
@@ -104,11 +215,11 @@ $height-td: 28px;
     }
 
     tbody tr.ex-row td:last-child {
-        border-right: 1px solid #ddd;
+        border-right: 1px solid $border-table;
     }
 
     tbody tr.ex-row + tr td {
-        border-top: 1px solid #ddd;
+        border-top: 1px solid $border-table;
     }
 
     tbody tr:last-child td {
@@ -116,7 +227,7 @@ $height-td: 28px;
     }
 
     td.colW1, td.colTitle {
-        background-color: #f3f3f3 !important;
+        background-color: $bg-header-tbl4 !important;
         text-align: left;
         text-transform: capitalize;
         width: 18.1818%;
@@ -148,18 +259,19 @@ $height-td: 28px;
     tr.headerDetail, tr.headerDetailNormal {
         td {
             padding: 0 8px;
-            background-color: #bdc0c7 !important;
+            background-color: $bg-header-tbl3 !important;
         }
     }
 
     tr.headerSportTypeDetail td {
         padding: 0 8px;
-        background: $sporttype-detail-bg !important;
+        background: $bg-header-tbl4 !important;
     }
 
     tr.headerGroup td {
         padding: 0 8px;
-        background: $header-group-bg !important
+        background: $bg-header-tbl2 !important;
+        font-weight: bold;
     }
 }
 
@@ -246,13 +358,14 @@ $height-td: 28px;
 }
 
 .tblRpt > tbody > tr > td .tblDesc {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $border-table;
 
     &:first-child {
         border-top: none;
     }
+    
 }
-
+ 
 .tblRpt .tblDesc-ex .tblDesc-1 .tblDesc-2 tbody tr {
     &:first-child {
         td {
@@ -261,8 +374,8 @@ $height-td: 28px;
     }
 
     td {
-        border-top: 1px solid #ddd;
-        border-right: 1px solid #ddd;
+        border-top: 1px solid $border-table;
+        border-right: 1px solid $border-table;
 
         &:last-child {
             border-right: none;
@@ -270,10 +383,10 @@ $height-td: 28px;
     }
 
     &.ex-row td:last-child {
-        border-right: 1px solid #ddd;
+        border-right: 1px solid $border-table;
     }
 
     &.ex-row + tr td {
-        border-top: 1px solid #ddd;
+        border-top: 1px solid $border-table;
     }
 }
