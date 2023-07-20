@@ -38,10 +38,6 @@ $color-header-table: #444;
     .form-group {
         vertical-align: middle;
 
-        #txt-username {
-            
-        }
-
         .monpickr-wrap-parent {
             height: 28px !important;
         }
@@ -67,7 +63,19 @@ $color-header-table: #444;
 .width-100per {
     width: 100%;
 }
-
+.icon-chevron-down {
+    border: 1px solid #333;
+    border-radius: 20px;
+    width: 22px;
+    height: 21px;
+    display: inline-block;
+    text-align: center;
+    line-height: 18px;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+    font-size: 20px;
+    padding: 1px 0 0 0;
+}
 .tblRpt .tblDesc tbody tr td {
     white-space: initial;
 }
@@ -204,6 +212,10 @@ $color-header-table: #444;
 .tblRpt .tblDesc, .tbl-sub-details, .tblRpt .tblDesc-ex {
     width: 100%;
 
+    &.tbl-last {
+        margin-bottom: -1px;
+    }
+
     > tbody > tr > td {
         padding: 0 8px;
         border-bottom: 1px solid $border-table;
@@ -266,12 +278,14 @@ $color-header-table: #444;
     tr.headerSportTypeDetail td {
         padding: 0 8px;
         background: $bg-header-tbl4 !important;
+        line-height: 1.4;
     }
 
     tr.headerGroup td {
         padding: 0 8px;
         background: $bg-header-tbl2 !important;
         font-weight: bold;
+        cursor: pointer;
     }
 }
 
@@ -332,12 +346,12 @@ $color-header-table: #444;
 
 .action-name {
     font-weight: bold;
-    color: #b25900;
+    color: #3873E9;
 }
 
 .username, .log-date {
     font-style: italic;
-    color: #666;
+    color: #333333;
 }
 
 .logid {

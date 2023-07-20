@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = Resources.ViewLogCredit;
 }
-<div class="tab-content">
+<div class="tab-content tb-ver2">
     <div role="tabpanel" class="tab-pane active" id="@ViewContext.RouteData.Values["controller"].ToString().ToLower()">
         <div class="filter">
             <form class="form-inline" role="form">
@@ -73,7 +73,7 @@
                     else
                     {
                         <tr>
-                            <td colspan="3" align="center">@Resources.NoInfo</td>
+                            <td colspan="5" align="center">@Resources.NoInfo</td>
                         </tr>
                     }
             </table>

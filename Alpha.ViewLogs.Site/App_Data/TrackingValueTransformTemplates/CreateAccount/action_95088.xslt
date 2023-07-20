@@ -9,6 +9,7 @@
         <xsl:variable name="groupid" select="@id" />
         <tr class="headerGroup" onclick="slideToggle(this)">
           <td colspan="6">
+            <span class="icon-chevron-down"></span>
             <xsl:value-of select="xslLogFormat:GetProductGroupName(@id)" />
           </td>
         </tr>
@@ -21,7 +22,7 @@
                 </xsl:when>
               </xsl:choose>
             </xsl:variable>
-            <table class="tblDesc">
+            <table class="tblDesc tbl-last">
               <xsl:if test="$groupid!=1">
                 <xsl:attribute name="style">
                   <xsl:value-of select="'display:none;'"/>
@@ -30,6 +31,7 @@
               <xsl:if test="discount[@grouptype=150]">
                 <tr class="headerDetail" onclick="slideToggle(this)">
                   <td colspan="6">
+                    <span class="icon-chevron-down"></span>
                     <xsl:value-of select="xslLogFormat:GetLogResource('Commision')" />
                   </td>
                 </tr>
@@ -49,6 +51,7 @@
               <xsl:if test="betsetting[@grouptype=151]">
                 <tr class="headerDetail" onclick="slideToggle(this)">
                   <td colspan="6">
+                    <span class="icon-chevron-down"></span>
                     <xsl:value-of select="xslLogFormat:GetLogResource('BetSetting')" />
                   </td>
                 </tr>
@@ -97,12 +100,13 @@
               <xsl:if test="discount[@grouptype=156]">
                 <tr class="headerDetail" onclick="slideToggle(this)">
                   <td colspan="6">
+                    <span class="icon-chevron-down"></span>
                     <xsl:value-of select="xslLogFormat:GetLogResource('Commision')" />
                   </td>
                 </tr>
                 <tr>
                   <td colspan="6">
-                    <table class="tblDesc">
+                    <table class="tblDesc tbl-last">
                       <tr>
                         <xsl:for-each select="discount/r[position() &lt; 4]">
                           <td class="colW1">
@@ -146,6 +150,7 @@
               <xsl:if test="betsetting[@grouptype=154]">
                 <tr class="headerDetail" onclick="slideToggle(this)">
                   <td colspan="6">
+                    <span class="icon-chevron-down"></span>
                     <xsl:value-of select="xslLogFormat:GetLogResource('BetSetting')" />
                   </td>
                 </tr>
@@ -195,6 +200,7 @@
               <xsl:if test="parlaymaxpayout">
                 <tr class="headerDetail" onclick="slideToggle(this)">
                   <td colspan="6">
+                    <span class="icon-chevron-down"></span>
                     <xsl:value-of select="xslLogFormat:GetLogResource('ParlayMaxPayout')" />
                   </td>
                 </tr>
@@ -242,12 +248,13 @@
               <xsl:if test="pt[@grouptype=153]">
                 <tr class="headerDetail" onclick="slideToggle(this)">
                   <td colspan="6">
+                    <span class="icon-chevron-down"></span>
                     <xsl:value-of select="xslLogFormat:GetLogResource('s')" />
                   </td>
                 </tr>
                 <tr>
                   <td colspan="6">
-                    <table class="tblDesc">
+                    <table class="tblDesc tbl-last">
                       <tr style="text-align:center;" class="headerSportTypeDetail">
                         <td></td>
                         <td>
