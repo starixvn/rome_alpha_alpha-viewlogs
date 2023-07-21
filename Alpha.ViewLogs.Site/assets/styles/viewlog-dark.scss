@@ -62,6 +62,11 @@ $color-header-table: #FFFFFF;
 .width-100per {
     width: 100%;
 }
+.toggle-icon {
+    .icon-chevron-down {
+        transform: rotate(-90deg);
+    }
+}
 .icon-chevron-down {
     border: 1px solid #ededed;
     border-radius: 20px;
@@ -408,4 +413,8 @@ $color-header-table: #FFFFFF;
     &.ex-row + tr td {
         border-top: 1px solid $border-table;
     }
+}
+.ui-widget-content a:hover {
+    color: #ededed !important;
+    font-weight: bold;
 }

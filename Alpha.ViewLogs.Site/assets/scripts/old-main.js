@@ -27,7 +27,7 @@ function toggle(id) {
     var obj = null, rowIndex, p, table;
 
     if (typeof id === 'object') {
-        id.classList.contains("active") ? id.classList.remove("active") : id.classList.add("active")
+        id.classList.contains("toggle-icon") ? id.classList.remove("toggle-icon") : id.classList.add("toggle-icon")
         rowIndex = id.rowIndex;
         p = id.parentNode || id.parentElement;
         table = p.parentNode || p.parentElement;

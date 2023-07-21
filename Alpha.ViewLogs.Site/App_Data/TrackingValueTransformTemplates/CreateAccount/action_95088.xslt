@@ -11,10 +11,10 @@
           <xsl:attribute name="class">
             <xsl:choose>
               <xsl:when test="$groupid=1">
-                <xsl:value-of select="string('headerGroup active')"/>
+                <xsl:value-of select="string('headerGroup ')"/>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:value-of select="string('headerGroup')"/>
+                <xsl:value-of select="string('headerGroup toggle-icon')"/>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:attribute>
