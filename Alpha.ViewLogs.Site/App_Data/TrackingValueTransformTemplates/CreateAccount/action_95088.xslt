@@ -267,30 +267,27 @@
                 <tr>
                   <td colspan="6">
                     <table class="tblDesc tbl-last">
-                      <tr style="text-align:center;" class="headerSportTypeDetail">
-                        <td></td>
-                        <td>
-                          <xsl:value-of select="xslLogFormat:GetLogResource('lblPresetPTSuper')" />
-                        </td>
-                        <td>
-                          <xsl:value-of select="xslLogFormat:GetLogResource('isSuperAutoPT')" />
-                        </td>
-                        <td>
-                          <xsl:value-of select="xslLogFormat:GetLogResource('lblAutoPTSuper')" />
-                        </td>
-                        <td>
-                          <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTMaster')" />
-                        </td>
-                        <td>
-                          <xsl:value-of select="xslLogFormat:GetLogResource('lblMinPTMaster')" />
-                        </td>
-                      </tr>
                       <xsl:choose>
                         <xsl:when test="$groupid=1">
                           <xsl:for-each select="pt/r[count(. | key('pt-by-sporttype', @sporttype)[1]) = 1]">
                             <tr class="headerSportTypeDetail">
-                              <td colspan="6">
+                              <td>
                                 <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+                              </td>
+                              <td style="text-align:center;">
+                                <xsl:value-of select="xslLogFormat:GetLogResource('lblPresetPTSuper')" />
+                              </td>
+                              <td style="text-align:center;">
+                                <xsl:value-of select="xslLogFormat:GetLogResource('isSuperAutoPT')" />
+                              </td>
+                              <td style="text-align:center;">
+                                <xsl:value-of select="xslLogFormat:GetLogResource('lblAutoPTSuper')" />
+                              </td>
+                              <td style="text-align:center;">
+                                <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTMaster')" />
+                              </td>
+                              <td style="text-align:center;">
+                                <xsl:value-of select="xslLogFormat:GetLogResource('lblMinPTMaster')" />
                               </td>
                             </tr>
                             <xsl:for-each select="key('pt-by-sporttype', @sporttype)">
@@ -325,6 +322,24 @@
                           </xsl:for-each>
                         </xsl:when>
                         <xsl:otherwise>
+                          <tr style="text-align:center;" class="headerSportTypeDetail">
+                            <td></td>
+                            <td>
+                              <xsl:value-of select="xslLogFormat:GetLogResource('lblPresetPTSuper')" />
+                            </td>
+                            <td>
+                              <xsl:value-of select="xslLogFormat:GetLogResource('isSuperAutoPT')" />
+                            </td>
+                            <td>
+                              <xsl:value-of select="xslLogFormat:GetLogResource('lblAutoPTSuper')" />
+                            </td>
+                            <td>
+                              <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTMaster')" />
+                            </td>
+                            <td>
+                              <xsl:value-of select="xslLogFormat:GetLogResource('lblMinPTMaster')" />
+                            </td>
+                          </tr>
                           <xsl:for-each select="pt/r">
                             <tr>
                               <td class="colW1">

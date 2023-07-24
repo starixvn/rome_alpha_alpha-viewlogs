@@ -376,7 +376,17 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\Chatbot\action_95066.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_1198.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_1199.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_1197.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_95095.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_95092.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_95090.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -404,7 +414,25 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31801.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_483.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_480.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_475.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_484.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_481.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_485.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_482.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_477.xslt">
