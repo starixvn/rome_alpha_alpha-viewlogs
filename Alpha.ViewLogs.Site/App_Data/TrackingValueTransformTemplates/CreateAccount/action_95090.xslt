@@ -46,7 +46,7 @@
       </tr>
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTMaster')"/>
+          <xsl:value-of select="xslLogFormat:GetLogResource('maxcredit')"/>
         </td>
         <td class="colW2">
           <xsl:value-of select="@credit"/>
@@ -92,32 +92,16 @@
           <xsl:value-of select="@site" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('suspended')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@suspended" />
-        </td>
-        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('errcode')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@errcode" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('errmsg')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@errmsg" />
-        </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
-        </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
         </td>
       </tr>
     </table>
