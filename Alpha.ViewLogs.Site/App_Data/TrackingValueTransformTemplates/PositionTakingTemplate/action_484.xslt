@@ -21,7 +21,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
       </tr>
-      <tr class="headerSportTypeDetail" style="text-align:center;">
+      <tr class="headerSportTypeDetail border-last-item" style="text-align:center;">
         <xsl:for-each select="r">
           <td>
             <xsl:value-of select="xslLogFormat:GetSubProductGroupName(@subgroupid)" />

@@ -281,10 +281,20 @@ $color-header-table: #FFFFFF;
         }
     }
 
-    tr.headerSportTypeDetail td {
-        padding: 0 8px;
-        background: $bg-header-tbl4 !important;
-        line-height: 1.4;
+    tr.headerSportTypeDetail {
+        td {
+            padding: 0 8px;
+            background: $bg-header-tbl4 !important;
+            line-height: 1.4;
+        }
+
+        &.border-last-item {
+            td {
+                &:last-child {
+                    border-right: 1px solid $border-table;
+                }
+            }
+        }
     }
 
     tr.headerGroup td {
@@ -325,7 +335,9 @@ $color-header-table: #FFFFFF;
         color: #41A4FF;
     }
 }
-
+div.headerSportTypeDetail {
+    border-top: 1px solid $border-table;
+}
 .headerSportTypeDetail {
     text-transform: capitalize;
     height: 28px;
