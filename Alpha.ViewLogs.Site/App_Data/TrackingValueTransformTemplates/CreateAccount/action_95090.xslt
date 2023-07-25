@@ -46,7 +46,7 @@
       </tr>
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('maxcredit')"/>
+          <xsl:value-of select="xslLogFormat:GetLogResource('credit')"/>
         </td>
         <td class="colW2">
           <xsl:value-of select="@credit"/>

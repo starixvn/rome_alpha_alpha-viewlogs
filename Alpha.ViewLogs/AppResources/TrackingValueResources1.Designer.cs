@@ -5083,6 +5083,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Agent PT.
+        /// </summary>
+        public static string lblAgentPT {
+            get {
+                return ResourceManager.GetString("lblAgentPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Super Auto PT.
         /// </summary>
         public static string lblAutoPTSuper {
@@ -5331,6 +5340,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string masterName {
             get {
                 return ResourceManager.GetString("masterName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Master PT.
+        /// </summary>
+        public static string MasterPT {
+            get {
+                return ResourceManager.GetString("MasterPT", resourceCulture);
             }
         }
         
@@ -8139,15 +8157,6 @@ namespace Alpha.ViewLogs.AppResources {
         public static string statuslog {
             get {
                 return ResourceManager.GetString("statuslog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         

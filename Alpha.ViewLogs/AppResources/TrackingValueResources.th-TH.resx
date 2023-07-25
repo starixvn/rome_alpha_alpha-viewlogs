@@ -3321,4 +3321,31 @@
   <data name="AutoTransfer" xml:space="preserve">
     <value>โอนอัตโนมัติ</value>
   </data>
+  <data name="MasterPT" xml:space="preserve">
+    <value>ค่าแบ่งสู้ของมาสเตอร์</value>
+  </data>
+  <data name="SuperPT" xml:space="preserve">
+    <value>ค่าแบ่งสู้ของซุปเปอร์</value>
+  </data>
+  <data name="lblAgentPT" xml:space="preserve">
+    <value>ค่าแบ่งสู้ของเอเย่น</value>
+  </data>
+  <data name="IsAuto" xml:space="preserve">
+    <value>คืออัตโนมัติ</value>
+  </data>
+  <data name="Commision" xml:space="preserve">
+    <value>คอมมิชชั่น</value>
+  </data>
+  <data name="BetSetting" xml:space="preserve">
+    <value>การกำหนดการวางเดิมพัน</value>
+  </data>
+  <data name="ParlayMaxPayout" xml:space="preserve">
+    <value>การจ่ายเงินสูงสุดของพาร์เลย์</value>
+  </data>
+  <data name="AllowAutoPT" xml:space="preserve">
+    <value>อนุญาตให้มีแบ่งสู้อัตโนมัติ</value>
+  </data>
+  <data name="MaxPayoutPerMatch" xml:space="preserve">
+    <value>การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
+  </data>
 </root>

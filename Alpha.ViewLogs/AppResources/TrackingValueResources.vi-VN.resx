@@ -3105,4 +3105,31 @@
   <data name="DisableNumber" xml:space="preserve">
     <value>Không cho phép chơi Number Game</value>
   </data>
+  <data name="MasterPT" xml:space="preserve">
+    <value>PT của Master</value>
+  </data>
+  <data name="SuperPT" xml:space="preserve">
+    <value>PT của Super</value>
+  </data>
+  <data name="lblAgentPT" xml:space="preserve">
+    <value>PT của Agent</value>
+  </data>
+  <data name="IsAuto" xml:space="preserve">
+    <value>Auto PT</value>
+  </data>
+  <data name="Commision" xml:space="preserve">
+    <value>Hoa hồng</value>
+  </data>
+  <data name="BetSetting" xml:space="preserve">
+    <value>Tiền Cược</value>
+  </data>
+  <data name="ParlayMaxPayout" xml:space="preserve">
+    <value>Thanh toán tối đa cho Cược Xiên</value>
+  </data>
+  <data name="AllowAutoPT" xml:space="preserve">
+    <value>Cho Auto PT</value>
+  </data>
+  <data name="MaxPayoutPerMatch" xml:space="preserve">
+    <value>Thanh Toán Tối Đa Mỗi Trận</value>
+  </data>
 </root>

@@ -3330,4 +3330,31 @@
   <data name="AutoTransfer" xml:space="preserve">
     <value>自动转账</value>
   </data>
+  <data name="MasterPT" xml:space="preserve">
+    <value>总代理占成数</value>
+  </data>
+  <data name="SuperPT" xml:space="preserve">
+    <value>超级总代理占成数</value>
+  </data>
+  <data name="lblAgentPT" xml:space="preserve">
+    <value>代理占成数</value>
+  </data>
+  <data name="IsAuto" xml:space="preserve">
+    <value>是自动</value>
+  </data>
+  <data name="Commision" xml:space="preserve">
+    <value>佣金</value>
+  </data>
+  <data name="BetSetting" xml:space="preserve">
+    <value>投注设定</value>
+  </data>
+  <data name="ParlayMaxPayout" xml:space="preserve">
+    <value>串关最高派彩</value>
+  </data>
+  <data name="AllowAutoPT" xml:space="preserve">
+    <value>允许自动占成</value>
+  </data>
+  <data name="MaxPayoutPerMatch" xml:space="preserve">
+    <value>单场最高派彩</value>
+  </data>
 </root>

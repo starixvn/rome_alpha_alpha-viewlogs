@@ -275,19 +275,19 @@
                                 <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
                               </td>
                               <td style="text-align:center;">
-                                <xsl:value-of select="xslLogFormat:GetLogResource('lblPresetPTSuper')" />
+                                <xsl:value-of select="xslLogFormat:GetLogResource('MasterPT')" />
                               </td>
                               <td style="text-align:center;">
-                                <xsl:value-of select="xslLogFormat:GetLogResource('isSuperAutoPT')" />
+                                <xsl:value-of select="xslLogFormat:GetLogResource('isMasterAutoPT')" />
                               </td>
                               <td style="text-align:center;">
-                                <xsl:value-of select="xslLogFormat:GetLogResource('lblAutoPTSuper')" />
+                                <xsl:value-of select="xslLogFormat:GetLogResource('masterAutoPT')" />
                               </td>
                               <td style="text-align:center;">
-                                <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTMaster')" />
+                                <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTAgent')" />
                               </td>
                               <td style="text-align:center;">
-                                <xsl:value-of select="xslLogFormat:GetLogResource('lblMinPTMaster')" />
+                                <xsl:value-of select="xslLogFormat:GetLogResource('MinPTAgent')" />
                               </td>
                             </tr>
                             <xsl:for-each select="key('pt-by-sporttype', @sporttype)">
@@ -303,7 +303,7 @@
                                   </xsl:choose>
                                 </td>
                                 <td class="colW2">
-                                  <xsl:value-of select="@superpt" />
+                                  <xsl:value-of select="@masterpt" />
                                 </td>
                                 <td class="colW2">
                                   <xsl:value-of select="@isauto" />
@@ -312,7 +312,7 @@
                                   <xsl:value-of select="@autopt" />
                                 </td>
                                 <td class="colW2">
-                                  <xsl:value-of select="@masterpt" />
+                                  <xsl:value-of select="@agentpt" />
                                 </td>
                                 <td class="colW2">
                                   <xsl:value-of select="@minpt" />
@@ -324,29 +324,36 @@
                         <xsl:otherwise>
                           <tr style="text-align:center;" class="headerSportTypeDetail">
                             <td></td>
-                            <td>
-                              <xsl:value-of select="xslLogFormat:GetLogResource('lblPresetPTSuper')" />
+                            <td style="text-align:center;">
+                              <xsl:value-of select="xslLogFormat:GetLogResource('MasterPT')" />
                             </td>
-                            <td>
-                              <xsl:value-of select="xslLogFormat:GetLogResource('isSuperAutoPT')" />
+                            <td style="text-align:center;">
+                              <xsl:value-of select="xslLogFormat:GetLogResource('isMasterAutoPT')" />
                             </td>
-                            <td>
-                              <xsl:value-of select="xslLogFormat:GetLogResource('lblAutoPTSuper')" />
+                            <td style="text-align:center;">
+                              <xsl:value-of select="xslLogFormat:GetLogResource('masterAutoPT')" />
                             </td>
-                            <td>
-                              <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTMaster')" />
+                            <td style="text-align:center;">
+                              <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTAgent')" />
                             </td>
-                            <td>
-                              <xsl:value-of select="xslLogFormat:GetLogResource('lblMinPTMaster')" />
+                            <td style="text-align:center;">
+                              <xsl:value-of select="xslLogFormat:GetLogResource('MinPTAgent')" />
                             </td>
                           </tr>
                           <xsl:for-each select="pt/r">
                             <tr>
                               <td class="colW1">
-                                <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)"/>
+                                <xsl:choose>
+                                  <xsl:when test="@sporttype=208 and @bettype=2101">
+                                    <xsl:value-of select="xslLogFormat:GetProductName(6)"/>
+                                  </xsl:when>
+                                  <xsl:otherwise>
+                                    <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)"/>
+                                  </xsl:otherwise>
+                                </xsl:choose>
                               </td>
                               <td class="colW2">
-                                <xsl:value-of select="@superpt" />
+                                <xsl:value-of select="@masterpt" />
                               </td>
                               <td class="colW2">
                                 <xsl:value-of select="@isauto" />
@@ -355,7 +362,7 @@
                                 <xsl:value-of select="@autopt" />
                               </td>
                               <td class="colW2">
-                                <xsl:value-of select="@masterpt" />
+                                <xsl:value-of select="@agentpt" />
                               </td>
                               <td class="colW2">
                                 <xsl:value-of select="@minpt" />
