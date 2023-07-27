@@ -14,8 +14,14 @@
 
         string GetProductGroupName(int productGroupId);
 
-        string GetSportbookSMACommissionName(int sportType, int betType);
+        string GetSportbookCommissionName(int sportType, int betType);
 
-        string GetBetSettingName(int productGroupId, int groupType, int sportType, int betType);
+        string GetRNGGamesBetSettingName(int sportType, int betType);
+
+        string GetParlayMaxPayoutSportBetTypeName(int sportType, int betType);
+
+        string GetSportsBookBetSettingName(int sportType, int betType);
+
+        string GetSportsBookPositionTaking(int sportType, int betType);
     }
 }

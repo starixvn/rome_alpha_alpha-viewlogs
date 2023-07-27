@@ -50,9 +50,11 @@
     <Compile Include="Constants\BetTypeId.cs" />
     <Compile Include="Constants\DBLanguageKey.cs" />
     <Compile Include="Constants\DefaultVariables.cs" />
+    <Compile Include="Constants\GroupTypes.cs" />
     <Compile Include="Constants\LanguageCode.cs" />
     <Compile Include="Constants\LoginLogType.cs" />
     <Compile Include="Constants\Permissions.cs" />
+    <Compile Include="Constants\ProductGroups.cs" />
     <Compile Include="Constants\SelfdestructionPeriod.cs" />
     <Compile Include="Constants\SportId.cs" />
     <Compile Include="Criteria\GetCustInfoByUsernameCommand.cs" />

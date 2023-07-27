@@ -89,7 +89,7 @@
                       <xsl:for-each select="betsetting/r">
                         <tr>
                           <td class="colW1">
-                            <xsl:value-of select="xslLogFormat:GetBetSettingName($groupid,151,@sporttype,@bettype)" />
+                            <xsl:value-of select="xslLogFormat:GetSportsBookBetSettingName(@sporttype,@bettype)" />
                           </td>
                           <td class="colW2">
                             <xsl:value-of select="@minbet" />
@@ -188,7 +188,7 @@
                       <xsl:for-each select="betsetting/r">
                         <tr>
                           <td class="colW1">
-                            <xsl:value-of select="xslLogFormat:GetBetSettingName($groupid,154,@sporttype,@bettype)" />
+                            <xsl:value-of select="xslLogFormat:GetRNGGamesBetSettingName(@sporttype,@bettype)" />
                           </td>
                           <td class="colW2">
                             <xsl:value-of select="@minbet" />
@@ -237,7 +237,7 @@
                       <xsl:for-each select="parlaymaxpayout/r">
                         <tr>
                           <td class="colW1">
-                            <xsl:value-of select="xslLogFormat:GetBetSettingName($groupid,152,@sporttype,@bettype)" />
+                            <xsl:value-of select="xslLogFormat:GetParlayMaxPayoutSportBetTypeName(@sporttype,@bettype)" />
                           </td>
                           <td class="colW2">
                             <xsl:value-of select="@singlemp" />
@@ -291,6 +291,28 @@
                               </td>
                             </tr>
                             <xsl:for-each select="key('pt-by-sporttype', @sporttype)">
+                              <xsl:if test="@sporttype=99 and @bettype=9">
+                                <tr class="headerSportTypeDetail">
+                                  <td>
+                                    <xsl:value-of select="xslLogFormat:GetSportsBookBetSettingName(@sporttype,@bettype)" />
+                                  </td>
+                                  <td style="text-align:center;">
+                                    <xsl:value-of select="xslLogFormat:GetLogResource('MasterPT')" />
+                                  </td>
+                                  <td style="text-align:center;">
+                                    <xsl:value-of select="xslLogFormat:GetLogResource('isMasterAutoPT')" />
+                                  </td>
+                                  <td style="text-align:center;">
+                                    <xsl:value-of select="xslLogFormat:GetLogResource('masterAutoPT')" />
+                                  </td>
+                                  <td style="text-align:center;">
+                                    <xsl:value-of select="xslLogFormat:GetLogResource('lblMaxPTAgent')" />
+                                  </td>
+                                  <td style="text-align:center;">
+                                    <xsl:value-of select="xslLogFormat:GetLogResource('MinPTAgent')" />
+                                  </td>
+                                </tr>
+                              </xsl:if>
                               <tr>
                                 <td class="colW1">
                                   <xsl:choose>
@@ -384,7 +406,7 @@
 
   <xsl:template match="discount/r">
     <td class="colW1">
-      <xsl:value-of select="xslLogFormat:GetSportbookSMACommissionName(@sporttype,@bettype)" />
+      <xsl:value-of select="xslLogFormat:GetSportbookCommissionName(@sporttype,@bettype)" />
     </td>
     <td class="colW2">
       <xsl:value-of select="@discount" />

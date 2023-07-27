@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl
 {
     using System.Threading;
+    using Alpha.ViewLogs.Constants;
     using Fanex.RemotingRef;
 
     public class RemotingRefWrapperImpl : RemotingRefWrapper
@@ -64,17 +65,52 @@
             return remotingRefService.GetResourceDataByRefIdAndResourceId("ProductGroup", productGroupId.ToString(), LanguageCode, string.Empty);
         }
 
-        public string GetSportbookSMACommissionName(int sportType, int betType)
+        public string GetSportbookCommissionName(int sportType, int betType)
         {
-            return remotingRefService.GetResourceDataByRefIdAndResourceId("SB_Comm_SMA", $"1_150_{sportType}_{betType}", LanguageCode, string.Empty);
+            return remotingRefService.GetResourceDataByRefIdAndResourceId(
+                "SB_Comm_SMA", 
+                $"{ProductGroups.SportsBook}_{GroupTypes.SportsBookComm}_{sportType}_{betType}", 
+                LanguageCode,
+                string.Empty);
         }
 
-        public string GetBetSettingName(int productGroupId, int groupType, int sportType, int betType)
+        public string GetRNGGamesBetSettingName(int sportType, int betType)
         {
-            return remotingRefService.GetResourceDataByRefIdAndResourceId("G_GT_Sport_Bettype", $"{productGroupId}_{groupType}_{sportType}_{betType}", LanguageCode, string.Empty);
+            return remotingRefService.GetResourceDataByRefIdAndResourceId(
+                "G_GT_Sport_Bettype", 
+                $"{ProductGroups.RNGGames}_{GroupTypes.RNGGamesBetSetting}_{sportType}_{betType}", 
+                LanguageCode, 
+                string.Empty);
+        }
+
+        public string GetParlayMaxPayoutSportBetTypeName(int sportType, int betType)
+        {
+            return remotingRefService.GetResourceDataByRefIdAndResourceId(
+                "G_GT_Sport_Bettype", 
+                $"{ProductGroups.SportsBook}_{GroupTypes.ParlayMaxPayout}_{sportType}_{betType}", 
+                LanguageCode, 
+                string.Empty);
+        }
+
+        public string GetSportsBookBetSettingName(int sportType, int betType)
+        {
+            return remotingRefService.GetResourceDataByRefIdAndResourceId(
+                "G_GT_Sport_Bettype",
+                $"{ProductGroups.SportsBook}_{GroupTypes.SportsBookBetSetting}_{sportType}_{betType}",
+                LanguageCode,
+                string.Empty);
+        }
+
+        public string GetSportsBookPositionTaking(int sportType, int betType)
+        {
+            return remotingRefService.GetResourceDataByRefIdAndResourceId(
+                "G_GT_Sport_Bettype",
+                $"{ProductGroups.SportsBook}_{GroupTypes.PositionTaking}_{sportType}_{betType}",
+                LanguageCode,
+                string.Empty);
         }
 
         private static string LanguageCode
-            => Thread.CurrentThread.CurrentCulture.Name;
+        => Thread.CurrentThread.CurrentCulture.Name;
     }
 }

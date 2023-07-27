@@ -403,14 +403,29 @@
             return remotingRef.GetProductGroupName(productGroupId);
         }
 
-        public string GetSportbookSMACommissionName(int sportType, int betType)
+        public string GetSportbookCommissionName(int sportType, int betType)
         {
-            return remotingRef.GetSportbookSMACommissionName(sportType, betType);
+            return remotingRef.GetSportbookCommissionName(sportType, betType);
         }
 
-        public string GetBetSettingName(int productGroupId, int groupType, int sportType, int betType)
+        public string GetRNGGamesBetSettingName(int sportType, int betType)
         {
-            return remotingRef.GetBetSettingName(productGroupId, groupType, sportType, betType);
+            return remotingRef.GetRNGGamesBetSettingName(sportType, betType);
+        }
+
+        public string GetParlayMaxPayoutSportBetTypeName(int sportType, int betType)
+        {
+            return remotingRef.GetParlayMaxPayoutSportBetTypeName(sportType, betType);
+        }
+
+        public string GetSportsBookBetSettingName(int sportType, int betType)
+        {
+            return remotingRef.GetSportsBookBetSettingName(sportType, betType);
+        }
+
+        public string GetSportsBookPositionTaking(int sportType, int betType)
+        {
+            return remotingRef.GetSportsBookPositionTaking(sportType, betType);
         }
     }
 }
