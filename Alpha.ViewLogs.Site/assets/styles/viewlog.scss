@@ -6,17 +6,8 @@ body {
 }
 
 $sporttype-detail-bg: #d3d6db;
-$header-group-bg: #b25900;
 $height-td: 28px;
-// new style 
-$bg-main: #fff;
-$border-main: #d1d1d1;
-$bg-header-tbl1: #BCCBDC;
-$bg-header-tbl2: #CFDAE5;
-$bg-header-tbl3: #DFE6ED;
-$bg-header-tbl4: #EDF2F7;
-$border-table: #a4a4a4;
-$color-header-table: #444;
+
 .page-viewlog {
     padding: 0;
 }
@@ -37,6 +28,10 @@ $color-header-table: #444;
 .filter {
     .form-group {
         vertical-align: middle;
+
+        #txt-username {
+            width: 200px;
+        }
 
         .monpickr-wrap-parent {
             height: 28px !important;
@@ -63,129 +58,28 @@ $color-header-table: #444;
 .width-100per {
     width: 100%;
 }
+
+.tblRpt .tblDesc tbody tr td {
+    white-space: initial;
+}
 .toggle-icon {
     .icon-chevron-down {
         transform: rotate(-90deg);
     }
 }
+
 .icon-chevron-down {
     border: 1px solid #333;
     border-radius: 20px;
-    width: 22px;
-    height: 21px;
+    width: 18px;
+    height: 18px;
     display: inline-block;
     text-align: center;
-    line-height: 18px;
+    line-height: 15px;
     vertical-align: middle;
     margin: 0 10px 0 0;
-    font-size: 20px;
+    font-size: 16px;
     padding: 1px 0 0 0;
-}
-.tblRpt .tblDesc tbody tr td {
-    white-space: initial;
-}
-.tb-ver2 {
-    .form-inline {
-        input[type='text'], select {
-            border-radius: 3px !important;
-            border: 1px solid #d1d1d1;
-            box-shadow: none;
-            height: 32px !important;
-
-            &:not(.daypickr-selected-day) {
-                width: 200px;
-            }
-        }
-    }
-
-    .btn-submit {
-        box-shadow: none;
-        border-radius: 3px;
-        margin: 0;
-        padding: 0 16px;
-        background-color: #0b599c;
-        height: 32px !important;
-
-        &:hover, &:focus {
-            background-color: #0a5494;
-        }
-    }
-
-    .monpickr-super-wrapper .monpickr-label {
-        margin: 10px 12px 3px 12px;
-    }
-
-    #content {
-        padding: 15px 11px;
-        border-radius: 3px;
-        background: $bg-main;
-        border: 1px solid $border-main;
-    }
-
-    .tblRpt {
-        th, td {
-            height: 32px;
-        }
-
-        .RptHeader {
-            th, td {
-                height: 32px;
-                border-color: $border-table;
-                background-color: $bg-header-tbl1;
-                color: $color-header-table;
-                font-weight: bold;
-            }
-        }
-    }
-
-    .daypickr-wrap-parent .ui-widget-header .ui-icon {
-        background: none !important;
-        position: relative;
-
-        &:after {
-            position: absolute;
-            content: "";
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 4px 4px 0 4px;
-            border-color: #333333 transparent transparent transparent;
-            top: 8px;
-            right: 3px;
-        }
-    }
-
-    .monpickr-wrap-parent {
-        .monpickr-wrap {
-            .monpickr {
-                .next, .prev {
-                    .ui-icon-circle-triangle-e, .ui-icon-circle-triangle-w {
-                        background: none !important;
-                        position: relative;
-                        top: 2px;
-
-                        &:after {
-                            position: absolute;
-                            content: "";
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 4px 4px 4px 0;
-                            border-color: transparent #333333 transparent transparent;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                        }
-                    }
-
-                    .ui-icon-circle-triangle-e {
-                        transform: rotate(180deg);
-                        top: 0;
-                    }
-                }
-            }
-        }
-    }
 }
 .tblRpt {
     background: #fff;
@@ -202,29 +96,20 @@ $color-header-table: #444;
         padding-left: 8px;
         width: 25%;
     }
-
-    &.tblRpt-bordered > tbody > tr > td {
-        border-color: $border-table;
-        border-bottom: 1px solid $border-table;
-    }
 }
 
 .tblRpt .tblDesc tr:last-child .tblDesc > tbody > tr > td,
 .tblRpt .tblDesc-ex tr:last-child .tblDesc-ex > tbody > tr > td {
-    border-bottom: 1px solid $border-table;
+    border-bottom: 1px solid #ddd;
 }
 
 .tblRpt .tblDesc, .tbl-sub-details, .tblRpt .tblDesc-ex {
     width: 100%;
 
-    &.tbl-last {
-        margin-bottom: -1px;
-    }
-
     > tbody > tr > td {
         padding: 0 8px;
-        border-bottom: 1px solid $border-table;
-        border-right: 1px solid $border-table;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
 
         &:last-child {
             border-right: none;
@@ -232,11 +117,11 @@ $color-header-table: #444;
     }
 
     tbody tr.ex-row td:last-child {
-        border-right: 1px solid $border-table;
+        border-right: 1px solid #ddd;
     }
 
     tbody tr.ex-row + tr td {
-        border-top: 1px solid $border-table;
+        border-top: 1px solid #ddd;
     }
 
     tbody tr:last-child td {
@@ -244,7 +129,7 @@ $color-header-table: #444;
     }
 
     td.colW1, td.colTitle {
-        background-color: $bg-header-tbl4 !important;
+        background-color: #f3f3f3 !important;
         text-align: left;
         text-transform: capitalize;
         width: 18.1818%;
@@ -260,7 +145,7 @@ $color-header-table: #444;
         padding: 0;
     }
 
-    .headerDetail, .headerDetailNormal .headerGroup {
+    .headerDetail, .headerDetailNormal {
         font-size: 14px;
         text-transform: capitalize;
         font-weight: bold;
@@ -276,29 +161,18 @@ $color-header-table: #444;
     tr.headerDetail, tr.headerDetailNormal {
         td {
             padding: 0 8px;
-            background-color: $bg-header-tbl3 !important;
+            background-color: #bdc0c7 !important;
         }
     }
 
-    tr.headerSportTypeDetail {
-        td {
-            padding: 0 8px;
-            background: $bg-header-tbl4 !important;
-            line-height: 1.4;
-        }
-
-        &.border-last-item {
-            td {
-                &:last-child {
-                    border-right: 1px solid $border-table;
-                }
-            }
-        }
+    tr.headerSportTypeDetail td {
+        padding: 0 8px;
+        background: $sporttype-detail-bg !important;
     }
 
     tr.headerGroup td {
         padding: 0 8px;
-        background: $bg-header-tbl2 !important;
+        background: #A5A7AD !important;
         font-weight: bold;
         cursor: pointer;
     }
@@ -330,9 +204,7 @@ $color-header-table: #444;
         padding-top: 0;
     }
 }
-div.headerSportTypeDetail {
-    border-top: 1px solid $border-table;
-}
+
 .headerSportTypeDetail {
     text-transform: capitalize;
     height: 28px;
@@ -363,12 +235,12 @@ div.headerSportTypeDetail {
 
 .action-name {
     font-weight: bold;
-    color: #3873E9;
+    color: #b25900;
 }
 
 .username, .log-date {
     font-style: italic;
-    color: #333333;
+    color: #666;
 }
 
 .logid {
@@ -389,14 +261,13 @@ div.headerSportTypeDetail {
 }
 
 .tblRpt > tbody > tr > td .tblDesc {
-    border-top: 1px solid $border-table;
+    border-top: 1px solid #ddd;
 
     &:first-child {
         border-top: none;
     }
-    
 }
- 
+
 .tblRpt .tblDesc-ex .tblDesc-1 .tblDesc-2 tbody tr {
     &:first-child {
         td {
@@ -405,8 +276,8 @@ div.headerSportTypeDetail {
     }
 
     td {
-        border-top: 1px solid $border-table;
-        border-right: 1px solid $border-table;
+        border-top: 1px solid #ddd;
+        border-right: 1px solid #ddd;
 
         &:last-child {
             border-right: none;
@@ -414,14 +285,10 @@ div.headerSportTypeDetail {
     }
 
     &.ex-row td:last-child {
-        border-right: 1px solid $border-table;
+        border-right: 1px solid #ddd;
     }
 
     &.ex-row + tr td {
-        border-top: 1px solid $border-table;
+        border-top: 1px solid #ddd;
     }
-}
-.ui-widget-content a:hover{
-    color: #333!important;
-    font-weight: bold;
 }
