@@ -3357,4 +3357,7 @@
   <data name="MaxPayoutPerMatch" xml:space="preserve">
     <value>單場最高派彩</value>
   </data>
+  <data name="PositionTaking" xml:space="preserve">
+    <value>佔成數</value>
+  </data>
 </root>

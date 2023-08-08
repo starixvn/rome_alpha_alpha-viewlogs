@@ -261,7 +261,7 @@
                 <tr class="headerDetail" onclick="toggle(this)">
                   <td colspan="6">
                     <span class="icon-chevron-down"></span>
-                    <xsl:value-of select="xslLogFormat:GetLogResource('s')" />
+                    <xsl:value-of select="xslLogFormat:GetLogResource('PositionTaking')" />
                   </td>
                 </tr>
                 <tr>

@@ -3348,4 +3348,7 @@
   <data name="MaxPayoutPerMatch" xml:space="preserve">
     <value>การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
   </data>
+  <data name="PositionTaking" xml:space="preserve">
+    <value>ค่าความเสี่ยง</value>
+  </data>
 </root>
