@@ -46,16 +46,10 @@
       </tr>
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('credit')"/>
+          <xsl:value-of select="xslLogFormat:GetLogResource('transferoption')" />
         </td>
-        <td class="colW2">
-          <xsl:value-of select="@credit"/>
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('maxcredit')"/>
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@maxcredit"/>
+        <td class="colW2" >
+          <xsl:value-of select="xslLogFormat:TransferConditionFromCode(@transferoption)" />
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('PositionTakingTemplate')"/>
@@ -63,13 +57,19 @@
         <td class="colW2">
           <xsl:value-of select="@templatename"/>
         </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('credit')"/>
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@credit"/>
+        </td>
       </tr>
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('transferoption')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('maxcredit')"/>
         </td>
-        <td class="colW2" >
-          <xsl:value-of select="xslLogFormat:TransferConditionFromCode(@transferoption)" />
+        <td class="colW2">
+          <xsl:value-of select="@maxcredit"/>
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('language')" />

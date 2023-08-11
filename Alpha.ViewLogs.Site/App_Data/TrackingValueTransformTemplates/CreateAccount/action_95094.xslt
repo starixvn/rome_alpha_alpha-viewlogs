@@ -46,31 +46,25 @@
       </tr>
       <tr>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('PositionTakingTemplate')"/>
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@templatename"/>
+        </td>
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('credit')"/>
         </td>
         <td class="colW2">
           <xsl:value-of select="@credit"/>
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('maxcredit')"/>
+          <xsl:value-of select="xslLogFormat:GetLogResource('ugroup')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@maxcredit"/>
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('PositionTakingTemplate')"/>
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@templatename"/>
+          <xsl:value-of select="@ugroup" />
         </td>
       </tr>
       <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('transferoption')" />
-        </td>
-        <td class="colW2" >
-          <xsl:value-of select="xslLogFormat:TransferConditionFromCode(@transferoption)" />
-        </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
         </td>
@@ -83,19 +77,19 @@
         <td class="colW2">
           <xsl:value-of select="@subaccname" />
         </td>
-      </tr>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('ugroup')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@ugroup" />
-        </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
+        </td>
+      </tr>
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('Platform')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="xslLogFormat:GetPlatformOfSearchAndCopyFunction(@systemid)" />
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('errcode')" />
@@ -103,21 +97,11 @@
         <td class="colW2">
           <xsl:value-of select="@errcode" />
         </td>
-      </tr>
-      <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('errmsg')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="@errmsg" />
-        </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
-        </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
         </td>
       </tr>
     </table>
