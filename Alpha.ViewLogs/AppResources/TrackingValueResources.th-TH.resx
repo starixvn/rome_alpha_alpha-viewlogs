@@ -3351,4 +3351,10 @@
   <data name="PositionTaking" xml:space="preserve">
     <value>ค่าความเสี่ยง</value>
   </data>
+  <data name="CommForAgent" xml:space="preserve">
+    <value>ค่าคอมมิชชั่น จาก ตัวแทน</value>
+  </data>
+  <data name="CommForMember" xml:space="preserve">
+    <value>ค่าคอมมิชชั่นสำหรับสมาชิก</value>
+  </data>
 </root>

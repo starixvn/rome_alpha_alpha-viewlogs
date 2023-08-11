@@ -2221,6 +2221,24 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Comm for Agent.
+        /// </summary>
+        public static string CommForAgent {
+            get {
+                return ResourceManager.GetString("CommForAgent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comm for Member.
+        /// </summary>
+        public static string CommForMember {
+            get {
+                return ResourceManager.GetString("CommForMember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Commision.
         /// </summary>
         public static string Commision {

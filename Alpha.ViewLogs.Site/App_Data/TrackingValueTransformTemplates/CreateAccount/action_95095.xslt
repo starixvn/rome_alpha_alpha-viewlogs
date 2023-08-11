@@ -50,12 +50,28 @@
                 <tr>
                   <td colspan="6">
                     <table class="tblDesc">
-                      <tr>
-                        <xsl:apply-templates select="discount/r[position() &lt; 4]"/>
+                      <tr class="headerSportTypeDetail" style="text-align:center;">
+                        <td></td>
+                        <td>
+                          <xsl:value-of select="xslLogFormat:GetLogResource('CommForAgent')" />
+                        </td>
+                        <td>
+                          <xsl:value-of select="xslLogFormat:GetLogResource('CommForMember')" />
+                        </td>
                       </tr>
-                      <tr>
-                        <xsl:apply-templates select="discount/r[position() &gt;= 4]"/>
-                      </tr>
+                      <xsl:for-each select="discount/r">
+                        <tr>
+                          <td class="colW1">
+                            <xsl:value-of select="xslLogFormat:GetSportbookMemberCommissionName(@sporttype,@bettype)" />
+                          </td>
+                          <td class="colW2">
+                            <xsl:value-of select="@agentdiscount" />
+                          </td>
+                          <td class="colW2">
+                            <xsl:value-of select="@playerdiscount" />
+                          </td>
+                        </tr>
+                      </xsl:for-each>
                     </table>
                   </td>
                 </tr>
@@ -342,14 +358,5 @@
         </tr>
       </xsl:for-each>
     </table>
-  </xsl:template>
-
-  <xsl:template match="discount/r">
-    <td class="colW1">
-      <xsl:value-of select="xslLogFormat:GetSportbookCommissionName(@sporttype,@bettype)" />
-    </td>
-    <td class="colW2">
-      <xsl:value-of select="@discount" />
-    </td>
   </xsl:template>
 </xsl:stylesheet>

@@ -64,6 +64,8 @@
 
         string GetSportbookCommissionName(int sportType, int betType);
 
+        string GetSportbookMemberCommissionName(int sportType, int betType);
+
         string GetRNGGamesBetSettingName(int sportType, int betType);
 
         string GetParlayMaxPayoutSportBetTypeName(int sportType, int betType);

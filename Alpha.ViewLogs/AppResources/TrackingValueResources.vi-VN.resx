@@ -3132,4 +3132,10 @@
   <data name="MaxPayoutPerMatch" xml:space="preserve">
     <value>Thanh Toán Tối Đa Mỗi Trận</value>
   </data>
+  <data name="CommForAgent" xml:space="preserve">
+    <value>Hoa hồng cho Agent</value>
+  </data>
+  <data name="CommForMember" xml:space="preserve">
+    <value>Hoa hồng cho Member</value>
+  </data>
 </root>

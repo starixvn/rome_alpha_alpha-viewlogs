@@ -408,6 +408,11 @@
             return remotingRef.GetSportbookCommissionName(sportType, betType);
         }
 
+        public string GetSportbookMemberCommissionName(int sportType, int betType)
+        {
+            return remotingRef.GetSportbookMemberCommissionName(sportType, betType);
+        }
+
         public string GetRNGGamesBetSettingName(int sportType, int betType)
         {
             return remotingRef.GetRNGGamesBetSettingName(sportType, betType);

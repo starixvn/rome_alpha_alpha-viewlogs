@@ -3360,4 +3360,10 @@
   <data name="PositionTaking" xml:space="preserve">
     <value>佔成數</value>
   </data>
+  <data name="CommForAgent" xml:space="preserve">
+    <value>代理佣金</value>
+  </data>
+  <data name="CommForMember" xml:space="preserve">
+    <value>會員的佣金</value>
+  </data>
 </root>

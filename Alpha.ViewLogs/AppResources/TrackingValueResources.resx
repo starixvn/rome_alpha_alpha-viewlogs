@@ -3429,4 +3429,10 @@
   <data name="PositionTaking" xml:space="preserve">
     <value>Position Taking</value>
   </data>
+  <data name="CommForAgent" xml:space="preserve">
+    <value>Comm for Agent</value>
+  </data>
+  <data name="CommForMember" xml:space="preserve">
+    <value>Comm for Member</value>
+  </data>
 </root>

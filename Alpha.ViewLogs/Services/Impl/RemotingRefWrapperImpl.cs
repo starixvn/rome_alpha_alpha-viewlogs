@@ -110,6 +110,15 @@
                 string.Empty);
         }
 
+        public string GetSportbookMemberCommissionName(int sportType, int betType)
+        {
+            return remotingRefService.GetResourceDataByRefIdAndResourceId(
+                "SB_Comm_Member",
+                $"{ProductGroups.SportsBook}_{GroupTypes.SportsBookComm}_{sportType}_{betType}",
+                LanguageCode,
+                string.Empty);
+        }
+
         private static string LanguageCode
         => Thread.CurrentThread.CurrentCulture.Name;
     }
