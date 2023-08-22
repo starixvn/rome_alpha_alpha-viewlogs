@@ -3375,4 +3375,7 @@
   <data name="SystemId_10" xml:space="preserve">
     <value>Telegram</value>
   </data>
+  <data name="AutoTransfer" xml:space="preserve">
+    <value>Auto Transfer</value>
+  </data>
 </root>
