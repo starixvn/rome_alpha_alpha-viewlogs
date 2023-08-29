@@ -3357,4 +3357,16 @@
   <data name="CommForMember" xml:space="preserve">
     <value>ค่าคอมมิชชั่นสำหรับสมาชิก</value>
   </data>
+  <data name="Combo2" xml:space="preserve">
+    <value>คอมโบ 2</value>
+  </data>
+  <data name="Combo35" xml:space="preserve">
+    <value>คอมโบ 3-5</value>
+  </data>
+  <data name="ComboOver6" xml:space="preserve">
+    <value>คอมโบ 6+ และ ระบบพาร์เลย์</value>
+  </data>
+  <data name="SingleMatchParlay" xml:space="preserve">
+    <value>พาร์เลย์การแข่งขันนัดเดียว</value>
+  </data>
 </root>

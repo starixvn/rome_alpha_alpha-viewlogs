@@ -3366,4 +3366,16 @@
   <data name="CommForMember" xml:space="preserve">
     <value>会员的佣金</value>
   </data>
+  <data name="Combo2" xml:space="preserve">
+    <value>复选 2</value>
+  </data>
+  <data name="Combo35" xml:space="preserve">
+    <value>复选 3-5</value>
+  </data>
+  <data name="ComboOver6" xml:space="preserve">
+    <value>复选 6+ &amp; 系统串关</value>
+  </data>
+  <data name="SingleMatchParlay" xml:space="preserve">
+    <value>单场串关</value>
+  </data>
 </root>

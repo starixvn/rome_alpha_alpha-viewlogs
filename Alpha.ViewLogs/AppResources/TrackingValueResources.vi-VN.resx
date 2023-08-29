@@ -3138,4 +3138,10 @@
   <data name="CommForMember" xml:space="preserve">
     <value>Hoa hồng cho Member</value>
   </data>
+  <data name="ComboOver6" xml:space="preserve">
+    <value>Combo 6+ &amp; Cược Tổng Hợp</value>
+  </data>
+  <data name="SingleMatchParlay" xml:space="preserve">
+    <value>Cược Xiên Một Trận</value>
+  </data>
 </root>
