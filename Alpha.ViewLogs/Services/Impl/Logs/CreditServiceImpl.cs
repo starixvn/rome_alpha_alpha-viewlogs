@@ -2,13 +2,13 @@
 {
     using System;
     using Alpha.ViewLogs.Models;
+    using AlphaPlus.User.Models;
     using Criteria.Credit;
     using DataAccesses;
     using Fanex.Caching;
     using Fanex.Data.Repository;
     using Helpers;
     using Params;
-    using Sunplus.Agent.Model.Entities;
 
     public class CreditServiceImpl : BaseService, LogService
     {

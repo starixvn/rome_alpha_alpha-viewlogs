@@ -3,6 +3,9 @@
     using System.Collections.Generic;
     using System.Reflection;
     using System.Web.Mvc;
+    using Alpha.Web.Helpers;
+    using AlphaPlus.Configurations;
+    using AlphaPlus.User.Models;
     using AppResources;
     using Controllers;
     using DataAccesses;
@@ -20,9 +23,7 @@
     using SimpleInjector;
     using SimpleInjector.Integration.Web;
     using SimpleInjector.Integration.Web.Mvc;
-    using Sunplus.Agent.Model.Base;
-    using Sunplus.Agent.Model.Entities;
-    using Utilities.IP;
+    using AlphaPlus.Utilities.IP;
     using ViewLogs.Helpers;
     using ViewLogs.Helpers.Impl;
 
@@ -30,6 +31,8 @@
     {
         public static void Init()
         {
+            UserSession.Init(new HttpContextHelper());
+
             var container = new Container();
 
             container.Options.DefaultScopedLifestyle = new WebRequestLifestyle();
@@ -74,7 +77,7 @@
         private static void RegisterCrossCuttingConcerns(Container container)
         {
             container.Register<IDateTime, DateTimeWrap>(Lifestyle.Singleton);
-            container.Register<MicroSites, MicroSitesImpl>(Lifestyle.Singleton);
+            container.Register<Helpers.MicroSites, MicroSitesImpl>(Lifestyle.Singleton);
         }
 
         private static void RegisterServices(Container container)

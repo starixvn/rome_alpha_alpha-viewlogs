@@ -1,10 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services.Logs
 {
     using System;
+    using AlphaPlus.User.Models;
     using Fanex.Caching;
     using Fanex.Data.Repository;
     using Params;
-    using Sunplus.Agent.Model.Entities;
     using ViewLogs.Criteria;
     using ViewLogs.Criteria.Setting;
     using ViewLogs.DataAccesses;

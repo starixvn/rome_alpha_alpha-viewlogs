@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using AlphaPlus.User.Models;
     using Constants;
     using Fanex.Caching;
     using Fanex.Data.Repository;
@@ -9,7 +10,6 @@
     using NSubstitute;
     using NUnit.Framework;
     using Params;
-    using Sunplus.Agent.Model.Entities;
     using ViewLogs.DataAccesses;
     using ViewLogs.Models;
     using ViewLogs.Services;

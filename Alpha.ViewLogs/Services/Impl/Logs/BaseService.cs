@@ -10,9 +10,8 @@
     using Fanex.Data.Repository;
     using Models;
     using Params;
-    using Sunplus.Agent.Model.Entities;
-    using Sunplus.Agent.Model.Base;
     using System.Text.RegularExpressions;
+    using AlphaPlus.User.Models;
 
     public abstract class BaseService
     {

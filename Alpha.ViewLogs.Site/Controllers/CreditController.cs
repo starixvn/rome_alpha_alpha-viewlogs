@@ -1,10 +1,10 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
     using System.Web.Mvc;
+    using AlphaPlus.User.Models;
     using Helpers;
     using MediatR;
     using Requests.Credit;
-    using Sunplus.Agent.Model.Entities;
 
     public class CreditController : ViewLogBaseController
     {

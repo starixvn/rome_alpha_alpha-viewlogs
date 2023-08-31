@@ -2,9 +2,9 @@
 {
     using System.Web.Mvc;
     using System.Web.SessionState;
+    using AlphaPlus.User.Models;
     using Configurations;
     using Helpers;
-    using Sunplus.Agent.Model.Entities;
     using Web;
 
     [SessionState(SessionStateBehavior.ReadOnly)]

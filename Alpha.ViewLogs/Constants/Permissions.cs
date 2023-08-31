@@ -2,8 +2,8 @@
 {
     using System.Collections;
     using System.Collections.Generic;
+    using AlphaPlus.User.Models;
     using AppResources;
-    using Sunplus.Agent.Model.Entities;
 
     public static class Permissions
     {

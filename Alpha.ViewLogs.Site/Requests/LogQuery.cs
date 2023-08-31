@@ -3,12 +3,10 @@
     using System;
     using System.Collections.Generic;
     using System.Web;
+    using AlphaPlus.User.Models;
     using Configurations;
     using Constants;
     using Fanex.Common;
-    using Sunplus.Agent.Model.Definitions;
-    using Sunplus.Agent.Model.Entities;
-    using Sunplus.Agent.Model.Entities.Permission;
     using ViewLogs.Helpers;
     using ViewLogs.Helpers.Impl;
 
@@ -157,7 +155,7 @@
         {
             var custStatusDict = new Dictionary<string, bool>
             {
-                { "disablevirtualsports", UserPermission.IsEnableProduct(ProductIdConstants.VirtualSports) },
+                { "disablevirtualsports", UserPermission.IsEnableProduct(Alpha.ViewLogs.Constants.ProductIdConstants.VirtualSports) },
                 { "44", UserPermission.IsShowSportsbook2 }
             };
 

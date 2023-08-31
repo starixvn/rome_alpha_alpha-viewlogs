@@ -4,8 +4,7 @@
     using System.Diagnostics;
     using System.Reflection;
     using System.Web.Configuration;
-    using Sunplus.Agent.Model.Entities;
-    using Web.Configurations;
+    using AlphaPlus.User.Models;
 
     public class BaseStaticResources
     {
@@ -39,16 +38,14 @@
         }
 
         protected static string GetDarkModeName(IUserSession userSession = null)
-            => AppSettings.IsOfferDarkMode
-            ? (userSession ?? UserSession.Current).DarkModeName
-            : string.Empty;
+            => (userSession ?? UserSession.Current).DarkModeName;
 
         protected static string GetAssetAppPath(IUserSession userSession = null)
         {
             var assetAppPath = (userSession ?? UserSession.Current).AssetAppPath;
 
             return string.IsNullOrWhiteSpace(assetAppPath)
-                ? AppSettings.AssetAppPath
+                ? AlphaPlus.Configurations.AppSettings.AssetAppPath
                 : assetAppPath;
         }
     }

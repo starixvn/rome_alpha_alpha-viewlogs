@@ -31,7 +31,7 @@
             var actualTotalRecords = logDataAccess.GetTotalRecordsOfLogs(criteria);
 
             // Assert
-            dynamicRepository.Received().Count(criteria);
+            dynamicRepository.Received().Get<int>(criteria);
         }
 
         [Test]
@@ -40,7 +40,7 @@
             // Arrange
             var criteria = Arg.Any<ICriteria>();
             var expectedTotalRecords = 1;
-            dynamicRepository.Count(criteria).Returns(expectedTotalRecords);
+            dynamicRepository.Get<int>(criteria).Returns(expectedTotalRecords);
 
             // Act
             var actualTotalRecords = logDataAccess.GetTotalRecordsOfLogs(criteria);

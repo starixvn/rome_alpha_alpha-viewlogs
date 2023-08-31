@@ -3,8 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Runtime.CompilerServices;
     using Alpha.ViewLogs.Models;
+    using AlphaPlus.User.Models;
     using Criteria;
     using Criteria.Setting;
     using DataAccesses;
@@ -12,7 +12,6 @@
     using Fanex.Data.Repository;
     using Helpers;
     using Params;
-    using Sunplus.Agent.Model.Entities;
 
     public class SettingServiceImpl : BaseService, LogService
     {
