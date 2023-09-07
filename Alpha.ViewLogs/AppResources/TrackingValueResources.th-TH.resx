@@ -3369,4 +3369,10 @@
   <data name="SingleMatchParlay" xml:space="preserve">
     <value>พาร์เลย์การแข่งขันนัดเดียว</value>
   </data>
+  <data name="WinLossLimit" xml:space="preserve">
+    <value>วงเงินแพ้ชนะ</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>ไม่จำกัด</value>
+  </data>
 </root>

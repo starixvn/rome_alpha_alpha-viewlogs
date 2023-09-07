@@ -11,14 +11,13 @@
           <xsl:attribute name="class">
             <xsl:choose>
               <xsl:when test="$groupid=1">
-                <xsl:value-of select="string('headerGroup ')"/>
+                <xsl:value-of select="string('headerGroup ')" />
               </xsl:when>
               <xsl:otherwise>
-                <xsl:value-of select="string('headerGroup toggle-icon')"/>
+                <xsl:value-of select="string('headerGroup toggle-icon')" />
               </xsl:otherwise>
             </xsl:choose>
           </xsl:attribute>
-
 
           <td colspan="6">
             <span class="icon-chevron-down"></span>
@@ -30,14 +29,14 @@
             <xsl:variable name="style">
               <xsl:choose>
                 <xsl:when test="$groupid=1">
-                  <xsl:value-of select="title"/>
+                  <xsl:value-of select="title" />
                 </xsl:when>
               </xsl:choose>
             </xsl:variable>
             <table class="tblDesc tbl-last">
               <xsl:if test="$groupid!=1">
                 <xsl:attribute name="style">
-                  <xsl:value-of select="'display:none;'"/>
+                  <xsl:value-of select="'display:none;'" />
                 </xsl:attribute>
               </xsl:if>
               <xsl:if test="discount[@grouptype=150]">
@@ -51,10 +50,10 @@
                   <td colspan="6">
                     <table class="tblDesc">
                       <tr>
-                        <xsl:apply-templates select="discount/r[position() &lt; 4]"/>
+                        <xsl:apply-templates select="discount/r[position() &lt; 4]" />
                       </tr>
                       <tr>
-                        <xsl:apply-templates select="discount/r[position() &gt;= 4]"/>
+                        <xsl:apply-templates select="discount/r[position() &gt;= 4]" />
                       </tr>
                     </table>
                   </td>
@@ -109,6 +108,7 @@
                   </td>
                 </tr>
               </xsl:if>
+
               <xsl:if test="discount[@grouptype=156]">
                 <tr class="headerDetail" onclick="toggle(this)">
                   <td colspan="6">
@@ -207,7 +207,6 @@
                     </table>
                   </td>
                 </tr>
-
               </xsl:if>
               <xsl:if test="parlaymaxpayout">
                 <tr class="headerDetail" onclick="toggle(this)">
@@ -317,7 +316,7 @@
                                 <td class="colW1">
                                   <xsl:choose>
                                     <xsl:when test="@islive=1">
-                                      <xsl:value-of select="concat(xslLogFormat:GetBetTypeName(@bettype),' (',xslLogFormat:GetLogResource('Live'),')')"/>
+                                      <xsl:value-of select="concat(xslLogFormat:GetBetTypeName(@bettype),' (',xslLogFormat:GetLogResource('Live'),')')" />
                                     </xsl:when>
                                     <xsl:otherwise>
                                       <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
@@ -367,10 +366,10 @@
                               <td class="colW1">
                                 <xsl:choose>
                                   <xsl:when test="@sporttype=208 and @bettype=2101">
-                                    <xsl:value-of select="xslLogFormat:GetProductName(6)"/>
+                                    <xsl:value-of select="xslLogFormat:GetProductName(6)" />
                                   </xsl:when>
                                   <xsl:otherwise>
-                                    <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)"/>
+                                    <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
                                   </xsl:otherwise>
                                 </xsl:choose>
                               </td>
@@ -393,6 +392,69 @@
                           </xsl:for-each>
                         </xsl:otherwise>
                       </xsl:choose>
+                    </table>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="winlosslimit[@grouptype=155]">
+                <tr class="headerDetail" onclick="toggle(this)">
+                  <td colspan="6">
+                    <span class="icon-chevron-down"></span>
+                    <xsl:value-of select="xslLogFormat:GetLogResource('WinLossLimit')" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="6">
+                    <table class="tblDesc">
+                      <tr style="text-align:center;" class="headerSportTypeDetail">
+                        <td></td>
+                        <td>
+                          <xsl:value-of select="xslLogFormat:GetLogResource('MaximumWin')" />
+                        </td>
+                        <td>
+                          <xsl:value-of select="xslLogFormat:GetLogResource('MaximumLoss')" />
+                        </td>
+                        <td>
+                          <xsl:value-of select="xslLogFormat:GetLogResource('DailyAutoReset')" />
+                        </td>
+                      </tr>
+                      <xsl:for-each select="winlosslimit/r">
+                        <tr>
+                          <td class="colW1">
+                            <xsl:choose>
+                              <xsl:when test="@sporttype=208 and @bettype=2101">
+                                <xsl:value-of select="xslLogFormat:GetProductName(6)" />
+                              </xsl:when>
+                              <xsl:otherwise>
+                                <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+                              </xsl:otherwise>
+                            </xsl:choose>
+                          </td>
+                          <td class="colW2">
+                            <xsl:choose>
+                              <xsl:when test="@maxwinlimit=0">
+                                <xsl:value-of select="xslLogFormat:GetLogResource('Unlimited')" />
+                              </xsl:when>
+                              <xsl:otherwise>
+                                <xsl:value-of select="@maxwinlimit" />
+                              </xsl:otherwise>
+                            </xsl:choose>
+                          </td>
+                          <td class="colW2">
+                            <xsl:choose>
+                              <xsl:when test="@maxlosslimit=0">
+                                <xsl:value-of select="xslLogFormat:GetLogResource('Unlimited')" />
+                              </xsl:when>
+                              <xsl:otherwise>
+                                <xsl:value-of select="@maxlosslimit" />
+                              </xsl:otherwise>
+                            </xsl:choose>
+                          </td>
+                          <td class="colW2">
+                            <xsl:value-of select="@isautoreset" />
+                          </td>
+                        </tr>
+                      </xsl:for-each>
                     </table>
                   </td>
                 </tr>

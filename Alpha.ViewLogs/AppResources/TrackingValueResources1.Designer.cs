@@ -8602,6 +8602,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unlimited.
+        /// </summary>
+        public static string Unlimited {
+            get {
+                return ResourceManager.GetString("Unlimited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update All Members.
         /// </summary>
         public static string Updallmembers {
@@ -9957,6 +9966,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string wed {
             get {
                 return ResourceManager.GetString("wed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Win Loss Limit.
+        /// </summary>
+        public static string WinLossLimit {
+            get {
+                return ResourceManager.GetString("WinLossLimit", resourceCulture);
             }
         }
         

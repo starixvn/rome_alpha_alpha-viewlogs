@@ -3378,4 +3378,10 @@
   <data name="SingleMatchParlay" xml:space="preserve">
     <value>單場串關</value>
   </data>
+  <data name="WinLossLimit" xml:space="preserve">
+    <value>輸贏限額</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>無限</value>
+  </data>
 </root>

@@ -3144,4 +3144,10 @@
   <data name="SingleMatchParlay" xml:space="preserve">
     <value>Cược Xiên Một Trận</value>
   </data>
+  <data name="WinLossLimit" xml:space="preserve">
+    <value>Giới hạn thắng thua</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Không giới hạn</value>
+  </data>
 </root>

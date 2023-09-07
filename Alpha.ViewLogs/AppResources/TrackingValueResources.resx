@@ -3435,4 +3435,10 @@
   <data name="CommForMember" xml:space="preserve">
     <value>Comm for Member</value>
   </data>
+  <data name="WinLossLimit" xml:space="preserve">
+    <value>Win Loss Limit</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Unlimited</value>
+  </data>
 </root>
