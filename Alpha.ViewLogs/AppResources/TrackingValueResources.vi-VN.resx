@@ -3150,4 +3150,7 @@
   <data name="Unlimited" xml:space="preserve">
     <value>Không giới hạn</value>
   </data>
+  <data name="BetLimit" xml:space="preserve">
+    <value>Giới hạn cược</value>
+  </data>
 </root>

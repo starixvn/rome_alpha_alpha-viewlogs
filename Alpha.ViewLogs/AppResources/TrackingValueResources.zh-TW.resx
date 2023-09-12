@@ -3384,4 +3384,7 @@
   <data name="Unlimited" xml:space="preserve">
     <value>無限</value>
   </data>
+  <data name="BetLimit" xml:space="preserve">
+    <value>投注限額</value>
+  </data>
 </root>

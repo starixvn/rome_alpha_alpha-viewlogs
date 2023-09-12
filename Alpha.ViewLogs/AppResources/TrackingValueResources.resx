@@ -3441,4 +3441,7 @@
   <data name="Unlimited" xml:space="preserve">
     <value>Unlimited</value>
   </data>
+  <data name="BetLimit" xml:space="preserve">
+    <value>Bet Limit</value>
+  </data>
 </root>

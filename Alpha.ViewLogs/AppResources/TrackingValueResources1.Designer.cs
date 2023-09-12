@@ -2014,6 +2014,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet Limit.
+        /// </summary>
+        public static string BetLimit {
+            get {
+                return ResourceManager.GetString("BetLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bet Lists.
         /// </summary>
         public static string BetLists {
