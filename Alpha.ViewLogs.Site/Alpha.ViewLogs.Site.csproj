@@ -348,6 +348,9 @@
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\AutoTransfer\action_95099.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\AutoTransfer\action_95098.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\AutoTransfer\action_95097.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\AutoTransfer\action_95086.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\ApiKey\action_6102.xslt">
       <SubType>Designer</SubType>
