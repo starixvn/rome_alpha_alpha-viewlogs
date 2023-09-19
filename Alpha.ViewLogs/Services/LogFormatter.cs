@@ -71,5 +71,11 @@
         string GetParlayMaxPayoutSportBetTypeName(int sportType, int betType);
 
         string GetSportsBookBetSettingName(int sportType, int betType);
+
+        string GetDisplayName(int settingLevel, int sportType, int betType, int productId);
+
+        string FormatParlayMaxPayout(decimal value);
+
+        string FormatWinLossLimit(decimal value);
     }
 }

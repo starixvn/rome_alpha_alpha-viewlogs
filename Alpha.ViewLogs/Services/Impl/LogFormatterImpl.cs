@@ -6,6 +6,7 @@
     using System.Resources;
     using System.Text;
     using System.Xml.Linq;
+    using Alpha.ViewLogs.Extensions;
     using AppResources;
     using Constants;
     using Helpers;
@@ -431,6 +432,21 @@
         public string GetSportsBookPositionTaking(int sportType, int betType)
         {
             return remotingRef.GetSportsBookPositionTaking(sportType, betType);
+        }
+
+        public string GetDisplayName(int settingLevel, int sportType, int betType, int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string FormatParlayMaxPayout(decimal value)
+        {
+            return value == 0 ? Resources.Unlimited : value.ToNumericString();
+        }
+
+        public string FormatWinLossLimit(decimal value)
+        {
+            return value == 0 ? Resources.Unlimited : value.ToNumericString();
         }
     }
 }
