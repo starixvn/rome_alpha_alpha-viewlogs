@@ -68,8 +68,8 @@
         public string GetSportbookCommissionName(int sportType, int betType)
         {
             return remotingRefService.GetResourceDataByRefIdAndResourceId(
-                "SB_Comm_SMA", 
-                $"{ProductGroups.SportsBook}_{GroupTypes.SportsBookComm}_{sportType}_{betType}", 
+                "SB_Comm_SMA",
+                $"{ProductGroups.SportsBook}_{GroupTypes.SportsBookComm}_{sportType}_{betType}",
                 LanguageCode,
                 string.Empty);
         }
@@ -77,18 +77,18 @@
         public string GetRNGGamesBetSettingName(int sportType, int betType)
         {
             return remotingRefService.GetResourceDataByRefIdAndResourceId(
-                "G_GT_Sport_Bettype", 
-                $"{ProductGroups.RNGGames}_{GroupTypes.RNGGamesBetSetting}_{sportType}_{betType}", 
-                LanguageCode, 
+                "G_GT_Sport_Bettype",
+                $"{ProductGroups.RNGGames}_{GroupTypes.RNGGamesBetSetting}_{sportType}_{betType}",
+                LanguageCode,
                 string.Empty);
         }
 
         public string GetParlayMaxPayoutSportBetTypeName(int sportType, int betType)
         {
             return remotingRefService.GetResourceDataByRefIdAndResourceId(
-                "G_GT_Sport_Bettype", 
-                $"{ProductGroups.SportsBook}_{GroupTypes.ParlayMaxPayout}_{sportType}_{betType}", 
-                LanguageCode, 
+                "G_GT_Sport_Bettype",
+                $"{ProductGroups.SportsBook}_{GroupTypes.ParlayMaxPayout}_{sportType}_{betType}",
+                LanguageCode,
                 string.Empty);
         }
 
@@ -97,6 +97,15 @@
             return remotingRefService.GetResourceDataByRefIdAndResourceId(
                 "G_GT_Sport_Bettype",
                 $"{ProductGroups.SportsBook}_{GroupTypes.SportsBookBetSetting}_{sportType}_{betType}",
+                LanguageCode,
+                string.Empty);
+        }
+
+        public string GetOtherGamesBetSettingName(int sportType, int betType)
+        {
+            return remotingRefService.GetResourceDataByRefIdAndResourceId(
+                "G_GT_Sport_Bettype",
+                $"{ProductGroups.OtherGames}_{GroupTypes.OtherGamesBetSetting}_{sportType}_{betType}",
                 LanguageCode,
                 string.Empty);
         }

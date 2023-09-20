@@ -399,13 +399,34 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_95088.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\betLimit.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\memberCommission.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\headerGroup.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\OtherGames\betSetting.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\PositionTaking\member.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\PositionTaking\agent.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\SportsBook\commission.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\winLossLimit.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\commission.xslt">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\PositionTaking\super.xslt">
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\PositionTaking\master.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\RNGGames\betSetting.xslt">
@@ -417,7 +438,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\SportsBook\parlayMaxPayout.xslt">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\SportsBook\commission.xslt">
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\SportsBook\memberCommission.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31802.xslt">

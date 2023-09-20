@@ -68,6 +68,8 @@
 
         string GetRNGGamesBetSettingName(int sportType, int betType);
 
+        string GetOtherGamesBetSettingName(int sportType, int betType);
+
         string GetParlayMaxPayoutSportBetTypeName(int sportType, int betType);
 
         string GetSportsBookBetSettingName(int sportType, int betType);

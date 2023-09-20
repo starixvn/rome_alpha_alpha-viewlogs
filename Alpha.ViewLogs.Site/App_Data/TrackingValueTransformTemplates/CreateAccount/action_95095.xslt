@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslLogFormat="urn:LogFormat">
+  <xsl:include href="./headerGroup.xslt" />
   <xsl:include href="./SportsBook/memberCommission.xslt" />
   <xsl:include href="./SportsBook/betSetting.xslt" />
   <xsl:include href="./SportsBook/parlayMaxPayout.xslt" />
   <xsl:include href="./RNGGames/betSetting.xslt" />
+  <xsl:include href="./OtherGames/betSetting.xslt" />
   <xsl:include href="./PositionTaking/member.xslt" />
-  <xsl:include href="./commission.xslt" />
+  <xsl:include href="./memberCommission.xslt" />
   <xsl:include href="./winLossLimit.xslt" />
   <xsl:include href="./betLimit.xslt" />
   <xsl:param name="IsInternal" select="0"></xsl:param>
@@ -16,23 +18,9 @@
     <table class="tblDesc">
       <xsl:for-each select="group">
         <xsl:variable name="groupid" select="@id" />
-        <tr class="headerGroup" onclick="toggle(this)">
-          <xsl:attribute name="class">
-            <xsl:choose>
-              <xsl:when test="$groupid=1">
-                <xsl:value-of select="string('headerGroup ')" />
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="string('headerGroup toggle-icon')" />
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:attribute>
-
-          <td colspan="6">
-            <span class="icon-chevron-down"></span>
-            <xsl:value-of select="xslLogFormat:GetProductGroupName(@id)" />
-          </td>
-        </tr>
+        <xsl:call-template name="headerGroup">
+          <xsl:with-param name="groupid" select="$groupid" />
+        </xsl:call-template>
         <tr>
           <td colspan="6">
             <xsl:variable name="style">

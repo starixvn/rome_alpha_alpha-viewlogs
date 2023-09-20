@@ -20,7 +20,7 @@
               <xsl:value-of select="xslLogFormat:GetLogResource('CommForMember')" />
             </td>
           </tr>
-          <xsl:for-each select="discount/r">
+          <xsl:for-each select="r">
             <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetSportbookMemberCommissionName(@sporttype,@bettype)" />

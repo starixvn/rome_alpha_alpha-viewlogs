@@ -25,5 +25,7 @@
         string GetSportsBookBetSettingName(int sportType, int betType);
 
         string GetSportsBookPositionTaking(int sportType, int betType);
+
+        string GetOtherGamesBetSettingName(int sportType, int betType);
     }
 }

@@ -11,6 +11,7 @@
     using Constants;
     using Helpers;
     using Params;
+    using Sunplus.Agent.Model.BL.Definitions;
 
     public class LogFormatterImpl : LogFormatter
     {
@@ -436,7 +437,20 @@
 
         public string GetDisplayName(int settingLevel, int sportType, int betType, int productId)
         {
-            throw new NotImplementedException();
+            switch (settingLevel)
+            {
+                case SettingLevels.Product:
+                    return GetProductName(productId);
+
+                case SettingLevels.SportType:
+                    return GetSportName(sportType);
+
+                case SettingLevels.BetType:
+                    return GetBetTypeName(betType);
+
+                default:
+                    return $"{GetSportName(sportType)} - {GetBetTypeName(betType)}";
+            }
         }
 
         public string FormatParlayMaxPayout(decimal value)
@@ -447,6 +461,11 @@
         public string FormatWinLossLimit(decimal value)
         {
             return value == 0 ? Resources.Unlimited : value.ToNumericString();
+        }
+
+        public string GetOtherGamesBetSettingName(int sportType, int betType)
+        {
+            return remotingRef.GetOtherGamesBetSettingName(sportType, betType);
         }
     }
 }
