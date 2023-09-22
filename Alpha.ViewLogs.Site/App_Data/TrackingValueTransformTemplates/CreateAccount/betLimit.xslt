@@ -45,6 +45,7 @@
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:for-each>
+            <tr></tr>
           </table>
         </td>
       </tr>
@@ -90,6 +91,7 @@
                   </tr>
                 </xsl:otherwise>
               </xsl:choose>
+              <tr></tr>
             </xsl:for-each>
           </table>
         </td>
