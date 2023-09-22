@@ -64,14 +64,7 @@
                 <xsl:for-each select="pt/r">
                   <tr>
                     <td class="colW1">
-                      <xsl:choose>
-                        <xsl:when test="@sporttype=208 and @bettype=2101">
-                          <xsl:value-of select="xslLogFormat:GetProductName(6)" />
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
-                        </xsl:otherwise>
-                      </xsl:choose>
+                      <xsl:value-of select="xslLogFormat:GetDisplayName(@settinglevel,@sporttype,@bettype,@productid)" />
                     </td>
                     <td class="colW2" colspan="5">
                       <xsl:value-of select="@agentpt" />
