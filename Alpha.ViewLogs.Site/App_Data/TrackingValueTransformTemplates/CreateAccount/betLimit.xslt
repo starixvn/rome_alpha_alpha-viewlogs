@@ -3,7 +3,7 @@
   <xsl:output method="html" indent="no" />
   <xsl:key name="betlimit-by-sporttype" match="betlimit/r" use="@sporttype" />
   <xsl:template name="betLimit">
-    <xsl:if test="betlimit[@grouptype=158]">
+    <xsl:if test="betlimit[@grouptype=158]/r">
       <tr class="headerDetail" onclick="toggle(this)">
         <td colspan="6">
           <span class="icon-chevron-down"></span>
@@ -34,14 +34,34 @@
                   </xsl:for-each>
                 </xsl:when>
                 <xsl:otherwise>
-                  <tr>
-                    <td class="colW1">
-                      <xsl:value-of select="xslLogFormat:GetDisplayName(@settinglevel,@sporttype,@bettype,@productid)" />
-                    </td>
-                    <td class="colW2" colspan="5">
-                      <xsl:value-of select="@stakelevellist" />
-                    </td>
-                  </tr>
+                  <xsl:choose>
+                    <xsl:when test="@settinglevel=4">
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+                        </td>
+                        <td class="colW2" colspan="5"></td>
+                      </tr>
+                      <tr>
+                        <td class="colW2">
+                          <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
+                        </td>
+                        <td class="colW2" colspan="5">
+                          <xsl:value-of select="@stakelevellist" />
+                        </td>
+                      </tr>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetDisplayName(@settinglevel,@sporttype,@bettype,@productid)" />
+                        </td>
+                        <td class="colW2" colspan="5">
+                          <xsl:value-of select="@stakelevellist" />
+                        </td>
+                      </tr>
+                    </xsl:otherwise>
+                  </xsl:choose>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:for-each>
@@ -50,7 +70,7 @@
         </td>
       </tr>
     </xsl:if>
-    <xsl:if test="betlimit[@grouptype=159]">
+    <xsl:if test="betlimit[@grouptype=159]/r">
       <tr class="headerDetail" onclick="toggle(this)">
         <td colspan="6">
           <span class="icon-chevron-down"></span>
@@ -81,14 +101,34 @@
                   </xsl:for-each>
                 </xsl:when>
                 <xsl:otherwise>
-                  <tr>
-                    <td class="colW1">
-                      <xsl:value-of select="xslLogFormat:GetDisplayName(@settinglevel,@sporttype,@bettype,@productid)" />
-                    </td>
-                    <td class="colW2" colspan="5">
-                      <xsl:value-of select="@stakelevellist" />
-                    </td>
-                  </tr>
+                  <xsl:choose>
+                    <xsl:when test="@settinglevel=4">
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+                        </td>
+                        <td class="colW2" colspan="5"></td>
+                      </tr>
+                      <tr>
+                        <td class="colW2">
+                          <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
+                        </td>
+                        <td class="colW2" colspan="5">
+                          <xsl:value-of select="@stakelevellist" />
+                        </td>
+                      </tr>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <tr>
+                        <td class="colW1">
+                          <xsl:value-of select="xslLogFormat:GetDisplayName(@settinglevel,@sporttype,@bettype,@productid)" />
+                        </td>
+                        <td class="colW2" colspan="5">
+                          <xsl:value-of select="@stakelevellist" />
+                        </td>
+                      </tr>
+                    </xsl:otherwise>
+                  </xsl:choose>
                 </xsl:otherwise>
               </xsl:choose>
               <tr></tr>
