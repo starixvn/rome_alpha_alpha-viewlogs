@@ -15,36 +15,38 @@
   <xsl:template match="root">
     <table class="tblDesc">
       <xsl:for-each select="group">
-        <xsl:variable name="groupid" select="@id" />
-        <xsl:call-template name="headerGroup">
-          <xsl:with-param name="groupid" select="$groupid" />
-        </xsl:call-template>
-        <tr>
-          <td colspan="6">
-            <xsl:variable name="style">
-              <xsl:choose>
-                <xsl:when test="$groupid=1">
-                  <xsl:value-of select="title" />
-                </xsl:when>
-              </xsl:choose>
-            </xsl:variable>
-            <table class="tblDesc tbl-last">
-              <xsl:if test="$groupid!=1">
-                <xsl:attribute name="style">
-                  <xsl:value-of select="'display:none;'" />
-                </xsl:attribute>
-              </xsl:if>
-              <xsl:apply-templates select="discount" />
-              <xsl:apply-templates select="betsetting" />
-              <xsl:apply-templates select="parlaymaxpayout" />
-              <xsl:call-template name="masterPT">
-                <xsl:with-param name="groupid" select="$groupid" />
-              </xsl:call-template>
-              <xsl:apply-templates select="winlosslimit" />
-              <xsl:call-template name="betLimit" />
-            </table>
-          </td>
-        </tr>
+        <xsl:if test="*/r">
+          <xsl:variable name="groupid" select="@id" />
+          <xsl:call-template name="headerGroup">
+            <xsl:with-param name="groupid" select="$groupid" />
+          </xsl:call-template>
+          <tr>
+            <td colspan="6">
+              <xsl:variable name="style">
+                <xsl:choose>
+                  <xsl:when test="$groupid=1">
+                    <xsl:value-of select="title" />
+                  </xsl:when>
+                </xsl:choose>
+              </xsl:variable>
+              <table class="tblDesc tbl-last">
+                <xsl:if test="$groupid!=1">
+                  <xsl:attribute name="style">
+                    <xsl:value-of select="'display:none;'" />
+                  </xsl:attribute>
+                </xsl:if>
+                <xsl:apply-templates select="discount" />
+                <xsl:apply-templates select="betsetting" />
+                <xsl:apply-templates select="parlaymaxpayout" />
+                <xsl:call-template name="masterPT">
+                  <xsl:with-param name="groupid" select="$groupid" />
+                </xsl:call-template>
+                <xsl:apply-templates select="winlosslimit" />
+                <xsl:call-template name="betLimit" />
+              </table>
+            </td>
+          </tr>
+        </xsl:if>
       </xsl:for-each>
     </table>
   </xsl:template>
