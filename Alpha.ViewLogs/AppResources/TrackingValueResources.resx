@@ -3418,7 +3418,7 @@
     <value>Allow Auto PT</value>
   </data>
   <data name="PositionTakingTemplate" xml:space="preserve">
-    <value>Position Taking (%) Template</value>
+    <value>Position Taking Template</value>
   </data>
   <data name="MasterPT" xml:space="preserve">
     <value>Master PT</value>

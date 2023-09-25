@@ -3153,4 +3153,13 @@
   <data name="BetLimit" xml:space="preserve">
     <value>Giới hạn cược</value>
   </data>
+  <data name="TemplateName" xml:space="preserve">
+    <value>Tên Mẫu</value>
+  </data>
+  <data name="SelectedByDefault" xml:space="preserve">
+    <value>Chọn Mặc Định</value>
+  </data>
+  <data name="PositionTakingTemplate" xml:space="preserve">
+    <value>Mẫu Position Taking</value>
+  </data>
 </root>
