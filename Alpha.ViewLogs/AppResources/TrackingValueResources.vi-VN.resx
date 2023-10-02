@@ -2794,7 +2794,7 @@
     <value>Sản Phẩm</value>
   </data>
   <data name="MaximumLoss" xml:space="preserve">
-    <value>Maximum Loss</value>
+    <value>Tiền thua cược lớn nhất</value>
   </data>
   <data name="MaxPerNumber" xml:space="preserve">
     <value>Tiền Cược tối đa cho mỗi số</value>

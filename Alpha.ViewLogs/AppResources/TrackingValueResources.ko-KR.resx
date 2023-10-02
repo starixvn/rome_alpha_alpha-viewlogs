@@ -2703,9 +2703,6 @@
   <data name="product" xml:space="preserve">
     <value>Product</value>
   </data>
-  <data name="MaximumLoss" xml:space="preserve">
-    <value>Maximum Loss</value>
-  </data>
   <data name="subAccID" xml:space="preserve">
     <value>Sub Account ID</value>
   </data>
