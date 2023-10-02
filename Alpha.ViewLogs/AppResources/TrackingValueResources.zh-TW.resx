@@ -3387,4 +3387,13 @@
   <data name="BetLimit" xml:space="preserve">
     <value>投注限額</value>
   </data>
+  <data name="SelectedByDefault" xml:space="preserve">
+    <value>選擇默認</value>
+  </data>
+  <data name="PositionTakingTemplate" xml:space="preserve">
+    <value>佔成數模板</value>
+  </data>
+  <data name="TemplateName" xml:space="preserve">
+    <value>模板名稱</value>
+  </data>
 </root>

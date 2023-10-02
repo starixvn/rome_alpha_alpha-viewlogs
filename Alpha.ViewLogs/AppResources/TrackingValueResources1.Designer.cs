@@ -7855,7 +7855,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selected By Default.
+        ///   Looks up a localized string similar to Select by Default.
         /// </summary>
         public static string SelectedByDefault {
             get {

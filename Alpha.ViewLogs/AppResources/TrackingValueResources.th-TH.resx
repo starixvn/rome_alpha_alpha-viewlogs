@@ -3378,4 +3378,13 @@
   <data name="BetLimit" xml:space="preserve">
     <value>วงเงินเดิมพัน</value>
   </data>
+  <data name="SelectedByDefault" xml:space="preserve">
+    <value>เลือกเป็นค่าเริ่มต้น</value>
+  </data>
+  <data name="PositionTakingTemplate" xml:space="preserve">
+    <value>เทมเพลตค่าแบ่งสู้</value>
+  </data>
+  <data name="TemplateName" xml:space="preserve">
+    <value>ชื่อเทมเพลต</value>
+  </data>
 </root>
