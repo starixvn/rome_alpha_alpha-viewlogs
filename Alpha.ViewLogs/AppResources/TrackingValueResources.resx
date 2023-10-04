@@ -3444,4 +3444,7 @@
   <data name="BetLimit" xml:space="preserve">
     <value>Bet Limit</value>
   </data>
+  <data name="ParlayMaxPayoutPerBet" xml:space="preserve">
+    <value>Parlay Max Payout per Bet</value>
+  </data>
 </root>

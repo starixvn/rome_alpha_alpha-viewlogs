@@ -3162,4 +3162,7 @@
   <data name="PositionTakingTemplate" xml:space="preserve">
     <value>Mẫu Position Taking</value>
   </data>
+  <data name="ParlayMaxPayoutPerBet" xml:space="preserve">
+    <value>Thanh Toán Tối Đa Cho Mỗi Cược Xiên</value>
+  </data>
 </root>

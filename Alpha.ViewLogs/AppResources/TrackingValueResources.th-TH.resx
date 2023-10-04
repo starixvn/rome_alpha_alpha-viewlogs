@@ -3387,4 +3387,7 @@
   <data name="TemplateName" xml:space="preserve">
     <value>ชื่อเทมเพลต</value>
   </data>
+  <data name="ParlayMaxPayoutPerBet" xml:space="preserve">
+    <value>การจ่ายเงินพาร์เลย์สูงสุดต่อการเดิมพัน</value>
+  </data>
 </root>

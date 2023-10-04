@@ -7585,6 +7585,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parlay Max Payout per Bet.
+        /// </summary>
+        public static string ParlayMaxPayoutPerBet {
+            get {
+                return ResourceManager.GetString("ParlayMaxPayoutPerBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Password {

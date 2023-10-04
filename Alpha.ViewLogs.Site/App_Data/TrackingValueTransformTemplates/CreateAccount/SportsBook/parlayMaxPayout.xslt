@@ -6,7 +6,7 @@
       <tr class="headerDetail" onclick="toggle(this)">
         <td colspan="6">
           <span class="icon-chevron-down"></span>
-          <xsl:value-of select="xslLogFormat:GetLogResource('ParlayMaxPayout')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('ParlayMaxPayoutPerBet')" />
         </td>
       </tr>
       <tr>
