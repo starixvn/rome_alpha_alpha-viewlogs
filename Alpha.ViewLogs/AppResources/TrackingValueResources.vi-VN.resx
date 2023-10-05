@@ -2659,10 +2659,10 @@
     <value>PT lớn nhất của Master</value>
   </data>
   <data name="lblPresetPTMaster" xml:space="preserve">
-    <value>Giá trị PT trước đó của Master</value>
+    <value>Thiết lập của Master</value>
   </data>
   <data name="lblPresetPTSuper" xml:space="preserve">
-    <value>Giá trị PT trước đó của Super</value>
+    <value>Thiết lập của Super</value>
   </data>
   <data name="lblMaxPTAgent" xml:space="preserve">
     <value>PT lớn nhất của Agent</value>
