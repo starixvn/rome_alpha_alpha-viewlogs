@@ -132,7 +132,7 @@ $border-table-color: #5F626B;
     }
 
     td.colW1, td.colTitle {
-        //background-color: #f3f3f3 !important;
+        background-color: #212121 !important;
         text-align: left;
         text-transform: capitalize;
         width: 18.1818%;
@@ -157,6 +157,12 @@ $border-table-color: #5F626B;
         background-color: #bdc0c7;
     }
 
+    .headerDetail {
+        .icon-chevron-down {
+            margin-left: 12px;
+        }
+    }
+
     .body-detail > td {
         padding: 0;
     }
@@ -170,7 +176,7 @@ $border-table-color: #5F626B;
 
     tr.headerSportTypeDetail td {
         padding: 0 8px;
-        background: #2E2F30 !important;
+        background: #2E2F31 !important;
     }
 
     tr.headerGroup td {
