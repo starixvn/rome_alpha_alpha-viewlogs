@@ -3010,7 +3010,7 @@
     <value>Product</value>
   </data>
   <data name="MaximumLoss" xml:space="preserve">
-    <value>Maximum Loss</value>
+    <value>最高輸額</value>
   </data>
   <data name="isa_v5spt_20" xml:space="preserve">
     <value>勝負盤</value>
@@ -3329,5 +3329,71 @@
   </data>
   <data name="AutoTransfer" xml:space="preserve">
     <value>自動轉賬</value>
+  </data>
+  <data name="MasterPT" xml:space="preserve">
+    <value>总代理占成数</value>
+  </data>
+  <data name="SuperPT" xml:space="preserve">
+    <value>超级总代理占成数</value>
+  </data>
+  <data name="lblAgentPT" xml:space="preserve">
+    <value>代理占成数</value>
+  </data>
+  <data name="IsAuto" xml:space="preserve">
+    <value>是自動 </value>
+  </data>
+  <data name="Commision" xml:space="preserve">
+    <value>佣金</value>
+  </data>
+  <data name="BetSetting" xml:space="preserve">
+    <value>投注設定</value>
+  </data>
+  <data name="ParlayMaxPayout" xml:space="preserve">
+    <value>串關最高派彩</value>
+  </data>
+  <data name="AllowAutoPT" xml:space="preserve">
+    <value>允許自動佔成</value>
+  </data>
+  <data name="MaxPayoutPerMatch" xml:space="preserve">
+    <value>單場最高派彩</value>
+  </data>
+  <data name="PositionTaking" xml:space="preserve">
+    <value>佔成數</value>
+  </data>
+  <data name="CommForAgent" xml:space="preserve">
+    <value>代理佣金</value>
+  </data>
+  <data name="CommForMember" xml:space="preserve">
+    <value>會員的佣金</value>
+  </data>
+  <data name="Combo2" xml:space="preserve">
+    <value>複選 2</value>
+  </data>
+  <data name="Combo35" xml:space="preserve">
+    <value>複選 3-5</value>
+  </data>
+  <data name="ComboOver6" xml:space="preserve">
+    <value>複選 6+ &amp; 系統串關</value>
+  </data>
+  <data name="SingleMatchParlay" xml:space="preserve">
+    <value>單場串關</value>
+  </data>
+  <data name="WinLossLimit" xml:space="preserve">
+    <value>輸贏限額</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>無限</value>
+  </data>
+  <data name="BetLimit" xml:space="preserve">
+    <value>投注限額</value>
+  </data>
+  <data name="SelectedByDefault" xml:space="preserve">
+    <value>選擇默認</value>
+  </data>
+  <data name="PositionTakingTemplate" xml:space="preserve">
+    <value>佔成數模板</value>
+  </data>
+  <data name="TemplateName" xml:space="preserve">
+    <value>模板名稱</value>
   </data>
 </root>

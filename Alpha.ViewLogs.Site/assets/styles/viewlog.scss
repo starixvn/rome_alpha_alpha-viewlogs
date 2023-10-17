@@ -62,7 +62,25 @@ $height-td: 28px;
 .tblRpt .tblDesc tbody tr td {
     white-space: initial;
 }
+.toggle-icon {
+    .icon-chevron-down {
+        transform: rotate(-90deg);
+    }
+}
 
+.icon-chevron-down {
+    border: 1px solid #333;
+    border-radius: 20px;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    text-align: center;
+    line-height: 15px;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+    font-size: 16px;
+    padding: 1px 0 0 0;
+}
 .tblRpt {
     background: #fff;
 
@@ -77,10 +95,6 @@ $height-td: 28px;
     tbody td.col-action {
         padding-left: 8px;
         width: 25%;
-    }
-
-    &.tblRpt-bordered > tbody > tr > td {
-        border-bottom: 1px solid #666;
     }
 }
 
@@ -140,6 +154,12 @@ $height-td: 28px;
         background-color: #bdc0c7;
     }
 
+    .headerDetail {
+        .icon-chevron-down{
+            margin-left: 12px;
+        }
+    }
+
     .body-detail > td {
         padding: 0;
     }
@@ -154,6 +174,13 @@ $height-td: 28px;
     tr.headerSportTypeDetail td {
         padding: 0 8px;
         background: $sporttype-detail-bg !important;
+    }
+
+    tr.headerGroup td {
+        padding: 0 8px;
+        background: #A5A7AD !important;
+        font-weight: bold;
+        cursor: pointer;
     }
 }
 

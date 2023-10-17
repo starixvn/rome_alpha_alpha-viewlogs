@@ -1,7 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Services
 {
     using Alpha.ViewLogs.Params;
-    using System;
 
     public interface LogFormatter
     {
@@ -58,5 +57,27 @@
         string FormatApiKeyScopes(string scopes);
 
         string FormatDate(string date);
+
+        string GetSubProductGroupName(int subGroupId);
+
+        string GetProductGroupName(int productGroupId);
+
+        string GetSportbookCommissionName(int sportType, int betType);
+
+        string GetSportbookMemberCommissionName(int sportType, int betType);
+
+        string GetRNGGamesBetSettingName(int sportType, int betType);
+
+        string GetOtherGamesBetSettingName(int sportType, int betType);
+
+        string GetParlayMaxPayoutSportBetTypeName(int sportType, int betType);
+
+        string GetSportsBookBetSettingName(int sportType, int betType);
+
+        string GetDisplayName(int settingLevel, int sportType, int betType, int productId);
+
+        string FormatParlayMaxPayout(decimal value);
+
+        string FormatWinLossLimit(decimal value);
     }
 }

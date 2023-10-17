@@ -6,11 +6,12 @@
     using System.Resources;
     using System.Text;
     using System.Xml.Linq;
+    using Alpha.ViewLogs.Extensions;
     using AppResources;
     using Constants;
     using Helpers;
     using Params;
-    using Sunplus.Agent.Model.Definitions;
+    using Sunplus.Agent.Model.BL.Definitions;
 
     public class LogFormatterImpl : LogFormatter
     {
@@ -340,7 +341,7 @@
             var node = XElement.Parse("<root>" + scopes + "</root>").Elements().ToList();
             var nodeCount = node.Count;
             const int nodeCountInCaseOfHavingOldValue = 2;
-            if(nodeCount == nodeCountInCaseOfHavingOldValue)
+            if (nodeCount == nodeCountInCaseOfHavingOldValue)
             {
                 var newValue = node.First().Value;
                 var oldValue = node.Last().Value;
@@ -392,6 +393,79 @@
             }
 
             return DateTimeHelper.ToLongDateWithSlash(DateTime.Parse(date));
+        }
+
+        public string GetSubProductGroupName(int subGroupId)
+        {
+            return remotingRef.GetSubProductGroupName(subGroupId);
+        }
+
+        public string GetProductGroupName(int productGroupId)
+        {
+            return remotingRef.GetProductGroupName(productGroupId);
+        }
+
+        public string GetSportbookCommissionName(int sportType, int betType)
+        {
+            return remotingRef.GetSportbookCommissionName(sportType, betType);
+        }
+
+        public string GetSportbookMemberCommissionName(int sportType, int betType)
+        {
+            return remotingRef.GetSportbookMemberCommissionName(sportType, betType);
+        }
+
+        public string GetRNGGamesBetSettingName(int sportType, int betType)
+        {
+            return remotingRef.GetRNGGamesBetSettingName(sportType, betType);
+        }
+
+        public string GetParlayMaxPayoutSportBetTypeName(int sportType, int betType)
+        {
+            return remotingRef.GetParlayMaxPayoutSportBetTypeName(sportType, betType);
+        }
+
+        public string GetSportsBookBetSettingName(int sportType, int betType)
+        {
+            return remotingRef.GetSportsBookBetSettingName(sportType, betType);
+        }
+
+        public string GetSportsBookPositionTaking(int sportType, int betType)
+        {
+            return remotingRef.GetSportsBookPositionTaking(sportType, betType);
+        }
+
+        public string GetDisplayName(int settingLevel, int sportType, int betType, int productId)
+        {
+            switch (settingLevel)
+            {
+                case SettingLevels.Product:
+                    return GetProductName(productId);
+
+                case SettingLevels.SportType:
+                    return GetSportName(sportType);
+
+                case SettingLevels.BetType:
+                    return GetBetTypeName(betType);
+
+                default:
+                    return $"{GetSportName(sportType)} - {GetBetTypeName(betType)}";
+            }
+        }
+
+        public string FormatParlayMaxPayout(decimal value)
+        {
+            return value == 0 ? Resources.Unlimited : value.ToNumericString();
+        }
+
+        public string FormatWinLossLimit(decimal value)
+        {
+            return value == 0 ? Resources.Unlimited : value.ToNumericString();
+        }
+
+        public string GetOtherGamesBetSettingName(int sportType, int betType)
+        {
+            return remotingRef.GetOtherGamesBetSettingName(sportType, betType);
         }
     }
 }

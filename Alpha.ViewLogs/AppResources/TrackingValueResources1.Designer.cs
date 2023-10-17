@@ -1771,6 +1771,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow Auto PT.
+        /// </summary>
+        public static string AllowAutoPT {
+            get {
+                return ResourceManager.GetString("AllowAutoPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Allow Update PT.
         /// </summary>
         public static string allowupdpt {
@@ -2005,11 +2014,29 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet Limit.
+        /// </summary>
+        public static string BetLimit {
+            get {
+                return ResourceManager.GetString("BetLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bet Lists.
         /// </summary>
         public static string BetLists {
             get {
                 return ResourceManager.GetString("BetLists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bet Setting.
+        /// </summary>
+        public static string BetSetting {
+            get {
+                return ResourceManager.GetString("BetSetting", resourceCulture);
             }
         }
         
@@ -2172,6 +2199,60 @@ namespace Alpha.ViewLogs.AppResources {
         public static string closedOnly {
             get {
                 return ResourceManager.GetString("closedOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combo 2.
+        /// </summary>
+        public static string Combo2 {
+            get {
+                return ResourceManager.GetString("Combo2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combo 3-5.
+        /// </summary>
+        public static string Combo35 {
+            get {
+                return ResourceManager.GetString("Combo35", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combo 6+ &amp; System Parlay.
+        /// </summary>
+        public static string ComboOver6 {
+            get {
+                return ResourceManager.GetString("ComboOver6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comm for Agent.
+        /// </summary>
+        public static string CommForAgent {
+            get {
+                return ResourceManager.GetString("CommForAgent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comm for Member.
+        /// </summary>
+        public static string CommForMember {
+            get {
+                return ResourceManager.GetString("CommForMember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commision.
+        /// </summary>
+        public static string Commision {
+            get {
+                return ResourceManager.GetString("Commision", resourceCulture);
             }
         }
         
@@ -4813,6 +4894,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is Auto.
+        /// </summary>
+        public static string IsAuto {
+            get {
+                return ResourceManager.GetString("IsAuto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is Default.
         /// </summary>
         public static string isDefault {
@@ -5020,6 +5110,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Agent PT.
+        /// </summary>
+        public static string lblAgentPT {
+            get {
+                return ResourceManager.GetString("lblAgentPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Super Auto PT.
         /// </summary>
         public static string lblAutoPTSuper {
@@ -5133,6 +5232,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string LetstalkId {
             get {
                 return ResourceManager.GetString("LetstalkId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Live.
+        /// </summary>
+        public static string Live {
+            get {
+                return ResourceManager.GetString("Live", resourceCulture);
             }
         }
         
@@ -5259,6 +5367,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string masterName {
             get {
                 return ResourceManager.GetString("masterName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Master PT.
+        /// </summary>
+        public static string MasterPT {
+            get {
+                return ResourceManager.GetString("MasterPT", resourceCulture);
             }
         }
         
@@ -5475,6 +5592,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string maxlivept_8 {
             get {
                 return ResourceManager.GetString("maxlivept_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max Payout Per Match.
+        /// </summary>
+        public static string MaxPayoutPerMatch {
+            get {
+                return ResourceManager.GetString("MaxPayoutPerMatch", resourceCulture);
             }
         }
         
@@ -7450,6 +7576,24 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parlay Max Payout.
+        /// </summary>
+        public static string ParlayMaxPayout {
+            get {
+                return ResourceManager.GetString("ParlayMaxPayout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parlay Max Payout per Bet.
+        /// </summary>
+        public static string ParlayMaxPayoutPerBet {
+            get {
+                return ResourceManager.GetString("ParlayMaxPayoutPerBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Password {
@@ -7545,6 +7689,24 @@ namespace Alpha.ViewLogs.AppResources {
         public static string PlsInputUsername {
             get {
                 return ResourceManager.GetString("PlsInputUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position Taking.
+        /// </summary>
+        public static string PositionTaking {
+            get {
+                return ResourceManager.GetString("PositionTaking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position Taking Template.
+        /// </summary>
+        public static string PositionTakingTemplate {
+            get {
+                return ResourceManager.GetString("PositionTakingTemplate", resourceCulture);
             }
         }
         
@@ -7702,6 +7864,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select by Default.
+        /// </summary>
+        public static string SelectedByDefault {
+            get {
+                return ResourceManager.GetString("SelectedByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 7 days.
         /// </summary>
         public static string SevenDays {
@@ -7725,6 +7896,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string sicbo {
             get {
                 return ResourceManager.GetString("sicbo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Single Match Parlay.
+        /// </summary>
+        public static string SingleMatchParlay {
+            get {
+                return ResourceManager.GetString("SingleMatchParlay", resourceCulture);
             }
         }
         
@@ -8026,15 +8206,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Sub Account ID.
         /// </summary>
         public static string subAccID {
@@ -8085,6 +8256,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string superId {
             get {
                 return ResourceManager.GetString("superId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Super PT.
+        /// </summary>
+        public static string SuperPT {
+            get {
+                return ResourceManager.GetString("SuperPT", resourceCulture);
             }
         }
         
@@ -8157,6 +8337,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string SystemId_8 {
             get {
                 return ResourceManager.GetString("SystemId_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Template Name.
+        /// </summary>
+        public static string TemplateName {
+            get {
+                return ResourceManager.GetString("TemplateName", resourceCulture);
             }
         }
         
@@ -8427,6 +8616,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string UMMBv99MP {
             get {
                 return ResourceManager.GetString("UMMBv99MP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unlimited.
+        /// </summary>
+        public static string Unlimited {
+            get {
+                return ResourceManager.GetString("Unlimited", resourceCulture);
             }
         }
         
@@ -9786,6 +9984,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string wed {
             get {
                 return ResourceManager.GetString("wed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Win Loss Limit.
+        /// </summary>
+        public static string WinLossLimit {
+            get {
+                return ResourceManager.GetString("WinLossLimit", resourceCulture);
             }
         }
         

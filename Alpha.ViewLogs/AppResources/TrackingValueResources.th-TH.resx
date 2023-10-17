@@ -3007,7 +3007,7 @@
     <value>Product</value>
   </data>
   <data name="MaximumLoss" xml:space="preserve">
-    <value>Maximum Loss</value>
+    <value>แพ้สูงสุด</value>
   </data>
   <data name="isa_v5spt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
@@ -3320,5 +3320,74 @@
   </data>
   <data name="AutoTransfer" xml:space="preserve">
     <value>โอนอัตโนมัติ</value>
+  </data>
+  <data name="MasterPT" xml:space="preserve">
+    <value>ค่าแบ่งสู้ของมาสเตอร์</value>
+  </data>
+  <data name="SuperPT" xml:space="preserve">
+    <value>ค่าแบ่งสู้ของซุปเปอร์</value>
+  </data>
+  <data name="lblAgentPT" xml:space="preserve">
+    <value>ค่าแบ่งสู้ของเอเย่น</value>
+  </data>
+  <data name="IsAuto" xml:space="preserve">
+    <value>คืออัตโนมัติ</value>
+  </data>
+  <data name="Commision" xml:space="preserve">
+    <value>คอมมิชชั่น</value>
+  </data>
+  <data name="BetSetting" xml:space="preserve">
+    <value>การกำหนดการวางเดิมพัน</value>
+  </data>
+  <data name="ParlayMaxPayout" xml:space="preserve">
+    <value>การจ่ายเงินสูงสุดของพาร์เลย์</value>
+  </data>
+  <data name="AllowAutoPT" xml:space="preserve">
+    <value>อนุญาตให้มีแบ่งสู้อัตโนมัติ</value>
+  </data>
+  <data name="MaxPayoutPerMatch" xml:space="preserve">
+    <value>การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
+  </data>
+  <data name="PositionTaking" xml:space="preserve">
+    <value>ค่าความเสี่ยง</value>
+  </data>
+  <data name="CommForAgent" xml:space="preserve">
+    <value>ค่าคอมมิชชั่น จาก ตัวแทน</value>
+  </data>
+  <data name="CommForMember" xml:space="preserve">
+    <value>ค่าคอมมิชชั่นสำหรับสมาชิก</value>
+  </data>
+  <data name="Combo2" xml:space="preserve">
+    <value>คอมโบ 2</value>
+  </data>
+  <data name="Combo35" xml:space="preserve">
+    <value>คอมโบ 3-5</value>
+  </data>
+  <data name="ComboOver6" xml:space="preserve">
+    <value>คอมโบ 6+ และ ระบบพาร์เลย์</value>
+  </data>
+  <data name="SingleMatchParlay" xml:space="preserve">
+    <value>พาร์เลย์การแข่งขันนัดเดียว</value>
+  </data>
+  <data name="WinLossLimit" xml:space="preserve">
+    <value>วงเงินแพ้ชนะ</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>ไม่จำกัด</value>
+  </data>
+  <data name="BetLimit" xml:space="preserve">
+    <value>วงเงินเดิมพัน</value>
+  </data>
+  <data name="SelectedByDefault" xml:space="preserve">
+    <value>เลือกเป็นค่าเริ่มต้น</value>
+  </data>
+  <data name="PositionTakingTemplate" xml:space="preserve">
+    <value>เทมเพลตค่าแบ่งสู้</value>
+  </data>
+  <data name="TemplateName" xml:space="preserve">
+    <value>ชื่อเทมเพลต</value>
+  </data>
+  <data name="ParlayMaxPayoutPerBet" xml:space="preserve">
+    <value>การจ่ายเงินพาร์เลย์สูงสุดต่อการเดิมพัน</value>
   </data>
 </root>
