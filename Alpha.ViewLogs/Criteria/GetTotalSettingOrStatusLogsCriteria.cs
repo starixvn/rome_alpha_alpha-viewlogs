@@ -7,8 +7,8 @@
     {
         public GetTotalSettingOrStatusLogsCriteria(
             int custId,
-            int actionTypeId,
             int loginUserId,
+            int actionTypeId,
             DateTime fromDate,
             DateTime toDate,
             bool isInternal)

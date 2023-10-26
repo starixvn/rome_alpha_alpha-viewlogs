@@ -3,7 +3,7 @@
     using Alpha.ViewLogs.Params;
 
     public interface LogFormatter
-    {
+    { 
         void Init(TransformParam transformParam, bool isHideNickname = false);
 
         string FormatIP(string ip);
@@ -79,5 +79,7 @@
         string FormatParlayMaxPayout(decimal value);
 
         string FormatWinLossLimit(decimal value);
+
+        string FormatAutoTransferSchedule(string schedulesDiff); 
     }
 }

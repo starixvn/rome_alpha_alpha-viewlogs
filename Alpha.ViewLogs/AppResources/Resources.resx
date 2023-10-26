@@ -172,7 +172,7 @@
     <value>Wed</value>
   </data>
   <data name="Thurs" xml:space="preserve">
-    <value>Thurs</value>
+    <value>Thu</value>
   </data>
   <data name="Sat" xml:space="preserve">
     <value>Sat</value>
@@ -350,5 +350,8 @@
   </data>
   <data name="No" xml:space="preserve">
     <value>No.</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Schedule</value>
   </data>
 </root>

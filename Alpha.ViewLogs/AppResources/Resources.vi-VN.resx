@@ -323,4 +323,7 @@
   <data name="No" xml:space="preserve">
     <value>Số lượng</value>
   </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Lịch</value>
+  </data>
 </root>

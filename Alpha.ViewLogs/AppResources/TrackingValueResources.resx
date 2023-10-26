@@ -2125,7 +2125,7 @@
     <value>[Wed]</value>
   </data>
   <data name="thurs" xml:space="preserve">
-    <value>[Thurs]</value>
+    <value>[Thu]</value>
   </data>
   <data name="fri" xml:space="preserve">
     <value>[Fri]</value>
@@ -3446,5 +3446,8 @@
   </data>
   <data name="ParlayMaxPayoutPerBet" xml:space="preserve">
     <value>Parlay Max Payout per Bet</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Schedule</value>
   </data>
 </root>

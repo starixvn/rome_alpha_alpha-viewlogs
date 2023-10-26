@@ -318,4 +318,7 @@
   <data name="No" xml:space="preserve">
     <value>เลขที่.</value>
   </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>กำหนดการ</value>
+  </data>
 </root>
