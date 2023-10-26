@@ -13,10 +13,12 @@
         private const string TransformObjectCacheKey = "Alpha.ViewLogs.TransformObject_{0}";
 
         private readonly LogFormatter logFormatter;
+        private readonly ICacheService cacheService;
 
-        public TransformServiceImpl(LogFormatter logFormatter)
+        public TransformServiceImpl(LogFormatter logFormatter, ICacheService cacheService)
         {
             this.logFormatter = logFormatter;
+            this.cacheService = cacheService;
         }
 
         public string TransformTrackingValue(
@@ -60,7 +62,7 @@
         private XslCompiledTransform GetCompiledTransformTemplate(int actionId, string trackingValueTransformTemplatePath)
         {
             var cacheKey = string.Format(TransformObjectCacheKey, actionId);
-            var cachedCompiledTransform = ConfiguredCacheService.Get<XslCompiledTransform>(cacheKey);
+            var cachedCompiledTransform = cacheService.Get<XslCompiledTransform>(cacheKey);
 
             if (cachedCompiledTransform != null)
             {
@@ -81,7 +83,7 @@
                 return null;
             }
 
-            ConfiguredCacheService.Set(cacheKey, compiledTransform, DefaultVariables.CacheItemOptions);
+            cacheService.Set(cacheKey, compiledTransform, DefaultVariables.CacheItemOptions);
 
             return compiledTransform;
         }

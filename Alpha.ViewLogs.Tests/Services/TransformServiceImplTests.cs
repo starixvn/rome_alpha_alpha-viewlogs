@@ -33,7 +33,7 @@
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
 
             logFormatter = Substitute.For<LogFormatter>();
-            transformService = new TransformServiceImpl(logFormatter);
+            transformService = new TransformServiceImpl(logFormatter, cacheForTesting);
         }
 
         [TestCase(InvalidActionId)]
