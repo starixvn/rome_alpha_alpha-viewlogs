@@ -462,6 +462,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31801.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_75043.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\PositionTakingTemplate\action_483.xslt">
       <SubType>Designer</SubType>
     </Content>
