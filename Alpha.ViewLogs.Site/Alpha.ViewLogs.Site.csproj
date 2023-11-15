@@ -431,6 +431,24 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\SportsBook\memberCommission.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateCustomer\action_261003.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateCustomer\action_261002.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateCustomer\action_262003.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateCustomer\action_262002.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateCustomer\action_263003.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateCustomer\action_263002.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateCustomer\action_263001.xslt">
       <SubType>Designer</SubType>
     </Content>
