@@ -34,7 +34,6 @@
             return logs.Where(i => !IsBetLimitOfRNGSlot(i));
         }
 
-
         internal override ICriteria CreateGetLogsCriteria(LogParam logParam)
         {
             if (logParam == null)

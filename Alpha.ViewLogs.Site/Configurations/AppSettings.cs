@@ -95,6 +95,8 @@
             }
         }
 
+        public static string FanexDataServiceApi => GetConfigValue("FanexDataServiceApi");
+
         public static string RemoteRefURL => GetConfigValue("RemoteRefURL");
 
         public static string GetConfigValue(string configName)

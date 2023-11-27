@@ -16,7 +16,7 @@
 
         public string CustName { get; set; }
 
-        public byte IsInternal { get; set; }
+        public bool IsInternal { get; set; }
 
         public DateTime LogDate { get; set; }
 
