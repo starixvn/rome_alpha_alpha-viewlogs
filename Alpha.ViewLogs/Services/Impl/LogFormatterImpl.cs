@@ -11,7 +11,6 @@
     using Constants;
     using Helpers;
     using Params;
-    using Sunplus.Agent.Model.BL.Definitions;
 
     public class LogFormatterImpl : LogFormatter
     {

@@ -1,9 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using Alpha.ViewLogs.Models;
+    using AlphaPlus.User.Models;
     using Criteria;
     using Criteria.Status;
     using DataAccesses;
@@ -11,7 +9,6 @@
     using Fanex.Data.Repository;
     using Helpers;
     using Params;
-    using Sunplus.Agent.Model.Entities;
 
     public class StatusServiceImpl : BaseService, LogService
     {

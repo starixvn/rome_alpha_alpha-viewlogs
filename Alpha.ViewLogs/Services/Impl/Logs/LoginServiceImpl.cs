@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using AlphaPlus.User.Models;
     using Constants;
     using Criteria.Login;
     using DataAccesses;
@@ -10,7 +11,6 @@
     using Helpers;
     using Models;
     using Params;
-    using Sunplus.Agent.Model.Entities;
 
     public class LoginServiceImpl : BaseService, LogService
     {

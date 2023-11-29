@@ -1,8 +1,8 @@
 ﻿namespace Alpha.ViewLogs.Site.Requests.Credit
 {
     using System.Collections.Generic;
+    using AlphaPlus.User.Models;
     using MediatR;
-    using Sunplus.Agent.Model.Entities;
     using ViewLogs.Helpers;
     using ViewModels;
 

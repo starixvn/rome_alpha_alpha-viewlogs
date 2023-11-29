@@ -15,7 +15,7 @@
 
         public int GetTotalRecordsOfLogs(ICriteria criteria)
         {
-            return dynamicRepository.Count(criteria);
+            return dynamicRepository.Get<int>(criteria);
         }
 
         public virtual IEnumerable<Log> GetLogs(ICriteria criteria)

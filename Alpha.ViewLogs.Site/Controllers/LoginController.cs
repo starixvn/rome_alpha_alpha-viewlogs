@@ -1,11 +1,11 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
     using System.Web.Mvc;
+    using AlphaPlus.User.Models;
     using Helpers;
     using MediatR;
     using Models.Enumerations;
     using Requests.Login;
-    using Sunplus.Agent.Model.Entities;
 
     public class LoginController : ViewLogBaseController
     {

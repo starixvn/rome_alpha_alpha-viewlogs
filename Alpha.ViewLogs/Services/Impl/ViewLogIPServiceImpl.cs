@@ -2,8 +2,8 @@
 {
     using System.Net;
     using System.Text.RegularExpressions;
-    using Sunplus.Agent.Model.Entities;
-    using Utilities.IP;
+    using AlphaPlus.User.Models;
+    using AlphaPlus.Utilities.IP;
 
     public class ViewLogIPServiceImpl : ViewLogIPService
     {

@@ -1,9 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Site.Helpers.StaticResources
 {
+    using AlphaPlus.User.Models;
     using System.Linq;
     using System.Web;
     using System.Web.Optimization;
-    using Sunplus.Agent.Model.Entities;
 
     public class AssetStyles : BaseStaticResources
     {

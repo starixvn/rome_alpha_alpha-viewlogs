@@ -2,11 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
-    using Helpers;
+    using AlphaPlus.User.Models;
     using NSubstitute;
     using Services;
     using Site.Helpers;
-    using Sunplus.Agent.Model.Entities;
     using ViewLogs.Helpers;
 
     public class ConcreteLogHandlerTests

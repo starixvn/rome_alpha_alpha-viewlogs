@@ -1,9 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Tests.Services
 {
+    using AlphaPlus.User.Models;
     using NSubstitute;
     using NUnit.Framework;
-    using Sunplus.Agent.Model.Entities;
-    using Utilities.IP;
+    using AlphaPlus.Utilities.IP;
     using ViewLogs.Services.Impl;
 
     [TestFixture]
