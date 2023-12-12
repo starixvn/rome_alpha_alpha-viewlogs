@@ -218,6 +218,14 @@ $height-td: 28px;
     padding: 0 8px;
     font-weight: bold;
     background: $sporttype-detail-bg;
+
+    &.border-last-item {
+        td {
+            &:last-child {
+                border-right: 1px solid #ddd !important;
+            }
+        }
+    }
 }
 
 .output {
