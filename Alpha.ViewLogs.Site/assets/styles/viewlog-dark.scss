@@ -225,6 +225,14 @@ $border-table-color: #5F626B;
     padding: 0 8px;
     font-weight: bold;
     background: $sporttype-detail-bg;
+
+    &.border-last-item {
+        td {
+            &:last-child {
+                border-right: 1px solid $border-table-color !important;
+            }
+        }
+    }
 }
 
 .output {
