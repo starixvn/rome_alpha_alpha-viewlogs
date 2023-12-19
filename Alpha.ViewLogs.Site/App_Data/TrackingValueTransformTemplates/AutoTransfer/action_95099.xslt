@@ -3,14 +3,14 @@
     <xsl:param name="IsInternal" select="0"></xsl:param>
     <xsl:output method="html" indent="no" />
 
-    <xsl:template match="age_clearbalancecust_settingupdate_downline">
+    <xsl:template match="age_clearbalancecust_settingupdate">
         <table class="tblDesc">
             <tr>
                 <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('AutoTransfer')" />
+                    <xsl:value-of select="xslLogFormat:GetLogResource('Schedule')" />
                 </td>
                 <td class="colW2">
-                    <xsl:value-of select="@isallowautotransfer" />
+                    <xsl:value-of select="xslLogFormat:FormatAutoTransferSchedule(@schedule)" />
                 </td>
                 <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('language')" />

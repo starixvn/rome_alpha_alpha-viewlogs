@@ -3165,4 +3165,7 @@
   <data name="ParlayMaxPayoutPerBet" xml:space="preserve">
     <value>Thanh Toán Tối Đa Cho Mỗi Cược Xiên</value>
   </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Lịch</value>
+  </data>
 </root>

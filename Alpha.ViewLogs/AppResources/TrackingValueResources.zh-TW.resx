@@ -3396,4 +3396,7 @@
   <data name="TemplateName" xml:space="preserve">
     <value>模板名稱</value>
   </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>日程表</value>
+  </data>
 </root>

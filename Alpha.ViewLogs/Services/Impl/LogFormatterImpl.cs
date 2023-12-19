@@ -466,5 +466,112 @@
         {
             return remotingRef.GetOtherGamesBetSettingName(sportType, betType);
         }
+
+        public string FormatAutoTransferSchedule(string schedulesDiff)
+        {
+            return FormatCustomValue(schedulesDiff, CovertSchedule);
+        }
+
+        private static string FormatCustomValue(string valuesDiff, Func<string, string> formatDiffFunc)
+        {
+            if (string.IsNullOrWhiteSpace(valuesDiff))
+            {
+                return string.Empty;
+            }
+
+            var codes = XElement.Parse("<root>" + valuesDiff + "</root>").Elements().ToList();
+            var nodeCount = codes.Count;
+
+            var newValue = string.Empty;
+            var oldValue = string.Empty;
+
+            const int nodeCountIncaseOfHavingNewOldDivs = 2;
+            var result = valuesDiff;
+
+            if (nodeCount >= nodeCountIncaseOfHavingNewOldDivs)
+            {
+                newValue = codes.First().Value;
+
+                // remove char ( and ) of oldValue
+                var l = codes.Last().Value;
+                oldValue = l.Substring(1, l.Length - 2);
+                return ReplaceValues(oldValue, newValue, valuesDiff, formatDiffFunc);
+            }
+
+            const int nodeCountIncaseOfUnchangeValuesOrNotShowOldValues = 1;
+
+            if (nodeCount == nodeCountIncaseOfUnchangeValuesOrNotShowOldValues)
+            {
+                newValue = codes.First().Value;
+
+                // title: "{oldValue} --> {newValue}" or empty
+                // old value = Split()[0]
+                oldValue = codes.First().Attribute("title").Value.Split()[0];
+                return ReplaceValues(oldValue, newValue, valuesDiff, formatDiffFunc);
+            }
+
+            return formatDiffFunc(result);
+        }
+
+        public static string CovertSchedule(string schedule)
+        {
+            var dates = schedule.Trim().ToCharArray();
+
+            if (!dates.Any())
+            {
+                return "-";
+            }
+
+            if (dates.Length == 7)
+            {
+                return Resources.Daily;
+            }
+
+            string[] dateNames = {
+                Resources.Sun,
+                Resources.Mon,
+                Resources.Tue,
+                Resources.Wed,
+                Resources.Thurs,
+                Resources.Fri,
+                Resources.Sat
+            };
+
+            return string.Join("-", dates.Select(d => dateNames[int.Parse(d.ToString()) - 1]));
+        }
+
+        private static string ReplaceValues(
+            string oldValue,
+            string newValue,
+            string diff,
+            Func<string, string> formatDiffFunc)
+        {
+            var result = diff;
+
+            if (string.IsNullOrWhiteSpace(newValue))
+            {
+                result = result.Replace("<span class=\"valuechanged\"></span>", "<span class=\"valuechanged\">-</span>");
+            }
+
+            if (oldValue.Contains(newValue))
+            {
+                result = result.Replace($"({oldValue})", $"({formatDiffFunc(oldValue)})");
+
+                if (!string.IsNullOrWhiteSpace(newValue))
+                {
+                    result = result.Replace(newValue, formatDiffFunc(newValue));
+                }
+
+                return result;
+            }
+
+            if (!string.IsNullOrWhiteSpace(newValue))
+            {
+                result = result.Replace(newValue, formatDiffFunc(newValue));
+            }
+
+            result = result.Replace($"({oldValue})", $"({formatDiffFunc(oldValue)})");
+            return result;
+        }
     }
 }
