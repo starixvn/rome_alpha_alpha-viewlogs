@@ -1515,11 +1515,17 @@
     <Content Include="assets\styles\viewlog-dark.min.css">
       <DependentUpon>viewlog-dark.css</DependentUpon>
     </Content>
+    <None Include="Web.AppSettings.dr.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
     <Content Include="Web.AppSettings.pro.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.uat.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.dr.config">
+      <DependentUpon>Web.local.config</DependentUpon>
     </Content>
     <Content Include="Web.pro.config">
       <DependentUpon>Web.local.config</DependentUpon>
