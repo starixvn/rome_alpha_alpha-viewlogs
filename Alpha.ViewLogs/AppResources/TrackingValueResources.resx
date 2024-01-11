@@ -3450,4 +3450,28 @@
   <data name="Schedule" xml:space="preserve">
     <value>Schedule</value>
   </data>
+  <data name="MaxBv1Virtual" xml:space="preserve">
+    <value>Virtual Soccer-Max Bet</value>
+  </data>
+  <data name="MaxBv2Virtual" xml:space="preserve">
+    <value>Virtual Basketball-Max Bet</value>
+  </data>
+  <data name="MinBv1Virtual" xml:space="preserve">
+    <value>Virtual Soccer-Min Bet</value>
+  </data>
+  <data name="MinBv2Virtual" xml:space="preserve">
+    <value>Virtual Basketball-Min Bet</value>
+  </data>
+  <data name="MPMv1Virtual" xml:space="preserve">
+    <value>Virtual Soccer-Max Per Match</value>
+  </data>
+  <data name="MPMv2Virtual" xml:space="preserve">
+    <value>Virtual Basketball-Max Per Match</value>
+  </data>
+  <data name="MPPMv1Virtual" xml:space="preserve">
+    <value>Virtual Soccer-Max Payout Per Match</value>
+  </data>
+  <data name="MPPMv2Virtual" xml:space="preserve">
+    <value>Virtual Basketball-Max Payout Per Match</value>
+  </data>
 </root>

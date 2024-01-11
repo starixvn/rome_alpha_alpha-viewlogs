@@ -2,6 +2,7 @@
 {
     using System.Threading;
     using Alpha.ViewLogs.Constants;
+    using AlphaPlus.Configurations;
     using Fanex.RemotingRef;
 
     public class RemotingRefWrapperImpl : RemotingRefWrapper
@@ -94,11 +95,22 @@
 
         public string GetSportsBookBetSettingName(int sportType, int betType)
         {
-            return remotingRefService.GetResourceDataByRefIdAndResourceId(
+            var value = remotingRefService.GetResourceDataByRefIdAndResourceId(
                 "G_GT_Sport_Bettype",
                 $"{ProductGroups.SportsBook}_{GroupTypes.SportsBookBetSetting}_{sportType}_{betType}",
                 LanguageCode,
                 string.Empty);
+            var valueFor777 = string.Empty;
+            if (AppSettings.IsSiteLabel777)
+            {
+                valueFor777 = remotingRefService.GetResourceDataByRefIdAndResourceId(
+                "G_GT_Sport_BT_Saba",
+                $"{ProductGroups.SportsBook}_{GroupTypes.SportsBookBetSetting}_{sportType}_{betType}",
+                LanguageCode,
+                string.Empty);
+            }
+
+            return string.IsNullOrEmpty(valueFor777) ? value : valueFor777;
         }
 
         public string GetOtherGamesBetSettingName(int sportType, int betType)

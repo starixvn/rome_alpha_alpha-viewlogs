@@ -3393,4 +3393,28 @@
   <data name="Schedule" xml:space="preserve">
     <value>กำหนดการ</value>
   </data>
+  <data name="MaxBv1Virtual" xml:space="preserve">
+    <value>ฟุตบอล Virtual - เดิมพันสูงสุด</value>
+  </data>
+  <data name="MaxBv2Virtual" xml:space="preserve">
+    <value>บาสเกตบอล Virtual - เดิมพันสูงสุด</value>
+  </data>
+  <data name="MinBv1Virtual" xml:space="preserve">
+    <value>ฟุตบอล Virtual - เดิมพันขั้นต่ำ</value>
+  </data>
+  <data name="MinBv2Virtual" xml:space="preserve">
+    <value>บาสเกตบอล Virtual - เดิมพันขั้นต่ำ</value>
+  </data>
+  <data name="MPMv1Virtual" xml:space="preserve">
+    <value>ฟุตบอล Virtual - สูงสุดต่อคู่</value>
+  </data>
+  <data name="MPMv2Virtual" xml:space="preserve">
+    <value>บาสเกตบอล Virtual - สูงสุดต่อคู่</value>
+  </data>
+  <data name="MPPMv1Virtual" xml:space="preserve">
+    <value>ฟุตบอล Virtual - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
+  </data>
+  <data name="MPPMv2Virtual" xml:space="preserve">
+    <value>บาสเกตบอล Virtual - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
+  </data>
 </root>
