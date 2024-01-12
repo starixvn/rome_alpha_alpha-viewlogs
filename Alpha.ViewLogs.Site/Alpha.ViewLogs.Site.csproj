@@ -458,6 +458,8 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateCustomer\action_261001.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220039.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_512.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\MyWatchlist\action_31802.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -513,6 +515,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1183.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\Commission\action_252.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_220000 _220006_ParlayMaxPayout\action_220001.xslt">
       <SubType>Designer</SubType>
     </Content>
