@@ -47,12 +47,12 @@
             FormatDiffAttributes(newNode.Attributes, oldNode.Attributes, isShowOldValue);
 
             var childNodeCount = newNode.ChildNodes.Count;
-            if(childNodeCount == 0)
+            if (childNodeCount == 0)
             {
                 return;
             }
 
-            for(int i = 0; i < childNodeCount; i++)
+            for (int i = 0; i < childNodeCount; i++)
             {
                 FormatChildNode(newNode.ChildNodes[i], oldNode.ChildNodes[i], isShowOldValue);
             }
