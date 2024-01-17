@@ -43,9 +43,9 @@
       <Mapping DataField="ActionName" ObjectProperty="ActionName" />
       <Mapping DataField="SPName" ObjectProperty="StoreProcedureName" />
       <Mapping DataField="IP" ObjectProperty="IP" />
-
       <Mapping DataField="Browser" ObjectProperty="Browser" />
       <Mapping DataField="Domain" ObjectProperty="Domain" />
+      <Mapping DataField="CountryCode" ObjectProperty="Country" />
     </Setting>
     <Setting Key="Acc_UserLog_RunSPSelTotalRecords" SpName="Acc_UserLog_RunSPSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
     <Setting Key="Age_UserLog_CreditSelTotalRecords" SpName="Age_UserLog_CreditSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />

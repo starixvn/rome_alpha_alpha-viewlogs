@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text.RegularExpressions;
     using Constants;
     using Criteria;
     using DataAccesses;
@@ -10,7 +11,6 @@
     using Fanex.Data.Repository;
     using Models;
     using Params;
-    using System.Text.RegularExpressions;
     using AlphaPlus.User.Models;
 
     public abstract class BaseService
@@ -21,7 +21,6 @@
 
         private readonly IDynamicRepository dynamicRepository;
         private readonly CustomerService customerService;
-        private readonly LogDataAccess logDataAccess;
         private readonly IUserSession session;
         private readonly ICacheService cacheService;
 
@@ -29,18 +28,12 @@
         {
             this.dynamicRepository = dynamicRepository;
             this.customerService = customerService;
-            this.logDataAccess = logDataAccess;
+            LogDataAccess = logDataAccess;
             this.session = session;
             this.cacheService = cacheService;
         }
 
-        protected LogDataAccess LogDataAccess
-        {
-            get
-            {
-                return logDataAccess;
-            }
-        }
+        protected LogDataAccess LogDataAccess { get; }
 
         internal abstract ICriteria CreateGetLogsCriteria(LogParam logParam);
 

@@ -2,6 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
+    using System.Linq;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
@@ -14,14 +16,11 @@
     using Configurations;
     using Fanex.Caching;
     using Fanex.Data;
-    using Fanex.Data.SqlServer;
-    using Fanex.Logging.Extensions.Database;
     using Fanex.Logging.Extensions.Web;
     using Fanex.RemotingRef;
     using ONEbook.UM;
     using ONEbook.UM.AspNetMVC.Filters;
     using ONEbook.UM.Configurations;
-    using ONEbook.UM.Helpers;
     using ONEbook.UM.NETFramework;
     using ONEbook.UM.Services;
     using ONEbook.UM.Transport;
@@ -35,22 +34,29 @@
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
             MvcHandler.DisableMvcResponseHeader = true;
-            AlphaPlus.Configurations.ConfigurationManager.Init(new ConfigurationHelper());
 
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            DependencyConfig.Init();
-
+            var connectionStrings = ConfigurationManager.ConnectionStrings
+                .Cast<ConnectionStringSettings>()
+                .ToDictionary(
+                    connection => connection.Name,
+                    connection => new ConnectionConfiguration(connection.Name, connection.ConnectionString, connection.ProviderName),
+                    StringComparer.OrdinalIgnoreCase);
             DbSettingProviderManager
                 .StartNewSession()
-                .WithSqlServer(resourcePath: AppSettings.StoredProcedurePath)
+                .Use(connectionStrings)
+                .Use(AppSettings.FanexDataServiceApi)
+                .Register(resourcePath: AppSettings.StoredProcedurePath)
                 .Run();
 
-            ShareSession.Init();
-
+            AlphaPlus.Configurations.ConfigurationManager.Init(new ConfigurationHelper());
             LoggingConfig.ExceptionHandler = new ExceptionHandlerAdapter();
-            LoggingConfig.Init(getDbExceptionInfo: DatabaseInfoGetters.GetDbExceptionInfo);
+            LoggingConfig.Init();
+
+            DependencyConfig.Init();
+            ShareSession.Init();
 
             var umConfig = new UMClientConfiguration().Initialize();
             UMClientManager
