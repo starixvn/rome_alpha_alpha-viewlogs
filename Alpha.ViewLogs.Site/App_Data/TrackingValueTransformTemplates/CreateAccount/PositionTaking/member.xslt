@@ -38,14 +38,7 @@
                     </xsl:if>
                     <tr>
                       <td class="colW1">
-                        <xsl:choose>
-                          <xsl:when test="@islive=1">
-                            <xsl:value-of select="concat(xslLogFormat:GetBetTypeName(@bettype),' (',xslLogFormat:GetLogResource('Live'),')')" />
-                          </xsl:when>
-                          <xsl:otherwise>
-                            <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
-                          </xsl:otherwise>
-                        </xsl:choose>
+                        <xsl:value-of select="xslLogFormat:GetBetTypeName(@bettype)" />
                       </td>
                       <td class="colW2" colspan="5">
                         <xsl:value-of select="@agentpt" />
