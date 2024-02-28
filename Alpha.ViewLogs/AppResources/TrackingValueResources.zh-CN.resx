@@ -3399,4 +3399,28 @@
   <data name="Schedule" xml:space="preserve">
     <value>日程表</value>
   </data>
+  <data name="MaxBv1Virtual" xml:space="preserve">
+    <value>虚拟足球-最高投注</value>
+  </data>
+  <data name="MaxBv2Virtual" xml:space="preserve">
+    <value>虚拟篮球-最高投注</value>
+  </data>
+  <data name="MinBv1Virtual" xml:space="preserve">
+    <value>虚拟足球-最低投注</value>
+  </data>
+  <data name="MinBv2Virtual" xml:space="preserve">
+    <value>虚拟篮球-最低投注</value>
+  </data>
+  <data name="MPMv1Virtual" xml:space="preserve">
+    <value>虚拟足球-最高单场</value>
+  </data>
+  <data name="MPMv2Virtual" xml:space="preserve">
+    <value>虚拟篮球-最高单场</value>
+  </data>
+  <data name="MPPMv1Virtual" xml:space="preserve">
+    <value>虚拟足球-单场最高派彩</value>
+  </data>
+  <data name="MPPMv2Virtual" xml:space="preserve">
+    <value>虚拟篮球-单场最高派彩</value>
+  </data>
 </root>

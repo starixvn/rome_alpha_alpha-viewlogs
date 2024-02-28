@@ -7,6 +7,7 @@
     using System.Text;
     using System.Xml.Linq;
     using Alpha.ViewLogs.Extensions;
+    using AlphaPlus.Configurations;
     using AppResources;
     using Constants;
     using Helpers;
@@ -72,7 +73,13 @@
         public string GetLogResource(string key)
         {
             ResourceManager.IgnoreCase = true;
-            return ResourceManager.GetString(key) ?? string.Empty;
+            var value = ResourceManager.GetString(key) ?? string.Empty;
+            if (AppSettings.IsSiteLabel777 && key.Contains("Saba"))
+            {
+                value = ResourceManager.GetString(key.Replace("Saba", "Virtual")) ?? value;
+            }
+
+            return value;
         }
 
         public string GetSportName(int sportType)

@@ -5470,6 +5470,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Virtual Soccer-Max Bet.
+        /// </summary>
+        public static string MaxBv1Virtual {
+            get {
+                return ResourceManager.GetString("MaxBv1Virtual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basketball-Max Bet.
         /// </summary>
         public static string maxbv2 {
@@ -5484,6 +5493,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string MaxBv2Saba {
             get {
                 return ResourceManager.GetString("MaxBv2Saba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Basketball-Max Bet.
+        /// </summary>
+        public static string MaxBv2Virtual {
+            get {
+                return ResourceManager.GetString("MaxBv2Virtual", resourceCulture);
             }
         }
         
@@ -6208,6 +6226,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Virtual Soccer-Min Bet.
+        /// </summary>
+        public static string MinBv1Virtual {
+            get {
+                return ResourceManager.GetString("MinBv1Virtual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basketball-Min Bet.
         /// </summary>
         public static string minbv2 {
@@ -6222,6 +6249,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string MinBv2Saba {
             get {
                 return ResourceManager.GetString("MinBv2Saba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Basketball-Min Bet.
+        /// </summary>
+        public static string MinBv2Virtual {
+            get {
+                return ResourceManager.GetString("MinBv2Virtual", resourceCulture);
             }
         }
         
@@ -6991,6 +7027,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Virtual Soccer-Max Per Match.
+        /// </summary>
+        public static string MPMv1Virtual {
+            get {
+                return ResourceManager.GetString("MPMv1Virtual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basketball-Max Per Match.
         /// </summary>
         public static string mpmv2 {
@@ -7005,6 +7050,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string MPMv2Saba {
             get {
                 return ResourceManager.GetString("MPMv2Saba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Basketball-Max Per Match.
+        /// </summary>
+        public static string MPMv2Virtual {
+            get {
+                return ResourceManager.GetString("MPMv2Virtual", resourceCulture);
             }
         }
         
@@ -7099,6 +7153,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Virtual Soccer-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv1Virtual {
+            get {
+                return ResourceManager.GetString("MPPMv1Virtual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basketball-Max Payout Per Match.
         /// </summary>
         public static string MPPMv2 {
@@ -7113,6 +7176,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string MPPMv2Saba {
             get {
                 return ResourceManager.GetString("MPPMv2Saba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Basketball-Max Payout Per Match.
+        /// </summary>
+        public static string MPPMv2Virtual {
+            get {
+                return ResourceManager.GetString("MPPMv2Virtual", resourceCulture);
             }
         }
         
