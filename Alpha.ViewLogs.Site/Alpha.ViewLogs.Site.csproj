@@ -460,6 +460,8 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateCustomer\action_261001.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220042.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220040.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220043.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220041.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220039.xslt" />
