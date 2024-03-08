@@ -467,6 +467,12 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220039.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\Commission\action_254.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\Commission\action_253.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_519.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_518.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_516.xslt">
       <SubType>Designer</SubType>
     </Content>
