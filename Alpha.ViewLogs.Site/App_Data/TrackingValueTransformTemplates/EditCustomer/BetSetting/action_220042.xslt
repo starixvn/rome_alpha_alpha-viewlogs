@@ -3,6 +3,36 @@
   <xsl:output method="html" indent="no" />
   <xsl:template match="root">
     <table class="tblDesc">
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@subaccname" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('sourceaccount')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@sourceaccount" />
+        </td>
+        <td class="colW1">
+        </td>
+      </tr>
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
+        </td>
+        <td class="colW1">
+        </td>
+        <td class="colW2">
+        </td>
+        <td class="colW1">
+        </td>
+      </tr>
       <tr class="headerSportTypeDetail" style="text-align:center;">
         <td>
         </td>
@@ -38,36 +68,6 @@
           </td>
         </tr>
       </xsl:for-each>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@subaccname" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('sourceaccount')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@sourceaccount" />
-        </td>
-        <td class="colW1">
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
-        </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
-        </td>
-        <td class="colW1">
-        </td>
-      </tr>
     </table>
   </xsl:template>
 </xsl:stylesheet>

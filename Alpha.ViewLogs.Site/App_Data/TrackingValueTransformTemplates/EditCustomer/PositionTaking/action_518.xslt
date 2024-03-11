@@ -5,6 +5,20 @@
   <xsl:key name="pt-by-sporttype" match="pt" use="@sporttype" />
   <xsl:template match="root">
     <table class="tblDesc">
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@subaccname" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
+        </td>
+      </tr>
       <xsl:if test="pt">
         <tr style="text-align:center;" class="headerDetail">
           <td></td>
@@ -42,20 +56,6 @@
           </xsl:for-each>
         </xsl:for-each>
       </xsl:if>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@subaccname" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
-        </td>
-      </tr>
     </table>
   </xsl:template>
 </xsl:stylesheet>
