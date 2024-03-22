@@ -3399,6 +3399,9 @@
   <data name="Schedule" xml:space="preserve">
     <value>日程表</value>
   </data>
+  <data name="ParlayMaxPayoutPerBet" xml:space="preserve">
+    <value>串關最高派彩</value>
+  </data>
   <data name="MaxBv1Virtual" xml:space="preserve">
     <value>虚擬足球-最高投注</value>
   </data>
