@@ -35,7 +35,7 @@
         <xsl:for-each select="key('groupid', @groupid)">
           <tr>
             <td class="colW1">
-              <xsl:value-of select="xslLogFormat:GetSportName(@sporttype)" />
+              <xsl:value-of select="xslLogFormat:GetDisplayName(@settinglevel,@sporttype,@bettype,@productid)" />
             </td>
             <td class="colW2" colspan="3">
               <xsl:value-of select="@isdisabled" />
