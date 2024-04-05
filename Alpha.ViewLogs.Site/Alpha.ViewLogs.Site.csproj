@@ -471,6 +471,15 @@
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\Commission\action_254.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\Commission\action_253.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_532.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_534.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_533.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_528.xslt">
       <SubType>Designer</SubType>
     </Content>
