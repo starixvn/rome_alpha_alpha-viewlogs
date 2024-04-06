@@ -18,7 +18,7 @@
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
       </tr>
-      <tr class="headerSportTypeDetail" style="text-align:center;">
+      <tr class="headerDetail" style="text-align:center;">
         <td>
           <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
