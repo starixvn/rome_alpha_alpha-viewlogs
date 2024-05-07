@@ -44,10 +44,16 @@
           <td>
             <xsl:value-of select="xslLogFormat:GetLogResource('lblMinPTMaster')" />
           </td>
+          <td>
+            <xsl:value-of select="xslLogFormat:GetLogResource('Updallmembers')" />
+          </td>
+          <td>
+            <xsl:value-of select="xslLogFormat:GetLogResource('newspt')" />
+          </td>
         </tr>
         <xsl:for-each select="pt[count(.|key('groupid',@groupid)[1])=1]">
           <tr class="headerSportTypeDetail">
-            <td colspan="6">
+            <td colspan="8">
               <xsl:value-of select="xslLogFormat:GetProductGroupName(@groupid)" />
             </td>
           </tr>
@@ -70,6 +76,12 @@
               </td>
               <td class="colW2">
                 <xsl:value-of select="@masterminpt" />
+              </td>
+              <td class="colW2">
+                <xsl:value-of select="@updallmems" />
+              </td>
+              <td class="colW2">
+                <xsl:value-of select="@newsuperpt" />
               </td>
             </tr>
           </xsl:for-each>
