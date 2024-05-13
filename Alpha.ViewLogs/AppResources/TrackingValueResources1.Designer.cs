@@ -2248,7 +2248,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commision.
+        ///   Looks up a localized string similar to Commission.
         /// </summary>
         public static string Commision {
             get {
