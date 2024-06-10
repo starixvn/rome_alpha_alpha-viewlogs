@@ -527,8 +527,7 @@ namespace Alpha.ViewLogs.Services.Impl
         public static string CovertSchedule(string schedule)
         {
             var dates = schedule.Trim().ToCharArray();
-            ExceptionHandler.Handle(new Exception(schedule + " -- " + dates),TraceEventType.Information);
-            if (!dates.Any())
+            if (schedule == "_" || !dates.Any())
             {
                 return "-";
             }
