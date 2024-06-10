@@ -1,4 +1,6 @@
-﻿namespace Alpha.ViewLogs.Services.Impl
+﻿using System.Diagnostics;
+
+namespace Alpha.ViewLogs.Services.Impl
 {
     using System;
     using System.Collections.Generic;
@@ -12,6 +14,7 @@
     using Constants;
     using Helpers;
     using Params;
+  
 
     public class LogFormatterImpl : LogFormatter
     {
@@ -523,8 +526,7 @@
         public static string CovertSchedule(string schedule)
         {
             var dates = schedule.Trim().ToCharArray();
-
-            if (!dates.Any())
+            if (schedule == "_" || !dates.Any())
             {
                 return "-";
             }
