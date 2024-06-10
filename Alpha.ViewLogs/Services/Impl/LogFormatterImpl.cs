@@ -1,4 +1,6 @@
-﻿namespace Alpha.ViewLogs.Services.Impl
+﻿using System.Diagnostics;
+
+namespace Alpha.ViewLogs.Services.Impl
 {
     using System;
     using System.Collections.Generic;
@@ -8,10 +10,12 @@
     using System.Xml.Linq;
     using Alpha.ViewLogs.Extensions;
     using AlphaPlus.Configurations;
+    using Fanex.Logging.Extensions.Web;
     using AppResources;
     using Constants;
     using Helpers;
     using Params;
+  
 
     public class LogFormatterImpl : LogFormatter
     {
@@ -523,7 +527,7 @@
         public static string CovertSchedule(string schedule)
         {
             var dates = schedule.Trim().ToCharArray();
-
+            ExceptionHandler.Handle(new Exception(schedule + " -- " + dates),TraceEventType.Information);
             if (!dates.Any())
             {
                 return "-";
