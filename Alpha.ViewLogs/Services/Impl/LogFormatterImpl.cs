@@ -10,7 +10,6 @@ namespace Alpha.ViewLogs.Services.Impl
     using System.Xml.Linq;
     using Alpha.ViewLogs.Extensions;
     using AlphaPlus.Configurations;
-    using Fanex.Logging.Extensions.Web;
     using AppResources;
     using Constants;
     using Helpers;
