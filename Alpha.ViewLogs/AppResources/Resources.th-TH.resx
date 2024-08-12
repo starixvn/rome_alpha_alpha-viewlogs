@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="TotalBets" xml:space="preserve">
-    <value>จำนวนการวางเดิมพันทั้งหมด</value>
+    <value>ยอดเดิมพันทั้งหมด</value>
   </data>
   <data name="Forecast" xml:space="preserve">
     <value>การทำนายผลล่วงหน้า</value>
@@ -133,7 +133,7 @@
     <value>ควบคุมทั้งหมด</value>
   </data>
   <data name="Update" xml:space="preserve">
-    <value>ล่าสุด</value>
+    <value>อัปเดต</value>
   </data>
   <data name="View" xml:space="preserve">
     <value>ดู</value>
@@ -172,7 +172,7 @@
     <value>วันศุกร์</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
-    <value>ไม่จำกัด</value>
+    <value>ไม่จำกัดค่า</value>
   </data>
   <data name="DisabledVirtualSports" xml:space="preserve">
     <value>ปิดกีฬาอนิเมชั่น</value>
@@ -202,7 +202,7 @@
     <value>ถึง</value>
   </data>
   <data name="Submit" xml:space="preserve">
-    <value>ตกลง</value>
+    <value>ส่ง</value>
   </data>
   <data name="LogId" xml:space="preserve">
     <value>บันทึกรหัส</value>
@@ -214,7 +214,7 @@
     <value>แก้ไขโดย</value>
   </data>
   <data name="Action" xml:space="preserve">
-    <value>ปฏิบัติ</value>
+    <value>การดำเนินการ</value>
   </data>
   <data name="NoInfo" xml:space="preserve">
     <value>ไม่มีข้อมูล</value>
@@ -316,7 +316,7 @@
     <value>ยอดการเล่นและคำนวณผล</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>เลขที่.</value>
+    <value>ลำดับที่ </value>
   </data>
   <data name="Schedule" xml:space="preserve">
     <value>กำหนดการ</value>
