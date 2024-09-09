@@ -8,7 +8,7 @@
 
         string GetSportName(object sportId);
 
-        string GetProductName(int productId);
+        string GetProductName(int productId, bool isSiteLabel777 = false);
 
         string GetSubProductGroupName(int subGroupId);
 
