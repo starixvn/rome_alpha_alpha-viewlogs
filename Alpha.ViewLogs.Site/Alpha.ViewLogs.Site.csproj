@@ -523,6 +523,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\WinLossLimit\action_852.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\NovaCasino\action_6067.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\stringreplace.xslt">
       <SubType>Designer</SubType>
     </Content>
