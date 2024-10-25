@@ -47,7 +47,6 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
                 ResourcesByProductCacheRef);
 
             var toDate = new DateTime(2016, 10, 1);
@@ -72,7 +71,6 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
                 ResourcesByProductCacheRef);
 
             var toDate = new DateTime(2016, 10, 2);
@@ -106,11 +104,11 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.FromDate = fromDateString;
-            indexQuery.ToDate = toDateString;
+                ResourcesByProductCacheRef)
+            {
+                FromDate = fromDateString,
+                ToDate = toDateString
+            };
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
@@ -135,10 +133,10 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.PageSize = pageSize;
+                ResourcesByProductCacheRef)
+            {
+                PageSize = pageSize
+            };
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
@@ -165,10 +163,10 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.PageSize = pageSize;
+                ResourcesByProductCacheRef)
+            {
+                PageSize = pageSize
+            };
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
@@ -194,7 +192,6 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
                 ResourcesByProductCacheRef);
 
             indexQuery.PageIndex = pageIndex;
@@ -226,13 +223,13 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.PageIndex = string.Empty;
-            indexQuery.PageSize = DefaultVariables.PageSize.ToString();
-            indexQuery.FromDate = fromDate;
-            indexQuery.ToDate = toDate;
+                ResourcesByProductCacheRef)
+            {
+                PageIndex = string.Empty,
+                PageSize = DefaultVariables.PageSize.ToString(),
+                FromDate = fromDate,
+                ToDate = toDate
+            };
 
             var pagingLogs = new PagingLogs<Log>
             {
@@ -281,13 +278,13 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.PageIndex = string.Empty;
-            indexQuery.PageSize = DefaultVariables.PageSize.ToString();
-            indexQuery.FromDate = fromDate;
-            indexQuery.ToDate = toDate;
+                ResourcesByProductCacheRef)
+            {
+                PageIndex = string.Empty,
+                PageSize = DefaultVariables.PageSize.ToString(),
+                FromDate = fromDate,
+                ToDate = toDate
+            };
 
             var pagingLogs = new PagingLogs<Log>
             {

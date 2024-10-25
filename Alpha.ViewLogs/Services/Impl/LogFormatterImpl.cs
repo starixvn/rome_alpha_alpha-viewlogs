@@ -14,7 +14,6 @@ namespace Alpha.ViewLogs.Services.Impl
     using Constants;
     using Helpers;
     using Params;
-  
 
     public class LogFormatterImpl : LogFormatter
     {
@@ -26,7 +25,6 @@ namespace Alpha.ViewLogs.Services.Impl
         private Dictionary<string, int> resourcesBySportTypeCacheRef;
         private Dictionary<string, int> resourcesByBetTypeCacheRef;
         private bool isHideNickname;
-        private bool isShowMyanmarOdds;
         private const int SevenDaysIndex = 8;
 
         public LogFormatterImpl(
@@ -54,7 +52,6 @@ namespace Alpha.ViewLogs.Services.Impl
             resourcesByProductCacheRef = transformParam.ResourcesProductCacheRef;
             resourcesByBetTypeCacheRef = transformParam.ResourcesByBetTypeCacheRef;
             resourcesBySportTypeCacheRef = transformParam.ResourcesBySportTypeCacheRef;
-            isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
             this.isHideNickname = isHideNickname;
         }
 
@@ -208,11 +205,6 @@ namespace Alpha.ViewLogs.Services.Impl
         public string GetDisabledKenoBetTypeName(string disableBetType)
         {
             return string.Format("{0} {1}", Resources.Disabled, remotingRef.GetBetTypeName(disableBetType));
-        }
-
-        public bool IsShowMyanmarOdds()
-        {
-            return isShowMyanmarOdds;
         }
 
         public bool IsRNGCasino(int sportType)

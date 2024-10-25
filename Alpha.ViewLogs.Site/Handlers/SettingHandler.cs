@@ -104,7 +104,6 @@
                 CustStatuses = message.SportBetTypeVisibilities,
                 ResourcesByBetTypeCacheRef = message.ResourcesByBetTypeCacheRef,
                 ResourcesProductCacheRef = message.ResourcesByProductCacheRef,
-                IsShowMyanmarOdds = message.IsShowMyanmarOdds,
                 ResourcesBySportTypeCacheRef = message.ResourcesBySportTypeCacheRef
             };
 
