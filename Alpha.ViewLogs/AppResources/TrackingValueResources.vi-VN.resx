@@ -3171,4 +3171,7 @@
   <data name="unassigned" xml:space="preserve">
     <value>Chưa chỉ định</value>
   </data>
+  <data name="IsApplied" xml:space="preserve">
+    <value>Được thực hiện</value>
+  </data>
 </root>
