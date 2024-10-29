@@ -283,7 +283,7 @@
     <value>ประตูรวม</value>
   </data>
   <data name="isa_mpt_5" xml:space="preserve">
-    <value>ราคาพูล</value>
+    <value>เต็มเวลา 1X2</value>
   </data>
   <data name="isa_mpt_4" xml:space="preserve">
     <value>คะแนนที่ถูกต้อง</value>
@@ -322,7 +322,7 @@
     <value>คี่ / คู่</value>
   </data>
   <data name="isa_spt_5" xml:space="preserve">
-    <value>ราคาพูล</value>
+    <value>เต็มเวลา 1X2</value>
   </data>
   <data name="isa_spt_4" xml:space="preserve">
     <value>คะแนนที่ถูกต้อง</value>
@@ -631,7 +631,7 @@
     <value>มากกว่า  น้อยกว่า</value>
   </data>
   <data name="loginIP" xml:space="preserve">
-    <value>IP สุดท้ายที่เข้าระบบ</value>
+    <value>ไอพีที่เข้าระบบ</value>
   </data>
   <data name="a_v8mpt_3" xml:space="preserve">
     <value>มากกว่า  น้อยกว่า</value>
@@ -655,7 +655,7 @@
     <value>ประตูรวม</value>
   </data>
   <data name="a_spt_5" xml:space="preserve">
-    <value>ราคาพูล</value>
+    <value>เต็มเวลา 1X2</value>
   </data>
   <data name="a_spt_4" xml:space="preserve">
     <value>คะแนนที่ถูกต้อง</value>
@@ -673,7 +673,7 @@
     <value>การเล่นแบบสูงต่ำในครึ่งเวลาแรก</value>
   </data>
   <data name="a_mpt_5" xml:space="preserve">
-    <value>ราคาพูล</value>
+    <value>เต็มเวลา 1X2</value>
   </data>
   <data name="a_mpt_4" xml:space="preserve">
     <value>คะแนนที่ถูกต้อง</value>
@@ -829,7 +829,7 @@
     <value>ภายใน</value>
   </data>
   <data name="a" xml:space="preserve">
-    <value>ตัวแทน</value>
+    <value>เอเย่นต์</value>
   </data>
   <data name="m" xml:space="preserve">
     <value>แบ่งสู้ของมาสเตอร์</value>
@@ -934,7 +934,7 @@
     <value>ประตูรวม</value>
   </data>
   <data name="apt_5" xml:space="preserve">
-    <value>ราคาพูล</value>
+    <value>เต็มเวลา 1X2</value>
   </data>
   <data name="apt_4" xml:space="preserve">
     <value>คะแนนที่ถูกต้อง</value>
@@ -973,7 +973,7 @@
     <value>ประตูรวม</value>
   </data>
   <data name="mpt_5" xml:space="preserve">
-    <value>ราคาพูล</value>
+    <value>เต็มเวลา 1X2</value>
   </data>
   <data name="mpt_4" xml:space="preserve">
     <value>คะแนนที่ถูกต้อง</value>
@@ -1033,7 +1033,7 @@
     <value>การเล่นแบบสูงต่ำในครึ่งเวลาแรก</value>
   </data>
   <data name="spt_5" xml:space="preserve">
-    <value>ราคาพูล</value>
+    <value>เต็มเวลา 1X2</value>
   </data>
   <data name="spt_4" xml:space="preserve">
     <value>คะแนนที่ถูกต้อง</value>
@@ -1189,7 +1189,7 @@
     <value>คะแนนที่ถูกต้อง</value>
   </data>
   <data name="isa_smpt_5" xml:space="preserve">
-    <value>ราคาพูล</value>
+    <value>เต็มเวลา 1X2</value>
   </data>
   <data name="isa_smpt_6" xml:space="preserve">
     <value>ประตูรวม</value>
@@ -2017,7 +2017,7 @@
     <value>รายละเอียด</value>
   </data>
   <data name="actionname" xml:space="preserve">
-    <value>ปฏิบัติ</value>
+    <value>การดำเนินการ</value>
   </data>
   <data name="creditlog" xml:space="preserve">
     <value>เครดิต</value>
@@ -2101,7 +2101,7 @@
     <value>[ตั้งค่าใหม่]</value>
   </data>
   <data name="[d]" xml:space="preserve">
-    <value>[จำนวนการวางเดิมพันทั้งหมด]</value>
+    <value>[ยอดเดิมพันทั้งหมด]</value>
   </data>
   <data name="[e]" xml:space="preserve">
     <value>[รายงาน]</value>
@@ -2134,10 +2134,10 @@
     <value>ไอดีเอเย่น</value>
   </data>
   <data name="MinBet" xml:space="preserve">
-    <value>ค่าเดิมพันต้ำสุด</value>
+    <value>เดิมพันต่ำสุด</value>
   </data>
   <data name="MaxBet" xml:space="preserve">
-    <value>ค่าเดิมพันสูงสุด</value>
+    <value>เดิมพันสูงสุด</value>
   </data>
   <data name="MaxPerMatch" xml:space="preserve">
     <value>ค่าเดิมพันสูงสุดต่อคู่การแข่งขัน</value>
@@ -2179,7 +2179,7 @@
     <value>คะแนนที่ถูกต้อง</value>
   </data>
   <data name="a_mpt_mem_5" xml:space="preserve">
-    <value>ราคาพูล</value>
+    <value>เต็มเวลา 1X2</value>
   </data>
   <data name="a_mpt_mem_6" xml:space="preserve">
     <value>ประตูรวม</value>
@@ -2305,7 +2305,7 @@
     <value>คะแนนที่ถูกต้อง</value>
   </data>
   <data name="isa_mpt_mem_5" xml:space="preserve">
-    <value>ราคาพูล</value>
+    <value>เต็มเวลา 1X2</value>
   </data>
   <data name="isa_mpt_mem_6" xml:space="preserve">
     <value>ประตูรวม</value>
@@ -2845,10 +2845,10 @@
     <value>แบ่งสู้ขั้นต่ำ</value>
   </data>
   <data name="v162discount_1101" xml:space="preserve">
-    <value>คอมมิชชั่น</value>
+    <value>ความเสี่ยง</value>
   </data>
   <data name="maxPT" xml:space="preserve">
-    <value>Max PT</value>
+    <value>ค่าความเสี่ยงสูงสุด</value>
   </data>
   <data name="isMasterAutoPT" xml:space="preserve">
     <value>อัตราแบ่งสู้อัตโนมัติ ของ มาสเตอร์ คือ ?</value>
@@ -2860,7 +2860,7 @@
     <value>แบ่งสู้อัตโนมัติของซุปเปอร์</value>
   </data>
   <data name="lblMaxPTMaster" xml:space="preserve">
-    <value>แบ่งสู้สูงสุดของมาสเตอร์</value>
+    <value>ความเสี่ยงสูงสุดของมาสเตอร์</value>
   </data>
   <data name="lblPresetPTMaster" xml:space="preserve">
     <value>เอี่ยของมาสเตอร์ที่ตั้งไว้ก่อนหน้า</value>
@@ -2869,7 +2869,7 @@
     <value>เอี่ยของซุปเปรอ์ที่ตั้งไว้ก่อนหน้า</value>
   </data>
   <data name="lblMaxPTAgent" xml:space="preserve">
-    <value>แบ่งสู้สูงสุดของเอเย่น</value>
+    <value>ความเสี่ยงสูงสุดของเอเย่นต์</value>
   </data>
   <data name="masterAutoPT" xml:space="preserve">
     <value>ค่าแบ่งสู้อัตโนมัติของมาสเตอร์</value>
@@ -2923,10 +2923,10 @@
     <value>อัตราแบ่งสู้อัตโนมัติ ของเอเจนต์ คือ ?</value>
   </data>
   <data name="MinPTAgent" xml:space="preserve">
-    <value>แบ่งสู้ต่ำสุดของเอเย่น</value>
+    <value>ความเสี่ยงต่ำสุดของเอเย่นต์</value>
   </data>
   <data name="lblMinPTMaster" xml:space="preserve">
-    <value>แบ่งสู้ขั้นต่ำของมาสเตอร์</value>
+    <value>ความเสี่ยงต่ำสุดของมาสเตอร์</value>
   </data>
   <data name="Disablevirtualsports" xml:space="preserve">
     <value>ปิดกีฬาอนิเมชั่น</value>
@@ -2974,10 +2974,10 @@
     <value>Is Forced Change Security Code</value>
   </data>
   <data name="v255playerdiscount_1701" xml:space="preserve">
-    <value>คอมมิชชั่น</value>
+    <value>ความเสี่ยง</value>
   </data>
   <data name="v255discount_1701" xml:space="preserve">
-    <value>คอมมิชชั่น</value>
+    <value>ความเสี่ยง</value>
   </data>
   <data name="Apply_downlines" xml:space="preserve">
     <value>Apply downlines</value>
@@ -3007,7 +3007,7 @@
     <value>ผลิตภัณฑ์</value>
   </data>
   <data name="MaximumLoss" xml:space="preserve">
-    <value>แพ้สูงสุด</value>
+    <value>การสูญเสียสูงสุด</value>
   </data>
   <data name="isa_v5spt_20" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
@@ -3049,7 +3049,7 @@
     <value>อัพเดตมาสเตอร์ทั้งหมด</value>
   </data>
   <data name="Outstanding" xml:space="preserve">
-    <value>การเดิมพันที่ยังไม่สิ้นสุด</value>
+    <value>เดิมพันที่ยังไม่สิ้นสุด</value>
   </data>
   <data name="TodayWinLoss" xml:space="preserve">
     <value>ยอดได้เสียวันนี้</value>
@@ -3205,7 +3205,7 @@
     <value>รายการวางเดิมพันที่เล่นไปแล้ว</value>
   </data>
   <data name="Statement" xml:space="preserve">
-    <value>บัญชี</value>
+    <value>รายการเดินบัญชี</value>
   </data>
   <data name="MPPM" xml:space="preserve">
     <value>ซ๊อกเกอร์ - การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
@@ -3283,10 +3283,10 @@
     <value>บัญชีที่มีปัญหา</value>
   </data>
   <data name="WinningThreshold" xml:space="preserve">
-    <value>เกณฑ์การชนะ</value>
+    <value>ขีดจำกัดการชนะ</value>
   </data>
   <data name="LosingThreshold" xml:space="preserve">
-    <value>เกณฑ์การแพ้</value>
+    <value>ขีดจำกัดการแพ้</value>
   </data>
   <data name="WrongPasswordAlert" xml:space="preserve">
     <value>แจ้งเตือนรหัสผ่านผิด</value>
@@ -3322,13 +3322,13 @@
     <value>โอนอัตโนมัติ</value>
   </data>
   <data name="MasterPT" xml:space="preserve">
-    <value>ค่าแบ่งสู้ของมาสเตอร์</value>
+    <value>ค่าคอมมาสเตอร์</value>
   </data>
   <data name="SuperPT" xml:space="preserve">
-    <value>ค่าแบ่งสู้ของซุปเปอร์</value>
+    <value>ค่าคอมซุปเปอร์</value>
   </data>
   <data name="lblAgentPT" xml:space="preserve">
-    <value>ค่าแบ่งสู้ของเอเย่น</value>
+    <value>ค่าคอมเอเย่นต์</value>
   </data>
   <data name="IsAuto" xml:space="preserve">
     <value>คืออัตโนมัติ</value>
@@ -3343,7 +3343,7 @@
     <value>การจ่ายเงินสูงสุดของพาร์เลย์</value>
   </data>
   <data name="AllowAutoPT" xml:space="preserve">
-    <value>อนุญาตให้มีแบ่งสู้อัตโนมัติ</value>
+    <value>อนุญาตให้ใช้ค่าความเสี่ยงอัตโนมัติ</value>
   </data>
   <data name="MaxPayoutPerMatch" xml:space="preserve">
     <value>การจ่ายเงินสูงสุดต่อคู่การแข่งขัน</value>
@@ -3373,7 +3373,7 @@
     <value>วงเงินแพ้ชนะ</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
-    <value>ไม่จำกัด</value>
+    <value>ไม่จำกัดค่า</value>
   </data>
   <data name="BetLimit" xml:space="preserve">
     <value>วงเงินเดิมพัน</value>
@@ -3388,7 +3388,7 @@
     <value>ชื่อเทมเพลต</value>
   </data>
   <data name="ParlayMaxPayoutPerBet" xml:space="preserve">
-    <value>การจ่ายเงินพาร์เลย์สูงสุดต่อการเดิมพัน</value>
+    <value>การจ่ายเงินสูงสุดต่อเดิมพันชุด</value>
   </data>
   <data name="Schedule" xml:space="preserve">
     <value>กำหนดการ</value>
