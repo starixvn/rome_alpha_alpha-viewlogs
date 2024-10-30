@@ -4876,6 +4876,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is Applied.
+        /// </summary>
+        public static string IsApplied {
+            get {
+                return ResourceManager.GetString("IsApplied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is Super Auto Position Taking On Master.
         /// </summary>
         public static string isaPTonM {

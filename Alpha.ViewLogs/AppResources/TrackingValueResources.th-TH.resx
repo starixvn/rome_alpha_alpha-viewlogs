@@ -3420,4 +3420,7 @@
   <data name="unassigned" xml:space="preserve">
     <value>ยังไม่ได้เลือก</value>
   </data>
+  <data name="IsApplied" xml:space="preserve">
+    <value>นำไปใช้</value>
+  </data>
 </root>

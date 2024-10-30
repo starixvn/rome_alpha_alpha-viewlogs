@@ -55,7 +55,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -81,7 +81,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -114,7 +114,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -142,7 +142,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -172,7 +172,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -201,7 +201,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -254,7 +254,7 @@
             var validLogItemViewModels = ValidLogItemViewModels();
             expectedLogViewModelForTesting.LogItems = new List<LogItemViewModel>() { validLogItemViewModels[0], validLogItemViewModels[1] };
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -308,7 +308,7 @@
             var validLogItemViewModels = ValidLogItemViewModels();
             expectedLogViewModelForTesting.LogItems = new List<LogItemViewModel>() { validLogItemViewModels[1] };
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
