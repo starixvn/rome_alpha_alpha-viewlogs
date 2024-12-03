@@ -51,7 +51,6 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
                 ResourcesByProductCacheRef);
 
             var toDate = new DateTime(2016, 10, 1);
@@ -59,7 +58,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = loginHandler.Handle(indexQuery);
 
             // Assert
@@ -76,7 +75,6 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
                 ResourcesByProductCacheRef);
 
             var toDate = new DateTime(2016, 10, 2);
@@ -85,7 +83,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = loginHandler.Handle(indexQuery);
 
             // Assert
@@ -110,15 +108,15 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.FromDate = fromDateString;
-            indexQuery.ToDate = toDateString;
+                ResourcesByProductCacheRef)
+            {
+                FromDate = fromDateString,
+                ToDate = toDateString
+            };
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = loginHandler.Handle(indexQuery);
 
             // Assert
@@ -139,14 +137,14 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.PageSize = pageSize;
+                ResourcesByProductCacheRef)
+            {
+                PageSize = pageSize
+            };
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = loginHandler.Handle(indexQuery);
 
             // Assert
@@ -169,14 +167,14 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.PageSize = pageSize;
+                ResourcesByProductCacheRef)
+            {
+                PageSize = pageSize
+            };
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = loginHandler.Handle(indexQuery);
 
             // Assert
@@ -198,14 +196,14 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.PageIndex = pageIndex;
+                ResourcesByProductCacheRef)
+            {
+                PageIndex = pageIndex
+            };
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = loginHandler.Handle(indexQuery);
 
             // Assert
@@ -231,13 +229,13 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.PageIndex = string.Empty;
-            indexQuery.PageSize = DefaultVariables.PageSize.ToString();
-            indexQuery.FromDate = fromDate;
-            indexQuery.ToDate = toDate;
+                ResourcesByProductCacheRef)
+            {
+                PageIndex = string.Empty,
+                PageSize = DefaultVariables.PageSize.ToString(),
+                FromDate = fromDate,
+                ToDate = toDate
+            };
 
             var pagingLogs = new PagingLogs<Log>
             {
@@ -273,7 +271,7 @@
             var validLogItemViewModels = ValidLogItemViewModels();
             expectedLogViewModelForTesting.LogItems = new List<LogItemViewModel>() { validLogItemViewModels[0], validLogItemViewModels[1] };
 
-            // Act 
+            // Act
             var actualLogViewModel = loginHandler.Handle(indexQuery);
 
             // Assert
@@ -301,13 +299,13 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-
-            indexQuery.PageIndex = string.Empty;
-            indexQuery.PageSize = DefaultVariables.PageSize.ToString();
-            indexQuery.FromDate = fromDate;
-            indexQuery.ToDate = toDate;
+                ResourcesByProductCacheRef)
+            {
+                PageIndex = string.Empty,
+                PageSize = DefaultVariables.PageSize.ToString(),
+                FromDate = fromDate,
+                ToDate = toDate
+            };
 
             var pagingLogs = new PagingLogs<Log>
             {
@@ -335,7 +333,7 @@
             var validLogItemViewModels = ValidLogItemViewModels();
             expectedLogViewModelForTesting.LogItems = new List<LogItemViewModel>() { validLogItemViewModels[1] };
 
-            // Act 
+            // Act
             var actualLogViewModel = loginHandler.Handle(indexQuery);
 
             // Assert
@@ -357,16 +355,17 @@
                 true,
                 CustStatuses,
                 ResourcesByBetTypeCacheRef,
-                false,
-                ResourcesByProductCacheRef);
-            indexQuery.Username = "Username";
-            indexQuery.PreviousUsername = "PreviousUsername";
-            indexQuery.RoleId = roleId;
-            indexQuery.IsAgentViewing = false;
+                ResourcesByProductCacheRef)
+            {
+                Username = "Username",
+                PreviousUsername = "PreviousUsername",
+                RoleId = roleId,
+                IsAgentViewing = false
+            };
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = loginHandler.Handle(indexQuery);
 
             // Assert

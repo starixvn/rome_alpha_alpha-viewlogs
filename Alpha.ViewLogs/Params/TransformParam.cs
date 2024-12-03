@@ -15,7 +15,5 @@
         public Dictionary<string, int> ResourcesByBetTypeCacheRef { get; set; }
 
         public Dictionary<string, int> ResourcesBySportTypeCacheRef { get; set; }
-
-        public bool IsShowMyanmarOdds { get; set; }
     }
 }

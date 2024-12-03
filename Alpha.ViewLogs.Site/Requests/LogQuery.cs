@@ -33,13 +33,13 @@
         }
 
 #pragma warning disable S107 // Methods should not have too many parameters
+
         public LogQuery(
             IUserSession currentUserSession,
             IDateTime dateTimeWrap,
             bool? isShowOldValue,
             Dictionary<string, bool> custStatuses = null,
             Dictionary<string, int> resourcesByBetTypeCacheRef = null,
-            bool? isShowMyanmarOdds = null,
             Dictionary<string, int> resourceByProductCacheRef = null,
             Dictionary<string, int> resourcesBySportTypeCacheRef = null)
 #pragma warning restore S107 // Methods should not have too many parameters
@@ -61,7 +61,6 @@
 
             RoleId = currentUserSession.RoleId;
             ActorId = currentUserSession.CustId;
-            IsShowMyanmarOdds = isShowMyanmarOdds ?? UserPermission.IsShowMyanmarOdds;
             HasViewLogPermission = currentUserSession.SubPageAccess != null && currentUserSession.SubPageAccess.ViewLog;
             Language = currentUserSession.Language;
             IsInternal = false;
@@ -146,8 +145,6 @@
                 return minReportDate;
             }
         }
-
-        public bool IsShowMyanmarOdds { get; }
 
         public DateTime LimitedDateForShowInfo => limitedDateToShowInfo;
 
