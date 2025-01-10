@@ -3,18 +3,20 @@
   <xsl:output method="html" indent="no" />
   <xsl:template match="root">
     <table class="tblDesc">
-      <tr>
-        <td colspan="6">
-          <table class="tblDesc">
-            <tr>
-              <xsl:apply-templates select="comm[position() &lt; 4]" />
-            </tr>
-            <tr>
-              <xsl:apply-templates select="comm[position() &gt;= 4]" />
-            </tr>
-          </table>
-        </td>
-      </tr>
+      <xsl:if test="comm">
+        <tr>
+          <td colspan="6">
+            <table class="tblDesc">
+              <tr>
+                <xsl:apply-templates select="comm[position() &lt; 4]" />
+              </tr>
+              <tr>
+                <xsl:apply-templates select="comm[position() &gt;= 4]" />
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </xsl:if>
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
@@ -29,15 +31,17 @@
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('ugroup')" />
         </td>
         <td class="colW2">
+          <xsl:value-of select="@ugroup" />
         </td>
       </tr>
     </table>
   </xsl:template>
   <xsl:template match="comm">
     <td class="colW1">
-      <xsl:value-of select="xslLogFormat:GetSportbookCommissionName(@sporttype,@bettype)" />
+      <xsl:value-of select="xslLogFormat:GetSportbookMemberCommissionName(@sporttype,@bettype)" />
     </td>
     <td class="colW2">
       <xsl:value-of select="@playerdiscount" />
