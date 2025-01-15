@@ -8593,7 +8593,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update Group.
+        ///   Looks up a localized string similar to Commission Group.
         /// </summary>
         public static string ugroup {
             get {
