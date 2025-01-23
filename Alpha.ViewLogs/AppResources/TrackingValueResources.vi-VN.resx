@@ -3174,4 +3174,10 @@
   <data name="IsApplied" xml:space="preserve">
     <value>Được thực hiện</value>
   </data>
+  <data name="CommForSuper" xml:space="preserve">
+    <value>Hoa hồng cho Super</value>
+  </data>
+  <data name="CommForMaster" xml:space="preserve">
+    <value>Hoa hồng Master</value>
+  </data>
 </root>

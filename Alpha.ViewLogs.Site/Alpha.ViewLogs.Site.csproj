@@ -367,6 +367,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_1198.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_169000.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_1199.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -403,6 +406,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\OtherGames\betSetting.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\PositionTaking\directMember.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\PositionTaking\member.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -410,6 +416,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\SportsBook\commission.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\SportsBook\directMemberCommission.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\winLossLimit.xslt">
@@ -460,6 +469,12 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\CreateCustomer\action_261001.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_264000.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\CreateAccount\action_264001.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetLimit\action_220050.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220046.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220045.xslt" />
@@ -470,11 +485,31 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220043.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220041.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\BetSetting\action_220039.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\Commission\action_258.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\Commission\action_257.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\Commission\action_255.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\Commission\action_254.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\Commission\action_253.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_200012.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_200011.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_200015.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_200014.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_200013.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_200016.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\EditCustomer\PositionTaking\action_532.xslt">
       <SubType>Designer</SubType>
     </Content>

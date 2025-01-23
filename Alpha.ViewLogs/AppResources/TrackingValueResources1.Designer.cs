@@ -2239,11 +2239,29 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Comm for Master.
+        /// </summary>
+        public static string CommForMaster {
+            get {
+                return ResourceManager.GetString("CommForMaster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Comm for Member.
         /// </summary>
         public static string CommForMember {
             get {
                 return ResourceManager.GetString("CommForMember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comm for Super.
+        /// </summary>
+        public static string CommForSuper {
+            get {
+                return ResourceManager.GetString("CommForSuper", resourceCulture);
             }
         }
         

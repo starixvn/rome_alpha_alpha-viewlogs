@@ -2721,4 +2721,7 @@
   <data name="Locked" xml:space="preserve">
     <value>Locked</value>
   </data>
+  <data name="CommForSuper" xml:space="preserve">
+    <value>スーパーコミッション</value>
+  </data>
 </root>
