@@ -672,6 +672,8 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_31620_31622_ProblemAccount\action_31622.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_510.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_509.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_521.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_522.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Cashout\action_60534.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Cashout\action_60535.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Cashout\action_70606.xslt" />
